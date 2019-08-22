@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_use_cases.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Business use cases
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This is a placeholder for the content that Veena will provided.

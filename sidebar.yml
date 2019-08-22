@@ -7,6 +7,8 @@ entries:
         url: /ci_overview.html
       - title: ONTAP Select Deploy
         url: /ci_ots_deploy.html
+      - title: Business use cases
+        url: /ct_use_cases.html
       - title: Terminology
         url: /ci_terminology.html
   - title: Installing

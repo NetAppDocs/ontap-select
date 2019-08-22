@@ -17,7 +17,7 @@ ONTAP Select is a software-only version of ONTAP that you deploy as a virtual ma
 
 == Software-define Storage
 
->> TR 1.1 and 1.2
+>> TR 1.1 and 1.2 (include as part of SDI)
 
 == Two software components
 
