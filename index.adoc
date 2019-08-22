@@ -11,7 +11,13 @@ summary: Welcome to the documentation portal for ONTAP Select.
 :linkattrs:
 :imagesdir: ./media/
 
-ONTAP Select is a software-only version of ONTAP that is deployed as a virtual machine on a hypervisor host. ONTAP Select complements the suite of mainstream hardware-based ONTAP offerings as well as other software-only options, including ONTAP Cloud.
+NetApp(R) ONTAP(R) Select is a software-defined storage appliance that you can deploy on a variety of commodity hardware servers running the VMware ESXi and KVM hypervisors. ONTAP Select complements the suite of mainstream hardware-based ONTAP offerings as well as other software-only options.
+
+== Navigating the product documentation
+
+>> hypervisor, link to KVM documentation
+>> Release notes
+>> Deploy user interface
 
 == Discover what's new
 

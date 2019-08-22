@@ -15,7 +15,7 @@ summary: ONTAP Select allows you xxx
 [.lead]
 xxx
 
-== Preparing to deploy an ONTAP Select cluster
+== Before you begin
 
 xxx
 
