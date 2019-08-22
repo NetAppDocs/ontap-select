@@ -13,28 +13,61 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can use the command line interface provided with the ONTAP Select Deploy administration utility to create a single-node or multi-node ONTAP Select cluster.
 
 == Before you begin
 
->> Remove this section?
+xxx
 
-== Creating a single-node cluster
+==== Decisions
+>> Decisions (single node or multiple nodes, production or evaluation)
 
-You can use the ONTAP Select Deploy command line interface to deploy a single-node ONTAP Select cluster.
+==== Workflow summary
+
+You must perform several tasks to deploy an ONTAP Select cluster in a production environment. At a high level, these steps include:
+
+. Upload and register the license files
+. Add the hypervisor hosts
+. ETC
+
+==== Additional considerations
+
+Before creating an ONTAP Select cluster on the ESXi hypervisor, you should note the following:
+
+Preparing to attach storage to the ONTAP Select node::
+If you use a local hardware RAID controller, you must create at least one storage pool at each node for the system data as well as the root and data aggregates. You must attach the storage pool as part of configuring the ONTAP Select node.
+
+If you use software RAID, you must create a storage pool for the system data and make sure the SSD drives are available for the root and data aggregates. You must attach the storage pool and disks as part of configuring the ONTAP Select node.
+
+Available ONTAP Select versions::
+The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must first add the ONTAP Select image to your Deploy instance. See _Adding an ONTAP Select image to the Deploy utility_ for more information.
+
+Licensing ONTAP Select for a production deployment::
+Before deploying an ONTAP Select cluster in a production environment, you must purchase a storage capacity license and download the associated license file. You can license the storage at each node using the _capacity tiers_ model or license a shared pool using the _capacity pools_ model.
+
+== Uploading and registering a license
+
+After acquiring a license file with storage capacity, you must upload the file containing the license to the Deploy virtual machine and register it.
 
 .Before you begin
 
-You need to prepare the hypervisor host where the ONTAP Select node will run and have a storage license file. You must also have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
-
-.About this task
-
-An ONTAP Select cluster with one node is created.
+You must have uploaded the license file to the Deploy virtual machine. Also, you must have the password for the admin user account.
 
 .Steps
 
-. Step 1
+. In a command shell on your local workstation, use the sftp utility to upload the license file to the Deploy virtual machine.
++
+[source,bash]
+sftp admin@10.234.81.101 (provide password when prompted)
+put NLF-320000nnn.txt
+exit
 
-.After you finish
+. Register the license:
++
+`license add -file-name FILENAME`
++
+Provide the administrator account password when prompted.
 
-You should confirm that the ONTAP Select AutoSupport feature is configured. You should back up the ONTAP Select Deploy configuration data.
+. Display the licenses in the system to confirm the license was added properly:
++
+`license show`

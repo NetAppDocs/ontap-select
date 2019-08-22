@@ -61,4 +61,4 @@ Displaying the online documentation web page at the Deploy utility is an alterna
 
 You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance):
 
-'http://<ip_address>/api/ui'
+`http://<ip_address>/api/ui`
