@@ -1,0 +1,21 @@
+---
+sidebar: sidebar
+permalink: ct_ci_before.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Business use cases
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
+
+>> How to access (if not in install chapter)
+>> List of major commands
+>> How to get helpful
+>> Format of each task in this chapter

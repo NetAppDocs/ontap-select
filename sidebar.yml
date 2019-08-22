@@ -15,3 +15,7 @@ entries:
     entries:
       - title: Deploying an ONTAP Select cluster
         url: /ti_deploy_cluster.html
+  - title: Command line interface
+    entries:
+      - title: Before you begin
+        url: /ci_cli_before.html
