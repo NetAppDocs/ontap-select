@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: ti_cli_signing_in.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Signing in to Deploy using SSH
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You need to sign in to the management shell using SSH to the create and manage ONTAP Select clusters.
+
+.Steps
+
+. Sign in using the administrator account and management IP address of the Deploy virtual machine; for example:
++
+'ssh admin@<ip_address>'
+
+. If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
++
+* New password for the administrator account (required)
+* Company name (required)
+* Proxy URL (optional)
+
+. Type *?* and press *Enter* to display a list of the available management shell commands.
