@@ -33,4 +33,4 @@ The Deploy administration utility is packaged and installed as a separate Linux 
 
 The following figure illustrates the ONTAP Select Deploy administration utility being used to deploy and support a four-node ONTAP Select cluster. The Deploy utility and ONTAP Select nodes run as separate virtual machines on dedicated hypervisor hosts.
 
-<insert image>
+image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created with the Deploy administration utility.]
