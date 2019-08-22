@@ -33,4 +33,4 @@ xxx
 
 * https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select Resources^]
 * http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select^]
-* Add a link to reference topic [Where to get help and find more information]
+* link:ri_additional_info.html[Where to get help and find more information]

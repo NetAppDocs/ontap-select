@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ri_additional_info.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Where to get help and find more information
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can get help and find more information about ONTAP Select through various resources, including videos, forums, and support.
