@@ -1,0 +1,11 @@
+entries:
+  - title: ONTAP Select 9.7 docs
+    url: /index.html
+  - title: Concepts
+    entries:
+      - title: Product overview
+        url: /ci_overview.html
+  - title: Installing
+    entries:
+      - title: Deploying an ONTAP Select cluster
+        url: /ti_deploy_cluster.html

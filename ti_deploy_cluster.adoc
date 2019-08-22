@@ -1,0 +1,42 @@
+---
+sidebar: sidebar
+permalink: ti_deploy_cluster.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Cloud Manager and Cloud Volumes ONTAP overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
+
+== Preparing to deploy an ONTAP Select cluster
+
+xxx
+
+== Creating a single-node cluster
+
+xxx
+
+.Before you begin
+
+xxx
+
+.About this task
+
+xxx
+
+
+
+.Steps
+
+. From the working environment, click menu icon and then click *Delete*.
+
+. Type the name of the working environment and then click *Delete*.
++
+It can take up to 5 minutes to delete the working environment.

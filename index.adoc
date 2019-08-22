@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: index.html
+summary: Welcome to the documentation portal for ONTAP Select.
+---
+
+= ONTAP Select documentation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+ONTAP Select is a software-only version of ONTAP that is deployed as a virtual machine on a hypervisor host. ONTAP Select complements the suite of mainstream hardware-based ONTAP offerings as well as other software-only options, including ONTAP Cloud.
+
+== Discover what's new
+
+* Add a link to what's new topic
+
+== Connect with peers, get help, and find more information
+
+* https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select Resources^]
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select^]
+* Add a link to reference topic [Where to get help and find more information]

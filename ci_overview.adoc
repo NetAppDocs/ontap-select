@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: ci_overview.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Cloud Manager and Cloud Volumes ONTAP overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+ONTAP Select is a software-only version of ONTAP that is deployed as a virtual machine on a hypervisor host. ONTAP Select complements the suite of mainstream hardware-based ONTAP offerings as well as other software-only options, including ONTAP Cloud. Before using ONTAP Select, you should understand the key characteristics, operational components, and features of the software.
+
+== Software-define Storage
+
+xxx
+
+== ONTAP as a virtual machine
+
+xxx
+
+== Two software components
+
+xxx
+
+== Illustration of a typical deployment
+
+xxx
