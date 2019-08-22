@@ -5,6 +5,10 @@ entries:
     entries:
       - title: Product overview
         url: /ci_overview.html
+      - title: ONTAP Select Deploy
+        url: /ci_ots_deploy.html
+      - title: Terminology
+        url: /ci_terminology.html
   - title: Installing
     entries:
       - title: Deploying an ONTAP Select cluster

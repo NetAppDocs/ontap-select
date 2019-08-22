@@ -1,0 +1,25 @@
+---
+sidebar: sidebar
+permalink: ci_terminology.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Terminology
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the key concepts at a high level. Based on this, you are better able to understand and deploy the product.
+
+ONTAP Select Deploy::
+ONTAP Select Deploy is the administration utility that you must use to deploy ONTAP Select clusters. The Deploy utility runs in a dedicated Linux virtual machine. You can access the Deploy utility through the web user interface, CLI management shell, and REST API.
+
+Hypervisor host versus ONTAP Select node::
+A _hypervisor host_ is the core hardware platform, including the VMware ESXi virtualization software, that hosts an ONTAP Select virtual machine. When an ONTAP Select virtual machine is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
+
+ONTAP Select cluster::
+You can create an _ONTAP Select cluster_ composed of one, two, four, six, or eight nodes. Multi-node clusters always contain one or more HA pairs. For example, a four-node cluster consists of two HA pairs. A two-node cluster consists of one HA pair. A single node cluster does not provide HA capability.

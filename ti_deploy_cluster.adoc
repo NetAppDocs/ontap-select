@@ -17,11 +17,11 @@ xxx
 
 == Before you begin
 
-xxx
+>> Remove this section?
 
 == Creating a single-node cluster
 
-xxx
+You can use the ONTAP Select Deploy web user interface to deploy a single-node ONTAP Select cluster.
 
 .Before you begin
 

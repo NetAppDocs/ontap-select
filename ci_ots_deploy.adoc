@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: ci_ots_deploy.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Terminology
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+ONTAP Select Deploy is the administration utility that you must use to deploy and manage the ONTAP Select clusters. The Deploy administration utility is implemented as a Linux virtual machine and contains all the functionality you need to deploy and administer ONTAP Select clusters.
+
+=== Core functionality
+
+The Deploy utility performs the following core functions:
+
+* Record the details of each hypervisor host where ONTAP Select is deployed
+* Configure the hosts and install the required licenses
+* Deploy and manage the ONTAP Select clusters
+* Maintain an inventory of ONTAP Select clusters and hosts
+* Collect and send AutoSupport data to NetApp
+* Maintain an internal set of ONTAP Select node images
+* Support the hypervisor command formats and protocols
+
+=== Ways you can access Deploy
+
+You have several options available when accessing the Deploy administration utility. All the external interfaces are functionally equivalent. You should select the access option that best matches your specific deployment goals and requirements. In all cases, you must sign in using the administrator account with a valid password.
