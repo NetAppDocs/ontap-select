@@ -57,10 +57,11 @@ You must have uploaded the license file to the Deploy virtual machine. Also, you
 
 . In a command shell on your local workstation, use the sftp utility to upload the license file to the Deploy virtual machine.
 +
-[source,bash]
-sftp admin@10.234.81.101 (provide password when prompted)
-put NLF-320000nnn.txt
-exit
+`sftp admin@10.234.81.101 (provide password when prompted)`
+`put NLF-320000nnn.txt`
+`exit`
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
 
 . Register the license:
 +
@@ -71,3 +72,31 @@ Provide the administrator account password when prompted.
 . Display the licenses in the system to confirm the license was added properly:
 +
 `license show`
+
+== Adding the ESXi hypervisor hosts
+
+You must register each hypervisor host where an ONTAP Select node will run. As part of this, the Deploy administration utility authenticates either to the vCenter server managing the host or directly to the ESXi standalone host.
+
+.About this task
+
+Before you register a host that is managed by vCenter, you must add an account credential for the vCenter server. If the host is not managed by vCenter, you can provide the host credential as part of registering the host. You should use this procedure to add each host.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. If the host is managed by a vCenter server, add the vCenter account credential:
++
+`credential add -hostname <FQDN|IP> -type vcenter -username VCENTER_USERNAME`
++
+Example:
++
+`credential add -hostname vc.select.company-demo.com -type vcenter -username administrator@vsphere.local`
+
+. Register the host:
+
+* Register a standalone host not managed by vCenter:
+`host register -name <FQDN|IP> -hypervisor-type ESX -username ESX_USERNAME`
+
+* Register a host managed by vCenter:
+`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN| IP>`
