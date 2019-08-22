@@ -23,10 +23,10 @@ ONTAP Select is a software-only version of ONTAP that you deploy as a virtual ma
 
 ONTAP Select is composed of two major software components:
 
-* ONTAP Select node
+=== ONTAP Select node
 Each ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each node in a cluster is deployed as a virtual machine and runs a specially-designed derivative of the ONTAP 9 software.
 
-* ONTAP Select Deploy administration utility
+=== ONTAP Select Deploy administration utility
 The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy the ONTAP Select clusters. Note that the Deploy utility includes a current version of the ONTAP Select node image.
 
 == Illustration of a typical deployment
