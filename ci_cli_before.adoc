@@ -13,7 +13,7 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can access the Deploy administration utility through the command line interface.
 
 >> How to access (if not in install chapter)
 >> List of major commands

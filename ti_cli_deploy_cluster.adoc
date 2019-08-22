@@ -1,0 +1,40 @@
+---
+sidebar: sidebar
+permalink: ti_cli_deploy_cluster.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Deploying an ONTAP Select cluster using the CLI
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
+
+== Before you begin
+
+>> Remove this section?
+
+== Creating a single-node cluster
+
+You can use the ONTAP Select Deploy command line interface to deploy a single-node ONTAP Select cluster.
+
+.Before you begin
+
+You need to prepare the hypervisor host where the ONTAP Select node will run and have a storage license file. You must also have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
+
+.About this task
+
+An ONTAP Select cluster with one node is created.
+
+.Steps
+
+. Step 1
+
+.After you finish
+
+You should confirm that the ONTAP Select AutoSupport feature is configured. You should back up the ONTAP Select Deploy configuration data.

@@ -5,7 +5,7 @@ keywords: overview, concepts, features, use cases
 summary: ONTAP Select allows you xxx
 ---
 
-= Terminology
+= ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
