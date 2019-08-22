@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ct_ci_before.html
+permalink: ci_cli_before.html
 keywords: overview, concepts, features, use cases
 summary: ONTAP Select allows you xxx
 ---
 
-= Business use cases
+= Before you use the Deploy CLI
 :hardbreaks:
 :nofooter:
 :icons: font
