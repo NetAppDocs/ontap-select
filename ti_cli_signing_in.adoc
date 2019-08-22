@@ -13,7 +13,7 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-x need to sign in to the management shell using SSH to the create and manage ONTAP Select clusters.
+You need to sign in to the management shell using SSH to the create and manage ONTAP Select clusters.
 
 .Steps
 
