@@ -11,6 +11,10 @@ entries:
         url: /ct_use_cases.html
       - title: Terminology
         url: /ci_terminology.html
+  - title: Planning
+    entries:
+      - title: Deployment workflow
+        url: /ci_workflow_deploying.html
   - title: Installing
     entries:
       - title: Before you begin

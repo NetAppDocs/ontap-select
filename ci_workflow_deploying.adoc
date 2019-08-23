@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: ci_workflow_deploying.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= ONTAP Select installation and deployment workflow
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
+
+<insert figure>
