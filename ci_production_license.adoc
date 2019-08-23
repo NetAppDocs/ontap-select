@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_evaluation_license.html
+permalink: ci_production_license.html
 keywords: overview, concepts, features, use cases
 summary: ONTAP Select allows you xxx
 ---
