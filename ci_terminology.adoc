@@ -13,7 +13,7 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the key concepts at a high level. Based on this, you are better able to understand and deploy the product.
+As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the terminology and key concepts.
 
 ONTAP Select Deploy::
 ONTAP Select Deploy is the administration utility that you must use to deploy ONTAP Select clusters. The Deploy utility runs in a dedicated Linux virtual machine. You can access the Deploy utility through the web user interface, CLI management shell, and REST API.
@@ -23,3 +23,11 @@ A _hypervisor host_ is the core hardware platform, including the VMware ESXi vir
 
 ONTAP Select cluster::
 You can create an _ONTAP Select cluster_ composed of one, two, four, six, or eight nodes. Multi-node clusters always contain one or more HA pairs. For example, a four-node cluster consists of two HA pairs. A two-node cluster consists of one HA pair. A single node cluster does not provide HA capability.
+
+Preparation of the hypervisor host environment::
+Before using the Deploy administration utility to deploy an ONTAP Select cluster, you must prepare the hypervisor hosts where ONTAP Select will run, including the storage and networking environments. You must perform this host pre-configuration outside of the ONTAP Select product based on the current requirements and limitations.
+
+Evaluation versus purchased licenses::
+Every ONTAP Select node runs with either an _evaluation license_ or a _purchased license_. An evaluation license allows you to evaluate ONTAP Select prior to deploying it in a production environment. The evaluation license is automatically generated and applied by the ONTAP Select Deploy administration utility. If you deploy a cluster in a production environment, you must purchase a license which involves choosing the licensing model and storage capacity.
+
+NOTE: The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
