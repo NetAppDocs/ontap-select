@@ -1,0 +1,43 @@
+entries:
+  - title: ONTAP Select 9.7 docs
+    url: /index.html
+  - title: Concepts
+    entries:
+      - title: Product overview
+        url: /ci_overview.html
+      - title: ONTAP Select Deploy
+        url: /ci_ots_deploy.html
+      - title: Business use cases
+        url: /ct_use_cases.html
+      - title: Terminology
+        url: /ci_terminology.html
+  - title: Planning
+    entries:
+      - title: Deployment workflow
+        url: /ci_workflow_deploying.html
+  - title: Licensing
+    entries:
+      - title: Options
+        entries:
+          - title: Evaluation licences
+            url: /ci_evaluation_license.html
+          - title: Production licences
+            url: /ci_production_license.html
+  - title: Installing
+    entries:
+      - title: Before you begin
+        url: /ci_before_installing.html
+      - title: Deploying an ONTAP Select cluster
+        url: /ti_deploy_cluster.html
+  - title: Administering
+    entries:
+      - title: Before you begin
+        url: /ci_before_administering.html
+  - title: Deploy CLI
+    entries:
+      - title: Before you begin
+        url: /ci_cli_before.html
+      - title: Signing in using SSH
+        url: /ti_cli_signing_in.html
+      - title: Deploying an ONTAP Select cluster
+        url: /ti_cli_deploy_cluster.html

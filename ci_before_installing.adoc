@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_before_installing.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Before you install ONTAP Select
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
