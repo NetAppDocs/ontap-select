@@ -15,6 +15,10 @@ entries:
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
+  - title: Licensing
+    entries:
+      - title: Evaluation licnes
+        url: /ci_evaluation_license.html
   - title: Installing
     entries:
       - title: Before you begin
