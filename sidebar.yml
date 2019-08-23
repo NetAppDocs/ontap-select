@@ -13,6 +13,8 @@ entries:
         url: /ci_terminology.html
   - title: Installing
     entries:
+      - title: Before you begin
+        url: /ci_before_installing.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_deploy_cluster.html
   - title: Deploy CLI
