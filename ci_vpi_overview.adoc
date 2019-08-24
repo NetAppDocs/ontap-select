@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: ci_vpi_overview.html
+keywords: overview, concepts, features, use cases
+summary: ONTAP Select allows you xxx
+---
+
+= Overview of the Deploy vCenter plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Deploy vCenter plug-in is packaged with the Deploy administration utility. After using the Deploy user interface to install the plug-in to the vCenter server, you can access the plug-in through the vSphere web interface to deploy ONTAP Select clusters and perform related support tasks.
+
+==== Integration with VMware vCenter
+For many businesses, VMware vCenter is a central platform for administering virtualized data center and cloud resources. Because the Deploy plug-in is tightly integrated with vCenter, administrators can quickly move between the ONTAP Select and vCenter domains to leverage the relationships among the various resources.
+
+==== Functionality provided by the Deploy vCenter plug-in
+
+After installing the Deploy vCenter plug-in, there are two primary options available through vSphere in the Global Inventory Lists pane.
+
+ONTAP Select Clusters::
+The ONTAP Select Clusters option is roughly equivalent to the Clusters tab in the native Deploy web user interface. It provides the functionality described in the following table.
+
+INSERT TABLE
+
+ONTAP Select Deploy::
+The ONTAP Select Deploy option is roughly equivalent to the Hypervisor Hosts and Administration tabs in the native Deploy web user interface. It provides functionality through three tabs at the top of the page as described in the following table.
+
+INSERT TABLE
+
+==== Comparing the vCenter plug-in to the native Deploy user interface
+The functionality provided with the vCenter plug-in through vSphere is equivalent to the native Deploy user interface. However, there are a few features that are not provided with the plug-in and are only available with the Deploy user interface.
+
+Managing the vCenter plug-in::
+You cannot install, update, remove, or verify the vCenter plug-in using the vCenter plug-in. You must perform these management tasks through the native Deploy user interface.
+
+Managing vCenter credentials::
+Before installing the vCenter plug-in, you must add the necessary vCenter credentials to Deploy using the native Deploy user interface.
+
+ONTAP Select clusters must be controlled by the same vCenter server::
+You can only deploy and support the ONTAP Select clusters managed by the single vCenter server where the plug-in is installed. You cannot use the plug-in to access ONTAP Select clusters managed by other vCenter servers or clusters running on standalone ESXi or KVM hosts.
