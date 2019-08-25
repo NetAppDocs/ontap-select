@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= Where to get help and find more information
+= General requirements and planning considerations
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can get help and find more information about ONTAP Select through various resources, including videos, forums, and support.
+xxx

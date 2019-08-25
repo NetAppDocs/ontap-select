@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= Business use cases
+= Summary of best practices
 :hardbreaks:
 :nofooter:
 :icons: font

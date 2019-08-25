@@ -15,6 +15,12 @@ entries:
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
+      - title: ONTAP Select
+        entries:
+          - title: General requirements
+            url: /ri_plan_general.html
+      - title: Best pratices
+        url: /rt_best_practices.html
   - title: Licensing
     entries:
       - title: Options
