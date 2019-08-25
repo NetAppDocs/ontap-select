@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ci_workflow_deploying.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ONTAP Select
+summary: xxx
 ---
 
 = ONTAP Select installation and deployment workflow
@@ -13,6 +13,6 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can use the ONTAP Select installation and deployment workflow to deploy and administer an ONTAP Select cluster.
 
 <insert figure>
