@@ -15,4 +15,4 @@ summary: xxx
 [.lead]
 You can use the ONTAP Select installation and deployment workflow to deploy and administer an ONTAP Select cluster.
 
-<insert figure>
+image:deploy_workflow.png[Describes the complete workflow used to deploy an ONTAP Select cluster.]
