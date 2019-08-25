@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: rt_faq.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Frequently asked questions
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This is a placeholder for the content that Veena will provided.
