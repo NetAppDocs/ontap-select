@@ -21,7 +21,7 @@ The implementation and delivery of IT services through software allows administr
 
 In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
 
-NetApp® ONTAP® Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the Data Fabric solution to the extreme edge use cases including IoT and tactical servers.
+ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the Data Fabric architecture to the extreme edge use cases, including IoT and tactical servers.
 
 === Two software components
 

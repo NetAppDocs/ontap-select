@@ -46,7 +46,7 @@ There are three license offerings available that determine the capabilities of t
 * Standard
 * Premium
 * Premium XL
-+
+
 The premium offerings enhance the standard offering by providing additional features (such as SSD drives) as well as a larger platform size based on the node instance type. For more information, see the _Planning_ and _Licensing_ sections.
 
 Storage pools versus datastores::

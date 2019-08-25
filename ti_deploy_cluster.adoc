@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ti_deploy_cluster.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ONTAP Select
+summary: xxx
 ---
 
 = Deploying an ONTAP Select cluster

@@ -19,7 +19,7 @@ entries:
         entries:
           - title: General requirements
             url: /ri_plan_general.html
-      - title: Best pratices
+      - title: Best practices
         url: /rt_best_practices.html
   - title: Licensing
     entries:
@@ -39,6 +39,8 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_before_installing.html
+      - title: Installing ONTAP Select Deploy
+        url: /ti_install_deploy.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_deploy_cluster.html
   - title: Administering

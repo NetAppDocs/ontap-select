@@ -1,0 +1,63 @@
+---
+sidebar: sidebar
+permalink: ti_install_deploy.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Installing ONTAP Select Dpeloy
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
+
+== Before you begin
+
+>> Remove this section?
+
+== Downloading the virtual machine image
+
+xxx
+
+.Before you begin
+xxx
+
+.About this task
+xxx
+
+.Steps
+
+. Step 1
+
+
+== Deploying the virtual machine
+
+xxx
+
+.Before you begin
+xxx
+
+.About this task
+xxx
+
+.Steps
+
+. Step 1
+
+== Signing in to the Deploy web interface
+
+xxx
+
+.Before you begin
+xxx
+
+.About this task
+xxx
+
+.Steps
+
+. Step 1

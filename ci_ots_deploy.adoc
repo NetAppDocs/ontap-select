@@ -13,7 +13,7 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select Deploy is the administration utility that you must use to deploy and manage the ONTAP Select clusters. The Deploy administration utility is implemented as a Linux virtual machine and contains all the functionality you need to deploy and administer ONTAP Select clusters.
+ONTAP Select Deploy is the administration utility that you use to deploy and manage the ONTAP Select clusters. Deploy is packaged as a Linux virtual machine which you must install before creating an ONTAP Select cluster.
 
 === Core functionality
 
@@ -59,6 +59,4 @@ Displaying the online documentation web page at the Deploy utility is an alterna
 * A detailed description of every call in the REST web services API
 * The ability to manually issue any of the API calls
 
-You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance):
-+
-`http://<ip_address>/api/ui`
+You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance): `http://<ip_address>/api/ui`

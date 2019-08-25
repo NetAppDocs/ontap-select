@@ -13,4 +13,117 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
+
+=== Cluster size and related considerations
+
+There are several planning issues related to the cluster size that you should consider.
+
+Number of nodes in the cluster::
+An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. You should determine the size of the cluster based on the application requirements. For example, if HA capability is needed for an enterprise deployment, then a multi-node cluster should be used.
+
+Dedicated versus collocated::
+Based on the application type, you should determine if the deployment follows the dedicated or collocated model. Note that the collocated model can be more complex due to the workload diversity and tighter integration.
+
+=== Hypervisor host considerations
+
+There are several planning issues related to the hypervisor host that you should consider.
+
+IMPORTANT: You should not directly modify the configuration of an ONTAP Select virtual machine unless directed to do so by NetApp support. A virtual machine should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select virtual machine outside of the Deploy utility without assistance from NetApp support can cause the virtual machine to fail and render it unusable.
+
+Hypervisor independent::
+Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervisor-independent. The following hypervisors are supported for both:
+* VMware ESXi
+* Kernel-based Virtual Machine (KVM)
+
+Hypervisor for ONTAP Select nodes and administration utility::
+Both the Deploy administration utility and ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
+* Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi or KVM
+* Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi or KVM
+
+One or more instances of ONTAP Select node per host::
+Each ONTAP Select node runs as a dedicated virtual machine. You can create multiple nodes on the same hypervisor host, with the following restrictions:
+* Multiple nodes from a single ONTAP Select cluster cannot run on the same host. All the nodes on a specific host must be from different ONTAP Select clusters.
+* You must use external storage.
+* If you use software RAID, you can only deploy one ONTAP Select node on the host.
+
+Hypervisor consistency for the nodes within a cluster::
+All of the hosts within an ONTAP Select cluster must run on the same version and release of the hypervisor software.
+
+Number of physical ports on each host::
+You must configure each host to use one, two, or four physical ports. Although you have flexibility when configuring the network ports, you should follow these recommendations where possible:
+* A host in a single-node cluster should have two physical ports.
+* Each host in a multi-node cluster should have four physical ports
+
+Integrating ONTAP Select with an ONTAP hardware-based cluster::
+You cannot add an ONTAP Select node directly to an ONTAP hardware-based cluster. However, you can optionally establish a cluster peering relationship between an ONTAP Select cluster and a hardware-based ONTAP cluster.
+
+=== Storage considerations
+There are several planning issues related to host storage that you should consider.
+
+RAID type::
+When using direct-attached storage (DAS) on ESXi, you should decide whether to use a local hardware RAID controller or the software RAID feature included with ONTAP Select. If you use software RAID, see Software RAID requirements for more information.
+
+Local storage::
+When using local storage managed by a RAID controller, you must decide the following:
+* Whether to use one or more RAID groups
+* Whether to use one or more LUNs
+
+External storage::
+When using the ONTAP Select vNAS solution, you must decide where the remote datastores are located and how they are accessed. ONTAP Select vNAS supports the following configurations:
+* VMware vSAN
+* Generic external storage array
+
+Estimate for the storage needed::
+You should determine how much storage is required for the ONTAP Select nodes. This information is required as part of acquiring the purchased licenses with storage capacity. Refer to Storage capacity restrictions for more information.
+
+Licensing model for production deployment::
+You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review Licensing ONTAP Select for more information.
+
+=== Authentication using the credential store
+
+The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
+
+NOTE: The account information is stored securely in the database using the AES encryption algorithm and SHA-256 hashing algorithm.
+
+Types of credentials::
+The following types of credentials are supported:
+* host
+Used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM
+* vcenter
+Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
+
+Access::
+The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.
+
+=== Preparing for a MetroCluster SDS deployment
+
+MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment, however the distance between the two nodes can be up to 10 km. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.
+
+Before deploying MetroCluster SDS, your must assure that the following requirements are met.
+
+Licensing::
+Each node must have a premium or higher ONTAP Select license.
+
+Hypervisor platforms::
+MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as supported for a two-node cluster in a ROBO environment.
+
+Network configuration::
+Layer 2 connectivity is required between the participating sites. Both 10GbE and 1GbE are supported, including the following configurations:
+* 1 x 10GbE
+* 4 x 1GbE
+NOTE: The data serving ports and interconnect ports must be connected to the same first switch.
+
+Latency between the nodes::
+The network between the two nodes must support a mean latency of 5 ms with an additional 5 ms periodic jitter. Before deploying the cluster, you must test the network using the procedure described in the ONTAP Select Product Architecture and Best Practices technical report.
+
+Mediator service::
+As with all two-node ONTAP Select clusters, there is a separate mediator service contained in the Deploy virtual machine that monitors the nodes and assists in managing failures. With the enhanced distance available with MetroCluster SDS, this creates three distinct sites in the network topology. Latency on the link between the mediator and a node should be 125 ms round-trip or less.
+
+Storage::
+Direct-attached storage (DAS) is supported using either HDD and SSD disks. vNAS is also supported, including external storage arrays and vSAN in a VMware environment.
+
+NOTE: When deploying MetroCluster SDS, you cannot use vSAN in a distributed or "stretched" topology.
+
+Static IP address assigned to Deploy::
+You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.
