@@ -13,7 +13,9 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select automatically licenses several features for each node. Licenses for the following features are included when you deploy an ONTAP Select cluster:
+ONTAP Select automatically licenses several features for each node when you deploy a cluster.
+
+Licenses for the following features are included by default:
 
 * NFS
 * CIFS
