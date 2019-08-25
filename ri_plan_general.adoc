@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
 
-=== Cluster size and related considerations
+== Cluster size and related considerations
 
 There are several planning issues related to the cluster size that you should consider.
 
@@ -25,7 +25,7 @@ An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. You 
 Dedicated versus collocated::
 Based on the application type, you should determine if the deployment follows the dedicated or collocated model. Note that the collocated model can be more complex due to the workload diversity and tighter integration.
 
-=== Hypervisor host considerations
+== Hypervisor host considerations
 
 There are several planning issues related to the hypervisor host that you should consider.
 
@@ -58,7 +58,7 @@ You must configure each host to use one, two, or four physical ports. Although y
 Integrating ONTAP Select with an ONTAP hardware-based cluster::
 You cannot add an ONTAP Select node directly to an ONTAP hardware-based cluster. However, you can optionally establish a cluster peering relationship between an ONTAP Select cluster and a hardware-based ONTAP cluster.
 
-=== Storage considerations
+== Storage considerations
 There are several planning issues related to host storage that you should consider.
 
 RAID type::
@@ -80,7 +80,7 @@ You should determine how much storage is required for the ONTAP Select nodes. Th
 Licensing model for production deployment::
 You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review Licensing ONTAP Select for more information.
 
-=== Authentication using the credential store
+== Authentication using the credential store
 
 The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
 
@@ -96,7 +96,7 @@ Used to authenticate a vCenter server as part of deploying an ONTAP Select node 
 Access::
 The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.
 
-=== Preparing for a MetroCluster SDS deployment
+== Preparing for a MetroCluster SDS deployment
 
 MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment, however the distance between the two nodes can be up to 10 km. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.
 
