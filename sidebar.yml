@@ -59,9 +59,9 @@ entries:
         entries:
           - title: Overview
             url: /ci_vpi_overview.html
-  - title: REST API
+  - title: Deploy REST API
     entries:
-      - title: Understanding the Deploy REST API
+      - title: Understanding the REST API
         entries:
           - title: REST web services
             url: /ci_api_rest.html
