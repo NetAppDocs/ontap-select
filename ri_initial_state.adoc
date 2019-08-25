@@ -13,6 +13,8 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
+You should be aware of the state of a cluster after it has been deployed. Based on this, you can decide how to configure and administer the cluster.
+
 After an ONTAP Select cluster is deployed, it has the following characteristics:
 
 * Two types of customer-specified LIFs are assigned:
