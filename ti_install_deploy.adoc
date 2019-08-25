@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= Installing ONTAP Select Dpeloy
+= Installing ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
