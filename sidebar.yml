@@ -31,6 +31,8 @@ entries:
             url: /ci_production_license.html
           - title: Platform license offerings
             url: /ci_platform_offerings.html
+          - title: ONTAP features
+            url: /ri_ontap_features.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
