@@ -45,6 +45,8 @@ entries:
         url: /ti_install_deploy.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_deploy_cluster.html
+      - title: Initial cluster state
+        url: /ti_initial_state.html
   - title: Administering
     entries:
       - title: Before you begin
