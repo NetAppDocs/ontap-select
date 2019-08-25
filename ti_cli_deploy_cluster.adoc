@@ -17,10 +17,7 @@ You can use the command line interface provided with the ONTAP Select Deploy adm
 
 == Before you begin
 
-xxx
-
-==== Decisions
->> Decisions (single node or multiple nodes, production or evaluation)
+Before creating an ONTAP Select cluster, you should xxx
 
 ==== Workflow summary
 
@@ -28,9 +25,12 @@ You must perform several tasks to deploy an ONTAP Select cluster in a production
 
 . Upload and register the license files
 . Add the hypervisor hosts
-. ETC
+. Create and configure the cluster
+. Configure the ONTAP Select nodes
+. Attach storage to the nodes
+. Deploy the cluster
 
-==== Additional considerations
+==== Preparation
 
 Before creating an ONTAP Select cluster on the ESXi hypervisor, you should note the following:
 
