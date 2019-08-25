@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: ri_ontap_features.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= ONTAP features enabled by default
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+ONTAP Select automatically licenses several features for each node when you deploy a cluster.
+
+Licenses for the following features are included by default:
+
+* NFS
+* CIFS
+* iSCSI
+* FlexClone
+* SnapRestore
+* SnapVault
+* SnapMirror
+* Deduplication and compression
+* ONTAP multitenancy capability
+* NetApp Volume Encryption (non-restricted countries only)
+
+You must purchase a separate license for any other features, including:
+
+* SnapLock Enterprise
+* FabricPool
+* FlexCache
+
+NOTE: You do not need a FabricPool license when utilizing StorageGRID Webscale.

@@ -15,6 +15,12 @@ entries:
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
+      - title: ONTAP Select
+        entries:
+          - title: General requirements
+            url: /ri_plan_general.html
+      - title: Best practices
+        url: /rt_best_practices.html
   - title: Licensing
     entries:
       - title: Options
@@ -23,6 +29,10 @@ entries:
             url: /ci_evaluation_license.html
           - title: Production licences
             url: /ci_production_license.html
+          - title: Platform license offerings
+            url: /ci_platform_offerings.html
+          - title: ONTAP features
+            url: /ri_ontap_features.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
@@ -31,12 +41,30 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_before_installing.html
+      - title: Installing ONTAP Select Deploy
+        url: /ti_install_deploy.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_deploy_cluster.html
+      - title: Initial cluster state
+        url: /ri_initial_state.html
   - title: Administering
     entries:
       - title: Before you begin
         url: /ci_before_administering.html
+  - title: FAQ
+    url: /rt_faq.html
+  - title: vCenter plug-in
+    entries:
+      - title: Getting started
+        entries:
+          - title: Overview
+            url: /ci_vpi_overview.html
+  - title: Deploy REST API
+    entries:
+      - title: Understanding the REST API
+        entries:
+          - title: REST web services
+            url: /ci_api_rest.html
   - title: Deploy CLI
     entries:
       - title: Before you begin
@@ -45,15 +73,3 @@ entries:
         url: /ti_cli_signing_in.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_cli_deploy_cluster.html
-  - title: vCenter plug-in
-    entries:
-      - title: Getting started
-        entries:
-          - title: Overview
-            url: /ci_vpi_overview.html
-  - title: REST API
-    entries:
-      - title: Understanding the Deploy REST API
-        entries:
-          - title: REST web services
-            url: /ci_api_rest.html

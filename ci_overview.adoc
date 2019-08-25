@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ci_overview.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ONTAP Select
+summary: xxx
 ---
 
 = ONTAP Select overview
@@ -15,19 +15,24 @@ summary: ONTAP Select allows you xxx
 [.lead]
 ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure. Before using ONTAP Select, you should understand the key characteristics and operational components.
 
-== Software-define Storage
+== Software-defined storage
 
->> TR 1.1 and 1.2 (include as part of SDI)
+The implementation and delivery of IT services through software allows administrators to rapidly provision resources with a speed and agility that was previously not possible. As modern data centers move to a software-defined infrastructure (SDI) architecture, the most valuable IT assets can be separated from the underlying physical infrastructure, providing flexibility, scalability, and programmability.
+
+
+In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
+
+ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the Data Fabric architecture to the extreme edge use cases, including the Internet of Things (IoT) and tactical servers.
 
 == Two software components
 
 ONTAP Select is composed of two major software components:
 
 ONTAP Select node::
-Each ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each node in a cluster is deployed as a virtual machine and runs a specially-designed derivative of the ONTAP 9 software.
+An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each cluster node is deployed as a separate virtual machine and runs a specially-designed derivative of the ONTAP 9 software.
 
 ONTAP Select Deploy administration utility::
-The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy the ONTAP Select clusters. Note that the Deploy utility includes a current version of the ONTAP Select node image.
+The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy ONTAP Select clusters. A current version of the ONTAP Select node image is bundled with the Deploy utility.
 
 == Illustration of a typical deployment
 

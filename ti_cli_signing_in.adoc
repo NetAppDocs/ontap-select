@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ti_cli_signing_in.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ONTAP Select
+summary: xxx
 ---
 
 = Signing in to Deploy using SSH
@@ -14,6 +14,10 @@ summary: ONTAP Select allows you xxx
 
 [.lead]
 You need to sign in to the management shell using SSH to the create and manage ONTAP Select clusters.
+
+.Before you begin
+
+You must also have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
 
 .Steps
 

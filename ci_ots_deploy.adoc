@@ -13,9 +13,9 @@ summary: ONTAP Select allows you xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select Deploy is the administration utility that you must use to deploy and manage the ONTAP Select clusters. The Deploy administration utility is implemented as a Linux virtual machine and contains all the functionality you need to deploy and administer ONTAP Select clusters.
+ONTAP Select Deploy is the administration utility that you use to deploy and manage the ONTAP Select clusters. Deploy is packaged as a Linux virtual machine which you must install before creating an ONTAP Select cluster.
 
-=== Core functionality
+== Core functionality
 
 The Deploy utility performs the following core functions:
 
@@ -27,7 +27,7 @@ The Deploy utility performs the following core functions:
 * Maintain an internal set of ONTAP Select node images
 * Support the hypervisor command formats and protocols
 
-=== Ways you can access the Deploy utility
+== Ways you can access the Deploy utility
 
 You have several options available when accessing the Deploy administration utility. All the external interfaces are functionally equivalent. You should select the access option that best matches your specific deployment goals and requirements. In all cases, you must sign in using the administrator account with a valid password.
 
@@ -59,6 +59,4 @@ Displaying the online documentation web page at the Deploy utility is an alterna
 * A detailed description of every call in the REST web services API
 * The ability to manually issue any of the API calls
 
-You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance):
-
-`http://<ip_address>/api/ui`
+You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance): `http://<ip_address>/api/ui`

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ct_use_cases.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ONTAP Select
+summary: xxx
 ---
 
 = Business use cases

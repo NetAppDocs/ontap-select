@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ci_before_installing.html
+permalink: rt_best_practices.html
 keywords: ONTAP Select
 summary: xxx
 ---
 
-= Before you install ONTAP Select
+= Summary of best practices
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+This is a placeholder for the content that Veena will provided.

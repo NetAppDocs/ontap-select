@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ci_vpi_overview.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ONTAP Select
+summary: xxx
 ---
 
 = Overview of the Deploy vCenter plug-in
@@ -15,10 +15,10 @@ summary: ONTAP Select allows you xxx
 [.lead]
 The Deploy vCenter plug-in is packaged with the Deploy administration utility. After using the Deploy user interface to install the plug-in to the vCenter server, you can access the plug-in through the vSphere web interface to deploy ONTAP Select clusters and perform related support tasks.
 
-==== Integration with VMware vCenter
+=== Integration with VMware vCenter
 For many businesses, VMware vCenter is a central platform for administering virtualized data center and cloud resources. Because the Deploy plug-in is tightly integrated with vCenter, administrators can quickly move between the ONTAP Select and vCenter domains to leverage the relationships among the various resources.
 
-==== Functionality provided by the Deploy vCenter plug-in
+=== Functionality provided by the Deploy vCenter plug-in
 
 After installing the Deploy vCenter plug-in, there are two primary options available through vSphere in the Global Inventory Lists pane.
 
@@ -32,7 +32,7 @@ The ONTAP Select Deploy option is roughly equivalent to the Hypervisor Hosts and
 
 INSERT TABLE
 
-==== Comparing the vCenter plug-in to the native Deploy user interface
+=== Comparing the vCenter plug-in to the native Deploy user interface
 The functionality provided with the vCenter plug-in through vSphere is equivalent to the native Deploy user interface. However, there are a few features that are not provided with the plug-in and are only available with the Deploy user interface.
 
 Managing the vCenter plug-in::
