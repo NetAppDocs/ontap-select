@@ -1,0 +1,124 @@
+---
+sidebar: sidebar
+permalink: ri_plan_ots_hardware.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= VMware hypervisor and core hardware
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several requirements and planning issues you should consider related to the VMware environment.
+
+== Hypervisor requirements
+There are several requirements related to the hypervisor where ONTAP Select runs.
+
+NOTE: You should refer to the current release notes to review any additional known restrictions or limitations.
+
+==== VMware licensing
+
+To deploy an ONTAP Select cluster, your organization must have a valid VMware vSphere license for the hypervisor hosts where ONTAP Select runs. You should use the licenses that are appropriate for your deployment.
+
+==== Software compatibility
+
+ONTAP Select can be deployed on the following hypervisors:
+
+* VMware ESXi 6.0 GA (build 2494585 or greater)
+* VMware ESXi 6.5 U2 (build 8294253 or greater)
+* VMware ESXi 6.7 GA (build 8169922or greater) including 6.7 U1 and 6.7 U2
+
+NOTE: NetApp supports ONTAP Select on these versions of ESXi as long as VMware also continues to support the same versions.
+
+==== Upgrading to VMware ESXi 6.5 U2 or later
+
+If you currently have ONTAP Select deployed on VMware ESXi 6.5 U1, you should upgrade to ESXi 6.5 U2 or later as soon as possible. Using ESXi 6.5 U1 can expose you to a virtual machine failure due to a known VMware bug.
+
+==== VMware vCenter and standalone ESXi hosts
+If an ESXi hypervisor host is managed by a vCenter server, you must register the host to the Deploy administration utility using the vCenter credentials. You cannot register the host as a standalone host using the ESXi credentials.
+
+== Core hardware requirements
+
+The physical hypervisor host where you deploy ONTAP Select must meet several hardware requirements. You can choose any platform for the hypervisor host, as long as it meets the minimum hardware requirements. The following vendors provide supported hardware platforms: Cisco, Dell, HP, Fujitsu, Lenovo, and Supermicro.
+
+Refer to the _NetApp Interoperability Matrix Tool_ for more information.
+
+==== Basic hardware requirements
+There are several common hardware requirements that apply to all platforms regardless of the node
+instance type or license offering.
+
+* Processor
+** Intel CPU E5-26xx v3 (Haswell) or higher
+** Intel CPU Skylake server processors (see Intel Skylake for supported models)
+
+* Ethernet network ports
+** 4 x 10GbE (recommended)
+** 2 x 10GbE
+** 1 x 10GbE
+** 4 x 1GbE (only for a two-node ROBO cluster)
+** 2 x 1GbE (only for a single-node cluster)
+
+==== Additional hardware requirements based on the instance type
+
+There are several additional hardware requirements based on the node instance type.
+
+Small::
+
+* CPU cores
+Six physical cores or greater, with four reserved for ONTAP Select.
+
+* Memory
+24GB or greater with 16GB reserved for ONTAP Select.
+
+* Required platform license offering
+Standard, premium, or premium XL
+
+Medium::
+
+* CPU cores
+Ten physical cores or greater, with eight reserved for ONTAP Select.
+
+* Memory
+72GB or greater with 64GB reserved for ONTAP Select
+
+* Required platform license offering
+Premium or premium XL
+
+Large::
+
+* CPU cores
+Eighteen physical cores or greater, with sixteen reserved for ONTAP Select.
+
+* Memory
+136GB or greater with 128GB reserved for ONTAP Select
+
+* Required platform license offering
+Premium XL
+
+==== Additional disk drive requirements based on the platform license
+
+The drives you choose are limited by the license offering.
+
+NOTE: The disk drive requirements apply when using a local RAID controller and drives, as well as software RAID. These requirements do not apply to external storage accessed through the ONTAP Select vNAS solution.
+
+Small::
+
+* 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
+
+Premium and premium XL::
+
+* 4 to 60 internal SSD
+
+* 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
+
+Refer to _Understanding the platform license offerings_ for more information.
+
+==== Best practices
+
+You should consider the following recommendations regarding the hypervisor core hardware:
+
+* All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.

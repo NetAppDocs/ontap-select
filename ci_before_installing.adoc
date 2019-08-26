@@ -13,4 +13,10 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+This section will have some basic information about the process, including the steps at a high level.
+
+The next section in this chapter should be the "Host configuration checklist" that Veena will create. Note that this section should absorb content that was previously owned by IE, including:
+
+* Install guide - _Host configuration and preparation checklist_ chapter
+* Deploy planning chapter - _Required configuration information_ and _Optional network configuration information_ sections
+* ONTAP Select planning chapter - _Required information for a VMware deployment_
