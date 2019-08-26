@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ri_plan_dep_vmware.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= VMware hypervisor environment
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

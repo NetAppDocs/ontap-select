@@ -19,6 +19,10 @@ entries:
         entries:
           - title: General requirements
             url: /ri_plan_dep_general.html
+          - title: General requirements
+            url: /ri_plan_dep_vmware.html
+          - title: Summary of information
+            url: /ri_plan_dep_summary.html
       - title: ONTAP Select
         entries:
           - title: General requirements
@@ -31,10 +35,12 @@ entries:
             url: /ri_plan_ots_networking.html
           - title: ONTAP Select vNAS
             url: /ri_plan_ots_vnas.html
-          - title: Tw-node clusters
+          - title: Two-node clusters
             url: /ri_plan_ots_two_node.html
           - title: Remote and branch offices
             url: /ri_plan_ots_robo.html
+          - title: Summary of information
+            url: /ri_plan_ots_summary.html
       - title: Best practices
         url: /rt_best_practices.html
   - title: Licensing
