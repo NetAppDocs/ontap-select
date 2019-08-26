@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: ri_plan_dep_general.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= General requirements and planning considerations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
+
+== Authentication using the credential store
+
+The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
+
+NOTE: The account information is stored securely in the database using the AES encryption algorithm and SHA-256 hashing algorithm.
+
+Types of credentials::
+The following types of credentials are supported:
+* host
+Used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM
+* vcenter
+Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
+
+Access::
+The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.

@@ -80,22 +80,6 @@ You should determine how much storage is required for the ONTAP Select nodes. Th
 Licensing model for production deployment::
 You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review Licensing ONTAP Select for more information.
 
-== Authentication using the credential store
-
-The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
-
-NOTE: The account information is stored securely in the database using the AES encryption algorithm and SHA-256 hashing algorithm.
-
-Types of credentials::
-The following types of credentials are supported:
-* host
-Used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM
-* vcenter
-Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
-
-Access::
-The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.
-
 == Preparing for a MetroCluster SDS deployment
 
 MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment, however the distance between the two nodes can be up to 10 km. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.

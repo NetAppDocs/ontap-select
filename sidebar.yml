@@ -15,6 +15,10 @@ entries:
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
+      - title: ONTAP Select Deploy
+        entries:
+          - title: General requirements
+            url: /ri_plan_dep_general.html
       - title: ONTAP Select
         entries:
           - title: General requirements
