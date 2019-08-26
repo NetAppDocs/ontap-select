@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= MetroCluster SDS
+= Preparing for a MetroCluster SDS deployment
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,6 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
-
-
-== Preparing for a MetroCluster SDS deployment
-
 MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment, however the distance between the two nodes can be up to 10 km. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.
 
 Before deploying MetroCluster SDS, your must assure that the following requirements are met.
