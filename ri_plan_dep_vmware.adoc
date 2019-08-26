@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a VMware environment.
 
-==== ESXi host server hardware requirements
+== ESXi host server hardware requirements
 
 There are several minimum resource requirements that your ESXi hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
 
@@ -27,7 +27,7 @@ There are several minimum resource requirements that your ESXi hypervisor host m
 * Storage (40 GB)
 * DHCP enabled (can also assign a static IP address)
 
-==== Network connectivity
+== Network connectivity
 
 You must make sure that the ONTAP Select Deploy virtual machine network interface is configured and has a single management IP address. You can use DHCP to dynamically assign an IP address or manually configure a static IP address.
 
@@ -41,7 +41,7 @@ Deploy must also be able to communicate with the ONTAP Select node and cluster m
 * SSH (port 23)
 * SSL (port 443)
 
-==== Support for IP version 4
+== Support for IP version 4
 
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
 
@@ -49,6 +49,6 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
-==== VMware vCenter language restriction
+== VMware vCenter language restriction
 
 If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version. ONTAP Select Deploy does not support vCenter on non-English versions of Windows.

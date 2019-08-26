@@ -19,4 +19,4 @@ The next section in this chapter should be the "Host configuration checklist" th
 
 * Install guide - _Host configuration and preparation checklist_ chapter
 * Deploy planning chapter - _Required configuration information_ and _Optional network configuration information_ sections
-* ONTAP Select - _Required information for a VMware deployment_
+* ONTAP Select planning chapter - _Required information for a VMware deployment_
