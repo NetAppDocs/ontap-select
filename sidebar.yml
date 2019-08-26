@@ -31,6 +31,10 @@ entries:
             url: /ri_plan_ots_networking.html
           - title: ONTAP Select vNAS
             url: /ri_plan_ots_vnas.html
+          - title: Tw-node clusters
+            url: /ri_plan_ots_two_node.html
+          - title: Remote and branch offices
+            url: /ri_plan_ots_robo.html
       - title: Best practices
         url: /rt_best_practices.html
   - title: Licensing

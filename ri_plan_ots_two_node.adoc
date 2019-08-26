@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ri_plan_ots_two_node.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= ONTAP Select two-node clusters with HA
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

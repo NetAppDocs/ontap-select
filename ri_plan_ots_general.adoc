@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_general.html
+permalink: ri_plan_ots_general.html
 keywords: ONTAP Select
 summary: xxx
 ---
