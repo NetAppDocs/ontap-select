@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ri_plan_ots_vnas.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= ONTAP Select vNAS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

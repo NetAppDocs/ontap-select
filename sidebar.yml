@@ -27,6 +27,10 @@ entries:
             url: /ri_plan_ots_hardware.html
           - title: Storage and RAID
             url: /ri_plan_ots_storage.html
+          - title: Networking
+            url: /ri_plan_ots_networking.html
+          - title: ONTAP Select vNAS
+            url: /ri_plan_ots_vnas.html
       - title: Best practices
         url: /rt_best_practices.html
   - title: Licensing
