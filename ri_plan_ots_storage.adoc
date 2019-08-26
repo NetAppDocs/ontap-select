@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_hardware.html
+permalink: ri_plan_ots_storage.html
 keywords: ONTAP Select
 summary: xxx
 ---
 
-= VMware hypervisor and core hardware
+= Storage and RAID
 :hardbreaks:
 :nofooter:
 :icons: font
