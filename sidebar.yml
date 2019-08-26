@@ -18,7 +18,7 @@ entries:
       - title: ONTAP Select
         entries:
           - title: General requirements
-            url: /ri_plan_general.html
+            url: /ri_plan_ots_general.html
       - title: Best practices
         url: /rt_best_practices.html
   - title: Licensing
