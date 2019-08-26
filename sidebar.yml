@@ -23,6 +23,8 @@ entries:
         entries:
           - title: General requirements
             url: /ri_plan_ots_general.html
+          - title: Hypervisor and hardware
+            url: /ri_plan_ots_hardware.html
       - title: Best practices
         url: /rt_best_practices.html
   - title: Licensing

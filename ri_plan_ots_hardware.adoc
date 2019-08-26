@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ri_plan_ots_hardware.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= General requirements and planning considerations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
