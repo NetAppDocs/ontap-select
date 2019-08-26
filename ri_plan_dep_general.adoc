@@ -15,6 +15,21 @@ summary: xxx
 [.lead]
 There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
 
+== Pairing the Deploy utility with the ONTAP Select clusters
+You have several options when pairing an instance of the Deploy utility with the ONTAP Select clusters.
+
+IMPORTANT: In all deployment scenarios, a single ONTAP Select cluster and the nodes in the
+cluster can be managed by only one instance of the Deploy administration utility. A cluster cannot
+be managed by two or more different instances of the Deploy utility.
+
+==== One instance of the utility for each ONTAP Select cluster
+You can deploy and manage each ONTAP Select cluster using a dedicated instance of the Deploy utility. With this one-to-one configuration, there is a clear separation between each of the utility-to-cluster pairings. This configuration provides a high level of isolation with smaller failure domains.
+
+==== One instance of the utility for multiple ONTAP Select clusters
+You can deploy and manage multiple ONTAP Select clusters in your organization using a single instance of the Deploy utility. With this one-to-many configuration, all processing and configuration data is managed by the same instance of the Deploy utility.
+
+NOTE: One instance of the Deploy utility can administer up to 400 ONTAP Select nodes or 100 clusters.
+
 == Authentication using the credential store
 
 The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
