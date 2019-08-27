@@ -72,7 +72,7 @@ entries:
       - title: Before you begin
         url: /ci_adm_before.html
       - title: ONTAP Select clusters
-        url: /ci_adm_clusters.html
+        url: /ti_adm_clusters.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
