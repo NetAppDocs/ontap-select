@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_clusters.html
+permalink: ti_adm_licenses.html
 keywords: ONTAP Select
 summary: xxx
 ---
 
-= ONTAP Select clusters
+= ONTAP Select licenses
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,81 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several related tasks you can perform to administer an ONTAP Select cluster.
-
-== Deleting an ONTAP Select cluster
-
-You can delete an ONTAP Select cluster when it is no longer needed.
-
-.Before you begin
-
-The cluster must be in the offline state.
-
-.Steps
-
-. Sign in to the Deploy utility web user interface using the administrator account.
-
-. Click the *Clusters* tab at the top of the page and select the desired cluster from the list.
-
-. Click the gear icon on the right of the cluster and select *Delete*.
-+
-If the delete option is not available, then the cluster is not in an offline state. You must assure that the cluster is offline.
-
-. Click *Refresh* occasionally until the cluster is removed from the list.
-
-== Refreshing the Deploy cluster configuration
-
-After creating an ONTAP Select cluster, you can make changes to the cluster or the virtual machine configuration outside of the Deploy utility using the ONTAP or hypervisor administration tools. The configuration of a virtual machine can also change after it is migrated.
-
-When these changes to the cluster or virtual machine occur, the Deploy utility configuration database is not automatically updated and can become out of sync with the state of the cluster. You should perform a cluster refresh in these and other situations to update the Deploy database based on the current state of the cluster.
-
-.Before you begin
-
-Required information::
-You must have the current configuration information for the cluster, including:
-* ONTAP administrator credentials
-* Cluster management IP address
-* Names of the nodes in the cluster
-
-Stable cluster state::
-The cluster must be in a stable state. You cannot refresh a cluster when it is in the process of being created or deleted, or when it is in the _create_failed_ or _delete_failed_ state.
-
-After a VM migration::
-After a virtual machine running ONTAP Select has been migrated, you must create a new host using the Deploy utility before performing a cluster refresh.
-
-.About this task
-
-You can perform a cluster refresh to update the Deploy configuration database using the web user interface.
-
-NOTE: Instead of using the Deploy GUI, you can use the cluster refresh command in the Deploy CLI shell to refresh a cluster.
-
-Cluster and virtual machine configuration::
-Some of the configuration values that can change and cause the Deploy database to become out of sync include:
-* Cluster and node names
-* ONTAP network configuration
-* ONTAP version (after an upgrade)
-* Virtual machine names
-* Host network names
-* Storage pool names
-
-Cluster and node states::
-An ONTAP Select cluster or node can be in a state that prevents it from operating properly. You should perform a cluster refresh operation to correct the following conditions:
-* Node in _unknown_ state
-An ONTAP Select node can be in the _unknown state_ for several reasons, including the node is not found.
-* Cluster in _degraded_ state
-If a node is powered off, it might still appear to be online in the Deploy utility. In this situation, the cluster is in a _degraded_ state.
-
-.Steps
-
-. Sign in to the Deploy utility web user interface using the administrator account.
-
-. Click the _Clusters_ tab at the top left of the page and select the desired cluster from the list.
-
-. Click the gear icon at the top right and select _Cluster Refresh_ from the drop-down list.
-
-. Provide the current ONTAP Select username and password for the cluster under _Cluster Credentials_.
-
-. Click _Refresh_.
-
-.After you finish
-If the operation is successful, the field _Last successful refresh_ is updated. You should back up the Deploy configuration data after the cluster refresh operation has completed.
+There are several related tasks you can perform to administer the ONTAP Select licenses.
