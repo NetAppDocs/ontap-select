@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_adm_security.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Security
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related tasks you can perform to administer the security for ONTAP Security and ONTAP Select Deploy.
