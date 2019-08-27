@@ -70,7 +70,7 @@ entries:
   - title: Administering
     entries:
       - title: Before you begin
-        url: /ci_before_administering.html
+        url: /ci_adm_before.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
