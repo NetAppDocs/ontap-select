@@ -19,3 +19,4 @@ xxx
 >> All use web
 >> Some cases, simple related tasks in one file (such as Clusters)
 >> More complex multi-task processes in single file
+>> ONTAP Select Deploy includes admin tasks specific to Deploy (not necessarily to an OTS cluster)
