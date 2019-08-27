@@ -71,12 +71,16 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_adm_before.html
-      - title: ONTAP Select clusters
+      - title: Deploy utility
+        url: /ti_adm_deploy.html
+      - title: Clusters
         url: /ti_adm_clusters.html
+      - title: Nodes
+        entries:
+          - title: Video console
+            url: /ti_adm_video_console.html
       - title: Licenses
         url: /ti_adm_licenses.html
-      - title: Security
-        url: /ti_adm_security.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
