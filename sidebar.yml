@@ -71,12 +71,10 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_adm_before.html
-      - title: Deploy utility
-        url: /ti_adm_deploy.html
-      - title: Security
-        url: /ti_adm_security.html
       - title: Support
         url: /ti_adm_support.html
+      - title: Security
+        url: /ti_adm_security.html
       - title: Network and mediators
         entries:
           - title: Connectivity
@@ -89,6 +87,8 @@ entries:
             url: /ti_adm_video_console.html
       - title: Licenses
         url: /ti_adm_licenses.html
+      - title: Deploy utility
+        url: /ti_adm_deploy.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in

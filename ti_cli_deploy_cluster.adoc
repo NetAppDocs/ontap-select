@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ti_cli_deploy_cluster.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ontap select
+summary: xxx
 ---
 
 = Deploying an ONTAP Select cluster using the CLI

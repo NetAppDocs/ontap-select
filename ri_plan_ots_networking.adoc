@@ -110,15 +110,49 @@ ONTAP Select Deploy administration utility
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
 * Hypervisor server
 ESXi hypervisor host
-* OST node
+* OTS node
 An ONTAP Select node
 * OTS cluster
 An ONTAP Select cluster
 * Admin WS
 Local administrative workstation
 
-==== Summary of network traffic requirements
+Summary of network traffic requirements::
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 
->> MUST INSERT TABLE
+[cols="20,45,35"*,options="header"]
+|===
+|Protocol / Port
+|Direction
+|Description
+
+|TLS (443)
+|Deploy to vSphere/ESXi
+|VMware VIX API
+
+|902
+|Deploy to vSphere/ESXi
+|VMware VIX API
+
+|ICMP
+|Deploy to hypervisor server
+|Ping
+
+|ICMP
+|Deploy to each OTS node
+|Ping
+
+|SSH (22)
+|Admin WS to each OTS node
+|Administration
+
+|TLS (443)
+|Deploy to OTS nodes and clusters
+|Access ONTAP
+
+|iSCSI (3260)
+|Each OTS node to Deploy
+|Mediator/Mailbox disk
+
+|===

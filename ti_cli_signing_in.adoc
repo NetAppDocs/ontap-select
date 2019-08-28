@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_cli_signing_in.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
