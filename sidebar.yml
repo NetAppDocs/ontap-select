@@ -77,7 +77,7 @@ entries:
         url: /ti_adm_security.html
       - title: Support
         url: /ti_adm_support.html
-      - title: Network and mediator
+      - title: Network and mediators
         entries:
           - title: Connectivity
             url: /ti_adm_connectivity.html
