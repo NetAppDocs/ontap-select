@@ -117,7 +117,7 @@ An ONTAP Select cluster
 * Admin WS
 Local administrative workstation
 
-==== Summary of network traffic requirements
+Summary of network traffic requirements::
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 
@@ -153,6 +153,6 @@ The following table describes the network traffic requirements for an ONTAP Sele
 
 |iSCSI (3260)
 |Each OTS node to Deploy
-|Mediator / Mailbox disk
+|Mediator/Mailbox disk
 
 |===
