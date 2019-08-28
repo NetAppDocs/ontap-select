@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ci_adm_before.html
 keywords: ontap select
-summary: xxx
+summary: xxxx
 ---
 
 = Before you begin administering ONTAP Select

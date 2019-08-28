@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ri_initial_state.html
 keywords: ONTAP Select
-summary: xxx
+summary: xxxx
 ---
 
 = Initial state of the cluster after deployment

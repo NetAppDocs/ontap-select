@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ci_cli_before.html
 keywords: ontap select
-summary: xxx
+summary: xxxx
 ---
 
 = Before you use the Deploy CLI

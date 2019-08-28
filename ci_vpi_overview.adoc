@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ci_vpi_overview.html
 keywords: ONTAP Select
-summary: xxx
+summary: xxxx
 ---
 
 = Overview of the Deploy vCenter plug-in
@@ -26,7 +26,7 @@ After installing the Deploy vCenter plug-in, there are two primary options avail
 ONTAP Select Clusters::
 The ONTAP Select Clusters option is roughly equivalent to the Clusters tab in the native Deploy web user interface. It provides the functionality described in the following table.
 
-[cols="30,70"*,options="header"]
+[cols="35,65"*,options="header"]
 |===
 |You perform this operation ...
 |By doing this ...
@@ -34,8 +34,29 @@ The ONTAP Select Clusters option is roughly equivalent to the Clusters tab in th
 |Deploy an ONTAP Select cluster
 |Click New ONTAP Select.
 
+|View cluster details
+|Select a cluster, click Summary, and then click Details.
+
+|View cluster event messages
+|Select a cluster, click Summary, and then click Events.
+
+|Move a cluster online or offline, or delete a cluster
+|Select a cluster, click Actions, and then click the desired action.
+
 |Launch System Manager
 |Select a cluster, click Summary, click Details, and then click Launch System Manager.
+
+|View the ESXi hosts used by a cluster
+|Select a cluster, click More Objects, and then click Hosts. Select a host for more details and further actions.
+
+|View the ONTAP VMs used by a cluster
+|Select a cluster, click More Objects, and then click ONTAP VMs. Select a VM for more details and further actions.
+
+|View the datastores used by a cluster
+|Select a cluster, click More Objects, and then click Datastores. Select a datastore for more details and further actions.
+
+|View the networks used by a cluster
+|Select a cluster, click More Objects, and then click Networks. Select a network for more details and further actions.
 
 |===
 
@@ -43,7 +64,7 @@ The ONTAP Select Clusters option is roughly equivalent to the Clusters tab in th
 ONTAP Select Deploy::
 The ONTAP Select Deploy option is roughly equivalent to the Hypervisor Hosts and Administration tabs in the native Deploy web user interface. It provides functionality through three tabs at the top of the page as described in the following table.
 
-[cols="20,80"*,options="header"]
+[cols="15,85"*,options="header"]
 |===
 |Tab
 |Description
@@ -52,7 +73,7 @@ The ONTAP Select Deploy option is roughly equivalent to the Hypervisor Hosts and
 |Describes the characteristics of the Deploy instance, including the host name and IP address.
 
 |Host
-|Displays information about the ESXi hosts that are registered with ONTAP Select Deploy. You can add or remove hosts.
+|Displays information about the ESXi hosts registered with ONTAP Select Deploy. You can add or remove hosts.
 
 |Administration
 |Allows you to perform administrative tasks through the Deploy utility. This functionality is equivalent to the ONTAP Select Deploy native user interface, except that the *Credentials* and *Plugins* options are not available with the plug-in.
