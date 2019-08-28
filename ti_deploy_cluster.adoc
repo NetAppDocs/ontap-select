@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_deploy_cluster.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
