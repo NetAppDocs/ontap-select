@@ -73,9 +73,11 @@ entries:
         url: /ci_adm_before.html
       - title: Deploy utility
         url: /ti_adm_deploy.html
+      - title: Support
+        url: /ti_adm_support.html
       - title: Clusters
         url: /ti_adm_clusters.html
-      - title: Nodes
+      - title: Nodes and hosts
         entries:
           - title: Video console
             url: /ti_adm_video_console.html
