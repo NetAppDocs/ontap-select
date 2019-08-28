@@ -121,4 +121,18 @@ Local administrative workstation
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 
->> MUST INSERT TABLE
+[cols=3*,options="header"]
+|===
+|Protocol / port
+|Direction
+|Description
+
+|TLS (443)
+|Deploy to vSphere/ESXi
+|VMware VIX API
+
+|902
+|Deploy to vSphere/ESXi
+|VMware VIX API
+
+|===
