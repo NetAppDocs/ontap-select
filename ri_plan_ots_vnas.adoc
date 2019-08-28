@@ -24,9 +24,7 @@ All related storage components, including hardware, software, and feature requir
 The following VMware features are supported when deploying a cluster with ONTAP Select vNAS:
 
 * VMotion
-
 * High Availability (HA)
-
 * Distributed Resource Scheduler (DRS)
 
 NOTE: Note: These VMware features are supported with single-node and multi-node ONTAP Select clusters. When deploying a multi-node cluster, you should make sure that two or more nodes from the same cluster do not run on the same hypervisor host.
@@ -34,7 +32,6 @@ NOTE: Note: These VMware features are supported with single-node and multi-node 
 The following VMware features are not supported:
 
 * Fault Tolerance (FT)
-
 * Virtual datastore (VVOL)
 
 ==== Configuration requirements
@@ -48,7 +45,5 @@ IMPORTANT: You must provide a capacity limit for every datastore on VMware vSAN 
 Consult the available VMware documentation and adhere to the applicable best practices identified for ESXi hosts. In addition:
 
 * Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage (VMware vSAN and generic storage array traffic when using iSCSI or NFS)
-
 * Configure the capacity option to restrict storage utilization (ONTAP Select cannot consume the entire capacity of an external vNAS datastore)
-
 * Assure that all generic external storage arrays use the available redundancy and HA features where possible

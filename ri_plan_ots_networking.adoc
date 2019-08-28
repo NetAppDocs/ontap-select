@@ -32,9 +32,7 @@ A separate internal network is used to connect the ONTAP Select nodes in a multi
 The MTU size is displayed in the Cluster Details section of the cluster creation page. The value is determined by the Deploy administration utility as follows:
 
 . Initial default of 9000.
-
 . As you add the hosts and networks for the HA pairs, the MTU value is reduced as needed, based on the configuration of the vSwitches in the network.
-
 . The final cluster MTU value for the cluster is set after you have added all the HA pairs and are ready to create the cluster.
 
 NOTE: You can manually set the cluster MTU value if needed, based on the design of your network.
@@ -44,19 +42,19 @@ NOTE: You can manually set the cluster MTU value if needed, based on the design 
 In order to improve ONTAP Select performance in a two-NIC configuration, you should isolate the internal and external network traffic using two port groups. This recommendation applies to the following specific configuration:
 
 * ONTAP Select multi-node cluster
-
 * Two NICs (NIC1 and NIC2)
-
 * Standard vSwitch
 
 In this environment, you should configure the traffic using two port groups as follows:
 
 Port group 1::
+
 * Internal network (cluster, RSM, HA-IC traffic)
 * NIC1 is active
 * NIC2 in standby
 
 Port group 2::
+
 * External network (data and management traffic)
 * NIC1 is standby
 * NIC2 in active
@@ -68,29 +66,31 @@ See the ONTAP Select Product Architecture and Best Practices Technical Report (T
 In order to improve ONTAP Select performance in a four-NIC configuration, you should isolate the internal and external network traffic using four port groups. This recommendation applies to the following specific configuration:
 
 * ONTAP Select multi-node cluster
-
 * Four NICs (NIC1, NIC2, NIC3, and NIC4)
-
 * Standard vSwitch
 
 In this environment, you should configure the traffic using four port groups as follows:
 
 Port group 1::
+
 * Internal network (cluster, RSM traffic)
 * NIC1 is active
 * NIC2, NIC3, NIC4 in standby
 
 Port group 2::
+
 * Internal network (cluster, HA-IC traffic)
 * NIC3 is active
 * NIC1, NIC2, NIC4 in standby
 
 Port group 3::
+
 * External network (data and management traffic)
 * NIC2 is active
 * NIC1, NIC3, NIC4 in standby
 
 Port group 4::
+
 * External network (data traffic)
 * NIC4 is active
 * NIC1, NIC2, NIC3 in standby
@@ -106,25 +106,19 @@ There are several participants or entities that exchange network traffic as part
 
 * Deploy
 ONTAP Select Deploy administration utility
-
 * vSphere/ESXi
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
-
 * Hypervisor server
 ESXi hypervisor host
-
 * OST node
 An ONTAP Select node
-
 * OTS cluster
 An ONTAP Select cluster
-
 * Admin WS
 Local administrative workstation
 
 ==== Summary of network traffic requirements
 
-The following table describes the network traffic requirements for an ONTAP Select
-deployment.
+The following table describes the network traffic requirements for an ONTAP Select deployment.
 
 >> MUST INSERT TABLE

@@ -28,7 +28,6 @@ The ONTAP Select two-node cluster consists of one HA pair and is ideal for ROBO 
 You can deploy an ONTAP Select single-node cluster in a ROBO environment. While asingle node lacks native HA capability, you can deploy the cluster in one of the following ways to provide storage protection:
 
 * Shared external storage using VMware HA
-
 * VMware vSAN
 
 NOTE: If you use vSAN, you must have a VMware vSAN ROBO license.
