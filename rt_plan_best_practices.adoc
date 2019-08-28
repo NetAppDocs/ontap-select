@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: rt_best_practices.html
+permalink: rt_plan_best_practices.html
 keywords: ONTAP Select
 summary: xxx
 ---

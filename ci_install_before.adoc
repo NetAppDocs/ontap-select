@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_before_installing.html
+permalink: ci_install_before.html
 keywords: ONTAP Select
 summary: xxx
 ---
