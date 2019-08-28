@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_adm_clusters.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
@@ -71,6 +71,7 @@ When these changes to the cluster or virtual machine occur, the Deploy utility c
 
 Required information::
 You must have the current configuration information for the cluster, including:
+
 * ONTAP administrator credentials
 * Cluster management IP address
 * Names of the nodes in the cluster
@@ -89,6 +90,7 @@ NOTE: Instead of using the Deploy GUI, you can use the cluster refresh command i
 
 Cluster and virtual machine configuration::
 Some of the configuration values that can change and cause the Deploy database to become out of sync include:
+
 * Cluster and node names
 * ONTAP network configuration
 * ONTAP version (after an upgrade)
@@ -98,6 +100,7 @@ Some of the configuration values that can change and cause the Deploy database t
 
 Cluster and node states::
 An ONTAP Select cluster or node can be in a state that prevents it from operating properly. You should perform a cluster refresh operation to correct the following conditions:
+
 * Node in _unknown_ state
 An ONTAP Select node can be in the _unknown state_ for several reasons, including the node is not found.
 * Cluster in _degraded_ state

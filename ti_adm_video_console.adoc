@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ti_adm_video_console.html
 keywords: ONTAP Select
-summary: xxx
+summary: xxxx
 ---
 
 = Accessing the ONTAP Select video console

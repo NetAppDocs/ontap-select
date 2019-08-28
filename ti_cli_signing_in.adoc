@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ti_cli_signing_in.html
 keywords: ONTAP Select
-summary: xxx
+summary: xxxx
 ---
 
 = Signing in to Deploy using SSH

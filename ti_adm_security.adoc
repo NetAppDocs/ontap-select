@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-XXX
+XXXX

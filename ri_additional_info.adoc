@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can get help and find more information about ONTAP Select through various resources, including videos, forums, and support.
+You can get help and find more information about ONTAP Select through various resources, including videos, community forums, and support.
