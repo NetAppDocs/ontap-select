@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_adm_deploy.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Deploy administration utility
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related tasks you can perform to administer the ONTAP Select Deploy administration utility.

@@ -70,7 +70,25 @@ entries:
   - title: Administering
     entries:
       - title: Before you begin
-        url: /ci_before_administering.html
+        url: /ci_adm_before.html
+      - title: Deploy utility
+        url: /ti_adm_deploy.html
+      - title: Security
+        url: /ti_adm_security.html
+      - title: Support
+        url: /ti_adm_support.html
+      - title: Network and mediators
+        entries:
+          - title: Connectivity
+            url: /ti_adm_connectivity.html
+      - title: Clusters
+        url: /ti_adm_clusters.html
+      - title: Nodes and hosts
+        entries:
+          - title: Video console
+            url: /ti_adm_video_console.html
+      - title: Licenses
+        url: /ti_adm_licenses.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in

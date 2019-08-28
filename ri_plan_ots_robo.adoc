@@ -13,4 +13,22 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can deploy ONTAP Select in a remote office/branch office (ROBO) environment. As part of planning a ROBO deployment, you must select the configuration supporting your objectives.
+
+There are two primary configurations available when deploying ONTAP Select in a ROBO environment.
+
+NOTE: You can use any VMware vSphere license when deploying ONTAP Select.
+
+==== ONTAP Select two-node cluster with ONTAP HA
+
+The ONTAP Select two-node cluster consists of one HA pair and is ideal for ROBO deployments.
+
+==== ONTAP Select single-node cluster with VMware support
+
+You can deploy an ONTAP Select single-node cluster in a ROBO environment. While asingle node lacks native HA capability, you can deploy the cluster in one of the following ways to provide storage protection:
+
+* Shared external storage using VMware HA
+
+* VMware vSAN
+
+NOTE: If you use vSAN, you must have a VMware vSAN ROBO license.

@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ci_before_administering.html
+permalink: ti_adm_security.html
 keywords: ONTAP Select
 summary: xxx
 ---
 
-= Before you administer ONTAP Select
+= Security
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+XXX
