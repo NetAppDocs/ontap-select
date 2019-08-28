@@ -110,7 +110,7 @@ ONTAP Select Deploy administration utility
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
 * Hypervisor server
 ESXi hypervisor host
-* OST node
+* OTS node
 An ONTAP Select node
 * OTS cluster
 An ONTAP Select cluster
@@ -121,7 +121,7 @@ Local administrative workstation
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 
-[cols=3*,options="header"]
+[cols="20,50,30"*,options="header"]
 |===
 |Protocol / port
 |Direction
