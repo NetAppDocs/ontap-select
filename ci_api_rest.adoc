@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ci_api_rest.html
 keywords: ontap select
-summary: xxx
+summary: xxxx
 ---
 
 = REST web services foundation

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ci_terminology.html
 keywords: ONTAP Select
-summary: xxxx
+summary: xxx
 ---
 
 = Terminology
