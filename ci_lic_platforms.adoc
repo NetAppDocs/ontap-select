@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_platform_offerings.html
+permalink: ci_lic_platforms.html
 keywords: ONTAP Select
 summary: xxx
 ---

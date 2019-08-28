@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_production_license.html
+permalink: ci_lic_production.html
 keywords: ONTAP Select
 summary: xxx
 ---
