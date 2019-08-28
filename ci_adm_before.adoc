@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ci_adm_before.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
