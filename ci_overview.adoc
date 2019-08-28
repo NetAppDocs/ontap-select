@@ -13,14 +13,14 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure. Before using ONTAP Select, you should understand the key characteristics and operational components.
+ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
 
 == Software-defined storage
 
 The implementation and delivery of IT services through software allows administrators to rapidly provision resources with a speed and agility that was previously not possible. As modern data centers move to a software-defined infrastructure (SDI) architecture, the most valuable IT assets can be separated from the underlying physical infrastructure, providing flexibility, scalability, and programmability.
 
 
-In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
+In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become more complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
 
 ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the Data Fabric architecture to the extreme edge use cases, including the Internet of Things (IoT) and tactical servers.
 

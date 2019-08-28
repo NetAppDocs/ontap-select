@@ -25,8 +25,10 @@ MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as 
 
 Network configuration::
 Layer 2 connectivity is required between the participating sites. Both 10GbE and 1GbE are supported, including the following configurations:
+
 * 1 x 10GbE
 * 4 x 1GbE
+
 NOTE: The data serving ports and interconnect ports must be connected to the same first switch.
 
 Latency between the nodes::

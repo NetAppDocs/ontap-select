@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_cp_operation.html
+permalink: ci_lic_cp_operation.html
 keywords: ONTAP Select
 summary: xxx
 ---
@@ -20,9 +20,7 @@ The capacity pools licensing model is different from the capacity tiers model. I
 The License Manager is a software component introduced with ONTAP Select 9.5 using ONTAP Select Deploy 2.10. LM runs as a separate process within each instance of the Deploy administration utility. Some of the functions provided by LM include:
 
 * Generate a unique twenty-digit serial number for each node based on the capacity pool license serial number
-
 * Create leases for capacity from the shared capacity pools based on requests from the ONTAP Select nodes
-
 * Report pool usage information through the Deploy user interface
 
 === Lease characteristics
@@ -31,13 +29,10 @@ The storage allocated for every data aggregate at a node using a capacity pool l
 
 * License Manager
 Every ONTAP Select node is associated with one License Manager instance
-
 * Capacity pool
 Every ONTAP Select node is associated with one capacity pool
-
 * Storage allocation
 A specific capacity value is assigned in the lease
-
 * Expiration date and time
 Leases have a duration of between one hour and seven days depending on the user configuration.
 
@@ -49,16 +44,17 @@ You can determine the License Lock ID for your Deploy instance using the web use
 
 * Getting Started page
 This page is displayed when you first sign in to Deploy. You can also display the page by clicking the drop down box at the top right of the page and selecting Getting Started. The LLID is displayed in the Add Licenses section.
-
 * Administration
 Click the *Administration* tab a the top of the page, then click *Systems* and *Settings*.
 
 === Basic lease operations
 
 An ONTAP Select node must locate or request a valid capacity lease every time a data aggregate is created, expanded, or changed. A lease obtained from a previous request that is still valid can be used, or a new lease can be requested if needed. The following steps are taken by the ONTAP Select node to locate a capacity pool lease:
+
 . If an existing lease is located at the node, it is used as long as all of the following are true:
 * Lease has not expired
 * Storage request for the aggregate does not exceed the lease capacity
+
 . If an existing lease cannot be located, the node requests a new lease from the License Manager.
 
 === Returning storage capacity to a capacity pool

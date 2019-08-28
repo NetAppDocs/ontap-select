@@ -13,7 +13,6 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can use the ONTAP Select installation and deployment workflow to deploy and administer an ONTAP Select cluster.
+You can use the following workflow to deploy and administer an ONTAP Select cluster.
 
-
-image:deploy_workflow.png[Describes the complete workflow used to deploy an ONTAP Select cluster.]
+image:deploy_workflow.png[Describes the complete workflow needed to deploy an ONTAP Select cluster.]

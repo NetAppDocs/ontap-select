@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: rt_best_practices.html
+permalink: rt_plan_best_practices.html
 keywords: ONTAP Select
 summary: xxx
 ---
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for the content that Veena will provided.
+This is a placeholder for the content that Veena and Tudor will provided.

@@ -13,9 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can deploy a two-node cluster. A two-node cluster consists of a single HA pair.
-
-Deploying a two-node cluster involves the same planning and configuration used with other cluster node configurations. However, there are several differences you should be aware of when creating a two-node cluster.
+Deploying a two-node cluster with HA involves the same planning and configuration used with other cluster node configurations. However, there are several differences you should be aware of when creating a two-node cluster.
 
 ==== Target environment
 

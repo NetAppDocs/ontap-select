@@ -40,27 +40,27 @@ entries:
           - title: Remote and branch offices
             url: /ri_plan_ots_robo.html
       - title: Best practices
-        url: /rt_best_practices.html
+        url: /rt_plan_best_practices.html
   - title: Licensing
     entries:
       - title: Options
         entries:
           - title: Evaluation licences
-            url: /ci_evaluation_license.html
+            url: /ci_lic_evaluation.html
           - title: Production licences
-            url: /ci_production_license.html
+            url: /ci_lic_production.html
           - title: Platform license offerings
-            url: /ci_platform_offerings.html
+            url: /ci_lic_platforms.html
           - title: ONTAP features
-            url: /ri_ontap_features.html
+            url: /ri_lic_ontap_features.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
-            url: /ci_cp_operation.html
+            url: /ci_lic_cp_operation.html
   - title: Installing
     entries:
       - title: Before you begin
-        url: /ci_before_installing.html
+        url: /ci_install_before.html
       - title: Installing ONTAP Select Deploy
         url: /ti_install_deploy.html
       - title: Deploying an ONTAP Select cluster

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_evaluation_license.html
+permalink: ci_lic_evaluation.html
 keywords: ONTAP Select
 summary: xxx
 ---
