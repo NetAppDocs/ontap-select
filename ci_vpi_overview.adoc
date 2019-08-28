@@ -26,7 +26,7 @@ After installing the Deploy vCenter plug-in, there are two primary options avail
 ONTAP Select Clusters::
 The ONTAP Select Clusters option is roughly equivalent to the Clusters tab in the native Deploy web user interface. It provides the functionality described in the following table.
 
-[cols="35,65"*,options="header"]
+[cols="30,70"*,options="header"]
 |===
 |You perform this operation ...
 |By doing this ...
