@@ -15,7 +15,8 @@ summary: xxx
 [.lead]
 The Deploy vCenter plug-in is packaged with the Deploy administration utility. After using the Deploy user interface to install the plug-in to the vCenter server, you can access the plug-in through the vSphere web interface to deploy ONTAP Select clusters and perform related support tasks.
 
-=== Integration with VMware vCenter
+=== Integration with VMware
+
 For many businesses, VMware vCenter is a central platform for administering virtualized data center and cloud resources. Because the Deploy plug-in is tightly integrated with vCenter, administrators can quickly move between the ONTAP Select and vCenter domains to leverage the relationships among the various resources.
 
 === Functionality provided by the Deploy vCenter plug-in
@@ -25,12 +26,38 @@ After installing the Deploy vCenter plug-in, there are two primary options avail
 ONTAP Select Clusters::
 The ONTAP Select Clusters option is roughly equivalent to the Clusters tab in the native Deploy web user interface. It provides the functionality described in the following table.
 
-INSERT TABLE
+[cols="30,70"*,options="header"]
+|===
+|You perform this operation ...
+|By doing this ...
+
+|Deploy an ONTAP Select cluster
+|Click New ONTAP Select.
+
+|Launch System Manager
+|Select a cluster, click Summary, click Details, and then click Launch System Manager.
+
+|===
+
 
 ONTAP Select Deploy::
 The ONTAP Select Deploy option is roughly equivalent to the Hypervisor Hosts and Administration tabs in the native Deploy web user interface. It provides functionality through three tabs at the top of the page as described in the following table.
 
-INSERT TABLE
+[cols="20,80"*,options="header"]
+|===
+|Tab
+|Description
+
+|Summary
+|Describes the characteristics of the Deploy instance, including the host name and IP address.
+
+|Host
+|Displays information about the ESXi hosts that are registered with ONTAP Select Deploy. You can add or remove hosts.
+
+|Administration
+|Allows you to perform administrative tasks through the Deploy utility. This functionality is equivalent to the ONTAP Select Deploy native user interface, except that the *Credentials* and *Plugins* options are not available with the plug-in.
+
+|===
 
 === Comparing the vCenter plug-in to the native Deploy user interface
 The functionality provided with the vCenter plug-in through vSphere is equivalent to the native Deploy user interface. However, there are a few features that are not provided with the plug-in and are only available with the Deploy user interface.

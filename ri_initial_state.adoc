@@ -20,13 +20,10 @@ After an ONTAP Select cluster is deployed, it has the following characteristics:
 * Two types of customer-specified LIFs are assigned:
 ** Cluster management (one per cluster)
 ** Node management (one per node)
-
 * Two administrative SVMs are active:
 ** Default SVM
 ** Cluster SVM
-
 * The root aggregate is created
-
 * All features are licensed and available
 +(both SnapLock and FabricPool require separate licenses)
 

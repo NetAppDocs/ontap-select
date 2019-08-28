@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ci_api_rest.html
-keywords: overview, concepts, features, use cases
-summary: ONTAP Select allows you xxx
+keywords: ontap select
+summary: xxx
 ---
 
 = REST web services foundation
@@ -25,7 +25,6 @@ Resources are the basic components of a web-based system. When creating a REST w
 
 * Identification of system or server-based resources
 Every system uses and maintains resources. A resource can be a file, business transaction, process, or administrative entity. One of the first tasks in designing an application based on REST web services is to identify the resources.
-
 * Definition of resource states and associated state operations
 Resources are always in one of a finite number of states. The states, as well as the associated operations used to affect the state changes, must be clearly defined.
 
