@@ -25,6 +25,7 @@ A specific license offering defines and restrictions the capabilities of the hyp
 The license offerings are arranged in an ascending order of capabilities from standard to premium XL. In general, the license option you choose grants you the capabilities of that level and all lower levels. For example, the premium level provides the capabilities of both premium and standard.
 
 === Standard
+
 The standard offering provides the following capabilities:
 
 * Small instance type only
@@ -33,6 +34,7 @@ The standard offering provides the following capabilities:
 * vNAS
 
 === Premium
+
 The premium offering provides the following capabilities:
 
 * Small or medium instance type
@@ -42,6 +44,7 @@ The premium offering provides the following capabilities:
 * MetroCluster SDS
 
 === Premium XL
+
 The premium XL offering provides the following capabilities:
 
 * Small, medium, or large instance type.
