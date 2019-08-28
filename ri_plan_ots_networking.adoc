@@ -121,9 +121,9 @@ Local administrative workstation
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 
-[cols="20,50,30"*,options="header"]
+[cols="25,45,30"*,options="header"]
 |===
-|Protocol / port
+|Protocol / Port
 |Direction
 |Description
 
@@ -134,5 +134,25 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |902
 |Deploy to vSphere/ESXi
 |VMware VIX API
+
+|ICMP
+|Deploy to hypervisor server
+|Ping
+
+|ICMP
+|Deploy to each OTS node
+|Ping
+
+|SSH (22)
+|Admin WS to each OTS node
+|Administration
+
+|TLS (443)
+|Deploy to OTS nodes and clusters
+|Access ONTAP
+
+|iSCSI
+|Each OTS node to Deploy
+|Mediator / Mailbox disk
 
 |===
