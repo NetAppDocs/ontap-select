@@ -57,6 +57,14 @@ entries:
         entries:
           - title: Operational details
             url: /ci_lic_cp_operation.html
+          - title: Node serial number
+            url: /ci_lic_cp_serial_number.html
+          - title: Restrictions
+            url: /ci_lic_cp_restrictions.html
+          - title: Capacity pools versus capacity tiers
+            url: /ci_lic_cp_compare_ct.html
+          - title: Summary of benefits
+            url: /ci_lic_cp_benefits.html
   - title: Installing
     entries:
       - title: Before you begin

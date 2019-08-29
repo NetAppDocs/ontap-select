@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_lic_cp_compare_ct.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Comparing capacity pools and capacity tiers licensing
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
