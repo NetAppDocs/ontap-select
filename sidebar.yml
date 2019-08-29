@@ -77,6 +77,8 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_install_before.html
+      - title: Host preparation checklist
+        entries:
       - title: Installing ONTAP Select Deploy
         url: /ti_install_deploy.html
       - title: Deploying an ONTAP Select cluster
