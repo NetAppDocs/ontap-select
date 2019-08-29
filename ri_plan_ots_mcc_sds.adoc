@@ -17,13 +17,13 @@ MetroCluster SDS is a configuration option when creating a two-node ONTAP Select
 
 Before deploying MetroCluster SDS, your must assure that the following requirements are met.
 
-Licensing::
+===== Licensing
 Each node must have a premium or higher ONTAP Select license.
 
-Hypervisor platforms::
+===== Hypervisor platforms
 MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as supported for a two-node cluster in a ROBO environment.
 
-Network configuration::
+===== Network configuration
 Layer 2 connectivity is required between the participating sites. Both 10GbE and 1GbE are supported, including the following configurations:
 
 * 1 x 10GbE
@@ -31,16 +31,16 @@ Layer 2 connectivity is required between the participating sites. Both 10GbE and
 
 NOTE: The data serving ports and interconnect ports must be connected to the same first switch.
 
-Latency between the nodes::
+===== Latency between the nodes
 The network between the two nodes must support a mean latency of 5 ms with an additional 5 ms periodic jitter. Before deploying the cluster, you must test the network using the procedure described in the ONTAP Select Product Architecture and Best Practices technical report.
 
-Mediator service::
+===== Mediator service
 As with all two-node ONTAP Select clusters, there is a separate mediator service contained in the Deploy virtual machine that monitors the nodes and assists in managing failures. With the enhanced distance available with MetroCluster SDS, this creates three distinct sites in the network topology. Latency on the link between the mediator and a node should be 125 ms round-trip or less.
 
-Storage::
+===== Storage
 Direct-attached storage (DAS) is supported using either HDD and SSD disks. vNAS is also supported, including external storage arrays and vSAN in a VMware environment.
 
 NOTE: When deploying MetroCluster SDS, you cannot use vSAN in a distributed or "stretched" topology.
 
-Static IP address assigned to Deploy::
+===== Static IP address assigned to Deploy
 You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.

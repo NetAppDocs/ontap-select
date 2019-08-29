@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= General requirements and planning considerations
+= ONTAP Select Deploy general requirements and planning
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
+There are several general requirements and best practices that you should consider as part of planning to install the ONTAP Select Deploy administration utility.
 
 == Pairing the Deploy utility with the ONTAP Select clusters
 
@@ -21,11 +21,11 @@ You have several options when pairing an instance of the Deploy utility with the
 
 IMPORTANT: In all deployment scenarios, a single ONTAP Select cluster and the nodes in the cluster can be managed by only one instance of the Deploy administration utility. A cluster cannot be managed by two or more different instances of the Deploy utility.
 
-==== One instance of the utility for each ONTAP Select cluster
+===== One instance of the utility for each ONTAP Select cluster
 
 You can deploy and manage each ONTAP Select cluster using a dedicated instance of the Deploy utility. With this one-to-one configuration, there is a clear separation between each of the utility-to-cluster pairings. This configuration provides a high level of isolation with smaller failure domains.
 
-==== One instance of the utility for multiple ONTAP Select clusters
+===== One instance of the utility for multiple ONTAP Select clusters
 
 You can deploy and manage multiple ONTAP Select clusters in your organization using a single instance of the Deploy utility. With this one-to-many configuration, all processing and configuration data is managed by the same instance of the Deploy utility.
 
@@ -37,7 +37,8 @@ The ONTAP Select Deploy credential store is a database holding account informati
 
 NOTE: The account information is stored securely in the database using the AES encryption algorithm and SHA-256 hashing algorithm.
 
-Types of credentials::
+===== Types of credentials
+
 The following types of credentials are supported:
 
 * host
@@ -45,5 +46,6 @@ Used to authenticate a hypervisor host as part of deploying an ONTAP Select node
 * vcenter
 Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
 
-Access::
+===== Access
+
 The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.

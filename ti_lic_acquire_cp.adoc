@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_lic_acquire_cp.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Acquire CP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

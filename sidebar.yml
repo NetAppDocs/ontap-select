@@ -15,12 +15,6 @@ entries:
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
-      - title: ONTAP Select Deploy
-        entries:
-          - title: General requirements
-            url: /ri_plan_dep_general.html
-          - title: VMware environment
-            url: /ri_plan_dep_vmware.html
       - title: ONTAP Select
         entries:
           - title: General requirements
@@ -39,6 +33,12 @@ entries:
             url: /ri_plan_ots_two_node.html
           - title: Remote and branch offices
             url: /ri_plan_ots_robo.html
+      - title: ONTAP Select Deploy
+        entries:
+          - title: General requirements
+            url: /ri_plan_dep_general.html
+          - title: VMware environment
+            url: /ri_plan_dep_vmware.html
       - title: Best practices
         url: /rt_plan_best_practices.html
   - title: Licensing
@@ -51,12 +51,28 @@ entries:
             url: /ci_lic_production.html
           - title: Platform license offerings
             url: /ci_lic_platforms.html
-          - title: ONTAP features
-            url: /ri_lic_ontap_features.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
             url: /ci_lic_cp_operation.html
+          - title: Node serial number
+            url: /ci_lic_cp_serial_number.html
+          - title: Restrictions
+            url: /ci_lic_cp_restrictions.html
+          - title: Capacity pools versus capacity tiers
+            url: /ci_lic_cp_compare_ct.html
+          - title: Summary of benefits
+            url: /ci_lic_cp_benefits.html
+      - title: Purchasing
+        entries:
+          - title: Licensing workflow
+            url: /ci_lic_workflow.html
+          - title: Capacity tiers
+            url: /ci_lic_acquire_ct.html
+          - title: Capacity pools
+            url: /ci_lic_acquire_cp.html
+      - title: ONTAP features
+        url: /ri_lic_ontap_features.html
   - title: Installing
     entries:
       - title: Before you begin
