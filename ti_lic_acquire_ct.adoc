@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_lic_acquire_ct.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Acquire CT
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

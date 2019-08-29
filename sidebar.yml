@@ -51,8 +51,6 @@ entries:
             url: /ci_lic_production.html
           - title: Platform license offerings
             url: /ci_lic_platforms.html
-          - title: ONTAP features
-            url: /ri_lic_ontap_features.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
@@ -65,6 +63,16 @@ entries:
             url: /ci_lic_cp_compare_ct.html
           - title: Summary of benefits
             url: /ci_lic_cp_benefits.html
+      - title: Purchasing
+        entries:
+          - title: Licensing workflow
+            url: /ci_lic_workflow.html
+          - title: Capacity tiers
+            url: /ci_lic_acquire_ct.html
+          - title: Capacity pools
+            url: /ci_lic_acquire_cp.html
+      - title: ONTAP features
+        url: /ri_lic_ontap_features.html
   - title: Installing
     entries:
       - title: Before you begin
