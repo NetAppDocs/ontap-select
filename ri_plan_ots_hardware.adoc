@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= VMware hypervisor and core hardware
+= VMware hypervisor and hardware considerations
 :hardbreaks:
 :nofooter:
 :icons: font
