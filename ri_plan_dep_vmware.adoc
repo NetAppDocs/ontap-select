@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several requirements and restrictions that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
+There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 
 == ESXi host server hardware requirements
 

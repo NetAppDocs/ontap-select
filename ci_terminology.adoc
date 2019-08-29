@@ -43,6 +43,7 @@ The License Manager is a software component which supports capacity pools licens
 
 Platform license offerings::
 There are three license offerings available that determine the capabilities of the platform when you purchase an ONTAP Select license:
+
 * Standard
 * Premium
 * Premium XL
@@ -57,6 +58,7 @@ Cluster MTU is a feature that allows you to configure the MTU size used on the i
 
 ONTAP Select vNAS::
 The ONTAP Select vNAS solution allows an ONTAP Select node to access VMware datastores on external storage. With ONTAP Select vNAS, a local RAID controller is no longer needed; the RAID functionality is assumed to be provided by the remote storage. ONTAP Select vNAS can be configured in the following ways:
+
 * VMware vSAN
 * Generic external storage array
 
@@ -64,11 +66,13 @@ When using external storage, either VMware vSAN or an external storage array mus
 
 Node re-hosting::
 When you deploy a cluster that uses external storage available through the ONTAP Select vNAS solution (either VMware vSAN or a generic external storage array), the ESXi virtual machine hosting the ONTAP Select node can be moved through actions that utilize the following VMware features:
+
 * vMotion
 * High Availability (HA)
 * Distributed Resource Scheduler (DRS)
 +
 The ONTAP Select Deploy utility detects the movement of the virtual machine as part of executing an operation on the cluster, such as:
++
 * cluster online
 * cluster offline
 * storage add

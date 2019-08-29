@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
+ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
 
 == Software-defined storage
 
@@ -22,16 +22,16 @@ The implementation and delivery of IT services through software allows administr
 
 In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become more complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
 
-ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the Data Fabric architecture to the extreme edge use cases, including the Internet of Things (IoT) and tactical servers.
+ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the NetApp Data Fabric architecture to the extreme edge use cases, including the Internet of Things (IoT) and tactical servers.
 
 == Two software components
 
 ONTAP Select is composed of two major software components:
 
-ONTAP Select node::
+===== ONTAP Select node
 An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each cluster node is deployed as a separate virtual machine and runs a specially-designed derivative of the ONTAP 9 software.
 
-ONTAP Select Deploy administration utility::
+===== ONTAP Select Deploy administration utility
 The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy ONTAP Select clusters. A current version of the ONTAP Select node image is bundled with the Deploy utility.
 
 == Illustration of a typical deployment
@@ -39,3 +39,40 @@ The Deploy administration utility is packaged and installed as a separate Linux 
 The following figure illustrates the ONTAP Select Deploy administration utility being used to deploy and support a four-node ONTAP Select cluster. The Deploy utility and ONTAP Select nodes run as separate virtual machines on dedicated hypervisor hosts.
 
 image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created with the Deploy administration utility.]
+
+== Comparing ONTAP Select and ONTAP 9
+
+Both hardware-based ONTAP and ONTAP Select provide enterprise class storage solutions. However, because they are designed and implemented differently, each can address different business requirements and usage scenarios. You should become familiar with the major differences between the platforms before planning an ONTAP Select deployment.
+
+===== Different HA architecture
+
+Depending on the number of nodes you define in a cluster, ONTAP Select provides an HA capability. For example, a four-node cluster consists of two HA pairs. The HA architecture used with ONTAP Select is based on a non-shared storage model. That is, one node in an HA pair cannot directly access the storage owned by the other node. This design can affect certain ONTAP Select operational characteristics.
+
+===== Capacity licensing
+
+ONTAP Select introduces a consumption-based licensing model. You must purchase a license with storage capacity for each node or shared capacity pool when deploying an ONTAP Select cluster in a production environment. Using the Deploy utility, you must apply the license files which establish the storage capacity for the cluster nodes.
+
+===== ONTAP feature licensing
+Each node in an ONTAP Select cluster is automatically licensed to use several ONTAP features. You do not need to manually install or apply these feature licenses.
+
+===== ONTAP features not supported in ONTAP Select
+
+Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
+
+Fibre Channel::
+Fibre Channel and Fibre Channel over Ethernet are not supported.
+
+Interface groups::
+Interface groups (IFGRPs) are not supported.
+
+Health monitors::
+The traditional health monitoring used with a hardware-based ONTAP deployment is  specific to the underlying hardware components. Due to the virtualized environment used with ONTAP Select, health monitors are not active.
+
+NIC offload support::
+Due to the virtualized environment used with ONTAP Select, the NIC offload facility is not supported.
+
+Cluster IPspace::
+Any modification to Cluster IPspace, including adding or removing ports, is not supported.
+
+ONTAP port properties::
+Modifying the properties of the ONTAP ports, including speed, duplex, and flow-control, is not supported.
