@@ -15,12 +15,6 @@ entries:
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
-      - title: ONTAP Select Deploy
-        entries:
-          - title: General requirements
-            url: /ri_plan_dep_general.html
-          - title: VMware environment
-            url: /ri_plan_dep_vmware.html
       - title: ONTAP Select
         entries:
           - title: General requirements
@@ -39,6 +33,12 @@ entries:
             url: /ri_plan_ots_two_node.html
           - title: Remote and branch offices
             url: /ri_plan_ots_robo.html
+      - title: ONTAP Select Deploy
+        entries:
+          - title: General requirements
+            url: /ri_plan_dep_general.html
+          - title: VMware environment
+            url: /ri_plan_dep_vmware.html
       - title: Best practices
         url: /rt_plan_best_practices.html
   - title: Licensing

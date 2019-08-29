@@ -86,3 +86,7 @@ You should determine how much storage is required for the ONTAP Select nodes. Th
 
 Licensing model for production deployment::
 You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review Licensing ONTAP Select for more information.
+
+.Related links
+
+* link:ri_plan_ots_storage.html[Storage and RAID considerations]

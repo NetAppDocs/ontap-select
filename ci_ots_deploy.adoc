@@ -50,7 +50,7 @@ The REST web services API exposed to external clients provides another option wh
 
 * Python
 * Java
-* cURL
+* Curl
 
 Using a programming or scripting language provides an opportunity to automate the deployment and management of the ONTAP Select clusters.
 
