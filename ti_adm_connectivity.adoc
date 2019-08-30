@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_adm_connectivity.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
