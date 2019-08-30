@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Viewing the status of the mediator service
+= Administering the Deploy mediator services
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,11 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Each ONTAP Select two-node cluster is monitored by the mediator service, which assists in managing the HA capability shared by the nodes. You can view the status of the mediator service with respect to each of the two-node clusters defined to the ONTAP Select Deploy utility.
+Each ONTAP Select two-node cluster is monitored by the mediator service, which assists in managing the HA capability shared by the nodes.
+
+== Viewing the status of the mediator service
+
+You can view the status of the mediator service with respect to each of the two-node clusters defined to the ONTAP Select Deploy utility.
 
 .About this task
 
