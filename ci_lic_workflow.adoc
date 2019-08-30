@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= Lic workflow
+= Workflow when purchasing a license
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,17 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+The following workflow illustrates the process of purchasing and applying a license for your ONTAP
+Select deployment. When purchasing a license, you must select the licensing model and storage
+capacity.
+
+The exact process varies based on whether you are using a capacity tier or capacity pool license:
+
+* Nine-digit license serial number
+Serial number applies to either a node (capacity tiers) or a storage pool (capacity pools)
+* License Lock ID
+You must have the License Lock ID for your Deploy instance when using a capacity pool license
+* Licensing web site
+You obtain a capacity tier and capacity pool license at different web sites
+
+*INSERT GRAPHIC*
