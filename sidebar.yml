@@ -99,7 +99,7 @@ entries:
         url: /ti_adm_clusters.html
       - title: Nodes and hosts
         entries:
-          - title: Video console
+          - title: VM video console
             url: /ti_adm_video_console.html
       - title: Licenses
         url: /ti_adm_licenses.html
