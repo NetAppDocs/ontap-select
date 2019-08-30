@@ -24,4 +24,5 @@ You must have the License Lock ID for your Deploy instance when using a capacity
 * Licensing web site
 You obtain a capacity tier and capacity pool license at different web sites
 
+
 image:purchased_license_workflow.png[Describes the process used to purchase and install a storage license for a production ONTAP Select deployment.]
