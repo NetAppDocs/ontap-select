@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_adm_support.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
@@ -13,6 +13,77 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several related tasks you can perform to administer an ONTAP Select cluster.
+There are several related diagnostic and support tasks you can perform as part of administering ONTAP Select.
 
-xxx
+== Displaying the ONTAP Select Deploy event messages
+
+The ONTAP Select Deploy utility includes an event logging facility that provides information about the activity of the system. You should view the contents of the event log to debug any issues or when directed to do so by support.
+
+.About this task
+
+You can filter the list of event messages based on several characteristics, including:
+* Category
+* Type
+* Level
+* Instance
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page.
+
+. Click *Events* and then click *Deploy*.
+
+. Optionally click *Filtering* and create a filter to limit the event messages displayed.
+
+== Enabling AutoSupport
+
+You can enable and disable the AutoSupport feature as needed.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page.
+
+. Click *AutoSupport* and then click *Configure*.
+
+. Enable or disable the AutoSupport feature as needed.
+
+. After you finish
+
+AutoSupport is the primary troubleshooting tool used by NetApp in supporting ONTAP Select. Therefore, you should not disable AutoSupport unless absolutely necessary. If you do disable AutoSupport, data is still collected but not transmitted to NetApp.
+
+== Generating and downloading an AutoSupport package
+
+ONTAP Select includes the ability to generate an AutoSupport package. You should generate a package to debug any issues or when directed to do so by support.
+
+.About this task
+
+You can generate the following AutoSupport packages under the direction and guidance of NetApp support:
+
+* Deploy logs
+Log files created by the ONTAP Select Deploy utility
+* Troubleshooting
+Troubleshooting and debugging information about the hypervisor hosts and ONTAP Select nodes
+* Performance
+Performance information about the hypervisor hosts and ONTAP Select nodes
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page.
+
+. Click *AutoSupport* and then click *Generate*.
+
+. Select the type and provide a description for the package; you can optionally provide a case number.
+
+. Click *Generate AutoSupport*.
++
+Each AutoSupport package is assigned a unique sequence identification number.
+
+. On the left side of the page, click *History* and locate the correct package; you can click *Refresh* as needed.
+
+. Optionally click the download icon to save the AutoSupport file to your local workstation.

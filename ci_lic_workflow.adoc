@@ -13,9 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-The following workflow illustrates the process of purchasing and applying a license for your ONTAP
-Select deployment. When purchasing a license, you must select the licensing model and storage
-capacity.
+The following workflow illustrates the process of purchasing and applying a license for your ONTAP Select deployment. When purchasing a license, you must select the licensing model and storage capacity.
 
 The exact process varies based on whether you are using a capacity tier or capacity pool license:
 

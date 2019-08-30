@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_adm_security.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
@@ -13,4 +13,40 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-XXXX
+xxx
+
+== Changing the Deploy administrator password
+
+You can change the password for the Deploy virtual machine administrator account as needed using the web user interface.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the figure icon at the top right of the page and select *Change Password*.
+
+. Provide the current and new password as prompted and click *Submit*.
+
+== Adding an account to the credential store
+
+You can add a new account to the Deploy credential store database.
+
+.Before you begin
+
+You should be familiar with the types of credentials and how they are used by ONTAP Select Deploy.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page.
+
+. Click *Credentials* and then click *Add*.
+
+. Provide the account credentials and click *Add*.
+
+. Click the check icon on the right to authenticate the account.
+
+.After you finish
+
+After the account is added, you can edit the configuration and delete it from the credential store as needed.

@@ -93,8 +93,10 @@ entries:
         url: /ti_adm_security.html
       - title: Network and mediators
         entries:
-          - title: Connectivity
+          - title: Testing connectivity
             url: /ti_adm_connectivity.html
+          - title: Viewing the mediators
+            url: /ti_adm_view_mediators.html
       - title: Clusters
         url: /ti_adm_clusters.html
       - title: Nodes and hosts
