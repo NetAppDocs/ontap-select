@@ -115,10 +115,18 @@ entries:
             url: /ci_vpi_overview.html
   - title: Deploy REST API
     entries:
-      - title: Understanding the REST API
+      - title: Understanding
         entries:
           - title: REST web services
             url: /ci_api_rest.html
+      - title: Accessing with a browser
+        entries:
+          - title: Before you begin
+            url: /ci_api_before_browser.html
+      - title: Accessing with Python
+        entries:
+          - title: Before you begin
+            url: /ci_api_before_python.html
   - title: Deploy CLI
     entries:
       - title: Before you begin

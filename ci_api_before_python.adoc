@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_api_before_python.html
+keywords: ontap select
+summary: xxxx
+---
+
+= Before you access the Deploy REST API using Python
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

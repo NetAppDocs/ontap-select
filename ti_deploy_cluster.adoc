@@ -32,13 +32,13 @@ Review the planning and licensing sections of this documentation. Based on this,
 Host preparation::
 You must prepare the hypervisor hosts where the ONTAP Select nodes will run and have the needed storage license files based on your licensing model. To view the preparation requirements:
 
-. Sign in to the Deploy web user interface
-. Click the *?* icon at the top right of the page
-. Click *Prerequisites*
-. Scroll down and when done, click *OK*
+. Sign in to the Deploy web user interface.
+. Click the *?* icon at the top right of the page.
+. Click *Prerequisites*.
+. Scroll down and when done, click *OK*.
 
 License files::
-If you plan to deploy the cluster in a production mode, you must acquire the storage license files based on your licensing model.
+If you plan to deploy the cluster in a production environment, you must acquire the storage license files based on your licensing model.
 
 Deploy account credentials::
 You must have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
