@@ -13,11 +13,41 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can use the web user interface provided with the ONTAP Select Deploy administration utility to deploy a single-node or i-node ONTAP Select cluster.
+
+When you create an ONTAP Select cluster using the Deploy utility web interface, you are guided through a specific sequence of steps. The exact process varies depending on whether you deploy a multi-node cluster or a single-node cluster.
 
 == Before you begin
+You should prepare for the deployment to make sure it's successful.
 
->> Remove this section?
+Initial planning::
+Review the planning and licensing sections of this documentation. Based on this, you can make decisions about the cluster, including:
+
+* Hypervisor
+* Number of nodes
+* Platform size (instance type)
+* License type
+* Version of ONTAP Select
+
+Host preparation::
+You must prepare the hypervisor hosts where the ONTAP Select nodes will run and have the needed storage license files based on your licensing model. To view the preparation requirements:
+
+. Sign in to the Deploy web user interface.
+. Click the *?* icon at the top right of the page.
+. Click *Prerequisites*.
+. Scroll down and when done, click *OK*.
+
+License files::
+If you plan to deploy the cluster in a production environment, you must acquire the storage license files based on your licensing model.
+
+Deploy account credentials::
+You must have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
+
+Network connectivity checker::
+If you will deploy a multi-node cluster, you should be familiar with the network connectivity checker.
+
+After you deploy the cluster::
+After creating a cluster, you should back up the ONTAP Select Deploy configuration data.
 
 == Creating a single-node cluster
 

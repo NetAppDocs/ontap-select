@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= Deployment restrictions
+= Deployment restrictions for capacity pools licensing
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,30 +15,30 @@ summary: xxx
 [.lead]
 The restrictions that apply when using the capacity pool licensing model are presented below.
 
-==== Consistent licensing model per cluster
+=== Consistent licensing model per cluster
 
 All of the nodes within a single ONTAP Select cluster must use the same licensing model, either capacity tiers or capacity pools. You cannot mix the licensing types for the nodes within a single cluster.
 
-==== All nodes in a cluster use the same License Manager instance
+=== All nodes in a cluster use the same License Manager instance
 
 All the nodes with a capacity pool license in an ONTAP Select cluster must use the same License Manager instance. Because there is one instance of License Manager within each Deploy instance, this restriction is a restatement of the existing requirement that all nodes in a cluster must be managed by the same Deploy instance.
 
-==== One capacity pool per node
+=== One capacity pool per node
 
 Each node can lease storage from exactly one capacity pool. A node cannot use two or more pools.
 
-==== Same pool for nodes in an HA pair
+=== Same pool for nodes in an HA pair
 
 Both nodes in a single HA pair must lease storage from the same capacity pool. However, different HA pairs within the same cluster can lease storage from different pools managed by the same License Manager.
 
-==== Storage license duration
+=== Storage license duration
 
 You must choose a license duration when acquiring the storage license from NetApp. For example, a license could be valid for one year.
 
-==== Data aggregate lease duration
+=== Data aggregate lease duration
 
 When an ONTAP Select node requests a storage lease for a data aggregate, the License Manager provides a lease for a specific duration based on the configuration of the capacity pool. You can configure the lease duration for each pool between one hour and seven days. The default lease duration is 24 hours.
 
-==== Static IP address assigned to Deploy
+=== Static IP address assigned to Deploy
 
 You must assign a static IP address to the Deploy administration utility when capacity pools licensing is used.
