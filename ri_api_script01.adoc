@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ci_lic_xxx.html
-keywords: ONTAP Select
+permalink: ri_api_script01.html
+keywords: ontap select
 summary: xxx
 ---
 
-= Remote and branch office deployments
+= Script to create a cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can use the following CLI script to create a cluster based on parameters defined within the script and a JSON input file.
 
 ....
 #!/usr/bin/env python
