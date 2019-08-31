@@ -15,7 +15,9 @@ summary: xxx
 [.lead]
 You can use the following CLI script to create a cluster based on parameters defined within the script and a JSON input file.
 
-....
+*Wrap code block (top and bottom) with four dots*
+
+[source,python]
 #!/usr/bin/env python
 ##--------------------------------------------------------------------
 #
@@ -39,4 +41,3 @@ import argparse
 import json
 import logging
 from deploy_requests import DeployRequests
-....
