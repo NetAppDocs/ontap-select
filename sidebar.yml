@@ -123,10 +123,18 @@ entries:
         entries:
           - title: Before you begin
             url: /ci_api_before_browser.html
+      - title: Workflow processes
+        entries:
+          - title: Before you begin
+            url: /ci_api_before_workflows.html
       - title: Accessing with Python
         entries:
           - title: Before you begin
             url: /ci_api_before_python.html
+      - title: Python code samples
+        entries:
+          - title: Create a cluster
+            url: /ri_api_script01.html
   - title: Deploy CLI
     entries:
       - title: Before you begin
