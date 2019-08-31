@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 After you determine that ONTAP Select is suitable for your organization, you can purchase the licenses needed to support a production deployment. You must choose either the capacity tiers or capacity pools licensing model as well as the storage capacity for each deployment.
 
-=== Common licensing characteristics
+== Common licensing characteristics
 
 The _capacity tiers_ and _capacity pools_ licensing models are very different in several respects. However, the two licensing models share several common characteristics, including:
 
@@ -29,7 +29,7 @@ The _capacity tiers_ and _capacity pools_ licensing models are very different in
 * Both nodes in an HA pair must have the same storage and license capacity.
 * An ONTAP Select node that is initially deployed with a purchased license cannot be converted to an evaluation license.
 
-=== Capacity tiers licensing model
+== Capacity tiers licensing model
 
 There are several characteristics unique to the capacity tiers licensing model, including:
 
@@ -40,7 +40,7 @@ There are several characteristics unique to the capacity tiers licensing model, 
 * The node serial number is nine digits and equal to the license serial number.
 * You can apply the license file during cluster deployment or within 30 days after creating a cluster.
 
-=== Capacity pools licensing model
+== Capacity pools licensing model
 
 There are several characteristics unique to the capacity pools licensing model, including:
 

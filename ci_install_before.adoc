@@ -15,9 +15,9 @@ summary: xxx
 [.lead]
 This section will have some basic information about the process, including the steps at a high level.
 
-The next section in this chapter should be the "Host configuration checklist" that Veena will create. Note that this section should absorb content that was previously owned by IE, including:
+The next section in this chapter should be the "Host configuration checklist" that Veena will create. Note that this section should absorb some content that was previously owned by IE, including:
 
 * Install guide - _Host configuration and preparation checklist_ chapter
-(network diagram needs to be updated to align with new four-NIC best practice)
-* Deploy planning chapter - _Required configuration information_ and _Optional network configuration information_ sections
+(the network diagram needs to be updated to align with new four-NIC best practice)
+* ONTAP Select Deploy planning chapter - _Required configuration information_ and _Optional network configuration information_ sections
 * ONTAP Select planning chapter - _Required information for a VMware deployment_

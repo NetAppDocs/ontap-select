@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You must acquire a license file for each capacity pool used by the ONTAP Select nodes. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
+When using capacity pools licensing, you must acquire a license file for each instance of ONTAP Select Deploy. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
 
 .Before you begin
 

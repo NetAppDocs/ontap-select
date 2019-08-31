@@ -5,7 +5,7 @@ keywords: ONTAP Select
 summary: xxx
 ---
 
-= Deploy administration utility
+= Administering ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
