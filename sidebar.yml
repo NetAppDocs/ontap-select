@@ -105,8 +105,6 @@ entries:
         url: /ti_adm_licenses.html
       - title: Deploy utility
         entries:
-          - title: Configure the system
-            url: /ti_adm_config_deploy.html
           - title: Add ONTAP Select images
             url: /ti_adm_add_deploy_image.html
   - title: FAQ
