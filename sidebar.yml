@@ -104,7 +104,9 @@ entries:
       - title: Licenses
         url: /ti_adm_licenses.html
       - title: Deploy utility
-        url: /ti_adm_add_deploy_image.html
+        entries:
+          - title: Add ONTAP Select images
+            url: /ti_adm_add_deploy_image.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
