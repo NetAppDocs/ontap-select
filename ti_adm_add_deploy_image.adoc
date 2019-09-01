@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: ti_adm_add_deploy_image.html
+keywords: ontap select
+summary: xxx
+---
+
+= Adding an ONTAP Select image to Deploy
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
+
+== Before you begin
+
+At a high level, the process used to add an ONTAP Select image to an instance of Deploy consists of four steps:
+
+. Downloading the install image
+. Uploading the install image to the Deploy virtual machine
+. Adding the install image
+. Displaying the available install images
+
+Before adding any new ONTAP Select images to Deploy, you should first remove any unneeded images.
+
+NOTE: You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of the Deploy utility. Adding later versions of ONTAP Select as they become available from NetApp is not a supported configuration.
+
+== Downloading the install image
+
+To begin the process of adding an ONTAP Select image to an instance of the Deploy utility, you must download the install image from the NetApp Support Site. The ONTAP Select install image is formatted as a single compressed file.
+
+.Steps
+
+. Access the NetApp Support Site using a web browser and click *Support Quick Links*.
+
+. Click *Download Software* under *Top Tasks* and sign in to the site.
+
+. Click *Find your product*.
+
+. Scroll down and click *ONTAP Select*.
+
+. Under *Other Available Select Software* click *Deploy Upgrade, Node Upgrade, Image Install*.
+
+. Select the desired release of the upgrade package.
+
+. Review the End User License Agreement (EULA) and click *Accept & Continue*.
+
+. Select and download the appropriate package, responding to all prompts as needed for your environment.

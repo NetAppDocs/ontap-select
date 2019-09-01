@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: ci_lic_acquire_cp.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
-= Acquiring a capacity pool license file
+= Acquiring a capacity pool license
 :hardbreaks:
 :nofooter:
 :icons: font
