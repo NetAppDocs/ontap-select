@@ -29,7 +29,7 @@ The Deploy configuration data you provide is used by AutoSupport.
 
 . Click the Administration tab at the top of the page.
 
-. Click *Settings and AutoSupport* and click the edit icon.
+. Click *Settings and AutoSupport* and then click the edit icon.
 
 . Provide the configuration data as appropriate for your environment and click *Modify*.
 +
@@ -37,6 +37,7 @@ If you use a proxy server, you can configure the proxy URL as follows:
 `http://USERNAME:PASSWORD@<FQDN|IP>:PORT`
 +
 Example
+
 ''''
 http://user1:mypassword@proxy.company-demo.com:80
 ''''
