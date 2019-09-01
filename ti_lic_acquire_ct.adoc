@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: ci_lic_acquire_ct.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
-= Acquire a capacity tier license file
+= Acquiring a capacity tier license
 :hardbreaks:
 :nofooter:
 :icons: font
