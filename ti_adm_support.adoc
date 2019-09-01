@@ -37,10 +37,7 @@ If you use a proxy server, you can configure the proxy URL as follows:
 `http://USERNAME:PASSWORD@<FQDN|IP>:PORT`
 +
 Example
-
-''''
-http://user1:mypassword@proxy.company-demo.com:80
-''''
+`http://user1:mypassword@proxy.company-demo.com:80`
 
 == Displaying the ONTAP Select Deploy event messages
 
