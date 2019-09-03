@@ -22,11 +22,11 @@ prepare and select the upgrade procedure that is appropriate for your environmen
 
 IMPORTANT: If you choose to upgrade to VMware ESXi 6.5, you should upgrade to ESXi U2 (build 8294253) or greater. Using ESXi 6.5 U1 can expose you to a virtual machine failure due to a known VMware bug.
 
-==== Becoming familiar with how to upgrade VMware ESXi
+=== Becoming familiar with how to upgrade VMware ESXi
 
 Upgrading the ESXi software is a process described and supported by VMware. The hypervisor upgrade process is part of the larger upgrade procedure when using ONTAP Select. Refer to the VMware document Upgrading ESXi Hosts for more information.
 
-==== Selecting an upgrade procedure
+=== Selecting an upgrade procedure
 
 Several upgrade procedures are available. You should select the applicable procedure based on the following criteria:
 
@@ -42,11 +42,11 @@ Performing an ESXi upgrade using the Deploy administration utility is the more g
 
 If you are using these earlier versions and attempt an upgrade, the ONTAP Select virtual machine can be left in a state where it cannot be booted. In this case, you must select an upgrade procedure that does not use Deploy. Refer to *1172198* for more information.
 
-==== Upgrading the Deploy administration utility
+=== Upgrading the Deploy administration utility
 
 Before performing an upgrade procedure using the Deploy utility, you may need to upgrade your Deploy instance. In general, you should upgrade to the most recent version of Deploy. At a minimum, you must use Deploy 2.5 or later. The Deploy utility must support the version of ONTAP Select you are using. Refer to the ONTAP Select Release Notes for more information.
 
-==== After the update procedure is complete
+=== After the update procedure is complete
 
 If you select an upgrade procedure that uses the Deploy utility, you should perform a cluster refresh operation using Deploy after all of the nodes have been upgraded. See Refreshing the Deploy cluster configuration for more information.
 
@@ -67,13 +67,99 @@ Example
 `node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
 
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
-
++
 Refer to _Before you begin_ for more information.
 
 . Move the node to the online state.
 +
 Example
 `node start --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
+
+. After the node comes up, verify that the cluster is healthy.
++
+Example
++
+....
+ESX-1N::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+....
+
+.After you finish
+You should perform a cluster refresh operation using the Deploy administration utility.
+
+== Upgrading a multi-node cluster using Deploy
+
+You can use the Deploy administration utility as part of the procedure to upgrade the VMware ESXi hypervisors hosting an ONTAP Select multi-node cluster.
+
+.Before you begin
+
+You must use Deploy version 2.5 or later.
+
+.About this task
+You must perform this upgrade procedure for each of the nodes in the cluster, one node at a time. If the cluster contains four or more nodes, you should upgrade the nodes in each HA pair sequentially before proceeding to the next HA pair.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Move the node to the offline state.
++
+Example
+`node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
+
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
++
+Refer to Preparing to upgrade VMware ESXi for more information.
+
+. Move the node to the online state.
++
+Example
+`node start --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
+
+. After the node comes up, verify that storage failover is enabled and the cluster is healthy.
++
+Example
++
+....
+ESX-2N_I2_N11N12::> storage failover show
+Takeover
+Node Partner Possible State Description
+-------------- -------------- -------- ---------------------------
+sdot-d200-011d sdot-d200-012d true Connected to sdot-d200-012d
+sdot-d200-012d sdot-d200-011d true Connected to sdot-d200-011d
+2 entries were displayed.
+ESX-2N_I2_N11N12::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+sdot-d200-012d true true
+2 entries were displayed.
+....
+
+.After you finish
+
+You must perform the upgrade procedure for each host used in the ONTAP Select cluster. After all the ESXi hosts are upgraded, you should perform a cluster refresh operation using the Deploy administration utility.
+
+== Upgrading a single-node cluster without Deploy
+
+You can upgrade the VMware ESXi hypervisor hosting an ONTAP Select single-node cluster without using the Deploy administration utility.
+
+.Steps
+
+. Sign in to the ONTAP command line interface and halt the node.
+
+. Using VMware vSphere, confirm that the ONTAP Select virtual machine is powered off.
+
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
++
+Refer to Preparing to upgrade VMware ESXi for more information.
+
+. Using VMware vSphere, access vCenter and do the following:
+.. Add a floppy drive to the ONTAP Select virtual machine.
+.. Power on the ONTAP Select virtual machine.
+.. Sign in to the ONTAP CLI using SSH with the administrator account.
 
 . After the node comes up, verify that the cluster is healthy.
 +
@@ -87,3 +173,49 @@ sdot-d200-011d true true
 
 .After you finish
 You should perform a cluster refresh operation using the Deploy administration utility.
+
+== Upgrading a multi-node cluster without Deploy
+
+You can upgrade the VMware ESXi hypervisors hosting an ONTAP Select multi-node cluster without using the Deploy administration utility.
+
+.About this task
+You must perform this upgrade procedure for each of the nodes in the cluster, one node at a time. If the cluster contains four or more nodes, you should upgrade the nodes in each HA pair sequentially before proceeding to the next HA pair.
+
+.Steps
+
+. Sign in to the ONTAP command line interface and halt the node.
+
+. Using VMware vSphere, confirm that the ONTAP Select virtual machine is powered off.
+
+.Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
++
+Refer to Preparing to upgrade VMware ESXi for more information.
+
+. Using VMware vSphere, access vCenter and do the following:
+.. Add a floppy drive to the ONTAP Select virtual machine.
+.. Power on the ONTAP Select virtual machine.
+.. Sign in to the ONTAP CLI using SSH with the administrator account.
+
+. After the node comes up, verify that storage failover is enabled and the cluster is healthy.
++
+Example
++
+....
+ESX-2N_I2_N11N12::> storage failover show
+Takeover
+Node Partner Possible State Description
+-------------- -------------- -------- ---------------------------
+sdot-d200-011d sdot-d200-012d true Connected to sdot-d200-012d
+sdot-d200-012d sdot-d200-011d true Connected to sdot-d200-011d
+2 entries were displayed.
+ESX-2N_I2_N11N12::> cluster show
+Node Health Eligibility
+--------------------- ------- ------------
+sdot-d200-011d true true
+sdot-d200-012d true true
+2 entries were displayed.
+....
+
+.After you finish
+
+You must perform the upgrade procedure for each host used in the ONTAP Select cluster.
