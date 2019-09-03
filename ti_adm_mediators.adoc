@@ -29,6 +29,6 @@ You can view the configuration of each mediator, including the current status, t
 
 . Click the *Administration* tab at the top of the page.
 
-. Click Mediators and then click Status.
+. Click *Mediators* and then click *Status*.
 
 . Optionally define a filter to customize your view of the two-node clusters monitored by the mediator service.

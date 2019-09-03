@@ -15,9 +15,9 @@ summary: xxx
 [.lead]
 There are several related tasks you can perform to administer an ONTAP Select cluster.
 
-== Moving an ONTAP Select cluster to the offline and online states
+== Moving an ONTAP Select cluster offline and online
 
-After you have created a cluster, you can change its status to offline and then online as needed.
+After you've created a cluster, you can move it offline and online as needed.
 
 .Before you begin
 
@@ -110,13 +110,13 @@ If a node is powered off, it might still appear to be online in the Deploy utili
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the _Clusters_ tab at the top left of the page and select the desired cluster from the list.
+. Click the *Clusters* tab at the top left of the page and select the desired cluster from the list.
 
-. Click the gear icon at the top right and select _Cluster Refresh_ from the drop-down list.
+. Click the gear icon at the top right and select *Cluster Refresh* from the drop-down list.
 
-. Provide the current ONTAP Select username and password for the cluster under _Cluster Credentials_.
+. Provide the current ONTAP Select username and password for the cluster under *Cluster Credentials*.
 
-. Click _Refresh_.
+. Click *Refresh*.
 
 .After you finish
 If the operation is successful, the field _Last successful refresh_ is updated. You should back up the Deploy configuration data after the cluster refresh operation has completed.

@@ -23,6 +23,6 @@ You might need to access the virtual machine console to troubleshoot an issue or
 
 . Access the vSphere client and sign in.
 
-. Navigate to the appropriate location in the vCenter hierarchy to locate the ONTAP Select virtual machine.
+. Navigate to the appropriate location in the *vCenter* hierarchy to locate the ONTAP Select virtual machine.
 
-. Right click the virtual machine and select Open Console.
+. Right click the virtual machine and select *Open Console*.

@@ -76,7 +76,7 @@ You can enable and disable the AutoSupport feature as needed.
 
 . Enable or disable the AutoSupport feature as needed.
 
-. After you finish
+.After you finish
 
 AutoSupport is the primary troubleshooting tool used by NetApp in supporting ONTAP Select. Therefore, you should not disable AutoSupport unless absolutely necessary. If you do disable AutoSupport, data is still collected but not transmitted to NetApp.
 

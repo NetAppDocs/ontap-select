@@ -101,12 +101,18 @@ entries:
         entries:
           - title: VM video console
             url: /ti_adm_video_console.html
+          - title: Resizing the cluster nodes
+            url: /ti_adm_resize.html
+          - title: Upgrading ESXi to 6.5 and higher
+            url: /ti_adm_upgrade_esxi65.html
       - title: Licenses
         url: /ti_adm_licenses.html
       - title: Deploy utility
         entries:
           - title: Add ONTAP Select images
-            url: /ti_adm_add_deploy_image.html
+            url: /ti_adm_deploy_image_add.html
+          - title: Remove ONTAP Select images
+            url: /ti_adm_deploy_image_remove.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
