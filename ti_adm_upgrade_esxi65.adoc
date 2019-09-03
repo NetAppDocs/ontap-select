@@ -187,9 +187,9 @@ You must perform this upgrade procedure for each of the nodes in the cluster, on
 
 . Using VMware vSphere, confirm that the ONTAP Select virtual machine is powered off.
 
-.Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
 +
-Refer to Preparing to upgrade VMware ESXi for more information.
+Refer to _Before you begin_ for more information.
 
 . Using VMware vSphere, access vCenter and do the following:
 .. Add a floppy drive to the ONTAP Select virtual machine.
