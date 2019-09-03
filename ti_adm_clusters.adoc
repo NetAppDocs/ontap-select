@@ -88,7 +88,7 @@ You can perform a cluster refresh to update the Deploy configuration database us
 
 NOTE: Instead of using the Deploy GUI, you can use the cluster refresh command in the Deploy CLI shell to refresh a cluster.
 
-Cluster and virtual machine configuration::
+_Cluster and virtual machine configuration::_
 Some of the configuration values that can change and cause the Deploy database to become out of sync include:
 
 * Cluster and node names
@@ -98,7 +98,7 @@ Some of the configuration values that can change and cause the Deploy database t
 * Host network names
 * Storage pool names
 
-Cluster and node states::
+_Cluster and node states::_
 An ONTAP Select cluster or node can be in a state that prevents it from operating properly. You should perform a cluster refresh operation to correct the following conditions:
 
 * Node in _unknown_ state
@@ -110,13 +110,13 @@ If a node is powered off, it might still appear to be online in the Deploy utili
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the _Clusters_ tab at the top left of the page and select the desired cluster from the list.
+. Click the *Clusters* tab at the top left of the page and select the desired cluster from the list.
 
-. Click the gear icon at the top right and select _Cluster Refresh_ from the drop-down list.
+. Click the gear icon at the top right and select *Cluster Refresh* from the drop-down list.
 
-. Provide the current ONTAP Select username and password for the cluster under _Cluster Credentials_.
+. Provide the current ONTAP Select username and password for the cluster under *Cluster Credentials*.
 
-. Click _Refresh_.
+. Click *Refresh*.
 
 .After you finish
 If the operation is successful, the field _Last successful refresh_ is updated. You should back up the Deploy configuration data after the cluster refresh operation has completed.
