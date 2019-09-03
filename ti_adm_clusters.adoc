@@ -15,9 +15,9 @@ summary: xxx
 [.lead]
 There are several related tasks you can perform to administer an ONTAP Select cluster.
 
-== Moving an ONTAP Select cluster to the offline and online states
+== Moving an ONTAP Select cluster offline and online
 
-After you have created a cluster, you can change its status to offline and then online as needed.
+After you've created a cluster, you can move it offline and online as needed.
 
 .Before you begin
 
@@ -88,7 +88,7 @@ You can perform a cluster refresh to update the Deploy configuration database us
 
 NOTE: Instead of using the Deploy GUI, you can use the cluster refresh command in the Deploy CLI shell to refresh a cluster.
 
-_Cluster and virtual machine configuration::_
+Cluster and virtual machine configuration::
 Some of the configuration values that can change and cause the Deploy database to become out of sync include:
 
 * Cluster and node names
@@ -98,7 +98,7 @@ Some of the configuration values that can change and cause the Deploy database t
 * Host network names
 * Storage pool names
 
-_Cluster and node states::_
+Cluster and node states::
 An ONTAP Select cluster or node can be in a state that prevents it from operating properly. You should perform a cluster refresh operation to correct the following conditions:
 
 * Node in _unknown_ state
