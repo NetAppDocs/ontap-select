@@ -101,6 +101,8 @@ entries:
         entries:
           - title: VM video console
             url: /ti_adm_video_console.html
+          - title: Resizing the cluster nodes
+            url: /ti_adm_resize.html
       - title: Licenses
         url: /ti_adm_licenses.html
       - title: Deploy utility
