@@ -40,13 +40,11 @@ Note the version number and hypervisor platform in each case.
 `ls -lh /opt/netapp/images`
 
 . Optionally remove an ESXi image.
-
-Example
 +
+Example
 `rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova`
 
 . Optionally remove a KVM image.
 +
 Example
-+
 `rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar`
