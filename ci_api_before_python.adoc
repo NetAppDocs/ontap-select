@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxxx
 ---
 
-= Before you access the Deploy REST API using Python
+= Before you access the API using Python
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,17 @@ summary: xxxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You must prepare the environment before running the sample Python scripts.
+
+Before you run the Python scripts, you must make sure the environment is configured properly:
+
+* The latest applicable version of Python2 must be installed.
+The sample codes have been tested using Python2. They should also be portable to Python3, but have not been tested for compatibility.
+* The Requests and urllib3 libraries must be installed.
+You can use pip or another Python management tool as appropriate for your environment.
+* The client workstation where the scripts run must have network access to the ONTAP Select Deploy virtual machine.
+
+In addition, you must have the following information:
+
+* IP address of the Deploy virtual machine
+* User name and password of a Deploy administrator account

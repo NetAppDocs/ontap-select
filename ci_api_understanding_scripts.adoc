@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_api_understanding_scripts.html
+keywords: ontap select
+summary: xxx
+---
+
+= Understanding the Python scripts
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

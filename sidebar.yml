@@ -145,6 +145,8 @@ entries:
         entries:
           - title: Before you begin
             url: /ci_api_before_python.html
+          - title: Understanding the scripts
+            url: /ci_api_understanding_scripts.html
       - title: Python code samples
         entries:
           - title: Create a cluster
