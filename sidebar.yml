@@ -127,18 +127,26 @@ entries:
         entries:
           - title: REST web services
             url: /ci_api_rest.html
+          - title: Accessing the Deploy API
+            url: /ci_api_how_access.html
       - title: Accessing with a browser
         entries:
           - title: Before you begin
             url: /ci_api_before_browser.html
+          - title: Accessing the doc page
+            url: /ti_api_access_doc_page.html
       - title: Workflow processes
         entries:
           - title: Before you begin
             url: /ci_api_before_workflows.html
+          - title: Workflow 1 Creating a cluster
+            url: /ri_api_workflow01.html
       - title: Accessing with Python
         entries:
           - title: Before you begin
             url: /ci_api_before_python.html
+          - title: Understanding the scripts
+            url: /ci_api_understanding_scripts.html
       - title: Python code samples
         entries:
           - title: Create a cluster
@@ -151,3 +159,11 @@ entries:
         url: /ti_cli_signing_in.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_cli_deploy_cluster.html
+      - title: Security
+        url: /ti_cli_security.html
+      - title: Clusters
+        url: /ti_cli_clusters.html
+      - title: Deploy utility
+        entries:
+          - title: Migrating a Deploy instance
+            url: /ti_cli_migrate_deploy.html
