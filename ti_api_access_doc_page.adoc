@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ti_api_access_doc_page.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
