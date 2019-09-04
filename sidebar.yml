@@ -163,3 +163,7 @@ entries:
         url: /ti_cli_security.html
       - title: Clusters
         url: /ti_cli_clusters.html
+      - title: Deploy utility
+        entries:
+          - title: Migrating a Deploy instance
+            url: /ti_cli_migrate_deploy.html
