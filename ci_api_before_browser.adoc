@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: ci_api_before_browser.html
 keywords: ontap select
-summary: xxxx
+summary: xxx
 ---
 
-= Before you access the Deploy REST API using a browser
+= Before you access the API with a browser
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,19 @@ summary: xxxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+There are several things you should be aware of before using the Deploy online documentation page.
+
+=== Deployment plan
+If you intend to issue API calls as part of performing specific deployment or administrative tasks, you should consider creating a deployment plan. These plans can be formal or informal, and generally contain your goals and the API calls to be used. Refer to Workflow processes using the Deploy REST API for more information.
+
+=== JSON examples and parameter definitions
+Each API call is described on the documentation page using a consistent format. The content includes implementation notes, query parameters, and HTTP status codes. In addition, you can display details about the JSON used with the API requests and responses as follows:
+
+* Example Value
+If you click _Example Value_ on an API call, a typical JSON structure for the call is displayed. You can modify the example as needed and use it as input for your request.
+
+* Model
+If you click _Model_, a complete list of the JSON parameters is displayed, with a description for each parameter.
+
+=== Caution when issuing API calls
+All API operations you perform using the Deploy documentation page are live operations. You should be careful not to mistakenly create, update, or delete configuration or other data.

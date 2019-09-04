@@ -139,6 +139,8 @@ entries:
         entries:
           - title: Before you begin
             url: /ci_api_before_workflows.html
+          - title: Workflow 1: Creating a cluster
+            url: /ri_api_workflow01.html
       - title: Accessing with Python
         entries:
           - title: Before you begin
