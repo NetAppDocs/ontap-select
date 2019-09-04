@@ -1,0 +1,34 @@
+---
+sidebar: sidebar
+permalink: ti_api_access_doc_page.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Accessing the Deploy documentation page
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You must access the ONTAP Select Deploy online documentation page to display the API documentation, as well as to manually issue an API call.
+
+.Before you begin
+
+You must have the following:
+* IP address or domain name of the ONTAP Select Deploy virtual machine
+* User name and password for the administrator
+
+.Steps
+
+. Type the URL in your browser and press *Enter*:
++
+`https://<ip_address>/api/ui`
+
+. Sign in using the administrator user name and password.
+
+.Result
+
+The Deploy documentation web page is displayed with the calls organized by category at the bottom of the page.

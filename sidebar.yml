@@ -127,10 +127,14 @@ entries:
         entries:
           - title: REST web services
             url: /ci_api_rest.html
+          - title: Accessing the Deploy API
+            url: /ci_api_how_access.html
       - title: Accessing with a browser
         entries:
           - title: Before you begin
             url: /ci_api_before_browser.html
+          - title: Accessing the doc page
+            url: /ci_api_access_doc_page.html
       - title: Workflow processes
         entries:
           - title: Before you begin
