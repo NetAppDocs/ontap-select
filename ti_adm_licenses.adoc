@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several related tasks you can perform to administer the ONTAP Select licenses.
+There are several related tasks you can perform as part of administering the ONTAP Select licenses.
 
 == Managing the capacity tier licenses
 

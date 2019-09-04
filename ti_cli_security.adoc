@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+There are several related tasks you can perform as part of securing an ONTAP Select deployment.
 
 = Changing the Deploy administrator password
 
