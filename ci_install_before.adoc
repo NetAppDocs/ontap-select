@@ -15,7 +15,8 @@ summary: xxx
 [.lead]
 This section will have some basic information about the process, including the steps at a high level.
 
-*Must add "Host configuration checklist" as next chapter*. Perhaps this is a container / dropdown with multiple files. Veena will create. This section should absorb some content that was previously owned by IE, including:
+*Must add "Host configuration checklist" as next chapter*.
+Perhaps this is a container / dropdown with multiple files. Veena will create. This section should absorb some content that was previously owned by IE, including:
 
 * Install guide
 _Host configuration and preparation checklist_ chapter. Note that the network diagram needs to be updated to align with new four-NIC best practice.
