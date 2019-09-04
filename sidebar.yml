@@ -161,3 +161,5 @@ entries:
         url: /ti_cli_deploy_cluster.html
       - title: Security
         url: /ti_cli_security.html
+      - title: Clusters
+        url: /ti_cli_clusters.html

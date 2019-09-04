@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Changing the Deploy administrator password
+= Security
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,6 +13,10 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
+xxx
+
+= Changing the Deploy administrator password
+
 You can change the password for the Deploy virtual machine administrator account as needed using the command line interface.
 
 .Steps
