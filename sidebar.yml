@@ -121,6 +121,10 @@ entries:
         entries:
           - title: Overview
             url: /ci_vpi_overview.html
+          - title: Architecture
+            url: /ci_vpi_architecture.html
+          - title: Overview
+            url: /ci_vpi_planning.html
   - title: Deploy REST API
     entries:
       - title: Understanding
