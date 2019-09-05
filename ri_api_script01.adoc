@@ -15,6 +15,7 @@ summary: xxx
 [.lead]
 You can use the following script to create a cluster based on parameters defined within the script and a JSON input file.
 
+
 [source,python]
 ---------------------------------------------------------------------
 #!/usr/bin/env python
