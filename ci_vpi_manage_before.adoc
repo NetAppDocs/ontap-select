@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_vpi_manage_before.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Before you begin
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

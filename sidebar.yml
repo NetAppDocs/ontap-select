@@ -123,8 +123,14 @@ entries:
             url: /ci_vpi_overview.html
           - title: Architecture
             url: /ci_vpi_architecture.html
-          - title: Overview
+          - title: Planning
             url: /ci_vpi_planning.html
+      - title: Managing the plug-in
+        entries:
+          - title: Before you begin
+            url: /ci_vpi_manage_before.html
+          - title: Installing
+            url: /ti_vpi_install.html
   - title: Deploy REST API
     entries:
       - title: Understanding
