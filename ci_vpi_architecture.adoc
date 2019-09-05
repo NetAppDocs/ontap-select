@@ -15,4 +15,5 @@ summary: xxx
 [.lead]
 The Deploy vCenter plug-in is tightly integrated with ONTAP Select Deploy and VMware vCenter. There are two paths to access the Deploy administration utility through the plug-in using the vSphere interface.
 
+
 image:plugin_architecture.png[Illustrates the architecture of the Deploy vCenter plug-in.]

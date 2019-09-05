@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_vpi_installing.html
+permalink: ti_vpi_install.html
 keywords: ONTAP Select
 summary: xxx
 ---
