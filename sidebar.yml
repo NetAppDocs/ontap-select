@@ -157,6 +157,10 @@ entries:
         url: /ti_vpi_deploy_cluster.html
       - title: Integration with vCenter
         url: /ci_vpi_vcenter_integration.html
+      - title: Administering
+        entries:
+          - title: Diagnostics and support
+            url: /ci_vpi_adm_support.html
       - title: Troubleshooting
         url: /ri_vpi_troubleshooting.html
   - title: Deploy REST API
