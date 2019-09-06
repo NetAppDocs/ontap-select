@@ -153,6 +153,8 @@ entries:
         url: /ti_vpi_manually_remove.html
       - title: Deploying an ONTAP Select cluster
         url: /ti_vpi_deploy_cluster.html
+      - title: Integration with vCenter
+        url: /ci_vpi_vcenter_integration.html
       - title: Troubleshooting
         url: /ri_vpi_troubleshooting.html
   - title: Deploy REST API
