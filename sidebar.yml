@@ -87,6 +87,8 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_adm_before.html
+      - title: Upgrading nodes
+        url: /ci_adm_upgrading_nodes.html
       - title: Diagnostics and support
         url: /ti_adm_support.html
       - title: Security
