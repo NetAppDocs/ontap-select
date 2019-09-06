@@ -113,6 +113,20 @@ entries:
             url: /ti_adm_deploy_image_add.html
           - title: Remove ONTAP Select images
             url: /ti_adm_deploy_image_remove.html
+  - title: Deep dive
+    entries:
+      - title: Networking
+        entries:
+          - title: Network topic 1
+            url: /ct_net_temporary.html
+      - title: Storage
+        entries:
+          - title: Storage topic 1
+            url: /ct_stor_temporary.html
+      - title: HA architecure
+        entries:
+          - title: HA arch topic 1
+            url: /ct_ha_temporary.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in

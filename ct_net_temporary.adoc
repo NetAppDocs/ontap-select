@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_net_temporary.html
+keywords: ontap select
+summary: xxx
+---
+
+= Networking topic 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Temporary placeholder for IE/TME review.
