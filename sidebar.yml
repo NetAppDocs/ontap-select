@@ -79,7 +79,7 @@ entries:
         url: /ci_install_before.html
       - title: Installing ONTAP Select Deploy
         url: /ti_install_deploy.html
-      - title: Deploying an ONTAP Select cluster
+      - title: Deploying a cluster
         url: /ti_deploy_cluster.html
       - title: Initial cluster state
         url: /ri_initial_state.html
@@ -151,7 +151,7 @@ entries:
             url: /ti_vpi_upgrade.html
       - title: Manually removing the plug-in
         url: /ti_vpi_manually_remove.html
-      - title: Deploying an ONTAP Select cluster
+      - title: Deploying a cluster
         url: /ti_vpi_deploy_cluster.html
       - title: Integration with vCenter
         url: /ci_vpi_vcenter_integration.html
