@@ -87,6 +87,8 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_adm_before.html
+      - title: Upgrading nodes
+        url: /ci_adm_upgrading_nodes.html
       - title: Diagnostics and support
         url: /ti_adm_support.html
       - title: Security
@@ -155,6 +157,16 @@ entries:
         url: /ti_vpi_deploy_cluster.html
       - title: Integration with vCenter
         url: /ci_vpi_vcenter_integration.html
+      - title: Administering
+        entries:
+          - title: Diagnostics and support
+            url: /ti_vpi_adm_support.html
+          - title: Network connectivity
+            url: /ti_vpi_adm_connectivity.html
+          - title: Clusters
+            url: /ti_vpi_adm_clusters.html
+          - title: Licenses
+            url: /ti_vpi_adm_licenses.html
       - title: Troubleshooting
         url: /ri_vpi_troubleshooting.html
   - title: Deploy REST API

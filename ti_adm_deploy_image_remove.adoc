@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can remove ONTAP Select images from your instance of the Deploy administration utility whenthey are no longer needed.
+You can remove ONTAP Select images from your instance of the Deploy administration utility when they are no longer needed.
 
 .About this task
 

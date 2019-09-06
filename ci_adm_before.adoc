@@ -13,10 +13,48 @@ summary: xxxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+After creating an ONTAP Select cluster, you can support the deployment by performing various administrative tasks.
 
->> ONTAP, ONTAP Select, and Deploying
->> All use web
->> Some cases, simple related tasks in one file (such as Clusters)
->> More complex multi-task processes in single file
->> ONTAP Select Deploy includes admin tasks specific to Deploy
+== Administering ONTAP Select
+
+There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. All of them use the web user interface.
+
+NOTE: You can also use the command line interface to administer ONTAP Select. See the _Deploy CLI_ section for more information.
+
+Each administrative process can consist of a single step-by-step task. In some cases, a procedure might consists of a sequence of tasks.
+
+== Performing additional ONTAP configuration
+
+After an ONTAP Select cluster is deployed, you can configure and manage the cluster just as you would a hardware-based ONTAP system. For example, you can use OnCommand System Manager or the ONTAP CLI to configure the ONTAP Select cluster.
+
+==== NetApp client software
+
+You can connect to ONTAP Select using the following supported NetApp client software:
+
+* OnCommand System Manager
+* OnCommand Unified Manager for ONTAP
+* OnCommand Performance Manager
+* Virtual Storage Console for VMware vSphere
+* SnapCenter (refer to the NetApp Interoperability Matrix Tool for more details)
+
+To identify the supported versions of the client software, refer to the NetApp Interoperability Matrix Tool. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
+
+IMPORTANT: The use of SnapCenter and the corresponding plug-ins requires server-based licenses. Storage system licensing of the SnapCenter plug-ins is not currently supported with ONTAP Select.
+
+Any other NetApp client software that is not included in the list is not supported by ONTAP Select.
+
+==== Possible configuration options
+
+There are several options available when configuring the cluster, including the following:
+
+* Creating the networking configuration
+* Laying out your aggregates
+* Creating the data Storage Virtual Machines (SVMs)
+
+==== Purchased licenses with storage capacity
+
+If you decided not to install the license files with storage capacity as part of deploying the ONTAP Select cluster, you must acquire and install the license files before the grace period expires for clusters running with a purchased license.
+
+==== Mirrored aggregates
+
+There are data spare disks created by the Deploy administration utility on each ONTAP Select node from the usable datastore space (such as, Pool0 and Pool1). To implement high availability for your data on a multi-node cluster, you must create a mirrored aggregate using these spares.

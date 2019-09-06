@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ct_use_cases.html
+permalink: ti_vpi_adm_connectivity.html
 keywords: ontap select
 summary: xxx
 ---
 
-= Business use cases
+= Confirming network connectivity among the ONTAP Select nodes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for the content that Veena will provided.
+XXXX

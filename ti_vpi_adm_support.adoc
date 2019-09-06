@@ -1,0 +1,53 @@
+---
+sidebar: sidebar
+permalink: ti_vpi_adm_support.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Diagnostics and support
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related diagnostic and support tasks you can perform as part of administering ONTAP Select.
+
+== Displaying the system settings
+
+You can view the basic settings for the Deploy administration utility through the vCenter Plugin.
+
+.Steps
+
+. Click *ONTAP Select Deploy* in the *Global Inventory Lists* pane.
+
+. Click the *Administration* tab.
+
+. Expand the *System* option and click *Settings*.
+
+. Update the system configuration as needed and click *Save*.
+
+== Displaying event messages
+
+The Deploy administration utility includes an event logging facility that provides information about the activity of the system. You can view the contents of the event log through the Deploy plug-in to debug any issues or when directed to do so by support.
+
+.About this task
+
+You can filter the list of event messages based on several characteristics, including:
+
+* Category
+* Type
+* Level
+* Instance
+
+.Steps
+
+. Click *ONTAP Select Deploy* in the *Global Inventory Lists* pane.
+
+. Click the *Administration* tab.
+
+. Expand the *Events* option and click *Deploy*.
+
+. Optionally, click Filtering and create a filter to limit the event messages that are displayed.
