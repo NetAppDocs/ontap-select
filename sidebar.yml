@@ -135,6 +135,8 @@ entries:
             url: /ti_vpi_access.html
           - title: Upgrading and removing
             url: /ti_vpi_upgrade.html
+      - title: Manually removing the plug-in
+        url: /ti_vpi_manually_remove.html
   - title: Deploy REST API
     entries:
       - title: Understanding

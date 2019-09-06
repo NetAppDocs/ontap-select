@@ -1,0 +1,123 @@
+---
+sidebar: sidebar
+permalink: ti_vpi_manually_remove.html
+keywords: ontap select
+summary: xxx
+---
+
+= xxx
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
+
+== Before you begin
+xxx
+
+== Using the VMware MOB to remove the plug-in
+
+The MOB is a VMware application that allows you to view and manage the objects on a VMware vCenter server. You can use the MOB to remove the Deploy vCenter plug-in.
+
+. Steps
+
+. Access the MOB at the vCenter server using a browser and sign in:
++
+`https://<FQDN_or_IP-address>/mob`
+
+. Click *content* and then click *ExtensionManager*.
+
+. Confirm that the extension to be removed is present based on the full name:
++
+`com.netapp.selectdeploy`
+
+. Click *UnregisterExtension*.
+
+. Type the name of the extension and click *InvokeMethod*.
+
+.Result
+
+The plug-in is removed from the list of extensions.
+
+== Removing the plug-in from the vSphere UI folder
+
+You should examine vSphere UI directory at the vCenter server and remove the Deploy plugin if found.
+
+.Before you begin
+
+You must have the password for the root account at the vCenter server. You should remove the plug-in using the vSphere MOB.
+
+.Steps
+
+. Use SSH to access the vCenter server and sign in:
++
+`ssh root@<FQDN_or_IP-address>`
+
+. Type *shell* and press *Enter* to launch the Bash shell.
+
+. Navigate to the vsphere-client-serenity directory for the vSphere-UI service:
++
+`cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity`
+
+. Determine if there are directories of the form com.netapp.selectdeploy that must be removed:
++
+`ls -al`
+
+. Stop the HTML5 vSphere-UI web client:
++
+`service-control --stop vsphere-ui`
+
+. Remove the directory containing the UI extensions:
++
+`rm -rf com.netapp.selectdeploy-1.0.0`
+
+. Restart the HTML5 vSphere-UI web client:
++
+`service-control --start vsphere-ui`
+
+.After you finish
+
+It can take several minutes for the Deploy plug-in to restart and become available.
+
+== Removing the plug-in from the vSphere client folder
+
+You should examine the vSphere Client directory at the vCenter server and remove the Deploy plug-in if found. Although the Deploy plug-in does not use Flash, it is a best practice to examine this directory as part of the plug-in removal procedure.
+
+.Before you begin
+
+You must have the password for the root account at the vCenter server. You should remove the plug-in using the vSphere MOB and remove the plug-in from the vSphere UI directory.
+
+.Steps
+
+. Use SSH to access the vCenter server and sign in:
++
+`ssh root@<FQDN_or_IP-address>`
+
+. Type *shell* and press *Enter* to launch the Bash shell.
+
+. Navigate to the vsphere-client-serenity directory for the vSphere-Client service:
++
+`cd /etc/vmware/vsphere-client/vc-packages/vsphere-clientserenity`
+
+. Determine if there are directories of the form com.netapp.selectdeploy that must be removed:
++
+`ls -al`
+
+. Stop the HTML5 vSphere-UI web client:
++
+`service-control --stop vsphere-client`
+
+. Remove the directory containing the client extensions:
++
+`rm -rf com.netapp.selectdeploy-1.0.0`
+
+Restart the HTML5 vSphere-UI web client:
++
+`service-control --start vsphere-client`
+
+.After you finish
+
+It can take several minutes for the Deploy plug-in to restart and become available.

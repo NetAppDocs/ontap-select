@@ -19,9 +19,9 @@ There are several things you need to do before installing and managing the Deplo
 
 In most situations, the Deploy web user interface provides the most convenient option when managing the vCenter plug-in, and this is the option described in this guide. However, you can also manage the plug-in using the Deploy command line interface. For more information, type the following commands at the Deploy CLI prompt:
 
-`deploy plugin ?`
+* `deploy plugin ?`
 (Subcommands include: install, remove, show, and update)
-`deploy plugin-packages show`
+* `deploy plugin-packages show`
 
 === Preparation common to all management tasks
 
