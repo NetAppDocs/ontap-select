@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= xxx
+= Upgrading, removing, and verifying the Deploy vCenter plug-in
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,24 +13,24 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can use the ONTAP Select Deploy web user interface to upgrade or remove the Deploy plug-in from the vCenter server. You can also verify that the plug-in is still installed.
 
-Upgrading, removing, and verifying the Deploy vCenter plug-in
-You can use the ONTAP Select Deploy web user interface to upgrade or remove the Deploy
-plug-in from the vCenter server. You can also verify that the plug-in is still installed.
-Before you begin
-• Review Planning to manage the vCenter plug-in.
-• The VMware vCenter plug-in should be installed and registered.
-• The vCenter administrator account must have the following vCenter privileges:
-Extension
-Update extension
-Unregister extension
-Steps
-1. Sign in to the Deploy utility using the administrator account.
-2. Click the Administration tab at the top of the page and then click Plugins in the pane
-on the left.
-3. Select the plug-in on the Registered Plugins page and click the appropriate icon to
-perform the desired action.
+.Before you begin
+
+* Review Planning to manage the vCenter plug-in.
+* The VMware vCenter plug-in should be installed and registered.
+* The vCenter administrator account must have the following vCenter privileges:
+** Extension
+*** Update extension
+*** Unregister extension
+
+.Steps
+
+. Sign in to the Deploy utility using the administrator account.
+
+. Click the *Administration* tab at the top of the page and then click *Plugins* in the pane on the left.
+
+. Select the plug-in on the *Registered Plugins* page and click the appropriate icon to perform the desired action.
 +
 [cols="15,85"*,options="header"]
 |===
@@ -46,6 +46,8 @@ perform the desired action.
 
 |Check mark
 |Verify the Deploy plug-in. A green check mark indicates that the plug-in is still installed in vCenter and is still operational.
+
+|===
 
 .After you finish
 
