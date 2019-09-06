@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 Before installing and using the Deploy vCenter plug-in, you should prepare for the deployment to assure success.
 
-=== Software requirements
+== Software requirements
 
 There are several software requirements you should consider as described in the following table.
 
@@ -38,7 +38,7 @@ There are several software requirements you should consider as described in the 
 
 |===
 
-=== Cluster size restrictions
+== Cluster size restrictions
 
 There are several restrictions related to the cluster size that you should consider as described in the following table.
 
@@ -58,7 +58,7 @@ There are several restrictions related to the cluster size that you should consi
 
 |===
 
-=== RBAC privileges for the vCenter user accounts
+== RBAC privileges for the vCenter user accounts
 
 Several different vCenter privileges are required to manage and access the plug-in. These privileges correspond to the actions in the following three categories:
 
@@ -71,13 +71,13 @@ Several different vCenter privileges are required to manage and access the plug-
 
 See _Preparing the vCenter server accounts_ for more information.
 
-=== AutoSupport limitations
+== AutoSupport limitations
 
 The Deploy vCenter plug-in provides a minimum amount of usage information in the Deploy administration utility (including the plug-in URL). However, AutoSupport does include a table of the installed plug-ins that can be displayed through the AutoSupport viewer.
 
 NOTE: Note: You cannot download an AutoSupport package through the vSphere web client using the Deploy plug-in. You must use the native Deploy interface to download AutoSupport packages.
 
-=== Additional restrictions
+== Additional restrictions
 
 There are several additional restrictions that you should consider before installing and using the Deploy vCenter plug-in:
 

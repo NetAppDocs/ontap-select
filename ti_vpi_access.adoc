@@ -1,0 +1,39 @@
+---
+sidebar: sidebar
+permalink: ti_vpi_access.html
+keywords: ontap select
+summary: xxx
+---
+
+= Accessing the vCenter plug-in through vSphere
+
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can access the Deploy vCenter plug-in through the vSphere web client.
+
+.Before you begin
+
+The vCenter plug-in must be installed. In addition, the vCenter account you use when signing in to vSphere must have the following privilege:
+
+* NetApp
+** ONTAP Select Deploy
+*** Administrator
+
+.Steps
+
+. Sign out of the vSphere web client if you are signed in.
+
+. Sign in to vCenter using the vSphere web client, select HTML5, and accept the SSL certificate.
++
+Signing out and then back in refreshes the vCenter configuration information.
+
+. Click *Global Inventory Lists*.
+
+.Result
+
+The options *ONTAP Select Clusters* and *ONTAP Select Deploy* are available in the pane on the left. If they are not displayed, you should sign out and then sign back in.

@@ -79,7 +79,7 @@ entries:
         url: /ci_install_before.html
       - title: Installing ONTAP Select Deploy
         url: /ti_install_deploy.html
-      - title: Deploying an ONTAP Select cluster
+      - title: Deploying a cluster
         url: /ti_deploy_cluster.html
       - title: Initial cluster state
         url: /ri_initial_state.html
@@ -113,6 +113,20 @@ entries:
             url: /ti_adm_deploy_image_add.html
           - title: Remove ONTAP Select images
             url: /ti_adm_deploy_image_remove.html
+  - title: Deep dive
+    entries:
+      - title: Networking
+        entries:
+          - title: Network topic 1
+            url: /ct_net_temporary.html
+      - title: Storage
+        entries:
+          - title: Storage topic 1
+            url: /ct_stor_temporary.html
+      - title: HA architecure
+        entries:
+          - title: HA arch topic 1
+            url: /ct_ha_temporary.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
@@ -131,6 +145,18 @@ entries:
             url: /ci_vpi_manage_before.html
           - title: Installing
             url: /ti_vpi_install.html
+          - title: Accessing
+            url: /ti_vpi_access.html
+          - title: Upgrading and removing
+            url: /ti_vpi_upgrade.html
+      - title: Manually removing the plug-in
+        url: /ti_vpi_manually_remove.html
+      - title: Deploying a cluster
+        url: /ti_vpi_deploy_cluster.html
+      - title: Integration with vCenter
+        url: /ci_vpi_vcenter_integration.html
+      - title: Troubleshooting
+        url: /ri_vpi_troubleshooting.html
   - title: Deploy REST API
     entries:
       - title: Understanding
@@ -163,11 +189,9 @@ entries:
             url: /ri_api_script01.html
   - title: Deploy CLI
     entries:
-      - title: Before you begin
-        url: /ci_cli_before.html
       - title: Signing in using SSH
         url: /ti_cli_signing_in.html
-      - title: Deploying an ONTAP Select cluster
+      - title: Deploying a cluster
         url: /ti_cli_deploy_cluster.html
       - title: Security
         url: /ti_cli_security.html

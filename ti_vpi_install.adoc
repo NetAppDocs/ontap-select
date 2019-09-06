@@ -33,7 +33,7 @@ The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administratio
 
 . Enter the following information in the wizard and click *Register*.
 +
-[cols="25,75"*,options="header"]
+[cols="30,70"*,options="header"]
 |===
 |In this field …
 |Do the following …

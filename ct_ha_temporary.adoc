@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_ha_temporary.html
+keywords: ontap select
+summary: xxx
+---
+
+= HA architecture topic 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Temporary placeholder for IE/TME review.
