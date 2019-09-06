@@ -82,7 +82,7 @@ If you have not previously accepted the SSL certificate, click the IP link in th
 
 . On the *New ONTAP Select* page, enter the cluster details and click *Done*.
 +
-INSERT GRAPHIC
+*INSERT GRAPHIC*
 
 . In the *Node Setup* section, provide the configuration and select a license.
 +
@@ -170,9 +170,9 @@ It can take up to 30 minutes for the cluster to be created.
 
 . Refresh the page and select the new cluster, then click *Summary* and *Details* to monitor the multi-step cluster creation process.
 +
-Attention: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password changeme123 with the admin account.
+IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password changeme123 with the admin account.
 
-. After you finish
+.After you finish
 
 * Confirm that the ONTAP Select AutoSupport feature is enabled.
 * Back up the ONTAP Select Deploy configuration data.

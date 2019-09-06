@@ -140,7 +140,7 @@ entries:
       - title: Deploying an ONTAP Select cluster
         url: /ti_vpi_deploy_cluster.html
       - title: Troubleshooting
-        url: /ti_vpi_troubleshooting.html
+        url: /ri_vpi_troubleshooting.html
   - title: Deploy REST API
     entries:
       - title: Understanding

@@ -24,7 +24,7 @@ The vCenter plug-in must be installed. In addition, the vCenter account you use 
 ** ONTAP Select Deploy
 *** Administrator
 
-. Steps
+.Steps
 
 . Sign out of the vSphere web client if you are signed in.
 
@@ -34,6 +34,6 @@ Signing out and then back in refreshes the vCenter configuration information.
 
 . Click Global Inventory Lists.
 
-. Result
+.Result
 
 The options *ONTAP Select Clusters* and *ONTAP Select Deploy* are available in the pane on the left. If they are not displayed, you should sign out and then sign back in.
