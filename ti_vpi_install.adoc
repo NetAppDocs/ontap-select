@@ -1,0 +1,55 @@
+---
+sidebar: sidebar
+permalink: ti_vpi_install.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Installing the Deploy vCenter plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administration utility. You can use the ONTAP Select Deploy web user interface to install and register the plug-in at the vCenter server.
+
+.Before you begin
+
+* Review Planning to manage the vCenter plug-in and Preparing the vCenter server accounts.
+* Define a vCenter account to Deploy with the following privilege: sessions.validate.session. The vCenter server then becomes an option during plug-in installation.
+* Have credentials for a vCenter account with the following privileges:
+** Extension
+*** Register extension
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page, and then click *Plugins* in the pane on the left.
+
+. Click *+Register* on the *Registered Plugins* page.
+
+. Enter the following information in the wizard and click *Register*.
++
+[cols="25,75"*,options="header"]
+|===
+|In this field …
+|Do the following …
+
+|Plugin
+|Select the Deploy plug-in to install.
+
+|Management Server
+|Select the vCenter where the plug-in should be installed.
+
+|Username
+|Enter the username required for accessing the vCenter.
+
+|Password
+|Enter the password for the associated username.
+
+|===
+
+*INSERT GRAPHIC*

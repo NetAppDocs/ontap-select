@@ -1,0 +1,86 @@
+---
+sidebar: sidebar
+permalink: ci_vpi_planning.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Planning to use the Deploy vCenter plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Before installing and using the Deploy vCenter plug-in, you should prepare for the deployment to assure success.
+
+=== Software requirements
+
+There are several software requirements you should consider as described in the following table.
+
+[cols="35,65"*,options="header"]
+|===
+|Software
+|Supported version
+
+|ONTAP Select Deploy utility
+|2.11.2 or later
+
+|VMware vSphere
+|6.5 GA or later
+
+|VMware vSphere user interface
+|HTML5 (Flash-based version is not supported)
+
+|ESXi
+|6.5U2 or later
+
+|===
+
+=== Cluster size restrictions
+
+There are several restrictions related to the cluster size that you should consider as described in the following table.
+
+[cols="35,65"*,options="header"]
+|===
+|Item
+|Maximum supported
+
+|ONTAP Select Deploy clusters
+|100
+
+|Nodes (virtual machines)
+|1000
+
+|Hosts
+|800
+
+|===
+
+=== RBAC privileges for the vCenter user accounts
+
+Several different vCenter privileges are required to manage and access the plug-in. These privileges correspond to the actions in the following three categories:
+
+* Managing the plug-in through Deploy:
+** Install
+** Upgrade
+** Remove
+* Accessing the plug-in through the vSphere client
+* Validating user access to the plug-in through vSphere
+
+See _Preparing the vCenter server accounts_ for more information.
+
+=== AutoSupport limitations
+
+The Deploy vCenter plug-in provides a minimum amount of usage information in the Deploy administration utility (including the plug-in URL). However, AutoSupport does include a table of the installed plug-ins that can be displayed through the AutoSupport viewer.
+
+NOTE: Note: You cannot download an AutoSupport package through the vSphere web client using the Deploy plug-in. You must use the native Deploy interface to download AutoSupport packages.
+
+=== Additional restrictions
+
+There are several additional restrictions that you should consider before installing and using the Deploy vCenter plug-in:
+
+* Each instance of the vCenter plug-in supports only one vCenter server.
+* vCenter servers that are configured in linked mode are not supported.
+* The Deploy plug-in GUI in vSphere only displays clusters with ONTAP Select virtual machines managed by the same vCenter server. ONTAP Select clusters running on standalone ESXi and KVM hosts are not included.

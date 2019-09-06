@@ -15,7 +15,9 @@ summary: xxx
 [.lead]
 You can use the following script to create a cluster based on parameters defined within the script and a JSON input file.
 
+
 [source,python]
+---------------------------------------------------------------------
 #!/usr/bin/env python
 ##--------------------------------------------------------------------
 #
@@ -246,4 +248,4 @@ return parser.parse_args()
 if __name__ == '__main__':
 args = parseArgs()
 main(args)
-Script to add a node license
+---------------------------------------------------------------------

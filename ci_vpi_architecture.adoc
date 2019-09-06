@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: ci_vpi_architecture.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Plug-in architecture
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Deploy vCenter plug-in is tightly integrated with ONTAP Select Deploy and VMware vCenter. There are two paths to access the Deploy administration utility through the plug-in using the vSphere interface.
+
+
+image:plugin_architecture.png[Illustrates the architecture of the Deploy vCenter plug-in.]

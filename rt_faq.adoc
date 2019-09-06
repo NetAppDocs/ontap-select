@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: rt_faq.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for the content that Veena and Tudor will provided.
+This is a placeholder for the content that Veena will provided.
