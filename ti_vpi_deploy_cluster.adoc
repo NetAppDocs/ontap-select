@@ -19,7 +19,7 @@ You can use the Deploy vCenter plug-in through the vSphere web user interface to
 
 You should prepare to use the Deploy vCenter plug-in before deploying an ONTAP Select cluster.
 
-==== Common preparation for clusters of all sizes
+=== Common preparation for clusters of all sizes
 
 There are several steps you need to take regardless of the cluster size:
 
@@ -34,7 +34,7 @@ There are several steps you need to take regardless of the cluster size:
 * If needed, install the Deploy SSL certificate on the Windows Certificate Manager as a “Trusted Root Certificate Authority.”
 * Ensure that the Deploy utility has network access to port 443 at the vCenter server.
 
-==== Additional preparation for a multi-node cluster
+=== Additional preparation for a multi-node cluster
 
 In addition to common preparation, you should be familiar with the Deploy network connectivity checker before deploying a multi-node cluster.
 
@@ -102,7 +102,7 @@ You can change the configuration by clicking Edit in each section as needed.
 
 . Click *Next*.
 
-. Provide the ONTAP administrator password and click Create Cluster to begin the cluster creation process and then click OK in the confirmation popup window.
+. Provide the ONTAP administrator password and click *Create Cluster* to begin the cluster creation process and then click *OK* in the confirmation popup window.
 +
 It can take up to 30 minutes for the cluster to be created.
 
@@ -158,7 +158,7 @@ You can optionally enable software RAID when using a premium license.
 
 . Click *Done* and review the configuration of the cluster.
 +
-You can change the configuration by clicking Edit in each section as needed.
+You can change the configuration by clicking *Edit* in each section as needed.
 
 . Optionally, run the network connectivity checker to test the connectivity among the nodes on the internal cluster network.
 
@@ -170,7 +170,7 @@ It can take up to 30 minutes for the cluster to be created.
 
 . Refresh the page and select the new cluster, then click *Summary* and *Details* to monitor the multi-step cluster creation process.
 +
-IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password changeme123 with the admin account.
+IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
 
 .After you finish
 

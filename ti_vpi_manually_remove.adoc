@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= xxx
+= Manually removing the Deploy plug-in from vCenter
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,16 +13,22 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can manually remove the Deploy plug-in from the vCenter server.
 
 == Before you begin
-xxx
+
+You should always begin by removing the plug-in using the VMware Managed Object Browser (MOB) and then by removing it from the vSphere directories inside the vCenter server.
+
+There are several instances in which you must manually remove the plug-in:
+
+* The plug-in was removed using the Deploy utility native user interface, but the vCenter server could not be rebooted.
+* The Deploy utility was decommissioned without removing the plug-in.
 
 == Using the VMware MOB to remove the plug-in
 
 The MOB is a VMware application that allows you to view and manage the objects on a VMware vCenter server. You can use the MOB to remove the Deploy vCenter plug-in.
 
-. Steps
+.Steps
 
 . Access the MOB at the vCenter server using a browser and sign in:
 +
@@ -114,7 +120,7 @@ You must have the password for the root account at the vCenter server. You shoul
 +
 `rm -rf com.netapp.selectdeploy-1.0.0`
 
-Restart the HTML5 vSphere-UI web client:
+. Restart the HTML5 vSphere-UI web client:
 +
 `service-control --start vsphere-client`
 
