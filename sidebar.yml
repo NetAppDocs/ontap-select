@@ -189,8 +189,6 @@ entries:
             url: /ri_api_script01.html
   - title: Deploy CLI
     entries:
-      - title: Before you begin
-        url: /ci_cli_before.html
       - title: Signing in using SSH
         url: /ti_cli_signing_in.html
       - title: Deploying an ONTAP Select cluster
