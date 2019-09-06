@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_vpi_adm_licenses.html
+keywords: ontap select
+summary: xxx
+---
+
+= ONTAP Select licenses
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related tasks you can perform as part of administering the ONTAP Select licenses.

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_vpi_adm_clusters.html
+keywords: ontap select
+summary: xxx
+---
+
+= ONTAP Select clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related tasks you can perform to administer an ONTAP Select cluster.
