@@ -191,7 +191,7 @@ entries:
     entries:
       - title: Signing in using SSH
         url: /ti_cli_signing_in.html
-      - title: Deploying an ONTAP Select cluster
+      - title: Deploying a cluster
         url: /ti_cli_deploy_cluster.html
       - title: Security
         url: /ti_cli_security.html
