@@ -131,6 +131,10 @@ entries:
             url: /ci_vpi_manage_before.html
           - title: Installing
             url: /ti_vpi_install.html
+          - title: Accessing
+            url: /ti_vpi_access.html
+          - title: Upgrading and removing
+            url: /ti_vpi_upgrade.html
   - title: Deploy REST API
     entries:
       - title: Understanding
