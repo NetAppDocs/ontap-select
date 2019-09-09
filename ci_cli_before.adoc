@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ci_cli_before.html
+keywords: ontap select
+summary: xxx
+---
+
+= Before you begin
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

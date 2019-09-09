@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_cli_upgrade_deploy.html
+keywords: ontap select
+summary: xxx
+---
+
+= Upgrading a Deploy instance
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
