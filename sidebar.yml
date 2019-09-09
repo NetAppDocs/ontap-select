@@ -77,6 +77,8 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_install_before.html
+      - title: Host configuration checklist
+        url: /rt_chk_temporary.html
       - title: Installing ONTAP Select Deploy
         url: /ti_install_deploy.html
       - title: Deploying a cluster
@@ -117,6 +119,10 @@ entries:
             url: /ti_adm_deploy_image_remove.html
   - title: Deep dive
     entries:
+      - title: HA architecure
+        entries:
+          - title: HA arch topic 1
+            url: /ct_ha_temporary.html
       - title: Networking
         entries:
           - title: Network topic 1
@@ -125,10 +131,10 @@ entries:
         entries:
           - title: Storage topic 1
             url: /ct_stor_temporary.html
-      - title: HA architecure
+      - title: Performance
         entries:
-          - title: HA arch topic 1
-            url: /ct_ha_temporary.html
+          - title: Performance topic 1
+            url: /ct_perf_temporary.html
   - title: FAQ
     url: /rt_faq.html
   - title: vCenter plug-in
