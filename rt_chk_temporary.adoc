@@ -1,6 +1,6 @@
----
+--
 sidebar: sidebar
-permalink:rt_chk_temporary.html
+permalink: rt_chk_temporary.html
 keywords: ontap select
 summary: xxx
 ---
