@@ -215,9 +215,13 @@ entries:
         url: /ti_cli_deploy_cluster.html
       - title: Security
         url: /ti_cli_security.html
+      - title: Network connectivity
+        url: /ti_cli_connectivity.html
       - title: Clusters
         url: /ti_cli_clusters.html
       - title: Deploy utility
         entries:
           - title: Migrating a Deploy instance
             url: /ti_cli_migrate_deploy.html
+          - title: Upgrade a Deploy instance
+            url: /ti_cli_upgrade_deploy.html

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_cli_connectivity.html
+keywords: ontap select
+summary: xxx
+---
+
+= Confirming network connectivity among the ONTAP Select nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+XXXX
