@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink:rt_chk_temporary.html
+keywords: ontap select
+summary: xxx
+---
+
+= Host configuration checklist
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Temporary placeholder for IE/TME content.
+
+This is considered to be a DITA reference, so the file name is *rt_chk_temporary.adoc* It is suggested that all the deep dive networking content begin with the same prefix (such as *rt_chk_xxx*).
