@@ -13,6 +13,6 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Temporary placeholder for IE/TME content.
+Temporary placeholder for TME content.
 
 This is considered to be a DITA concept, so the file name is *ct_net_temporary.adoc* It is suggested that all the files for the deep dive networking content begin with the same prefix (such as *ct_net_xxx*).
