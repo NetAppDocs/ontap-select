@@ -61,8 +61,33 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 .. Click *Details*.
 .. Select and expand the cluster to see storage utilization.
 
-== Reinstalling a capacity pool license
+== Edit storage and license capacity
 
+You can expand the storage and licensing capacity for your ONTAP Select nodes as needed.
+
+.Before you begin
+
+You must have the datastore(s) with sufficient capacity attached and available to the hypervisor where ONTAP Select is running. In addition, you must be licensed for the storage expansion. If your current node license is insufficient, you can update the license as part of this task. In this case, you must have a new capacity license file for the node available for upload from your local workstation.
+
+When updating the storage capacity of a node that is part of an HA pair, the partner node must have a datastore available with the same capacity.
+
+.About this task
+
+You can perform one or more actions when editing the storage configuration of an ONTAP Select node, including:
+
+* Increase the allocated storage capacity
+* Refresh the storage license
+* Add a storage pool
+
+You can perform one or more actions each time you edit the configuration.
+
+NOTE: If an ONTAP Select node is deployed with an evaluation license, you can expand the storage up to the limit imposed by the license.
+
+.Steps
+
+*MUST COMPLETE*
+
+== Reinstalling a capacity pool license
 
 Every active capacity pool license is locked to a specific License Manager instance, which is contained within an instance of the Deploy administration utility. If you are using a capacity pool license and then restore or recover the Deploy instance, the original license is no longer valid. You must generate a new capacity license file, and then install the license to the new Deploy instance.
 
@@ -146,29 +171,3 @@ The license upgrade for the cluster can take several minutes. Allow the process 
 
 .After you finish
 The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment continue to be used after upgrading to production licenses.
-
-== Edit storage and license capacity
-
-You can expand the storage and licensing capacity for your ONTAP Select nodes as needed.
-
-.Before you begin
-
-You must have the datastore(s) with sufficient capacity attached and available to the hypervisor where ONTAP Select is running. In addition, you must be licensed for the storage expansion. If your current node license is insufficient, you can update the license as part of this task. In this case, you must have a new capacity license file for the node available for upload from your local workstation.
-
-When updating the storage capacity of a node that is part of an HA pair, the partner node must have a datastore available with the same capacity.
-
-.About this task
-
-You can perform one or more actions when editing the storage configuration of an ONTAP Select node, including:
-
-* Increase the allocated storage capacity
-* Refresh the storage license
-* Add a storage pool
-
-You can perform one or more actions each time you edit the configuration.
-
-NOTE: If an ONTAP Select node is deployed with an evaluation license, you can expand the storage up to the limit imposed by the license.
-
-.Steps
-
-*MUST COMPLETE*
