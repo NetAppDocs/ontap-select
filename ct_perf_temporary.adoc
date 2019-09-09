@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: ct_perf_temporary.html
+keywords: ontap select
+summary: xxx
+---
+
+= Networking topic 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Temporary placeholder for IE/TME content.
+
+This is considered to be a DITA concept, so the file name is *ct_perf_temporary.adoc* It is suggested that all the files for the deep dive performance content begin with the same prefix (such as *ct_perf_xxx*).
