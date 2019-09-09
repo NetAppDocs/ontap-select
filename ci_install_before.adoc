@@ -14,5 +14,3 @@ summary: xxx
 
 [.lead]
 This section will have some basic information about the process, including the steps at a high level.
-
-Must add *Host configuration checklist* as next level one topic (chapter). Perhaps this will be a container / dropdown with multiple files. Veena will create.
