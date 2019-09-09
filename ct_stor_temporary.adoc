@@ -15,4 +15,4 @@ summary: xxx
 [.lead]
 Temporary placeholder for IE/TME content.
 
-This is considered to be a DITA concept, so the file name is *ct_stor_temporary.adoc* It is suggested that all the deep dive networking content begin with the same prefix (such as *ct_stor_xxx*).
+This is considered to be a DITA concept, so the file name is *ct_stor_temporary.adoc* It is suggested that all files for the deep dive networking content begin with the same prefix (such as *ct_stor_xxx*).

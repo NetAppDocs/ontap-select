@@ -15,4 +15,4 @@ summary: xxx
 [.lead]
 Temporary placeholder for IE/TME review.
 
-This is considered to be a DITA concept, so the file name is *ct_ha_temporary.adoc* It is suggested that all the deep dive HA architecture content begin with the same prefix (such as *ct_ha_xxx*).
+This is considered to be a DITA concept, so the file name is *ct_ha_temporary.adoc* It is suggested that all the files for the deep dive HA architecture content begin with the same prefix (such as *ct_ha_xxx*).
