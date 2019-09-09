@@ -16,3 +16,15 @@ summary: xxx
 Temporary placeholder for IE/TME content.
 
 This is considered to be a DITA reference, so the file name is *rt_chk_temporary.adoc* It is suggested that all the deep dive networking content begin with the same prefix (such as *rt_chk_xxx*).
+
+The host configuration checklist section should absorb some content that was previously owned by IE, including:
+
+* Install guide
+_Host configuration and preparation checklist_ chapter.
+Note that the network diagram needs to be updated to align with new four-NIC best practice.
+
+* ONTAP Select Deploy planning chapter
+** _Required configuration information_
+** _Optional network configuration information_
+* ONTAP Select planning chapter
+** _Required information for a VMware deployment_
