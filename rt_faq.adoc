@@ -14,3 +14,5 @@ summary: xxx
 
 [.lead]
 This is a placeholder for the content that Veena will provided.
+
+It is assumed that all the FAQ will be in this single file.
