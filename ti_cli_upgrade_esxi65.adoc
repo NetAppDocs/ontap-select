@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_upgrade_esxi65.html
+permalink: ti_cli_upgrade_esxi65.html
 keywords: ONTAP Select
 summary: xxx
 ---
