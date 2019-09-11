@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: ri_new_ots.html
+keywords: ontap select
+summary: xxx
+---
+
+= What's new in ONTAP Select 9.7
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several new and changed features provided with the current release of ONTAP Select.
+
+Refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Release Notes,window=_blank] for more information.
+
+=== Software RAID for NVMe
+
+xxx
+
+=== Versioning change for ONTAP Select Deploy
+
+xxx
+
+=== NWF
+
+???
