@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ri_new_ots.html
+keywords: ontap select
+summary: xxx
+---
+
+= What's new in ONTAP Select 9.7
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
