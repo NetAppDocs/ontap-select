@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-Refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Release Notes,window=_blank] for more information.
+NOTE: Refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Release Notes,window=_blank] for more information.
 
 === Software RAID for NVMe
 
@@ -25,6 +25,6 @@ xxx
 
 xxx
 
-=== NWF
+=== Improvements to web user interface
 
-???
+>> Workflows
