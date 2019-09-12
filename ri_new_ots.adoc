@@ -21,6 +21,8 @@ NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Rele
 
 xxx
 
+IMPORTANT: To use software RAID with an NVMe disk, you must manually update the host's BIOS and reboot the machine. See the release notes for more information.
+
 === Versioning change for ONTAP Select Deploy
 
 xxx
