@@ -15,16 +15,18 @@ summary: xxx
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-Refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Release Notes,window=_blank] for more information.
+NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Release Notes,window=_blank] for more information.
 
-=== Software RAID for NVMe
-
-xxx
-
-=== Versioning change for ONTAP Select Deploy
+== Software RAID for NVMe
 
 xxx
 
-=== NWF
+IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See the release notes for more information.
 
-???
+== Versioning change for ONTAP Select Deploy
+
+xxx
+
+== Improvements to web user interface
+
+>> Workflows
