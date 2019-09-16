@@ -15,6 +15,19 @@ summary: xxx
 [.lead]
 You can use the following script to create a cluster based on parameters defined within the script and a JSON input file.
 
+// This is a comment
+
+////
+Line 1
+Line 2
+Line 3
+////
+
+'''
+
+[red]#Normal red text# and [big red yellow-background]*Big red with yellow*
+[underline]#Underlined text#
+[blue line-through]*bold blue and line-through*
 
 [source,python]
 ---------------------------------------------------------------------
