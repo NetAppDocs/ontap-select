@@ -204,7 +204,7 @@ entries:
           - title: Create a cluster
             url: /ri_api_script_cc.html
           - title: Add a node license
-            url: /ri_api_script_an.html
+            url: /ri_api_script_anl.html
   - title: Deploy CLI
     entries:
       - title: Before you begin
