@@ -202,7 +202,11 @@ entries:
       - title: Python code samples
         entries:
           - title: Create a cluster
-            url: /ri_api_script01.html
+            url: /ri_api_script_cc.html
+          - title: Add a node license
+            url: /ri_api_script_anl.html
+          - title: Resize cluster nodes
+            url: /ri_api_script_resize.html
   - title: Deploy CLI
     entries:
       - title: Before you begin

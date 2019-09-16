@@ -1,0 +1,151 @@
+---
+sidebar: sidebar
+permalink: ri_api_script_anl.html
+keywords: ontap select
+summary: xxx
+---
+
+= Script to add a node license
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use the following script to add a license for an ONTAP Select node.
+
+[source,python,%autofill]
+---------------------------------------------------------------------
+#!/usr/bin/env python
+##--------------------------------------------------------------------
+#
+# File: add_license.py
+#
+# (C) Copyright 2019 NetApp, Inc.
+#
+# This sample code is provided AS IS, with no support or warranties of
+# any kind, including but not limited for warranties of merchantability
+# or fitness of any kind, expressed or implied. Permission to use,
+# reproduce, modify and create derivatives of the sample code is granted
+# solely for the purpose of researching, designing, developing and
+# testing a software application product for use with NetApp products,
+# provided that the above copyright notice appears in all copies and
+# that the software application product is distributed pursuant to terms
+# no less restrictive than those set forth herein.
+#
+##--------------------------------------------------------------------
+
+import argparse
+import logging
+import json
+
+from deploy_requests import DeployRequests
+
+
+def post_new_license(deploy, license_filename):
+    log_info('Posting a new license: {}'.format(license_filename))
+
+    # Stream the file as multipart/form-data
+    deploy.post('/licensing/licenses', data={},
+                files={'license_file': open(license_filename, 'rb')})
+
+    # Alternative if the NLF license data is converted to a string.
+    # with open(license_filename, 'rb') as f:
+    #    nlf_data = f.read()
+    #    r = deploy.post('/licensing/licenses', data={},
+    #                    files={'license_file': (license_filename, nlf_data)})
+
+
+def put_license(deploy, serial_number, data, files):
+    log_info('Adding license for serial number: {}'.format(serial_number))
+
+    deploy.put('/licensing/licenses/{}'.format(serial_number), data=data, files=files)
+
+
+def put_used_license(deploy, serial_number, license_filename, ontap_username, ontap_password):
+    ''' If the license is used by an 'online' cluster, a username/password must be given. '''
+
+    data = {'ontap_username': ontap_username, 'ontap_password': ontap_password}
+    files = {'license_file': open(license_filename, 'rb')}
+
+    put_license(deploy, serial_number, data, files)
+
+
+def put_free_license(deploy, serial_number, license_filename):
+    data = {}
+    files = {'license_file': open(license_filename, 'rb')}
+
+    put_license(deploy, serial_number, data, files)
+
+
+def get_serial_number_from_license(license_filename):
+    ''' Read the NLF file to extract the serial number '''
+    with open(license_filename) as f:
+        data = json.load(f)
+
+        statusResp = data.get('statusResp', {})
+        serialNumber = statusResp.get('serialNumber')
+        if not serialNumber:
+            log_and_exit("The license file seems to be missing the serialNumber")
+
+        return serialNumber
+
+
+def log_info(msg):
+    logging.getLogger('deploy').info(msg)
+
+
+def log_and_exit(msg):
+    logging.getLogger('deploy').error(msg)
+    exit(1)
+
+
+def configure_logging():
+    FORMAT = '%(asctime)-15s:%(levelname)s:%(name)s: %(message)s'
+    logging.basicConfig(level=logging.INFO, format=FORMAT)
+    logging.getLogger('requests.packages.urllib3.connectionpool').setLevel(logging.WARNING)
+
+
+def main(args):
+    configure_logging()
+    serial_number = get_serial_number_from_license(args.license)
+
+    deploy = DeployRequests(args.deploy, args.password)
+
+    # First check if there is already a license resource for this serial-number
+    if deploy.find_resource('/licensing/licenses', 'id', serial_number):
+
+        # If the license already exists in the Deploy server, determine if its used
+        if deploy.find_resource('/clusters', 'nodes.serial_number', serial_number):
+
+            # In this case, requires ONTAP creds to push the license to the node
+            if args.ontap_username and args.ontap_password:
+                put_used_license(deploy, serial_number, args.license,
+                                 args.ontap_username, args.ontap_password)
+            else:
+                print "ERROR: The serial number for this license is in use. Please provide ONTAP credentials."
+        else:
+            # License exists, but its not used
+            put_free_license(deploy, serial_number, args.license)
+    else:
+        # No license exists, so register a new one as an available license for later use
+        post_new_license(deploy, args.license)
+
+
+def parseArgs():
+    parser = argparse.ArgumentParser(description='Uses the ONTAP Select Deploy API to add or update a new or used NLF license file.')
+    parser.add_argument('-d', '--deploy', required=True, type=str, help='Hostname or IP address of ONTAP Select Deploy')
+    parser.add_argument('-p', '--password', required=True, type=str, help='Admin password of Deploy server')
+    parser.add_argument('-l', '--license', required=True, type=str, help='Filename of the NLF license data')
+    parser.add_argument('-u', '--ontap_username', type=str,
+                        help='ONTAP Select username with privelege to add the license. Only provide if the license is used by a Node.')
+    parser.add_argument('-o', '--ontap_password', type=str,
+                        help='ONTAP Select password for the ontap_username. Required only if ontap_username is given.')
+    return parser.parse_args()
+
+if __name__ == '__main__':
+    args = parseArgs()
+    main(args)
+
+---------------------------------------------------------------------
