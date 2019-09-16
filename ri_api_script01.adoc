@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 You can use the following script to create a cluster based on parameters defined within the script and a JSON input file.
 
-[source,python,%autofit]
+[source,python]
 ---------------------------------------------------------------------
 #!/usr/bin/env python
 ##--------------------------------------------------------------------
@@ -35,6 +35,7 @@ You can use the following script to create a cluster based on parameters defined
 # no less restrictive than those set forth herein.
 #
 ##--------------------------------------------------------------------
+
 import traceback
 import argparse
 import json
@@ -54,197 +55,248 @@ def add_vcenter_credentials(deploy, config):
         data['type'] = "vcenter"
         deploy.post('/security/credentials', data)
 
+
 def add_standalone_host_credentials(deploy, config):
-""" Add credentials for standalone hosts if present in the config.
-Does nothing if the host credential already exists on the Deploy.
-"""
-log_debug_trace()
-hosts = config.get('hosts', [])
-for host in hosts:
-# The presense of the 'password' will be used only for standalone hosts.
-# If this host is managed by a vcenter, it should not have a host 'password' in the
-json.
-if 'password' in host and not deploy.resource_exists('/security/credentials',
-'hostname', host['name']):
-log_info("Registering host {} credentials".format(host['name']))
-data = {'hostname': host['name'], 'type': 'host',
-'username': host['username'], 'password': host['password']}
-deploy.post('/security/credentials', data)
+    """ Add credentials for standalone hosts if present in the config.
+        Does nothing if the host credential already exists on the Deploy.
+    """
+    log_debug_trace()
+
+    hosts = config.get('hosts', [])
+    for host in hosts:
+        # The presense of the 'password' will be used only for standalone hosts.
+        # If this host is managed by a vcenter, it should not have a host 'password' in the json.
+        if 'password' in host and not deploy.resource_exists('/security/credentials',
+                                                             'hostname', host['name']):
+            log_info("Registering host {} credentials".format(host['name']))
+            data = {'hostname': host['name'], 'type': 'host',
+                    'username': host['username'], 'password': host['password']}
+            deploy.post('/security/credentials', data)
+
 
 def register_unkown_hosts(deploy, config):
-''' Registers all hosts with the deploy server.
-The host details are read from the cluster config json file.
-This method will skip any hosts that are already registered.
-This method will exit the script if no hosts are found in the config.
-'''
-log_debug_trace()
-data = {"hosts": []}
-if 'hosts' not in config or not config['hosts']:
-log_and_exit("The cluster config requires at least 1 entry in the 'hosts' list got
-{}".format(config))
-missing_host_cnt = 0
-for host in config['hosts']:
-if not deploy.resource_exists('/hosts', 'name', host['name']):
-missing_host_cnt += 1
-host_config = {"name": host['name'], "hypervisor_type": host['type']}
-if 'mgmt_server' in host:
-host_config["management_server"] = host['mgmt_server']
-log_info(
-"Registering from vcenter {mgmt_server}".format(**host))
-if 'password' in host and 'user' in host:
-host_config['credential'] = {
-"password": host['password'], "username": host['user']}
-log_info("Registering {type} host {name}".format(**host))
-data["hosts"].append(host_config)
-# only post /hosts if some missing hosts were found
-if missing_host_cnt:
-deploy.post('/hosts', data, wait_for_job=True)
+    ''' Registers all hosts with the deploy server.
+        The host details are read from the cluster config json file.
+
+        This method will skip any hosts that are already registered.
+        This method will exit the script if no hosts are found in the config.
+    '''
+    log_debug_trace()
+
+    data = {"hosts": []}
+    if 'hosts' not in config or not config['hosts']:
+        log_and_exit("The cluster config requires at least 1 entry in the 'hosts' list got {}".format(config))
+
+    missing_host_cnt = 0
+    for host in config['hosts']:
+        if not deploy.resource_exists('/hosts', 'name', host['name']):
+            missing_host_cnt += 1
+            host_config = {"name": host['name'], "hypervisor_type": host['type']}
+            if 'mgmt_server' in host:
+                host_config["management_server"] = host['mgmt_server']
+                log_info(
+                   "Registering from vcenter {mgmt_server}".format(**host))
+
+            if 'password' in host and 'user' in host:
+                host_config['credential'] = {
+                    "password": host['password'], "username": host['user']}
+
+            log_info("Registering {type} host {name}".format(**host))
+            data["hosts"].append(host_config)
+
+    # only post /hosts if some missing hosts were found
+    if missing_host_cnt:
+        deploy.post('/hosts', data, wait_for_job=True)
+
 
 def add_cluster_attributes(deploy, config):
-''' POST a new cluster with all needed attribute values.
-Returns the cluster_id of the new config
-'''
-log_debug_trace()
-cluster_config = config['cluster']
-cluster_id = deploy.find_resource('/clusters', 'name', cluster_config['name'])
-if not cluster_id:
-log_info("Creating cluster config named {name}".format(**cluster_config))
-# Filter to only the valid attributes, ignores anything else in the json
-data = {k: cluster_config[k] for k in [
-'name', 'ip', 'gateway', 'netmask', 'ontap_image_version', 'dns_info',
-'ntp_servers']}
-num_nodes = len(config['nodes'])
-log_info("Cluster properties: {}".format(data))
-resp = deploy.post('/v3/clusters?node_count={}'.format(num_nodes), data)
-cluster_id = resp.headers.get('Location').split('/')[-1]
-return cluster_id
+    ''' POST a new cluster with all needed attribute values.
+        Returns the cluster_id of the new config
+    '''
+    log_debug_trace()
+
+    cluster_config = config['cluster']
+    cluster_id = deploy.find_resource('/clusters', 'name', cluster_config['name'])
+
+    if not cluster_id:
+        log_info("Creating cluster config named {name}".format(**cluster_config))
+
+        # Filter to only the valid attributes, ignores anything else in the json
+        data = {k: cluster_config[k] for k in [
+            'name', 'ip', 'gateway', 'netmask', 'ontap_image_version', 'dns_info', 'ntp_servers']}
+
+        num_nodes = len(config['nodes'])
+
+        log_info("Cluster properties: {}".format(data))
+
+        resp = deploy.post('/v3/clusters?node_count={}'.format(num_nodes), data)
+        cluster_id = resp.headers.get('Location').split('/')[-1]
+
+    return cluster_id
+
 
 def get_node_ids(deploy, cluster_id):
-''' Get the the ids of the nodes in a cluster. Returns a list of node_ids.'''
-log_debug_trace()
-response = deploy.get('/clusters/{}/nodes'.format(cluster_id))
-node_ids = [node['id'] for node in response.json().get('records')]
-return node_ids
+    ''' Get the the ids of the nodes in a cluster. Returns a list of node_ids.'''
+    log_debug_trace()
+
+    response = deploy.get('/clusters/{}/nodes'.format(cluster_id))
+    node_ids = [node['id'] for node in response.json().get('records')]
+    return node_ids
+
 
 def add_node_attributes(deploy, cluster_id, node_id, node):
-''' Set all the needed properties on a node '''
-log_debug_trace()
-log_info("Adding node '{}' properties".format(node_id))
-data = {k: node[k] for k in ['ip', 'serial_number', 'instance_type',
-'is_storage_efficiency_enabled'] if k in node}
-# Optional: Set a serial_number
-if 'license' in node:
-data['license'] = {'id': node['license']}
-# Assign the host
-host_id = deploy.find_resource('/hosts', 'name', node['host_name'])
-if not host_id:
-log_and_exit("Host names must match in the 'hosts' array, and the nodes.host_name
-property")
-data['host'] = {'id': host_id}
-# Set the correct raid_type
-is_hw_raid = not node['storage'].get('disks') # The presence of a list of disks
-indicates sw_raid
-data['passthrough_disks'] = not is_hw_raid
-# Optionally set a custom node name
-if 'name' in node:
-data['name'] = node['name']
-log_info("Node properties: {}".format(data))
-deploy.patch('/clusters/{}/nodes/{}'.format(cluster_id, node_id), data)
+    ''' Set all the needed properties on a node '''
+    log_debug_trace()
+
+    log_info("Adding node '{}' properties".format(node_id))
+
+    data = {k: node[k] for k in ['ip', 'serial_number', 'instance_type',
+                                 'is_storage_efficiency_enabled'] if k in node}
+    # Optional: Set a serial_number
+    if 'license' in node:
+        data['license'] = {'id': node['license']}
+
+    # Assign the host
+    host_id = deploy.find_resource('/hosts', 'name', node['host_name'])
+    if not host_id:
+        log_and_exit("Host names must match in the 'hosts' array, and the nodes.host_name property")
+
+    data['host'] = {'id': host_id}
+
+    # Set the correct raid_type
+    is_hw_raid = not node['storage'].get('disks')  # The presence of a list of disks indicates sw_raid
+    data['passthrough_disks'] = not is_hw_raid
+
+    # Optionally set a custom node name
+    if 'name' in node:
+        data['name'] = node['name']
+
+    log_info("Node properties: {}".format(data))
+    deploy.patch('/clusters/{}/nodes/{}'.format(cluster_id, node_id), data)
+
 
 def add_node_networks(deploy, cluster_id, node_id, node):
-''' Set the network information for a node '''
-log_debug_trace()
-log_info("Adding node '{}' network properties".format(node_id))
-num_nodes = deploy.get_num_records('/clusters/{}/nodes'.format(cluster_id))
-for network in node['networks']:
-# single node clusters do not use the 'internal' network
-if num_nodes == 1 and network['purpose'] == 'internal':
-continue
-# Deduce the network id given the purpose for each entry
-network_id = deploy.find_resource('/clusters/{}/nodes/{}/networks'.format(cluster_id,
-node_id),
-'purpose', network['purpose'])
-data = {"name": network['name']}
-if 'vlan' in network and network['vlan']:
-data['vlan_id'] = network['vlan']
-deploy.patch('/clusters/{}/nodes/{}/networks/{}'.format(cluster_id, node_id,
-network_id), data)
+    ''' Set the network information for a node '''
+    log_debug_trace()
+
+    log_info("Adding node '{}' network properties".format(node_id))
+
+    num_nodes = deploy.get_num_records('/clusters/{}/nodes'.format(cluster_id))
+
+    for network in node['networks']:
+
+        # single node clusters do not use the 'internal' network
+        if num_nodes == 1 and network['purpose'] == 'internal':
+            continue
+
+        # Deduce the network id given the purpose for each entry
+        network_id = deploy.find_resource('/clusters/{}/nodes/{}/networks'.format(cluster_id, node_id),
+                                          'purpose', network['purpose'])
+        data = {"name": network['name']}
+        if 'vlan' in network and network['vlan']:
+            data['vlan_id'] = network['vlan']
+
+        deploy.patch('/clusters/{}/nodes/{}/networks/{}'.format(cluster_id, node_id, network_id), data)
+
 
 def add_node_storage(deploy, cluster_id, node_id, node):
-''' Set all the storage information on a node '''
-log_debug_trace()
-log_info("Adding node '{}' storage properties".format(node_id))
-log_info("Node storage: {}".format(node['storage']['pools']))
-data = {'pool_array': node['storage']['pools']} # use all the json properties
-deploy.post(
-'/clusters/{}/nodes/{}/storage/pools'.format(cluster_id, node_id), data)
-if 'disks' in node['storage'] and node['storage']['disks']:
-data = {'disks': node['storage']['disks']}
-deploy.post(
-'/clusters/{}/nodes/{}/storage/disks'.format(cluster_id, node_id), data)
+    ''' Set all the storage information on a node '''
+    log_debug_trace()
+
+    log_info("Adding node '{}' storage properties".format(node_id))
+    log_info("Node storage: {}".format(node['storage']['pools']))
+
+    data = {'pool_array': node['storage']['pools']}  # use all the json properties
+    deploy.post(
+        '/clusters/{}/nodes/{}/storage/pools'.format(cluster_id, node_id), data)
+
+    if 'disks' in node['storage'] and node['storage']['disks']:
+        data = {'disks': node['storage']['disks']}
+        deploy.post(
+            '/clusters/{}/nodes/{}/storage/disks'.format(cluster_id, node_id), data)
+
 
 def create_cluster_config(deploy, config):
-''' Construct a cluster config in the deploy server using the input json data '''
-log_debug_trace()
-cluster_id = add_cluster_attributes(deploy, config)
-node_ids = get_node_ids(deploy, cluster_id)
-node_configs = config['nodes']
-for node_id, node_config in zip(node_ids, node_configs):
-add_node_attributes(deploy, cluster_id, node_id, node_config)
-add_node_networks(deploy, cluster_id, node_id, node_config)
-add_node_storage(deploy, cluster_id, node_id, node_config)
-return cluster_id
+    ''' Construct a cluster config in the deploy server using the input json data '''
+    log_debug_trace()
+
+    cluster_id = add_cluster_attributes(deploy, config)
+
+    node_ids = get_node_ids(deploy, cluster_id)
+    node_configs = config['nodes']
+
+    for node_id, node_config in zip(node_ids, node_configs):
+        add_node_attributes(deploy, cluster_id, node_id, node_config)
+        add_node_networks(deploy, cluster_id, node_id, node_config)
+        add_node_storage(deploy, cluster_id, node_id, node_config)
+
+    return cluster_id
+
 
 def deploy_cluster(deploy, cluster_id, config):
-''' Deploy the cluster config to create the ONTAP Select VMs. '''
-log_debug_trace()
-log_info("Deploying cluster: {}".format(cluster_id))
-data = {'ontap_credential': {'password': config['cluster']['ontap_admin_password']}}
-deploy.post('/clusters/{}/deploy?inhibit_rollback=true'.format(cluster_id),
-data, wait_for_job=True)
+    ''' Deploy the cluster config to create the ONTAP Select VMs. '''
+    log_debug_trace()
+    log_info("Deploying cluster: {}".format(cluster_id))
+
+    data = {'ontap_credential': {'password': config['cluster']['ontap_admin_password']}}
+    deploy.post('/clusters/{}/deploy?inhibit_rollback=true'.format(cluster_id),
+                data, wait_for_job=True)
+
 
 def log_debug_trace():
-stack = traceback.extract_stack()
-parent_function = stack[-2][2]
-logging.getLogger('deploy').debug('Calling %s()' % parent_function)
+    stack = traceback.extract_stack()
+    parent_function = stack[-2][2]
+    logging.getLogger('deploy').debug('Calling %s()' % parent_function)
+
 
 def log_info(msg):
-logging.getLogger('deploy').info(msg)
+    logging.getLogger('deploy').info(msg)
+
 
 def log_and_exit(msg):
-logging.getLogger('deploy').error(msg)
-exit(1)
+    logging.getLogger('deploy').error(msg)
+    exit(1)
+
 
 def configure_logging(verbose):
-FORMAT = '%(asctime)-15s:%(levelname)s:%(name)s: %(message)s'
-if verbose:
-logging.basicConfig(level=logging.DEBUG, format=FORMAT)
-else:
-logging.basicConfig(level=logging.INFO, format=FORMAT)
-logging.getLogger('requests.packages.urllib3.connectionpool').setLevel(
-logging.WARNING)
+    FORMAT = '%(asctime)-15s:%(levelname)s:%(name)s: %(message)s'
+    if verbose:
+        logging.basicConfig(level=logging.DEBUG, format=FORMAT)
+    else:
+        logging.basicConfig(level=logging.INFO, format=FORMAT)
+        logging.getLogger('requests.packages.urllib3.connectionpool').setLevel(
+            logging.WARNING)
+
 
 def main(args):
-configure_logging(args.verbose)
-deploy = DeployRequests(args.deploy, args.password)
-with open(args.config_file) as json_data:
-config = json.load(json_data)
-add_vcenter_credentials(deploy, config)
-add_standalone_host_credentials(deploy, config)
-register_unkown_hosts(deploy, config)
-cluster_id = create_cluster_config(deploy, config)
-deploy_cluster(deploy, cluster_id, config)
+    configure_logging(args.verbose)
+    deploy = DeployRequests(args.deploy, args.password)
+
+    with open(args.config_file) as json_data:
+        config = json.load(json_data)
+
+        add_vcenter_credentials(deploy, config)
+
+        add_standalone_host_credentials(deploy, config)
+
+        register_unkown_hosts(deploy, config)
+
+        cluster_id = create_cluster_config(deploy, config)
+
+        deploy_cluster(deploy, cluster_id, config)
+
+
 def parseArgs():
-parser = argparse.ArgumentParser(description='Uses the ONTAP Select Deploy API to
-construct and deploy a cluster.')
-parser.add_argument('-d', '--deploy', help='Hostname or IP address of Deploy server')
-parser.add_argument('-p', '--password', help='Admin password of Deploy server')
-parser.add_argument('-c', '--config_file', help='Filename of the cluster config')
-parser.add_argument('-v', '--verbose', help='Display extra debugging messages for seeing
-exact API calls and responses',
-action='store_true', default=False)
-return parser.parse_args()
+    parser = argparse.ArgumentParser(description='Uses the ONTAP Select Deploy API to construct and deploy a cluster.')
+    parser.add_argument('-d', '--deploy', help='Hostname or IP address of Deploy server')
+    parser.add_argument('-p', '--password', help='Admin password of Deploy server')
+    parser.add_argument('-c', '--config_file', help='Filename of the cluster config')
+    parser.add_argument('-v', '--verbose', help='Display extra debugging messages for seeing exact API calls and responses',
+                        action='store_true', default=False)
+    return parser.parse_args()
+
 if __name__ == '__main__':
-args = parseArgs()
-main(args)
+    args = parseArgs()
+    main(args)
+
 ---------------------------------------------------------------------
