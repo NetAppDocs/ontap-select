@@ -15,21 +15,7 @@ summary: xxx
 [.lead]
 You can use the following script to create a cluster based on parameters defined within the script and a JSON input file.
 
-// This is a comment
-
-////
-Line 1
-Line 2
-Line 3
-////
-
-'''
-
-[red]#Normal red text# and [big red yellow-background]*Big red with yellow*
-[underline]#Underlined text#
-[blue line-through]*bold blue and line-through*
-
-[source,python]
+[source,python,%autofit]
 ---------------------------------------------------------------------
 #!/usr/bin/env python
 ##--------------------------------------------------------------------
@@ -57,16 +43,16 @@ import logging
 from deploy_requests import DeployRequests
 
 def add_vcenter_credentials(deploy, config):
-""" Add credentials for the vcenter if present in the config """
-log_debug_trace()
+    """ Add credentials for the vcenter if present in the config """
+    log_debug_trace()
 
-vcenter = config.get('vcenter', None)
-if vcenter and not deploy.resource_exists('/security/credentials',
-'hostname', vcenter['hostname']):
-log_info("Registering vcenter {} credentials".format(vcenter['hostname']))
-data = {k: vcenter[k] for k in ['hostname', 'username', 'password']}
-data['type'] = "vcenter"
-deploy.post('/security/credentials', data)
+    vcenter = config.get('vcenter', None)
+    if vcenter and not deploy.resource_exists('/security/credentials',
+                                              'hostname', vcenter['hostname']):
+        log_info("Registering vcenter {} credentials".format(vcenter['hostname']))
+        data = {k: vcenter[k] for k in ['hostname', 'username', 'password']}
+        data['type'] = "vcenter"
+        deploy.post('/security/credentials', data)
 
 def add_standalone_host_credentials(deploy, config):
 """ Add credentials for standalone hosts if present in the config.
