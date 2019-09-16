@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 You can use the following script to create a cluster based on parameters defined within the script and a JSON input file.
 
-[source,python]
+[source,python,%autofill]
 ---------------------------------------------------------------------
 #!/usr/bin/env python
 ##--------------------------------------------------------------------
@@ -42,6 +42,7 @@ import json
 import logging
 
 from deploy_requests import DeployRequests
+
 
 def add_vcenter_credentials(deploy, config):
     """ Add credentials for the vcenter if present in the config """
