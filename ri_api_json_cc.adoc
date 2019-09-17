@@ -1,0 +1,75 @@
+---
+sidebar: sidebar
+permalink: ri_api_json_cc.html
+keywords: ontap select
+summary: xxx
+---
+
+= JSON for script to create a cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When creating or deleting an ONTAP Select cluster using the Python code samples, you must provide a JSON file as input to the script. You can copy and modify the appropriate JSON sample based on your deployment plans.
+
+== Single-node cluster on ESXi
+
+[source,json]
+---------------------------------------------------------------------
+{
+	"hosts": [{
+			"password": "netapp1!",
+			"name": "sti-rx2540-226",
+			"type": "ESX",
+			"username": "admin"
+		}
+	],
+	"cluster": {
+		"dns_info": {
+			"domains": ["ctl.gdl.englab.netapp.com", "gdl.englab.netapp.com", "gdl.eng.netapp.com", "rtp.netapp.com"],
+			"dns_ips": ["10.224.223.135", "10.224.223.136"]
+		},
+		"ontap_image_version": "devN_180729_0746-serialconsole",
+		"gateway": "1.128.102.1",
+		"ip": "1.128.103.115",
+		"name": "CBF4ED97",
+		"ntp_servers": ["10.60.248.183", "10.227.204.142"],
+		"ontap_admin_password": "netapp1!",
+		"netmask": "255.255.254.0"
+	},
+	"nodes": [{
+			"serial_number": "320000022",
+			"ip": "1.128.103.114",
+			"name": "sti-rx2540-226a",
+			"networks": [{
+					"name": "ontap-external",
+					"purpose": "mgmt",
+					"vlan": 3090
+				}, {
+					"name": "ontap-external",
+					"purpose": "data",
+					"vlan": null
+				}, {
+					"name": "ontap-internal",
+					"purpose": "internal",
+					"vlan": null
+				}
+			],
+			"host_name": "sti-rx2540-226",
+			"is_storage_efficiency_enabled": false,
+			"instance_type": "small",
+			"storage": {
+				"disk": [],
+				"pools": [{
+						"name": "ontap-select-storage-pool",
+						"capacity": 4802666790125
+					}
+				]
+			}
+		}
+	]
+}
+---------------------------------------------------------------------

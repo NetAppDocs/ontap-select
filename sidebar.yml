@@ -203,6 +203,8 @@ entries:
         entries:
           - title: Create a cluster
             url: /ri_api_script_cc.html
+          - title: JSON to create a cluster
+            url: /ri_api_json_cc.html
           - title: Add a node license
             url: /ri_api_script_anl.html
           - title: Resize cluster nodes
