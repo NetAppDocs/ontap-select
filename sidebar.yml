@@ -11,7 +11,7 @@ entries:
         url: /ct_use_cases.html
       - title: Terminology
         url: /ci_terminology.html
-  - title: Planning
+  - title: Plan
     entries:
       - title: Deployment workflow
         url: /ci_workflow_deploying.html
@@ -41,7 +41,7 @@ entries:
             url: /ri_plan_dep_vmware.html
       - title: Best practices
         url: /rt_plan_best_practices.html
-  - title: Licensing
+  - title: License
     entries:
       - title: Options
         entries:
@@ -73,7 +73,7 @@ entries:
             url: /ci_lic_acquire_cp.html
       - title: ONTAP features
         url: /ri_lic_ontap_features.html
-  - title: Installing
+  - title: Install
     entries:
       - title: Before you begin
         url: /ci_install_before.html
@@ -83,9 +83,11 @@ entries:
         url: /ti_install_deploy.html
       - title: Deploying a cluster
         url: /ti_deploy_cluster.html
+      - title: Deploying a cluster with the CLI
+        url: /ti_deploy_cluster_cli.html
       - title: Initial cluster state
         url: /ri_initial_state.html
-  - title: Administering
+  - title: Administer
     entries:
       - title: Before you begin
         url: /ci_adm_before.html
@@ -135,7 +137,7 @@ entries:
             url: /ct_perf_temporary.html
   - title: FAQ
     url: /rt_faq.html
-  - title: vCenter plug-in
+  - title: Integrate with vCenter
     entries:
       - title: Getting started
         entries:
@@ -159,9 +161,9 @@ entries:
         url: /ti_vpi_manually_remove.html
       - title: Deploying a cluster
         url: /ti_vpi_deploy_cluster.html
-      - title: Integration with vCenter
+      - title: vCenter integration
         url: /ci_vpi_vcenter_integration.html
-      - title: Administering
+      - title: Administer
         entries:
           - title: Diagnostics and support
             url: /ti_vpi_adm_support.html
@@ -173,7 +175,7 @@ entries:
             url: /ti_vpi_adm_licenses.html
       - title: Troubleshooting
         url: /ri_vpi_troubleshooting.html
-  - title: Automating with REST
+  - title: Automate with REST
     entries:
       - title: Understanding
         entries:
@@ -209,14 +211,12 @@ entries:
             url: /ri_api_script_anl.html
           - title: Resize cluster nodes
             url: /ri_api_script_resize.html
-  - title: Command line interface
+  - title: Administer with the CLI
     entries:
       - title: Before you begin
         url: /ci_cli_before.html
       - title: Signing in using SSH
         url: /ti_cli_signing_in.html
-      - title: Deploying a cluster
-        url: /ti_cli_deploy_cluster.html
       - title: Security
         url: /ti_cli_security.html
       - title: Network connectivity
