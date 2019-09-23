@@ -173,7 +173,7 @@ entries:
             url: /ti_vpi_adm_licenses.html
       - title: Troubleshooting
         url: /ri_vpi_troubleshooting.html
-  - title: Deploy REST API
+  - title: Automating with REST
     entries:
       - title: Understanding
         entries:
@@ -209,7 +209,7 @@ entries:
             url: /ri_api_script_anl.html
           - title: Resize cluster nodes
             url: /ri_api_script_resize.html
-  - title: Deploy CLI
+  - title: Command line interface
     entries:
       - title: Before you begin
         url: /ci_cli_before.html
