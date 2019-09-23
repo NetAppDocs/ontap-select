@@ -81,7 +81,7 @@ entries:
         url: /rt_chk_temporary.html
       - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
-      - title: Deploy a cluster
+      - title: Deploy a cluster with the web UI
         url: /ti_deploy_cluster.html
       - title: Deploy a cluster with the CLI
         url: /ti_deploy_cluster_cli.html
@@ -91,7 +91,7 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_adm_before.html
-      - title: Upgrading nodes
+      - title: Upgrade nodes
         url: /ci_adm_upgrading_nodes.html
       - title: Diagnostics and support
         url: /ti_adm_support.html

@@ -29,6 +29,10 @@ You can connect with other ONTAP Select users.
 
 * http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select,window=_blank]
 
+== Videos
+
+xxxx
+
 == Blogs
 
 There are several blog articles describing ONTAP Select.
