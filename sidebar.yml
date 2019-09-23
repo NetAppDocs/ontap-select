@@ -63,7 +63,7 @@ entries:
             url: /ci_lic_cp_compare_ct.html
           - title: Summary of benefits
             url: /ci_lic_cp_benefits.html
-      - title: Purchasing
+      - title: Purchase
         entries:
           - title: Licensing workflow
             url: /ci_lic_workflow.html
@@ -79,11 +79,11 @@ entries:
         url: /ci_install_before.html
       - title: Host configuration checklist
         url: /rt_chk_temporary.html
-      - title: Installing ONTAP Select Deploy
+      - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
-      - title: Deploying a cluster
+      - title: Deploy a cluster
         url: /ti_deploy_cluster.html
-      - title: Deploying a cluster with the CLI
+      - title: Deploy a cluster with the CLI
         url: /ti_deploy_cluster_cli.html
       - title: Initial cluster state
         url: /ri_initial_state.html
@@ -215,7 +215,7 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_cli_before.html
-      - title: Signing in using SSH
+      - title: Sign in using SSH
         url: /ti_cli_signing_in.html
       - title: Security
         url: /ti_cli_security.html
