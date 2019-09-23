@@ -22,8 +22,6 @@ NetApp(R) ONTAP(R) Select is a software-defined storage appliance you can deploy
 
 This is the primary site for the ONTAP Select 9.7 documentation and describes ONTAP Select running on VMware ESXi. You can find the documentation for the KVM version of the product and the release notes, as well as prior releases, at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library,window=_blank].
 
-== Connect with peers, get help, and find more information
+== Getting more information and connecting with peers.
 
-* https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select Resources,window=_blank]
-* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select,window=_blank]
 * link:ri_additional_info.html[Where to get help and find more information,window=_blank]
