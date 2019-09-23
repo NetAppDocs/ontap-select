@@ -13,4 +13,24 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can get help and find more information about ONTAP Select through various resources, including videos, community forums, and support.
+You can get help and find more information about ONTAP Select through various resources.
+
+== ONTAP Select product resources
+
+xxx
+
+* https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select resources,window=_blank]
+
+* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page,window=_blank]
+
+== Community
+
+You can connect with other ONTAP Select users.
+
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select,window=_blank]
+
+== Blogs
+
+There are several blog articles describing ONTAP Select.
+
+* https://blog.netapp.com/how-to-deploy-ontap-select-clusters-using-rest-web-services/[How to Deploy ONTAP Select Clusters Using REST Web Services,window=_blank]
