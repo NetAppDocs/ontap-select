@@ -13,4 +13,12 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+Use this as a short description.
+
+== H1 (separated by a horizontal line)
+
+Add text.
+
+=== H2
+
+More stuff.
