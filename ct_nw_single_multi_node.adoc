@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: ct_nw_single_multi_node.html
+keywords: ontap select
+summary: xxx
+---
+
+= Multi Node Network Configuration
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.1 (Network Configuration: Multi Node).
+
+= Multi Node Network Configuration
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.2 (Network Configuration: Single Node).

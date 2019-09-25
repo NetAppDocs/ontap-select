@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_stor_hwraid_local.html
+keywords: ontap select
+summary: xxx
+---
+
+= Hardware RAID Services for Local Attached Storage
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 2.2 (Hardware RAID Services for Local Attached Storage).

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_stor_concepts_chars.html
+keywords: ontap select
+summary: xxx
+---
+
+= Storage: General Concepts and Characteristics
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder for ICDGE Appendix A content.

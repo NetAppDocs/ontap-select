@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_perf_premium_ha_direct_ssd_94.html
+keywords: ontap select
+summary: xxx
+---
+
+= ONTAP Select Performance: Premium HA Direct-Attached SSD Storage - 9.4
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder for TR section 8.1

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_ha_other.html
+keywords: ontap select
+summary: xxx
+---
+
+= HA Additional Details
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder  TR partial section 2.5 (Disk Heartbeating, HA Mailbox, HA Heartbeating, HA Failover and Giveback ).

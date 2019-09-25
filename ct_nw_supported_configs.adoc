@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_nw_supported_configuraitons.html
+keywords: ontap select
+summary: xxx
+---
+
+= Supported Network Configurations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.4 (Supported Network Configurations).

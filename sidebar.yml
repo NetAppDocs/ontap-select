@@ -119,22 +119,52 @@ entries:
             url: /ti_adm_deploy_image_remove.html
   - title: Deep dive
     entries:
-      - title: HA architecure
-        entries:
-          - title: HA arch topic 1
-            url: /ct_ha_temporary.html
-      - title: Networking
-        entries:
-          - title: Network topic 1
-            url: /ct_net_temporary.html
       - title: Storage
         entries:
-          - title: Storage topic 1
-            url: /ct_stor_temporary.html
+          - title: General Concepts and Characteristics
+            url: /ct_stor_concepts_chars.html
+          - title: Hardware RAID Services for Local Attached Storage
+            url: /ct_stor_hwraid_local.html
+          - title: Software RAID Services for Local Attached Storage
+            url: /ct_stor_swraid_local.html
+          - title: VSAN and External Array Configurations
+            url: /ct_stor_vsan_external.html
+          - title: Increasing Storage Capacity
+            url: /ct_stor_capacity_inc.html
+      - title: Networking
+        entries:
+          - title: General Concepts and Characteristics
+            url: /ct_nw_concepts_chars.html
+          - title: Single and Multi Node Configuration
+            url: /ct_nw_single_multi_config.html
+          - title: Internal and External Networks
+            url: /ct_nw_internal_external.html
+          - title: Supported Configurations
+            url: /ct_nw_supported_configuraitons.html
+          - title: VMWare vSphere VSwitch Configuration
+            url: /ct_nw_vsphere_vswitch_config.html
+          - title: Physical Switch Configuration
+            url: /ct_nw_physical_switch_config.html
+          - title: Data and Management Separation
+            url: /ct_nw_data_mgmt_separation.html
+      - title: High Availability Architecture
+        entries:
+          - title: HA Configuration
+            url: /ct_ha_config.html
+          - title: Syncronous Replication and Mirrored Aggregates
+            url: /ct_ha_mirroring.html
+          - title: Other High Availability Functions
+            url: /ct_ha_other.html
       - title: Performance
         entries:
-          - title: Performance topic 1
-            url: /ct_perf_temporary.html
+          - title: General Considerations
+            url: /ct_perf_general.html
+          - title: 9.4 Premium HA Direct Attached SSD Storage
+            url: /ct_perf_premium_ha_direct_ssd_94.html
+          - title: 9.5 Premium HA Direct Attached SSD Storage
+            url: /ct_perf_premium_ha_direct_ssd_95.html
+          - title: 9.6 Premium HA Direct Attached SSD Storage
+            url: /ct_perf_premium_ha_direct_ssd_96.html
   - title: FAQ
     url: /rt_faq.html
   - title: Integrate with vCenter

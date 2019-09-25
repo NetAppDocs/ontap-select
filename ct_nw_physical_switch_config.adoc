@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_nw_physical_switch_config.html
+keywords: ontap select
+summary: xxx
+---
+
+= Physical Switch Configuration
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.6 (Physical Switch Configuration).
