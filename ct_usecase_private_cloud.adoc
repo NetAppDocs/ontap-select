@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_usecase_private_cloud.html
+keywords: ontap select
+summary: xxx
+---
+
+= Private Cloud and Data Center
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This is a placeholder for TR section 5.2 .

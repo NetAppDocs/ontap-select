@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ct_use_cases.html
+permalink: ct_usecase_mc_sds.html
 keywords: ontap select
 summary: xxx
 ---
 
-= Business use cases
+= MetroCluster Software Defined Storage
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,4 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for the content that Veena will provided.
+This is a placeholder for TR section 5.3 .

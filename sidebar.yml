@@ -7,8 +7,16 @@ entries:
         url: /ci_overview.html
       - title: ONTAP Select Deploy
         url: /ci_ots_deploy.html
-      - title: Business use cases
-        url: /ct_use_cases.html
+      - title: Business Use Cases
+        entries:
+          - title: An Overview of Usecases and Scenarios
+            url: /ct_usecase_overview.html
+          - title: Remote and Branch Office
+            url: /ct_usecase_robo.html
+          - title: Private Cloud and Data Center
+            url: /ct_usecase_private_cloud.html
+          - title: MetroCluster SDS
+            url: /ct_usecase_mc_sds.html
       - title: Terminology
         url: /ci_terminology.html
   - title: Plan
@@ -77,8 +85,14 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_install_before.html
-      - title: Host configuration checklist
-        url: /rt_chk_temporary.html
+      - title: Pre-Installation checklist
+        entries:
+          - title: Host Preparation checklist
+            url: /rt_chk_host_prep.html
+          - title: Deploy Utility Required Information
+            url: /rt_chk_deploy_req_info.html
+          - title: ONTAP Select Required Information
+            url: /rt_chk_select_req_info.html
       - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
       - title: Deploy a cluster with the web UI

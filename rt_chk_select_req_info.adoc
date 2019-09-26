@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: rt_chk_select_req_info.html
+keywords: ontap select
+summary: xxx
+---
+
+= Required Information For ONTAP Select Installation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder for required information for ONTAP Select installation from ICDGE.
+
+ONTAP Select planning chapter::
+* _Required information for a VMware deployment_ section

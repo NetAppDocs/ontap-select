@@ -13,4 +13,5 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for the content that Veena will provided.
+Placeholder for all the "Best Practice" tabulations in the TR and ICDGE.
+These should be categorized as: General, Storage, HA & Networking.  We can change the categorization later if needed.
