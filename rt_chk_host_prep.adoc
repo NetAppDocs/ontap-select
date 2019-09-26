@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: rt_chk_host_prep.html
+keywords: ontap select
+summary: xxx
+---
+
+= Host configuration and Preparation Checklist
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder for Host Configuration and Preparation checklist chapter from ICDGE.
+
+Host configuration and preparation checklist chapter::
+The entire chapter. Note that the network diagrams need to be reviewed and updated (such as, to align with new four-NIC best practice).

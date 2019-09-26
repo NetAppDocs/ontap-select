@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_usecase_overview.html
+keywords: ontap select
+summary: xxx
+---
+
+= Overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This is a placeholder for section "Business needs and possible usage scenarios" from ICDGE.
