@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_stor_vsan_external.html
+keywords: ontap select
+summary: xxx
+---
+
+= VSAN and External Array Configurations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 2.3 (VSAN and External Array Configurations).

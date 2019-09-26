@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_stor_swraid_local.html
+keywords: ontap select
+summary: xxx
+---
+
+= Software RAID Services for Local Attached Storage
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 2.4 (Software RAID Services for Local Attached Storage).

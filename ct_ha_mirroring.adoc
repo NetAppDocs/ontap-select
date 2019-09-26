@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_ha_mirroring.html
+keywords: ontap select
+summary: xxx
+---
+
+= HA RSM & Mirrored Aggregates
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder  TR partial section 2.5 (HA Syncronous Repliation, Mirrored Aggregates, Write Path).

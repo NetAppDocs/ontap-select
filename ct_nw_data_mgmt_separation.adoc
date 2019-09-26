@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_nw_data_mgmt_separation.html
+keywords: ontap select
+summary: xxx
+---
+
+= Data and Management Traffic Separation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.6 (Data and Management Traffic Separation).

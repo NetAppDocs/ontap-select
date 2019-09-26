@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_perf_general.html
+keywords: ontap select
+summary: xxx
+---
+
+= Performance General Considerations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 8 top level content before subsections begin.  (Perhaps we can include performance best practices here too?? Let's keep this thought here until we decide one way or another.).

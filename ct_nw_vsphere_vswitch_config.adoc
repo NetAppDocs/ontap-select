@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_nw_vswitch_config.html
+keywords: ontap select
+summary: xxx
+---
+
+= VMWare vSphere vswitch Configuration
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.5 (VMWare vSphere vswitch Configuration).

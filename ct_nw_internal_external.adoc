@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_nw_internal_external.html
+keywords: ontap select
+summary: xxx
+---
+
+= ONTAP Select Internal and External Network
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 4.3 (Networking: Internal and External).

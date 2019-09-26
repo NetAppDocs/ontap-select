@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_ha_config.html
+keywords: ontap select
+summary: xxx
+---
+
+= High Availability Configurations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder  TR partial section 2.5 (HA Architecture top level content, Two node HA vs multi node HA, Two node HA vs Two Node MC SDS).

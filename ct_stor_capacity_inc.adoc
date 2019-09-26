@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ct_stor_capacity_inc.html
+keywords: ontap select
+summary: xxx
+---
+
+= Increasing Storage Capacity
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Placeholder TR section 7 partial (7.1 & 7.2  leave out any task oriented and only include conceptual).
