@@ -225,7 +225,7 @@ entries:
             url: /ci_api_rest.html
           - title: Access the Deploy API
             url: /ci_api_how_access.html
-      - title: Accessing with a browser
+      - title: Access with a browser
         entries:
           - title: Before you begin
             url: /ci_api_before_browser.html
