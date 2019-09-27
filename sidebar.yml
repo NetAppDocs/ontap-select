@@ -215,21 +215,21 @@ entries:
             url: /ti_vpi_adm_clusters.html
           - title: Licenses
             url: /ti_vpi_adm_licenses.html
-      - title: Troubleshooting
+      - title: Troubleshoot
         url: /ri_vpi_troubleshooting.html
   - title: Automate with REST
     entries:
-      - title: Understanding
+      - title: Concepts
         entries:
           - title: REST web services
             url: /ci_api_rest.html
-          - title: Accessing the Deploy API
+          - title: Access the Deploy API
             url: /ci_api_how_access.html
       - title: Accessing with a browser
         entries:
           - title: Before you begin
             url: /ci_api_before_browser.html
-          - title: Accessing the doc page
+          - title: Access the doc page
             url: /ti_api_access_doc_page.html
       - title: Workflow processes
         entries:
@@ -237,7 +237,7 @@ entries:
             url: /ci_api_before_workflows.html
           - title: Workflow 1 Creating a cluster
             url: /ri_api_workflow01.html
-      - title: Accessing with Python
+      - title: Access with Python
         entries:
           - title: Before you begin
             url: /ci_api_before_python.html
