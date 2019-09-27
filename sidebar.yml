@@ -95,10 +95,8 @@ entries:
             url: /rt_chk_select_req_info.html
       - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
-      - title: Deploy a cluster with the web UI
+      - title: Deploy a cluster
         url: /ti_deploy_cluster.html
-      - title: Deploy a cluster with the CLI
-        url: /ti_deploy_cluster_cli.html
       - title: Initial cluster state
         url: /ri_initial_state.html
   - title: Administer
@@ -191,19 +189,19 @@ entries:
             url: /ci_vpi_architecture.html
           - title: Planning
             url: /ci_vpi_planning.html
-      - title: Managing the plug-in
+      - title: Manage the plug-in
         entries:
           - title: Before you begin
             url: /ci_vpi_manage_before.html
-          - title: Installing
+          - title: Install
             url: /ti_vpi_install.html
-          - title: Accessing
+          - title: Access
             url: /ti_vpi_access.html
-          - title: Upgrading and removing
+          - title: Upgrade and remove
             url: /ti_vpi_upgrade.html
-      - title: Manually removing the plug-in
+      - title: Manually remove the plug-in
         url: /ti_vpi_manually_remove.html
-      - title: Deploying a cluster
+      - title: Deploy a cluster
         url: /ti_vpi_deploy_cluster.html
       - title: vCenter integration
         url: /ci_vpi_vcenter_integration.html
@@ -217,21 +215,21 @@ entries:
             url: /ti_vpi_adm_clusters.html
           - title: Licenses
             url: /ti_vpi_adm_licenses.html
-      - title: Troubleshooting
+      - title: Troubleshoot
         url: /ri_vpi_troubleshooting.html
   - title: Automate with REST
     entries:
-      - title: Understanding
+      - title: Concepts
         entries:
           - title: REST web services
             url: /ci_api_rest.html
-          - title: Accessing the Deploy API
+          - title: Access the Deploy API
             url: /ci_api_how_access.html
-      - title: Accessing with a browser
+      - title: Access with a browser
         entries:
           - title: Before you begin
             url: /ci_api_before_browser.html
-          - title: Accessing the doc page
+          - title: Access the doc page
             url: /ti_api_access_doc_page.html
       - title: Workflow processes
         entries:
@@ -239,7 +237,7 @@ entries:
             url: /ci_api_before_workflows.html
           - title: Workflow 1 Creating a cluster
             url: /ri_api_workflow01.html
-      - title: Accessing with Python
+      - title: Access with Python
         entries:
           - title: Before you begin
             url: /ci_api_before_python.html
@@ -255,12 +253,14 @@ entries:
             url: /ri_api_script_anl.html
           - title: Resize cluster nodes
             url: /ri_api_script_resize.html
-  - title: Administer with the CLI
+  - title: Command line interface
     entries:
       - title: Before you begin
         url: /ci_cli_before.html
       - title: Sign in using SSH
         url: /ti_cli_signing_in.html
+      - title: Deploy a cluster
+        url: /ti_cli_deploy_cluster.html
       - title: Security
         url: /ti_cli_security.html
       - title: Network connectivity
