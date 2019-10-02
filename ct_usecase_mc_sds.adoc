@@ -13,4 +13,25 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for TR section 5.3 .
+Starting with ONTAP Select 9.3P2 and ONTAP Deploy 2.7, a two-node cluster can be stretched between two locations if certain minimum requirements are met.
+
+This architecture fits neatly in between hardware-based MetroCluster and single data-center clusters (hardware-defined or software-defined). The requirements for the ONTAP Select MetroCluster SDS highlight the general flexibility of software-defined storage solutions as well as the differences between it and the hardware-based MetroCluster SDS. No proprietary hardware is required.
+
+Unlike MetroCluster, ONTAP Select uses existing network infrastructure and supports a network latency of up to 5ms RTT with a maximum jitter of up to 5ms, for a total of 10ms maximum latency. A maximum distance of 10km is also a requirement, although the latency profile is more important. Separation requirements in the market space have more to do with physical separation than the actual distance. In some instances, this can mean different buildings. In other instances, it can mean different rooms in the same building. Regardless of the actual physical placement, what defines a two-node cluster as a MetroCluster SDS is that each node uses a separate uplink switch.
+As part of the two-node HA configuration, a mediator is required to properly identify the active node during a failover and avoid any split-brain scenario in which both nodes remain independently active during a network partition. This operation is identical to the regular two-node HA configuration previously available. For proper protection and failover during site failure, the mediator should be in a different site from the two HA nodes. The maximum latency between the mediator and each ONTAP Select node cannot exceed 125ms.
+
+With this solution, enterprise customers can confidently take advantage of the flexibility of a software-defined storage solution on commodity hardware. They can deploy with peace of mind knowing their data is protected with an enterprise-grade, 0 RPO solution.
+
+ONTAP Select MetroCluster SDS provides the following benefits:
+
+* MetroCluster SDS provides another dimension (data center to data center) of protection for ONTAP Select. Customers can now take advantage of this extra level of protection in addition to leveraging all the benefits of software-defined storage and ONTAP.
+
+* MetroCluster SDS provides business-critical data protection with a 0 RPO and automatic failover. Both the data storage and the application access points are automatically switched over to the surviving data center or node with zero intervention from IT.
+
+* MetroCluster SDS is cost effective. It takes advantage of the existing networking infrastructure to enable stretched resiliency between the HA pair, and no additional hardware is required. It also provides active/active data access and data center redundancy in the same cluster.
+
+*MetroCluster SDS*
+
+image:MCSDS_01.jpg[Private cloud built on DAS]
+
+For more best practices and other requirements, see the sections “Two-Node HA Versus Two-Node Stretched HA (MetroCluster SDS)” and “Two-Node Stretched HA (MetroCluster SDS) Best Practices.”

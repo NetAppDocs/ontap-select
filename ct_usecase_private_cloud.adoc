@@ -13,4 +13,12 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a placeholder for TR section 5.2 .
+Another common use case for ONTAP Select is providing storage services for private clouds built on commodity servers.
+
+The following figure shows how a storage farm provides compute and locally attached storage to the ONTAP Select VM, which provides storage services upstream to an application stack. The entire workflow, from the provisioning of SVMs to the deployment and configuration of application VMs, is automated through a private cloud orchestration framework.
+
+This is a service-oriented private cloud model. Using the HA version of ONTAP Select creates the same ONTAP experience you would expect on higher-cost FAS arrays. Storage server resources are consumed exclusively by the ONTAP Select VM, with application VMs hosted on separate physical infrastructure.
+
+*Private cloud built on DAS*
+
+image:PrivateCloud_01.jpg[Private cloud built on DAS]
