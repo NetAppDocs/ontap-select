@@ -26,7 +26,7 @@ The installation process consists of the following steps, each described as a se
 
 NOTE: The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must first add the ONTAP Select image to your Deploy instance. See the administration task _Adding an ONTAP Select image to the Deploy utility_ for more information.
 
-.Related links
+.Related information
 
 * link:ti_adm_deploy.html[Administering ONTAP Select Deploy]
 
