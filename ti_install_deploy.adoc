@@ -15,8 +15,6 @@ summary: xxx
 [.lead]
 The ONTAP Select Deploy administration utility is packaged as a virtual machine based on the Open Virtualization Format (OVF) standard; the single compressed file has the .ova suffix. You must download the file and then install and configure the Deploy virtual machine on ESXi.
 
-*Test*
-
 == Before you begin
 
 The installation process consists of the following steps, each described as a separate task below:

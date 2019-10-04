@@ -15,8 +15,6 @@ summary: xxx
 [.lead]
 There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
 
-*Test*
-
 == Cluster size and related considerations
 
 There are several planning issues related to the cluster size that you should consider.
