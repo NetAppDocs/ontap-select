@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several best practices that you should consider as part of planning an ONTAP Select deployment.
+There are best practices that you should consider as part of planning an ONTAP Select deployment.
 
 == General
 Consider the following general best practices:
@@ -103,7 +103,7 @@ ONTAP Select 9.3 supports a single 10Gb link for two-node clusters; however, it 
 
 ** When using a distributed vSwitch with LACP, NetApp recommends that you configure the load-balancing policy to Route Based on IP Hash on the port group and Source and Destination IP Address and TCP/UDP Port and VLAN on the LAG.
 
-=== Two-Node Stretched HA (MetroCluster SDS) Best Practices
+=== Two-node stretched HA (MetroCluster SDS) best practices
 
 Before you create a MetroCluster SDS, use the ONTAP Deploy connectivity checker functionality to make sure that the network latency between the two data centers falls within the acceptable range.
 
@@ -144,7 +144,7 @@ VMware recommends that STP be set to Portfast on the switch ports connected to t
 * Route
 To optimize load balancing across both the internal and the external ONTAP Select networks, use the Route Based on Originating Virtual Port load-balancing policy.
 
-=== Network configuration best Practices
+=== Network configuration best practices
 
 For both standard and distributed vSwitches, consider the best practices listed in the following table:
 
@@ -160,10 +160,10 @@ For both standard and distributed vSwitches, consider the best practices listed 
 * Standard or distributed vSwitch
 * 4 x 10Gb ports or
 * 4 x 1Gb ports
-* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.footnote:1[Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.]
+* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.^1^
 |
 * Do not use any LACP channels.
-* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.footnote:1[Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.]
+* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.^1^
 |
 * ONTAP Deploy 2.12 supports configurations with up to four port groups, two for the internal network and two for the external network. For best performance, all four port groups should be used. The procedure to switch from a single port group per network to two port groups per network is detailed in Section 4.5.
 |
@@ -173,16 +173,18 @@ For both standard and distributed vSwitches, consider the best practices listed 
 |
 * Standard or distributed vSwitch
 * 2 x 10Gb ports
-* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.footnote:1[Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.]
+* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.^1^
 |
 * Do not use any LACP channels.
-* The internal network must use a port group with 1 x 10Gb active and 1 x 10Gb standby.footnote:1[Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.]
+* The internal network must use a port group with 1 x 10Gb active and 1 x 10Gb standby.^1^
 * The external network uses a separate port group. The active port is the standby port for the internal port group. The standby port is the active port for the internal network port group.
-* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.footnote:1[Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.]
+* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.^1^
 |
 * The load-balancing policy at the port group level is Route Based on Originating Virtual Port ID.
 * VMware recommends that the STP be set to Portfast on the switch ports connected to the ESXi hosts.
 |===
+
+^1^ Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.
 
 *Network minimum and recommended configurations*
 

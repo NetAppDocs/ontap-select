@@ -13,4 +13,10 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Placeholder TR section 4.4 (Supported Network Configurations).
+Server vendors understand that customers have different needs and choice is critical.
+
+As a result, when purchasing a physical server, there are numerous options available when making network connectivity decisions. Most commodity systems ship with various NIC choices that provide single-port and multiport options with varying permutations of 1Gb and 10Gb ports. Care should be taken when selecting server NICs because the choices provided by server vendors can have a significant impact on the overall performance of the ONTAP Select cluster.
+
+Link aggregation is a common network construct used to aggregate bandwidth across multiple physical adapters. LACP is a vendor-neutral standard that provides an open protocol for network endpoints that bundle groupings of physical network ports into a single logical channel. ONTAP Select can work with port groups that are configured as a Link Aggregation Group (LAG). However, starting with ONTAP Select 9.6 and ONTAP Deploy 2.12, NetApp recommends using the individual physical ports as simple uplink (trunk) ports, avoiding the LAG configuration.
+
+Because the performance of the ONTAP Select VM is tied directly to the characteristics of the underlying hardware, increasing the throughput to the VM by selecting 10Gb-capable NICs results in a higher-performing cluster and a better overall user experience. When cost or form factor prevents the user from designing a system with four 10Gb NICs, two 10Gb NICs can be used. There are a number of other configurations that are also supported. For two-node clusters, 4 x 1Gb ports or 1 x 10Gb ports are supported. For single node clusters, 2 x 1Gb ports are supported.
