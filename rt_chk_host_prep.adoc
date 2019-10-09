@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Host configuration and Preparation Checklist
+= Host Configuration and Preparation Checklist
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,82 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Placeholder for Host Configuration and Preparation checklist chapter from ICDGE.
+You must prepare each of the hypervisor hosts where an ONTAP Select node is deployed.
 
-Host configuration and preparation checklist chapter::
-The entire chapter. Note that the network diagrams need to be reviewed and updated (such as, to align with new four-NIC best practice).
+As part of preparing the hosts, you should carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
+
+*Attention:* The ONTAP Select Deploy administration utility does not perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster. For more information about the ONTAP Select hypervisor environment, see _Understanding the ONTAP Select storage environment_ and _Understanding the ONTAP Select networking environment_. You should also review the _ONTAP Select Product Architecture and Best Practices Technical Report_ for more information.
+
+== General hypervisor preparation
+
+You must prepare the hypervisor hosts.
+
+Each host must be configured with the following:
+
+* A pre-installed and supported hypervisor
+* A VMware vSphere license
+
+Also, the same vCenter server must be able to manage all the hosts where an ONTAP Select node is deployed within the cluster.
+
+In addition, you should make sure that the firewall ports are configured to allow access to vSphere. These ports must be open to support serial port connectivity to the ONTAP Select virtual machines.
+By default, VMware allows access on the following ports:
+
+* Port 23 and ports 1024 – 65535 (inbound traffic)
+* Ports 0 – 65535 (outbound traffic)
+
+NetApp recommends that the following firewall ports be opened to allow access to vSphere:
+
+* Ports 7200 – 7400 (both inbound and outbound traffic)
+
+== Preparation of an ONTAP Select cluster network
+
+You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and HA capability.
+
+=== Illustration of the ONTAP Select networks and nodes
+
+The figures below illustrate the networks used with a single-node cluster and four-node cluster.
+
+==== Single-node cluster showing one network
+
+The following figure illustrates a single-node cluster. The external network carries client,
+management, and cross-cluster replication traffic (SnapMirror/SnapVault).
+
+image:CHK_01.jpg[Single-node cluster showing one network]
+
+==== Four-node cluster showing two networks
+
+The following figure illustrates a four-node cluster. The internal network enables communication among the nodes in support of the ONTAP cluster network services. The external network carries client, management, and cross-cluster replication traffic (SnapMirror/SnapVault).
+
+image:CHK_02.jpg[Four-node cluster showing two networks]
+
+==== Single node within a four-node cluster
+
+The following figure illustrates the typical network configuration for a single ONTAP Select virtual
+machine within a four-node cluster. There are two separate networks: ONTAP-internal and ONTAP-external.
+
+image:CHK_03.jpg[Single node within a four-node cluster]
+
+=== Configuration of the vSwitch on a hypervisor host
+
+The vSwitch is the core hypervisor component used to support the connectivity for the internal and external networks. There are several things you should consider as part of configuring each hypervisor vSwitch.
+
+==== vSwitch configuration for a host with two physical ports (2x10Gb)
+
+When each host includes two 10Gb ports, you should configure the vSwitch as follows:
+
+* Configure a vSwitch and assign both the ports to the vSwitch. Create a NIC team using the two ports.
+* Set the load balancing policy to “Route based on the originating virtual port ID”
+* Mark both adapters as “active”
+* Set the “Failback” setting to “Yes”
+image:CHK_04.jpg[vSwitch properties)]
+* Configure the vSwitch to use jumbo frames (9000 MTU).
+* Configure a port group on the vSwitch for the internal traffic (ONTAP-internal):
+** The port group is assigned to ONTAP Select virtual network adapters e0c-e0g used for the cluster, HA interconnect, and mirroring traffic.
+** The port group should be on a non-routable VLAN because this network is expected to be private. You should add the appropriate VLAN tag to the port group to take this into account.
+** The load balancing, failback and failover order settings of the port group should be the same as the vSwitch.
+* Configure a port group on the vSwitch for the external traffic (ONTAP-external):
+** The port group is assigned to ONTAP Select virtual network adapters e0a-e0c used for data and management traffic.
+** The port group can be on a routable VLAN. Also, depending on the network environment, you should add an appropriate VLAN tag or configure the port group for VLAN trunking.
+** The load balancing, failback and failover order settings of the port group should be same as vSwitch.
+
+The above vSwitch configuration is for a host with 2x10Gb ports in a typical network environment. If your host or network configuration differs, and for more information on the recommended best practices related to network configuration, you should review the _ONTAP Select Product Architecture and Best Practices Technical Report_.
