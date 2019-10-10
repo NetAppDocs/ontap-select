@@ -13,4 +13,15 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+Hello!
+
+The next line is a comment:
+// Comment one
+
+The next is a block comment:
+////
+Line 1
+Line 2
+Line 3
+////
+OK!
