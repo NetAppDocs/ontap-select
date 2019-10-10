@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= ONTAP Select Performance: Premium HA Direct-Attached SSD Storage - 9.4
+= ONTAP Select performance: Premium HA direct-attached SSD storage - 9.4
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,95 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Placeholder for TR section 8.1
+Performance information for the reference platform.
+
+== Reference Platform
+
+ONTAP Select 9.4 (Premium) hardware (per node):
+
+* Cisco UCS C240 M4S2:
+** Intel Xeon CPU E5-2697 at 2.60GHz
+** 2 x sockets; 14 x CPUs per socket
+** 56 x logical CPUs (HT enabled)
+** 256GB RAM
+** VMware ESXi 6.5
+** Drives per host: 24 X371A NetApp 960GB SSD
+
+Client hardware:
+
+* 4 x NFSv3 IBM 3550m4 clients
+
+Configuration information:
+
+* 1,500 MTU for data path between clients and Select cluster
+* No storage efficiency features in use (compression, deduplication, Snapshot copies, SnapMirror, and so on)
+
+The following table lists the throughput measured against read/write workloads on an HA pair of ONTAP Select Premium nodes. Performance measurements were taken using the SIO load-generating tool.
+
+*Performance results for a single node (part of a four-node medium instance) ONTAP Select 9.4 cluster on DAS (SSD)*
+
+[cols=6*,options="header"]
+|===
+| Description | Sequential Read 64KiB | Sequential Write 64KiB | Random Read 8KiB | Random Write 8KiB | Random WR/ RD (50/50) 8KiB
+| ONTAP 9.4 Select Medium instance with DAS (SSD) | 1045MBps 16,712 IOPS | 251MBps 4016 IOPS | 492MBps 62,912 IOPS | 141MBps 18,048 IOPS | 218MBps 27,840 IOPS
+|===
+
+== 64K Sequential Read
+
+Details:
+
+* SIO direct I/O enabled
+* 2 x data NIC
+* 1 x data aggregate (2TB)
+* 64 volumes; 64 SIO procs/threads
+* 32 volumes per node (64 total)
+* 1 x SIO procs per volume; 1 x SIO thread per file
+* 1 x files per volume; files are 12000MB each
+
+== 64K Sequential Write
+
+Details:
+
+* SIO direct I/O enabled
+* 2 x data NIC
+* 1 x data aggregate (2TB):
+* 64 volumes; 128 SIO procs/threads
+* 32 volumes per node (64 total)
+* 2 x SIO procs per volume; 1 x SIO thread per file
+* 2 x files per volume; files are 30720MB each
+
+== 8K Random Read
+
+Details:
+
+* SIO direct I/O enabled
+* 2 x data NIC
+* 1 x data aggregate (2TB):
+* 64 volumes; 64 SIO procs/threads
+* 32 volumes per node (64 total)
+* 1 x SIO procs per volume; 8 x SIO thread per file
+* 1 x files per volume; files are 12228MB each
+
+== 8K Random Write
+
+Details:
+
+* SIO direct I/O enabled
+* 2 x data NIC
+* 1 x data aggregate (2TB)
+* 64 volumes; 64 SIO procs/threads
+* 32 volumes per node (64 total)
+* 1 x SIO procs per volume; 8 x SIO thread per file
+* 1 x files per volume; files are 8192MB each
+
+== 8K Random 50% Write 50% Read
+
+Details:
+
+* SIO direct I/O enabled
+* 2 x data NIC
+* 1 x data aggregate (2TB)
+* 64 volumes; 64 SIO procs/threads
+* 32 volumes per node (64 total)
+* 1 x SIO procs per volume; 20 x SIO thread per file
+* 1 x files per volume; files are 12228MB each

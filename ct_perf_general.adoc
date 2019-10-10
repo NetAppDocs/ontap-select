@@ -5,12 +5,24 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Performance General Considerations
+= Performance general considerations
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
 
+// Perhaps we can include performance best practices here too?? Let's keep this thought here until we decide one way or another.
+
 [.lead]
-Placeholder TR section 8 top level content before subsections begin.  (Perhaps we can include performance best practices here too?? Let's keep this thought here until we decide one way or another.).
+The performance numbers described in this section are intended as a rough estimate of the performance of an ONTAP Select cluster and are not a performance guarantee.
+
+The performance of an ONTAP Select cluster can vary considerably due to the characteristics of the underlying hardware and configuration. As a matter of fact, the specific hardware configuration is the biggest factor in the performance of a particular ONTAP Select instance. Here are some of the factors that affect the performance of a specific ONTAP Select instance:
+
+* *Core frequency*. In general, a higher frequency is preferable.
+* *Single socket versus multisocket*. ONTAP Select does not use multisocket features, but the hypervisor overhead for supporting multisocket configurations accounts for some amount of deviation in total performance.
+* *RAID card configuration and associated hypervisor driver*. The default driver provided by the hypervisor might need to be replaced by the hardware vendor driver.
+* *Drive type and number of drives in the RAID group(s)*.
+* *Hypervisor version and patch level*.
+
+This document includes performance comparisons only when the testing was performed on the exact same test bed to highlight the impact of a specific feature. In general, we document the hardware environment and run the highest performance configuration possible on that platform.
