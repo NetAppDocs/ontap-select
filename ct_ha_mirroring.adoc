@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= HA RSM & Mirrored Aggregates
+= HA RSM and mirrored aggregates
 :hardbreaks:
 :nofooter:
 :icons: font

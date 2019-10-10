@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Physical Switch Configuration
+= Physical switch configuration
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -23,7 +23,7 @@ Physical switch ports should be configured as trunkports. ONTAP Select external 
 
 ONTAP Select internal network traffic occurs using virtual interfaces defined with link local IP addresses. Because these IP addresses are nonroutable, internal traffic between cluster nodes must flow across a single layer-2 network. Route hops between ONTAP Select cluster nodes are unsupported. Best Practice
 
-== Shared Physical Switch
+== Shared physical switch
 
 The following figure depicts a possible switch configuration used by one node in a multinode ONTAP Select cluster. In this example, the physical NICs used by the vSwitches hosting both the internal and external network port groups are cabled to the same upstream switch. Switch traffic is kept isolated using broadcast domains contained within separate VLANs.
 
@@ -31,14 +31,14 @@ The following figure depicts a possible switch configuration used by one node in
 
 *Network configuration using shared physical switch*
 
-image:DDN_06.png[Network configuration using shared physical switch]
+image:DDN_06.jpg[Network configuration using shared physical switch]
 
 *Note:* In this configuration, the shared switch becomes a single point of failure. If possible, multiple switches should be used to prevent a physical hardware failure from causing a cluster network outage.
 
-== Multiple Physical Switches
+== Multiple physical switches
 
 When redundancy is needed, multiple physical network switches should be used. The following figure shows a recommended configuration used by one node in a multinode ONTAP Select cluster. NICs from both the internal and external port groups are cabled into different physical switches, protecting the user from a single hardware-switch failure. A virtual port channel is configured between switches to prevent spanning tree issues.
 
 *Network configuration using multiple physical switches*
 
-image:DDN_07.png[Network configuration using multiple physical switches]
+image:DDN_07.jpg[Network configuration using multiple physical switches]

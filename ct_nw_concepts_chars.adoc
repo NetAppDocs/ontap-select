@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Storage: General Concepts and Characteristics
+= Storage: General concepts and characteristics
 :hardbreaks:
 :nofooter:
 :icons: font

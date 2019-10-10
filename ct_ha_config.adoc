@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= High Availability Configurations
+= High availability configurations
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -43,7 +43,7 @@ image:DDHA_02.jpg[Four-node ONTAP Select cluster using local-attached storage]
 * The four-node ONTAP Select cluster is composed of two HA pairs. Six-node and eight-node clusters are composed of three and four HA pairs, respectively. Within each HA pair, data aggregates on each cluster node are synchronously mirrored, and, in the event of a failover, there is no loss of data.
 * Only one ONTAP Select instance can be present on a physical server when using DAS storage. ONTAP Select requires unshared access to the local RAID controller of the system and is designed to manage the locally attached disks, which would be impossible without physical connectivity to the storage.
 
-== Two-Node HA versus multi-node HA
+== Two-node HA versus multi-node HA
 
 Unlike FAS arrays, ONTAP Select nodes in an HA pair communicate exclusively over the IP network. That means that the IP network is a single point of failure (SPOF), and protecting against network partitions and split-brain scenarios becomes an important aspect of the design. The multinode cluster can sustain single-node failures because the cluster quorum can be established by the three or more surviving nodes. The two-node cluster relies on the mediator service hosted by the ONTAP Deploy VM to achieve the same result. The minimum version of the ONTAP Deploy VM required to support a two-node cluster with the mediator service is 2.4.
 
@@ -57,7 +57,7 @@ An administrative action is required if the original mediator location must be c
 
 For a complete list of steps required to configure a new mediator location, see the ONTAP Select 9 Installation and Cluster Deployment Guide.
 
-== Two-Node HA Versus Two-Node Stretched HA (MetroCluster SDS)
+== Two-node HA versus two-node stretched HA (MetroCluster SDS)
 
 Starting with ONTAP Select 9.3 and ONTAP Deploy, it is possible to stretch a two-node, active/active HA cluster across larger distances and potentially place each node in a different data center. The only distinction between a two-node cluster and a two-node stretched cluster (also referred to as MetroCluster SDS) is the network connectivity distance between nodes.
 
