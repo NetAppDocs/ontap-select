@@ -13,4 +13,82 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Placeholder for ICDGE Appendix B content.
+There are several general networking concepts that apply to the ONTAP Select environment.
+
+You should first be familiar with these general concepts before exploring the specific characteristics and options available with the single-node and multi-node clusters.
+
+== Physical networking
+
+The physical network supports an ONTAP Select cluster deployment primarily by providing the underlying layer two switching infrastructure. The configuration related to the physical network includes both the hypervisor host and the broader switched network environment.
+
+=== Host NIC options
+
+Each ONTAP Select hypervisor host must be configured with either two or four physical ports. The exact configuration you choose depends on several factors, including:
+
+* Whether the cluster contains one or multiple ONTAP Select hosts
+* What hypervisor operating system is used
+* How the virtual switch is configured
+* Whether LACP is used with the links or not
+
+=== Physical switch configuration
+
+You must make sure that the configuration of the physical switches supports the ONTAP Select deployment. The physical switches are integrated with the hypervisor-based virtual switches. The exact configuration you choose depends on several factors. The primary considerations include the following:
+
+* How will you maintain separation between the internal and external networks?
+* Will you maintain a separation between the data and management networks?
+* How will the layer two VLANs be configured?
+
+== Logical networking
+
+ONTAP Select uses two different logical networks, separating the traffic according to type. Specifically, traffic can flow among the hosts within the cluster as well as to the storage clients and other machines outside of the cluster. The virtual switches managed by the hypervisors help support the logical network.
+
+=== Internal network
+
+With a multi-node cluster deployment, the individual ONTAP Select nodes communicate using an isolated “internal” network. This network is not exposed or available outside of the nodes in the ONTAP Select cluster.
+
+*Note:* The internal network is only present with a multi-node cluster.
+
+The internal network has the following characteristics:
+
+* Used to process ONTAP intra-cluster traffic including:
+** Cluster
+** High Availability Interconnect (HA-IC)
+** RAID Synch Mirror (RSM)
+* Single layer-two network based on a VLAN
+* Static IP addresses are assigned by ONTAP Select:
+** IPv4 only
+** DHCP not used
+** Link-local address
+* The MTU size is 9000 bytes by default and can be adjusted within 7500-9000 range (inclusive)
+
+=== External network
+
+The external network processes traffic between the nodes of an ONTAP Select cluster and the external storage clients as well as the other machines. The external network is a part of every cluster deployment and has the following characteristics:
+
+* Used to process ONTAP traffic including:
+** Data (NFS, CIFS, iSCSI)
+** Management (cluster and node; optionally SVM)
+** Intercluster (optional)
+* Optionally supports VLANs:
+** Data port group
+** Management port group
+* IP addresses that are assigned based on the configuration choices of the administrator:
+** IPv4 or IPv6
+* MTU size is 1500 bytes by default (can be adjusted)
+
+The external network is present with clusters of all sizes.
+
+== Virtual machine networking environment
+
+The hypervisor host provides several networking features.
+
+ONTAP Select relies on the following capabilities exposed through the virtual machine:
+
+* Virtual machine ports
+There are several ports available for use by ONTAP Select. They are assigned and used based on
+several factors, including the size of the cluster.
+* Virtual switch
+The virtual switch software within the hypervisor environment, whether vSwitch (VMware) or
+Open vSwitch (KVM), joins the ports exposed by the virtual machine with the physical Ethernet
+NIC ports. You must configure a vSwitch for every ONTAP Select host, as appropriate for your
+environment.
