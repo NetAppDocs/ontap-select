@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= HA Additional Details
+= HA additional details
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -22,6 +22,7 @@ Although the ONTAP Select HA architecture leverages many of the code paths used 
 Enterprise-class HA implementations must gracefully handle this type of scenario. ONTAP does this through a customized, disk-based method of heartbeating. This is the job of the HA mailbox, a location on physical storage that is used by cluster nodes to pass heartbeat messages. This helps the cluster determine connectivity and therefore define quorum in the event of a failover.
 
 On FAS arrays, which use a shared storage HA architecture, ONTAP resolves split-brain issues in the following ways:
+
 * SCSI persistent reservations
 * Persistent HA metadata
 * HA state sent over HA interconnect

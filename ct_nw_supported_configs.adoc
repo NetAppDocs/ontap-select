@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Supported Network Configurations
+= Supported network configurations
 :hardbreaks:
 :nofooter:
 :icons: font

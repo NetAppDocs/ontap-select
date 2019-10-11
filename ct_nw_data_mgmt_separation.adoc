@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Data and Management Traffic Separation
+= Data and management traffic separation
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -29,7 +29,7 @@ Both configuration options, VST and VGT, are supported. The following figure sho
 
 *Data and management separation using VST*
 
-image:DDN_04.png[Data and management separation using VST]
+image:DDN_04.jpg[Data and management separation using VST]
 
 The following figure shows the second scenario, VGT, in which traffic is tagged by the ONTAP VM using VLAN ports that are placed into separate broadcast domains. In this example, virtual ports e0a-10/e0b-10/(e0c or e0g)-10 and e0a-20/e0b-20 are placed on top of VM ports e0a and e0b. This configuration allows network tagging to be performed directly within ONTAP, rather than at the vSwitch layer. Management and data LIFs are placed on these virtual ports, allowing further layer-2 subdivision within a single VM port. The cluster VLAN (VLAN ID 30) is still tagged at the port group.
 
@@ -39,4 +39,4 @@ The following figure shows the second scenario, VGT, in which traffic is tagged 
 
 *Data and management separation using VGT*
 
-image:DDN_05.png[Data and management separation using VGT]
+image:DDN_05.jpg[Data and management separation using VGT]
