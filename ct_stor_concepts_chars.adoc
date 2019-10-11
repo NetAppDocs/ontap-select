@@ -22,18 +22,16 @@ characteristics.
 
 The major configuration phases of the ONTAP Select host storage include the following:
 
-.Steps
-
-. Pre-deployment prerequisites
+* Pre-deployment prerequisites
 You must make sure that each hypervisor host is configured and ready for an ONTAP Select deployment. The configuration involves the physical drives, RAID controllers and groups, and LUNs, as well as related network preparation. This configuration is performed outside of ONTAP Select.
 
-. Configuration using the hypervisor administrator utility
+* Configuration using the hypervisor administrator utility
 You can configure certain aspects of the storage using the hypervisor administration utility (for example, vSphere in a VMware environment). This configuration is performed outside of ONTAP Select.
 
-. Configuration using the ONTAP Select Deploy administration utility
+* Configuration using the ONTAP Select Deploy administration utility
 You can use the Deploy administration utility to configure the core logical storage constructs. This is performed either explicitly through CLI commands or automatically by the utility as part of a deployment.
 
-. Post-deployment configuration
+* Post-deployment configuration
 After an ONTAP Select deployment completes, you can configure the cluster using the ONTAP CLI or System Manager. This configuration is performed outside of ONTAP Select Deploy.
 
 == Managed versus unmanaged storage

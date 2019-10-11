@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_vswitch_config.html
+permalink: ct_nw_vsphere_vswitch_config.html
 keywords: ontap select
 summary: xxx
 ---
@@ -29,7 +29,7 @@ For single node clusters, ONTAP Deploy configures the ONTAP Select VM to use a p
 
 For multinode clusters, ONTAP Deploy configures each ONTAP Select VM to use one or two port groups for the internal network and separately, one or two port groups for the external network. The cluster and node management traffic can either use the same port group as the external traffic, or optionally a separate port group. The cluster and node management traffic cannot share the same port group with internal traffic.
 
-== Standard or Distributed vSwitch and Four Physical ports per Node
+== Standard or distributed vSwitch and four physical ports per Node
 
 Starting with ONTAP Select 9.6 and ONTAP Deploy 2.12, four port groups can be assigned to each node in a multinode cluster. Each port group has a single active physical port and three standby physical ports as in the following figure.
 
@@ -92,7 +92,7 @@ Standby adapters: vmnic6, vmnic5, vmnic7
 Standby adapters: vmnic4, vmnic7, vmnic5
 |===
 
-== Standard or Distributed vSwitch and Two Physical Ports per Node
+== Standard or distributed vSwitch and two physical ports per node
 
 When using two physical ports, each port group should have an active adapter and a standby adapter configured opposite to each other. The internal network is only present for multinode ONTAP Select clusters. For single-node clusters, both adapters can be configured as active in the external port group.
 

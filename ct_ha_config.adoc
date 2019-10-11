@@ -24,6 +24,7 @@ A large portion of the SDS market is built on the notion of shared-nothing stora
 There are two ONTAP Select HA deployment models: the multinode clusters (four, six, or eight nodes) and the two-node clusters. The salient feature of a two-node ONTAP Select cluster is the use of an external mediator service to resolve split-brain scenarios. The ONTAP Deploy VM serves as the default mediator for all the two-node HA pairs that it configures.
 
 There are minimum version requirements for these HA configurations:
+
 * Four-node HA is supported with all ONTAP Select and ONTAP Deploy releases.
 * Two-node HA requires the minimum versions of ONTAP Select 9.2 and ONTAP Deploy 2.4.
 * Six-node and eight-node clusters require minimum versions of ONTAP Select 9.3 and ONTAP Deploy 2.7.
@@ -40,6 +41,7 @@ image:DDHA_01.jpg[Two-node ONTAP Select cluster with remote mediator and using l
 image:DDHA_02.jpg[Four-node ONTAP Select cluster using local-attached storage]
 
 *Notes:*
+
 * The four-node ONTAP Select cluster is composed of two HA pairs. Six-node and eight-node clusters are composed of three and four HA pairs, respectively. Within each HA pair, data aggregates on each cluster node are synchronously mirrored, and, in the event of a failover, there is no loss of data.
 * Only one ONTAP Select instance can be present on a physical server when using DAS storage. ONTAP Select requires unshared access to the local RAID controller of the system and is designed to manage the locally attached disks, which would be impossible without physical connectivity to the storage.
 
@@ -54,8 +56,6 @@ The heartbeat network traffic between the ONTAP Select nodes and the ONTAP Deplo
 If the ONTAP Deploy VM acting as a mediator is temporarily or potentially permanently unavailable, a secondary ONTAP Deploy VM (minimum version 2.4) can be used to restore the two-node cluster quorum. This results in a configuration in which the new ONTAP Deploy VM is unable to manage the ONTAP Select nodes, but it successfully participates in the cluster quorum algorithm. The communication between the ONTAP Select nodes and the ONTAP Deploy VM is done by using the iSCSI protocol over IPv4. The ONTAP Select node management IP address is the initiator, and the ONTAP Deploy VM IP address is the target. Therefore, it is not possible to support IPv6 addresses for the node management IP addresses when creating a two-node cluster. The ONTAP Deploy hosted mailbox disks are automatically created and masked to the proper ONTAP Select node management IP addresses at the time of two-node cluster creation. The entire configuration is automatically performed during setup, and no further administrative action is required. The ONTAP Deploy instance creating the cluster is the default mediator for that cluster.
 
 An administrative action is required if the original mediator location must be changed. It is possible to recover a cluster quorum even if the original ONTAP Deploy VM is lost. However, NetApp recommends that you back up the ONTAP Deploy database after every two-node cluster is instantiated.
-
-For a complete list of steps required to configure a new mediator location, see the ONTAP Select 9 Installation and Cluster Deployment Guide.
 
 == Two-node HA versus two-node stretched HA (MetroCluster SDS)
 

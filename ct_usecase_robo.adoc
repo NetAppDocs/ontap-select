@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Remote and Branch Office
+= Remote and branch office
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_single_multi_node.html
+permalink: ct_nw_single_multi_config.html
 keywords: ontap select
 summary: xxx
 ---
@@ -30,6 +30,7 @@ Each ONTAP Select VM contains seven virtual network adapters (six adapters in ve
 *Note:* Adding virtual network adapters to the ONTAP Select VM is not supported.
 
 These ports are preconfigured to provide the following services:
+
 * e0a, e0b, and e0g. Management and data LIFs
 * e0c, e0d. Cluster network LIFs
 * e0e. RSM

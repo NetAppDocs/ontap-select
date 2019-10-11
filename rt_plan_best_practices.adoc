@@ -103,27 +103,11 @@ ONTAP Select 9.3 supports a single 10Gb link for two-node clusters; however, it 
 
 ** When using a distributed vSwitch with LACP, NetApp recommends that you configure the load-balancing policy to Route Based on IP Hash on the port group and Source and Destination IP Address and TCP/UDP Port and VLAN on the LAG.
 
-=== Two-node stretched HA (MetroCluster SDS) best practices
+* Two-node stretched HA (MetroCluster SDS) best practices
 
-Before you create a MetroCluster SDS, use the ONTAP Deploy connectivity checker functionality to make sure that the network latency between the two data centers falls within the acceptable range.
+** Before you create a MetroCluster SDS, use the ONTAP Deploy connectivity checker functionality to make sure that the network latency between the two data centers falls within the acceptable range.
 
-.Steps
-
-. After installing ONTAP Deploy, define two ESX hosts (one in each data center) that are used to measure the latency between the two sites.
-
-. Select *Administration* (top of screen) *> Network > Connectivity Checker* (left panel). The default settings are appropriate.
-
-*Note:* The connectivity checker does not mark the test as failed if the latency exceeds 10ms. Therefore, you must check the value of the latency instead of the status of the connectivity checker test run.
-
-The following example shows a connectivity checker output in which the latency between nodes is under 1ms.
-
-image:BP_01.jpg[Details for MTU Ping Test]
-
-*Note:* The connectivity checker does not check the latency between the ONTAP Select VM and the storage. When using external storage for MetroCluster SDS, the VM-to-storage latency is not negligible and the total latency must be under 10ms RTT.
-
-The connectivity checker has the additional benefit of making sure that the internal network is properly configured to support a large MTU size. Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10.1, the default MTU size is determined by querying the upstream vSwitch. However, the default MTU value can be manually overwritten to account for network overlay protocol overhead. The internal network MTU can be configured to between 7,500 and 9,000. This is a requirement for all HA traffic, whether the ONTAP Select cluster consist of two, four, six, or eight nodes.
-
-There is an extra caveat when using virtual guest tagging (VGT) and two-node clusters. In two-node cluster configurations, the node management IP address is used to establish early connectivity to the mediator before ONTAP is fully available. Therefore, only external switch tagging (EST) and virtual switch tagging (VST) tagging is supported on the port group mapped to the node management LIF (port e0a). Furthermore, if both the management and the data traffic are using the same port group, only EST and VST are supported for the entire two-node cluster.
+** There is an extra caveat when using virtual guest tagging (VGT) and two-node clusters. In two-node cluster configurations, the node management IP address is used to establish early connectivity to the mediator before ONTAP is fully available. Therefore, only external switch tagging (EST) and virtual switch tagging (VST) tagging is supported on the port group mapped to the node management LIF (port e0a). Furthermore, if both the management and the data traffic are using the same port group, only EST and VST are supported for the entire two-node cluster.
 
 == Networking
 
@@ -143,63 +127,3 @@ VMware recommends that STP be set to Portfast on the switch ports connected to t
 
 * Route
 To optimize load balancing across both the internal and the external ONTAP Select networks, use the Route Based on Originating Virtual Port load-balancing policy.
-
-=== Network configuration best practices
-
-For both standard and distributed vSwitches, consider the best practices listed in the following table:
-
-*Network configuration support matrix*
-
-[cols=3*,options="header"]
-|===
-| Server Environment
-| Select Configuration
-| Best Practices
-
-|
-* Standard or distributed vSwitch
-* 4 x 10Gb ports or
-* 4 x 1Gb ports
-* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.^1^
-|
-* Do not use any LACP channels.
-* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.^1^
-|
-* ONTAP Deploy 2.12 supports configurations with up to four port groups, two for the internal network and two for the external network. For best performance, all four port groups should be used. The procedure to switch from a single port group per network to two port groups per network is detailed in Section 4.5.
-|
-* The load-balancing policy at the port-group level is Route Based on Originating Virtual Port ID.
-* VMware recommends that STP be set to Portfast on the switch ports connected to the ESXi hosts.
-
-|
-* Standard or distributed vSwitch
-* 2 x 10Gb ports
-* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.^1^
-|
-* Do not use any LACP channels.
-* The internal network must use a port group with 1 x 10Gb active and 1 x 10Gb standby.^1^
-* The external network uses a separate port group. The active port is the standby port for the internal port group. The standby port is the active port for the internal network port group.
-* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.^1^
-|
-* The load-balancing policy at the port group level is Route Based on Originating Virtual Port ID.
-* VMware recommends that the STP be set to Portfast on the switch ports connected to the ESXi hosts.
-|===
-
-^1^ Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.
-
-*Network minimum and recommended configurations*
-
-[cols=3*,options="header"]
-|===
-|
-| Minimum Requirements
-| Recommendations
-
-|Single node clusters |2 x 1Gb |2 x 10Gb
-|Two node clusters / Metrocluster SDS |4 x 1Gb or 1 x 10Gb |2 x 10Gb
-|4/6/8 node clusters |2 x 10Gb |4 x 10Gb
-|===
-
-*Network configuration using multiple physical switches*
-When sufficient hardware is available, NetApp recommends using the multiswitch configuration shown in the following figure, due to the added protection against physical switch failures.
-
-image:BP_02.jpg[Network configuration using multiple physical switches]

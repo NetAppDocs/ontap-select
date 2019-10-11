@@ -44,7 +44,11 @@ A two-node cluster can use either four 1Gb ports for internal traffic or a singl
 
 Starting with Deploy 2.2, the internal network in a multinode cluster can be validated by using the network connectivity checker functionality. This function can be invoked from the Deploy CLI running the 'network connectivity-check start' command.
 
-Run the 'network connectivity-check show --run-id X' ('X' is a number) command to view the output of the test.
+Run the following command to view the output of the test:
+
+----
+network connectivity-check show --run-id X (X is a number)
+----
 
 This tool is only useful for troubleshooting the internal network in a multinode Select cluster. The tool should not be used to troubleshoot single-node clusters (including vNAS configurations), ONTAP Deploy to ONTAP Select connectivity, or client-side connectivity issues.
 
@@ -56,7 +60,7 @@ Starting with ONTAP Deploy 2.10, the MTU size used by the internal network can b
 
 The ONTAP Select external network is responsible for all outbound communications by the cluster and, therefore, is present on both the single-node and multinode configurations. Although this network does not have the tightly defined throughput requirements of the internal network, the administrator should be careful not to create network bottlenecks between the client and ONTAP VM, because performance issues could be mischaracterized as ONTAP Select problems.
 
-*Note:* In a manner similar to internal traffic, external traffic can be tagged at the vSwitch layer (VST) and at the external switch layer (EST). In addition, the external traffic can be tagged by the ONTAP Select VM itself in a process known as VGT. See the section “Data and Management Separation” for further details.
+*Note:* In a manner similar to internal traffic, external traffic can be tagged at the vSwitch layer (VST) and at the external switch layer (EST). In addition, the external traffic can be tagged by the ONTAP Select VM itself in a process known as VGT. See the section link:ct_nw_data_mgmt_separation.html[Data and management traffic separation] for further details.
 
 The following table highlights the major differences between the ONTAP Select internal and external networks.
 
@@ -70,18 +74,21 @@ The following table highlights the major differences between the ONTAP Select in
 
 | Network services
 |
+
 * Cluster
 * HA/IC
 * RAID SyncMirror (RSM)
 |
+
 * Data management
 * Intercluster (SnapMirror and SnapVault)
 | Network isolation
 | Required
 | Optional
 | Frame size (MTU)
-| 7,500 to 9,000^2^
+| 7,500 to 9,000^1^
 |
+
 * 1,500 (default)
 * 9,000 (supported)
 | IP address assignment
@@ -92,8 +99,7 @@ The following table highlights the major differences between the ONTAP Select in
 | No
 |===
 
-^1^ONTAP Select 9.3 supports a single 10Gb link for two-node clusters; however, it is a NetApp best practice to make sure of hardware redundancy through NIC aggregation.
-^2^Requires ONTAP Select 9.5 and ONTAP Deploy 2.10.
+^1^Requires ONTAP Select 9.5 and ONTAP Deploy 2.10.
 
 === NIC teaming
 

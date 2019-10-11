@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Host Configuration and Preparation Checklist
+= Host configuration and preparation checklist
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,7 +17,7 @@ You must prepare each of the hypervisor hosts where an ONTAP Select node is depl
 
 As part of preparing the hosts, you should carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
 
-*Attention:* The ONTAP Select Deploy administration utility does not perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster. For more information about the ONTAP Select hypervisor environment, see _Understanding the ONTAP Select storage environment_ and _Understanding the ONTAP Select networking environment_. You should also review the _ONTAP Select Product Architecture and Best Practices Technical Report_ for more information.
+*Attention:* The ONTAP Select Deploy administration utility does not perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster.
 
 == General hypervisor preparation
 
@@ -31,6 +31,7 @@ Each host must be configured with the following:
 Also, the same vCenter server must be able to manage all the hosts where an ONTAP Select node is deployed within the cluster.
 
 In addition, you should make sure that the firewall ports are configured to allow access to vSphere. These ports must be open to support serial port connectivity to the ONTAP Select virtual machines.
+
 By default, VMware allows access on the following ports:
 
 * Port 23 and ports 1024 – 65535 (inbound traffic)
@@ -91,4 +92,4 @@ image:CHK_04.jpg[vSwitch properties)]
 ** The port group can be on a routable VLAN. Also, depending on the network environment, you should add an appropriate VLAN tag or configure the port group for VLAN trunking.
 ** The load balancing, failback and failover order settings of the port group should be same as vSwitch.
 
-The above vSwitch configuration is for a host with 2x10Gb ports in a typical network environment. If your host or network configuration differs, and for more information on the recommended best practices related to network configuration, you should review the _ONTAP Select Product Architecture and Best Practices Technical Report_.
+The above vSwitch configuration is for a host with 2x10Gb ports in a typical network environment.

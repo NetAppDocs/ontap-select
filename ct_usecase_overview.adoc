@@ -17,8 +17,7 @@ ONTAP Select is suitable for several different types of applications based on th
 
 == Private cloud
 
-ONTAP Select is ideally suited to supporting one or more private clouds within your organization. Like the public cloud, a private cloud provides flexibility as well as rapid setup and teardown. In
-addition, a private cloud offers improved security and control.
+ONTAP Select is ideally suited to supporting one or more private clouds within your organization. Like the public cloud, a private cloud provides flexibility as well as rapid setup and teardown. In addition, a private cloud offers improved security and control.
 
 == Disaster recovery and secondary storage
 
@@ -33,7 +32,7 @@ based on the application characteristics and requirements.
 
 In certain cases, you may choose to deploy ONTAP Select as your primary storage platform. These types of implementations vary and depend on the workload characteristics of the applications as well as your business objectives.
 
-== Remote office/Branch office
+== Remote office/branch office
 
 You can deploy ONTAP Select in remote office/branch office (ROBO) situations to support smaller offices while maintaining centralized administration and control. The following ROBO configurations are supported on VMware ESXi:
 
