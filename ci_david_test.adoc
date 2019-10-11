@@ -15,10 +15,10 @@ summary: xxx
 [.lead]
 Hello!
 
-It's October 10! The next line is a comment:
+It's October! The next line is a comment:
 // Comment one
 
-It's October 10! The next is a block comment:
+It's October! The next is a block comment:
 ////
 Line 1
 Line 2
