@@ -63,13 +63,11 @@ image:DDHA_04.jpg[ONTAP Select write path workflow]
 
 Incoming write acknowledgment includes the following steps:
 
-.Steps
-. Writes enter the system through a logical interface owned by ONTAP Select node A.
-. Writes are committed to the NVRAM of node A and mirrored to the HA partner, node B.
-. After the I/O request is present on both HA nodes, the request is then acknowledged back to the client.
+* Writes enter the system through a logical interface owned by ONTAP Select node A.
+* Writes are committed to the NVRAM of node A and mirrored to the HA partner, node B.
+* After the I/O request is present on both HA nodes, the request is then acknowledged back to the client.
 
 ONTAP Select destaging from NVRAM to the data aggregate (ONTAP CP) includes the following steps:
 
-.Steps
-. Writes are destaged from virtual NVRAM to virtual data aggregate.
-. Mirror engine synchronously replicates blocks to both plexes.
+* Writes are destaged from virtual NVRAM to virtual data aggregate.
+* Mirror engine synchronously replicates blocks to both plexes.

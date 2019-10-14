@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Private Cloud and Data Center
+= Private cloud and data center
 :hardbreaks:
 :nofooter:
 :icons: font

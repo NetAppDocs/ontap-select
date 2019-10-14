@@ -20,3 +20,69 @@ As a result, when purchasing a physical server, there are numerous options avail
 Link aggregation is a common network construct used to aggregate bandwidth across multiple physical adapters. LACP is a vendor-neutral standard that provides an open protocol for network endpoints that bundle groupings of physical network ports into a single logical channel. ONTAP Select can work with port groups that are configured as a Link Aggregation Group (LAG). However, starting with ONTAP Select 9.6 and ONTAP Deploy 2.12, NetApp recommends using the individual physical ports as simple uplink (trunk) ports, avoiding the LAG configuration.
 
 Because the performance of the ONTAP Select VM is tied directly to the characteristics of the underlying hardware, increasing the throughput to the VM by selecting 10Gb-capable NICs results in a higher-performing cluster and a better overall user experience. When cost or form factor prevents the user from designing a system with four 10Gb NICs, two 10Gb NICs can be used. There are a number of other configurations that are also supported. For two-node clusters, 4 x 1Gb ports or 1 x 10Gb ports are supported. For single node clusters, 2 x 1Gb ports are supported.
+
+=== Network configuration best practices
+
+For both standard and distributed vSwitches, consider the best practices listed in the following table:
+
+*Network configuration support matrix*
+
+[cols=3*,options="header"]
+|===
+| Server Environment
+| Select Configuration
+| Best Practices
+
+|
+
+* Standard or distributed vSwitch
+* 4 x 10Gb ports or
+* 4 x 1Gb ports
+* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.^1^
+|
+
+* Do not use any LACP channels.
+* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.^1^
+|
+
+* ONTAP Deploy 2.12 supports configurations with up to four port groups, two for the internal network and two for the external network. For best performance, all four port groups should be used. The procedure to switch from a single port group per network to two port groups per network is detailed in Section 4.5.
+|
+
+* The load-balancing policy at the port-group level is Route Based on Originating Virtual Port ID.
+* VMware recommends that STP be set to Portfast on the switch ports connected to the ESXi hosts.
+|
+
+* Standard or distributed vSwitch
+* 2 x 10Gb ports
+* The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.^1^
+|
+
+* Do not use any LACP channels.
+* The internal network must use a port group with 1 x 10Gb active and 1 x 10Gb standby.^1^
+* The external network uses a separate port group. The active port is the standby port for the internal port group. The standby port is the active port for the internal network port group.
+* All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.^1^
+|
+
+* The load-balancing policy at the port group level is Route Based on Originating Virtual Port ID.
+* VMware recommends that the STP be set to Portfast on the switch ports connected to the ESXi hosts.
+|===
+
+^1^ Starting with ONTAP Select 9.5 and ONTAP Deploy 2.10, the internal network supports an MTU size between 7,500 and 9,000.
+
+*Network minimum and recommended configurations*
+
+[cols=3*,options="header"]
+|===
+|
+| Minimum Requirements
+| Recommendations
+
+|Single node clusters |2 x 1Gb |2 x 10Gb
+|Two node clusters / Metrocluster SDS |4 x 1Gb or 1 x 10Gb |2 x 10Gb
+|4/6/8 node clusters |2 x 10Gb |4 x 10Gb
+|===
+
+*Network configuration using multiple physical switches*
+When sufficient hardware is available, NetApp recommends using the multiswitch configuration shown in the following figure, due to the added protection against physical switch failures.
+
+image:BP_02.jpg[Network configuration using multiple physical switches]

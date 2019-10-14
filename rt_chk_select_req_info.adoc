@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Required Information for ONTAP Select Installation
+= Required information for ONTAP Select installation
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,9 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-As part of preparing to deploy an ONTAP Select cluster in a VMware environment, you must collect
-information required when using the ONTAP Select Deploy administration utility to deploy and
-configure the cluster.
+As part of preparing to deploy an ONTAP Select cluster in a VMware environment, you must collect information required when using the ONTAP Select Deploy administration utility to deploy and configure the cluster.
 
 Some of the information you collect applies to the cluster itself, while other information applies to the individual nodes in the cluster.
 

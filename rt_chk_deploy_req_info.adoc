@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Required Information For Deploy Utility Installation
+= Required information for Deploy utility installation
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -21,7 +21,8 @@ There are several requirements and restrictions that you should consider when in
 
 === ESXi host server hardware requirements
 
-Th ere are several minimum resource requirements that your ESXi hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
+There are several minimum resource requirements that your ESXi hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
+
 * ESXi Server:
 ** Hardware and software must be 64-bit
 ** Must adhere to the same supported versions as defined for an ONTAP Select node

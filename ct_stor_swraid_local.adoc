@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Software RAID Services for Local Attached Storage
+= Software RAID services for local attached storage
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -24,11 +24,12 @@ Software RAID is a RAID abstraction layer implemented within the ONTAP software 
 ** Choose a separate disk, either an SSD or an NVMe drive, to create a datastore for the system disks (NVRAM, Boot/CF card, Coredump, and Mediator in a multi-node setup).
 
 *Notes:*
+
 * The terms service disk and system disk are used interchangeably. Service disks are the VMDKs that are used within the ONTAP Select VM to service various items such as clustering, booting, and so on. Service disks are physically located on a single physical disk (collectively called the service/system physical disk) as seen from the host. That physical disk must contain a DAS datastore. ONTAP Deploy creates these service disks for the ONTAP Select VM during cluster deployment.
 * With the current release, it is not possible to further separate the ONTAP Select system disks across multiple datastores or across multiple physical drives.
 * Hardware RAID is not deprecated.
 
-== Software RAID Configuration for Local Attached Storage
+== Software RAID configuration for local attached storage
 
 When using software RAID, the absence of a hardware RAID controller is ideal, but, if a system does have an existing RAID controller, it must adhere to the following requirements:
 
@@ -37,11 +38,11 @@ When using software RAID, the absence of a hardware RAID controller is ideal, bu
 
 Depending on maximum number of drives supported by the controller, an additional controller may be required. With the SAS HBA mode, ensure that the IO controller (SAS HBA) is supported with a minimum of 6Gb/s speed. However, NetApp recommends a 12Gbps speed.
 
-No other hardware RAID controller modes or configurations is supported. For example, some controllers allow a RAID 0 support that can artificially enable disks to pass-through but the implications can be undesirable. The supported size of physical disks (SSD only) is between 200GB – 16TB
+No other hardware RAID controller modes or configurations is supported. For example, some controllers allow a RAID 0 support that can artificially enable disks to pass-through but the implications can be undesirable. The supported size of physical disks (SSD only) is between 200GB – 16TB.
 
 *Note:* Administrators need to keep track of which drives are in use by the ONTAP Select VM and prevent inadvertent use of those drives on the host.
 
-== ONTAP Select Virtual and Physical Disks
+== ONTAP Select virtual and physical disks
 
 For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more VMDKs from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
 
@@ -69,9 +70,9 @@ image:ST_19.jpg[RDD disk partitioning for single-node clusters]
 
 image:ST_20.jpg[RDD disk partitioning for multinode clusters (HA pairs)]
 
-ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID-TEC. These are the same RAID constructs used by FAS and AFF platforms. However, ONTAP Select HA uses a shared-nothing architecture that replicates each node’s configuration to the other node. That means each node has a root partition and a copy of the its peer’s root partition. Each raw disk has a single root partition, which means that ONTAP Select has a minimum number of disks required to support software RAID. The minimum number of disks varies depending on whether the ONTAP Select node is part of an HA pair as well as the RAID type. See Table 2 for the specific number of drives required by each configuration.
+ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID-TEC. These are the same RAID constructs used by FAS and AFF platforms. However, ONTAP Select HA uses a shared-nothing architecture that replicates each node’s configuration to the other node. That means each node has a root partition and a copy of the its peer’s root partition. Each raw disk has a single root partition, which means that ONTAP Select has a minimum number of disks required to support software RAID. The minimum number of disks varies depending on whether the ONTAP Select node is part of an HA pair as well as the RAID type.
 
-== Physical and Virtual Disk Provisioning
+== Physical and virtual disk provisioning
 
 To provide a more streamlined user experience, ONTAP Deploy automatically provisions the system (virtual) disks from the specified datastore (physical system disk) and attaches them to the ONTAP Select VM. This operation occurs automatically during the initial setup so that the ONTAP Select VM can boot. The RDMs are partitioned and the root aggregate is automatically built. If the ONTAP Select node is part of an HA pair, the data partitions are automatically assigned to a local storage pool and a mirror storage pool. This assignment occurs automatically during both cluster-creation operations and storage-add operations.
 
@@ -83,10 +84,11 @@ When adding capacity to an ONTAP Select VM using software RAID, the administrato
 
 Similar to FAS and AFF systems, only drives with equal or larger capacities can be added to an existing RAID group. Larger capacity drives are right sized. If you are creating new RAID groups, the new RAID group size should match the existing RAID group size to make sure that the overall aggregate performance does not deteriorate.
 
-== Matching an ONTAP Select Disk to the Corresponding ESX Disk
+== Matching an ONTAP Select disk to the corresponding ESX disk
 
 ONTAP Select disks are usually labeled NET x.y. You can use the following ONTAP command to obtain the disk UUID:
-'<system name>::> disk show NET-1.1
+----
+<system name>::> disk show NET-1.1
 Disk: NET-1.1
 Model: Micron_5100_MTFD
 Serial Number: 1723175C0B5E
@@ -96,15 +98,20 @@ Physical Size: 894.3GB
 Position: shared
 Checksum Compatibility: advanced_zoned
 Aggregate: -
-Plex: -This UID can be matched with the device UID displayed in the ‘storage devices’ tab for the ESX host'
+Plex: -This UID can be matched with the device UID displayed in the ‘storage devices’ tab for the ESX host
+----
 
 image:ST_21.jpg[Matching an ONTAP Select Disk to the Corresponding ESX Disk]
 
 In the ESXi shell, you can enter the following command to blink the LED for a given physical disk (identified by its naa.unique-id).
 
-'esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>'
+----
+esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>
+----
 
-== Replacing Failed Drives when Using Software RAID
+== Replacing failed drives when using software RAID
+
+//David, do you want/need this section?
 
 In a manner similar to ONTAP on FAS and AFF, ONTAP Select uses a spare drive (if one is available) and starts the rebuild process automatically. If no spare drive is available, one should be added to the ONTAP Select node.
 
@@ -167,7 +174,7 @@ image:ST_31.jpg[Storage disk details]
 
 *Note:* All drive addition and removal operations should be performed with ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
 
-== Multiple Drive Failures when Using Software RAID
+== Multiple drive failures when using software RAID
 
 It is possible for a system to encounter a situation in which multiple drives are in a failed state at the same time. The behavior of the system depends on the aggregate RAID protection and the number of failed drives.
 
