@@ -25,8 +25,7 @@ You can use ONTAP Select to implement additional storage that augments your prim
 
 == Development and testing
 
-As you deploy various applications within your organization, you can use ONTAP Select as an integral part of the overall application development and testing process. For example, you may need temporary storage to hold test input or output data. The length of these types of deployments can vary
-based on the application characteristics and requirements.
+As you deploy various applications within your organization, you can use ONTAP Select as an integral part of the overall application development and testing process. For example, you may need temporary storage to hold test input or output data. The length of these types of deployments can vary based on the application characteristics and requirements.
 
 == Primary storage
 
