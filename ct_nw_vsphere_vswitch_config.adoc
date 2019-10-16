@@ -35,7 +35,7 @@ Starting with ONTAP Select 9.6 and ONTAP Deploy 2.12, four port groups can be as
 
 *vSwitch with four physical ports per node*
 
-image:DDN_08.png[vSwitch with four physical ports per node]
+image:DDN_08.jpg[vSwitch with four physical ports per node]
 
 The order of the ports in the standby list is important. The following table provides an example of the physical port distribution across the four port groups.
 
@@ -54,11 +54,11 @@ The following figures show the configurations of the external network port group
 
 *Part 1: ONTAP Select external port group configurations*
 
-image:DDN_09.png[Part 1: ONTAP Select external port group configurations]
+image:DDN_09.jpg[Part 1: ONTAP Select external port group configurations]
 
 *Part 2: ONTAP Select external port group configurations*
 
-image:DDN_10.png[Part 2: ONTAP Select external port group configurations]
+image:DDN_10.jpg[Part 2: ONTAP Select external port group configurations]
 
 For readability, the assignments are as follows:
 
@@ -75,11 +75,11 @@ The following figures show the configurations of the internal network port group
 
 *Part 1: ONTAP Select internal port group configurations*
 
-image:DDN_11.png[Part 1: ONTAP Select internal port group configurations]
+image:DDN_11.jpg[Part 1: ONTAP Select internal port group configurations]
 
 *Part 2: ONTAP Select internal port groups*
 
-image:DDN_12.png[Part 2: ONTAP Select internal port groups]
+image:DDN_12.jpg[Part 2: ONTAP Select internal port groups]
 
 For readability, the assignments are as follows:
 
@@ -100,7 +100,7 @@ The following example shows the configuration of a vSwitch and the two port grou
 
 *vSwitch with two physical ports per node*
 
-image:DDN_13.png[vSwitch with two physical ports per node]
+image:DDN_13.jpg[vSwitch with two physical ports per node]
 
 == Distributed vSwitch with LACP
 
@@ -110,14 +110,14 @@ The following examples show the distributed vSwitch configuration using LACP.
 
 *LAG properties when using LACP*
 
-image:DDN_14.png[LAG properties when using LACP]
+image:DDN_14.jpg[LAG properties when using LACP]
 
 *External port group configurations using a distributed vSwitch with LACP enabled*
 
-image:DDN_15.png[External port group configurations using a distributed vSwitch with LACP enabled]
+image:DDN_15.jpg[External port group configurations using a distributed vSwitch with LACP enabled]
 
 *Internal port group configurations using a distributed vSwitch with LACP enabled*
 
-image:DDN_16.png[Internal port group configurations using a distributed vSwitch with LACP enabled]
+image:DDN_16.jpg[Internal port group configurations using a distributed vSwitch with LACP enabled]
 
 *Note:* LACP requires that you configure the upstream switch ports as a port channel. Prior to enabling this on the distributed vSwitch, make sure that an LACP-enabled port channel is properly configured.

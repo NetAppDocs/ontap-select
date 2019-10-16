@@ -82,4 +82,4 @@ Two or more ONTAP Select nodes from the same ONTAP Select cluster could potentia
 
 Note that ONTAP Deploy does not proactively monitor the ONTAP Select VM locations. However, a cluster refresh operation reflects this unsupported configuration in the ONTAP Deploy logs:
 
-image:ST_17.jpg[ONTAP Deploy logs]
+image:ST_17.png[ONTAP Deploy logs]
