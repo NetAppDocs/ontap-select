@@ -23,8 +23,7 @@ Software RAID is a RAID abstraction layer implemented within the ONTAP software 
 * It requires a separate system disk for the ONTAP Select VM boot partition.
 ** Choose a separate disk, either an SSD or an NVMe drive, to create a datastore for the system disks (NVRAM, Boot/CF card, Coredump, and Mediator in a multi-node setup).
 
-*Notes:*
-
+[NOTE]
 * The terms service disk and system disk are used interchangeably. Service disks are the VMDKs that are used within the ONTAP Select VM to service various items such as clustering, booting, and so on. Service disks are physically located on a single physical disk (collectively called the service/system physical disk) as seen from the host. That physical disk must contain a DAS datastore. ONTAP Deploy creates these service disks for the ONTAP Select VM during cluster deployment.
 * With the current release, it is not possible to further separate the ONTAP Select system disks across multiple datastores or across multiple physical drives.
 * Hardware RAID is not deprecated.
@@ -40,7 +39,8 @@ Depending on maximum number of drives supported by the controller, an additional
 
 No other hardware RAID controller modes or configurations is supported. For example, some controllers allow a RAID 0 support that can artificially enable disks to pass-through but the implications can be undesirable. The supported size of physical disks (SSD only) is between 200GB – 16TB.
 
-*Note:* Administrators need to keep track of which drives are in use by the ONTAP Select VM and prevent inadvertent use of those drives on the host.
+[NOTE]
+Administrators need to keep track of which drives are in use by the ONTAP Select VM and prevent inadvertent use of those drives on the host.
 
 == ONTAP Select virtual and physical disks
 
@@ -56,7 +56,8 @@ image:ST_18.jpg[ONTAP Select software RAID: use of virtualized disks and RDMs]
 
 The system disks (VMDKs) reside in the same datastore and on the same physical disk. The virtual NVRAM disk requires a fast and durable media. Therefore, only NVMe and SSD-type datastores are supported.
 
-*Note:* With the current release, it is not possible to further separate the ONTAP Select system disks across multiple datastores or multiple physical drives.
+[NOTE]
+With the current release, it is not possible to further separate the ONTAP Select system disks across multiple datastores or multiple physical drives.
 
 The data disks are presented to the ONTAP Select VM as raw disks through RDMs. RDMs contain metadata for managing and redirecting disk access to the physical device, which allows the host to pass SCSI commands from the VM directly to the physical disk drives. Each raw disk exposed is divided into three parts: a small root partition (stripe) and two equal-sized partitions to create two data disks seen within the ONTAP Select VM. Partitions use the Root Data Data (RD2) schemes as shown in the following figures for a single node cluster and a node in an HA pair, respectively.
 
@@ -78,7 +79,8 @@ To provide a more streamlined user experience, ONTAP Deploy automatically provis
 
 Because the data disks on the ONTAP Select VM are associated with the underlying physical disks, there are performance implications for creating configurations with a larger number of physical disks.
 
-*Note:* The root aggregate’s RAID group type depends on the number of disks available. ONTAP Deploy picks the appropriate RAID group type. If it has sufficient disks allocated to the node, it uses RAID-DP, otherwise it creates a RAID-4 root aggregate.
+[NOTE]
+The root aggregate’s RAID group type depends on the number of disks available. ONTAP Deploy picks the appropriate RAID group type. If it has sufficient disks allocated to the node, it uses RAID-DP, otherwise it creates a RAID-4 root aggregate.
 
 When adding capacity to an ONTAP Select VM using software RAID, the administrator must consider the physical drive size and the number of drives required. For details, see the section, “Increasing capacity for ONTAP Select with Software RAID”.
 
@@ -172,7 +174,8 @@ image:ST_30.jpg[Storage disk details]
 
 image:ST_31.jpg[Storage disk details]
 
-*Note:* All drive addition and removal operations should be performed with ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
+[NOTE]
+All drive addition and removal operations should be performed with ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
 
 == Multiple drive failures when using software RAID
 
@@ -225,7 +228,8 @@ shared NET-1.6 0 SSD - 418.0GB 894.3GB (normal)
 4 entries were displayed.
 ----
 
-*Note:* In order to test or simulate one or multiple drive failures, use the storage disk fail -disk NET-x.y -immediate command. If there is a spare in the system, the aggregate will begin to reconstruct. You can check the status of the reconstruction using the command “storage aggregate show”. You can remove the simulated failed drive using ONTAP Deploy. Note that ONTAP has marked the drive as Broken. The drive is not actually broken and can be added back using ONTAP Deploy. In order to erase the Broken label, enter the following commands in the ONTAP Select CLI:
+[NOTE]
+In order to test or simulate one or multiple drive failures, use the storage disk fail -disk NET-x.y -immediate command. If there is a spare in the system, the aggregate will begin to reconstruct. You can check the status of the reconstruction using the command “storage aggregate show”. You can remove the simulated failed drive using ONTAP Deploy. Note that ONTAP has marked the drive as Broken. The drive is not actually broken and can be added back using ONTAP Deploy. In order to erase the Broken label, enter the following commands in the ONTAP Select CLI:
 
 
 ----

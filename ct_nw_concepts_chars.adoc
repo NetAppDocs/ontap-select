@@ -46,7 +46,8 @@ ONTAP Select uses two different logical networks, separating the traffic accordi
 
 With a multi-node cluster deployment, the individual ONTAP Select nodes communicate using an isolated “internal” network. This network is not exposed or available outside of the nodes in the ONTAP Select cluster.
 
-*Note:* The internal network is only present with a multi-node cluster.
+[NOTE]
+The internal network is only present with a multi-node cluster.
 
 The internal network has the following characteristics:
 

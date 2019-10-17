@@ -30,7 +30,8 @@ All aggregates in an ONTAP Select cluster must be mirrored for data availability
 * A local set of disks (contributed by the current ONTAP Select node)
 * A mirrored set of disks (contributed by the HA partner of the current node)
 
-*Note:* The local and mirror disks used to build a mirrored aggregate must be the same size. These aggregates are referred to as plex 0 and plex 1 (to indicate the local and remote mirror pairs, respectively). The actual plex numbers can be different in your installation.
+[NOTE]
+The local and mirror disks used to build a mirrored aggregate must be the same size. These aggregates are referred to as plex 0 and plex 1 (to indicate the local and remote mirror pairs, respectively). The actual plex numbers can be different in your installation.
 
 This approach is fundamentally different from the way standard ONTAP clusters work. This applies to all root and data disks within the ONTAP Select cluster. The aggregate contains both local and mirror copies of data. Therefore, an aggregate that contains N virtual disks offers N/2 disks’ worth of unique storage, because the second copy of data resides on its own unique disks.
 
@@ -43,7 +44,8 @@ In the following figure, there is a mirrored aggregate with two disks. The conte
 *ONTAP Select mirrored aggregate*
 image:DDHA_03.jpg[ONTAP Select mirrored aggregate]
 
-*Note:* When an ONTAP Select cluster is deployed, all virtual disks present on the system are automatically assigned to the correct plex, requiring no additional step from the user regarding disk assignment. This prevents the accidental assignment of disks to an incorrect plex and provides optimal mirror disk configuration.
+[NOTE]
+When an ONTAP Select cluster is deployed, all virtual disks present on the system are automatically assigned to the correct plex, requiring no additional step from the user regarding disk assignment. This prevents the accidental assignment of disks to an incorrect plex and provides optimal mirror disk configuration.
 
 == Write Path
 

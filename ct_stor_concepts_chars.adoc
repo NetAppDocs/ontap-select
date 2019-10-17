@@ -81,7 +81,8 @@ Each ONTAP Select host must have a single RAID controller. You should create a s
 
 There are several issues related to the storage pools that you should be aware of as part of preparing to deploy ONTAP Select.
 
-*Note:* In a VMware environment, a storage pool is synonymous with a VMware datastore.
+[NOTE]
+In a VMware environment, a storage pool is synonymous with a VMware datastore.
 
 === Storage pools and LUNs
 
@@ -126,7 +127,8 @@ image:ST_02.jpg[ESXi cluster]
 
 You can create a VMFS datastore residing on an external storage array. The storage is accessed using one of several different network protocols. The following figure illustrates a VMFS datastore on an external storage array accessed using the iSCSI protocol.
 
-*Note:* ONTAP Select supports all external storage arrays described in the VMware Storage/SAN Compatibility Guide, including iSCSI, Fibre Channel, and Fibre Channel over Ethernet.
+[NOTE]
+ONTAP Select supports all external storage arrays described in the VMware Storage/SAN Compatibility Guide, including iSCSI, Fibre Channel, and Fibre Channel over Ethernet.
 
 image:ST_03.jpg[ESXi hypervisor host]
 

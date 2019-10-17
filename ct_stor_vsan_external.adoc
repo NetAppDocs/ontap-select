@@ -23,7 +23,8 @@ The vNAS nomenclature is used for all setups that do not use DAS. For multinode 
 
 It is also possible that each ONTAP Select node in an HA pair uses a separate external array. This is a common choice when using ONTAP Select Metrocluster SDS with external storage.
 
-*Note:* Metrocluster SDS support for vNAS requires ONTAP Select 9.5 and ONTAP Deploy 2.10.1.
+[NOTE]
+Metrocluster SDS support for vNAS requires ONTAP Select 9.5 and ONTAP Deploy 2.10.1.
 
 When using separate external arrays for each ONTAP Select node, it is very important that the two arrays provide similar performance characteristics to the ONTAP Select VM.
 
@@ -67,7 +68,8 @@ image:ST_14.jpg[Initial deployment of multinode VNAS clusters]
 
 After deployment, the ONTAP Select nodes can be migrated between hosts. This could result in nonoptimal and unsupported configurations for which two or more ONTAP Select nodes from the same cluster share the same underlying host. NetApp recommends the manual creation of VM anti-affinity rules so that VMware automatically maintains physical separation between the nodes of the same cluster, not just the nodes from the same HA pair.
 
-*Note:* Anti-affinity rules require that DRS is enabled on the ESX cluster.
+[NOTE]
+Anti-affinity rules require that DRS is enabled on the ESX cluster.
 
 See the following example on how to create an anti-affinity rule for the ONTAP Select VMs. If the ONTAP Select cluster contains more than one HA pair, all nodes in the cluster must be included in this rule.
 
