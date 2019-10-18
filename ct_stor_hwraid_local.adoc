@@ -17,7 +17,8 @@ If a hardware RAID controller is present, then ONTAP Select can take advantage o
 
 It does this by moving RAID services to the hardware controller. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
 
-*Note:* ONTAP Select data aggregates are configured to use RAID 0 because the physical RAID controller is providing RAID striping to the underlying drives. No other RAID levels are supported.
+[NOTE]
+ONTAP Select data aggregates are configured to use RAID 0 because the physical RAID controller is providing RAID striping to the underlying drives. No other RAID levels are supported.
 
 == RAID controller configuration for local attached storage
 
@@ -35,7 +36,8 @@ All locally attached disks that provide ONTAP Select with backing storage must b
 
 NL-SAS and SATA drives require a different set of best practices. For performance reasons, the minimum number of disks is still eight, but the RAID group size should not be larger than 12 drives. NetApp also recommends using one spare per RAID group; however, global spares for all RAID groups can also be used. For example, you can use two spares for every three RAID groups, with each RAID group consisting of eight to 12 drives.
 
-*Note:* The maximum extent and datastore size for older ESX releases is 64TB, which can affect the number of LUNs necessary to support the total raw capacity provided by these large capacity drives.
+[NOTE]
+The maximum extent and datastore size for older ESX releases is 64TB, which can affect the number of LUNs necessary to support the total raw capacity provided by these large capacity drives.
 
 == RAID mode
 
@@ -92,7 +94,8 @@ Alternatively, one can start by creating a single datastore on a single LUN. Whe
 
 The initial cluster create can be used to create an ONTAP Select cluster consuming part or all of the space in the initial datastore. A second step is to perform one or more capacity addition operations using additional datastores until the desired total capacity is reached. This functionality is detailed in the section “Increasing the ONTAP Select Capacity Using ONTAP Deploy.”
 
-*Note:* VMFS overhead is nonzero (see VMware KB 1001618), and attempting to use the entire space reported as free by a datastore has resulted in spurious errors during cluster create operations.
+[NOTE]
+VMFS overhead is nonzero (see VMware KB 1001618), and attempting to use the entire space reported as free by a datastore has resulted in spurious errors during cluster create operations.
 
 Starting with ONTAP Deploy 2.7, a 2% buffer is left unused in each datastore. This space does not require a capacity license because it is not used by ONTAP Select. ONTAP Deploy automatically calculates the exact number of gigabytes for the buffer, as long as a capacity cap is not specified. If a capacity cap is specified, that size is enforced first. If the capacity cap size falls within the buffer size, the cluster create fails with an error message specifying the correct maximum size parameter that can be used as a capacity cap:
 
@@ -110,7 +113,8 @@ image:ST_10.jpg[Migrate]
 
 At the end of a Storage vMotion operation, ONTAP Deploy should be used to trigger a cluster refresh operation. The purpose of this operation is to update the ONTAP Deploy database of the ONTAP Select node’s new location.
 
-*Note:* Although support for Storage vMotion provides a lot of flexibility, it is important that the new host can appropriately support the ONTAP Select node. If a RAID controller and DAS storage were used on the original host, a similar setup should exist on the new host. Severe performance issues can result if the ONTAP Select VM is rehosted on an unsuitable environment.
+[NOTE]
+Although support for Storage vMotion provides a lot of flexibility, it is important that the new host can appropriately support the ONTAP Select node. If a RAID controller and DAS storage were used on the original host, a similar setup should exist on the new host. Severe performance issues can result if the ONTAP Select VM is rehosted on an unsuitable environment.
 
 //David, do you have the information in the steps below? I am going to remove it here, but feel free to take it if you need it.
 
@@ -121,13 +125,15 @@ When using Storage vMotion, complete the following procedure:
 . Shut down the ONTAP Select VM. If this node is part of an HA pair, perform a storage failover first.
 . Clear the CD/DVD drive option.
 
-*Note:* This step does not apply if you installed ONTAP Select without using ONTAP Deploy.
+[NOTE]
+ This step does not apply if you installed ONTAP Select without using ONTAP Deploy.
 
 image:ST_11.jpg[Edit settings]
 
 . After the Storage vMotion operation completes, power on the ONTAP Select VM.
 
-*Note:* If this node is part of an HA pair, you can perform a manual giveback.
+[NOTE]
+If this node is part of an HA pair, you can perform a manual giveback.
 
 . Issue a cluster refresh operation with ONTAP Deploy and make sure that it is successful.
 
@@ -137,8 +143,7 @@ image:ST_11.jpg[Edit settings]
 
 At its core, ONTAP Select presents ONTAP with a set of virtual disks provisioned from one or more storage pools. ONTAP is presented with a set of virtual disks that it treats as physical, and the remaining portion of the storage stack is abstracted by the hypervisor. Figure 3 shows this relationship in more detail, highlighting the relationship between the physical RAID controller, the hypervisor, and the ONTAP Select VM.
 
-*Notes:*
-
+[NOTE]
 * RAID group and LUN configuration occur from within the server’s RAID controller software. This configuration is not required when using VSAN or external arrays.
 * Storage pool configuration occurs from within the hypervisor.
 * Virtual disks are created and owned by individual VMs; in this example, by ONTAP Select.
@@ -155,7 +160,8 @@ ONTAP Select breaks up the underlying attached storage into equal-sized virtual 
 
 For example, an ONTAP Select can assigned a datastore or LUN that is 31TB (the space remaining after the VM is deployed and the system and root disks are provisioned). Then four ~7.75TB virtual disks are created and assigned to the appropriate ONTAP local and mirror plex.
 
-*Note:* Adding capacity to an ONTAP Select VM likely results in VMDKs of different sizes. For details, see the section link:ct_stor_capacity_inc.html[Increasing storage capacity]. Unlike FAS systems, different sized VMDKs can exist in the same aggregate. ONTAP Select uses a RAID 0 stripe across these VMDKs, which results in the ability to fully use all the space in each VMDK regardless of its size.
+[NOTE]
+Adding capacity to an ONTAP Select VM likely results in VMDKs of different sizes. For details, see the section link:ct_stor_capacity_inc.html[Increasing storage capacity]. Unlike FAS systems, different sized VMDKs can exist in the same aggregate. ONTAP Select uses a RAID 0 stripe across these VMDKs, which results in the ability to fully use all the space in each VMDK regardless of its size.
 
 == Virtualized NVRAM
 
@@ -176,7 +182,8 @@ Because changed blocks are automatically stored within the RAID controller’s l
 
 The following figure shows the I/O path an incoming write takes. It highlights the difference between the physical layer (represented by the RAID controller cache and disks) and the virtual layer (represented by the VM’s NVRAM and data virtual disks).
 
-*Note:* Although blocks changed on the NVRAM VMDK are cached in the local RAID controller cache, the cache is not aware of the VM construct or its virtual disks. It stores all changed blocks on the system, of which NVRAM is only a part. This includes write requests bound for the hypervisor, if it is provisioned from the same backing spindles.
+[NOTE]
+Although blocks changed on the NVRAM VMDK are cached in the local RAID controller cache, the cache is not aware of the VM construct or its virtual disks. It stores all changed blocks on the system, of which NVRAM is only a part. This includes write requests bound for the hypervisor, if it is provisioned from the same backing spindles.
 
 *Incoming writes to ONTAP Select VM*
 

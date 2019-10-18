@@ -27,13 +27,15 @@ ONTAP Select internal network traffic occurs using virtual interfaces defined wi
 
 The following figure depicts a possible switch configuration used by one node in a multinode ONTAP Select cluster. In this example, the physical NICs used by the vSwitches hosting both the internal and external network port groups are cabled to the same upstream switch. Switch traffic is kept isolated using broadcast domains contained within separate VLANs.
 
-*Note:* For the ONTAP Select internal network, tagging is done at the port group level. While the following example uses VGT for the external network, both VGT and VST are supported on that port group.
+[NOTE]
+For the ONTAP Select internal network, tagging is done at the port group level. While the following example uses VGT for the external network, both VGT and VST are supported on that port group.
 
 *Network configuration using shared physical switch*
 
 image:DDN_06.jpg[Network configuration using shared physical switch]
 
-*Note:* In this configuration, the shared switch becomes a single point of failure. If possible, multiple switches should be used to prevent a physical hardware failure from causing a cluster network outage.
+[NOTE]
+In this configuration, the shared switch becomes a single point of failure. If possible, multiple switches should be used to prevent a physical hardware failure from causing a cluster network outage.
 
 == Multiple physical switches
 
