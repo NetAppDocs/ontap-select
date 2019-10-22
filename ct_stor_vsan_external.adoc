@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ct_stor_vsan_external.html
-keywords: ontap select
+keywords: ontap select, vsan and external array configurations, vnas architecture
 summary: xxx
 ---
 
@@ -13,18 +13,13 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select clusters are supported on VSAN, some HCI products, NetApp HCI technology, and external array types of datastores.
+ONTAP Select clusters are supported on VSAN, some HCI products, NetApp HCI technology, and external array types of datastores. This deployment model is generally referred to as virtual NAS or vNAS. In these configurations, datastore resiliency is provided by the underlying infrastructure. The minimum requirement is that the underlying configuration is supported by VMware and, therefore, should be listed on the respective VMware HCLs.
 
-This deployment model is generally referred to as virtual NAS or vNAS. In these configurations, datastore resiliency is assumed to be provided by the underlying infrastructure. The minimum requirement is that the underlying configuration is supported by VMware and, therefore, should be listed on the respective VMware HCLs.
-
-== vNAS architectures
+== vNAS architecture
 
 The vNAS nomenclature is used for all setups that do not use DAS. For multinode ONTAP Select clusters, this includes architectures for which the two ONTAP Select nodes in the same HA pair share a single datastore (including vSAN datastores). The nodes can also be installed on separate datastores from the same shared external array. This allows for array-side storage efficiencies to reduce the overall footprint of the entire ONTAP Select HA pair. The architecture of ONTAP Select vNAS solutions is very similar to that of ONTAP Select on DAS with a local RAID controller. That is to say that each ONTAP Select node continues to have a copy of its HA partner’s data. ONTAP storage efficiency policies are node scoped. Therefore, array side storage efficiencies are preferable because they can potentially be applied across data sets from both ONTAP Select nodes.
 
 It is also possible that each ONTAP Select node in an HA pair uses a separate external array. This is a common choice when using ONTAP Select Metrocluster SDS with external storage.
-
-[NOTE]
-Metrocluster SDS support for vNAS requires ONTAP Select 9.5 and ONTAP Deploy 2.10.1.
 
 When using separate external arrays for each ONTAP Select node, it is very important that the two arrays provide similar performance characteristics to the ONTAP Select VM.
 
@@ -84,4 +79,4 @@ Two or more ONTAP Select nodes from the same ONTAP Select cluster could potentia
 
 Note that ONTAP Deploy does not proactively monitor the ONTAP Select VM locations. However, a cluster refresh operation reflects this unsupported configuration in the ONTAP Deploy logs:
 
-image:ST_17.png[ONTAP Deploy logs]
+image:ST_17.PNG[ONTAP Deploy logs]
