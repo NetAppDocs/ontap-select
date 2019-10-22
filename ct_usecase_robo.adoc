@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ct_usecase_robo.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, ROBO, remote office/branch office
+summary: Support smaller offices while maintaining centralized administration and control
 ---
 
 = Remote and branch office
@@ -13,19 +13,25 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-The ONTAP Select VM can be collocated with application VMs, making it an optimal solution for remote offices or branch offices (ROBOs).
+Deploy ONTAP Select in remote office/branch office (ROBO) situations to support smaller offices while maintaining centralized administration and control.
+
+The following ROBO configurations are supported on VMware ESXi:
+
+* Two-node cluster with HA capability
+
+* Single-node cluster
+
+The ONTAP Select VM can be collocated with application VMs, making it an optimal solution for ROBOs.
 
 Using ONTAP Select to provide enterprise-class file services while allowing bidirectional replication to other ONTAP Select or FAS clusters enables resilient solutions to be built in low-touch or low-cost environments. ONTAP Select comes prepopulated with feature licenses for CIFS, NFS, and iSCSI protocol services as well as both SnapMirror and SnapVault replication technologies. Therefore, all of these features are available immediately upon deployment.
 
-Starting with ONTAP Select 9.2 and ONTAP Deploy 2.4, all vSphere and VSAN licenses are now supported.
+[NOTE]
+Because all VMware vSphere licenses are supported, you can choose the vSphere Remote Office Branch Office Standard or Advanced license instead of the Enterprise or Enterprise Plus license.
+All vSphere and VSAN licenses are now supported.
 
-An ONTAP Select two-node cluster with a remote mediator is an attractive solution for small data centers. In this configuration, HA functionality is provided by ONTAP Select. The minimum networking requirement for a two-node ONTAP Select ROBO solution is four 1Gb links. Starting with ONTAP Select 9.3, a single 10Gb network connection is also supported.
+An ONTAP Select two-node cluster with a remote mediator is an attractive solution for small data centers. In this configuration, HA functionality is provided by ONTAP Select. The minimum networking requirement for a two-node ONTAP Select ROBO solution is four 1Gb links. A single 10Gb network connection is also supported. The vNAS ONTAP Select solution running on VSAN (including the two-node VSAN ROBO configuration) is another option. In this configuration, the HA functionality is provided by VSAN. Finally, a single-node ONTAP Select cluster replicating its data to a core location can provide a set of robust enterprise data management tools on top of a commodity server.
 
-The vNAS ONTAP Select solution running on VSAN (including the two-node VSAN ROBO configuration) is another option. In this configuration, the HA functionality is provided by VSAN. Finally, a single-node ONTAP Select cluster replicating its data to a core location can provide a set of robust enterprise data management tools on top of a commodity server.
-
-The following figure depicts a common remote office configuration using ONTAP Select.
-
-Schedule-driven SnapMirror relationships periodically replicate the data from the remote office to a single consolidated engineered storage array located in the main data center.
+The following figure depicts a common remote office configuration using ONTAP Select. Schedule-driven SnapMirror relationships periodically replicate the data from the remote office to a single consolidated engineered storage array located in the main data center.
 
 *Scheduled backup of remote office to corporate data center*
 

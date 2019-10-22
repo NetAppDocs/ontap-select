@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: ct_usecase_overview.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, business use case overview, deployment, storage, development and testing
+summary: overview of use cases
 ---
 
-= Business needs and possible usage scenarios
+= Business needs and usage scenarios
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,38 +15,28 @@ summary: xxx
 [.lead]
 ONTAP Select is suitable for several different types of applications based on the inherent flexibility provided through the hypervisor virtualization.
 
-== Private cloud
+== Deployment
 
-ONTAP Select is ideally suited to supporting one or more private clouds within your organization. Like the public cloud, a private cloud provides flexibility as well as rapid setup and teardown. In addition, a private cloud offers improved security and control.
+From a high level, you can deploy ONTAP Select in two different ways regarding the workload on the hypervisor host servers.
 
-== Disaster recovery and secondary storage
+=== Dedicated deployment
+With the dedicated deployment model, a single instance of ONTAP Select runs on the host server. No other significant processing runs on the same hypervisor host.
+
+=== Collocated deployment
+With the collocated deployment model, ONTAP Select shares the host with other workloads. Specifically, there are additional virtual machines, each typically running computational applications. These compute workloads are local to the ONTAP Select cluster. This model supports specialized application and deployment requirements. As with the dedicated deployment model, each ONTAP Select virtual machine must run on a separate and dedicated hypervisor host.
+
+== Storage
+
+ONTAP Select can be used as primary or secondary storage, depending on your business needs.
+
+=== Primary storage
+
+In certain cases, you may choose to deploy ONTAP Select as your primary storage platform. These types of implementations vary and depend on the workload characteristics of the applications as well as your business objectives.
+
+=== Disaster recovery and secondary storage
 
 You can use ONTAP Select to implement additional storage that augments your primary storage capabilities. The additional storage can be used to support your organization’s disaster recovery efforts and data backup plans.
 
 == Development and testing
 
 As you deploy various applications within your organization, you can use ONTAP Select as an integral part of the overall application development and testing process. For example, you may need temporary storage to hold test input or output data. The length of these types of deployments can vary based on the application characteristics and requirements.
-
-== Primary storage
-
-In certain cases, you may choose to deploy ONTAP Select as your primary storage platform. These types of implementations vary and depend on the workload characteristics of the applications as well as your business objectives.
-
-== Remote office/branch office
-
-You can deploy ONTAP Select in remote office/branch office (ROBO) situations to support smaller offices while maintaining centralized administration and control. The following ROBO configurations are supported on VMware ESXi:
-
-* Two-node cluster with HA capability
-
-* Single-node cluster
-
-Because all VMware vSphere licenses are supported, you can choose the vSphere Remote Office Branch Office Standard or Advanced license instead of the Enterprise or Enterprise Plus license.
-
-== Dedicated versus collocated
-
-From a high level, you can deploy ONTAP Select in two different ways regarding the workload on the hypervisor host servers.
-
-* Dedicated deployment
-With the dedicated deployment model, a single instance of ONTAP Select runs on the host server. No other significant processing runs on the same hypervisor host.
-
-* Collocated deployment
-With the collocated deployment model, ONTAP Select shares the host with other workloads. Specifically, there are additional virtual machines, each typically running computational applications. These compute workloads are therefore local to the ONTAP Select cluster. This model supports specialized application and deployment requirements. As with the dedicated deployment model, each ONTAP Select virtual machine must run on a separate and dedicated hypervisor host.
