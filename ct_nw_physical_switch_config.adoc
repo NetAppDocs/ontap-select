@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ct_nw_physical_switch_config.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, upstream physical switch configuration
+summary: physical switch configuration details
 ---
 
 = Physical switch configuration
@@ -13,11 +13,9 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Careful consideration should be taken when making connectivity decisions from the virtual switch layer to physical switches.
+Upstream physical switch configuration details based on single-switch and multi-switch environments.
 
-Separation of internal cluster traffic from external data services should extend to the upstream physical networking layer through isolation provided by layer-2 VLANs.
-
-This section covers upstream physical switch configurations based on single-switch and multiswitch environments.
+Careful consideration should be taken when making connectivity decisions from the virtual switch layer to physical switches. Separation of internal cluster traffic from external data services should extend to the upstream physical networking layer through isolation provided by layer-2 VLANs.
 
 Physical switch ports should be configured as trunkports. ONTAP Select external traffic can be separated across multiple layer-2 networks in one of two ways. One method is by using ONTAP VLAN-tagged virtual ports with a single port group. The other method is by assigning separate port groups in VST mode to management port e0a. You must also assign data ports to e0b and e0c/e0g depending on the ONTAP Select release and the single-node or multinode configuration. If the external traffic is separated across multiple layer-2 networks, the uplink physical switch ports should have those VLANs in its allowed VLAN list.
 

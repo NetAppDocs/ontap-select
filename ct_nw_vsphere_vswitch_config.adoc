@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ct_nw_vsphere_vswitch_config.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, standard and distributed vSwitch configurations, vSwitch configuration and load-balancing policies
+summary: ontap select vSwitch configuration and load-balancing policies for two-nic and four-nic configurations
 ---
 
 = VMWare vSphere vSwitch Configuration
@@ -13,13 +13,13 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select supports the use of both standard and distributed vSwitch configurations.
+VSwitch configuration and load-balancing policies for two-NIC and four-NIC configurations.
 
-This section describes the vSwitch configuration and load-balancing policies that should be used in both two-NIC and four-NIC configurations.
+ONTAP Select supports the use of both standard and distributed vSwitch configurations. This section describes the vSwitch configuration and load-balancing policies that should be used in both two-NIC and four-NIC configurations.
 
 == Standard vSwitch
 
-All vSwitch configurations require a minimum of two physical network adapters bundled into a single NIC team. ONTAP Select 9.3 and newer releases support a single 10Gb link for two-node clusters. However, it is a NetApp best practice to make sure of hardware redundancy through NIC aggregation.
+All vSwitch configurations require a minimum of two physical network adapters bundled into a single NIC team. ONTAP Select supports a single 10Gb link for two-node clusters. However, it is a NetApp best practice to make sure of hardware redundancy through NIC aggregation.
 
 On a vSphere server, NIC teams are the aggregation construct used to bundle multiple physical network adapters into a single logical channel, allowing the network load to be shared across all member ports. It’s important to remember that NIC teams can be created without support from the physical switch. Load-balancing and failover policies can be applied directly to a NIC team, which is unaware of the upstream switch configuration. In this case, policies are only applied to outbound traffic.
 
@@ -32,7 +32,7 @@ For multinode clusters, ONTAP Deploy configures each ONTAP Select VM to use one 
 
 == Standard or distributed vSwitch and four physical ports per Node
 
-Starting with ONTAP Select 9.6 and ONTAP Deploy 2.12, four port groups can be assigned to each node in a multinode cluster. Each port group has a single active physical port and three standby physical ports as in the following figure.
+Four port groups can be assigned to each node in a multinode cluster. Each port group has a single active physical port and three standby physical ports as in the following figure.
 
 *vSwitch with four physical ports per node*
 
@@ -51,7 +51,7 @@ The order of the ports in the standby list is important. The following table pro
 | Standby 3 | vmnic3 | vmnic2 | vmnic1 | vmnic0
 |===
 
-The following figures show the configurations of the external network port groups from the vCenter GUI (ONTAP-External and ONTAP-External2). Note that the active adapters are from different network cards. In this setup, vmnic 4 and vmnic 5 are dual ports on the same physical NIC, while vmnic 6 and vminc 7 are similarly dual ports on a separate NIC (vnmics 0 through 3 are not used in this example).The order of the standby adapters provides a hierarchical fail over with the ports from the internal network being last. The order of internal ports in the standby list is similarly swapped between the two external port groups.
+The following figures show the configurations of the external network port groups from the vCenter GUI (ONTAP-External and ONTAP-External2). Note that the active adapters are from different network cards. In this setup, vmnic 4 and vmnic 5 are dual ports on the same physical NIC, while vmnic 6 and vminc 7 are similarly dual ports on a separate NIC (vnmics 0 through 3 are not used in this example). The order of the standby adapters provides a hierarchical fail over with the ports from the internal network being last. The order of internal ports in the standby list is similarly swapped between the two external port groups.
 
 *Part 1: ONTAP Select external port group configurations*
 

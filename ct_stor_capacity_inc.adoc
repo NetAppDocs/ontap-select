@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ct_stor_capacity_inc.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, deploy, increase storage
+summary: deploy can increase storage for ontap select clusters
 ---
 
 = Increasing storage capacity
@@ -49,7 +49,7 @@ Two additional storage-add operations on node 1 consume the rest of datastore 1 
 
 image:ST_07.jpg[Capacity distribution: allocation and free space after two additional storage-add operation for node 1]
 
-Starting with ONTAP Deploy 2.7 and ONTAP Select 9.3, the maximum VMDK size used during capacity add operations is 16TB. The maximum VMDK size used during cluster create operations continues to be 8TB. ONTAP Deploy creates correctly sized VMDKs depending on your configuration (a single-node or multinode cluster) and the amount of capacity being added. However, the maximum size of each VMDK should not exceed 8TB during the cluster create operations and 16TB during the storage-add operations.
+The maximum VMDK size used during capacity add operations is 16TB. The maximum VMDK size used during cluster create operations continues to be 8TB. ONTAP Deploy creates correctly sized VMDKs depending on your configuration (a single-node or multinode cluster) and the amount of capacity being added. However, the maximum size of each VMDK should not exceed 8TB during the cluster create operations and 16TB during the storage-add operations.
 
 == Increasing capacity for ONTAP Select with Software RAID
 

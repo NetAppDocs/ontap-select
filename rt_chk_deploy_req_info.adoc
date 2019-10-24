@@ -1,8 +1,8 @@
 ---
 bar: sidebar
 permalink: rt_chk_deploy_req_info.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, deploy, pre-installation, vmware
+summary: deploy preparation in a vmware environment
 ---
 
 = Required information for Deploy utility installation
@@ -13,11 +13,11 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Before installing the Deploy administration utility in a VMware environment, you should review the basic requirements and prepare for the deployment to assure success.
+Before installing the Deploy administration utility in a VMware environment, review the basic requirements and prepare for successful deployment.
 
 == Requirements and restrictions for a deployment
 
-There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a VMware environment.
+There are several requirements and restrictions to consider when installing the ONTAP Select Deploy utility in a VMware environment.
 
 === ESXi host server hardware requirements
 
@@ -60,39 +60,39 @@ If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter 
 
 As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
 
-*Name of the Deploy virtual machine*
-Name to use for the virtual machine.
+Name of the Deploy virtual machine::
+Identifier to use for the virtual machine.
 
-*Name of the ESXi host*
-VMware ESXi host where the Deploy utility is installed.
+Name of the ESXi host::
+Identifier for the VMware ESXi host where the Deploy utility is installed.
 
-*Name of the datastore*
-VMware datastore holding the virtual machine files (approximately 40 GB is required).
+Name of the datastore::
+Identifier for the VMware datastore holding the virtual machine files (approximately 40 GB is required).
 
-*Network for the virtual machine*
-Network where the Deploy virtual machine is connected.
+Network for the virtual machine::
+Identifier for the Network where the Deploy virtual machine is connected.
 
 == Optional network configuration information
 
 The Deploy virtual machine is configured using DHCP by default. However, if needed, you can manually configure the network interface for the virtual machine.
 
-*Host name*
-Name of the host.
+Host name::
+Identifier of the host machine.
 
-*Host IP address*
-Static IPv4 address.
+Host IP address::
+Static IPv4 address of the host machine.
 
-*Subnet mask*
+Subnet mask::
 Subnetwork mask, based on the network the virtual machine is a part of.
 
-*Gateway*
+Gateway::
 Default gateway or router.
 
-*Primary DNS server*
+Primary DNS server::
 Primary Domain Name Server.
 
-*Secondary DNS server*
+Secondary DNS server::
 Secondary Domain Name Server.
 
-*Search domains*
-Search domains to use.
+Search domains::
+List of the search domains to use.
