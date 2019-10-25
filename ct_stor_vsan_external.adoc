@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_stor_vsan_external.html
 keywords: ontap select, vsan and external array configurations, vnas architecture
-summary: xxx
+summary: vnas deployments provide datastore resiliency
 ---
 
 = VSAN and external array configurations
@@ -13,7 +13,9 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select clusters are supported on VSAN, some HCI products, NetApp HCI technology, and external array types of datastores. This deployment model is generally referred to as virtual NAS or vNAS. In these configurations, datastore resiliency is provided by the underlying infrastructure. The minimum requirement is that the underlying configuration is supported by VMware and, therefore, should be listed on the respective VMware HCLs.
+Virtual NAS (vNAS) deployments support ONTAP Select clusters on VSAN, some HCI products, NetApp HCI technology, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
+
+The minimum requirement is that the underlying configuration is supported by VMware and should be listed on the respective VMware HCLs.
 
 == vNAS architecture
 
@@ -23,7 +25,7 @@ It is also possible that each ONTAP Select node in an HA pair uses a separate ex
 
 When using separate external arrays for each ONTAP Select node, it is very important that the two arrays provide similar performance characteristics to the ONTAP Select VM.
 
-== vNAS architectures versus local DAS with hardware RAID controllers
+=== vNAS architectures versus local DAS with hardware RAID controllers
 
 The vNAS architecture is logically most similar to the architecture of a server with DAS and a RAID controller. In both cases, ONTAP Select consumes datastore space. That datastore space is carved into VMDKs, and these VMDKs form the traditional ONTAP data aggregates. ONTAP Deploy makes sure that the VMDKs are properly sized and assigned to the correct plex (in the case of HA pairs) during cluster -create and storage-add operations.
 
@@ -37,9 +39,7 @@ For DAS setups with a hardware RAID controller, the hardware RAID controller cac
 
 For VNAS architectures, ONTAP Deploy automatically configures ONTAP Select nodes with a boot argument called Single Instance Data Logging (SIDL). When this boot argument is present, ONTAP Select bypasses the NVRAM and writes the data payload directly to the data aggregate. The NVRAM is only used to record the address of the blocks changed by the WRITE operation. The benefit of this feature is that it avoids a double write: one write to NVRAM and a second write when the NVRAM is destaged. This feature is only enabled for vNAS because local writes to the RAID controller cache have a negligible additional latency.
 
-The SIDL feature is not compatible with all ONTAP Select storage efficiency features. See Table 3 for an overview of all storage efficiency policies available with ONTAP Select.
-
-The SIDL feature can be disabled at the aggregate level using the following command:
+The SIDL feature is not compatible with all ONTAP Select storage efficiency features. The SIDL feature can be disabled at the aggregate level using the following command:
 
 ----
 storage aggregate modify -aggregate aggr-name -single-instance-data-logging off
@@ -53,9 +53,9 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 
 == Collocating ONTAP Select Nodes When Using vNAS
 
-ONTAP Select 9.4 and ONTAP Deploy 2.8 include support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy 2.8 enables the configuration of multiple ONTAP Select nodes on the same ESX host as long as these nodes are not part of the same cluster. Note that this configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
+ONTAP Select includes support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy enables the configuration of multiple ONTAP Select nodes on the same ESX host as long as these nodes are not part of the same cluster. Note that this configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
 
-ONTAP Deploy 2.8 makes sure that the initial deployment of the multinode VNAS cluster does not place multiple ONTAP Select instances from the same cluster on the same host. The following figure shows for an example of a correct deployment of two four-node clusters that intersect on two hosts.
+ONTAP Deploy makes sure that the initial deployment of the multinode VNAS cluster does not place multiple ONTAP Select instances from the same cluster on the same host. The following figure shows for an example of a correct deployment of two four-node clusters that intersect on two hosts.
 
 *Initial deployment of multinode VNAS clusters*
 

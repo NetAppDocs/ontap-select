@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: rt_chk_select_req_info.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, pre-installation, vmware
+summary: prepare to deploy an ontap select cluster in a vmware environment
 ---
 
 = Required information for ONTAP Select installation
@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-As part of preparing to deploy an ONTAP Select cluster in a VMware environment, you must collect information required when using the ONTAP Select Deploy administration utility to deploy and configure the cluster.
+As part of preparing to deploy an ONTAP Select cluster in a VMware environment, collect the information required when using the ONTAP Select Deploy administration utility to deploy and configure the cluster.
 
 Some of the information you collect applies to the cluster itself, while other information applies to the individual nodes in the cluster.
 
@@ -21,16 +21,13 @@ Some of the information you collect applies to the cluster itself, while other i
 
 You must collect information related to the ONTAP Select cluster.
 
-*Name of the cluster*
+Name of the cluster::
+Unique identifier of the cluster.
 
-Unique name of the cluster.
-
-*Licensing mode*
-
+Licensing mode::
 Evaluation or purchased licensing.
 
-*IP configuration for the cluster*
-
+IP configuration for the cluster::
 IP configuration for the clusters and nodes, including:
 
 * Management IP address of the cluster
@@ -41,32 +38,25 @@ IP configuration for the clusters and nodes, including:
 
 You must collect information related to each of the nodes in the ONTAP Select cluster.
 
-*Name of the host*
+Name of the host::
+Unique identifier of the host.
 
-Unique name of the host.
-
-*Domain name of the host*
-
+Domain name of the host::
 Fully qualified domain name of the host.
 
-*IP configuration for the nodes*
+IP configuration for the nodes::
+Management IP address for each node in the cluster.
 
-Management IP address of each node in the cluster.
-
-*Mirror node*
-
+Mirror node::
 Name of the associated node in the HA pair (multi-node clusters only).
 
-*Storage pool*
-
+Storage pool::
 Name of the storage pool that is used.
 
-*Storage disks*
-
+Storage disks::
 List of disks if using software RAID.
 
-*Serial number*
-
+Serial number::
 If you are deploying with a purchased license, the unique nine-digit serial number provided by NetApp.
 
 == Access to a vCenter server
@@ -117,4 +107,4 @@ All privileges in the category
 
 *vApp*
 
-All privileges in the category
+* All privileges in the category

@@ -35,4 +35,4 @@ ONTAP Select MetroCluster SDS provides the following benefits:
 
 image:MCSDS_01.jpg[Private cloud built on DAS]
 
-For more best practices and other requirements, see the sections link:ct_ha_config.html#two-node-ha-versus-multi-node-ha[Two-node HA versus multi-node HA] and link:rt_plan_best_practices.html[Two-node stretched HA (MetroCluster SDS) best practices].
+For more best practices and other requirements, see the sections link:ct_ha_config.html#two-node-ha-versus-multi-node-ha[Two-node HA versus multi-node HA] and link:rt_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices].

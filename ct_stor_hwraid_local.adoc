@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ct_stor_hwraid_local.html
-keywords: ontap select
+keywords: ontap select, hardware raid, performance boost, protection
 summary: xxx
 ---
 
@@ -13,9 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-If a hardware RAID controller is present, then ONTAP Select can take advantage of it and its local cache to achieve both a write performance boost and the added benefit of protection against physical drive failures.
-
-It does this by moving RAID services to the hardware controller. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
+When a hardware RAID controller is available, ONTAP Select can move RAID services to the hardware controller for both a write performance boost and protection against physical drive failures. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
 
 [NOTE]
 ONTAP Select data aggregates are configured to use RAID 0 because the physical RAID controller is providing RAID striping to the underlying drives. No other RAID levels are supported.
@@ -34,7 +32,7 @@ The RAID controller that manages the ONTAP Select disks must meet the following 
 
 All locally attached disks that provide ONTAP Select with backing storage must be placed into RAID groups running RAID 5 or RAID 6. For SAS drives and SSDs, using RAID groups of up to 24 drives allows ONTAP to reap the benefits of spreading incoming read requests across a higher number of disks. Doing so provides a significant gain in performance. With SAS/SSD configurations, performance testing was performed against single-LUN versus multi-LUN configurations. No significant differences were found, so, for simplicity’s sake, NetApp recommends creating the fewest number of LUNs necessary to support your configuration needs.
 
-NL-SAS and SATA drives require a different set of best practices. For performance reasons, the minimum number of disks is still eight, but the RAID group size should not be larger than 12 drives. NetApp also recommends using one spare per RAID group; however, global spares for all RAID groups can also be used. For example, you can use two spares for every three RAID groups, with each RAID group consisting of eight to 12 drives.
+NL-SAS and SATA drives require a different set of best practices. For performance reasons, the minimum number of disks is still eight, but the RAID group size should not be larger than 12 drives. NetApp also recommends using one spare per RAID group; however, global spares for all RAID groups can be used. For example, you can use two spares for every three RAID groups, with each RAID group consisting of eight to 12 drives.
 
 [NOTE]
 The maximum extent and datastore size for older ESX releases is 64TB, which can affect the number of LUNs necessary to support the total raw capacity provided by these large capacity drives.
@@ -92,56 +90,24 @@ Multiple file system extents can be used to create a single datastore up to the 
 
 Alternatively, one can start by creating a single datastore on a single LUN. When additional space requiring a larger ONTAP Select capacity license is needed, then that space can be added to the same datastore as an extent, up to the maximum size of the datastore. After the maximum size is reached, new datastores can be created and added to ONTAP Select. Both types of capacity extension operations are supported and can be achieved by using the ONTAP Deploy storage-add functionality. Each ONTAP Select node can be configured to support up to 400TB of storage. Provisioning capacity from multiple datastores requires a two-step process.
 
-The initial cluster create can be used to create an ONTAP Select cluster consuming part or all of the space in the initial datastore. A second step is to perform one or more capacity addition operations using additional datastores until the desired total capacity is reached. This functionality is detailed in the section “Increasing the ONTAP Select Capacity Using ONTAP Deploy.”
+The initial cluster create can be used to create an ONTAP Select cluster consuming part or all of the space in the initial datastore. A second step is to perform one or more capacity addition operations using additional datastores until the desired total capacity is reached. This functionality is detailed in the section link:ct_stor_capacity_inc.html[Increasing storage capacity].
 
 [NOTE]
 VMFS overhead is nonzero (see VMware KB 1001618), and attempting to use the entire space reported as free by a datastore has resulted in spurious errors during cluster create operations.
 
-Starting with ONTAP Deploy 2.7, a 2% buffer is left unused in each datastore. This space does not require a capacity license because it is not used by ONTAP Select. ONTAP Deploy automatically calculates the exact number of gigabytes for the buffer, as long as a capacity cap is not specified. If a capacity cap is specified, that size is enforced first. If the capacity cap size falls within the buffer size, the cluster create fails with an error message specifying the correct maximum size parameter that can be used as a capacity cap:
+A 2% buffer is left unused in each datastore. This space does not require a capacity license because it is not used by ONTAP Select. ONTAP Deploy automatically calculates the exact number of gigabytes for the buffer, as long as a capacity cap is not specified. If a capacity cap is specified, that size is enforced first. If the capacity cap size falls within the buffer size, the cluster create fails with an error message specifying the correct maximum size parameter that can be used as a capacity cap:
 
 ----
 “InvalidPoolCapacitySize: Invalid capacity specified for storage pool “ontap-select-storage-pool”, Specified value: 34334204 GB. Available (after leaving 2% overhead space): 30948”
 ----
 
-Starting with ONTAP Select 9.3 and ONTAP Deploy 2.7, VMFS 6 is supported for both new installations and as the target of a Storage vMotion operation of an existing ONTAP Deploy or ONTAP Select VM.
+VMFS 6 is supported for both new installations and as the target of a Storage vMotion operation of an existing ONTAP Deploy or ONTAP Select VM.
 
 VMware does not support in-place upgrades from VMFS 5 to VMFS 6. Therefore, Storage vMotion is the only mechanism that allows any VM to transition from a VMFS 5 datastore to a VMFS 6 datastore. However, support for Storage vMotion with ONTAP Select and ONTAP Deploy was expanded to cover other scenarios besides the specific purpose of transitioning from VMFS 5 to VMFS 6.
 
-For ONTAP Select VMs, support for Storage vMotion includes both single-node and multinode clusters and includes both storage-only and compute and storage migrations.
-
-image:ST_10.jpg[Migrate]
-
-At the end of a Storage vMotion operation, ONTAP Deploy should be used to trigger a cluster refresh operation. The purpose of this operation is to update the ONTAP Deploy database of the ONTAP Select node’s new location.
-
-[NOTE]
-Although support for Storage vMotion provides a lot of flexibility, it is important that the new host can appropriately support the ONTAP Select node. If a RAID controller and DAS storage were used on the original host, a similar setup should exist on the new host. Severe performance issues can result if the ONTAP Select VM is rehosted on an unsuitable environment.
-
-//David, do you have the information in the steps below? I am going to remove it here, but feel free to take it if you need it.
-
-When using Storage vMotion, complete the following procedure:
-
-.Steps
-
-. Shut down the ONTAP Select VM. If this node is part of an HA pair, perform a storage failover first.
-. Clear the CD/DVD drive option.
-
-[NOTE]
- This step does not apply if you installed ONTAP Select without using ONTAP Deploy.
-
-image:ST_11.jpg[Edit settings]
-
-. After the Storage vMotion operation completes, power on the ONTAP Select VM.
-
-[NOTE]
-If this node is part of an HA pair, you can perform a manual giveback.
-
-. Issue a cluster refresh operation with ONTAP Deploy and make sure that it is successful.
-
-. Back up the ONTAP Deploy database.
-
 == ONTAP Select virtual disks
 
-At its core, ONTAP Select presents ONTAP with a set of virtual disks provisioned from one or more storage pools. ONTAP is presented with a set of virtual disks that it treats as physical, and the remaining portion of the storage stack is abstracted by the hypervisor. Figure 3 shows this relationship in more detail, highlighting the relationship between the physical RAID controller, the hypervisor, and the ONTAP Select VM.
+At its core, ONTAP Select presents ONTAP with a set of virtual disks provisioned from one or more storage pools. ONTAP is presented with a set of virtual disks that it treats as physical, and the remaining portion of the storage stack is abstracted by the hypervisor. The following figure shows this relationship in more detail, highlighting the relationship between the physical RAID controller, the hypervisor, and the ONTAP Select VM.
 
 [NOTE]
 * RAID group and LUN configuration occur from within the server’s RAID controller software. This configuration is not required when using VSAN or external arrays.
@@ -169,7 +135,7 @@ NetApp FAS systems are traditionally fitted with a physical NVRAM PCI card, a hi
 
 Commodity systems are not typically fitted with this type of equipment. Therefore, the functionality of this NVRAM card has been virtualized and placed into a partition on the ONTAP Select system boot disk. It is for this reason that placement of the system virtual disk of the instance is extremely important. This is also why the product requires the presence of a physical RAID controller with a resilient cache for local attached storage configurations.
 
-Starting with new installations of ONTAP Select 9.5 on ESXi 6.5 U2 and newer, NVRAM is placed on its own VMDK. Prior versions of ONTAP Select, instances that are upgraded to version 9.5, or instances of ONTAP Select 9.5 on older versions of ESXi use the 9.9GB boot disk for their NVRAM partitions. Splitting the NVRAM in its own VMDK allows the ONTAP Select VM to use the vNVMe driver to communicate with its NVRAM VMDK. It also requires that the ONTAP Select VM uses hardware version 13, which is compatible with ESX 6.5 and newer.
+NVRAM is placed on its own VMDK. Splitting the NVRAM in its own VMDK allows the ONTAP Select VM to use the vNVMe driver to communicate with its NVRAM VMDK. It also requires that the ONTAP Select VM uses hardware version 13, which is compatible with ESX 6.5 and newer.
 
 == Data path explained: NVRAM and RAID controller
 The interaction between the virtualized NVRAM system partition and the RAID controller can be best highlighted by walking through the data path taken by a write request as it enters the system.
@@ -189,4 +155,4 @@ Although blocks changed on the NVRAM VMDK are cached in the local RAID controlle
 
 image:ST_13.jpg[Incoming writes to ONTAP Select VM]
 
-Note that, starting with new installations of ONTAP Select 9.5 on ESX version 6.5 U2 or later, the NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 6.5 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.
+Note that the NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 6.5 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.

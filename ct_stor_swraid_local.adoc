@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ct_stor_swraid_local.html
-keywords: ontap select
+keywords: ontap select, software raid, local attached storage, protection
 summary: xxx
 ---
 
@@ -13,19 +13,21 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Independent of the hardware RAID configurations, ONTAP Select also provides a software RAID option.
+Software RAID is a RAID abstraction layer implemented within the ONTAP software stack. It provides the same functionality as the RAID layer within a traditional ONTAP platform such as FAS. The RAID layer performs drive parity calculations and provides protection against individual drive failures within an ONTAP Select node.
 
-Software RAID is a RAID abstraction layer implemented within the ONTAP software stack. It provides the same functionality as the RAID layer within a traditional ONTAP platform such as FAS. The RAID layer performs drive parity calculations and provides protection against individual drive failures within an ONTAP Select node. A hardware RAID controller might not be available or might be undesirable in certain environments, such as when ONTAP Select is deployed on a small form-factor commodity hardware. Software RAID expands the available deployment options to include such environments. To enable software RAID in your environment, here are some points to remember:
+Independent of the hardware RAID configurations, ONTAP Select also provides a software RAID option. A hardware RAID controller might not be available or might be undesirable in certain environments, such as when ONTAP Select is deployed on a small form-factor commodity hardware. Software RAID expands the available deployment options to include such environments. To enable software RAID in your environment, here are some points to remember:
 
-* This feature is available starting with ONTAP Select 9.5 and Deploy 2.10, with the ESX hypervisor.
 * It is available with a Premium or Premium XL license.
 * It only supports SSD drives for ONTAP root and data disks.
 * It requires a separate system disk for the ONTAP Select VM boot partition.
 ** Choose a separate disk, either an SSD or an NVMe drive, to create a datastore for the system disks (NVRAM, Boot/CF card, Coredump, and Mediator in a multi-node setup).
 
-[NOTE]
-* The terms service disk and system disk are used interchangeably. Service disks are the VMDKs that are used within the ONTAP Select VM to service various items such as clustering, booting, and so on. Service disks are physically located on a single physical disk (collectively called the service/system physical disk) as seen from the host. That physical disk must contain a DAS datastore. ONTAP Deploy creates these service disks for the ONTAP Select VM during cluster deployment.
-* With the current release, it is not possible to further separate the ONTAP Select system disks across multiple datastores or across multiple physical drives.
+*Notes*
+
+* The terms service disk and system disk are used interchangeably.
+** Service disks are the VMDKs that are used within the ONTAP Select VM to service various items such as clustering, booting, and so on.
+** Service disks are physically located on a single physical disk (collectively called the service/system physical disk) as seen from the host. That physical disk must contain a DAS datastore. ONTAP Deploy creates these service disks for the ONTAP Select VM during cluster deployment.
+* It is not possible to further separate the ONTAP Select system disks across multiple datastores or across multiple physical drives.
 * Hardware RAID is not deprecated.
 
 == Software RAID configuration for local attached storage
@@ -61,7 +63,7 @@ With the current release, it is not possible to further separate the ONTAP Selec
 
 The data disks are presented to the ONTAP Select VM as raw disks through RDMs. RDMs contain metadata for managing and redirecting disk access to the physical device, which allows the host to pass SCSI commands from the VM directly to the physical disk drives. Each raw disk exposed is divided into three parts: a small root partition (stripe) and two equal-sized partitions to create two data disks seen within the ONTAP Select VM. Partitions use the Root Data Data (RD2) schemes as shown in the following figures for a single node cluster and a node in an HA pair, respectively.
 
-P denotes a parity drive. DP denotes a dual parity drive and S denotes a spare drive.
+`P` denotes a parity drive. `DP` denotes a dual parity drive and `S` denotes a spare drive.
 
 *RDD disk partitioning for single-node clusters*
 
@@ -82,7 +84,7 @@ Because the data disks on the ONTAP Select VM are associated with the underlying
 [NOTE]
 The root aggregate’s RAID group type depends on the number of disks available. ONTAP Deploy picks the appropriate RAID group type. If it has sufficient disks allocated to the node, it uses RAID-DP, otherwise it creates a RAID-4 root aggregate.
 
-When adding capacity to an ONTAP Select VM using software RAID, the administrator must consider the physical drive size and the number of drives required. For details, see the section, “Increasing capacity for ONTAP Select with Software RAID”.
+When adding capacity to an ONTAP Select VM using software RAID, the administrator must consider the physical drive size and the number of drives required. For details, see the section link:ct_stor_capacity_inc.html[Increasing storage capacity].
 
 Similar to FAS and AFF systems, only drives with equal or larger capacities can be added to an existing RAID group. Larger capacity drives are right sized. If you are creating new RAID groups, the new RAID group size should match the existing RAID group size to make sure that the overall aggregate performance does not deteriorate.
 
@@ -110,72 +112,6 @@ In the ESXi shell, you can enter the following command to blink the LED for a gi
 ----
 esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>
 ----
-
-== Replacing failed drives when using software RAID
-
-//David, do you want/need this section?
-
-In a manner similar to ONTAP on FAS and AFF, ONTAP Select uses a spare drive (if one is available) and starts the rebuild process automatically. If no spare drive is available, one should be added to the ONTAP Select node.
-
-Both the removal of the failed drive and the addition of a new drive (marked as a spare) must be performed through ONTAP Deploy. A sample workflow is provided below:
-
-.Steps
-
-. From the ONTAP Select CMD, identify the disk that has failed.
-----
-<cluster name>::> storage disk show -container-type broken
-Usable Disk Container Container
-Disk Size Shelf Bay Type Type Name Owner
----------------- ---------- ----- --- ------- ----------- --------- --------
-NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
-----
-
-. From the ONTAP Deploy GUI, perform the following actions to remove the broken drive:
-
-.. Go to the Clusters page and click the relevant cluster.
-
-image:ST_22.jpg[Node details]
-
-..  Click + to expand the storage view.
-
-image:ST_23.jpg[Edit node storage]
-
-.. Click Edit to make changes to the attached disks and uncheck the broken drive.
-
-image:ST_24.jpg[Storage disk details]
-
-.. Provide the cluster credentials and click Edit Storage.
-
-image:ST_25.jpg[ONTAP credentials]
-
-.. Confirm the operation.
-
-image:ST_26.jpg[Warning]
-
-. From the ONTAP Deploy GUI, perform the following actions to add a spare drive:
-
-.. Go to the Clusters page and click the relevant cluster.
-
-image:ST_27.jpg[HA pair]
-
-.. Click + to expand the storage view.
-
-image:ST_28.jpg[Edit node storage]
-
-.. Click Edit, check that the new drive is available, and then select it.
-
-image:ST_29.jpg[Storage disk details]
-
-.. Provide the cluster credentials and click Edit Storage.
-
-image:ST_30.jpg[Storage disk details]
-
-.. Confirm the operation.
-
-image:ST_31.jpg[Storage disk details]
-
-[NOTE]
-All drive addition and removal operations should be performed with ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
 
 == Multiple drive failures when using software RAID
 
@@ -229,8 +165,7 @@ shared NET-1.6 0 SSD - 418.0GB 894.3GB (normal)
 ----
 
 [NOTE]
-In order to test or simulate one or multiple drive failures, use the storage disk fail -disk NET-x.y -immediate command. If there is a spare in the system, the aggregate will begin to reconstruct. You can check the status of the reconstruction using the command “storage aggregate show”. You can remove the simulated failed drive using ONTAP Deploy. Note that ONTAP has marked the drive as Broken. The drive is not actually broken and can be added back using ONTAP Deploy. In order to erase the Broken label, enter the following commands in the ONTAP Select CLI:
-
+In order to test or simulate one or multiple drive failures, use the `storage disk fail -disk NET-x.y -immediate` command. If there is a spare in the system, the aggregate will begin to reconstruct. You can check the status of the reconstruction using the command `storage aggregate show`. You can remove the simulated failed drive using ONTAP Deploy. Note that ONTAP has marked the drive as `Broken`. The drive is not actually broken and can be added back using ONTAP Deploy. In order to erase the Broken label, enter the following commands in the ONTAP Select CLI:
 
 ----
 set diag
@@ -244,4 +179,4 @@ The output for the last command should be empty.
 
 NetApp FAS systems are traditionally fitted with a physical NVRAM PCI card. This card is a high-performing card containing nonvolatile flash memory that provides a significant boost in write performance. It does this by granting ONTAP the ability to immediately acknowledge incoming writes back to the client. It can also schedule the movement of modified data blocks back to slower storage media in a process known as destaging.
 
-Commodity systems are not typically fitted with this type of equipment. Therefore, the functionality of the NVRAM card has been virtualized and placed into a partition on the ONTAP Select system boot disk. It is for this reason that placement of the system virtual disk of the instance is extremely important. For environments using ESX 6.5, ONTAP Select 9.5 uses a virtual NVME driver for accessing the system disks regardless of whether the underlying disk is SSD or NVMe. However, NetApp only supports NVMe for the physical system disk.
+Commodity systems are not typically fitted with this type of equipment. Therefore, the functionality of the NVRAM card has been virtualized and placed into a partition on the ONTAP Select system boot disk. It is for this reason that placement of the system virtual disk of the instance is extremely important.
