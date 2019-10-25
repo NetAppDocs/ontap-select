@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: ct_perf_premium_ha_direct_ssd_96.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, performance
+summary: ontap select 9.6 performance: premium ha direct-attached ssd storage
 ---
 
-= ONTAP Select Performance: Premium HA direct-attached SSD storage - 9.6
+= ONTAP Select 9.6 performance: Premium HA direct-attached SSD storage
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -46,7 +46,7 @@ The following table lists the throughput measured against read/write workloads o
 | ONTAP 9.6 Select Medium instance with DAS (SSD) hardware RAID | 2038 MiBps | 520 MiBps | 578 MiBps | 325 MiBps | 399 MiBps
 |===
 
-== 64K Sequential Read
+=== 64K Sequential Read
 
 Details:
 
@@ -58,7 +58,7 @@ Details:
 * 32 volumes per node
 * 1 x files per proc; files are 12000MB each
 
-== 64K Sequential Write
+=== 64K Sequential Write
 
 Details:
 
@@ -70,7 +70,7 @@ Details:
 * volumes per node 32 (hardware RAID), 16 (software RAID)
 * 1 x files per proc; files are 30720MB each
 
-== 8K Random Read
+=== 8K Random Read
 
 Details:
 
@@ -82,7 +82,7 @@ Details:
 * volumes per node 32
 * 1 x files per proc; files are 12228MB each
 
-== 8K Random Write
+=== 8K Random Write
 
 Details:
 
@@ -94,7 +94,7 @@ Details:
 * volumes per node 32
 * 1 x files per proc; files are 8192MB each
 
-== 8K Random 50% Write 50% Read
+=== 8K Random 50% Write 50% Read
 
 Details:
 
