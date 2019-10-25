@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ct_ha_mirroring.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, ha, high availability, synchronous replication, mirrored aggregates, write path, raid syncmirror, rsm
+summary: prevent data loss using raid syncmirror, mirrored aggregates, and write path
 ---
 
 = HA RSM and mirrored aggregates
@@ -13,13 +13,13 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-HA synchronous replication, mirrored aggregates, and the write path.
+Prevent data loss using RAID SyncMirror (RSM), mirrored aggregates, and the write path.
 
 == Synchronous replication
 
-The ONTAP HA model is built on the concept of HA partners. As explained earlier in this document, ONTAP Select extends this architecture into the nonshared commodity server world by using the RAID SyncMirror (RSM) functionality that is present in ONTAP to replicate data blocks between cluster nodes, providing two copies of user data spread across an HA pair.
+The ONTAP HA model is built on the concept of HA partners. ONTAP Select extends this architecture into the nonshared commodity server world by using the RAID SyncMirror (RSM) functionality that is present in ONTAP to replicate data blocks between cluster nodes, providing two copies of user data spread across an HA pair.
 
-Starting with ONTAP Deploy 2.7 and ONTAP Select 9.3, a two-node cluster with a mediator can be used to span two data centers. For more information, see the section "Two-Node HA Versus Two-Node Stretched HA (MetroCluster SDS)."
+A two-node cluster with a mediator can span two data centers. For more information, see the section link:rt_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices].
 
 == Mirrored aggregates
 

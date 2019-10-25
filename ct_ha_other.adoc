@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ct_ha_other.html
-keywords: ontap select
+keywords: ontap select, ha, high availability, disk heartbeating, heartbeating, mailbox, failover, giveback
 summary: xxx
 ---
 
@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-HA disk heartbeating, HA mailbox, HA heartbeating, HA Failover, and Giveback.
+HA disk heartbeating, HA mailbox, HA heartbeating, HA Failover, and Giveback work to enhance data protection.
 
 == Disk heartbeating
 
