@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: rt_chk_select_req_info.html
 keywords: ontap select, pre-installation, vmware
-summary: prepare to deploy an ontap select cluster in a vmware environment
+summary: As part of preparing to deploy an ONTAP Select cluster in a VMware environment, collect the information required when using the ONTAP Select Deploy administration utility to deploy and configure the cluster.
 ---
 
 = Required information for ONTAP Select installation

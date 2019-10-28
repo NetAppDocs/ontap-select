@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection
-summary: xxx
+summary: When a hardware RAID controller is available, ONTAP Select can move RAID services to the hardware controller for both a write performance boost and protection against physical drive failures. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
 ---
 
 = Hardware RAID services for local attached storage

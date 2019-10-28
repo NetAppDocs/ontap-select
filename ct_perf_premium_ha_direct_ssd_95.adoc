@@ -15,7 +15,7 @@ summary: ONTAP Select 9.5 performance - premium HA direct-attached SSD storage.
 [.lead]
 ONTAP Select 9.5 performance with premium HA direct-attached SSD storage.
 
-== Reference Platform
+== Reference platform
 
 ONTAP Select 9.5 (Premium) hardware (per node):
 
@@ -46,7 +46,7 @@ The following table lists the throughput measured against read/write workloads o
 | ONTAP 9.5 Select Medium instance with DAS (SSD) software RAID | 1,674MiBps | 360MiBps | 451MiBps | 223MiBps | 293MiBps
 |===
 
-=== 64K Sequential Read
+=== 64K sequential read
 
 Details:
 
@@ -58,7 +58,7 @@ Details:
 * 32 volumes per node
 * 1 x files per proc; files are 12000MB each
 
-=== 64K Sequential Write
+=== 64K sequential write
 
 Details:
 
@@ -70,7 +70,7 @@ Details:
 * volumes per node 32 (hardware RAID), 16 (software RAID)
 * 1 x files per proc; files are 30720MB each
 
-=== 8K Random Read
+=== 8K random read
 
 Details:
 
@@ -82,7 +82,7 @@ Details:
 * volumes per node 32
 * 1 file per proc; files are 12228MB each
 
-=== 8K Random Write
+=== 8K random write
 
 Details:
 
@@ -94,7 +94,7 @@ Details:
 * volumes per node 32
 * 1 file per proc; files are 8192MB each
 
-=== 8K Random 50% Write 50% Read
+=== 8K random 50% write 50% read
 
 Details:
 

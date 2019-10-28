@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_nw_data_mgmt_separation.html
 keywords: ontap select, traffic separation
-summary: separate data and management traffic
+summary: Isolate data traffic and management traffic into separate layer-2 networks.
 ---
 
 = Data and management traffic separation

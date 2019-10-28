@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_nw_supported_configuraitons.html
 keywords: ontap select, supported network configurations
-summary: configure the network to optimize performance and resiliency
+summary: Select the best hardware and configure your network to optimize performance and resiliency.
 ---
 
 = Supported network configurations
