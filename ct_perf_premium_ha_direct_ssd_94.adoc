@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_perf_premium_ha_direct_ssd_94.html
 keywords: ontap select, performance
-summary: ontap select 9.4 performance: premium ha direct-attached ssd storage
+summary: ONTAP Select 9.4 performance - premium HA direct-attached SSD storage.
 ---
 
 = ONTAP Select 9.4 performance: Premium HA direct-attached SSD storage
