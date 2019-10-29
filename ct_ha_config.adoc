@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_ha_config.html
 keywords: ontap select, high availability configurations, two-node ha, multi-node ha, mc sds
-summary: ha configuration details
+summary: Discover high availability options to select the best HA configuration for your environment.
 ---
 
 = High availability configurations

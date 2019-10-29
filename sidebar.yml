@@ -7,13 +7,13 @@ entries:
         url: /ci_overview.html
       - title: ONTAP Select Deploy
         url: /ci_ots_deploy.html
-      - title: Business Use Cases
+      - title: Business use cases
         entries:
-          - title: An Overview of Usecases and Scenarios
+          - title: Business needs and usage scenarios
             url: /ct_usecase_overview.html
-          - title: Remote and Branch Office
+          - title: Remote and branch office
             url: /ct_usecase_robo.html
-          - title: Private Cloud and Data Center
+          - title: Private cloud and data center
             url: /ct_usecase_private_cloud.html
           - title: MetroCluster SDS
             url: /ct_usecase_mc_sds.html
@@ -85,13 +85,13 @@ entries:
     entries:
       - title: Before you begin
         url: /ci_install_before.html
-      - title: Pre-Installation checklist
+      - title: Pre-installation checklist
         entries:
-          - title: Host Preparation checklist
+          - title: Host preparation checklist
             url: /rt_chk_host_prep.html
-          - title: Deploy Utility Required Information
+          - title: Deploy utility required information
             url: /rt_chk_deploy_req_info.html
-          - title: ONTAP Select Required Information
+          - title: ONTAP Select required information
             url: /rt_chk_select_req_info.html
       - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
@@ -133,49 +133,49 @@ entries:
     entries:
       - title: Storage
         entries:
-          - title: General Concepts and Characteristics
+          - title: General concepts and characteristics
             url: /ct_stor_concepts_chars.html
-          - title: Hardware RAID Services for Local Attached Storage
+          - title: Hardware RAID services for local attached storage
             url: /ct_stor_hwraid_local.html
-          - title: Software RAID Services for Local Attached Storage
+          - title: Software RAID services for local attached storage
             url: /ct_stor_swraid_local.html
-          - title: VSAN and External Array Configurations
+          - title: VSAN and external array configurations
             url: /ct_stor_vsan_external.html
-          - title: Increasing Storage Capacity
+          - title: Increasing storage capacity
             url: /ct_stor_capacity_inc.html
       - title: Networking
         entries:
-          - title: General Concepts and Characteristics
+          - title: General concepts and characteristics
             url: /ct_nw_concepts_chars.html
-          - title: Single and Multi Node Configuration
+          - title: Single and multi node configuration
             url: /ct_nw_single_multi_config.html
-          - title: Internal and External Networks
+          - title: Internal and external networks
             url: /ct_nw_internal_external.html
-          - title: Supported Configurations
+          - title: Supported configurations
             url: /ct_nw_supported_configuraitons.html
-          - title: VMWare vSphere VSwitch Configuration
+          - title: VMWare vSphere VSwitch configuration
             url: /ct_nw_vsphere_vswitch_config.html
-          - title: Physical Switch Configuration
+          - title: Physical switch configuration
             url: /ct_nw_physical_switch_config.html
-          - title: Data and Management Separation
+          - title: Data and management separation
             url: /ct_nw_data_mgmt_separation.html
-      - title: High Availability Architecture
+      - title: High availability architecture
         entries:
-          - title: HA Configuration
+          - title: HA configuration
             url: /ct_ha_config.html
-          - title: Syncronous Replication and Mirrored Aggregates
+          - title: Syncronous replication and mirrored aggregates
             url: /ct_ha_mirroring.html
-          - title: Other High Availability Functions
+          - title: Other high availability functions
             url: /ct_ha_other.html
       - title: Performance
         entries:
-          - title: General Considerations
+          - title: General considerations
             url: /ct_perf_general.html
-          - title: 9.4 Premium HA Direct Attached SSD Storage
+          - title: 9.4 Premium HA direct attached SSD storage
             url: /ct_perf_premium_ha_direct_ssd_94.html
-          - title: 9.5 Premium HA Direct Attached SSD Storage
+          - title: 9.5 Premium HA direct attached SSD storage
             url: /ct_perf_premium_ha_direct_ssd_95.html
-          - title: 9.6 Premium HA Direct Attached SSD Storage
+          - title: 9.6 Premium HA direct attached SSD storage
             url: /ct_perf_premium_ha_direct_ssd_96.html
   - title: FAQ
     url: /rt_faq.html

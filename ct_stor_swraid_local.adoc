@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_stor_swraid_local.html
 keywords: ontap select, software raid, local attached storage, protection
-summary: xxx
+summary: Software RAID is a RAID abstraction layer implemented within the ONTAP software stack. It provides the same functionality as the RAID layer within a traditional ONTAP platform such as FAS. The RAID layer performs drive parity calculations and provides protection against individual drive failures within an ONTAP Select node.
 ---
 
 = Software RAID services for local attached storage

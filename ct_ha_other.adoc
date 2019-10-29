@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_ha_other.html
 keywords: ontap select, ha, high availability, disk heartbeating, heartbeating, mailbox, failover, giveback
-summary: xxx
+summary: HA disk heartbeating, HA mailbox, HA heartbeating, HA Failover, and Giveback work to enhance data protection.
 ---
 
 = HA additional details

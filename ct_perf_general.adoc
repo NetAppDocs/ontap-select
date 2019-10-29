@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_perf_general.html
 keywords: ontap select, performance
-summary: performance varies based on hardware configuration
+summary: Performance varies based on hardware configuration.
 ---
 
 = Performance general considerations

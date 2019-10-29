@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ct_perf_premium_ha_direct_ssd_96.html
 keywords: ontap select, performance
-summary: ONTAP Select 9.6 performance - premium HA direct-attached SSD storage.
+summary: Performance information for ONTAP Select 9.6 performance - premium HA direct-attached SSD storage.
 ---
 
 = ONTAP Select 9.6 performance: Premium HA direct-attached SSD storage
@@ -15,7 +15,7 @@ summary: ONTAP Select 9.6 performance - premium HA direct-attached SSD storage.
 [.lead]
 Performance information for the reference platform.
 
-== Reference Platform
+== Reference platform
 
 ONTAP Select 9.6 (Premium XL) Hardware (per Node)
 
@@ -26,10 +26,10 @@ ONTAP Select 9.6 (Premium XL) Hardware (per Node)
 ** Drives per host: 24 960GB SSD
 ** ESX 6.5U1
 
-Client Hardware
+Client hardware
 * 5 x NFSv3 IBM 3550m4 clients
 
-Configuration Information
+Configuration information
 * SW RAID 1 x 9 + 2 RAID-DP (11 drives)
 * 22+1 RAID-5 (RAID-0 in ONTAP) / RAID cache NVRAM
 * No storage efficiency features in use (compression, deduplication, Snapshot copies, SnapMirror, and so on)
@@ -46,7 +46,7 @@ The following table lists the throughput measured against read/write workloads o
 | ONTAP 9.6 Select Medium instance with DAS (SSD) hardware RAID | 2038 MiBps | 520 MiBps | 578 MiBps | 325 MiBps | 399 MiBps
 |===
 
-=== 64K Sequential Read
+=== 64K sequential read
 
 Details:
 
@@ -58,7 +58,7 @@ Details:
 * 32 volumes per node
 * 1 x files per proc; files are 12000MB each
 
-=== 64K Sequential Write
+=== 64K sequential write
 
 Details:
 
@@ -70,7 +70,7 @@ Details:
 * volumes per node 32 (hardware RAID), 16 (software RAID)
 * 1 x files per proc; files are 30720MB each
 
-=== 8K Random Read
+=== 8K random read
 
 Details:
 
@@ -82,7 +82,7 @@ Details:
 * volumes per node 32
 * 1 x files per proc; files are 12228MB each
 
-=== 8K Random Write
+=== 8K random write
 
 Details:
 
@@ -94,7 +94,7 @@ Details:
 * volumes per node 32
 * 1 x files per proc; files are 8192MB each
 
-=== 8K Random 50% Write 50% Read
+=== 8K random 50% write 50% read
 
 Details:
 
