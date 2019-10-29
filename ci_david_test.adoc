@@ -19,13 +19,13 @@ Hello!
 
 Find answers to common questions about ONTAP Select.
 
-==== *What is the difference between ONTAP Deploy and ONTAP Select?*
+===== *What is the difference between ONTAP Deploy and ONTAP Select?*
 
 ONTAP Deploy is the utility used to create ONTAP Select clusters. Currently ONTAP Deploy is the only method available for creating a production cluster. ONTAP Deploy can also be used to create an evaluation Select cluster to allow clients to test and document the actual steps of a production deployment. Starting with ONTAP Deploy 2.11 and ONTAP Select 9.5, ONTAP Deploy can also convert an evaluation cluster to a production cluster using an appropriate Capacity Tier license with sufficient capacity to cover the space consumed during the evaluation.
 
 ONTAP Deploy is a virtual machine that contains an image of ONTAP Select. During cluster installation, ONTAP Deploy enforces several checks to help make sure that the ONTAP Select minimum requirements are met. The ONTAP Deploy VM and Select clusters can be upgraded separately.
 
-==== *Can a single ONTAP Deploy instance create clusters on both ESX and KVM?*
+===== *Can a single ONTAP Deploy instance create clusters on both ESX and KVM?*
 
 Yes. ONTAP Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.
 
