@@ -37,4 +37,4 @@ xxxx
 
 There are several blog articles describing ONTAP Select.
 
-* https://blog.netapp.com/how-to-deploy-ontap-select-clusters-using-rest-web-services/[How to Deploy ONTAP Select Clusters Using REST Web Services,window=_blank]
+* https://blog.netapp.com/tag/ontap-select/[All NetApp blogs related to ONTAP Select,window=_blank]
