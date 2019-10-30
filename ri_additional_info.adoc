@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ri_additional_info.html
-keywords: ONTAP Select
-summary: xxx
+keywords: ontap select, more information
+summary: There are additional resources you can access to get help and find more information about ONTAP Select.
 ---
 
 = Where to get help and find more information
@@ -13,11 +13,11 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can get help and find more information about ONTAP Select through various resources.
+There are additional resources you can access to get help and find more information about ONTAP Select.
 
 == ONTAP Select product resources
 
-xxx
+There are a few pages with links to ONTAP Select resources.
 
 * https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select resources,window=_blank]
 
@@ -31,7 +31,9 @@ You can connect with other ONTAP Select users.
 
 == Videos
 
-xxxx
+There are several instructional videos available at a dedicated YouTube channel.
+
+* https://www.youtube.com/playlist?list=PLdXI3bZJEw7nn1ZJMF3mG2fCBD0Esl--o[NetApp ONTAP Select channel at YouTube,window=_blank]
 
 == Blogs
 

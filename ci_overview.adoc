@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ci_overview.html
-keywords: ONTAP Select
-summary: xxx
+keywords: ontap select, overview
+summary: ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
 ---
 
 = ONTAP Select overview
@@ -28,11 +28,11 @@ ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings ente
 
 ONTAP Select is composed of two major software components:
 
-===== ONTAP Select node
-An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each cluster node is deployed as a separate virtual machine and runs a specially-designed derivative of the ONTAP 9 software.
+===== *ONTAP Select node*
+An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each cluster node is deployed as a separate virtual machine and runs a specially-designed version of the ONTAP 9 software.
 
-===== ONTAP Select Deploy administration utility
-The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy ONTAP Select clusters. A current version of the ONTAP Select node image is bundled with the Deploy utility.
+===== *ONTAP Select Deploy administration utility*
+The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy ONTAP Select clusters in a production environment. A current version of the ONTAP Select node image is bundled with the Deploy utility.
 
 == Illustration of a typical deployment
 
@@ -44,18 +44,18 @@ image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created 
 
 Both hardware-based ONTAP and ONTAP Select provide enterprise class storage solutions. However, because they are designed and implemented differently, each can address different business requirements and usage scenarios. You should become familiar with the major differences between the platforms before planning an ONTAP Select deployment.
 
-===== Different HA architecture
+===== *Different HA architecture*
 
 Depending on the number of nodes you define in a cluster, ONTAP Select provides an HA capability. For example, a four-node cluster consists of two HA pairs. The HA architecture used with ONTAP Select is based on a non-shared storage model. That is, one node in an HA pair cannot directly access the storage owned by the other node. This design can affect certain ONTAP Select operational characteristics.
 
-===== Capacity licensing
+===== *Capacity licensing*
 
 ONTAP Select introduces a consumption-based licensing model. You must purchase a license with storage capacity for each node or shared capacity pool when deploying an ONTAP Select cluster in a production environment. Using the Deploy utility, you must apply the license files which establish the storage capacity for the cluster nodes.
 
-===== ONTAP feature licensing
+===== *ONTAP feature licensing*
 Each node in an ONTAP Select cluster is automatically licensed to use several ONTAP features. You do not need to manually install or apply these feature licenses.
 
-===== ONTAP features not supported in ONTAP Select
+===== *ONTAP features not supported in ONTAP Select*
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
