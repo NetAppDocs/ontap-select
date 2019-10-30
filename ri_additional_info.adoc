@@ -15,7 +15,7 @@ summary: There are additional resources you can access to get help and find more
 [.lead]
 There are additional resources you can access to get help and find more information about ONTAP Select.
 
-== ONTAP Select product resources
+=== ONTAP Select product resources
 
 There are a few pages with links to ONTAP Select resources.
 
@@ -23,20 +23,20 @@ There are a few pages with links to ONTAP Select resources.
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page,window=_blank]
 
-== Community
+=== Community
 
 You can connect with other ONTAP Select users.
 
 * http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select,window=_blank]
 
-== Videos
+=== Videos
 
 There are several instructional videos available at a dedicated YouTube channel.
 
 * https://www.youtube.com/playlist?list=PLdXI3bZJEw7nn1ZJMF3mG2fCBD0Esl--o[NetApp ONTAP Select channel at YouTube,window=_blank]
 
-== Blogs
+=== Blogs
 
 There are several blog articles describing ONTAP Select.
 
-* https://blog.netapp.com/tag/ontap-select/[All NetApp blogs related to ONTAP Select,window=_blank]
+* https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs,window=_blank]
