@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ti_install_deploy.html
 keywords: ontap select
-summary: You need to install the ONTAP Select Deploy administration utility and use the utility to deploy an ONTAP Select cluster.
+summary: You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 ---
 
 = Installing ONTAP Select Deploy
@@ -13,7 +13,7 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 :imagesdir: ./media/
 
 [.lead]
-You need to install the ONTAP Select Deploy administration utility and use the utility to deploy an ONTAP Select cluster. The Deploy installation procedure consists of multiple steps.
+You need to install the ONTAP Select Deploy administration utility and use the utility to createan ONTAP Select cluster. The Deploy installation procedure consists of multiple steps.
 
 == Downloading the virtual machine image
 
@@ -43,7 +43,8 @@ The Deploy administration utility contains a single version of ONTAP Select. If 
 
 .Related information
 
-* link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Dpeloy]
+link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+link:ti_adm_deploy_image_remove.html[Removing ONTAP Select images from Deploy]
 
 == Deploying the virtual machine
 

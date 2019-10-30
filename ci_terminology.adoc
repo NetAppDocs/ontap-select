@@ -36,8 +36,6 @@ Every ONTAP Select node runs with either an _evaluation license_ or a _purchased
 * Storage capacity
 * Platform license offering
 
-NOTE: The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
-
 Capacity tiers licensing model::
 The capacity tiers licensing model is the original option when licensing storage for an ONTAP Select deployment. It is based on the ONTAP model used with NetApp AFF and FAS. A separate license is required for each node. The storage capacity is locked to the node and perpetual (no renewal required).
 
