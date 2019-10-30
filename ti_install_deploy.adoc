@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: ti_install_deploy.html
 keywords: ontap select
-summary: xxx
+summary: You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 ---
 
 = Installing ONTAP Select Deploy
@@ -13,42 +13,38 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-The ONTAP Select Deploy administration utility is packaged as a virtual machine based on the Open Virtualization Format (OVF) standard; the single compressed file has the .ova suffix. You must download the file and then install and configure the Deploy virtual machine on ESXi.
-
-== Before you begin
-
-The installation process consists of the following steps, each described as a separate task below:
-
-. Downloading the virtual machine image
-. Deploying the virtual machine
-. Signing in to the Deploy utility web interface
-. Signing in to the Deploy utility using SSH
-
-NOTE: The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must first add the ONTAP Select image to your Deploy instance. See the administration task _Adding an ONTAP Select image to the Deploy utility_ for more information.
-
-.Related information
-
-* link:ti_adm_deploy.html[Administering ONTAP Select Deploy]
+You need to install the ONTAP Select Deploy administration utility and use the utility to createan ONTAP Select cluster. The Deploy installation procedure consists of multiple steps.
 
 == Downloading the virtual machine image
 
-To begin the installation process, you must download the appropriate virtual machine image from the NetApp Support Site.
+You can download the ONTAP Select package from the NetApp support site.
+
+.About this task
+The ONTAP Select Deploy administration utility is packaged as a virtual machine based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`.
 
 .Steps
-
-. Access the NetApp Support Site using a web browser and click *Support Quick Links*.
+. Access the NetApp support site using a web browser and click *Support Quick Links*.
 
 . Click *Download Software* under *Top Tasks* and sign in to the site.
 
-. Click * Find your product*.
+. Click *Find your product*.
 
 . Scroll down and click *ONTAP Select*.
 
-. Select the desired release of the *Deploy Install* package.
+. Select the desired release of the package.
 
 . Review the End User License Agreement (EULA) and click *Accept & Continue*.
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
+
+.After you finish
+
+The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must add the ONTAP Select image to your Deploy instance. See _Adding an ONTAP Select image to Deploy_ for more information.
+
+.Related information
+
+* link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+* link:ti_adm_deploy_image_remove.html[Removing ONTAP Select images from Deploy]
 
 == Deploying the virtual machine
 
@@ -63,7 +59,7 @@ You must have prepared to deploy the ONTAP Select Deploy virtual machine as foll
 You must have the configuration information to be used when creating the virtual machine, including the name of the virtual machine, external network, and host name. When defining a static network configuration, you need the following additional information:
 
 * IP address of the Deploy virtual machine
-* netmask
+* Netmask
 * IP address of the gateway (router)
 * IP address of the primary DNS server
 * IP address of the second DNS server
@@ -98,10 +94,9 @@ Use DHCP to set networking information? [n]:
 
 == Signing in to the Deploy web interface
 
-You can sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
+You should sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
 
 .Steps
-
 . Point your browser to the Deploy utility using the IP address or domain name:
 +
 `https://<ip_address>/`

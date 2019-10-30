@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ri_plan_dep_vmware.html
-keywords: ONTAP Select
-summary: xxx
+keywords: ontap select deploy, general requirements
+summary: There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 ---
 
 = VMware hypervisor environment
@@ -12,6 +12,8 @@ summary: xxx
 :linkattrs:
 :imagesdir: ./media/
 
+// DP: October 30 - initial review
+
 [.lead]
 There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 
@@ -19,7 +21,7 @@ There are several requirements and restrictions specific to the VMware environme
 
 There are several minimum resource requirements that your ESXi hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
 
-* ESXi Server:
+* ESXi server:
 ** Hardware and software must be 64-bit
 ** Must adhere to the same supported versions as defined for an ONTAP Select node
 * Virtual CPUs (2)

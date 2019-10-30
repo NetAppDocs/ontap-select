@@ -53,6 +53,8 @@ entries:
     entries:
       - title: Options
         entries:
+          - title: Overview
+            url: /ci_lic_overview.html
           - title: Evaluation licences
             url: /ci_lic_evaluation.html
           - title: Production licences

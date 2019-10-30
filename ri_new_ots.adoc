@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ri_new_ots.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, new features
+summary: There are several new and changed features provided with the current release of ONTAP Select.
 ---
 
 = What's new in ONTAP Select 9.7
@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2851321[Release Notes,window=_blank] for more information.
+NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes,window=_blank] for more information.
 
 == Software RAID for NVMe
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ci_ots_deploy.html
-keywords: ONTAP Select
-summary: xxx
+keywords: ontap select deploy, deploy administration utility
+summary: ONTAP Select Deploy is the administration utility used to deploy and manage the ONTAP Select clusters.
 ---
 
 = ONTAP Select Deploy
@@ -11,6 +11,8 @@ summary: xxx
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
+
+// DP: October 30 - initial review
 
 [.lead]
 ONTAP Select Deploy is the administration utility used to deploy and manage the ONTAP Select clusters. Deploy is packaged as a Linux virtual machine which you must install before creating an ONTAP Select cluster.

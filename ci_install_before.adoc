@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ci_install_before.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
@@ -14,3 +14,5 @@ summary: xxx
 
 [.lead]
 This section will have some basic information about the process, including the steps at a high level.
+
+*Is this page needed?*
