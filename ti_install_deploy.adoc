@@ -43,8 +43,8 @@ The Deploy administration utility contains a single version of ONTAP Select. If 
 
 .Related information
 
-link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
-link:ti_adm_deploy_image_remove.html[Removing ONTAP Select images from Deploy]
+* link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+* link:ti_adm_deploy_image_remove.html[Removing ONTAP Select images from Deploy]
 
 == Deploying the virtual machine
 
