@@ -12,12 +12,14 @@ summary: There are additional resources you can access to get help and find more
 :linkattrs:
 :imagesdir: ./media/
 
+// DP: October 30 - initial review
+
 [.lead]
 There are additional resources you can access to get help and find more information about ONTAP Select.
 
 === ONTAP Select product resources
 
-There are a few pages with links to ONTAP Select resources.
+The following product pages include links to additional ONTAP Select resources.
 
 * https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select resources,window=_blank]
 

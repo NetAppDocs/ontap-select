@@ -12,6 +12,8 @@ summary: ONTAP Select is a software-only version of ONTAP that you deploy as a v
 :linkattrs:
 :imagesdir: ./media/
 
+// DP: October 30 - initial review
+
 [.lead]
 ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
 
@@ -59,20 +61,20 @@ Each node in an ONTAP Select cluster is automatically licensed to use several ON
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
-Fibre Channel::
+* Fibre Channel
 Fibre Channel and Fibre Channel over Ethernet are not supported.
 
-Interface groups::
+* Interface groups
 Interface groups (IFGRPs) are not supported.
 
-Health monitors::
+* Health monitors
 The traditional health monitoring used with a hardware-based ONTAP deployment is  specific to the underlying hardware components. Due to the virtualized environment used with ONTAP Select, health monitors are not active.
 
-NIC offload support::
+* NIC offload support
 Due to the virtualized environment used with ONTAP Select, the NIC offload facility is not supported.
 
-Cluster IPspace::
+* Cluster IPspace
 Any modification to Cluster IPspace, including adding or removing ports, is not supported.
 
-ONTAP port properties::
+* ONTAP port properties
 Modifying the properties of the ONTAP ports, including speed, duplex, and flow-control, is not supported.
