@@ -33,12 +33,12 @@ entries:
             url: /ri_plan_ots_storage.html
           - title: Networking
             url: /ri_plan_ots_networking.html
-          - title: MetroCluster SDS
-            url: /ri_plan_ots_mcc_sds.html
           - title: ONTAP Select vNAS
             url: /ri_plan_ots_vnas.html
           - title: Two-node clusters
             url: /ri_plan_ots_two_node.html
+          - title: MetroCluster SDS
+            url: /ri_plan_ots_mcc_sds.html
           - title: Remote and branch offices
             url: /ri_plan_ots_robo.html
       - title: ONTAP Select Deploy
@@ -53,8 +53,8 @@ entries:
     entries:
       - title: Options
         entries:
-          - title: Overview
-            url: /ci_lic_overview.html
+          - title: Decisions
+            url: /ci_lic_decisions.html
           - title: Evaluation licences
             url: /ci_lic_evaluation.html
           - title: Production licences
@@ -85,8 +85,6 @@ entries:
         url: /ri_lic_ontap_features.html
   - title: Install
     entries:
-      - title: Before you begin
-        url: /ci_install_before.html
       - title: Pre-installation checklist
         entries:
           - title: Host preparation checklist
@@ -95,6 +93,8 @@ entries:
             url: /rt_chk_deploy_req_info.html
           - title: ONTAP Select required information
             url: /rt_chk_select_req_info.html
+          - title: NVMe host configuration
+            url: /ti_chk_nvme_configure.html
       - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
       - title: Deploy a cluster
@@ -283,7 +283,7 @@ entries:
             url: /ti_cli_deploy_recover_two_node.html
   - title: Get more information
     url: /ri_additional_info.html
-  - title: Barb's temporary page
-    url: /ct_barb_test.html
+  - title: Legal notices
+    url: /ri_legal_notices.html
   - title: David's temporary page
     url: /ci_david_test.html

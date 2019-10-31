@@ -13,7 +13,9 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+There are several planning issues related to ONTAP Select host storage that you should consider.
+
+*==> Must add NVMe*
 
 == Hardware RAID controller requirements
 

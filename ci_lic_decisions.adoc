@@ -1,0 +1,42 @@
+---
+sidebar: sidebar
+permalink: ci_lic_decisions.html
+keywords: ontap select
+summary: xxx
+---
+
+= Licensing decisions
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Before deploying an ONTAP Select cluster, you should be aware of the available licensing options and the decisions you need to make.
+
+=== *Evaluation or production deployment*
+
+xxx
+
+.Related information
+
+* link:ci_lic_evaluation.html[Evaluation licenses]
+
+=== *Licensing model*
+
+For a production deployment, xxx
+
+>> also choose storage capacity
+
+NOTE: The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
+
+* link:ci_lic_production.html[Purchased licenses for production deployments]
+
+=== *Platform license level*
+
+xxx
+
+.Related information
+
+* link:ci_lic_platforms.html[Understanding the platform license offerings]

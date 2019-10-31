@@ -47,7 +47,7 @@ If an ESXi hypervisor host is managed by a vCenter server, you must register the
 
 The physical hypervisor host where you deploy ONTAP Select must meet several hardware requirements. You can choose any platform for the hypervisor host, as long as it meets the minimum hardware requirements. The following vendors provide supported hardware platforms: Cisco, Dell, HP, Fujitsu, Lenovo, and Supermicro.
 
-Refer to the _NetApp Interoperability Matrix Tool_ for more information.
+Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool,window=_blank] for more information.
 
 ==== Basic hardware requirements
 
@@ -56,7 +56,7 @@ instance type or license offering.
 
 * Processor
 ** Intel CPU E5-26xx v3 (Haswell) or higher
-** Intel CPU Skylake server processors (see Intel Skylake for supported models)
+** Intel CPU Skylake server processors (see link:https://ark.intel.com/products/codename/37572/Skylake#@server[Intel Skylake,window=_blank] for supported models)
 * Ethernet network ports
 ** 4 x 10GbE (recommended)
 ** 2 x 10GbE
@@ -67,6 +67,8 @@ instance type or license offering.
 ==== Additional hardware requirements based on the instance type
 
 There are several additional hardware requirements based on the node instance type.
+
+Refer to link:ci_lic_platforms.html[Understanding the platform license offerings] for more information.
 
 Small::
 
@@ -109,8 +111,6 @@ Premium and premium XL::
 
 * 4 to 60 internal SSD
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
-
-Refer to _Understanding the platform license offerings_ for more information.
 
 ==== Best practices
 

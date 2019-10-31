@@ -49,8 +49,18 @@ image:icon_dropdown_arrow.gif[Dropdown arrow]
 
 image:icon_gear.gif[Gear]
 
-image:icon_kabob.gif[Kebab]
+image:icon_kebab.gif[Kebab]
 
 image:icon_pencil.gif[pencil]
 
 image:icon_question_mark.gif[Question mark]
+
+== Link test
+
+===== *Normal*
+
+Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool,window=_blank] for more information.
+
+===== *Italics*
+
+Refer to the _https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool,window=_blank]_ for more information.

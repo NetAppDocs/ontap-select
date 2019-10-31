@@ -17,11 +17,9 @@ After creating an ONTAP Select cluster, you can support the deployment by perfor
 
 == Administering ONTAP Select
 
-There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. All of them use the web user interface.
+There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. All of them use the web user interface. Each administrative process can consist of a single step-by-step task. In some cases, a procedure might consists of a sequence of tasks.
 
-NOTE: You can also use the command line interface to administer ONTAP Select. See the _Deploy CLI_ section for more information.
-
-Each administrative process can consist of a single step-by-step task. In some cases, a procedure might consists of a sequence of tasks.
+NOTE: You can also use the command line interface to administer ONTAP Select. See the _Command line interface_ section for more information.
 
 == Performing additional ONTAP configuration
 

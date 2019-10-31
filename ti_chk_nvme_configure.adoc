@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_chk_nvme_configure.html
+keywords: ontap select
+summary: xxx
+---
+
+= Configuring a host for NVMe drives
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
