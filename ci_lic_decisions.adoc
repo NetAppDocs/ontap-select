@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ci_lic_overview.html
+permalink: ci_lic_decisions.html
 keywords: ontap select
 summary: xxx
 ---
 
-= Licensing introduction and overview
+= Licensing decisions
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,6 +15,18 @@ summary: xxx
 [.lead]
 xxx
 
+===== *Evaluation or production deployment*
+
+xxx
+
+===== *Licensing model*
+
+===== *Storage capacity*
+
 >> work this in:
 
 NOTE: The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
+
+===== *Platform license level*
+
+xxx
