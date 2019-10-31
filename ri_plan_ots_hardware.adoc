@@ -56,7 +56,7 @@ instance type or license offering.
 
 * Processor
 ** Intel CPU E5-26xx v3 (Haswell) or higher
-** Intel CPU Skylake server processors (see Intel Skylake for supported models)
+** Intel CPU Skylake server processors (see link:https://ark.intel.com/products/codename/37572/Skylake#@server[Intel Skylake] for supported models)
 * Ethernet network ports
 ** 4 x 10GbE (recommended)
 ** 2 x 10GbE
@@ -117,3 +117,7 @@ Refer to _Understanding the platform license offerings_ for more information.
 You should consider the following recommendations regarding the hypervisor core hardware:
 
 * All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
+
+.Related information
+
+* https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

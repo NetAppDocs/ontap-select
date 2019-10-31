@@ -49,7 +49,7 @@ image:icon_dropdown_arrow.gif[Dropdown arrow]
 
 image:icon_gear.gif[Gear]
 
-image:icon_kabob.gif[Kebab]
+image:icon_kebab.gif[Kebab]
 
 image:icon_pencil.gif[pencil]
 

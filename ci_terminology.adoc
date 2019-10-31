@@ -12,7 +12,7 @@ summary: You should become familiar with the ONTAP Select terminology and key co
 :linkattrs:
 :imagesdir: ./media/
 
-// DP: October 30 - initial review
+// DP: October 31 - initial review
 
 [.lead]
 As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the terminology and key concepts.
@@ -30,7 +30,7 @@ Preparation of the hypervisor host environment::
 Before using the Deploy administration utility to deploy an ONTAP Select cluster, you need to prepare the hypervisor hosts where ONTAP Select will run, including the storage and networking environments. This host pre-configuration is done outside of the ONTAP Select product based on the current requirements and limitations.
 
 Evaluation versus production deployments::
-Every ONTAP Select node runs with either an _evaluation license_ or a _purchased license_. An evaluation license allows you to evaluate ONTAP Select prior to deploying it in a production environment. The evaluation license is automatically generated and applied. If you deploy a cluster in a production environment, you must purchase a license which involves choosing the:
+Every ONTAP Select node runs with either an _evaluation license_ or a _purchased license_. An evaluation license allows you to evaluate ONTAP Select prior to deploying it in a production environment. The evaluation license is automatically generated and applied. If you deploy a cluster in a production environment, you must purchase a license which involves choosing:
 
 * Licensing model
 * Storage capacity
@@ -52,7 +52,7 @@ There are three license offerings available which determine the size capabilitie
 * Premium
 * Premium XL
 
-For more information, see the _Plan_ and _License_ sections.
+For more information, see the two sections _Plan_ and _License_.
 
 Storage pools versus datastores::
 An ONTAP Select _storage pool_ is a logical data container designed to abstract and hide the underlying physical storage. A storage pool is hypervisor-independent. When deployed on an ESXi hypervisor host, the ONTAP Select storage pool is synonymous with the VMware _datastore_.

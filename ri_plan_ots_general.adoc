@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: ri_plan_ots_general.html
-keywords: ONTAP Select
+keywords: ontap select
 summary: xxx
 ---
 
@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several general requirements and best practices that you should consider as part of planning an ONTAP Select deployment.
+There are several general requirements that you should consider as part of planning an ONTAP Select deployment.
 
 == Cluster size and related considerations
 
