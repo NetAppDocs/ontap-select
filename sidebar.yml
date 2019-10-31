@@ -85,8 +85,6 @@ entries:
         url: /ri_lic_ontap_features.html
   - title: Install
     entries:
-      - title: Before you begin
-        url: /ci_install_before.html
       - title: Pre-installation checklist
         entries:
           - title: Host preparation checklist
