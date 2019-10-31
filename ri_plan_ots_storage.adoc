@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
-*Add NVMe*
+*==> Must add NVMe*
 
 == Hardware RAID controller requirements
 
