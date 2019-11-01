@@ -59,8 +59,10 @@ image:icon_question_mark.gif[Question mark]
 
 ===== *Normal*
 
-Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool,window=_blank] for more information.
+Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] for more information.
 
-===== *Italics*
+===== *Italics and bold*
 
-Refer to the _https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool,window=_blank]_ for more information.
+Refer to the https://mysupport.netapp.com/matrix[_NetApp Interoperability Matrix Tool_^] for more information.
+
+Refer to the https://mysupport.netapp.com/matrix[*NetApp Interoperability Matrix Tool*^] for more information.
