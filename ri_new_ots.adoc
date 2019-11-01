@@ -15,18 +15,18 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes,window=_blank] for more information.
+NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes^] for more information.
 
 == Software RAID for NVMe
 
-xxx
+Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocols. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives.
 
-IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See the release notes for more information.
+IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:ti_chk_nvme_configure.html[Configuring a host for NVMe drives] for more information.
 
 == Versioning change for ONTAP Select Deploy
 
-xxx
+The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy upgrade within a specific ONTAP Select release is assigned a unique build number.
 
-== Improvements to web user interface
+== Improvements to Deploy web user interface
 
->> Workflows
+The web user interface of the Deploy administration utility has been improved based on evolving industry best practices. Several of the existing workflows have changed and been simplified.

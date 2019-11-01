@@ -26,4 +26,4 @@ This is the primary site for the ONTAP Select 9.7 documentation describing ONTAP
 
 == Getting more information and connecting with peers.
 
-* link:ri_additional_info.html[Where to get help and find more information]
+* link:ri_additional_info.html[*Where to get help and find more information*]
