@@ -15,33 +15,9 @@ summary: xxx
 [.lead]
 Page to test AsciiDoc.
 
-== Definition list example
-
-This is a format style very similar to the DITA DL.
-
-ONTAP Select Deploy::
-ONTAP Select Deploy is the administration utility that you use to deploy ONTAP Select clusters. The Deploy utility runs in a dedicated Linux virtual machine. You can access the Deploy utility through the web user interface, CLI management shell, and REST API.
-
-Hypervisor host versus ONTAP Select node::
-A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select virtual machine. When an ONTAP Select virtual machine is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
-
-== Formatting a variable list (FAQ)
-
-Here are two entries from the FAQ page formatted with five =s and bolded. When should we use this style?
-
-===== *What is the difference between ONTAP Deploy and ONTAP Select?*
-
-ONTAP Deploy is the utility used to create ONTAP Select clusters. Currently ONTAP Deploy is the only method available for creating a production cluster. ONTAP Deploy can also be used to create an evaluation Select cluster to allow clients to test and document the actual steps of a production deployment. Starting with ONTAP Deploy 2.11 and ONTAP Select 9.5, ONTAP Deploy can also convert an evaluation cluster to a production cluster using an appropriate Capacity Tier license with sufficient capacity to cover the space consumed during the evaluation.
-
-ONTAP Deploy is a virtual machine that contains an image of ONTAP Select. During cluster installation, ONTAP Deploy enforces several checks to help make sure that the ONTAP Select minimum requirements are met. The ONTAP Deploy VM and Select clusters can be upgraded separately.
-
-===== *Can a single ONTAP Deploy instance create clusters on both ESX and KVM?*
-
-Yes. ONTAP Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.
-
 == Icon test
 
-I grabbed from Amanda. But have questions about the blue color and resolution.
+I grabbed these from Amanda, but have questions about the blue color (should they be black?) and resolution.
 
 image:icon_arrow.gif[Arrow]
 
