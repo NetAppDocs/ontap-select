@@ -39,6 +39,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
-*THIS NEEDS TO BE UPDATED*
-
-* link:media/notice_cloud_manager_3.7.4.pdf[Notice for Cloud Manager 3.7.4^]
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2857091[Notice for ONTAP Select 9.7^]
