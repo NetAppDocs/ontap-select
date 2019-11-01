@@ -33,7 +33,7 @@ Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficienc
 . Access the *BIOS configuration* menu on the host to enable support for I/O virtualization.
 
 . Enable the *Intel VT for Directed I/O (VT-d)* setting.
-image:nvme_01.PNG[Socket Configuration]
+image:nvme_01[Socket Configuration]
 
 . Configure the NVMe drives for pass-through to virtual machines.
 
@@ -42,12 +42,12 @@ image:nvme_01.PNG[Socket Configuration]
 .. Select the NVMe drives you want to use for ONTAP Select.
 [NOTE]
 You need a VMFS datastore that is also backed by an NVMe device to host the ONTAP Select VM system disks and virtual NVRAM. Leave at least one NVMe drive available for this purpose when configuring the others for PCI pass-through.
-image:nvme_02.PNG[Edit PCI Device Availability]
+image:nvme_02.png[Edit PCI Device Availability]
 
 .. Click *OK*. The selected devices indicate *Available (pending)*.
 
 . Click *Reboot The Host*.
-image:nvme_03.PNG[Reboot This Host]
+image:nvme_03.png[Reboot This Host]
 
 .After you finish
 
@@ -56,10 +56,10 @@ After the hosts are prepared, you can install the ONTAP Select Deploy utility. D
 [NOTE]
 A maximum of 14 NVMe devices are supported for each ONTAP Select node.
 
-image:nvme_04.PNG[ONTAP Select Deploy Clusters]
+image:nvme_04.png[ONTAP Select Deploy Clusters]
 
 After the cluster is successfully deployed, ONTAP System Manager allows you to provision the storage according to best practices. ONTAP will automatically enable flash-optimized storage efficiency features that make the best use of your NVMe storage.
 
-image:nvme_05.PNG[preparing local storage]
+image:nvme_05.png[preparing local storage]
 
-image:nvme_06.PNG[ONTAP System Manager]
+image:nvme_06.png[ONTAP System Manager]

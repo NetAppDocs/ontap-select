@@ -19,7 +19,7 @@ Before installing the Deploy administration utility in a VMware environment, rev
 
 As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
 
-[cols=2,options="header"]
+[cols=2*,options="header",cols="40,60"]
 |===
 | Required information
 | Description
@@ -33,7 +33,7 @@ As part of your deployment planning, you should determine the required configura
 
 The Deploy virtual machine is configured using DHCP by default. However, if needed, you can manually configure the network interface for the virtual machine.
 
-[cols=2,options="header"]
+[cols=2*,options="header",cols="35,65"]
 |===
 | Network information
 | Description
