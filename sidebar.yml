@@ -53,8 +53,6 @@ entries:
     entries:
       - title: Options
         entries:
-          - title: Decisions
-            url: /ci_lic_decisions.html
           - title: Evaluation licences
             url: /ci_lic_evaluation.html
           - title: Production licences

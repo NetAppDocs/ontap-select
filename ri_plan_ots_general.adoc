@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several general requirements that you should consider as part of planning an ONTAP Select deployment.
 
-== Cluster size and related considerations
+== Cluster size and related
 
 There are several planning issues related to the cluster size that you should consider.
 
@@ -25,7 +25,7 @@ An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. You 
 Dedicated versus collocated::
 Based on the application type, you should determine if the deployment follows the dedicated or collocated model. Note that the collocated model can be more complex due to the workload diversity and tighter integration.
 
-== Hypervisor host considerations
+== Hypervisor hosts
 
 There are several planning issues related to the hypervisor host that you should consider.
 
@@ -83,6 +83,8 @@ When using the ONTAP Select vNAS solution, you must decide where the remote data
 
 Estimate for the storage needed::
 You should determine how much storage is required for the ONTAP Select nodes. This information is required as part of acquiring the purchased licenses with storage capacity. Refer to Storage capacity restrictions for more information.
+
+NOTE: The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
 
 Licensing model for production deployment::
 You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review Licensing ONTAP Select for more information.

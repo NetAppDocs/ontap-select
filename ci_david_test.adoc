@@ -15,14 +15,8 @@ summary: xxx
 [.lead]
 This is a page used to test AsciiDoc. It will be removed prior to FCS.
 
+////
 == Comment test
-
-[cols="a"]
-|===
-|*Draft comment:* [big]#This is a test line 1. Testing again.
-Testing line 2#
-{set:cellbgcolor:aqua}
-|===
 
 [cols="1",options="asciidoc"]
 |===
@@ -30,3 +24,4 @@ Testing line 2#
 Testing line 2
 {set:cellbgcolor:aqua}
 |===
+////
