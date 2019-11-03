@@ -31,14 +31,10 @@ image:icon_pencil.gif[pencil]
 
 image:icon_question_mark.gif[Question mark]
 
-== Link test
+== Comment test
 
-===== *Normal*
-
-Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] for more information.
-
-===== *Italics and bold*
-
-Refer to the https://mysupport.netapp.com/matrix[_NetApp Interoperability Matrix Tool_^] for more information.
-
-Refer to the https://mysupport.netapp.com/matrix[*NetApp Interoperability Matrix Tool*^] for more information.
+[cols="1"]
+|===
+|*Draft comment:* This is a test.
+{set:cellbgcolor:red}
+|===
