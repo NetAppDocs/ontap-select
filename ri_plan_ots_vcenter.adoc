@@ -1,0 +1,80 @@
+---
+sidebar: sidebar
+permalink: ri_plan_ots_vcenter.html
+keywords: ontap select
+summary: xxx
+---
+
+= VMware vCenter server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several planning requirements related to VMware vCenter you should consider.
+
+== Access to a vCenter server
+
+You must have access to the vCenter server managing the ESXi hypervisor hosts where ONTAP Select is deployed.
+
+==== Location
+
+You must have the fully qualified domain name or IP address of the vCenter server.
+
+==== Administrative privileges
+
+You must define a vCenter server account and associate it with a role containing the necessary administrative privileges. The following minimum administrative privileges are needed to create and manage an ONTAP Select cluster:
+
+===== *Datastore*
+
+* Allocate space
+* Browse datastore
+* Low level file operations
+* Update virtual machine files
+* Update virtual machine metadata
+
+===== *Host*
+
+====== *Configuration*
+
+* Change SNMP settings
+* Network configuration
+* System management
+
+====== *Local operations*
+
+* Create virtual machine
+* Delete virtual machine
+* Reconfigure virtual machine
+
+===== *Network*
+
+* Assign network
+
+===== *Virtual machine*
+
+====== *Configuration*
+
+All privileges in the category.
+
+====== *Interaction*
+
+All privileges in the category.
+
+====== *Inventory*
+
+All privileges in the category.
+
+====== *Provisioning*
+
+All privileges in the category.
+
+====== *vApp*
+
+All privileges in the category.
+
+== VMware vCenter language restriction
+
+If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version. ONTAP Select Deploy does not support vCenter on non-English versions of Windows.

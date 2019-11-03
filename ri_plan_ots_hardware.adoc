@@ -18,7 +18,7 @@ There are several requirements and planning issues you should consider related t
 [cols="1"]
 |===
 |*Draft comment:*
-@ots97 - Is ESXi 6.7 U3 supported?
+ONTAP Select 9.7 RC1 - Is ESXi 6.7 U3 now supported?
 {set:cellbgcolor:aqua}
 |===
 

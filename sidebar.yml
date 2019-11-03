@@ -41,6 +41,8 @@ entries:
             url: /ri_plan_ots_robo.html
           - title: MetroCluster SDS
             url: /ri_plan_ots_mcc_sds.html
+          - title: VMware vCenter
+            url: /ri_plan_ots_vcenter.html
           - title: VMware vCenter plug-in
             url: /ri_plan_ots_plugin.html
       - title: ONTAP Select Deploy

@@ -18,7 +18,7 @@ There are several planning issues related to ONTAP Select host storage that you 
 [cols="1"]
 |===
 |*Draft comment:*
-@ots97 - Add NVMe and link to configuration procedure
+ONTAP Select 9.7 RC1 - Add NVMe and link to configuration procedure
 {set:cellbgcolor:aqua}
 |===
 
