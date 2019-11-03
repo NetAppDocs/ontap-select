@@ -36,12 +36,11 @@ image:icon_question_mark.gif[Question mark]
 [cols="1"]
 |===
 |*Draft comment:* This is a test.
-{set:cellbgcolor:fuchsia}
+{set:cellbgcolor:aqua}
 |===
-
 
 [cols="1"]
 |===
-|*Draft comment:* This is a test.
-{set:cellbgcolor:aqua}
+|[red]*Draft comment:* This is a test.
+{set:cellbgcolor:silver}
 |===
