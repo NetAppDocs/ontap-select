@@ -13,34 +13,13 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Page to test AsciiDoc.
-
-== Icon test
-
-I grabbed these from Amanda, but have questions about the blue color (should they be black?) and resolution.
-
-image:icon_arrow.gif[Arrow]
-
-image:icon_dropdown_arrow.gif[Dropdown arrow]
-
-image:icon_gear.gif[Gear]
-
-image:icon_kebab.gif[Kebab]
-
-image:icon_pencil.gif[pencil]
-
-image:icon_question_mark.gif[Question mark]
+This is a page used to test AsciiDoc. It will be removed prior to FCS.
 
 == Comment test
 
 [cols="1"]
 |===
-|*Draft comment:* This is a test.
+|*Draft comment:* [big] #This is a test line 1
+Testing line 2#
 {set:cellbgcolor:aqua}
-|===
-
-[cols="1"]
-|===
-|[red]*Draft comment:* This is a test.
-{set:cellbgcolor:silver}
 |===

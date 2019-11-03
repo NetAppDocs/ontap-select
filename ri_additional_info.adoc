@@ -27,7 +27,7 @@ The following product pages include links to a wide variety of ONTAP Select reso
 
 === Community
 
-You can connect with other users to ask questions and contribute to the ONTAP Select community.
+You can connect with other users to ask questions and contribute to the NetApp ONTAP Select community.
 
 * http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select,window=_blank]
 
