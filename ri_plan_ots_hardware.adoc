@@ -15,6 +15,13 @@ summary: xxx
 [.lead]
 There are several requirements and planning issues you should consider related to the VMware environment.
 
+[cols="1"]
+|===
+|*Draft comment:*
+@ots97 - Is ESXi 6.7 U3 supported?
+{set:cellbgcolor:aqua}
+|===
+
 == Hypervisor requirements
 
 There are several requirements related to the hypervisor where ONTAP Select runs.

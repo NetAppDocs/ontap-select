@@ -12,8 +12,6 @@ summary: There are several requirements and restrictions specific to the VMware 
 :linkattrs:
 :imagesdir: ./media/
 
-// DP: October 30 - initial review
-
 [.lead]
 There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 
@@ -49,6 +47,55 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 
 * You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
+
+== Access to a vCenter server
+
+You must have access to the vCenter server managing the ESXi hypervisor hosts where ONTAP
+Select is deployed.
+
+==== Location
+
+You must have the fully qualified domain name or IP address of the vCenter server.
+
+==== Administrative privileges
+
+You must define a vCenter server account and associate it with a role containing the necessary administrative privileges. The following minimum administrative privileges are needed to create and manage an ONTAP Select cluster:
+
+===== *Datastore*
+
+* Allocate space
+* Browse datastore
+* Low level file operations
+* Update virtual machine files
+* Update virtual machine metadata
+
+===== *Host*
+
+  *Configuration*
+  * Change SNMP settings
+  * Network configuration
+  * System management
+
+  *Local operations*
+  * Create virtual machine
+  * Delete virtual machine
+  * Reconfigure virtual machine
+
+  *Network*
+  * Assign network
+
+===== *Virtual machine*
+
+* Configuration
+All privileges in the category
+* Interaction
+All privileges in the category
+* Inventory
+All privileges in the category
+* Provisioning
+All privileges in the category
+* vApp
+All privileges in the category
 
 == VMware vCenter language restriction
 

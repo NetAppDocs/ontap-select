@@ -37,6 +37,8 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 * VMware ESXi
 * Kernel-based Virtual Machine (KVM)
 
+NOTE: Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
+
 Hypervisor for ONTAP Select nodes and administration utility::
 Both the Deploy administration utility and ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
 

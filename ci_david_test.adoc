@@ -18,7 +18,7 @@ This is a page used to test AsciiDoc. It will be removed prior to FCS.
 ////
 == Comment test
 
-[cols="1",options="asciidoc"]
+[cols="1"]
 |===
 |*Draft comment:* This is a test line 1. Testing again.
 Testing line 2
