@@ -15,9 +15,6 @@ summary: xxx
 [.lead]
 This is a page used to test AsciiDoc. It will be removed prior to FCS.
 
-Test:
-'''
-
 ////
 == Testing
 

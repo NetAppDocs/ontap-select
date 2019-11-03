@@ -15,12 +15,10 @@ summary: xxx
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
-//[cols="1"]
-[cols="a"]
+[cols="1"]
 |===
 |*Draft comment:*
-'''
-ONTAP Select 9.7 RC1 - Add NVMe and link to configuration procedure
+  ONTAP Select 9.7 RC1 - Add NVMe and link to configuration procedure
 {set:cellbgcolor:aqua}
 |===
 
