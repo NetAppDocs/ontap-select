@@ -36,15 +36,14 @@ You must define a vCenter server account and associate it with a role containing
 * Update virtual machine metadata
 
 ===== *Host*
-
-
-====== Configuration
++
+===== Configuration
 
 * Change SNMP settings
 * Network configuration
 * System management
 
-====== Local operations
+===== Local operations
 
 * Create virtual machine
 * Delete virtual machine
@@ -55,25 +54,24 @@ You must define a vCenter server account and associate it with a role containing
 * Assign network
 
 ===== *Virtual machine*
-
-
-====== Configuration
-
-All privileges in the category.
-
-====== Interaction
++
+===== Configuration
 
 All privileges in the category.
 
-====== Inventory
+===== Interaction
 
 All privileges in the category.
 
-====== Provisioning
+===== Inventory
 
 All privileges in the category.
 
-====== vApp
+===== Provisioning
+
+All privileges in the category.
+
+===== vApp
 
 All privileges in the category.
 
