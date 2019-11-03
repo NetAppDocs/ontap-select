@@ -25,8 +25,8 @@ IMPORTANT: To use software RAID with an NVMe disk, you must first manually updat
 
 == Versioning change for ONTAP Select Deploy
 
-The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy upgrade within a specific ONTAP Select release is assigned a unique build number.
+The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy refresh within a specific ONTAP Select release is assigned a unique build number.
 
 == Improvements to Deploy web user interface
 
-The web user interface of the Deploy administration utility has been improved based on evolving industry best practices. Several of the existing workflows have changed and been simplified.
+The Deploy utility web user interface has been enhanced based on evolving industry standard best practices. Several of the existing administrative workflows have been updated and simplified.
