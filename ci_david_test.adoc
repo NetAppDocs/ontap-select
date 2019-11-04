@@ -13,7 +13,13 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a page used to test AsciiDoc. It will be removed prior to FCS.
+This is a page used to test AsciiDoc formatting and features.
+
+[cols="1"]
+|===
+|*Draft comment:* This page can be ignored and will be removed prior to FCS.
+{set:cellbgcolor:aqua}
+|===
 
 ''''
 

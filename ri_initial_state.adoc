@@ -13,7 +13,7 @@ summary: xxxx
 :imagesdir: ./media/
 
 [.lead]
-You should be aware of the initial state of a cluster after it has been deployed and then configure and administer the cluster as appropriate for your environment.
+You should be aware of the initial state of a cluster after it has been deployed and then configure the cluster as needed for your environment.
 
 After an ONTAP Select cluster is deployed, it has the following characteristics:
 

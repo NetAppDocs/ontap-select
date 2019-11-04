@@ -37,15 +37,6 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
-.After you finish
-
-The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must add the ONTAP Select image to your Deploy instance.
-
-.Related information
-
-* link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
-* link:ti_adm_deploy_image_remove.html[Removing ONTAP Select images from Deploy]
-
 == Deploying the virtual machine
 
 You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.

@@ -43,6 +43,10 @@ If you plan to deploy the cluster in a production environment, you must acquire 
 Deploy account credentials::
 You must have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
 
+Install earlier ONTAP Select node images::
+
+By default, the Deploy administration utility contains the most current version of ONTAP Select at the time of release. If you want to deploy clusters using an earlier version of ONTAP Select, you must add the ONTAP Select image to your Deploy instance. See link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy] for more information.
+
 Network checker::
 If you will deploy a multi-node cluster, you should be familiar with the network checker.
 
@@ -55,12 +59,7 @@ You can use the ONTAP Select Deploy web user interface to deploy a single-node O
 
 .Before you begin
 
-See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin].
-
-REMOVE:
-////
-You need to prepare the hypervisor host where the ONTAP Select node will run and have a storage license file. You must also have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
-////
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare for deploying the cluster.
 
 .About this task
 
@@ -130,7 +129,7 @@ You can use the ONTAP Select Deploy web user interface to deploy a multi-node ON
 
 .Before you begin
 
-See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin].
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare for deploying the cluster.
 
 .About this task
 

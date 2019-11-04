@@ -15,6 +15,12 @@ summary: Legal notices provide access to copyright statements, trademarks, paten
 [.lead]
 Legal notices provide access to copyright statements, trademarks, patents, and more.
 
+[cols="1"]
+|===
+|*Draft comment:* The link to the Notices file under _Open source_ needs to be updated for 9.7.
+{set:cellbgcolor:aqua}
+|===
+
 == Copyright
 
 http://www.netapp.com/us/legal/copyright.aspx[^]
