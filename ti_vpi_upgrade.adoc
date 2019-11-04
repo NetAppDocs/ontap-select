@@ -15,9 +15,16 @@ summary: xxx
 [.lead]
 You can use the ONTAP Select Deploy web user interface to upgrade or remove the Deploy plug-in from the vCenter server. You can also verify that the plug-in is still installed.
 
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
+{set:cellbgcolor:aqua}
+|===
+
 .Before you begin
 
-* Review Planning to manage the vCenter plug-in.
+* Review link:ci_vpi_manage_before.html[Before you begin].
 * The VMware vCenter plug-in should be installed and registered.
 * The vCenter administrator account must have the following vCenter privileges:
 ** Extension

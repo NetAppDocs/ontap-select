@@ -64,11 +64,11 @@ You must have the password for the root account at the vCenter server. You shoul
 
 . Type *shell* and press *Enter* to launch the Bash shell.
 
-. Navigate to the vsphere-client-serenity directory for the vSphere-UI service:
+. Navigate to the `vsphere-client-serenity` directory for the vSphere-UI service:
 +
 `cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity`
 
-. Determine if there are directories of the form com.netapp.selectdeploy that must be removed:
+. Determine if there are directories of the form `com.netapp.selectdeploy` that must be removed:
 +
 `ls -al`
 
@@ -104,11 +104,11 @@ You must have the password for the root account at the vCenter server. You shoul
 
 . Type *shell* and press *Enter* to launch the Bash shell.
 
-. Navigate to the vsphere-client-serenity directory for the vSphere-Client service:
+. Navigate to the `vsphere-client-serenity` directory for the vSphere-Client service:
 +
 `cd /etc/vmware/vsphere-client/vc-packages/vsphere-clientserenity`
 
-. Determine if there are directories of the form com.netapp.selectdeploy that must be removed:
+. Determine if there are directories of the form `com.netapp.selectdeploy` that must be removed:
 +
 `ls -al`
 

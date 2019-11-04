@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Before installing and using the Deploy vCenter plug-in, you should prepare for the deployment to assure success.
+Before installing and using the Deploy vCenter plug-in, you should prepare to assure success.
 
 == Software requirements
 
@@ -69,7 +69,7 @@ Several different vCenter privileges are required to manage and access the plug-
 * Accessing the plug-in through the vSphere client
 * Validating user access to the plug-in through vSphere
 
-See _Preparing the vCenter server accounts_ for more information.
+See link:ci_vpi_manage_before.html#preparing-the-vcenter-server-accounts[Preparing the vCenter server accounts] for more information.
 
 == AutoSupport limitations
 
