@@ -4,7 +4,7 @@ entries:
   - title: Concepts
     entries:
       - title: Product overview
-        url: /ci_overview.html
+        url: /concept_ots_overview.html
       - title: ONTAP Select Deploy
         url: /ci_ots_deploy.html
       - title: Business use cases
