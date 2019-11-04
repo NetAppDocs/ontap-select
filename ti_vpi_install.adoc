@@ -19,7 +19,7 @@ The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administratio
 |===
 |*Draft comment:*
 ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
-{set:cellbgcolor:aqua}
+{set:cellbgcolor:yellow}
 |===
 
 .Before you begin

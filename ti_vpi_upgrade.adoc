@@ -19,7 +19,7 @@ You can use the ONTAP Select Deploy web user interface to upgrade or remove the 
 |===
 |*Draft comment:*
 ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
-{set:cellbgcolor:aqua}
+{set:cellbgcolor:yellow}
 |===
 
 .Before you begin
