@@ -13,7 +13,7 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 :imagesdir: ./media/
 
 [.lead]
-You need to install the ONTAP Select Deploy administration utility and use the utility to createan ONTAP Select cluster. The Deploy installation procedure consists of multiple steps.
+You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster. The Deploy installation procedure consists of multiple steps.
 
 == Downloading the virtual machine image
 
@@ -39,7 +39,7 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 .After you finish
 
-The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must add the ONTAP Select image to your Deploy instance. See _Adding an ONTAP Select image to Deploy_ for more information.
+The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must add the ONTAP Select image to your Deploy instance.
 
 .Related information
 
@@ -72,7 +72,7 @@ If you use vSphere, the Deploy OVF template wizard includes a form to provide al
 
 . Access the vSphere client and sign in.
 
-. Navigate to the appropriate location in the vCenter hierarchy and select *Deploy OVF Template*.
+. Navigate to the appropriate location in the *vCenter* hierarchy and select *Deploy OVF Template*.
 
 . Select the OVA file and complete the Deploy OVF Template wizard, selecting the options as appropriate for your environment.
 +
@@ -81,7 +81,7 @@ You must define the password for the administrator account. You need to provide 
 . After the virtual machine is deployed, select the new virtual machine and power it on if it is not already powered on based on your input to the deployment wizard.
 
 . If needed, you can configure the Deploy network using the virtual machine console:
-.. Click the Console tab to access the ESXi host setup shell and monitor the power on process.
+.. Click the *Console* tab to access the ESXi host setup shell and monitor the power on process.
 .. Wait for the following prompt:
 +
 Host name :
@@ -110,3 +110,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 * New password for the administrator account (required)
 * AutoSupport (optional)
 * vCenter server with account credentials (optional)
+
+.Related information
+
+link:ti_cli_signing_in.html[Signing in to Deploy using SSH]

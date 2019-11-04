@@ -21,12 +21,12 @@ When you create an ONTAP Select cluster using the Deploy utility web interface, 
 You should prepare for the deployment to make sure it's successful.
 
 Initial planning::
-Review the planning and licensing sections of this documentation. Based on this, you can make decisions about the cluster, including:
+Review the _Plan_ and _License_ sections of the documentation. Based on this, you can make decisions about the cluster, including:
 
 * Hypervisor
 * Number of nodes
-* Platform size (instance type)
 * License type
+* Platform size (instance type)
 * Version of ONTAP Select
 
 Host preparation::
@@ -55,7 +55,12 @@ You can use the ONTAP Select Deploy web user interface to deploy a single-node O
 
 .Before you begin
 
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin].
+
+REMOVE:
+////
 You need to prepare the hypervisor host where the ONTAP Select node will run and have a storage license file. You must also have the password for the Deploy administrator account, which was configured as part of installing the Deploy administration utility.
+////
 
 .About this task
 
@@ -118,3 +123,19 @@ IMPORTANT: If the cluster creation operation is initiated but fails to complete,
 .After you finish
 
 You should confirm that the ONTAP Select AutoSupport feature is configured. You should back up the ONTAP Select Deploy configuration data.
+
+== Creating a multi-node cluster
+
+You can use the ONTAP Select Deploy web user interface to deploy a multi-node ONTAP Select cluster.
+
+.Before you begin
+
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin].
+
+.About this task
+
+An ONTAP Select cluster with one or more HA pairs is created.
+
+.Steps
+
+. Sign in to the Deploy utility through the web interface using the administrator account (admin) and provide the current password.
