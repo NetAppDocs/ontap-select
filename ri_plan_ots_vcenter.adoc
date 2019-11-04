@@ -36,7 +36,8 @@ You must define a vCenter server account and associate it with a role containing
 * Update virtual machine metadata
 
 ===== *Host*
-+
+
+//
 ===== Configuration
 
 * Change SNMP settings
@@ -54,7 +55,8 @@ You must define a vCenter server account and associate it with a role containing
 * Assign network
 
 ===== *Virtual machine*
-+
+
+//
 ===== Configuration
 
 All privileges in the category.
@@ -74,7 +76,3 @@ All privileges in the category.
 ===== vApp
 
 All privileges in the category.
-
-== VMware vCenter language restriction
-
-If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version. ONTAP Select Deploy does not support vCenter on non-English versions of Windows.

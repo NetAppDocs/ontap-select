@@ -13,4 +13,9 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+You can use SSH to access the Deploy command line interface and perform various administrative procedures.
+
+There are two types of procedures:
+
+* Deploy an ONTAP Select cluster
+* Perform an administrative procedure with an existing cluster.
