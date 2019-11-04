@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-This is a page used to test AsciiDoc formatting and features.
+This page is used to test AsciiDoc formatting and features.
 
 [cols="1"]
 |===
