@@ -49,7 +49,7 @@ To begin the upgrade process, you must download the appropriate Deploy virtual m
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
 .Related information
-link:https://mysupport.netapp.com[NetApp Support]
+link:https://mysupport.netapp.com[NetApp Support^]
 
 == Uploading the package to the Deploy virtual machine
 
