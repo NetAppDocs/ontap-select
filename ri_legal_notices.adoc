@@ -17,7 +17,8 @@ Legal notices provide access to copyright statements, trademarks, patents, and m
 
 [cols="1"]
 |===
-|*Draft comment:* The link to the Notices file under _Open source_ needs to be updated for 9.7.
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - The link to the Notices file under _Open source_ needs to be updated.
 {set:cellbgcolor:aqua}
 |===
 
