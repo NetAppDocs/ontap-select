@@ -41,7 +41,7 @@ License files::
 If you plan to deploy the cluster in a production environment, you must acquire the storage license files based on your licensing model.
 
 Deploy installation and account credentials::
-You must install the Deploy administration utility and perform initial configuration. See link:ti_install_deploy.html#signing-in-to-the-deploy-web-interface[Signing in to the Deploy web interface] for more information. You need to have the password for the Deploy administrator account which was configured as part of the installation process.
+You must install the Deploy administration utility and perform initial configuration. See link:ti_install_deploy.html[Installing ONTAP Select Deploy] for more information. You need to have the password for the Deploy administrator account which was configured as part of the installation process.
 
 Getting started launch page::
 The initial page *Getting Started with ONTAP Select Deploy* guides you through the multi-step process of creating a cluster. There are five major steps, including:
@@ -70,7 +70,7 @@ You can use the ONTAP Select Deploy web user interface to deploy a single-node O
 
 .Before you begin
 
-See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare for deploying the cluster.
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster.
 
 .About this task
 
@@ -84,13 +84,13 @@ An ONTAP Select cluster with one node is created for a production deployment.
 
 . On the *Getting Started* cluster launch page, click *Upload* and select a license from your local workstation and click *Open* to upload the license.
 
-. Click *Refresh* and confirm that the license has been added correctly.
+. Click *Refresh* and confirm that the license has been added.
 
 . Click *Next* to add a hypervisor host and then click *Add*.
 +
 You can add the ESXi host directly or by connecting to a vCenter server. You should provide the appropriate host details.
 +
-The host you add is displayed in a table on the right side of the page.
+The host you add is displayed in the table on the right side of the page.
 
 . Click *Refresh* and confirm the *Type* value for the host is *ESX*.
 +
@@ -106,7 +106,7 @@ You can also change the node name if needed.
 
 . Provide the configuration for the *Hypervisor* and *Network* section.
 +
-There are three instance types available (Small, Medium, Large) which define the hypervisor configuration and feature. These instance types are supported by the standard, premium, and premium XL offerings of the purchased license, respectively. The license you select for the node must match or exceed the instance type.
+There are three instance types available (Small, Medium, Large) which define the hypervisor configuration and feature set. These instance types are supported by the standard, premium, and premium XL offerings of the purchased license, respectively. The license you select for the node must match or exceed the instance type.
 +
 You must select the hypervisor host as well as the management and data networks.
 
@@ -116,7 +116,7 @@ If you select *Enable Software RAID*, you must include one storage pool for syst
 
 . Review and confirm the configuration of the cluster.
 +
-You can change the configuration by clicking Edit in the applicable section.
+You can change the configuration by clicking image:icon_pencil.gif[Edit] in the applicable section.
 
 . Click *Next*.
 
@@ -128,7 +128,7 @@ It can take up to 30 minutes for the cluster to be created.
 +
 The page is automatically refreshed at regular intervals.
 +
-IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password changeme123 for the admin account.
+IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
 
 .After you finish
 
@@ -140,7 +140,7 @@ You can use the ONTAP Select Deploy web user interface to deploy a multi-node ON
 
 .Before you begin
 
-See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare for deploying the cluster.
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster.
 
 .About this task
 
