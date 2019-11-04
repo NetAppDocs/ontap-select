@@ -181,8 +181,6 @@ entries:
             url: /ct_perf_premium_ha_direct_ssd_95.html
           - title: 9.6 Premium HA direct attached SSD storage
             url: /ct_perf_premium_ha_direct_ssd_96.html
-  - title: FAQ
-    url: /rt_faq.html
   - title: Integrate with vCenter
     entries:
       - title: Getting started
@@ -257,7 +255,7 @@ entries:
             url: /ri_api_script_anl.html
           - title: Resize cluster nodes
             url: /ri_api_script_resize.html
-  - title: Command line interface
+  - title: Use the CLI
     entries:
       - title: Before you begin
         url: /ci_cli_before.html
@@ -283,6 +281,8 @@ entries:
             url: /ti_cli_upgrade_deploy.html
           - title: Recover Deploy for two-node cluster
             url: /ti_cli_deploy_recover_two_node.html
+  - title: FAQ
+    url: /rt_faq.html
   - title: Get more information
     url: /ri_additional_info.html
   - title: Legal notices
