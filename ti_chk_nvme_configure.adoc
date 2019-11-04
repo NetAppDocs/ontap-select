@@ -13,16 +13,16 @@ summary: Prepare the host to deploy ONTAP Select using NVMe storage.
 :imagesdir: ./media/
 
 [.lead]
-Prepare the host to deploy ONTAP Select using NVMe storage.
+If you plan to use NVMe drives with software RAID, you need to configure the host to recognize the drives.
 
 .Before you begin
 
-Make sure your installation environment meets the following minimum requirements:
+Make sure your deployment environment meets the following minimum requirements:
 
-* ONTAP Select Deploy 9.7 or later
-* ONTAP Select Premium-XL license (or a 90-day evaluation license)
+* ONTAP Select 9.7 or later with the associated Deploy administration utility
+* Premium XL platform license offering or a 90-day evaluation license
 * VMware ESXi version 6.7 or later
-* NVMe devices that conforms to specification 1.0 or later
+* NVMe devices conforming to specification 1.0 or later
 
 Follow the link:rt_chk_host_prep.html[host preparation checklist], review the link:rt_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:rt_chk_select_req_info.html[required information for ONTAP Select installation] topics for more information.
 

@@ -133,9 +133,9 @@ You should consider the following recommendations regarding the hypervisor core 
 
 You can configure software RAID to use NVMe SSD drives. Your environment must meet the following requirements:
 
-* ONTAP Select 9.7 or later
-* Premium XL license or 90 day evaluation license
-* VMware ESXi version 6.7 or higher
-* NVMe devices must conform to specification 1.0 or later
+* ONTAP Select 9.7 or later with the associated Deploy administration utility
+* Premium XL platform license offering or a 90-day evaluation license
+* VMware ESXi version 6.7 or later
+* NVMe devices conforming to specification 1.0 or later
 
 You need to manually configure the NVMe drives before using them. See link:ti_chk_nvme_configure.html[Configuring a host for NVMe drives] for more information.
