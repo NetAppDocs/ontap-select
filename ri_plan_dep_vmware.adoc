@@ -12,8 +12,6 @@ summary: There are several requirements and restrictions specific to the VMware 
 :linkattrs:
 :imagesdir: ./media/
 
-// DP: October 30 - initial review
-
 [.lead]
 There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 
@@ -49,7 +47,3 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 
 * You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
-
-== VMware vCenter language restriction
-
-If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version. ONTAP Select Deploy does not support vCenter on non-English versions of Windows.

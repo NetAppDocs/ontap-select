@@ -21,24 +21,24 @@ There are additional resources you can access to get help and find more informat
 
 The following product pages include links to a wide variety of ONTAP Select resources.
 
-* https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select resources,window=_blank]
+* https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select resources^]
 
-* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page,window=_blank]
+* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 
 === Community
 
-You can connect with other users to ask questions and contribute to the ONTAP Select community.
+You can connect with other users to ask questions and contribute to the NetApp ONTAP Select community.
 
-* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select,window=_blank]
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select^]
 
 === Videos
 
 There are several helpful videos available at the dedicated YouTube channel.
 
-* https://www.youtube.com/playlist?list=PLdXI3bZJEw7nn1ZJMF3mG2fCBD0Esl--o[NetApp ONTAP Select channel at YouTube,window=_blank]
+* https://www.youtube.com/playlist?list=PLdXI3bZJEw7nn1ZJMF3mG2fCBD0Esl--o[NetApp ONTAP Select channel at YouTube^]
 
 === Blogs
 
 There is a collection of blog articles covering different aspects of ONTAP Select.
 
-* https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs,window=_blank]
+* https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs^]

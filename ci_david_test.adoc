@@ -13,32 +13,27 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-Page to test AsciiDoc.
+This is a page used to test AsciiDoc. It will be removed prior to FCS.
 
-== Icon test
+''''
 
-I grabbed these from Amanda, but have questions about the blue color (should they be black?) and resolution.
+////
+== Testing
 
-image:icon_arrow.gif[Arrow]
+Next three lines each begin with one tab. The result is a gray block across the entire page.
 
-image:icon_dropdown_arrow.gif[Dropdown arrow]
+  This is line 1
+  This is line 2
+  This is line 3
+////
 
-image:icon_gear.gif[Gear]
+////
+== Comment test
 
-image:icon_kebab.gif[Kebab]
-
-image:icon_pencil.gif[pencil]
-
-image:icon_question_mark.gif[Question mark]
-
-== Link test
-
-===== *Normal*
-
-Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] for more information.
-
-===== *Italics and bold*
-
-Refer to the https://mysupport.netapp.com/matrix[_NetApp Interoperability Matrix Tool_^] for more information.
-
-Refer to the https://mysupport.netapp.com/matrix[*NetApp Interoperability Matrix Tool*^] for more information.
+[cols="1"]
+|===
+|*Draft comment:* This is a test line 1. Testing again.
+Testing line 2
+{set:cellbgcolor:aqua}
+|===
+////

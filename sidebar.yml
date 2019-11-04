@@ -31,16 +31,20 @@ entries:
             url: /ri_plan_ots_hardware.html
           - title: Storage and RAID
             url: /ri_plan_ots_storage.html
-          - title: Networking
-            url: /ri_plan_ots_networking.html
           - title: ONTAP Select vNAS
             url: /ri_plan_ots_vnas.html
+          - title: Networking
+            url: /ri_plan_ots_networking.html
           - title: Two-node clusters
             url: /ri_plan_ots_two_node.html
-          - title: MetroCluster SDS
-            url: /ri_plan_ots_mcc_sds.html
           - title: Remote and branch offices
             url: /ri_plan_ots_robo.html
+          - title: MetroCluster SDS
+            url: /ri_plan_ots_mcc_sds.html
+          - title: VMware vCenter
+            url: /ri_plan_ots_vcenter.html
+          - title: VMware vCenter plug-in
+            url: /ri_plan_ots_plugin.html
       - title: ONTAP Select Deploy
         entries:
           - title: General requirements
@@ -53,8 +57,6 @@ entries:
     entries:
       - title: Options
         entries:
-          - title: Decisions
-            url: /ci_lic_decisions.html
           - title: Evaluation licences
             url: /ci_lic_evaluation.html
           - title: Production licences
