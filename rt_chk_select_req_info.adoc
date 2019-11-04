@@ -21,7 +21,7 @@ Some of the information you collect applies to the cluster itself, while other i
 
 You must collect information related to the ONTAP Select cluster.
 
-[cols=2,options="header"]
+[cols=2*,options="header",cols="35,65"]
 |===
 | Cluster information
 | Description
@@ -37,7 +37,7 @@ You must collect information related to the ONTAP Select cluster.
 
 You must collect information related to each of the nodes in the ONTAP Select cluster.
 
-[cols=2,options="header"]
+[cols=2*,options="header",cols="35,65"]
 |===
 | Cluster information
 | Description
