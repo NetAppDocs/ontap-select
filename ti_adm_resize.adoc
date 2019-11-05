@@ -13,7 +13,14 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance type of the nodesusing the Deploy administration utility.
+After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance type of the nodes using the Deploy administration utility.
+
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - Check TR 7.4
+{set:cellbgcolor:yellow}
+|===
 
 .Before you begin
 
@@ -21,7 +28,7 @@ The cluster must be in the online state.
 
 .About this task
 
-This task describes how to use the Deploy web user interface. You can also use the Deploy CLI to perform the instance resizing. Regardless of which interface you use, the time needed for the resizing operation can vary significantly based on several factors, and may take an extended amount of time to complete.
+This task describes how to use the Deploy web user interface. You can also use the Deploy CLI to perform the instance resizing. Regardless of which interface you use, the time needed for the resizing operation can vary significantly based on several factors, and may take an extended amount of time to complete. You can only resize a node to a larger size.
 
 .Steps
 

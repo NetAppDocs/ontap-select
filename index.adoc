@@ -11,8 +11,6 @@ summary: Welcome to the documentation portal for ONTAP Select.
 :linkattrs:
 :imagesdir: ./media/
 
-// DP: October 31 - initial review
-
 [.lead]
 NetApp ONTAP Select is a software-defined storage appliance you can deploy on a variety of commodity hardware servers running the VMware ESXi and KVM hypervisors. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
 
@@ -24,7 +22,7 @@ One of the major changes with ONTAP Select 9.7 is the [yellow-background]*Deploy
 
 == Navigating the product documentation
 
-ONTAP Select 9.7 can be deployed on VMware ESXi or KVM. This site contains the documentation for ONTAP Select 9.7 running on VMware ESXi as well as hypervisor-neutral content (such as the Deploy REST API). You can find the documentation for the KVM version of the product and the release notes, as well as prior product releases, at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
+ONTAP Select 9.7 can be deployed on VMware ESXi or KVM. This site contains the documentation for ONTAP Select 9.7 running on VMware ESXi as well as hypervisor-independent content (such as the Deploy REST API). You can find the documentation for the KVM version of the product and the release notes, as well as prior product releases, at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
 
 == Getting more information and connecting with peers.
 

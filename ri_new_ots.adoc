@@ -19,14 +19,14 @@ NOTE: Software RAID using NVMe drives is only available on VMware ESXi. See the 
 
 == Software RAID using NVMe drives
 
-[big red]*VMware ESXi only* Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocols. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives.
+[big blue]*VMware ESXi only.* Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocols. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives.
 
 IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
 
 == Versioning change for ONTAP Select Deploy
 
-[big red]*VMware ESXi and KVM* The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy refresh within a specific ONTAP Select release is assigned a unique build number.
+[big blue]*VMware ESXi and KVM.* The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy refresh within a specific ONTAP Select release is assigned a unique build number.
 
 == Improvements to Deploy web user interface
 
-[big red]*VMware ESXi and KVM* The Deploy utility web user interface has been enhanced based on evolving industry standard best practices. Several of the existing administrative workflows have been updated and simplified.
+[big blue]*VMware ESXi and KVM.* The Deploy utility web user interface has been enhanced based on evolving industry standard best practices. Several of the existing administrative workflows have been updated and simplified.

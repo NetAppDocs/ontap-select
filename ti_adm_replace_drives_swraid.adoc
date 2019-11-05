@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_adm_replace_drives_swraid.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Replacing failed drives when using SW RAID
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
