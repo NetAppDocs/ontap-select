@@ -15,7 +15,7 @@ summary: xxx
 [.lead]
 There are several aspects of the network that you can explore and display.
 
-= Confirming network connectivity
+== Confirming network connectivity
 
 You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You should typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail. You can also run the connectivity test after a cluster is deployed and online.
 

@@ -15,9 +15,10 @@ summary: xxx
 [.lead]
 You can access the Deploy management shell using SHH. After signing in, you can perform various administrative procedures.
 
-In general, the procedures you can perform fall into one of two categories:
+In general, the procedures you can perform fall into one of two categories.
 
-* Deploy an ONTAP Select cluster
+Deploy an ONTAP Select cluster::
 You can deploy a single-node or multi-node cluster.
-* Perform a procedure with an existing cluster
+
+Perform a procedure with an existing cluster::
 The administrative procedures are organized in various categories, such as _Security_ and _Nodes and hosts_.
