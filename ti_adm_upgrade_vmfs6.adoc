@@ -15,6 +15,13 @@ summary: xxx
 [.lead]
 VMware does not support an in-place upgrade from VMFS 5 to VMFS 6. You can use Storage vMotion to transition from a VMFS 5 datastore to a VMFS 6 datastore for an existing ONTAP Select node.
 
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - David rewrote this procedure, please review.
+{set:cellbgcolor:yellow}
+|===
+
 For ONTAP Select virtual machines, Storage vMotion can be used for single-node and multi-node clusters. It can be used for both storage-only as well as compute and storage migrations.
 
 image:ST_10.jpg[Migrate]
