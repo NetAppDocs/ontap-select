@@ -22,8 +22,8 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 .Steps
 
 . Click *ONTAP Select Deploy* in the *Global Inventory Lists* pane.
-2. Click the *Administration* tab.
-3. Expand the *Licenses* option and click either *Capacity Tier* or *Capacity Pool* to select the license type.
+. Click the *Administration* tab.
+. Expand the *Licenses* option and click either *Capacity Tier* or *Capacity Pool* to select the license type.
 +
 The current licenses and any issues are displayed.
 

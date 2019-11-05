@@ -211,8 +211,8 @@ entries:
         entries:
           - title: Diagnostics and support
             url: /ti_vpi_adm_support.html
-          - title: Network connectivity
-            url: /ti_vpi_adm_connectivity.html
+          - title: Networking
+            url: /ti_vpi_adm_network.html
           - title: Clusters
             url: /ti_vpi_adm_clusters.html
           - title: Licenses

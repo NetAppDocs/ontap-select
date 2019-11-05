@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_vpi_adm_connectivity.html
+permalink: ti_vpi_adm_network.html
 keywords: ontap select
 summary: xxx
 ---
@@ -13,6 +13,10 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
+There are several aspects of the network that you can explore and display.
+
+= Confirming network connectivity
+
 You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You should typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail. You can also run the connectivity test after a cluster is deployed and online.
 
 .About this task
