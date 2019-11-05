@@ -21,7 +21,7 @@ NOTE: See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Rele
 
 Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocols. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives.
 
-IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:ti_chk_nvme_configure.html[Configuring a host for NVMe drives] for more information.
+IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
 
 == Versioning change for ONTAP Select Deploy
 
