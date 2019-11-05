@@ -47,4 +47,4 @@ There is a collection of blog articles covering different aspects of ONTAP Selec
 
 You can access the KVM documentation for ONTAP Select 9.7 as well as the documentation for earlier releases at the product library.
 
-link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library]
+link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^]
