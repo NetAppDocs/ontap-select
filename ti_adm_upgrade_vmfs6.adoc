@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: ti_adm_upgrade_vmfs6.html
+keywords: ontap select
+summary: xxx
+---
+
+= Upgrading to VMFS6 using Storage vMotion
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
