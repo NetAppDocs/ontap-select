@@ -52,7 +52,7 @@ You can view the ONTAP Select cluster and associated cluster resources by access
 
 . Click *Menu* at the top and then click *VMs and Templates*.
 
-, Select the desired virtual machine in the list on the left.
+. Select the desired virtual machine in the list on the left.
 
 . Click the *More Objects* tab to view the ONTAP Select cluster running in the VM.
 
@@ -70,4 +70,4 @@ You can select an ESXI hypervisor host through the vSphere interface and deploy 
 
 . Right click the desired hypervisor host on the left, select *ONTAP Select*, and then click *New ONTAP Select*.
 
-. Complete the deployment process by following the steps in *Creating a single-node cluster*.
+. Complete the deployment process by following the steps in link:ti_deploy_cluster.html[Deploying an ONTAP Select cluster].

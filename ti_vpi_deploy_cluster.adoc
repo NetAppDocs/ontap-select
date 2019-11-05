@@ -23,8 +23,8 @@ You should prepare to use the Deploy vCenter plug-in before deploying an ONTAP S
 
 There are several steps you need to take regardless of the cluster size:
 
-* Read Getting started to become familiar with the Deploy vCenter plug-in.
-* Ensure that the ONTAP Select Deploy administration utility is installed and running. See the Installation and Cluster Deployment Guide for VMware for more information.
+* Read the _Getting started_ section  to become familiar with the Deploy vCenter plug-in.
+* Ensure that the ONTAP Select Deploy administration utility is installed and running.
 * Install the Deploy vCenter plug-in.
 * Prepare the hypervisor host or hosts on which the ONTAP Select cluster will run.
 * Acquire the required storage license files for the node or nodes in the cluster.
@@ -36,7 +36,7 @@ There are several steps you need to take regardless of the cluster size:
 
 === Additional preparation for a multi-node cluster
 
-In addition to common preparation, you should be familiar with the Deploy network connectivity checker before deploying a multi-node cluster.
+In addition to common preparation, you should be familiar with the Deploy network checker before deploying a multi-node cluster.
 
 == Adding a hypervisor host
 
@@ -81,8 +81,6 @@ You should review Preparing to deploy an ONTAP Select cluster and Adding a hyper
 If you have not previously accepted the SSL certificate, click the IP link in the warning message and accept the certificate. Then return to the your vCenter page and click the link in the warning message to reload the page.
 
 . On the *New ONTAP Select* page, enter the cluster details and click *Done*.
-+
-*INSERT GRAPHIC*
 
 . In the *Node Setup* section, provide the configuration and select a license.
 +
@@ -114,7 +112,6 @@ IMPORTANT: If the cluster creation operation is initiated but fails to complete,
 
 * Confirm that the ONTAP Select AutoSupport feature is enabled.
 * Back up the ONTAP Select Deploy configuration data.
-* Review the Installation and Cluster Deployment Guide for VMware for more information, including additional administrative and support tasks that you can perform.
 
 == Creating a multi-node cluster
 
@@ -176,4 +173,3 @@ IMPORTANT: If the cluster creation operation is initiated but fails to complete,
 
 * Confirm that the ONTAP Select AutoSupport feature is enabled.
 * Back up the ONTAP Select Deploy configuration data.
-* Review the Installation and Cluster Deployment Guide for VMware for more information, including additional administrative and support tasks that you can perform.

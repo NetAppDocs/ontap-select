@@ -15,9 +15,16 @@ summary: xxx
 [.lead]
 The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administration utility. You can use the ONTAP Select Deploy web user interface to install and register the plug-in at the vCenter server.
 
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
+{set:cellbgcolor:yellow}
+|===
+
 .Before you begin
 
-* Review Planning to manage the vCenter plug-in and Preparing the vCenter server accounts.
+* Review link:ci_vpi_manage_before.html[Before you begin].
 * Define a vCenter account to Deploy with the following privilege: sessions.validate.session. The vCenter server then becomes an option during plug-in installation.
 * Have credentials for a vCenter account with the following privileges:
 ** Extension

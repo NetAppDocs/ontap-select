@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: ci_overview.html
-keywords: ontap select, overview
+permalink: concept_ots_overview.html
+keywords: overview
 summary: ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It provides the agility you need to build a flexible and scalable private cloud infrastructure.
 ---
 
@@ -11,8 +11,6 @@ summary: ONTAP Select is a software-only version of ONTAP that you deploy as a v
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-
-// DP: October 30 - initial review
 
 [.lead]
 ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream FAS and AFF ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.

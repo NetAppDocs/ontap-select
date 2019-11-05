@@ -15,6 +15,13 @@ summary: Prepare the host to deploy ONTAP Select using NVMe storage.
 [.lead]
 If you plan to use NVMe drives with software RAID, you need to configure the host to recognize the drives.
 
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - New procedure.
+{set:cellbgcolor:yellow}
+|===
+
 .Before you begin
 
 Make sure your deployment environment meets the following minimum requirements:
