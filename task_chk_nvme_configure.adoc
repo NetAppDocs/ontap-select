@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ti_chk_nvme_configure.html
+permalink: task_chk_nvme_configure.html
 keywords: ontap select, nvme storage, host preparation
 summary: Prepare the host to deploy ONTAP Select using NVMe storage.
 ---
 
-= Configuring a host for NVMe drives
+= Configuring a host to use NVMe drives
 :hardbreaks:
 :nofooter:
 :icons: font

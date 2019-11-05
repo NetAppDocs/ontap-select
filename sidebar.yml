@@ -96,7 +96,7 @@ entries:
           - title: ONTAP Select required information
             url: /rt_chk_select_req_info.html
           - title: NVMe host configuration
-            url: /ti_chk_nvme_configure.html
+            url: /task_chk_nvme_configure.html
       - title: Install ONTAP Select Deploy
         url: /ti_install_deploy.html
       - title: Deploy a cluster
