@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_deploy_image_remove.html
+permalink: ti_cli_deploy_image_remove.html
 keywords: ontap select
 summary: xxx
 ---
 
-= Removing ONTAP Select images from the Deploy utility
+= Removing an ONTAP Select image from Deploy
 :hardbreaks:
 :nofooter:
 :icons: font

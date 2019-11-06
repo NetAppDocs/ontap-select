@@ -282,9 +282,9 @@ entries:
           - title: Recover Deploy for two-node cluster
             url: /ti_cli_deploy_recover_two_node.html
           - title: Add ONTAP Select images
-            url: /ti_adm_deploy_image_add.html
+            url: /ti_cli_deploy_image_add.html
           - title: Remove ONTAP Select images
-            url: /ti_adm_deploy_image_remove.html
+            url: /ti_cli_deploy_image_remove.html
   - title: FAQ
     url: /rt_faq.html
   - title: Get more information
