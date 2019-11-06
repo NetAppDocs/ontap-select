@@ -25,11 +25,11 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Licenses* and then click *Capacity Tier*.
+. Click *Licenses* and click *Capacity Tier*.
 
-. Optionally click *Filtering* and create a filter to limit the licenses displayed.
+. Optionally click *Filter* and to limit the licenses displayed.
 
-. You can edit or delete an existing license by clicking the appropriate icon on the right for the license.
+. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
 
 . To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
@@ -43,13 +43,13 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Licenses* and then click *Capacity Pool*.
+. Click *Licenses* and click *Capacity Tier*.
 
-. Optionally click *Filtering* and create a filter to limit the licenses displayed.
+. Optionally click *Filter* and to limit the licenses displayed.
+
+. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
 
 . To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
-
-. You can delete an existing license by clicking the appropriate icon on the right for the license.
 
 . To see a list of the capacity pools:
 .. Click *Summary*.

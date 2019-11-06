@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Confirming network connectivity among the ONTAP Select nodes
+= Confirming connectivity among the ONTAP Select nodes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,4 +13,37 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-XXXX
+You can test the network connectivity among two or more ONTAP Select nodes on the internal
+cluster network. You typically run this test before a multi-node cluster is deployed to detect issues
+that might cause the operation to fail. You can also run the connectivity test after a cluster is deployed
+and online.
+
+.Before you begin
+
+All the ONTAP Select nodes included in the test must be configured and powered on.
+
+.About this task
+
+Each time you start a test, a new process run is created in the background and assigned a unique run identifier. Only one run can be active at a time.
+
+The test has two modes that control its operation:
+
+* Quick
+This mode performs a basic non-disruptive test. A PING test is performed, along with a test of the network MTU size and the vSwitch.
+* Extended
+This mode performs a more comprehensive test over all the redundant network paths. If you run this on an active ONTAP Select cluster, the performance of the cluster can be impacted.
+
+[NOTE]
+It is recommended that you always perform a quick test before creating a multi-node cluster. After the quick test completes successfully, you can optionally perform an extended test based on your production requirements.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page and click *Network Checker*.
+
+. Click *Start New Run* and select the hosts in the HA pair.
++
+You can add other HA pairs and configure them as needed.
+
+. Click *Start* to begin the network connectivity test.
