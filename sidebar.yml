@@ -289,6 +289,8 @@ entries:
     url: /rt_faq.html
   - title: Get more information
     url: /ri_additional_info.html
+  - title: Earlier versions
+    url: /reference_earlier_versions.html
   - title: Legal notices
     url: /ri_legal_notices.html
   - title: David's test page
