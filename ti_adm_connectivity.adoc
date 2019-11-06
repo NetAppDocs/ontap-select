@@ -15,8 +15,7 @@ summary: xxx
 [.lead]
 You can test the network connectivity among two or more ONTAP Select nodes on the internal
 cluster network. You typically run this test before a multi-node cluster is deployed to detect issues
-that might cause the operation to fail. You can also run the connectivity test after a cluster is deployed
-and online.
+that might cause the operation to fail.
 
 .Before you begin
 
@@ -44,6 +43,6 @@ It is recommended that you always perform a quick test before creating a multi-n
 
 . Click *Start New Run* and select the hosts in the HA pair.
 +
-You can add other HA pairs and configure them as needed.
+You can add and configure HA pairs as needed.
 
 . Click *Start* to begin the network connectivity test.

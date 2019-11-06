@@ -46,11 +46,11 @@ Testing line 2
 |===
 ////
 
-[yellow]#Not special formatting#
+[aqua]#Line 1 - No special formatting#
 
-[yellow]*Bold formatting*
+[aqua]*Line 2 - Bold formatting*
 
-[big aqua]*Bold and big formatting*
+[big aqua]*Line 3 - Bold and big formatting*
 
 Code block:
 

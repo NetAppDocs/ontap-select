@@ -17,6 +17,12 @@ summary: There are additional resources you can access to get help and find more
 [.lead]
 There are additional resources you can access to get help and find more information about ONTAP Select.
 
+=== KVM and legacy documentation
+
+You can access the KVM documentation for ONTAP Select 9.7 as well as the documentation for earlier ONTAP Select releases at the product library.
+
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^]
+
 === ONTAP Select product resources
 
 The following product pages include links to a wide variety of ONTAP Select resources.
@@ -42,9 +48,3 @@ There are several helpful videos available at the dedicated YouTube channel.
 There is a collection of blog articles covering different aspects of ONTAP Select.
 
 * https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs^]
-
-=== KVM and legacy documentation
-
-You can access the KVM documentation for ONTAP Select 9.7 as well as the documentation for earlier ONTAP Select releases at the product library.
-
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^]
