@@ -15,13 +15,15 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-NOTE: Software RAID using NVMe drives is only available on VMware ESXi. See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes^] for more information.
+[NOTE]
+Software RAID using NVMe drives is only available on VMware ESXi. See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes^] for more information.
 
 == Software RAID using NVMe drives
 
 [big blue]*VMware ESXi only.* Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocols. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives.
 
-IMPORTANT: To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
+[IMPORTANT]
+To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
 
 == Versioning change for ONTAP Select Deploy
 

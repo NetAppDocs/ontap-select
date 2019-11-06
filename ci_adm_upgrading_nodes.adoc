@@ -15,20 +15,21 @@ summary: xxx
 [.lead]
 After you deploy an ONTAP Select cluster, you can upgrade the ONTAP image of each node as needed using the standard ONTAP software upgrade procedure.
 
-NOTE: You should review the current release notes for additional information and any required procedures before upgrading an ONTAP Select node.
+[NOTE]
+You should review the current release notes for additional information and any required procedures before upgrading an ONTAP Select node.
 
 == ONTAP Select Deploy only for new cluster deployments
 
-You cannot use the Deploy administration utility to perform upgrades of existing ONTAP Select nodes. The Deploy utility can only be used to install new ONTAP Select cluster nodes.
+You cannot use the Deploy administration utility to perform upgrades of existing ONTAP Select nodes. The Deploy utility can only be used to create new ONTAP Select cluster nodes.
 
 == Reverting an ONTAP Select node
 
 You cannot revert an ONTAP Select node to a version prior to the version that was originally installed. For example:
 
-* ONTAP Select 9.1 is initially installed
-You can upgrade the node to version 9.2 and then revert back to version 9.1 if needed.
-* ONTAP Select 9.2 is initially installed
-You cannot revert to version 9.1 because this version is prior to the version that was originally installed.
+ONTAP Select 9.4 is initially installed::
+You can upgrade the node to version 9.5 and then revert back to version 9.4 if needed.
+ONTAP Select 9.5 is initially installed::
+You cannot revert to version 9.4 because this version is prior to the version that was originally installed.
 
 == Using the VMXNET3 network driver
 
@@ -37,3 +38,7 @@ Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default networ
 == Review current release notes
 
 You should review the current release notes for additional information and any required procedures before upgrading an ONTAP Select node.
+
+.Related information
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[ONTAP Select Release Notes]

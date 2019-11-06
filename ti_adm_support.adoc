@@ -21,15 +21,15 @@ You should set the basic system configuration parameters that affect how the Dep
 
 .About this task
 
-The Deploy configuration data you provide is used by AutoSupport.
+The Deploy configuration data is used by AutoSupport.
 
 .Steps
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the Administration tab at the top of the page.
+. Click the *Administration* tab at the top of the page.
 
-. Click *Settings and AutoSupport* and then click the edit icon.
+. Click *Settings & AutoSupport* and then click image:icon_pencil.gif[Edit].
 
 . Provide the configuration data as appropriate for your environment and click *Modify*.
 +
@@ -47,10 +47,12 @@ The ONTAP Select Deploy utility includes an event logging facility that provides
 
 You can filter the list of event messages based on several characteristics, including:
 
-* Category
+* Status
 * Type
-* Level
+* Category
 * Instance
+* Time
+* Description
 
 .Steps
 
@@ -58,9 +60,9 @@ You can filter the list of event messages based on several characteristics, incl
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Events* and then click *Deploy*.
+. Click *Events & Jobs* and then *Events*.
 
-. Optionally click *Filtering* and create a filter to limit the event messages displayed.
+. Optionally click *Filter* and create a filter to limit the event messages displayed.
 
 == Enabling AutoSupport
 
@@ -72,7 +74,7 @@ You can enable and disable the AutoSupport feature as needed.
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *AutoSupport* and then click *Configure*.
+. Click *Settings & AutoSupport* and then click image:icon_kebab.gif[Options].
 
 . Enable or disable the AutoSupport feature as needed.
 
@@ -101,14 +103,14 @@ Performance information about the hypervisor hosts and ONTAP Select nodes
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *AutoSupport* and then click *Generate*.
+. Click *Settings & AutoSupport* and then click image:icon_kebab.gif[Options].
+
+. Click *Generate*.
 
 . Select the type and provide a description for the package; you can optionally provide a case number.
 
-. Click *Generate AutoSupport*.
+. Click *Generate*.
 +
 Each AutoSupport package is assigned a unique sequence identification number.
 
-. On the left side of the page, click *History* and locate the correct package; you can click *Refresh* as needed.
-
-. Optionally click the download icon to save the AutoSupport file to your local workstation.
+. Optionally under *AutoSupport History*, select the correct package and click the download icon to save the AutoSupport file to your local workstation.

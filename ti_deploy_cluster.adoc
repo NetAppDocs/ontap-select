@@ -91,17 +91,17 @@ An ONTAP Select cluster with one node is created for a production deployment.
 
 . If the *Getting Started* cluster launch page is not displayed, click image:icon_question_mark.gif[Question mark] at the top of the page and click *Getting Started*.
 
-. On the *getting Started* page, click *Upload* and select a license from your local workstation and click *Open* to upload the license.
+. On the *Getting Started* page, click *Upload* and select a license from your local workstation and click *Open* to upload the license.
 
 . Click *Refresh* and confirm the license has been added.
 
 . Click *Next* to add a hypervisor host and then click *Add*.
 +
-You can add the ESXi host directly or by connecting to a vCenter server. You should provide the appropriate host details and credentials as needed.
+You can add the ESXi host directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
 
 . Click *Refresh* and confirm the *Type* value for the host is *ESX*.
 +
-Any username and password you provide is added to the Deploy credential database.
+Any account credentials you provide are added to the Deploy credential database.
 
 . Click *Next* to begin the cluster creation process.
 
@@ -109,17 +109,17 @@ Any username and password you provide is added to the Deploy credential database
 
 . Under *Node Setup*, provide the node management IP address and select the license for the node; you can upload a new license if needed.
 +
-You can also change the node name if needed.
+You can change the node name if needed.
 
 . Provide the *Hypervisor* and *Network* configuration.
 +
 There are three node configurations which define the virtual machine size and available feature set. These instance types are supported by the standard, premium, and premium XL offerings of the purchased license, respectively. The license you select for the node must match or exceed the instance type.
 +
-You must select the hypervisor host as well as the management and data networks.
+Select the hypervisor host as well as the management and data networks.
 
 . Provide the *Storage* configuration and click *Done*.
 +
-You can select the drives based on your host configuration and license.
+You can select the drives based on your platform license level and host configuration.
 
 . Review and confirm the configuration of the cluster.
 +
@@ -135,11 +135,11 @@ It can take up to 30 minutes for the cluster to be created.
 +
 The page is automatically refreshed at regular intervals.
 +
-IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
+IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define may not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
 
 .After you finish
 
-You should confirm the ONTAP Select AutoSupport feature is configured. You should back up the ONTAP Select Deploy configuration data.
+You should confirm the ONTAP Select AutoSupport feature is configured and back up the ONTAP Select Deploy configuration data.
 
 == Creating a multi-node cluster
 
