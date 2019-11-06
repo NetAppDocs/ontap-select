@@ -15,7 +15,8 @@ summary: xxx
 [.lead]
 After you deploy an ONTAP Select cluster, you can upgrade the ONTAP image of each node as needed using the standard ONTAP software upgrade procedure.
 
-NOTE: You should review the current release notes for additional information and any required procedures before upgrading an ONTAP Select node.
+[NOTE]
+You should review the current release notes for additional information and any required procedures before upgrading an ONTAP Select node.
 
 == ONTAP Select Deploy only for new cluster deployments
 

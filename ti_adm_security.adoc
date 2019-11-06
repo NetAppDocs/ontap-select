@@ -27,9 +27,9 @@ You can change the password for the Deploy virtual machine administrator account
 
 . Provide the current and new password as prompted and click *Submit*.
 
-== Adding an account to the credential store
+== Adding a management server account
 
-You can add a new account to the Deploy credential store database.
+You can add a management server account to the Deploy credential store database.
 
 .Before you begin
 
@@ -41,11 +41,16 @@ You should be familiar with the types of credentials and how they are used by ON
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Credentials* and then click *Add*.
+. Click *Management Servers* and then click *Add*.
 
 . Provide the account credentials and click *Add*.
 
-. Click the check icon on the right to authenticate the account.
+. Optionally select the new management server and click image:icon_kebab.gif[Options] and select one of the following:
++
+* Update credentials
+* Register as plug-in
+* Verify credentials
+* Remove management server
 
 .After you finish
 

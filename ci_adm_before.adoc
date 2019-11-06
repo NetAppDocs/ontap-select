@@ -19,7 +19,8 @@ After creating an ONTAP Select cluster, you can support the deployment by perfor
 
 There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. In general, all use the Deploy web user interface. An administrative process can consist of a single step-by-step task or a sequence of multiple tasks.
 
-NOTE: You can also use the command line interface to administer ONTAP Select. See the section _Using the CLI_ for more information.
+[NOTE]
+You can also use the command line interface to administer ONTAP Select. See the section _Using the CLI_ for more information.
 
 == Performing additional ONTAP configuration
 
@@ -37,7 +38,8 @@ You can connect to ONTAP Select using the following supported NetApp client soft
 
 To identify the supported versions of the client software, refer to the NetApp Interoperability Matrix Tool. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
 
-IMPORTANT: The use of SnapCenter and the corresponding plug-ins requires server-based licenses. Storage system licensing of the SnapCenter plug-ins is not currently supported with ONTAP Select.
+[IMPORTANT]
+The use of SnapCenter and the corresponding plug-ins requires server-based licenses. Storage system licensing of the SnapCenter plug-ins is not currently supported with ONTAP Select.
 
 Any other NetApp client software that is not included in the list is not supported by ONTAP Select.
 
