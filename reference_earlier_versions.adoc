@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference_earlier_evrsions.html
+permalink: reference_earlier_versions.html
 keywords: ontap select
 summary: xxx
 ---

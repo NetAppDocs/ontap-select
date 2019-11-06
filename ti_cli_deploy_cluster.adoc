@@ -81,7 +81,7 @@ Before you register a host that is managed by vCenter, you must add a management
 +
 `credential add -hostname <FQDN|IP> -type vcenter -username VCENTER_USERNAME`
 +
-Example:
+Example
 +
 ....
 credential add -hostname vc.select.company-demo.com -type vcenter -username administrator@vsphere.local
@@ -93,7 +93,8 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 `host register -name <FQDN|IP> -hypervisor-type ESX -username ESX_USERNAME`
 * Register a host managed by vCenter:
 `host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN| IP>`
-+Example
++
+Example
 ....
 host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com
 ....
@@ -139,6 +140,7 @@ cluster create -name test-cluster -node-count 1
 `cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK - gateway IP_ADDRESS -dns-servers <FQDN|IP>_LIST -dns-domains DOMAIN_LIST`
 +
 Example
++
 ....
 cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 -gateway 10.234.81.1 -dns-servers 10.221.220.10 -dnsdomains select.company-demo.com
@@ -164,7 +166,7 @@ You should use this procedure to configure each node. A capacity tier license is
 
 . Determine the names assigned to the cluster nodes:
 +
-'node show -cluster-name CLUSTERNAME'
+`node show -cluster-name CLUSTERNAME`
 
 . Select the node and perform basic configuration:
 `node modify -name NODENAME -cluster-name CLUSTERNAME -host-name <FQDN|IP> -license-serial-number NUMBER -instance-type TYPE -passthrough-disks false`

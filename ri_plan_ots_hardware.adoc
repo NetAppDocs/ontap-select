@@ -15,13 +15,6 @@ summary: xxx
 [.lead]
 There are several requirements and planning issues you should consider related to the VMware environment.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - Is ESXi 6.7 U3 now supported?
-{set:cellbgcolor:yellow}
-|===
-
 == Hypervisor requirements
 
 There are several requirements related to the hypervisor where ONTAP Select runs.
@@ -39,7 +32,7 @@ ONTAP Select can be deployed on the following hypervisors:
 
 * VMware ESXi 6.0 GA (build 2494585 or greater)
 * VMware ESXi 6.5 U2 (build 8294253 or greater)
-* VMware ESXi 6.7 GA (build 8169922or greater) including 6.7 U1 and 6.7 U2
+* VMware ESXi 6.7 GA (build 8169922or greater) including 6.7 U1, U2, and U3
 
 [NOTE]
 NetApp supports ONTAP Select on these versions of ESXi as long as VMware also continues to support the same versions.
