@@ -51,3 +51,54 @@ You can filter the list of event messages based on several characteristics, incl
 . Expand the *Events* option and click *Deploy*.
 
 . Optionally, click Filtering and create a filter to limit the event messages that are displayed.
+
+== Enabling AutoSupport
+
+AutoSupport is the primary troubleshooting tool used by NetApp to support ONTAP Select. You can enable or disable the AutoSupport feature as needed.
+
+.About this task
+
+After deploying a new cluster, you should make sure AutoSupport is enabled. You should only disable AutoSupport when necessary. If you disable AutoSupport, data is still collected but not transmitted to NetApp.
+
+.Steps
+
+. Click *ONTAP Select Deploy* in the *Global Inventory Lists* pane.
+
+. Click the *Administration* tab.
+
+. Expand the *AutoSupport* option and click *Configure*
+
+. Enable or disable AutoSupport as needed.
+
+== Generating an AutoSupport package
+
+The Deploy vCenter Plug-in includes the ability to generate an AutoSupport package. You should generate a package to debug issues or when directed to do so by support.
+
+.About this task
+
+You can generate the following AutoSupport packages:
+
+* Deploy logs
+Log files created by the ONTAP Select Deploy utility
+* Troubleshooting
+Troubleshooting and debugging information about the hypervisor hosts and ONTAP Select nodes
+* Performance
+Performance information about the hypervisor hosts and ONTAP Select nodes
+
+.Steps
+
+. Click *ONTAP Select Deploy* in the *Global Inventory Lists* pane.
+
+. Click the *Administration* tab.
+
+. Expand the *AutoSupport* option and click *Generate*.
+
+. Select the type and provide a description for the package or provide a case number and then click *Generate AutoSupport*.
+
+. In the pane on the left, click *History* under *AutoSupport* and locate the package.
++
+You can click *Refresh* as needed.
+
+.After you finish
+
+You can download the AutoSupport package to your workstation using the native Deploy utility user interface. You cannot download the package using the Deploy vCenter plug-in.

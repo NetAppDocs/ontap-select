@@ -15,6 +15,13 @@ summary: xxx
 [.lead]
 ONTAP Select automatically licenses several features for each node when you deploy a cluster.
 
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - Include TR 1.6 "ONTAP Select feature support"
+{set:cellbgcolor:yellow}
+|===
+
 Licenses for the following features are included by default:
 
 * NFS

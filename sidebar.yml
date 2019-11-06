@@ -125,6 +125,10 @@ entries:
             url: /ti_adm_video_console.html
           - title: Resizing the cluster nodes
             url: /ti_adm_resize.html
+          - title: Replacing failed SW RAID drives
+            url: /ti_adm_replace_drives_swraid.html
+          - title: Upgrading to VMFS6
+            url: /ti_adm_upgrade_vmfs6.html
       - title: Licenses
         url: /ti_adm_licenses.html
       - title: Deploy utility
@@ -211,8 +215,8 @@ entries:
         entries:
           - title: Diagnostics and support
             url: /ti_vpi_adm_support.html
-          - title: Network connectivity
-            url: /ti_vpi_adm_connectivity.html
+          - title: Networking
+            url: /ti_vpi_adm_network.html
           - title: Clusters
             url: /ti_vpi_adm_clusters.html
           - title: Licenses

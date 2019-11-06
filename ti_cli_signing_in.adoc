@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You need to sign in to the Deploy management shell using SSH to the deploy ONTAP Select clusters and perform related administrative procedures.
+You need to sign in to the Deploy management shell using SSH. After signing in, you can issue CLI commands to create an ONTAP Select cluster and perform related administrative procedures.
 
 .Before you begin
 
