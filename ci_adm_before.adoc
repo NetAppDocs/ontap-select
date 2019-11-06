@@ -31,12 +31,14 @@ After an ONTAP Select cluster is deployed, you can configure and manage the clus
 You can connect to ONTAP Select using the following supported NetApp client software:
 
 * OnCommand System Manager
-* OnCommand Unified Manager for ONTAP
+* OnCommand Unified Manager
 * OnCommand Performance Manager
+* OnCommand Insight
+* OnCommand Workflow Automation
+* SnapCenter
 * Virtual Storage Console for VMware vSphere
-* SnapCenter (refer to the NetApp Interoperability Matrix Tool for more details)
 
-To identify the supported versions of the client software, refer to the NetApp Interoperability Matrix Tool. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
+To identify the supported versions of the client software, review the _NetApp Interoperability Matrix Tool_. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
 
 [IMPORTANT]
 The use of SnapCenter and the corresponding plug-ins requires server-based licenses. Storage system licensing of the SnapCenter plug-ins is not currently supported with ONTAP Select.

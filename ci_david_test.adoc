@@ -51,17 +51,3 @@ Testing line 2
 [aqua]*Line 2 - Bold formatting*
 
 [big aqua]*Line 3 - Bold and big formatting*
-
-Code block:
-
-....
-Line 1
-Line 2
-Line 3
-....
-
-Tab block
-
-  Line 1
-  Line 2
-  Line 3
