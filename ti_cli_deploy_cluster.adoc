@@ -95,6 +95,7 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 `host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN| IP>`
 +
 Example
++
 ....
 host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com
 ....
