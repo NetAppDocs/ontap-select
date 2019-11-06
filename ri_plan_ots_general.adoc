@@ -29,7 +29,8 @@ Based on the application type, you should determine if the deployment follows th
 
 There are several planning issues related to the hypervisor host that you should consider.
 
-IMPORTANT: You should not directly modify the configuration of an ONTAP Select virtual machine unless directed to do so by NetApp support. A virtual machine should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select virtual machine outside of the Deploy utility without assistance from NetApp support can cause the virtual machine to fail and render it unusable.
+[IMPORTANT]
+You should not directly modify the configuration of an ONTAP Select virtual machine unless directed to do so by NetApp support. A virtual machine should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select virtual machine outside of the Deploy utility without assistance from NetApp support can cause the virtual machine to fail and render it unusable.
 
 Hypervisor independent::
 Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervisor-independent. The following hypervisors are supported for both:
@@ -37,7 +38,8 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 * VMware ESXi
 * Kernel-based Virtual Machine (KVM)
 
-NOTE: Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
+[NOTE]
+Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
 
 Hypervisor for ONTAP Select nodes and administration utility::
 Both the Deploy administration utility and ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
@@ -86,7 +88,8 @@ When using the ONTAP Select vNAS solution, you must decide where the remote data
 Estimate for the storage needed::
 You should determine how much storage is required for the ONTAP Select nodes. This information is required as part of acquiring the purchased licenses with storage capacity. Refer to Storage capacity restrictions for more information.
 
-NOTE: The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
+[NOTE]
+The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
 
 Licensing model for production deployment::
 You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review the section _License_ for more information.

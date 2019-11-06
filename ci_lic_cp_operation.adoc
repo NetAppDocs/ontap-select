@@ -63,4 +63,5 @@ Storage capacity is allocated from a capacity pool as needed and each new reques
 * Lease for a data aggregate expires and is not renewed by the node
 * Data aggregate is deleted
 
-NOTE: If an ONTAP Select virtual machine is deleted, any active leases remain in effect until they expire. When this occurs, the capacity is returned to the pool.
+[NOTE]
+If an ONTAP Select virtual machine is deleted, any active leases remain in effect until they expire. When this occurs, the capacity is returned to the pool.

@@ -75,7 +75,8 @@ See link:ci_vpi_manage_before.html#preparing-the-vcenter-server-accounts[Prepari
 
 The Deploy vCenter plug-in provides a minimum amount of usage information in the Deploy administration utility (including the plug-in URL). However, AutoSupport does include a table of the installed plug-ins that can be displayed through the AutoSupport viewer.
 
-NOTE: Note: You cannot download an AutoSupport package through the vSphere web client using the Deploy plug-in. You must use the native Deploy interface to download AutoSupport packages.
+[NOTE]
+You cannot download an AutoSupport package through the vSphere web client using the Deploy plug-in. You must use the native Deploy interface to download AutoSupport packages.
 
 == Additional restrictions
 

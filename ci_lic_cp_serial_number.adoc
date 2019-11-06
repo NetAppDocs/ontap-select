@@ -19,7 +19,8 @@ The serial number of a node using capacity pools licensing has the following for
 
 `999 ppppppppp nnnnnnnn`
 
-NOTE: Spaces have been added for clarity, but are not part of the actual serial number.
+[NOTE]
+Spaces have been added for clarity, but are not part of the actual serial number.
 
 Each section of the node serial number is described in the following table, from left to right.
 
@@ -39,4 +40,5 @@ Each section of the node serial number is described in the following table, from
 
 |===
 
-IMPORTANT: Attention: When opening a case with NetApp support involving a node that uses a capacity pool license, you cannot provide the full twenty-digit node serial number. Instead, you must provide the nine-digit capacity pool license serial number. You can derive the license serial number from the node serial number as shown above. Skip the first three digits of the node serial number ('999') and extract the next nine digits (ppppppppp).
+[IMPORTANT]
+Attention: When opening a case with NetApp support involving a node that uses a capacity pool license, you cannot provide the full twenty-digit node serial number. Instead, you must provide the nine-digit capacity pool license serial number. You can derive the license serial number from the node serial number as shown above. Skip the first three digits of the node serial number ('999') and extract the next nine digits (ppppppppp).

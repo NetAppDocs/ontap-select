@@ -21,4 +21,4 @@ Deploy an ONTAP Select cluster::
 You can deploy a single-node or multi-node cluster.
 
 Perform a procedure with an existing cluster::
-The administrative procedures are organized in various categories, such as _Security_ and _Nodes and hosts_.
+The administrative procedures are organized in various categories, such as _Security_ and _Clusters_.

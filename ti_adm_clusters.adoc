@@ -86,7 +86,8 @@ After a virtual machine running ONTAP Select has been migrated, you must create 
 
 You can perform a cluster refresh to update the Deploy configuration database using the web user interface.
 
-NOTE: Instead of using the Deploy GUI, you can use the cluster refresh command in the Deploy CLI shell to refresh a cluster.
+[NOTE]
+Instead of using the Deploy GUI, you can use the cluster refresh command in the Deploy CLI shell to refresh a cluster.
 
 Cluster and virtual machine configuration::
 Some of the configuration values that can change and cause the Deploy database to become out of sync include:

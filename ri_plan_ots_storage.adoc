@@ -26,7 +26,8 @@ ONTAP Select 9.7 RC1 - Add NVMe and link to configuration procedure
 
 The RAID controller on the hypervisor host where you deploy ONTAP Select must meet several requirements.
 
-NOTE: An ESXi host where ONTAP Select runs requires local physical drives when using a hardware RAID controller or the software RAID capability provided with ONTAP Select. If you use the ONTAP Select vNAS solution to access external storage, a local RAID controller and software RAID capability are not used.
+[NOTE]
+An ESXi host where ONTAP Select runs requires local physical drives when using a hardware RAID controller or the software RAID capability provided with ONTAP Select. If you use the ONTAP Select vNAS solution to access external storage, a local RAID controller and software RAID capability are not used.
 
 The minimum requirements for the RAID controller include:
 
@@ -56,14 +57,16 @@ The environment for a software RAID deployment on VMware ESXi must meet the foll
 * ONTAP Select Deploy 2.10 or later
 * New ONTAP Select clusters only
 
-NOTE: You must deploy a new cluster with ONTAP Select 9.5 or later, using the Deploy administration utility. You cannot use software RAID with an existing node that has been upgraded from a previous version to ONTAP Select 9.5.
+[NOTE]
+You must deploy a new cluster with ONTAP Select 9.5 or later, using the Deploy administration utility. You cannot use software RAID with an existing node that has been upgraded from a previous version to ONTAP Select 9.5.
 
 * ONTAP Select premium license or higher
 * Local SSD drives only
 * Separation of system disks from the root and data aggregates
 * No hardware RAID controller on the host
 
-NOTE: If a hardware RAID controller is present, see the ONTAP Select Product Architecture and Best Practices Technical Report (TR-4517) for additional configuration requirements.
+[NOTE]
+If a hardware RAID controller is present, see the ONTAP Select Product Architecture and Best Practices Technical Report (TR-4517) for additional configuration requirements.
 
 * VMware VMotion, HA, and DRS are not supported
 
@@ -82,9 +85,8 @@ As part of planning an ONTAP Select deployment, you should be aware of the restr
 
 The most important storage restrictions are presented below. You should also review the _NetApp Interoperability Matrix Tool_ for more detailed information.
 
-IMPORTANT: ONTAP Select enforces several restrictions related to storage allocation and use. Before
-you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these
-restrictions. See the _License_ section for more information.
+[IMPORTANT]
+ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the _License_ section for more information.
 
 ==== Calculating raw storage capacity
 
@@ -108,7 +110,8 @@ The minimum size of the storage pool allocated for each node in a multi-node clu
 
 The minimum allocation for a production deployment consists of 2 TB for user data, plus approximately 266 GB used by various ONTAP Select internal processes, which is considered required overhead.
 
-NOTE: Each node in an HA pair must have the same storage capacity.
+[NOTE]
+Each node in an HA pair must have the same storage capacity.
 
 ==== Storage capacity and multiple storage pools
 
@@ -117,7 +120,8 @@ You can configure each ONTAP Select node to use up to 400 TB of storage when usi
 * Assign the initial storage pool during the cluster creation process
 * Increase the node storage by allocating one or more additional storage pools
 
-NOTE: A 2% buffer is left unused in each storage pool and does not require a capacity license. This storage is not used by ONTAP Select, unless a capacity cap is specified. If a capacity cap is specified, then that amount of storage will be used unless the amount specified falls in the 2% buffer zone. The buffer is needed to prevent occasional errors that occur when attempting to allocate all of the space in a storage pool.
+[NOTE]
+A 2% buffer is left unused in each storage pool and does not require a capacity license. This storage is not used by ONTAP Select, unless a capacity cap is specified. If a capacity cap is specified, then that amount of storage will be used unless the amount specified falls in the 2% buffer zone. The buffer is needed to prevent occasional errors that occur when attempting to allocate all of the space in a storage pool.
 
 ==== Storage capacity and VMware vSAN
 

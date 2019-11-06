@@ -17,7 +17,8 @@ You can deploy ONTAP Select in a remote office/branch office (ROBO) environment.
 
 There are two primary configurations available when deploying ONTAP Select in a ROBO environment.
 
-NOTE: You can use any VMware vSphere license when deploying ONTAP Select.
+[NOTE]
+You can use any VMware vSphere license when deploying ONTAP Select.
 
 ==== ONTAP Select two-node cluster with ONTAP HA
 
@@ -30,4 +31,5 @@ You can deploy an ONTAP Select single-node cluster in a ROBO environment. While 
 * Shared external storage using VMware HA
 * VMware vSAN
 
-NOTE: If you use vSAN, you must have a VMware vSAN ROBO license.
+[NOTE]
+If you use vSAN, you must have a VMware vSAN ROBO license.

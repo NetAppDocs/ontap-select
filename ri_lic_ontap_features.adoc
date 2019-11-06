@@ -45,7 +45,8 @@ You must acquire a separate license for any other features, including:
 * SyncMirror (zero cost)
 * MetroCluster SDS (ONTAP Select premium license offering)
 
-NOTE: You do not need a FabricPool license when utilizing StorageGRID Webscale.
+[NOTE]
+You do not need a FabricPool license when utilizing StorageGRID Webscale.
 
 .Related information
 

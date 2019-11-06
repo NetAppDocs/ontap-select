@@ -26,7 +26,8 @@ ONTAP Select 9.7 RC1 - Is ESXi 6.7 U3 now supported?
 
 There are several requirements related to the hypervisor where ONTAP Select runs.
 
-NOTE: You should refer to the current release notes to review any additional known restrictions or limitations.
+[NOTE]
+You should refer to the current release notes to review any additional known restrictions or limitations.
 
 ==== VMware licensing
 
@@ -40,7 +41,8 @@ ONTAP Select can be deployed on the following hypervisors:
 * VMware ESXi 6.5 U2 (build 8294253 or greater)
 * VMware ESXi 6.7 GA (build 8169922or greater) including 6.7 U1 and 6.7 U2
 
-NOTE: NetApp supports ONTAP Select on these versions of ESXi as long as VMware also continues to support the same versions.
+[NOTE]
+NetApp supports ONTAP Select on these versions of ESXi as long as VMware also continues to support the same versions.
 
 ==== Upgrading to VMware ESXi 6.5 U2 or later
 
@@ -108,7 +110,8 @@ Premium XL
 
 The drives you choose are limited by the license offering.
 
-NOTE: The disk drive requirements apply when using a local RAID controller and drives, as well as software RAID. These requirements do not apply to external storage accessed through the ONTAP Select vNAS solution.
+[NOTE]
+The disk drive requirements apply when using a local RAID controller and drives, as well as software RAID. These requirements do not apply to external storage accessed through the ONTAP Select vNAS solution.
 
 Small::
 

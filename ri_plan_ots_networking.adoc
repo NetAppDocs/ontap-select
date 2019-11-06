@@ -35,7 +35,8 @@ The MTU size is displayed in the Cluster Details section of the cluster creation
 . As you add the hosts and networks for the HA pairs, the MTU value is reduced as needed, based on the configuration of the vSwitches in the network.
 . The final cluster MTU value for the cluster is set after you have added all the HA pairs and are ready to create the cluster.
 
-NOTE: You can manually set the cluster MTU value if needed, based on the design of your network.
+[NOTE]
+You can manually set the cluster MTU value if needed, based on the design of your network.
 
 ==== Two-NIC host with standard vSwitch
 

@@ -22,7 +22,8 @@ ONTAP Select 9.7 RC1 - David rewrote this procedure, please review.
 {set:cellbgcolor:yellow}
 |===
 
-IMPORTANT: Both the removal of the failed drive and the addition of a new drive (marked as a spare) must be performed through ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
+[IMPORTANT]
+Both the removal of the failed drive and the addition of a new drive (marked as a spare) must be performed through ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
 
 == Identify the failed drive
 
