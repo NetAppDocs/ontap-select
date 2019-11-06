@@ -45,3 +45,23 @@ Testing line 2
 {set:cellbgcolor:aqua}
 |===
 ////
+
+[yellow]#Not special formatting#
+
+[yellow]*Bold formatting*
+
+[big aqua]*Bold and big formatting*
+
+Code block:
+
+....
+Line 1
+Line 2
+Line 3
+....
+
+Tab block
+
+  Line 1
+  Line 2
+  Line 3

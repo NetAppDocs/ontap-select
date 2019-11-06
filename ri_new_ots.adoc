@@ -15,7 +15,8 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-NOTE: Software RAID using NVMe drives is only available on VMware ESXi. See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes^] for more information.
+[NOTE]
+Software RAID using NVMe drives is only available on VMware ESXi. See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes^] for more information.
 
 == Software RAID using NVMe drives
 

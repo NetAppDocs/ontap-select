@@ -18,7 +18,7 @@ ONTAP Select automatically licenses several features for each node when you depl
 [cols="1"]
 |===
 |*Draft comment:*
-ONTAP Select 9.7 RC1 - Include TR 1.6 "ONTAP Select feature support"
+ONTAP Select 9.7 RC1 - Need to include TR 1.6 "ONTAP Select feature support"
 {set:cellbgcolor:yellow}
 |===
 
