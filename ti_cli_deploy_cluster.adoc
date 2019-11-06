@@ -39,11 +39,13 @@ After acquiring a license file with storage capacity, you must upload the file c
 
 .Before you begin
 
-You must have uploaded the license file to the Deploy virtual machine. Also, you must have the password for the admin user account.
+You must have the password for the admin user account.
 
 .Steps
 
 . In a command shell on your local workstation, use the sftp utility to upload the license file to the Deploy virtual machine.
++
+Example
 +
 .....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -51,7 +53,7 @@ put NLF-320000nnn.txt
 exit
 .....
 
-. Sign in to the Deploy utility CLI using SSH with the administrator account.
+. Sign in to the Deploy utility CLI with the administrator account using SSH.
 
 . Register the license:
 +
@@ -69,7 +71,7 @@ You must register each hypervisor host where an ONTAP Select node will run. As p
 
 .About this task
 
-Before you register a host that is managed by vCenter, you must add an account credential for the vCenter server. If the host is not managed by vCenter, you can provide the host credential as part of registering the host. You should use this procedure to add each host.
+Before you register a host that is managed by vCenter, you must add a management server account for the vCenter server. If the host is not managed by vCenter, you can provide the host credential as part of registering the host. You should use this procedure to add each host.
 
 .Steps
 
@@ -86,9 +88,127 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 ....
 
 . Register the host:
-
++
 * Register a standalone host not managed by vCenter:
 `host register -name <FQDN|IP> -hypervisor-type ESX -username ESX_USERNAME`
-
 * Register a host managed by vCenter:
 `host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN| IP>`
++Example
+....
+host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com
+....
+
+. Display the state of the host and confirm it is authenicated.
++
+`host show -name <FQDN|IP> -detailed`
++
+Example
++
+....
+host show -name 10.234.81.14 -detailed
+....
+
+== Creating and configuring an ONTAP Select cluster
+
+You must create and then configure the ONTAP Select cluster. After the cluster is configured, you can configure the individual nodes.
+
+.Before you begin
+
+You must decide how many nodes the cluster contains and have the associated configuration information.
+
+.About this task
+
+When you create an ONTAP Select cluster, the Deploy utility automatically generates the node names based on the cluster name and node count that you provide. Deploy also generates the unique node identifiers.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Create the cluster:
++
+`cluster create -name CLUSTERNAME -node-count NODES`
++
+Example
++
+....
+cluster create -name test-cluster -node-count 1
+....
+
+. Configure the cluster:
++
+`cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK - gateway IP_ADDRESS -dns-servers <FQDN|IP>_LIST -dns-domains DOMAIN_LIST`
++
+Example
+....
+cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
+-gateway 10.234.81.1 -dns-servers 10.221.220.10 -dnsdomains select.company-demo.com
+....
+
+. Display the configuration and state of the cluster:
++
+`cluster show -name CLUSTERNAME -detailed`
+
+== Configuring an ONTAP Select node
+
+You must configure each of the nodes in the ONTAP Select cluster.
+
+.Before you begin
+You must have the configuration information for the node. The capacity tier license file should be uploaded and installed at the Deploy utility.
+
+.About this task
+You should use this procedure to configure each node. A capacity tier license is applied to the node in this example.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Determine the names assigned to the cluster nodes:
++
+'node show -cluster-name CLUSTERNAME'
+
+. Select the node and perform basic configuration:
+`node modify -name NODENAME -cluster-name CLUSTERNAME -host-name <FQDN|IP> -license-serial-number NUMBER -instance-type TYPE -passthrough-disks false`
++
+Example
++
+....
+node modify -name test-cluster-01 -cluster-name test-cluster -hostname 10.234.81.14
+-license-serial-number 320000nnnn -instance-type small -passthrough-disks false
+....
+
+The RAID configuration for the node is indicated with the _passthrough-disks_ parameter. If you are using a local hardware RAID controller, this value must be false. If you are using software RAID, this value must be true.
+
+A capacity tier license is used for the ONTAP Select node.
+
+. Display the network configuration available at the host:
++
+`host network show -host-name <FQDN|IP> -detailed`
++
+Example
++
+....
+host network show -host-name 10.234.81.14 -detailed
+....
+
+. Perform network configuration of the node:
++
+`node modify -name NODENAME -cluster-name CLUSTERNAME -mgmt-ip IP -mgmtnetwork NETWORK_NAME -data-network NETWORK_NAME -internal-network NETWORK_NAME`
++
+When deploying a single-node cluster, you do not need an internal network and should remove -internal-network.
++
+Example
++
+....
+node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.21
+-mgmt-network sDOT_Network -data-network sDOT_Network
+....
+
+. Display the configuration of the node:
++
+`node show -name NODENAME -cluster-name CLUSTERNAME -detailed`
++
+Example
++
+....
+node show -name test-cluster-01 -cluster-name test-cluster -detailed
+....
