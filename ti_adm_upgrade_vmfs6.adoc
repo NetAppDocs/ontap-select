@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ti_adm_upgrade_vmfs6.html
-keywords: ontap select
-summary: xxx
+keywords: ontap select, storage vmotion, upgrade to vmfs6
+summary: VMware does not support an in-place upgrade from VMFS 5 to VMFS 6. You can use Storage vMotion to transition from a VMFS 5 datastore to a VMFS 6 datastore for an existing ONTAP Select node.
 ---
 
 = Upgrading to VMFS6 using Storage vMotion
@@ -15,20 +15,16 @@ summary: xxx
 [.lead]
 VMware does not support an in-place upgrade from VMFS 5 to VMFS 6. You can use Storage vMotion to transition from a VMFS 5 datastore to a VMFS 6 datastore for an existing ONTAP Select node.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - David rewrote this procedure, please review.
-{set:cellbgcolor:yellow}
-|===
-
 For ONTAP Select virtual machines, Storage vMotion can be used for single-node and multi-node clusters. It can be used for both storage-only as well as compute and storage migrations.
 
 image:ST_10.jpg[Migrate]
 
 .Before you begin
 
-Make sure the new host can support the ONTAP Select node. For example, if a RAID controller and DAS storage are used on the original host, a similar configuration should exist on the new host. Severe performance issues can result if the ONTAP Select VM is rehosted in an unsuitable environment.
+Make sure the new host can support the ONTAP Select node. For example, if a RAID controller and DAS storage are used on the original host, a similar configuration should exist on the new host.
+
+[IMPORTANT]
+Severe performance issues can result if the ONTAP Select VM is rehosted in an unsuitable environment.
 
 .Steps
 
@@ -36,7 +32,7 @@ Make sure the new host can support the ONTAP Select node. For example, if a RAID
 +
 If the node is part of an HA pair, perform a storage failover first.
 
-. Clear the CD/DVD drive option.
+. Clear the *CD/DVD drive* option.
 +
 This step does not apply if you installed ONTAP Select without using ONTAP Deploy.
 +
@@ -46,10 +42,10 @@ image:ST_11.jpg[Edit settings]
 +
 If this node is part of an HA pair, you can perform a manual giveback.
 
-. Perform a cluster refresh operation using the Deploy utility and confirm it is successful.
+. Perform a `cluster refresh` operation using the Deploy utility and confirm it is successful.
 
 . Back up the Deploy utility database.
 
 .After you finish
 
-When the Storage vMotion operation completes, you should use the Deploy utility to perform a cluster refresh operation. The cluster refresh updates the ONTAP Deploy database with the new location of the ONTAP Select node.
+When the Storage vMotion operation completes, you should use the Deploy utility to perform a `cluster refresh` operation. The `cluster refresh` updates the ONTAP Deploy database with the new location of the ONTAP Select node.

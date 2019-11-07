@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task_chk_nvme_configure.html
 keywords: ontap select, nvme storage, host preparation
-summary: Prepare the host to deploy ONTAP Select using NVMe storage.
+summary: If you plan to use NVMe drives with software RAID, you need to configure the host to recognize the drives.
 ---
 
 = Configuring a host to use NVMe drives
@@ -14,13 +14,6 @@ summary: Prepare the host to deploy ONTAP Select using NVMe storage.
 
 [.lead]
 If you plan to use NVMe drives with software RAID, you need to configure the host to recognize the drives.
-
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - New procedure.
-{set:cellbgcolor:yellow}
-|===
 
 .Before you begin
 
@@ -40,13 +33,15 @@ Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficienc
 . Access the *BIOS configuration* menu on the host to enable support for I/O virtualization.
 
 . Enable the *Intel VT for Directed I/O (VT-d)* setting.
-image:nvme_01[Socket Configuration]
++
+image:nvme_01.png[Socket Configuration]
 
 . Configure the NVMe drives for pass-through to virtual machines.
 
 .. In vSphere, open the host *Configure* view and click *Edit* under *Hardware: PCI devices*.
 
 .. Select the NVMe drives you want to use for ONTAP Select.
++
 [NOTE]
 You need a VMFS datastore that is also backed by an NVMe device to host the ONTAP Select VM system disks and virtual NVRAM. Leave at least one NVMe drive available for this purpose when configuring the others for PCI pass-through.
 image:nvme_02.png[Edit PCI Device Availability]
@@ -54,6 +49,7 @@ image:nvme_02.png[Edit PCI Device Availability]
 .. Click *OK*. The selected devices indicate *Available (pending)*.
 
 . Click *Reboot The Host*.
++
 image:nvme_03.png[Reboot This Host]
 
 .After you finish

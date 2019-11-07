@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: ti_adm_replace_drives_swraid.html
-keywords: ontap Select
-summary: xxx
+keywords: ontap Select, software raid, replace drive
+summary: When a drive fails using software RAID, ONTAP Select uses a spare drive (if one is available) and starts the rebuild process automatically. This is similar to how ONTAP on FAS and AFF works. However, if no spare drive is available, you need to add one to the ONTAP Select node.
 ---
 
 = Replacing a failed drive when using SW RAID
@@ -15,19 +15,12 @@ summary: xxx
 [.lead]
 When a drive fails using software RAID, ONTAP Select uses a spare drive (if one is available) and starts the rebuild process automatically. This is similar to how ONTAP on FAS and AFF works. However, if no spare drive is available, you need to add one to the ONTAP Select node.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - David rewrote this procedure, please review.
-{set:cellbgcolor:yellow}
-|===
-
 [IMPORTANT]
 Both the removal of the failed drive and the addition of a new drive (marked as a spare) must be performed through ONTAP Deploy. Attaching a drive to the ONTAP Select VM using vSphere is not supported.
 
 == Identify the failed drive
 
-xxx
+After a drive fails, use the Deploy utility CLI to identify the disk that failed.
 
 .Steps
 
@@ -45,7 +38,7 @@ NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
 
 == Remove the failed drive
 
-xxx
+After you identify the drive that failed, remove the disk.
 
 .Steps
 
@@ -63,7 +56,7 @@ image:ST_23.jpg[Edit node storage]
 +
 image:ST_24.jpg[Storage disk details]
 
-. Provide the cluster credentials and click Edit Storage.
+. Provide the cluster credentials and click *Edit Storage*.
 +
 image:ST_25.jpg[ONTAP credentials]
 
@@ -73,7 +66,7 @@ image:ST_26.jpg[Warning]
 
 == Add the new spare drives
 
-xxx
+After you remove the failed drive, add the spare disk.
 
 .Steps
 

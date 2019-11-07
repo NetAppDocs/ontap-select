@@ -129,10 +129,10 @@ The following table summarizes the various storage efficiency options available,
 | Not supported
 |===
 
-^1^ONTAP Select 9.4 on DAS SSDs (requires Premium license) allows existing data in an aggregate to be deduped using aggregate-level background cross volume scanners. This one-time operation is performed manually for volumes created before 9.4.
-^2^ONTAP Select 9.3 on DAS SSDs (requires Premium license) supports aggregate-level background deduplication; however, this feature must be enabled after creating the aggregate.
-^3^ONTAP Select 9.5 vNAS by default does not support any storage efficiency policies. Review the vNAS section for details on Single Instance Data Logging (SIDL).
-^4^ONTAP Select 9.6 supports a new license (Premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the current release.
+[small]#^1^ONTAP Select 9.4 on DAS SSDs (requires Premium license) allows existing data in an aggregate to be deduped using aggregate-level background cross volume scanners. This one-time operation is performed manually for volumes created before 9.4.#
+[small]#^2^ONTAP Select 9.3 on DAS SSDs (requires Premium license) supports aggregate-level background deduplication; however, this feature must be enabled after creating the aggregate.#
+[small]#^3^ONTAP Select 9.5 vNAS by default does not support any storage efficiency policies. Review the vNAS section for details on Single Instance Data Logging (SIDL).#
+[small]#^4^ONTAP Select 9.6 supports a new license (Premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the current release.#
 
 ==== Notes on upgrade behavior for DAS SSD configurations
 
@@ -142,16 +142,16 @@ On a system upgraded to ONTAP Select 9.5 or later, a new volume created on an ex
 
 *Scenario 1* If no storage efficiency policies were enabled on a volume prior to the upgrade, then:
 
-* Volumes with `space guarantee = volume` do not have inline data-compaction, aggregate inline deduplication, and aggregate background deduplication enabled. These options can be enabled post-upgrade.
-* Volumes with `space guarantee = none` do not have background compression enabled. This option can be enabled post upgrade.
-* Storage efficiency policy on the existing volumes is set to auto after upgrade.
+** Volumes with `space guarantee = volume` do not have inline data-compaction, aggregate inline deduplication, and aggregate background deduplication enabled. These options can be enabled post-upgrade.
+** Volumes with `space guarantee = none` do not have background compression enabled. This option can be enabled post upgrade.
+** Storage efficiency policy on the existing volumes is set to auto after upgrade.
 
 *Scenario 2* If some storage efficiencies are already enabled on a volume prior to the upgrade, then:
 
-* Volumes with `space guarantee = volume` do not see any difference after upgrade.
-* Volumes with `space guarantee = none` have aggregate background deduplication turned on.
-* Volumes with `storage policy inline-only` have their policy set to auto.
-* Volumes with user defined storage efficiency policies have no change in policy, with the exception of volumes with `space guarantee = none`. These volumes have aggregate background deduplication enabled.
+** Volumes with `space guarantee = volume` do not see any difference after upgrade.
+** Volumes with `space guarantee = none` have aggregate background deduplication turned on.
+** Volumes with `storage policy inline-only` have their policy set to auto.
+** Volumes with user defined storage efficiency policies have no change in policy, with the exception of volumes with `space guarantee = none`. These volumes have aggregate background deduplication enabled.
 
 ==== Notes on Upgrade Behavior for DAS HDD Configuration
 
