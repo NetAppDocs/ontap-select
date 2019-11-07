@@ -215,3 +215,84 @@ Example
 ....
 node show -name test-cluster-01 -cluster-name test-cluster -detailed
 ....
+
+== Attaching storage to an ONTAP Select nodes
+
+You must configure the storage used by each of the nodes in the ONTAP Select cluster. Each node must be assigned at least one storage pool.
+
+.Before you begin
+
+You must have created the storage pool using VMware vSphere.
+
+.About this task
+
+This procedure assumes that a local hardware RAID controller is used. You should configure the storage at each node in the ONTAP Select cluster.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Display the storage pools available at the host:
++
+`host storage pool show -host-name <FQDN|IP>`
++
+Example
++
+----
+host storage pool show -host-name 10.234.81.14
+----
++
+You can also obtain the available storage pools through VMware vSphere.
+
+. Attach an available storage pool to the ONTAP Select node:
++
+`node storage pool attach -name POOLNAME -cluster-name CLUSTERNAME -nodename NODENAME -capacity-limit LIMIT`
++
+If you include the -capacity-limit parameter, specify the value as GB or TB.
++
+Example
++
+----
+node storage pool attach -name sDOT-02 -cluster-name test-cluster -
+node-name test-cluster-01 -capacity-limit 500GB
+----
+
+. Display the storage pools attached to the node:
++
+`node storage pool show -cluster-name CLUSTERNAME -node-name NODENAME`
++
+Example
++
+----
+node storage pool show -cluster-name test-cluster -node-name testcluster-01
+
+== Deploying an ONTAP Select cluster
+
+After the cluster and nodes have been configured, you can deploy the cluster.
+
+.Before you begin
+
+Before deploying a multi-node cluster, you should run the network connectivity checker to confirm the connectivity among the cluster nodes on the internal network.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Deploy the ONTAP Select cluster:
++
+`cluster deploy -name CLUSTERNAME`
++
+Example
+----
+cluster deploy -name test-cluster
+----
++
+Provide the password to be used for the ONTAP administrator account when prompted.
+
+. Display the status of the cluster to determine when it has been successfully deployed successfully:
++
+`cluster show -name CLUSTERNAME`
+
+.After you finish
+
+You should back up the ONTAP Select Deploy configuration data.
