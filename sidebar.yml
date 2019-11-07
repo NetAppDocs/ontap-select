@@ -233,6 +233,8 @@ entries:
             url: /concept_api_versions.html
           - title: Basic operation
             url: /concept_api_operation.html
+          - title: Request and response transaction
+            url: /concept_api_transaction.html
           - title: Asynchronous processing
             url: /concept_api_async_proc.html
       - title: Access with a browser
@@ -241,6 +243,8 @@ entries:
             url: /ci_api_before_browser.html
           - title: Access the doc page
             url: /ti_api_access_doc_page.html
+          - title: Understanding an API call
+            url: /task_api_understanding_call.html
       - title: Workflow processes
         entries:
           - title: Before you begin
