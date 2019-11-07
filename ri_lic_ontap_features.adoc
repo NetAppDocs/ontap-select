@@ -50,4 +50,4 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 
 .Related information
 
-* link:concept_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
+* link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
