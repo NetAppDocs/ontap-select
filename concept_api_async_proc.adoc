@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: concept_api_async_proc.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Asynchrnous processing using the job object
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

@@ -229,6 +229,12 @@ entries:
             url: /ci_api_rest.html
           - title: Access the Deploy API
             url: /ci_api_how_access.html
+          - title: Deploy API versioning
+            url: /concept_api_versions.html
+          - title: Basic operation
+            url: /concept_api_operation.html
+          - title: Asynchronous processing
+            url: /concept_api_async_proc.html
       - title: Access with a browser
         entries:
           - title: Before you begin
