@@ -15,7 +15,6 @@ summary: xxx
 [.lead]
 This page is used to test AsciiDoc formatting and features.
 
-// {set:cellbgcolor:aqua}
 [cols="1"]
 |===
 |*Draft comment:*
@@ -25,29 +24,16 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 
 ''''
 
-////
-== Testing
+== Formatting examples
 
-Next three lines each begin with one tab. The result is a gray block across the entire page.
+[blue]*This is bold blue*
 
-  This is line 1
-  This is line 2
-  This is line 3
-////
+[lime]_This is italics lime_
 
-////
-== Comment test
+[red]#This is red with normal formatting#
 
-[cols="1"]
-|===
-|*Draft comment:* This is a test line 1. Testing again.
-Testing line 2
-{set:cellbgcolor:aqua}
-|===
-////
+[big blue]*This is big and bold blue*
 
-[aqua]#Line 1 - No special formatting#
+[yellow-background]*This is bold with a yellow background*
 
-[aqua]*Line 2 - Bold formatting*
-
-[big aqua]*Line 3 - Bold and big formatting*
+[red aqua-background]#This is red with an aqua background#

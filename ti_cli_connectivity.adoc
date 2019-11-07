@@ -13,4 +13,49 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-XXXX
+You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail.
+
+.Before you begin
+
+All the ONTAP Select nodes included in the test must be configured and powered on.
+
+.About this task
+
+Each time you start a test, a new process run is created in the background and assigned a unique run identifier. Only one run can be active at a time.
+
+The test has two modes that control its operation:
+
+* Quick
+This mode performs a basic non-disruptive test. A PING test is performed, along with a test of the network MTU size and the vSwitch.
+* Extended
+This mode performs a more comprehensive test over all the redundant network paths. If you run this on an active ONTAP Select cluster, the performance of the cluster can be impacted.
+
+[NOTE]
+It is recommended that you always perform a quick test before creating a multi-node cluster. After the quick test completes successfully, you can optionally perform an extended test based on your production requirements.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using the administrator account.
+
+. Display the current runs of the network connectivity checker and verify that no runs are active:
++
+`network connectivity-check show`
+
+. Start the network connectivity checker and note the run identifier in the command output:
++
+`network connectivity-check start -host-names HOSTNAMES -vswitch-type VSWITCH_TYPE-mode MODE`
++
+Example
++
+----
+network connectivity-check start -host-names 10.234.81.14
+10.234.81.15 -vswitch-type StandardVSwitch -mode quick
+----
+
+. Monitor the progress of the network connectivity checker based on the run identifier:
++
+`network connectivity-check show -run-id RUN_ID`
+
+.After you finish
+
+The network connectivity checker normally cleans up by removing any temporary ports and IP addresses added to the ONTAP-Internal port group. However, if the connectivity checker fails to remove the temporary ports, you must perform a manual cleanup operation by rerunning the CLI command with the -mode cleanup option. If you do not remove the temporary ports from the ONTAP-Internal port group, the ONTAP Select virtual machine may not be created successfully.

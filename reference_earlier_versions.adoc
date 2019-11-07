@@ -15,6 +15,6 @@ summary: xxx
 [.lead]
 Documentation for previous releases of ONTAP Select is available in case you are not running the latest version.
 
-===== *ONTAP Select 9.6 and earlier releases*
+===== *ONTAP Select 9.6 and earlier*
 
 * https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^]

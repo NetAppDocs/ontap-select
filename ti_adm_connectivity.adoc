@@ -13,9 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-You can test the network connectivity among two or more ONTAP Select nodes on the internal
-cluster network. You typically run this test before a multi-node cluster is deployed to detect issues
-that might cause the operation to fail.
+You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail.
 
 .Before you begin
 
