@@ -106,7 +106,8 @@ It can take up to 30 minutes for the cluster to be created.
 
 . Refresh the page and select the new cluster, then click *Summary* and *Details* to monitor the multi-step cluster creation process.
 +
-IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
+[IMPORTANT]
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
 
 .After you finish
 
@@ -167,7 +168,8 @@ It can take up to 30 minutes for the cluster to be created.
 
 . Refresh the page and select the new cluster, then click *Summary* and *Details* to monitor the multi-step cluster creation process.
 +
-IMPORTANT: If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
+[IMPORTANT]
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
 
 .After you finish
 

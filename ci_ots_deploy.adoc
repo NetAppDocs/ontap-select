@@ -33,11 +33,11 @@ The Deploy administration utility performs the following core functions:
 
 You have several options available when accessing the Deploy administration utility. All the external interfaces are functionally equivalent. You should select the access option that best matches your specific deployment goals and requirements. In all cases, you must sign in using the administrator account with a valid password.
 
-==== Web graphical user interface
+===== *Web graphical user interface*
 
 You can access the Deploy utility through a modern web browser. The web GUI provides an intuitive and easy-to-use interface, and in most cases will be your primary interface when using the utility.
 
-==== Command line interface
+===== *Command line interface*
 
 A text-based command line interface is available through the management shell. You can access the CLI management shell in the following ways:
 
@@ -46,7 +46,7 @@ A text-based command line interface is available through the management shell. Y
 
 You typically use the virtual machine console as part of the installation and initial configuration process. However, in most situations SSH provides a more flexible and convenient option.
 
-==== REST web services API
+===== *REST web services API*
 
 The REST web services API exposed to external clients provides another option when connecting to the Deploy utility. You can access the API using any mainstream programming language or tool that supports REST web services. Popular choices include:
 
@@ -56,13 +56,11 @@ The REST web services API exposed to external clients provides another option wh
 
 Using a programming or scripting language provides an opportunity to automate the deployment and management of the ONTAP Select clusters.
 
-==== ONTAP Select online documentation web page
+===== *ONTAP Select online documentation web page*
 
 Displaying the online documentation web page at the Deploy utility is an alternative way to access the REST web services API. However, instead of using a programming language, you access the management API through the page using a browser. The following features are provided:
 
 * A detailed description of every call in the REST web services API
 * The ability to manually issue any of the API calls
 
-You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance):
-
-`http://<ip_address>/api/ui`
+You can access the online documentation page using the IP or domain name of the Deploy virtual machine. To display the page, enter a URL with the following format in your browser (substituting the appropriate IP address or domain name for your Deploy VM instance): `http://<ip_address>/api/ui`

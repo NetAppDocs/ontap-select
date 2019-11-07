@@ -76,6 +76,10 @@ Any modification to Cluster IPspace, including adding or removing ports, is not 
 * ONTAP port properties
 Modifying the properties of the ONTAP ports, including speed, duplex, and flow-control, is not supported.
 
+* Service processors
+
+* NetApp storage encryption drives
+
 .Related information
 
 * link:ri_lic_ontap_features.html[ONTAP features enabled by default]

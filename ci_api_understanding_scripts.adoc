@@ -13,4 +13,56 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-xxx
+The sample Python scripts allow you to perform several different tasks. You should understand the scripts before using them at a live Deploy instance.
+
+=== Common design characteristics
+
+The scripts have been designed with the following common characteristics:
+
+* Execute from command line interface at a client machine
+You can run the Python scripts from any properly configured client machine. See _Before you begin_ for more information.
+* Accept CLI input parameters
+Each script is controlled at the CLI through input parameters.
+* Read input file
+Each script reads an input file based on its purpose. When creating or deleting a cluster, you must provide a JSON configuration file. When adding a node license, you must provide a valid license file.
+* Use a common support module
+The common support module _deploy_requests.py_ contains a single class. It is imported and used by each of the scripts.
+
+=== Creating a cluster
+
+You can create an ONTAP Select cluster using the script cluster.py. Based on the CLI parameters and contents of the JSON input file, you can modify the script to your deployment environment as follows:
+
+* Hypervisor
+You can deploy to ESXI or KVM. When deploying to ESXi, the hypervisor can be managed by vCenter or can be a standalone host.
+* Cluster size
+You can deploy a single-node or multiple-node cluster.
+* Evaluation or production license
+You can deploy a cluster with an evaluation or purchased license for production.
+
+The CLI input parameters for the script include:
+
+* Host name or IP address of the Deploy server
+* Password for the admin user account
+* Name of the JSON configuration file
+* Verbose flag for message output
+
+=== Adding a node license
+If you choose to deploy a production cluster, you must add a license for each node using the script _add_license.py_. You can add the license before or after you deploy the cluster.
+
+The CLI input parameters for the script include:
+
+* Host name or IP address of the Deploy server
+* Password for the admin user account
+* Name of the license file
+* ONTAP user name with privileges to add the license
+* Password for the ONTAP user
+
+=== Deleting a cluster
+
+You can delete an existing ONTAP Select cluster using the script _delete_cluster.py_.
+
+The CLI input parameters for the script include:
+
+* Host name or IP address of the Deploy server
+* Password for the admin user account
+* Name of the JSON configuration file

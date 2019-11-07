@@ -81,7 +81,8 @@ You can perform one or more actions when editing the storage configuration of an
 
 You can perform one or more actions each time you edit the configuration.
 
-NOTE: If an ONTAP Select node is deployed with an evaluation license, you can expand the storage up to the limit imposed by the license.
+[NOTE]
+If an ONTAP Select node is deployed with an evaluation license, you can expand the storage up to the limit imposed by the license.
 
 .Steps
 

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_deploy_image_add.html
+permalink: ti_cli_deploy_image_add.html
 keywords: ontap select
 summary: xxx
 ---
@@ -26,7 +26,8 @@ At a high level, the process used to add an ONTAP Select image to an instance of
 
 Before adding any new ONTAP Select images to Deploy, you should first remove any unneeded images.
 
-NOTE: You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of the Deploy utility. Adding later versions of ONTAP Select as they become available from NetApp is not a supported configuration.
+[NOTE]
+You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of the Deploy utility. Adding later versions of ONTAP Select as they become available from NetApp is not a supported configuration.
 
 == Downloading the install image
 

@@ -13,36 +13,41 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
+ONTAP Select offers full support for most ONTAP functionality, except those features that have hardware-specific dependencies.
+
 ONTAP Select automatically licenses several features for each node when you deploy a cluster.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - Need to include TR 1.6 "ONTAP Select feature support"
-{set:cellbgcolor:yellow}
-|===
+===== *Included features*
 
-Licenses for the following features are included by default:
+The following features are included and licensed by default:
 
 * NFS
 * CIFS
 * iSCSI
+* SnapMirror
+* SnapVault
 * FlexClone
 * SnapRestore
-* SnapVault
-* SnapMirror
+* NetApp Volume Encryption
+
 * Deduplication and compression
 * ONTAP multitenancy capability
 * NetApp Volume Encryption (non-restricted countries only)
 
-You must purchase a separate license for any other features, including:
+===== *Separately licensed features*
+
+You must acquire a separate license for any other features, including:
 
 * SnapLock Enterprise
 * FabricPool
-* FlexCache
+* Data Availability Service
+* FlexCache (zero cost)
+* SyncMirror (zero cost)
+* MetroCluster SDS (ONTAP Select premium license offering)
 
-NOTE: You do not need a FabricPool license when utilizing StorageGRID Webscale.
+[NOTE]
+You do not need a FabricPool license when utilizing StorageGRID Webscale.
 
 .Related information
 
-* link:concept_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
+* link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
