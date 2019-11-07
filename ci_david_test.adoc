@@ -26,14 +26,14 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 
 == Formatting examples
 
-[blue]*This is bold blue* and this is not formatted
+[blue]*This is bold blue*
 
-[yellow]_This is italics yellow_ and this is not formatted
+[lime]_This is italics lime_
 
-[red]#This is normal red# and this is not formatted
+[red]#This is red with normal formatting#
 
-[big blue]*This is big and bold blue* and this is not formatted
+[big blue]*This is big and bold blue*
 
-[yellow-background]*This is bold text with a yellow background* and this is not formatted
+[yellow-background]*This is bold with a yellow background*
 
-[red aqua-background]#This is normal red text with an aqua background* and this is not formatted
+[red aqua-background]#This is red with an aqua background#

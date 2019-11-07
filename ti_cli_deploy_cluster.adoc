@@ -178,9 +178,9 @@ Example
 node modify -name test-cluster-01 -cluster-name test-cluster -hostname 10.234.81.14
 -license-serial-number 320000nnnn -instance-type small -passthrough-disks false
 ....
-
++
 The RAID configuration for the node is indicated with the _passthrough-disks_ parameter. If you are using a local hardware RAID controller, this value must be false. If you are using software RAID, this value must be true.
-
++
 A capacity tier license is used for the ONTAP Select node.
 
 . Display the network configuration available at the host:
