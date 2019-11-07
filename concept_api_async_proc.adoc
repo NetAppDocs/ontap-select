@@ -1,0 +1,64 @@
+---
+sidebar: sidebar
+permalink: concept_api_async_proc.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Asynchronous processing using the job object
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Some of the Deploy API calls, particularly those that create or modify a resource, can take longer to complete than other calls. ONTAP Select Deploy processes these long-running requests asynchronously.
+
+===== *Asynchronous requests described using Job object*
+
+After making an API call that runs asynchronously, the HTTP response code 202 indicates the request has been successfully validated and accepted, but not yet completed. The request is processed as a background task which continues to run after the initial HTTP response to the client. The response includes the Job object anchoring the request, including its unique identifier.
+
+[NOTE]
+You should refer to the ONTAP Select Deploy online documentation page to determine which API calls operate asynchronously.
+
+===== *Querying the Job object associated with an API request*
+
+The Job object returned in the HTTP response contains several properties. You can query the state property to determine if the request completed successfully. A Job object can be in one of the following states:
+
+* Queued
+* Running
+* Success
+* Failure
+
+There are two techniques you can use when polling a Job object to detect a terminal state for the task, either success or failure:
+
+* Standard polling request
+Current Job state is returned immediately
+* Long polling request
+Job state is returned only when one of the following occurs:
++
+** State has changed more recently than the date-time value provided on the poll request
+** Timeout value has expired (1 to 120 seconds)
+
+Standard polling and long polling use the same API call to query a Job object. However, a long polling request includes two query parameters: `poll_timeout` and `last_modified`.
+
+[TIP]
+You should always use long polling to reduce the workload on the Deploy virtual machine.
+
+===== *General procedure for issuing an asynchronous request*
+
+You can use the following high-level procedure to complete an asynchronous API call:
+
+. Issue the asynchronous API call.
+
+. Receive an HTTP response 202 indicating successful acceptance of the request.
+
+. Extract the identifier for the Job object from the response body.
+
+. Within a loop, perform the following in each cycle:
++
+.. Get the current state of the Job with a long-poll request
+.. If the Job is in a non-terminal state (queued, running), perform loop again.
+
+. Stop when the Job reaches a terminal state (success, failure).

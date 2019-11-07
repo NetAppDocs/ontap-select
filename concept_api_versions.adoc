@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: concept_api_versions.html
+keywords: ontap select
+summary: xxx
+---
+
+= Deploy API versioning
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The REST API included with ONTAP Select Deploy is assigned a version number. The API version number is independent of the Deploy release number. You should be aware of the API version included with your release of Deploy and how this might affect your use of the API.
+
+The current release of the Deploy administration utility includes version 3 of the REST API. Pastreleases of the Deploy utility include the following API versions:
+
+Deploy 2.8 and later::
+ONTAP Select Deploy 2.8 and all later releases include version 3 of the REST API.
+
+Deploy 2.7.2 and earlier::
+ONTAP Select Deploy 2.7.2 and all earlier releases include version 2 of the REST API.
+
+[IMPORTANT]
+Versions 2 and 3 of the REST API are not compatible. If you upgrade to Deploy 2.8 or later from an earlier release that includes version 2 of the API, you must update any existing code that directly accesses the API as well as any scripts using the command line interface.
