@@ -265,6 +265,7 @@ Example
 +
 ----
 node storage pool show -cluster-name test-cluster -node-name testcluster-01
+----
 
 == Deploying an ONTAP Select cluster
 
