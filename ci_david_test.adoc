@@ -23,6 +23,7 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 {set:cellbgcolor:yellow}
 |===
 
+// Horizontal line - four backticks
 ''''
 
 ////
@@ -46,8 +47,10 @@ Testing line 2
 |===
 ////
 
+////
 [aqua]#Line 1 - No special formatting#
 
 [aqua]*Line 2 - Bold formatting*
 
 [big aqua]*Line 3 - Bold and big formatting*
+////
