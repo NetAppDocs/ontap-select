@@ -147,6 +147,8 @@ entries:
             url: /ct_stor_vsan_external.html
           - title: Increasing storage capacity
             url: /ct_stor_capacity_inc.html
+          - title: Storage efficiency support
+            url: /concept_stor_eff_support.html
       - title: Networking
         entries:
           - title: General concepts and characteristics
