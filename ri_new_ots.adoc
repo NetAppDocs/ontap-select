@@ -27,7 +27,7 @@ To use software RAID with an NVMe disk, you must first manually update the host'
 
 == Versioning change for ONTAP Select Deploy
 
-[big blue]*VMware ESXi and KVM.* The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy refresh within a specific ONTAP Select release is assigned a unique build number.
+[big blue]*VMware ESXi and KVM.* The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy update within a specific ONTAP Select release is assigned a unique build number.
 
 == Improvements to Deploy web user interface
 

@@ -64,7 +64,7 @@ image:ST_25.jpg[ONTAP credentials]
 +
 image:ST_26.jpg[Warning]
 
-== Add the new spare drives
+== Add the new spare drive
 
 After you remove the failed drive, add the spare disk.
 
