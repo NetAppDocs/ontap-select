@@ -37,7 +37,9 @@ The RAID controller cache is used to store all incoming block changes, not just 
 
 *RAID groups*
 
-For performance reasons, the minimum number of disks is still eight, but the RAID group size should not be larger than 12 drives. The maximum number of drives per RAID group is 24.
+The optimal RAID-group size is eight to 12 drives. The maximum number of drives per RAID group is 24.
+
+The maximum number of NVME drives supported per ONTAP Select node is 14.
 
 A spare disk is optional, but recommended. NetApp also recommends using one spare per RAID group; however, global spares for all RAID groups can be used. For example, you can use two spares for every three RAID groups, with each RAID group consisting of eight to 12 drives.
 
