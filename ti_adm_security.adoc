@@ -43,9 +43,27 @@ You should be familiar with the types of credentials and how they are used by ON
 
 . Click *Management Servers* and then click *Add vCenter*.
 
-. Provide the account credentials and click *Add*.
+. Enter the following information and click *Add*.
++
+[cols="30,70"*,options="header"]
+|===
+|In this field …
+|Do the following …
 
-. You can optionally select the new management server and click image:icon_kebab.gif[Options] and select one of the following:
+|Name/IP Address
+|Provide the domain name or IP address of the vCenter server.
+
+|Username
+|Enter the account user name to access vCenter.
+
+|Password
+|Enter the password for the associated user name.
+
+|===
+
+. You can optionally install the Deploy vCenter plug-in.
+
+. After the new management server is addeded, you can optionally click image:icon_kebab.gif[Options] and select one of the following:
 +
 * Update credentials
 * Register as plug-in
