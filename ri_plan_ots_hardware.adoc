@@ -106,24 +106,5 @@ Eighteen physical cores or greater, with sixteen reserved for ONTAP Select.
 * Required platform license offering
 Premium XL
 
-==== Additional disk drive requirements based on the platform license
-
-The drives you choose are limited by the license offering.
-
 [NOTE]
-The disk drive requirements apply when using a local RAID controller and drives, as well as software RAID. These requirements do not apply to external storage accessed through the ONTAP Select vNAS solution.
-
-Small::
-
-* 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
-
-Premium and premium XL::
-
-* 4 to 60 internal SSD
-* 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
-
-==== Best practices
-
-You should consider the following recommendations regarding the hypervisor core hardware:
-
-* All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
+There are additional disk requirements based on the platform license. See link:ri_plan_ots_storage.html[Storage and RAID] for more information.

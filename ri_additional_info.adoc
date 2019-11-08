@@ -42,3 +42,9 @@ There are several helpful videos available at the dedicated YouTube channel.
 There is a collection of blog articles covering different aspects of ONTAP Select.
 
 * https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs^]
+
+=== NetApp Interoperability Matrix Tool
+
+The Interoperability Matrix Tool contains detailed configuration and product support information.
+
+* https://mysupport.netapp.com/matrix/[NetApp IMT]

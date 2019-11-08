@@ -60,7 +60,7 @@ Port group 2::
 * NIC1 is standby
 * NIC2 in active
 
-See the ONTAP Select Product Architecture and Best Practices Technical Report (TR-4517) for more information about two-NIC deployments.
+See the _Deep dive_ section for more information about two-NIC deployments.
 
 ==== Four-NIC host with standard vSwitch
 
@@ -96,7 +96,7 @@ Port group 4::
 * NIC4 is active
 * NIC1, NIC2, NIC3 in standby
 
-See the ONTAP Select Product Architecture and Best Practices Technical Report (TR-4517) for more information about four-NIC deployments.
+See the _Deep dive_ section for more information about four-NIC deployments.
 
 ==== Network traffic requirements
 
