@@ -20,7 +20,7 @@ Software RAID using NVMe drives is only available on VMware ESXi. See the https:
 
 == Software RAID using NVMe drives
 
-[big blue]*VMware ESXi only.* Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocols. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives.
+[big blue]*VMware ESXi only.* Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocol. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives on ESXi.
 
 [IMPORTANT]
 To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
