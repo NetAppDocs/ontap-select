@@ -113,9 +113,9 @@ If a node is powered off, it might still appear to be online in the Deploy utili
 
 . Click the *Clusters* tab at the top left of the page and select the desired cluster from the list.
 
-. Click image:icon_kebab.gif[Options] on the right and select *Cluster Refresh*.
+. Click image:icon_kebab.gif[Options] on the right side of the page and select *Cluster Refresh*.
 
-. Provide the current ONTAP Select username and password for the cluster under *Cluster Credentials*.
+. Under *Cluster Credentials*, provide the ONTAP administrator password for the cluster.
 
 . Click *Refresh*.
 

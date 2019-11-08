@@ -41,17 +41,13 @@ You should be familiar with the types of credentials and how they are used by ON
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Management Servers* and then click *Add*.
+. Click *Management Servers* and then click *Add vCenter*.
 
 . Provide the account credentials and click *Add*.
 
-. Optionally select the new management server and click image:icon_kebab.gif[Options] and select one of the following:
+. You can optionally select the new management server and click image:icon_kebab.gif[Options] and select one of the following:
 +
 * Update credentials
 * Register as plug-in
 * Verify credentials
 * Remove management server
-
-.After you finish
-
-After the account is added, you can edit the configuration and delete it from the credential store as needed.

@@ -39,8 +39,8 @@ It is recommended that you always perform a quick test before creating a multi-n
 
 . Click the *Administration* tab at the top of the page and click *Network Checker*.
 
-. Click *Start New Run* and select the hosts in the HA pair.
+. Click *Start New Run* and select the hosts and networks for the HA pair
 +
-You can add and configure HA pairs as needed.
+You can add and configure additional HA pairs as needed.
 
 . Click *Start* to begin the network connectivity test.
