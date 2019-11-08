@@ -149,12 +149,6 @@ Premium and premium XL::
 * 4 to 60 internal SSD
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
 
-==== Best practices
-
-You should consider the following recommendations regarding the hypervisor core hardware:
-
-* All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
-
 == NVMe drives with software RAID
 
 You can configure software RAID to use NVMe SSD drives. Your environment must meet the following requirements:
