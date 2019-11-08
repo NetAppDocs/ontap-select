@@ -117,4 +117,4 @@ After you deploy an ONTAP Select cluster, you can configure the cluster as you w
 
 .Related information
 
-link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+link:ti_cli_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
