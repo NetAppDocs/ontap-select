@@ -37,6 +37,9 @@ Before deploying an ONTAP Select cluster in a production environment, you must p
 
 After acquiring a license file with storage capacity, you must upload the file containing the license to the Deploy virtual machine and register it.
 
+[NOTE]
+If you are deploying a cluster for evaluation only, you can skip this step.
+
 .Before you begin
 
 You must have the password for the admin user account.
@@ -138,7 +141,7 @@ cluster create -name test-cluster -node-count 1
 
 . Configure the cluster:
 +
-`cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK - gateway IP_ADDRESS -dns-servers <FQDN|IP>_LIST -dns-domains DOMAIN_LIST`
+`cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK -gateway IP_ADDRESS -dns-servers <FQDN|IP>_LIST -dns-domains DOMAIN_LIST`
 +
 Example
 +
@@ -175,7 +178,7 @@ You should use this procedure to configure each node. A capacity tier license is
 Example
 +
 ....
-node modify -name test-cluster-01 -cluster-name test-cluster -hostname 10.234.81.14
+node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.81.14
 -license-serial-number 320000nnnn -instance-type small -passthrough-disks false
 ....
 +
@@ -195,7 +198,7 @@ host network show -host-name 10.234.81.14 -detailed
 
 . Perform network configuration of the node:
 +
-`node modify -name NODENAME -cluster-name CLUSTERNAME -mgmt-ip IP -mgmtnetwork NETWORK_NAME -data-network NETWORK_NAME -internal-network NETWORK_NAME`
+`node modify -name NODENAME -cluster-name CLUSTERNAME -mgmt-ip IP -management-networks NETWORK_NAME -data-networks NETWORK_NAME -internal-network NETWORK_NAME`
 +
 When deploying a single-node cluster, you do not need an internal network and should remove -internal-network.
 +
@@ -203,7 +206,7 @@ Example
 +
 ....
 node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.21
--mgmt-network sDOT_Network -data-network sDOT_Network
+-management-networks sDOT_Network -data-networks sDOT_Network
 ....
 
 . Display the configuration of the node:
@@ -284,6 +287,7 @@ Before deploying a multi-node cluster, you should run the network connectivity c
 `cluster deploy -name CLUSTERNAME`
 +
 Example
++
 ----
 cluster deploy -name test-cluster
 ----

@@ -81,7 +81,7 @@ You can use the ONTAP Select Deploy web user interface to deploy a single-node O
 
 .Before you begin
 
-See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster.
+See link:http:ti_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster. The Deploy administration must be installed and initially configured (password, AutoSupport, vCenter).
 
 .About this task
 

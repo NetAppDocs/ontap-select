@@ -15,6 +15,19 @@ summary: xxxx
 [.lead]
 After creating an ONTAP Select cluster, you can support the deployment by performing various administrative tasks. There are a few general considerations to be aware of.
 
+== Before you begin
+
+In general, the procedures you can perform using the Deploy web interface fall into one of three categories.
+
+Deploy an ONTAP Select cluster::
+You can deploy a single-node or multi-node cluster. See link:ti_deploy_cluster.html[Deploying an ONTAP Select cluster] for more information.
+
+Perform a procedure with an existing ONTAP Select cluster::
+The administrative procedures are organized in various categories, such as _Security_ and _Clusters_.
+
+Perform a procedure on the Deploy utility::
+There are several procedures specific to Deploy (such as changing the administrator's password).
+
 == Administering ONTAP Select
 
 There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. In general, all use the Deploy web user interface. An administrative process can consist of a single step-by-step task or a sequence of multiple tasks.
