@@ -80,9 +80,9 @@ entries:
           - title: Licensing workflow
             url: /ci_lic_workflow.html
           - title: Capacity tiers
-            url: /ci_lic_acquire_ct.html
+            url: /ti_lic_acquire_ct.html
           - title: Capacity pools
-            url: /ci_lic_acquire_cp.html
+            url: /ti_lic_acquire_cp.html
       - title: ONTAP features
         url: /ri_lic_ontap_features.html
   - title: Install
