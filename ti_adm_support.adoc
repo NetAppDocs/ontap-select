@@ -60,13 +60,17 @@ You can filter the list of event messages based on several characteristics, incl
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Events & Jobs* and then *Events*.
+. Click *Events & Jobs* and then click *Events*.
 
 . Optionally click *Filter* and create a filter to limit the event messages displayed.
 
 == Enabling AutoSupport
 
 You can enable and disable the AutoSupport feature as needed.
+
+.About this task
+
+AutoSupport is the primary troubleshooting tool used by NetApp in supporting ONTAP Select. Therefore, you should not disable AutoSupport unless absolutely necessary. If you do disable AutoSupport, data is still collected but not transmitted to NetApp.
 
 .Steps
 
@@ -77,10 +81,6 @@ You can enable and disable the AutoSupport feature as needed.
 . Click *Settings & AutoSupport* and then click image:icon_kebab.gif[Options].
 
 . Enable or disable the AutoSupport feature as needed.
-
-.After you finish
-
-AutoSupport is the primary troubleshooting tool used by NetApp in supporting ONTAP Select. Therefore, you should not disable AutoSupport unless absolutely necessary. If you do disable AutoSupport, data is still collected but not transmitted to NetApp.
 
 == Generating and downloading an AutoSupport package
 

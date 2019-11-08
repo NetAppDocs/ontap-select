@@ -47,4 +47,4 @@ There is a collection of blog articles covering different aspects of ONTAP Selec
 
 The Interoperability Matrix Tool contains detailed configuration and product support information.
 
-* https://mysupport.netapp.com/matrix/[NetApp IMT]
+* https://mysupport.netapp.com/matrix/[NetApp IMT^]

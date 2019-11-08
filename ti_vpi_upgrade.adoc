@@ -37,25 +37,6 @@ ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
 
 . Click the *Administration* tab at the top of the page and then click *Plugins* in the pane on the left.
 
-. Select the plug-in on the *Registered Plugins* page and click the appropriate icon to perform the desired action.
-+
-[cols="15,85"*,options="header"]
-|===
-
-|Click this icon ...
-|To do the following ...
-
-|Trash can
-|Remove the Deploy plug-in from the Deploy utility and the vCenter server.
-
-|Up arrow
-|Upgrade the Deploy plug-in in vCenter. Enter the requested information in the wizard and click *Upgrade*.
-
-|Check mark
-|Verify the Deploy plug-in. A green check mark indicates that the plug-in is still installed in vCenter and is still operational.
-
-|===
-
 .After you finish
 
 If you remove the plug-in, you must perform one of the following tasks to complete its removal from the vCenter server:

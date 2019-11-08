@@ -13,7 +13,7 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 :imagesdir: ./media/
 
 [.lead]
-You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster. The Deploy installation procedure consists of multiple steps.
+You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 
 == Downloading the virtual machine image
 
@@ -25,7 +25,7 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 .Steps
 . Access the NetApp support site using a web browser and click *Support Quick Links*.
 
-. Click *Download Software* under *Top Tasks* and sign in to the site.
+. Click *Download Software* under *Top Tasks* and sign in.
 
 . Click *Find your product*.
 
@@ -35,14 +35,14 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 . Review the End User License Agreement (EULA) and click *Accept & Continue*.
 
-. Select and download the appropriate package, responding to all prompts as needed for your environment.
+. Select and download the appropriate package, responding to all prompts as needed.
 
 == Deploying the virtual machine
 
 You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
-You must have prepared to deploy the ONTAP Select Deploy virtual machine as follows:
+You must prepare to deploy the ONTAP Select Deploy virtual machinea;
 
 * Enable the OVF functionality in your browser by installing the VMware Client Integration Plugin or performing similar configuration as needed
 * Enabled DHCP in the VMware environment if you will dynamically assign an IP address to the Deploy virtual machine
@@ -57,13 +57,13 @@ You must have the configuration information to be used when creating the virtual
 * DNS search domains
 
 .About this task
-If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can instead use the console of the Deploy virtual machine to configure the network.
+If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy virtual machine to configure the network instead.
 
 .Steps
 
 . Access the vSphere client and sign in.
 
-. Navigate to the appropriate location in the *vCenter* hierarchy and select *Deploy OVF Template*.
+. Navigate to the appropriate location in the hierarchy and select *Deploy OVF Template*.
 
 . Select the OVA file and complete the Deploy OVF Template wizard, selecting the options as appropriate for your environment.
 +
@@ -94,7 +94,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 . Provide the account information and sign in.
 
-. If the *Welcome to ONTAP Select* popup window is displayed, you should review the prerequisites and click *OK* to continue.
+. If the *Welcome to ONTAP Select* popup window is displayed, review the prerequisites and click *OK* to continue.
 
 . If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
 +

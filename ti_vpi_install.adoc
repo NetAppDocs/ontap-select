@@ -25,38 +25,23 @@ ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
 .Before you begin
 
 * Review link:ci_vpi_manage_before.html[Before you begin].
-* Define a vCenter account to Deploy with the following privilege: sessions.validate.session. The vCenter server then becomes an option during plug-in installation.
+* Define a vCenter account to Deploy with the following privilege: sessions.validate.session.
 * Have credentials for a vCenter account with the following privileges:
 ** Extension
 *** Register extension
+
+.About this task
+
+It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:ti_adm_security.html[Adding a management server account] for more information.
 
 .Steps
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page, and then click *Plugins* in the pane on the left.
+. Click the *Administration* tab at the top of the page and then click *Management Servers* in the pane on the left.
 
-. Click *+Register* on the *Registered Plugins* page.
+. Select the target management server and click image:icon_kebab.gif[Options] and click *Register as Plugin*.
 
-. Enter the following information in the wizard and click *Register*.
-+
-[cols="30,70"*,options="header"]
-|===
-|In this field …
-|Do the following …
+. Provide the vCenter credentials and select the plug-in version.
 
-|Plugin
-|Select the Deploy plug-in to install.
-
-|Management Server
-|Select the vCenter where the plug-in should be installed.
-
-|Username
-|Enter the username required for accessing the vCenter.
-
-|Password
-|Enter the password for the associated username.
-
-|===
-
-*INSERT GRAPHIC*
+. Click *Register*.
