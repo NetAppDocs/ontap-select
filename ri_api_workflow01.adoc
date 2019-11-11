@@ -78,15 +78,14 @@ curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step0
 JSON input (step02)::
 [source,json]
 {
-  {
-    "hosts": [
-      {
-        "hypervisor_type": "ESX",
-        "management_server": "vcenter.company-demo.com",
-        "name": "esx1.company-demo.com"
-      }
-    ]
-  }
+  "hosts": [
+    {
+      "hypervisor_type": "ESX",
+      "management_server": "vcenter.company-demo.com",
+      "name": "esx1.company-demo.com"
+    }
+  ]
+}
 
 Processing type::
 Asynchronous
@@ -189,9 +188,6 @@ You must provide the cluster ID.
 [source,curl]
 curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
 
-JSON input (step04)::
-None
-
 Processing type::
 Synchronous
 
@@ -216,7 +212,7 @@ You must provide the basic configuration for the node, which is the first of thr
 Curl::
 You must provide the cluster ID and node ID.
 [source,curl]
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step06 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
 
 JSON input (step06)::
 You must provide the host ID where the ONTAP Select node will run.
@@ -255,9 +251,6 @@ Curl::
 You must provide the cluster ID and node ID.
 [source,curl]
 curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
-
-JSON input (step04)::
-None
 
 Processing type::
 Synchronous
@@ -302,7 +295,7 @@ None
 
 == 9. Configure the node storage pool
 
-The final step in configuring a node is to attach a storage pool. You can determine the available storage pools through the vSphere web client, or optionally through the Deploy REST API
+The final step in configuring a node is to attach a storage pool. You can determine the available storage pools through the vSphere web client, or optionally through the Deploy REST API.
 
 [cols="15,15,70"*,options="header"]
 |===
@@ -320,7 +313,7 @@ You must provide the cluster ID, node ID, and network ID.
 [source,curl]
 curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step09 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
 
-JSON input (step04\8)::
+JSON input (step09)::
 The pool capacity is 2 TB.
 [source,json]
 {
@@ -357,6 +350,15 @@ Curl::
 You must provide the cluster ID.
 [source,curl]
 curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
+
+JSON input (step10)::
+You must provide the password for the ONTAP administrator account.
+[source,json]
+{
+  "ontap_credentials": {
+    "password": "mypassword"
+  }
+}
 
 Processing type::
 Asynchronous

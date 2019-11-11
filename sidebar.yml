@@ -265,6 +265,10 @@ entries:
             url: /ri_api_json_cc.html
           - title: Add a node license
             url: /ri_api_script_anl.html
+          - title: Delete a cluster
+            url: /ri_api_script_dc.html
+          - title: Common support module
+            url: /ri_api_script_common.html
           - title: Resize cluster nodes
             url: /ri_api_script_resize.html
   - title: Use the CLI
