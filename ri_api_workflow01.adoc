@@ -280,8 +280,8 @@ You must provide the cluster ID, node ID, and network ID.
 [source,curl]
 curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
 
-JSON input (step04\8)::
-xxx
+JSON input (step08)::
+You need to provide the name of the network.
 [source,json]
 {
   "name": "sDOT_Network"

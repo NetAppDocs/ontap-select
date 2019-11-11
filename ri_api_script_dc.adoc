@@ -36,6 +36,66 @@ You can use the following CLI script to delete an existing cluster.
 #
 ##--------------------------------------------------------------------
 
-xxx
+import argparse
+import json
+import logging
+
+from deploy_requests import DeployRequests
+
+def find_cluster(deploy, cluster_name):
+    return deploy.find_resource('/clusters', 'name', cluster_name)
+
+
+def offline_cluster(deploy, cluster_id):
+    # Test that the cluster is online, otherwise do nothing
+    response = deploy.get('/clusters/{}?fields=state'.format(cluster_id))
+    cluster_data = response.json()['record']
+    if cluster_data['state'] == 'powered_on':
+        log_info("Found the cluster to be online, modifying it to be powered_off.")
+        deploy.patch('/clusters/{}'.format(cluster_id), {'availability': 'powered_off'}, True)
+
+
+def delete_cluster(deploy, cluster_id):
+    log_info("Deleting the cluster({}).".format(cluster_id))
+    deploy.delete('/clusters/{}'.format(cluster_id), True)
+    pass
+
+
+def log_info(msg):
+    logging.getLogger('deploy').info(msg)
+
+
+def configure_logging():
+    FORMAT = '%(asctime)-15s:%(levelname)s:%(name)s: %(message)s'
+    logging.basicConfig(level=logging.INFO, format=FORMAT)
+    logging.getLogger('requests.packages.urllib3.connectionpool').setLevel(logging.WARNING)
+
+
+def main(args):
+    configure_logging()
+    deploy = DeployRequests(args.deploy, args.password)
+
+    with open(args.config_file) as json_data:
+        config = json.load(json_data)
+
+        cluster_id = find_cluster(deploy, config['cluster']['name'])
+
+        log_info("Found the cluster {} with id: {}.".format(config['cluster']['name'], cluster_id))
+
+        offline_cluster(deploy, cluster_id)
+
+        delete_cluster(deploy, cluster_id)
+
+
+def parseArgs():
+    parser = argparse.ArgumentParser(description='Uses the ONTAP Select Deploy API to delete a cluster')
+    parser.add_argument('-d', '--deploy', required=True, type=str, help='Hostname or IP address of Deploy server')
+    parser.add_argument('-p', '--password', required=True, type=str, help='Admin password of Deploy server')
+    parser.add_argument('-c', '--config_file', required=True, type=str, help='Filename of the cluster json config')
+    return parser.parse_args()
+
+if __name__ == '__main__':
+    args = parseArgs()
+    main(args)
 
 ---------------------------------------------------------------------
