@@ -17,7 +17,7 @@ When creating or deleting an ONTAP Select cluster using the Python code samples,
 
 == Single-node cluster on ESXi
 
-[source,json]
+[source,json,%autofill]
 ---------------------------------------------------------------------
 {
 	"hosts": [{
