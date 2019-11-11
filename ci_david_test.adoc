@@ -22,6 +22,14 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 {set:cellbgcolor:yellow}
 |===
 
+== Test include
+
+JSON input (step01)::
+[source,json]
+include::step01.json
+
+////
+
 ''''
 
 == Formatting examples
@@ -37,3 +45,11 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 [yellow-background]*This is bold with a yellow background*
 
 [red aqua-background]#This is red with an aqua background#
+
+== Background colors
+
+Here is something that is [yellow-background]#very important# for you to know.
+
+Here is something that is [yellow-background]*even more important*.
+
+////
