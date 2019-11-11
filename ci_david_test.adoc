@@ -22,6 +22,8 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 {set:cellbgcolor:yellow}
 |===
 
+////
+
 ''''
 
 == Formatting examples
@@ -43,3 +45,5 @@ ONTAP Select 9.7 RC1 - This page can be ignored and will be removed prior to FCS
 Here is something that is [yellow-background]#very important# for you to know.
 
 Here is something that is [yellow-background]*even more important*.
+
+////
