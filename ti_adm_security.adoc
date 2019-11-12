@@ -61,9 +61,9 @@ You should be familiar with the types of credentials and how they are used by ON
 
 |===
 
-. You can optionally install the Deploy vCenter plug-in.
+. You can optionally register (install) the Deploy vCenter plug-in.
 
-. After the new management server is addeded, you can optionally click image:icon_kebab.gif[Options] and select one of the following:
+. After the new management server is added, you can optionally click image:icon_kebab.gif[Options] and select one of the following:
 +
 * Update credentials
 * Register as plug-in

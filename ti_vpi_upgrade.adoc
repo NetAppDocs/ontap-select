@@ -5,7 +5,7 @@ keywords: ontap select
 summary: xxx
 ---
 
-= Upgrading, removing, and verifying the Deploy vCenter plug-in
+= Verifying and removing the Deploy vCenter plug-in
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -18,7 +18,7 @@ You can use the ONTAP Select Deploy web user interface to upgrade or remove the 
 [cols="1"]
 |===
 |*Draft comment:*
-ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
+ONTAP Select 9.7 RC1 - Is there a way to upgrade the plug-in?
 {set:cellbgcolor:yellow}
 |===
 
@@ -35,7 +35,13 @@ ONTAP Select 9.7 RC1 - MUST REVIEW AND UPDATE
 
 . Sign in to the Deploy utility using the administrator account.
 
-. Click the *Administration* tab at the top of the page and then click *Plugins* in the pane on the left.
+. Click the *Administration* tab at the top of the page and then click *Management Servers* in the pane on the left.
+
+. Select the target management server and click image:icon_kebab.gif[Options] and optionally select on of:
+.. *Verify Plugin*
+.. *Unregister Plugin*
+
+. Provide the vCenter credentials if prompted.
 
 .After you finish
 

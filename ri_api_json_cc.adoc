@@ -17,60 +17,71 @@ When creating or deleting an ONTAP Select cluster using the Python code samples,
 
 == Single-node cluster on ESXi
 
-[source,json]
+[source,json,%autofill]
 ---------------------------------------------------------------------
 {
-	"hosts": [{
-			"password": "netapp1!",
-			"name": "sti-rx2540-226",
-			"type": "ESX",
-			"username": "admin"
-		}
-	],
-	"cluster": {
-		"dns_info": {
-			"domains": ["ctl.gdl.englab.netapp.com", "gdl.englab.netapp.com", "gdl.eng.netapp.com", "rtp.netapp.com"],
-			"dns_ips": ["10.224.223.135", "10.224.223.136"]
-		},
-		"ontap_image_version": "devN_180729_0746-serialconsole",
-		"gateway": "1.128.102.1",
-		"ip": "1.128.103.115",
-		"name": "CBF4ED97",
-		"ntp_servers": ["10.60.248.183", "10.227.204.142"],
-		"ontap_admin_password": "netapp1!",
-		"netmask": "255.255.254.0"
-	},
-	"nodes": [{
-			"serial_number": "320000022",
-			"ip": "1.128.103.114",
-			"name": "sti-rx2540-226a",
-			"networks": [{
-					"name": "ontap-external",
-					"purpose": "mgmt",
-					"vlan": 3090
-				}, {
-					"name": "ontap-external",
-					"purpose": "data",
-					"vlan": null
-				}, {
-					"name": "ontap-internal",
-					"purpose": "internal",
-					"vlan": null
-				}
-			],
-			"host_name": "sti-rx2540-226",
-			"is_storage_efficiency_enabled": false,
-			"instance_type": "small",
-			"storage": {
-				"disk": [],
-				"pools": [{
-						"name": "ontap-select-storage-pool",
-						"capacity": 4802666790125
-					}
-				]
-			}
-		}
-	]
+  "hosts": [
+    {
+      "password": "mypassword1",
+      "name": "host-1234",
+      "type": "ESX",
+      "username": "admin"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {
+      "domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+        "lab3.company-demo.com", "lab4.company-demo.com"
+        ],
+
+      "dns_ips": ["10.206.80.135", "10.206.80.136"]
+      },
+      "ontap_image_version": "9.7",
+      "gateway": "10.206.80.1",
+      "ip": "10.206.80.115",
+      "name": "mycluster",
+      "ntp_servers": ["10.206.80.183", "10.206.80.142"],
+      "ontap_admin_password": "mypassword2",
+      "netmask": "255.255.254.0"
+  },
+
+  "nodes": [
+    {
+      "serial_number": "3200000nn",
+      "ip": "10.206.80.114",
+      "name": "node-1",
+      "networks": [
+        {
+          "name": "ontap-external",
+          "purpose": "mgmt",
+          "vlan": 1234
+        },
+        {
+          "name": "ontap-external",
+          "purpose": "data",
+          "vlan": null
+        },
+        {
+          "name": "ontap-internal",
+          "purpose": "internal",
+          "vlan": null
+        }
+      ],
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk": [],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity": 4802666790125
+          }
+        ]
+      }
+    }
+  ]
 }
 ---------------------------------------------------------------------
 
@@ -78,12 +89,144 @@ When creating or deleting an ONTAP Select cluster using the Python code samples,
 
 [source,json]
 ---------------------------------------------------------------------
-xxx
+{
+  "hosts": [
+    {
+      "name":"host-1234",
+      "type":"ESX",
+      "mgmt_server":"vcenter-1234"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {"domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+      "lab3.company-demo.com", "lab4.company-demo.com"
+      ],
+      "dns_ips": ["10.206.80.135","10.206.80.136"]
+  },
+
+  "ontap_image_version":"9.7",
+  "gateway":"10.206.80.1",
+  "ip":"10.206.80.115",
+  "name":"mycluster",
+  "ntp_servers": ["10.206.80.183","10.206.80.142"],
+  "ontap_admin_password":"mypassword2",
+  "netmask":"255.255.254.0"
+  },
+
+  "vcenter": {
+    "password":"mypassword2",
+    "hostname":"vcenter-1234",
+    "username":"selectadmin"
+  },
+
+  "nodes": [
+    {
+      "serial_number": "3200000nn",
+      "ip":"10.206.80.114",
+      "name":"node-1",
+      "networks": [
+        {
+          "name":"ONTAP-Management",
+          "purpose":"mgmt",
+          "vlan":null
+        },
+        {
+          "name": "ONTAP-External",
+          "purpose":"data",
+          "vlan":null
+        },
+        {
+          "name": "ONTAP-Internal",
+          "purpose":"internal",
+          "vlan":null
+        }
+      ],
+
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk":[],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity":5685190380748
+          }
+        ]
+      }
+    }
+  ]
+}
 ---------------------------------------------------------------------
 
 == Single-node cluster on KVM
 
 [source,json]
 ---------------------------------------------------------------------
-xxx
+{
+  "hosts": [
+    {
+      "password": "mypassword1",
+      "name":"host-1234",
+      "type":"KVM",
+      "username":"root"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {
+      "domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+        "lab3.company-demo.com", "lab4.company-demo.com"
+      ],
+
+      "dns_ips": ["10.206.80.135", "10.206.80.136"]
+    },
+
+    "ontap_image_version": "9.7",
+    "gateway":"10.206.80.1",
+    "ip":"10.206.80.115",
+    "name":"CBF4ED97",
+    "ntp_servers": ["10.206.80.183", "10.206.80.142"],
+    "ontap_admin_password": "mypassword2",
+    "netmask":"255.255.254.0"
+  },
+  "nodes": [
+    {
+      "serial_number":"3200000nn",
+      "ip":"10.206.80.115",
+      "name": "node-1",
+      "networks": [
+        {
+          "name": "ontap-external",
+          "purpose": "mgmt",
+          "vlan":1234
+        },
+        {
+          "name": "ontap-external",
+          "purpose": "data",
+          "vlan": null
+        },
+        {
+          "name": "ontap-internal",
+          "purpose": "internal",
+          "vlan": null
+        }
+      ],
+
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk": [],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity": 4802666790125
+          }
+        ]
+      }
+    }
+  ]
+}
 ---------------------------------------------------------------------
