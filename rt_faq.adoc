@@ -68,7 +68,7 @@ Yes, the revert procedure for an ONTAP Select cluster is almost identical to the
 
 * Only upgraded instances of ONTAP Select can be reverted, and only up to the original install version. New installs cannot be reverted to an older code release, even if ONTAP Select in general does support that older release.
 * For ONTAP Select (KVM) and ONTAP Select (ESX) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESX uses VMXNET3 network drivers and, when possible, the vNMVE driver. These new installations cannot be reverted to prior versions of ONTAP Select.
-* If the ONTAP Select VM was also upgraded to a Large instance (using the Premium XL license), then reverting to a prior version is not supported.
+* If the ONTAP Select VM was also upgraded to a Large instance (using the Premium XL license), then reverting to a prior version before 9.6 is not supported, since the Large instance feature is not available in earlier versions.
 
 ===== *Does the ONTAP MetroCluster SDS require at a minimum a Premium license?*
 
@@ -213,7 +213,7 @@ The list of vCenter rights required is available here link:rt_chk_select_req_inf
 
 ===== *What is the vCenter Deploy plug-in?*
 
-It is possible to integrate the ONTAP Deploy functionality in the vCenter server with the ONTAP Deploy plug-in. Please note that the plug-in does not replace ONTAP Deploy. Rather ONTAP Deploy works in the background, and the vCenter admin can invoke all the ONTAP Deploy functionality with the plug-in.
+It is possible to integrate the ONTAP Deploy functionality in the vCenter server with the ONTAP Deploy plug-in. Please note that the plug-in does not replace ONTAP Deploy. Rather ONTAP Deploy works in the background, and the vCenter admin can invoke most of the ONTAP Deploy functionality with the plug-in.  Some ONTAP Deploy operations are available only using CLI.
 
 ===== *How many ONTAP Deploy VMs can register their plug-ins with one vCenter server?*
 
