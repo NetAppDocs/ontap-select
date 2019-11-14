@@ -106,7 +106,7 @@ You must have the password for the root account at the vCenter server. You shoul
 
 . Navigate to the `vsphere-client-serenity` directory for the vSphere-Client service:
 +
-`cd /etc/vmware/vsphere-client/vc-packages/vsphere-clientserenity`
+`cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity`
 
 . Determine if there are directories of the form `com.netapp.selectdeploy` that must be removed:
 +
