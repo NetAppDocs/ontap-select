@@ -25,12 +25,6 @@ The following product pages include links to a wide variety of ONTAP Select reso
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 
-=== Community
-
-You can connect with other users to ask questions and contribute to the NetApp ONTAP Select community.
-
-* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select^]
-
 === Videos
 
 There are several helpful videos available at the dedicated YouTube channel.
@@ -42,6 +36,12 @@ There are several helpful videos available at the dedicated YouTube channel.
 There is a collection of blog articles covering different aspects of ONTAP Select.
 
 * https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs^]
+
+=== Community
+
+You can connect with other users to ask questions and contribute to the NetApp ONTAP Select community.
+
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select^]
 
 === NetApp Interoperability Matrix Tool
 
