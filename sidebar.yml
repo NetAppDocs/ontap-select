@@ -67,7 +67,7 @@ entries:
         entries:
           - title: Operational details
             url: /ci_lic_cp_operation.html
-          - title: Node serial number
+          - title: Node serial numbers
             url: /ci_lic_cp_serial_number.html
           - title: Restrictions
             url: /ci_lic_cp_restrictions.html
