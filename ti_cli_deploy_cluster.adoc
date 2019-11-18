@@ -249,7 +249,7 @@ You can also obtain the available storage pools through VMware vSphere.
 
 . Attach an available storage pool to the ONTAP Select node:
 +
-`node storage pool attach -name POOLNAME -cluster-name CLUSTERNAME -nodename NODENAME -capacity-limit LIMIT`
+`node storage pool attach -name POOLNAME -cluster-name CLUSTERNAME -node-name NODENAME -capacity-limit LIMIT`
 +
 If you include the -capacity-limit parameter, specify the value as GB or TB.
 +

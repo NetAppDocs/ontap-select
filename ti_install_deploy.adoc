@@ -42,7 +42,7 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
-You must prepare to deploy the ONTAP Select Deploy virtual machinea;
+You must prepare to deploy the ONTAP Select Deploy virtual machine:
 
 * Enable the OVF functionality in your browser by installing the VMware Client Integration Plugin or performing similar configuration as needed
 * Enabled DHCP in the VMware environment if you will dynamically assign an IP address to the Deploy virtual machine
