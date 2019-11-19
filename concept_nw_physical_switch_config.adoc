@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_physical_switch_config.html
+permalink: concept_nw_physical_switch_config.html
 keywords: ontap select, upstream physical switch configuration
 summary: Upstream physical switch configuration details based on single-switch and multi-switch environments.
 ---
