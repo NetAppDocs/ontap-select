@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_stor_concepts_chars.html
+permalink: concept_stor_concepts_chars.html
 keywords: ontap select, storage concepts
 summary: Discover general storage concepts that apply to the ONTAP Select environment before exploring the specific storage components.
 ---

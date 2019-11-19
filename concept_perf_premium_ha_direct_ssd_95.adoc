@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_perf_premium_ha_direct_ssd_95.html
+permalink: concept_perf_premium_ha_direct_ssd_95.html
 keywords: ontap select, performance
 summary: ONTAP Select 9.5 performance - premium HA direct-attached SSD storage.
 ---
