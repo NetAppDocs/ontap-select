@@ -6,7 +6,7 @@ entries:
       - title: Product overview
         url: /concept_ots_overview.html
       - title: ONTAP Select Deploy
-        url: /ci_ots_deploy.html
+        url: /concept_ots_deploy.html
       - title: Business use cases
         entries:
           - title: Business needs and usage scenarios
@@ -18,11 +18,11 @@ entries:
           - title: MetroCluster SDS
             url: /ct_usecase_mc_sds.html
       - title: Terminology
-        url: /ci_terminology.html
+        url: /concept_terminology.html
   - title: Plan
     entries:
       - title: Deployment workflow
-        url: /ci_workflow_deploying.html
+        url: /concept_workflow_deploy.html
       - title: ONTAP Select
         entries:
           - title: General requirements
@@ -304,8 +304,8 @@ entries:
   - title: FAQ
     url: /rt_faq.html
   - title: Get more information
-    url: /ri_additional_info.html
+    url: /reference_additional_info.html
   - title: Earlier versions
     url: /reference_earlier_versions.html
   - title: Legal notices
-    url: /ri_legal_notices.html
+    url: /reference_legal_notices.html
