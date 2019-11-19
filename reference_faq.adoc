@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: rt_faq.html
+permalink: reference_faq.html
 keywords: ontap select, faq, frequently asked questions
 summary: Find answers to common questions about ONTAP Select.
 ---

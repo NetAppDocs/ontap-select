@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: rt_plan_best_practices.html
+permalink: reference_plan_best_practices.html
 keywords: ontap select, best practices, recommendations
 summary: There are best practices that you should consider as part of planning an ONTAP Select deployment.
 ---
