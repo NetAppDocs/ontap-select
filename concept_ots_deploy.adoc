@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_ots_deploy.html
+permalink: concept_ots_deploy.html
 keywords: ontap select deploy, deploy administration utility
 summary: ONTAP Select Deploy is the administration utility used to deploy and manage ONTAP Select clusters.
 ---

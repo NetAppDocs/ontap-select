@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_terminology.html
+permalink: concept_terminology.html
 keywords: ontap select, terminology
 summary: You should become familiar with the ONTAP Select terminology and key concepts before deploying an ONTAP Select cluster.
 ---

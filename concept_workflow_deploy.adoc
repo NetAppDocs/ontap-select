@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_workflow_deploying.html
+permalink: concept_workflow_deploy.html
 keywords: ontap select, deployment workflow
 summary: There is a workflow process that can be used to deploy an ONTAP Select cluster.
 ---
