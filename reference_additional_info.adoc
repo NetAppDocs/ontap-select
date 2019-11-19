@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_additional_info.html
+permalink: reference_additional_info.html
 keywords: ontap select, more information
 summary: There are additional resources you can access to get help and find more information about ONTAP Select.
 ---
