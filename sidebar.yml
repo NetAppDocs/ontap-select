@@ -152,27 +152,27 @@ entries:
       - title: Networking
         entries:
           - title: General concepts and characteristics
-            url: /ct_nw_concepts_chars.html
+            url: /concept_nw_concepts_chars.html
           - title: Single and multi node configuration
-            url: /ct_nw_single_multi_config.html
+            url: /concept_nw_single_multi_node.html
           - title: Internal and external networks
-            url: /ct_nw_internal_external.html
+            url: /concept_nw_internal_external.html
           - title: Supported configurations
-            url: /ct_nw_supported_configuraitons.html
+            url: /concept_nw_supported_configs.html
           - title: VMWare vSphere VSwitch configuration
-            url: /ct_nw_vsphere_vswitch_config.html
+            url: /concept_nw_vsphere_vswitch_config.html
           - title: Physical switch configuration
-            url: /ct_nw_physical_switch_config.html
+            url: /concept_nw_physical_switch_config.html
           - title: Data and management separation
-            url: /ct_nw_data_mgmt_separation.html
+            url: /concept_nw_data_mgmt_separation.html
       - title: High availability architecture
         entries:
           - title: HA configuration
-            url: /ct_ha_config.html
+            url: /concept_ha_config.html
           - title: Syncronous replication and mirrored aggregates
-            url: /ct_ha_mirroring.html
+            url: /concept_ha_mirroring.html
           - title: Other high availability functions
-            url: /ct_ha_other.html
+            url: /concept_ha_other.html
       - title: Performance
         entries:
           - title: General considerations

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_supported_configuraitons.html
+permalink: concept_nw_supported_configs.html
 keywords: ontap select, supported network configurations
 summary: Select the best hardware and configure your network to optimize performance and resiliency.
 ---

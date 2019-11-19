@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_internal_external.html
+permalink: concept_nw_internal_external.html
 keywords: ontap select, internal network, external network
 summary: Characteristics of internal and external ONTAP Select networks.
 ---

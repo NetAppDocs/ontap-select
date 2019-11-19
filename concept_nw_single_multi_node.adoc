@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_single_multi_config.html
+permalink: concept_nw_single_multi_node.html
 keywords: ontap select, single node network configuration, multinode network configuration
 summary: ONTAP Select supports both single node and multinode network configurations.
 ---

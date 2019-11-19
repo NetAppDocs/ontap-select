@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_vsphere_vswitch_config.html
+permalink: concept_nw_vsphere_vswitch_config.html
 keywords: ontap select, standard and distributed vSwitch configurations, vSwitch configuration and load-balancing policies
 summary: ONTAP Select vSwitch configuration and load-balancing policies for two-NIC and four-NIC configurations.
 ---

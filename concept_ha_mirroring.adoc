@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_ha_mirroring.html
+permalink: concept_ha_mirroring.html
 keywords: ontap select, ha, high availability, synchronous replication, mirrored aggregates, write path, raid syncmirror, rsm
 summary: Prevent data loss using RAID SyncMirror (RSM), mirrored aggregates, and the write path.
 ---

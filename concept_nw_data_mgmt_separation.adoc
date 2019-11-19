@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ct_nw_data_mgmt_separation.html
+permalink: concept_nw_data_mgmt_separation.html
 keywords: ontap select, traffic separation
 summary: Isolate data traffic and management traffic into separate layer-2 networks.
 ---
