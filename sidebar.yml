@@ -98,11 +98,11 @@ entries:
           - title: NVMe host configuration
             url: /task_chk_nvme_configure.html
       - title: Install ONTAP Select Deploy
-        url: /ti_install_deploy.html
+        url: /task_install_deploy.html
       - title: Deploy a cluster
-        url: /ti_deploy_cluster.html
+        url: /task_deploy_cluster.html
       - title: Initial cluster state
-        url: /ri_initial_state.html
+        url: /reference_initial_state.html
   - title: Administer
     entries:
       - title: Before you begin

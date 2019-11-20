@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_install_deploy.html
+permalink: task_install_deploy.html
 keywords: ontap select
 summary: You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 ---
