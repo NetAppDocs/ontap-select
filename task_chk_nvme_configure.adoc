@@ -26,15 +26,19 @@ Make sure your deployment environment meets the following minimum requirements:
 
 Follow the link:rt_chk_host_prep.html[host preparation checklist], review the link:rt_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:rt_chk_select_req_info.html[required information for ONTAP Select installation] topics for more information.
 
-Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency.
+Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
 
 .Steps
 
 . Access the *BIOS configuration* menu on the host to enable support for I/O virtualization.
 
-. Enable the *Intel VT for Directed I/O (VT-d)* setting.
+. Enable the *Intel(R) VT for Directed I/O (VT-d)* setting.
 +
 image:nvme_01.png[Socket Configuration]
+
+. Some servers offer support for *Intel Volume Management Device (Intel VMD)*. When enabled, this makes the available NVMe devices invisible to the ESXi hypervisor; disable this option before proceeding.
++
+image:nvme_07.png[Socket Configuration, VMD]
 
 . Configure the NVMe drives for pass-through to virtual machines.
 
@@ -42,9 +46,10 @@ image:nvme_01.png[Socket Configuration]
 
 .. Select the NVMe drives you want to use for ONTAP Select.
 +
+image:nvme_02.png[Edit PCI Device Availability]
++
 [NOTE]
 You need a VMFS datastore that is also backed by an NVMe device to host the ONTAP Select VM system disks and virtual NVRAM. Leave at least one NVMe drive available for this purpose when configuring the others for PCI pass-through.
-image:nvme_02.png[Edit PCI Device Availability]
 
 .. Click *OK*. The selected devices indicate *Available (pending)*.
 
