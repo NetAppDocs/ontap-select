@@ -15,14 +15,7 @@ summary: xxx
 [.lead]
 There are several general requirements that you should consider as part of planning an ONTAP Select deployment.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - Review page including "Cluster size and related"
-{set:cellbgcolor:yellow}
-|===
-
-== Cluster size and related
+== Cluster size and related considerations
 
 There are several planning issues related to the cluster size that you should consider.
 

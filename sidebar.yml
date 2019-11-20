@@ -48,9 +48,9 @@ entries:
       - title: ONTAP Select Deploy
         entries:
           - title: General requirements
-            url: /ri_plan_dep_general.html
+            url: /reference_plan_dep_general.html
           - title: VMware environment
-            url: /ri_plan_dep_vmware.html
+            url: /reference_plan_dep_vmware.html
       - title: Best practices
         url: /reference_plan_best_practices.html
   - title: License
