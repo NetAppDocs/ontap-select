@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_networking.html
-keywords: ONTAP Select
+permalink: reference_plan_ots_networking.html
+keywords: planning, networking
 summary: xxx
 ---
 

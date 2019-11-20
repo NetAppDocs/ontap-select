@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_mcc_sds.html
-keywords: ontap select
+permalink: reference_plan_ots_mcc_sds.html
+keywords: planning, metrocluster, metrocluster sds
 summary: xxx
 ---
 

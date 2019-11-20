@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_robo.html
-keywords: ONTAP Select
+permalink: reference_plan_ots_robo.html
+keywords: planning, robo, remote and branch office
 summary: xxx
 ---
 
