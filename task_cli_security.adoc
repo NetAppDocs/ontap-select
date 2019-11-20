@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_security.html
+permalink: task_cli_security.html
 keywords: ontap select
 summary: xxx
 ---

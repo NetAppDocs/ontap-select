@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_cli_before.html
+permalink: concept_cli_before.html
 keywords: cli, before you begin
 summary: xxx
 ---

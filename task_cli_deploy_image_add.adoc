@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_deploy_image_add.html
+permalink: task_cli_deploy_image_add.html
 keywords: ontap select
 summary: xxx
 ---

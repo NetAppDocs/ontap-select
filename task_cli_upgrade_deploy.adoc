@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_upgrade_deploy.html
+permalink: task_cli_upgrade_deploy.html
 keywords: ontap select
 summary: xxx
 ---

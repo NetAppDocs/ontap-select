@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_connectivity.html
+permalink: task_cli_connectivity.html
 keywords: ontap select
 summary: xxx
 ---

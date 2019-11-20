@@ -274,33 +274,33 @@ entries:
   - title: Use the CLI
     entries:
       - title: Before you begin
-        url: /ci_cli_before.html
+        url: /concept_cli_before.html
       - title: Sign in using SSH
-        url: /ti_cli_signing_in.html
+        url: /task_cli_signing_in.html
       - title: Deploy a cluster
-        url: /ti_cli_deploy_cluster.html
+        url: /task_cli_deploy_cluster.html
       - title: Security
-        url: /ti_cli_security.html
+        url: /task_cli_security.html
       - title: Network connectivity
-        url: /ti_cli_connectivity.html
+        url: /task_cli_connectivity.html
       - title: Clusters
-        url: /ti_cli_clusters.html
+        url: /task_cli_clusters.html
       - title: Nodes and hosts
         entries:
           - title: Upgrading ESXi to 6.5 and higher
-            url: /ti_cli_upgrade_esxi65.html
+            url: /task_cli_upgrade_esxi65.html
       - title: Deploy utility
         entries:
           - title: Migrating a Deploy instance
-            url: /ti_cli_migrate_deploy.html
+            url: /task_cli_migrate_deploy.html
           - title: Upgrade a Deploy instance
-            url: /ti_cli_upgrade_deploy.html
+            url: /task_cli_upgrade_deploy.html
           - title: Recover Deploy for two-node cluster
-            url: /ti_cli_deploy_recover_two_node.html
+            url: /task_cli_deploy_recover_two_node.html
           - title: Add ONTAP Select images
-            url: /ti_cli_deploy_image_add.html
+            url: /task_cli_deploy_image_add.html
           - title: Remove ONTAP Select images
-            url: /ti_cli_deploy_image_remove.html
+            url: /task_cli_deploy_image_remove.html
   - title: FAQ
     url: /reference_faq.html
   - title: Get more information

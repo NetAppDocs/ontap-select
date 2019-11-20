@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_deploy_image_remove.html
+permalink: task_cli_deploy_image_remove.html
 keywords: ontap select
 summary: xxx
 ---

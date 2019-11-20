@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_migrate_deploy.html
+permalink: task_cli_migrate_deploy.html
 keywords: ONTAP Select
 summary: xxx
 ---

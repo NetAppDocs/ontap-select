@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_cli_clusters.html
+permalink: task_cli_clusters.html
 keywords: ONTAP Select
 summary: xxx
 ---
