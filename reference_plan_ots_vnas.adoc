@@ -5,7 +5,7 @@ keywords: planning, vnas
 summary: xxx
 ---
 
-= ONTAP Select requirements
+= ONTAP Select vNAS requirements
 :hardbreaks:
 :nofooter:
 :icons: font
