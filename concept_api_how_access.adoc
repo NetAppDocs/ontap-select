@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_api_how_access.html
+permalink: concept_api_how_access.html
 keywords: ONTAP Select
 summary: xxx
 ---
