@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_vpi_upgrade.html
+permalink: task_vpi_upgrade.html
 keywords: ontap select
 summary: xxx
 ---

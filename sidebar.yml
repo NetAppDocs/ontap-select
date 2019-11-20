@@ -186,39 +186,39 @@ entries:
       - title: Getting started
         entries:
           - title: Overview
-            url: /ci_vpi_overview.html
+            url: /concept_vpi_overview.html
           - title: Architecture
-            url: /ci_vpi_architecture.html
+            url: /concept_vpi_architecture.html
           - title: Planning
-            url: /ci_vpi_planning.html
+            url: /concept_vpi_planning.html
       - title: Manage the plug-in
         entries:
           - title: Before you begin
-            url: /ci_vpi_manage_before.html
+            url: /concept_vpi_manage_before.html
           - title: Install
-            url: /ti_vpi_install.html
+            url: /task_vpi_install.html
           - title: Access
-            url: /ti_vpi_access.html
+            url: /task_vpi_access.html
           - title: Upgrade and remove
-            url: /ti_vpi_upgrade.html
+            url: /task_vpi_upgrade.html
       - title: Manually remove the plug-in
-        url: /ti_vpi_manually_remove.html
+        url: /task_vpi_manually_remove.html
       - title: Deploy a cluster
-        url: /ti_vpi_deploy_cluster.html
+        url: /task_vpi_deploy_cluster.html
       - title: vCenter integration
-        url: /ci_vpi_vcenter_integration.html
+        url: /concept_vpi_vcenter_integration.html
       - title: Administer
         entries:
           - title: Diagnostics and support
-            url: /ti_vpi_adm_support.html
+            url: /task_vpi_adm_support.html
           - title: Networking
-            url: /ti_vpi_adm_network.html
+            url: /task_vpi_adm_network.html
           - title: Clusters
-            url: /ti_vpi_adm_clusters.html
+            url: /task_vpi_adm_clusters.html
           - title: Licenses
-            url: /ti_vpi_adm_licenses.html
+            url: /task_vpi_adm_licenses.html
       - title: Troubleshoot
-        url: /ri_vpi_troubleshooting.html
+        url: /reference_vpi_troubleshooting.html
   - title: Automate with REST
     entries:
       - title: Concepts

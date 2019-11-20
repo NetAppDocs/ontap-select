@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_vpi_overview.html
+permalink: concept_vpi_overview.html
 keywords: ontap select
 summary: xxxx
 ---

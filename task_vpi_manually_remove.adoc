@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_vpi_manually_remove.html
+permalink: task_vpi_manually_remove.html
 keywords: ontap select
 summary: xxx
 ---

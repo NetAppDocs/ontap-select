@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_vpi_adm_support.html
+permalink: task_vpi_adm_support.html
 keywords: ONTAP Select
 summary: xxx
 ---

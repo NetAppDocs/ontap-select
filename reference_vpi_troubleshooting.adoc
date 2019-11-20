@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_vpi_troubleshooting.html
+permalink: reference_vpi_troubleshooting.html
 keywords: ontap select
 summary: xxx
 ---

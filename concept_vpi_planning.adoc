@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_vpi_planning.html
+permalink: concept_vpi_planning.html
 keywords: ONTAP Select
 summary: xxx
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_vpi_architecture.html
+permalink: concept_vpi_architecture.html
 keywords: ONTAP Select
 summary: xxx
 ---
