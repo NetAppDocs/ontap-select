@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: concept_automate_ansible.html
+keywords: ansible
+summary: xxx
+---
+
+= Automate ONTAP Select deployments with Ansible
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx

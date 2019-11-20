@@ -15,13 +15,6 @@ summary: Legal notices provide access to copyright statements, trademarks, paten
 [.lead]
 Legal notices provide access to copyright statements, trademarks, patents, and more.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - The link to the Notices file under *Open source* needs to be updated.
-{set:cellbgcolor:yellow}
-|===
-
 == Copyright
 
 http://www.netapp.com/us/legal/copyright.aspx[^]
@@ -46,4 +39,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2857091[Notice for ONTAP Select 9.7^]
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862575[Notice for ONTAP Select 9.7^]

@@ -271,6 +271,8 @@ entries:
             url: /ri_api_script_common.html
           - title: Resize cluster nodes
             url: /ri_api_script_resize.html
+  - title: Automate with Ansible
+    url: /concept_automate_ansible.html
   - title: Use the CLI
     entries:
       - title: Before you begin
