@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_lic_cp_compare_ct.html
+permalink: concept_lic_cp_compare_ct.html
 keywords: ONTAP Select
 summary: xxx
 ---

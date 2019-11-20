@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_dep_vmware.html
+permalink: reference_plan_dep_vmware.html
 keywords: ontap select deploy, general requirements
 summary: There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 ---

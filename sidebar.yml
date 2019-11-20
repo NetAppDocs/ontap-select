@@ -48,9 +48,9 @@ entries:
       - title: ONTAP Select Deploy
         entries:
           - title: General requirements
-            url: /ri_plan_dep_general.html
+            url: /reference_plan_dep_general.html
           - title: VMware environment
-            url: /ri_plan_dep_vmware.html
+            url: /reference_plan_dep_vmware.html
       - title: Best practices
         url: /reference_plan_best_practices.html
   - title: License
@@ -58,33 +58,33 @@ entries:
       - title: Options
         entries:
           - title: Evaluation licences
-            url: /ci_lic_evaluation.html
+            url: /concept_lic_evaluation.html
           - title: Production licences
-            url: /ci_lic_production.html
+            url: /concept_lic_production.html
           - title: Platform license offerings
-            url: /ci_lic_platforms.html
+            url: /concept_lic_platforms.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
-            url: /ci_lic_cp_operation.html
+            url: /concept_lic_cp_operation.html
           - title: Node serial numbers
-            url: /ci_lic_cp_serial_number.html
+            url: /concept_lic_cp_serial_number.html
           - title: Restrictions
-            url: /ci_lic_cp_restrictions.html
+            url: /concept_lic_cp_restrictions.html
           - title: Capacity pools versus capacity tiers
-            url: /ci_lic_cp_compare_ct.html
+            url: /concept_lic_cp_compare_ct.html
           - title: Summary of benefits
-            url: /ci_lic_cp_benefits.html
+            url: /concept_lic_cp_benefits.html
       - title: Purchase
         entries:
           - title: Licensing workflow
-            url: /ci_lic_workflow.html
+            url: /concept_lic_workflow.html
           - title: Capacity tiers
-            url: /ti_lic_acquire_ct.html
+            url: /task_lic_acquire_ct.html
           - title: Capacity pools
-            url: /ti_lic_acquire_cp.html
+            url: /task_lic_acquire_cp.html
       - title: ONTAP features
-        url: /ri_lic_ontap_features.html
+        url: /reference_lic_ontap_features.html
   - title: Install
     entries:
       - title: Pre-installation checklist
@@ -98,11 +98,11 @@ entries:
           - title: NVMe host configuration
             url: /task_chk_nvme_configure.html
       - title: Install ONTAP Select Deploy
-        url: /ti_install_deploy.html
+        url: /task_install_deploy.html
       - title: Deploy a cluster
-        url: /ti_deploy_cluster.html
+        url: /task_deploy_cluster.html
       - title: Initial cluster state
-        url: /ri_initial_state.html
+        url: /reference_initial_state.html
   - title: Administer
     entries:
       - title: Before you begin

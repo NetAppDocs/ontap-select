@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_lic_acquire_ct.html
+permalink: task_lic_acquire_ct.html
 keywords: ontap select
 summary: xxx
 ---

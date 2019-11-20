@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_initial_state.html
+permalink: reference_initial_state.html
 keywords: ONTAP Select
 summary: xxxx
 ---

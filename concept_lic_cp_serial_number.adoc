@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_lic_cp_serial_number.html
+permalink: concept_lic_cp_serial_number.html
 keywords: ontap select
 summary: xxx
 ---

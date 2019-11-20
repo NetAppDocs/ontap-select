@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_dep_general.html
+permalink: reference_plan_dep_general.html
 keywords: ontap select deploy, general requirements
 summary: There are several general requirements that you should consider as part of planning to install the ONTAP Select Deploy administration utility.
 ---

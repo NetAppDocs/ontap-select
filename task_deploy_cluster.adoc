@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_deploy_cluster.html
+permalink: task_deploy_cluster.html
 keywords: ontap select
 summary: xxx
 ---
