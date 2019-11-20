@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_vcenter.html
-keywords: ontap select
+permalink: reference_plan_ots_vcenter.html
+keywords: planning, VMware vCenter, vCenter server, vCenter
 summary: xxx
 ---
 

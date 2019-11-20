@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_vnas.html
-keywords: ONTAP Select
+permalink: reference_plan_ots_vnas.html
+keywords: planning, vnas
 summary: xxx
 ---
 
-= ONTAP Select  requirements
+= ONTAP Select requirements
 :hardbreaks:
 :nofooter:
 :icons: font

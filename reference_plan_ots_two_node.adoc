@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: ri_plan_ots_two_node.html
-keywords: ONTAP Select
+permalink: reference_plan_ots_two_node.html
+keywords: planning, two nodes, two-node clusters
 summary: xxx
 ---
 
