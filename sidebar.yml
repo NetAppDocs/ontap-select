@@ -58,33 +58,33 @@ entries:
       - title: Options
         entries:
           - title: Evaluation licences
-            url: /ci_lic_evaluation.html
+            url: /concept_lic_evaluation.html
           - title: Production licences
-            url: /ci_lic_production.html
+            url: /concept_lic_production.html
           - title: Platform license offerings
-            url: /ci_lic_platforms.html
+            url: /concept_lic_platforms.html
       - title: Capacity pools licensing model
         entries:
           - title: Operational details
-            url: /ci_lic_cp_operation.html
+            url: /concept_lic_cp_operation.html
           - title: Node serial numbers
-            url: /ci_lic_cp_serial_number.html
+            url: /concept_lic_cp_serial_number.html
           - title: Restrictions
-            url: /ci_lic_cp_restrictions.html
+            url: /concept_lic_cp_restrictions.html
           - title: Capacity pools versus capacity tiers
-            url: /ci_lic_cp_compare_ct.html
+            url: /concept_lic_cp_compare_ct.html
           - title: Summary of benefits
-            url: /ci_lic_cp_benefits.html
+            url: /concept_lic_cp_benefits.html
       - title: Purchase
         entries:
           - title: Licensing workflow
-            url: /ci_lic_workflow.html
+            url: /concept_lic_workflow.html
           - title: Capacity tiers
-            url: /ti_lic_acquire_ct.html
+            url: /task_lic_acquire_ct.html
           - title: Capacity pools
-            url: /ti_lic_acquire_cp.html
+            url: /task_lic_acquire_cp.html
       - title: ONTAP features
-        url: /ri_lic_ontap_features.html
+        url: /reference_lic_ontap_features.html
   - title: Install
     entries:
       - title: Pre-installation checklist

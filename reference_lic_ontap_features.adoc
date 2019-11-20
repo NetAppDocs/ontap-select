@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_lic_ontap_features.html
+permalink: reference_lic_ontap_features.html
 keywords: ONTAP Select
 summary: xxx
 ---

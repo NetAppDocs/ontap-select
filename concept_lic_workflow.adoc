@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_lic_workflow.html
+permalink: concept_lic_workflow.html
 keywords: ONTAP Select
 summary: xxx
 ---
