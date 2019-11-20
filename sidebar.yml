@@ -106,33 +106,31 @@ entries:
   - title: Administer
     entries:
       - title: Before you begin
-        url: /ci_adm_before.html
+        url: /concept_adm_before.html
       - title: Upgrade nodes
-        url: /ci_adm_upgrading_nodes.html
+        url: /concept_adm_upgrading_nodes.html
       - title: Diagnostics and support
-        url: /ti_adm_support.html
+        url: /task_adm_support.html
       - title: Security
-        url: /ti_adm_security.html
+        url: /task_adm_security.html
       - title: Network connectivity
-        url: /ti_adm_connectivity.html
+        url: /task_adm_connectivity.html
       - title: Mediators
-        url: /ti_adm_mediators.html
+        url: /task_adm_mediators.html
       - title: Clusters
-        url: /ti_adm_clusters.html
+        url: /task_adm_clusters.html
       - title: Nodes and hosts
         entries:
           - title: VM video console
-            url: /ti_adm_video_console.html
+            url: /task_adm_video_console.html
           - title: Resizing the cluster nodes
-            url: /ti_adm_resize.html
+            url: /task_adm_resize.html
           - title: Replacing failed SW RAID drives
-            url: /ti_adm_replace_drives_swraid.html
+            url: /task_adm_replace_drives_swraid.html
           - title: Upgrading to VMFS6
-            url: /ti_adm_upgrade_vmfs6.html
+            url: /task_adm_upgrade_vmfs6.html
       - title: Licenses
-        url: /ti_adm_licenses.html
-      - title: Deploy utility
-        entries:
+        url: /task_adm_licenses.html
   - title: Deep dive
     entries:
       - title: Storage

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_clusters.html
+permalink: task_adm_clusters.html
 keywords: ontap select
 summary: xxx
 ---

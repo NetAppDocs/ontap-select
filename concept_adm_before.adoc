@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_adm_before.html
+permalink: concept_adm_before.html
 keywords: ontap select
 summary: xxxx
 ---

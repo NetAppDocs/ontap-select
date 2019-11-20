@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_support.html
+permalink: task_adm_support.html
 keywords: ontap select
 summary: xxx
 ---

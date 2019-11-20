@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_adm_licenses.html
+permalink: task_adm_licenses.html
 keywords: ONTAP Select
 summary: xxx
 ---
