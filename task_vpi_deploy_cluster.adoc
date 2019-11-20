@@ -1,0 +1,177 @@
+---
+sidebar: sidebar
+permalink: task_vpi_deploy_cluster.html
+keywords: ontap select
+summary: xxx
+---
+
+= Deploying an ONTAP Select cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use the Deploy vCenter plug-in through the vSphere web user interface to deploy ONTAP Select clusters.
+
+== Before you begin
+
+You should prepare to use the Deploy vCenter plug-in before deploying an ONTAP Select cluster.
+
+=== Common preparation for clusters of all sizes
+
+There are several steps you need to take regardless of the cluster size:
+
+* Read the _Getting started_ section  to become familiar with the Deploy vCenter plug-in.
+* Ensure that the ONTAP Select Deploy administration utility is installed and running.
+* Install the Deploy vCenter plug-in.
+* Prepare the hypervisor host or hosts on which the ONTAP Select cluster will run.
+* Acquire the required storage license files for the node or nodes in the cluster.
+* Acquire the credentials for the following accounts:
+** Deploy administrator account
+** vCenter account with access to the plug-in
+* If needed, install the Deploy SSL certificate on the Windows Certificate Manager as a “Trusted Root Certificate Authority.”
+* Ensure that the Deploy utility has network access to port 443 at the vCenter server.
+
+=== Additional preparation for a multi-node cluster
+
+In addition to common preparation, you should be familiar with the Deploy network checker before deploying a multi-node cluster.
+
+== Adding a hypervisor host
+
+You can add hypervisors hosts to the Deploy utility on which the ONTAP Select nodes will run before deploying a cluster. If needed, you can instead add the hosts as part of the cluster creation dialog.
+
+.Before you begin
+
+You should review Preparing to deploy an ONTAP Select cluster.
+
+.About this task
+
+You can add one or more hosts based on the size of the cluster.
+
+.Steps
+
+. Sign in to the vCenter server through vSphere HTML5 using a browser.
+
+. In the toolbar, click *Menu* and then click *Global Inventory Lists*.
+
+. In the pane on the left, click *ONTAP Select Deploy* and then click the *Hosts* tab.
+
+. Click *Add* on the right.
+
+. Provide the host name or IP address of the host and then click *Add* or *Add and Exit*.
+
+== Creating a single-node cluster
+
+You can use the VMware vCenter plug-in through the vSphere web client to deploy an ONTAP Select cluster consisting of a single node.
+
+.Before you begin
+
+You should review Preparing to deploy an ONTAP Select cluster and Adding a hypervisor host. You can add the host on which the ONTAP Select node will run before creating the cluster or as a part of creating the single-node cluster.
+
+.Steps
+
+. Sign in to the vCenter server through vSphere HTML5 using a browser.
+
+. Click *Menu* at the top and then click *Global Inventory Lists*.
+
+. Click *ONTAP Select Clusters* in the pane on the left and then click *New ONTAP Select*.
++
+If you have not previously accepted the SSL certificate, click the IP link in the warning message and accept the certificate. Then return to the your vCenter page and click the link in the warning message to reload the page.
+
+. On the *New ONTAP Select* page, enter the cluster details and click *Done*.
+
+. In the *Node Setup* section, provide the configuration and select a license.
++
+You can change the default node name and upload a new license if needed.
+
+. In the *Hypervisor and Network* section, select the instance type, host, and networks.
++
+You can add a host if needed. The license for the node must meet or exceed the instance type.
+
+. In the *Storage* section, select the storage capacity and a storage pool.
++
+You can optionally enable software RAID when using a premium license.
+
+. Click *Done* and review the configuration of the cluster.
++
+You can change the configuration by clicking Edit in each section as needed.
+
+. Click *Next*.
+
+. Provide the ONTAP administrator password and click *Create Cluster* to begin the cluster creation process and then click *OK* in the confirmation popup window.
++
+It can take up to 30 minutes for the cluster to be created.
+
+. Refresh the page and select the new cluster, then click *Summary* and *Details* to monitor the multi-step cluster creation process.
++
+[IMPORTANT]
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
+
+.After you finish
+
+* Confirm that the ONTAP Select AutoSupport feature is enabled.
+* Back up the ONTAP Select Deploy configuration data.
+
+== Creating a multi-node cluster
+
+You can use the VMware vCenter plug-in through the vSphere web client to deploy an ONTAP Select cluster consisting of multiple nodes.
+
+.Before you begin
+
+You should review Preparing to deploy an ONTAP Select cluster and Adding a hypervisor host. You can add the hosts on which the ONTAP Select nodes will run before creating the cluster or as a part of creating the multi-node cluster.
+
+.About this task
+
+An ONTAP Select multi-node cluster consists of an even number of nodes. The nodes are always joined as HA pairs.
+
+.Steps
+
+. Sign in to the vCenter server through vSphere HTML5 using a browser.
+
+. Click *Menu* at the top and then click *Global Inventory Lists*.
+
+. Click *ONTAP Select Clusters* in the pane on the left and then click *New ONTAP Select*
++
+If you have not previously accepted the SSL certificate, click the IP link in the warning message and accept the certificate. Then return to the your vCenter page and click the link in the warning message to reload the page.
+
+. On the *New ONTAP Select* page, enter the cluster details and click *Done*.
++
+Unless you have a reason to set the cluster MTU size, you should accept the default value and allow Deploy make any adjustments as needed.
+
+. In the *Node Setup* section, provide the configuration and select licenses for the two nodes in the HA pair.
++
+You can change the default node names and upload new licenses if needed.
+
+. In the *Hypervisor and Network* section, select the instance type, host, and networks for each node.
++
+You can add a host if needed. You must select the three networks. The internal network cannot be the same as the management or data network. The licenses for the nodes must meet or exceed the instance type.
+
+. In the *Storage* section, select the storage capacity and a storage pool.
++
+You can optionally enable software RAID when using a premium license.
+
+. If the cluster has four or more nodes, you must configure the nodes in the additional HA pairs by following the same steps used for the first HA pair.
+
+. Click *Done* and review the configuration of the cluster.
++
+You can change the configuration by clicking *Edit* in each section as needed.
+
+. Optionally, run the network connectivity checker to test the connectivity among the nodes on the internal cluster network.
+
+. Click *Next*.
+
+. Provide the ONTAP administrator password and click *Create Cluster* to begin the cluster creation process and then click *OK* in the confirmation popup window.
++
+It can take up to 30 minutes for the cluster to be created.
+
+. Refresh the page and select the new cluster, then click *Summary* and *Details* to monitor the multi-step cluster creation process.
++
+[IMPORTANT]
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define is not registered. In this case, you can access the management interface for the ONTAP Select cluster using the password `changeme123` with the `admin` account.
+
+.After you finish
+
+* Confirm that the ONTAP Select AutoSupport feature is enabled.
+* Back up the ONTAP Select Deploy configuration data.

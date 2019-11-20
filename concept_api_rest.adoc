@@ -1,0 +1,43 @@
+---
+sidebar: sidebar
+permalink: concept_api_rest.html
+keywords: ontap select
+summary: xxxx
+---
+
+= REST web services foundation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Representational State Transfer (REST) is a style for creating distributed web applications. When applied to the design of a web services API, it establishes a set of technologies and best practices for exposing server-based resources and managing their states. It uses mainstream protocols and standards to provide a flexible foundation for deploying and managing ONTAP Select clusters.
+
+=== Architecture and classic constraints
+
+REST was formally articulated by Roy Fielding in his PhD https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm[dissertation] at UC Irvine in 2000. It defines an architectural style through a set of constraints, which collectively have improves web-based applications and the underlying protocols. The constraints establish a RESTful web services application based on a client/server architecture using a stateless communication protocol.
+
+=== Resources and state representation
+
+Resources are the basic components of a web-based system. When creating a REST web services application, early design tasks include:
+
+* Identification of system or server-based resources
+Every system uses and maintains resources. A resource can be a file, business transaction, process, or administrative entity. One of the first tasks in designing an application based on REST web services is to identify the resources.
+* Definition of resource states and associated state operations
+Resources are always in one of a finite number of states. The states, as well as the associated operations used to affect the state changes, must be clearly defined.
+
+Messages are exchanged between the client and server to access and change the state of the resources according to the generic CRUD (Create, Read, Update, and Delete) model.
+
+=== URI endpoints
+
+Every REST resource must be defined and made available using a well-defined addressing scheme. The endpoints where the resources are located and identified use a Uniform Resource Identifier (URI). The URI provides a general framework for creating a unique name for each resource in the network. The Uniform Resource Locator (URL) is a type of URI used with web services to identify and access resources. Resources are typically exposed in a hierarchical structure similar to a file directory.
+
+=== HTTP messages
+Hypertext Transfer Protocol (HTTP) is the protocol used by the web services client and server to exchange request and response messages about the resources. As part of designing a web services application, HTTP verbs (such as GET and POST) are mapped to the resources and corresponding state management actions.
+
+HTTP is stateless. Therefore, to associate a set of related requests and responses under one transaction, additional information must be included in the HTTP headers carried with the request/response data flows.
+
+=== JSON formatting
+While information can be structured and transferred between a client and server in several ways, the most popular option (and the one used with the Deploy REST API) is JavaScript Object Notation (JSON). JSON is an industry standard for representing simple data structures in plain text and is used to transfer state information describing the resources.

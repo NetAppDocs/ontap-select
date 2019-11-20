@@ -1,0 +1,181 @@
+---
+sidebar: sidebar
+permalink: task_adm_licenses.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= ONTAP Select licenses
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related tasks you can perform as part of administering the ONTAP Select licenses.
+
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - Need to install a CT and CP license to test and verify content.
+{set:cellbgcolor:yellow}
+|===
+
+== Managing the capacity tier licenses
+
+You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
+
+.Steps
+
+. Sign in to the Deploy utility through the web interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page.
+
+. Click *Licenses* and click *Capacity Tier*.
+
+. Optionally click *Filter* and to limit the licenses displayed.
+
+. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
+
+. To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
+
+== Managing the capacity pool licenses
+
+You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
+
+.Steps
+
+. Sign in to the Deploy utility through the web interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page.
+
+. Click *Licenses* and click *Capacity Tier*.
+
+. Optionally click *Filter* and to limit the licenses displayed.
+
+. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
+
+. To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
+
+. To see a list of the capacity pools:
+.. Click *Summary*.
+.. Select and expand a pool to see the clusters and nodes leasing storage from the pool.
+.. View the current status of the license under *License Information*.
+.. You can change the duration of the leases issued for the pool under Lease expiration.
+
+. To see a list of the clusters:
+.. Click *Details*.
+.. Select and expand the cluster to see storage utilization.
+
+== Edit storage and license capacity
+
+You can expand the storage and licensing capacity for your ONTAP Select nodes as needed.
+
+.Before you begin
+
+You must have the datastore(s) with sufficient capacity attached and available to the hypervisor where ONTAP Select is running. In addition, you must be licensed for the storage expansion. If your current node license is insufficient, you can update the license as part of this task. In this case, you must have a new capacity license file for the node available for upload from your local workstation.
+
+When updating the storage capacity of a node that is part of an HA pair, the partner node must have a datastore available with the same capacity.
+
+.About this task
+
+You can perform one or more actions when editing the storage configuration of an ONTAP Select node, including:
+
+* Increase the allocated storage capacity
+* Refresh the storage license
+* Add a storage pool
+
+You can perform one or more actions each time you edit the configuration.
+
+[NOTE]
+If an ONTAP Select node is deployed with an evaluation license, you can expand the storage up to the limit imposed by the license.
+
+.Steps
+
+*MUST COMPLETE*
+
+== Reinstalling a capacity pool license
+
+Every active capacity pool license is locked to a specific License Manager instance, which is contained within an instance of the Deploy administration utility. If you are using a capacity pool license and then restore or recover the Deploy instance, the original license is no longer valid. You must generate a new capacity license file, and then install the license to the new Deploy instance.
+
+.Before you begin
+
+* Determine all the capacity pool licenses used by the original Deploy instance.
+* If you restore a backup as part of creating the new Deploy instance, determine if the backup is current and up-to-date.
+* Locate the ONTAP Select nodes that were most recently created by the original Deploy instance (only if an up-to-date backup from the original Deploy instance is not restored to the new Deploy instance).
+* Restore or recreate the Deploy instance
+
+.About this task
+
+At a high level, this task is composed of three parts. You must regenerate and install all the capacity pool licenses used by the Deploy instance. After all the licenses have been reinstalled to the new Deploy instance, you can reset the serial sequence number if needed. Finally, if the Deploy IP address has changed, you must update every ONTAP Select node that uses a capacity pools license.
+
+.Steps
+
+. Contact NetApp support and have all the capacity pool licenses for the original Deploy instance unbound and unregistered.
+
+. Acquire and download a new license file for each of the capacity pool licenses.
++
+See _Acquiring a capacity pool license_ for more information.
+
+. Install the capacity pool licenses at the new Deploy instance:
+.. Sign in to the Deploy utility web user interface using the administrator account.
+.. Click the *Administration* tab at the top of the page.
+.. Click *Licenses* and then click *Capacity Pool*.
+.. Click *Add* and then *Upload License(s)* to select and upload the licenses.
+
+. If you created the new Deploy instance without restoring a backup, or you used a backup that was not current and up-to-date, you must update the serial sequence number:
+.. Sign in to the Deploy utility command line interface using the administrator account.
+.. Display the serial number for a node most recently created by the original Deploy instance:
++
+`node show -cluster-name CLUSTER_NAME -name NODE_NAME -detailed`
+.. Extract the last eight digits from the twenty-digit node serial number to obtain the last serial sequence number used by the original Deploy instance.
+.. Add 20 to the serial sequence number to create the new serial sequence number.
+.. Set the serial sequence number for the new Deploy instance:
++
+`license-manager modify -serial-sequence SEQ_NUMBER`
+
+. If the IP address assigned to the new Deploy instance is different than the IP address of the original Deploy instance, you must update the IP address at every ONTAP Select node that uses a capacity pools license:
+.. Sign in to the ONTAP command line interface of the ONTAP Select node.
+.. Enter advanced privilege mode:
++
+`set adv`
+.. Display the current configuration:
++
+`system license license-manager show`
+.. Set the License Manager (Deploy) IP address used by the node:
++
+`system license license-manager modify -host NEW_IP_ADDRESS`
+
+== Converting an evaluation license to a production license
+
+You can upgrade an ONTAP Select evaluation cluster to use a production capacity tier license with the Deploy administration utility.
+
+.Before you begin
+
+* You must use ONTAP Select 9.5P1 with Deploy 2.11 or later
+* Each node must have enough storage allocated to support the minimum required for a production license.
+* You must have capacity tier licenses for each node in the evaluation cluster.
+
+.About this task
+
+When the upgrade is started, all the nodes are upgraded and then the cluster is moved back online.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Clusters* tab a the top of the page and select the desired cluster.
+
+. At the top of the cluster details page, click *Click here* to modify the cluster license.
++
+You can also click *Modify* next to evaluation license in the *Cluster Details* section.
+
+. Select an available production license for each node or upload additional licenses as needed.
+
+. Provide the ONTAP credentials and click *Modify*.
++
+The license upgrade for the cluster can take several minutes. Allow the process to complete before leaving the page or making any other changes.
+
+.After you finish
+The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment continue to be used after upgrading to production licenses.

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: reference_vpi_troubleshooting.html
+keywords: ontap select
+summary: xxx
+---
+
+= Troubleshooting
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You should be aware of the available troubleshooting techniques and common errors as a part of supporting the Deploy vCenter plug-in.
+
+== Installation, uninstallation, and update errors
+
+If an error occurs during installation, uninstallation, or an update procedure, the API returns an error message that is displayed by the Deploy interface used to initiate the procedure (web user interface or CLI).
+
+Common errors include the following:
+
+* Bad credentials (username or password)
+* Invalid or missing plug-in specified for installation
+* vCenter server is offline or unreachable
+
+For additional information about an error, examine the following logs:
+
+* Deploy server log
+* vCenter server log
+
+== Plug-in errors in vCenter
+
+If an error occurs during a session with vCenter, an error message is displayed. Common errors include the following:
+
+* Failure to load embedded content in vCenter from the Deploy server because the SSL certificate of the Deploy server was not accepted in the browser.
+* The Deploy server fails to authorize the session ID for a vCenter user who is attempting to access the Deploy vCenter plug-in. The session times out.
+* Insufficient privileges to access the Deploy vCenter plug-in.
+* The Deploy server is offline or unreachable.
+
+For additional information about an error, look in the following logs:
+
+* vCenter server log
+* Deploy server log

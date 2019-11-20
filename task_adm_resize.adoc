@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: task_adm_resize.html
+keywords: ONTAP Select
+summary: xxx
+---
+
+= Resizing the ONTAP Select cluster nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance type of the nodes using the Deploy administration utility.
+
+[cols="1"]
+|===
+|*Draft comment:*
+ONTAP Select 9.7 RC1 - Check TR 7.4
+{set:cellbgcolor:yellow}
+|===
+
+.Before you begin
+
+The cluster must be in the online state.
+
+.About this task
+
+This task describes how to use the Deploy web user interface. You can also use the Deploy CLI to perform the instance resizing. Regardless of which interface you use, the time needed for the resizing operation can vary significantly based on several factors, and may take an extended amount of time to complete. You can only resize a node to a larger size.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Cluster* tab at the top of the page and select the desired cluster from the list.
+
+. On the cluster details page, click the gear icon at the right of the page and select *Instance Resize*.
+
+. Select the *Instance Type* and provide the ONTAP credentials then click *Modify*.
+
+.After you finish
+
+You must wait for the resize operation to complete.

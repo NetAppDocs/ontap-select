@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: concept_cli_before.html
+keywords: cli, before you begin
+summary: xxx
+---
+
+= Before you begin
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can access the Deploy management shell using SSH. After signing in, you can perform various administrative procedures.
+
+In general, the procedures you can perform using the CLI fall into one of three categories.
+
+Deploy an ONTAP Select cluster::
+You can deploy a single-node or multi-node cluster.
+
+Perform a procedure with an existing ONTAP Select cluster::
+The administrative procedures are organized in various categories, such as _Security_ and _Clusters_.
+
+Perform a procedure on the Deploy utility::
+There are several procedures specific to Deploy (such as changing the administrator's password).

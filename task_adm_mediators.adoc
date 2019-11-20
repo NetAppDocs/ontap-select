@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: task_adm_mediators.html
+keywords: ontap select
+summary: xxx
+---
+
+= Administering the Deploy mediator services
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Each ONTAP Select two-node cluster is monitored by the mediator service, which assists in managing the HA capability shared by the nodes.
+
+== Viewing the status of the mediator service
+
+You can view the status of the mediator service with respect to each of the two-node clusters defined to the ONTAP Select Deploy utility.
+
+.About this task
+
+You can view the configuration of each mediator, including the current status, the two ONTAP Select nodes, and the iSCSI target where the HA control information is stored. Hover over the objects on the page to display detailed information.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Administration* tab at the top of the page and click *Mediators*.
+
+. Optionally click *Filter* to customize your view of the two-node clusters monitored by the mediator service.

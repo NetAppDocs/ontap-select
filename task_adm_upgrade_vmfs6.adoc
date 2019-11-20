@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: task_adm_upgrade_vmfs6.html
+keywords: ontap select, storage vmotion, upgrade to vmfs6
+summary: VMware does not support an in-place upgrade from VMFS 5 to VMFS 6. You can use Storage vMotion to transition from a VMFS 5 datastore to a VMFS 6 datastore for an existing ONTAP Select node.
+---
+
+= Upgrading to VMFS6 using Storage vMotion
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+VMware does not support an in-place upgrade from VMFS 5 to VMFS 6. You can use Storage vMotion to transition from a VMFS 5 datastore to a VMFS 6 datastore for an existing ONTAP Select node.
+
+For ONTAP Select virtual machines, Storage vMotion can be used for single-node and multi-node clusters. It can be used for both storage-only as well as compute and storage migrations.
+
+image:ST_10.jpg[Migrate]
+
+.Before you begin
+
+Make sure the new host can support the ONTAP Select node. For example, if a RAID controller and DAS storage are used on the original host, a similar configuration should exist on the new host.
+
+[IMPORTANT]
+Severe performance issues can result if the ONTAP Select VM is rehosted in an unsuitable environment.
+
+.Steps
+
+. Shut down the ONTAP Select virtual machine.
++
+If the node is part of an HA pair, perform a storage failover first.
+
+. Clear the *CD/DVD drive* option.
++
+This step does not apply if you installed ONTAP Select without using ONTAP Deploy.
++
+image:ST_11.jpg[Edit settings]
+
+. After the Storage vMotion operation completes, power on the ONTAP Select virtual machine.
++
+If this node is part of an HA pair, you can perform a manual giveback.
+
+. Perform a `cluster refresh` operation using the Deploy utility and confirm it is successful.
+
+. Back up the Deploy utility database.
+
+.After you finish
+
+When the Storage vMotion operation completes, you should use the Deploy utility to perform a `cluster refresh` operation. The `cluster refresh` updates the ONTAP Deploy database with the new location of the ONTAP Select node.

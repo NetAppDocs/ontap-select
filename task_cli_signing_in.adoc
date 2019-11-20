@@ -1,0 +1,34 @@
+---
+sidebar: sidebar
+permalink: task_cli_signing_in.html
+keywords: ontap select
+summary: xxx
+---
+
+= Signing in to Deploy using SSH
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You need to sign in to the Deploy management shell using SSH. After signing in, you can issue CLI commands to create an ONTAP Select cluster and perform related administrative procedures.
+
+.Before you begin
+
+You must have the current password for the Deploy administrator (admin) account. If you are signing in for the first time and used vCenter to install the Deploy virtual machine, you should use the password set during installation. If you are signing in for the first time and did not use vCenter, use the default password for the account which is _admin123_.
+
+.Steps
+
+. Sign in using the administrator account and management IP address of the Deploy virtual machine; for example:
++
+`ssh admin@<10.235.82.22>`
+
+. If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
++
+* New password for the administrator account (required)
+* Company name (required)
+* Proxy URL (optional)
+
+. Type *?* and press *Enter* to display a list of the available management shell commands.

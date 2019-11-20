@@ -1,0 +1,123 @@
+---
+sidebar: sidebar
+permalink: task_adm_clusters.html
+keywords: ontap select
+summary: xxx
+---
+
+= ONTAP Select clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are several related tasks you can perform to administer an ONTAP Select cluster.
+
+== Moving an ONTAP Select cluster offline and online
+
+After you've created a cluster, you can move it offline and online as needed.
+
+.Before you begin
+
+After a cluster is created it is initially in the online state.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Clusters* tab at the top of the page and select the desired cluster from the list.
+
+. Click image:icon_kebab.gif[Options] on the right of the cluster and select *Take Offline*.
++
+If the offline option is not available, the cluster is already in the offline state.
+
+. Click *Yes* in the popup window to confirm the request.
+
+. Click *Refresh* occasionally to confirm the cluster is offline.
+
+. To bring the cluster back online, click image:icon_kebab.gif[Options] and select *Bring Online*.
+
+. Click *Refresh* occasionally to confirm the cluster is online.
+
+== Deleting an ONTAP Select cluster
+
+You can delete an ONTAP Select cluster when it is no longer needed.
+
+.Before you begin
+
+The cluster must be in the offline state.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Clusters* tab at the top of the page and select the desired cluster from the list.
+
+. Click image:icon_kebab.gif[Options] on the right of the cluster and select *Delete*.
++
+If the delete option is not available, then the cluster is not in an offline state.
+
+. Click *Refresh* occasionally to confirm the cluster is removed from the list.
+
+== Refreshing the Deploy cluster configuration
+
+After creating an ONTAP Select cluster, you can make changes to the cluster or the virtual machine configuration outside of the Deploy utility using the ONTAP or hypervisor administration tools. The configuration of a virtual machine can also change after it is migrated.
+
+When these changes to the cluster or virtual machine occur, the Deploy utility configuration database is not automatically updated and can become out of sync with the state of the cluster. You should perform a cluster refresh in these and other situations to update the Deploy database based on the current state of the cluster.
+
+.Before you begin
+
+Required information::
+You must have the current configuration information for the cluster, including:
+
+* ONTAP administrator credentials
+* Cluster management IP address
+* Names of the nodes in the cluster
+
+Stable cluster state::
+The cluster must be in a stable state. You cannot refresh a cluster when it is in the process of being created or deleted, or when it is in the _create_failed_ or _delete_failed_ state.
+
+After a VM migration::
+After a virtual machine running ONTAP Select has been migrated, you must create a new host using the Deploy utility before performing a cluster refresh.
+
+.About this task
+
+You can perform a cluster refresh to update the Deploy configuration database using the web user interface.
+
+[NOTE]
+Instead of using the Deploy GUI, you can use the cluster refresh command in the Deploy CLI shell to refresh a cluster.
+
+Cluster and virtual machine configuration::
+Some of the configuration values that can change and cause the Deploy database to become out of sync include:
+
+* Cluster and node names
+* ONTAP network configuration
+* ONTAP version (after an upgrade)
+* Virtual machine names
+* Host network names
+* Storage pool names
+
+Cluster and node states::
+An ONTAP Select cluster or node can be in a state that prevents it from operating properly. You should perform a cluster refresh operation to correct the following conditions:
+
+* Node in _unknown_ state
+An ONTAP Select node can be in the _unknown state_ for several reasons, including the node is not found.
+* Cluster in _degraded_ state
+If a node is powered off, it might still appear to be online in the Deploy utility. In this situation, the cluster is in a _degraded_ state.
+
+.Steps
+
+. Sign in to the Deploy utility web user interface using the administrator account.
+
+. Click the *Clusters* tab at the top left of the page and select the desired cluster from the list.
+
+. Click image:icon_kebab.gif[Options] on the right side of the page and select *Cluster Refresh*.
+
+. Under *Cluster Credentials*, provide the ONTAP administrator password for the cluster.
+
+. Click *Refresh*.
+
+.After you finish
+If the operation is successful, the field _Last Refresh_ is updated. You should back up the Deploy configuration data after the cluster refresh operation has completed.
