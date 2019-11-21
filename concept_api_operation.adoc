@@ -34,7 +34,7 @@ Every successful API request is assigned a unique identifier. The identifier is 
 
 There are two primary ways that a server performs an HTTP request received from a client:
 
-*Synchronous
+* Synchronous
 The server performs the request immediately and responds with a status code of 200, 201, or 204.
 
 * Asynchronous

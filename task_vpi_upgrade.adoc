@@ -17,7 +17,7 @@ You can use the ONTAP Select Deploy web user interface to upgrade or remove the 
 
 .Before you begin
 
-* Review link:ci_vpi_manage_before.html[Before you begin].
+* Review link:concept_vpi_manage_before.html[Before you begin].
 * The VMware vCenter plug-in should be installed and registered.
 * The vCenter administrator account must have the following vCenter privileges:
 ** Extension
