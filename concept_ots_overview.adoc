@@ -82,4 +82,4 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 .Related information
 
-* link:ri_lic_ontap_features.html[ONTAP features enabled by default]
+* link:reference_lic_ontap_features.html[ONTAP features enabled by default]

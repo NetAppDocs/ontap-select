@@ -15,13 +15,6 @@ summary: xxx
 [.lead]
 You can use the web user interface provided with the ONTAP Select Deploy administration utility to deploy a single-node or multi-node ONTAP Select cluster.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - Must complete the multi-node cluster creation process.
-{set:cellbgcolor:yellow}
-|===
-
 When you create an ONTAP Select cluster using the Deploy utility web interface, you are guided through a specific sequence of steps. The exact process varies depending on whether you deploy a single-node or multi-node cluster.
 
 [TIP]
@@ -144,6 +137,8 @@ If the cluster creation operation is initiated but fails to complete, the ONTAP 
 
 You should confirm the ONTAP Select AutoSupport feature is configured and back up the ONTAP Select Deploy configuration data.
 
+////
 == Creating a multi-node cluster
 
 You can use the ONTAP Select Deploy web user interface to deploy a multi-node ONTAP Select cluster.
+////

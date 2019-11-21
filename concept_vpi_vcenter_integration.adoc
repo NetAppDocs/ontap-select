@@ -70,4 +70,4 @@ You can select an ESXI hypervisor host through the vSphere interface and deploy 
 
 . Right click the desired hypervisor host on the left, select *ONTAP Select*, and then click *New ONTAP Select*.
 
-. Complete the deployment process by following the steps in link:ti_deploy_cluster.html[Deploying an ONTAP Select cluster].
+. Complete the deployment process by following the steps in link:task_deploy_cluster.html[Deploying an ONTAP Select cluster].

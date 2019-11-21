@@ -15,13 +15,6 @@ summary: xxx
 [.lead]
 You can upgrade an existing Deploy utility virtual machine in-place using the command line interface.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - Clear browser cache after applying the upgrade package.
-{set:cellbgcolor:yellow}
-|===
-
 == Before you begin
 
 It is recommended that you back up the configuration of the Deploy virtual machine before beginning the upgrade. Make sure that Deploy is not used to perform any other tasks during the upgrade.

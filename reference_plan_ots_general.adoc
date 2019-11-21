@@ -96,4 +96,4 @@ You must select the capacity tiers or capacity pools licensing model for each ON
 
 .Related information
 
-* link:ri_plan_ots_storage.html[Storage and RAID considerations]
+* link:reference_plan_ots_storage.html[Storage and RAID considerations]

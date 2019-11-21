@@ -28,4 +28,4 @@ You can find the documentation for the KVM version of the product and the releas
 
 == Get more information and connect with peers
 
-* link:ri_additional_info.html[Where to get help and find more information]
+* link:reference_additional_info.html[Where to get help and find more information]
