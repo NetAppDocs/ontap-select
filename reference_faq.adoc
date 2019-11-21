@@ -209,7 +209,7 @@ For multinode clusters, the internal network must be fully opened (no NAT or fir
 
 ===== *What vCenter rights does ONTAP Deploy need to create ONTAP Select clusters?*
 
-The list of vCenter rights required is available here link:rt_chk_select_req_info.html#access-to-a-vcenter-server[Access to a vCenter server]
+The list of vCenter rights required is available here: link:reference_chk_select_req_info.html#access-to-a-vcenter-server[Access to a vCenter server].
 
 ===== *What is the vCenter Deploy plug-in?*
 

@@ -24,7 +24,7 @@ Make sure your deployment environment meets the following minimum requirements:
 * VMware ESXi version 6.7 or later
 * NVMe devices conforming to specification 1.0 or later
 
-Follow the link:rt_chk_host_prep.html[host preparation checklist], review the link:rt_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:rt_chk_select_req_info.html[required information for ONTAP Select installation] topics for more information.
+Follow the link:reference_chk_host_prep.html[host preparation checklist], review the link:reference_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:reference_chk_select_req_info.html[required information for ONTAP Select installation] topics for more information.
 
 Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
 
