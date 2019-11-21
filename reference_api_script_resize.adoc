@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_api_script_resize.html
-keywords: ontap select
-summary: xxx
+keywords: rest api, deploy rest api, rest, python script, resize, resize nodes
+summary: You can use the following script to resize the nodes in an ONTAP Select cluster.
 ---
 
 = Script to resize cluster nodes

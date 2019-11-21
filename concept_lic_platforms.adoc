@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_platforms.html
-keywords: ONTAP Select
-summary: xxx
+keywords: license, licensing, platform license offerings, standard, premium, premium xl
+summary: You can purchase an ONTAP Select capacity tier or capacity pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 ---
 
 = Understanding the platform license offerings

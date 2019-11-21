@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_adm_video_console.html
-keywords: ONTAP Select
-summary: xxxx
+keywords: administer, administration, web, video console
+summary: You can access the video console of the ESXi virtual machine where ONTAP Select is running.
 ---
 
 = Accessing the ONTAP Select video console

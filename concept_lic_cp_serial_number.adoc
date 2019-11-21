@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_cp_serial_number.html
-keywords: ontap select
-summary: xxx
+keywords: license, licensing, capacity pools, node serial numbers
+summary: With the capacity tiers licensing model, the nine-digit node serial number is the same as the license serial number assigned to the node. However, the serial numbers assigned to nodes using the capacity pools licensing model have a different format.
 ---
 
 = Node serial numbers

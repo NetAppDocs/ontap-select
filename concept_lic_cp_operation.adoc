@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_cp_operation.html
-keywords: ONTAP Select
-summary: xxx
+keywords: license, licensing, capacity pools, operation details
+summary: The capacity pools licensing model is different from the capacity tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the capacity pools model.
 ---
 
 = Operational details

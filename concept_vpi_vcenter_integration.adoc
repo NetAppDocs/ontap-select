@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_vpi_vcenter_integration.html
-keywords: ontap select
-summary: xxx
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, vcenter integration
+summary: The Deploy plug-in is tightly integrated with the vCenter server. Because of this integration, you can easily navigate among the resources managed by the Deploy utility and vCenter server. Several examples of this integration are provided below.
 ---
 
 = Deploy plug-in and vCenter integration

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_vpi_upgrade.html
-keywords: ontap select
-summary: xxx
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, upgrade, verify, remove
+summary: You can use the ONTAP Select Deploy web user interface to upgrade or remove the Deploy plug-in from the vCenter server. You can also verify that the plug-in is still installed.
 ---
 
 = Verifying and removing the Deploy vCenter plug-in

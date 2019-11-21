@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_lic_ontap_features.html
-keywords: ONTAP Select
-summary: xxx
+keywords: license, licensing, features, default features
+summary: ONTAP Select offers full support for most ONTAP functionality, except those features that have hardware-specific dependencies.
 ---
 
 = ONTAP features enabled by default

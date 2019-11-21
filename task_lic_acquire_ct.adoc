@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_lic_acquire_ct.html
-keywords: ontap select
-summary: xxx
+keywords: license, licensing, acquire, capacity tiers
+summary: When using capacity tiers licensing, you need to acquire a license file for each ONTAP Select node. The license file defines the storage capacity for the node and is locked to the node through the unique nine-digit serial number assigned by NetApp.
 ---
 
 = Acquiring a capacity tier license

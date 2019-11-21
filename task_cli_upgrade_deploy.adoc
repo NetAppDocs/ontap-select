@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_cli_upgrade_deploy.html
-keywords: ontap select
-summary: xxx
+keywords: administer, administration, cli, deploy, upgrade deploy
+summary: You can upgrade an existing Deploy utility virtual machine in-place using the command line interface.
 ---
 
 = Upgrading a Deploy instance

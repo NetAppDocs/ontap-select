@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_cp_compare_ct.html
-keywords: ONTAP Select
-summary: xxx
+keywords: license, licensing, capacity pools, capacity tiers, comparing
+summary: There are several differences between the capacity pools and capacity tiers licensing models.
 ---
 
 = Comparing capacity pools and capacity tiers licensing
