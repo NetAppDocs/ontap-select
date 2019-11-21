@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept_workflow_deploy.html
-keywords: cluster deployment workflow, deployment workflow, workflow
+keywords: cluster deployment workflow, deployment workflow, workflow, deployment steps
 summary: There is a workflow process that can be used to deploy an ONTAP Select cluster.
 ---
 

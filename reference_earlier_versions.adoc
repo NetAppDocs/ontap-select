@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_earlier_versions.html
-keywords: ontap select
-summary: xxx
+keywords: documentation, 9.6
+summary: Documentation for previous releases of ONTAP Select is available if you are not running the latest version.
 ---
 
 = Earlier versions of ONTAP Select documentation
