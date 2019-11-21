@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_api_before_workflows.html
+permalink: concept_api_before_workflows.html
 keywords: ontap select
 summary: xxxx
 ---

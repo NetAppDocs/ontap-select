@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_new_ots.html
+permalink: reference_new_ots.html
 keywords: ontap select, new features
 summary: There are several new and changed features provided with the current release of ONTAP Select.
 ---

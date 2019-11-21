@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ti_api_access_doc_page.html
+permalink: task_api_access_doc_page.html
 keywords: ontap select
 summary: xxx
 ---

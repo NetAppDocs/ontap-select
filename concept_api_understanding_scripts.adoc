@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_api_understanding_scripts.html
+permalink: concept_api_understanding_scripts.html
 keywords: ontap select
 summary: xxx
 ---

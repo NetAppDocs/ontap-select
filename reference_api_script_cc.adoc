@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ri_api_script_cc.html
+permalink: reference_api_script_cc.html
 keywords: ontap select
 summary: xxx
 ---
