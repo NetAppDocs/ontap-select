@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_new_ots.html
-keywords: ontap select, new features, nvme, deploy version
+keywords: new features, nvme, deploy versioning
 summary: There are several new and changed features provided with the current release of ONTAP Select.
 ---
 

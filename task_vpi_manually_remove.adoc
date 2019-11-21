@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_vpi_manually_remove.html
-keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, vcenter, remove, removing
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, vcenter, remove, removing, manually removing
 summary: You can manually remove the Deploy plug-in from the vCenter server.
 ---
 

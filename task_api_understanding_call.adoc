@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_api_understanding_call.html
-keywords: rest api, deploy rest api, rest, understanding api call, executing
+keywords: rest api, deploy rest api, rest, understanding, executing
 summary: The details of all the API calls are documented and displayed using a common format on the ONTAP Select Deploy online documentation web page. By understanding a single API call, you can access and interpret the details of all the API calls.
 ---
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_deploy_cluster.html
-keywords: install, installing, deploy ontap select cluster
+keywords: install, installing, deploy ontap select cluster, create cluster
 summary: You can use the web user interface provided with the ONTAP Select Deploy administration utility to deploy a single-node or multi-node ONTAP Select cluster.
 ---
 
