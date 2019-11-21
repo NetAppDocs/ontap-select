@@ -20,7 +20,7 @@ After creating an ONTAP Select cluster, you can support the deployment by perfor
 In general, the procedures you can perform using the Deploy web interface fall into one of three categories.
 
 Deploy an ONTAP Select cluster::
-You can deploy a single-node or multi-node cluster. See link:ti_deploy_cluster.html[Deploying an ONTAP Select cluster] for more information.
+You can deploy a single-node or multi-node cluster. See link:task_deploy_cluster.html[Deploying an ONTAP Select cluster] for more information.
 
 Perform a procedure with an existing ONTAP Select cluster::
 The administrative procedures are organized in various categories, such as _Security_ and _Clusters_.
