@@ -69,7 +69,7 @@ Several different vCenter privileges are required to manage and access the plug-
 * Accessing the plug-in through the vSphere client
 * Validating user access to the plug-in through vSphere
 
-See link:ci_vpi_manage_before.html#preparing-the-vcenter-server-accounts[Preparing the vCenter server accounts] for more information.
+See link:concept_vpi_manage_before.html#preparing-the-vcenter-server-accounts[Preparing the vCenter server accounts] for more information.
 
 == AutoSupport limitations
 

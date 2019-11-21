@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_api_before_python.html
+permalink: concept_api_before_python.html
 keywords: ontap select
 summary: xxxx
 ---

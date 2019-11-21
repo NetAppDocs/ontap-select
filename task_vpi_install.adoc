@@ -17,7 +17,7 @@ The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administratio
 
 .Before you begin
 
-* Review link:ci_vpi_manage_before.html[Before you begin].
+* Review link:concept_vpi_manage_before.html[Before you begin].
 * Define a vCenter account to Deploy with the following privilege: sessions.validate.session.
 * Have credentials for a vCenter account with the following privileges:
 ** Extension
@@ -25,7 +25,7 @@ The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administratio
 
 .About this task
 
-It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:ti_adm_security.html[Adding a management server account] for more information.
+It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:task_adm_security.html[Adding a management server account] for more information.
 
 .Steps
 

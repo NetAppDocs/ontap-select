@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_terminology.html
-keywords: ontap select, terminology
-summary: You should become familiar with the ONTAP Select terminology and key concepts before deploying an ONTAP Select cluster.
+keywords: terminology, key concepts, concepts
+summary: As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the terminology and key concepts.
 ---
 
 = Terminology and key concepts
@@ -11,8 +11,6 @@ summary: You should become familiar with the ONTAP Select terminology and key co
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-
-// DP: October 31 - initial review
 
 [.lead]
 As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the terminology and key concepts.
@@ -117,4 +115,4 @@ After you deploy an ONTAP Select cluster, you can configure the cluster as you w
 
 .Related information
 
-link:ti_cli_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+link:task_cli_deploy_image_add.html[Adding an ONTAP Select image to Deploy]

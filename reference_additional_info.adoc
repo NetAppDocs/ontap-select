@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_additional_info.html
-keywords: ontap select, more information
+keywords: community, forums, help, support, blogs, videos, imt, release notes, bugs, limitations, known issues
 summary: There are additional resources you can access to get help and find more information about ONTAP Select.
 ---
 

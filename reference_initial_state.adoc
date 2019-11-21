@@ -44,4 +44,4 @@ There are no data SVMs created. Also, the multi-node cluster has an internal net
 
 .Related information
 
-* link:ri_lic_ontap_features.html[ONTAP features enabled by default]
+* link:reference_lic_ontap_features.html[ONTAP features enabled by default]

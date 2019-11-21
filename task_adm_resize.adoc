@@ -15,13 +15,6 @@ summary: xxx
 [.lead]
 After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance type of the nodes using the Deploy administration utility.
 
-[cols="1"]
-|===
-|*Draft comment:*
-ONTAP Select 9.7 RC1 - Check TR 7.4
-{set:cellbgcolor:yellow}
-|===
-
 .Before you begin
 
 The cluster must be in the online state.

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: ci_api_before_browser.html
+permalink: concept_api_before_browser.html
 keywords: ontap select
 summary: xxx
 ---

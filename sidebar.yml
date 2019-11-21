@@ -238,37 +238,37 @@ entries:
       - title: Access with a browser
         entries:
           - title: Before you begin
-            url: /ci_api_before_browser.html
+            url: /concept_api_before_browser.html
           - title: Access the doc page
-            url: /ti_api_access_doc_page.html
+            url: /task_api_access_doc_page.html
           - title: Understanding an API call
             url: /task_api_understanding_call.html
       - title: Workflow processes
         entries:
           - title: Before you begin
-            url: /ci_api_before_workflows.html
+            url: /concept_api_before_workflows.html
           - title: Workflow 1 Creating a cluster
-            url: /ri_api_workflow01.html
+            url: /reference_api_workflow01.html
       - title: Access with Python
         entries:
           - title: Before you begin
-            url: /ci_api_before_python.html
+            url: /concept_api_before_python.html
           - title: Understanding the scripts
-            url: /ci_api_understanding_scripts.html
+            url: /concept_api_understanding_scripts.html
       - title: Python code samples
         entries:
           - title: Create a cluster
-            url: /ri_api_script_cc.html
+            url: /reference_api_script_cc.html
           - title: JSON to create a cluster
-            url: /ri_api_json_cc.html
+            url: /reference_api_json_cc.html
           - title: Add a node license
-            url: /ri_api_script_anl.html
+            url: /reference_api_script_anl.html
           - title: Delete a cluster
-            url: /ri_api_script_dc.html
+            url: /reference_api_script_dc.html
           - title: Common support module
-            url: /ri_api_script_common.html
+            url: /reference_api_script_common.html
           - title: Resize cluster nodes
-            url: /ri_api_script_resize.html
+            url: /reference_api_script_resize.html
   - title: Automate with Ansible
     url: /concept_automate_ansible.html
   - title: Use the CLI
@@ -291,12 +291,8 @@ entries:
             url: /task_cli_upgrade_esxi65.html
       - title: Deploy utility
         entries:
-          - title: Migrating a Deploy instance
-            url: /task_cli_migrate_deploy.html
           - title: Upgrade a Deploy instance
             url: /task_cli_upgrade_deploy.html
-          - title: Recover Deploy for two-node cluster
-            url: /task_cli_deploy_recover_two_node.html
           - title: Add ONTAP Select images
             url: /task_cli_deploy_image_add.html
           - title: Remove ONTAP Select images
