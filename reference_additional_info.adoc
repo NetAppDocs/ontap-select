@@ -25,11 +25,13 @@ The following product pages include links to a wide variety of ONTAP Select reso
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 
+////
 === Videos
 
 There are several helpful videos available at the dedicated YouTube channel.
 
 * https://www.youtube.com/playlist?list=PLdXI3bZJEw7nn1ZJMF3mG2fCBD0Esl--o[NetApp ONTAP Select channel at YouTube^]
+////
 
 === Blogs
 

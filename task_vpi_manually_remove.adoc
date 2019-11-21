@@ -32,7 +32,7 @@ The MOB is a VMware application that allows you to view and manage the objects o
 
 . Access the MOB at the vCenter server using a browser and sign in:
 +
-`https://<FQDN_or_IP-address>/mob`
+`\https://<FQDN_or_IP-address>/mob`
 
 . Click *content* and then click *ExtensionManager*.
 

@@ -71,7 +71,7 @@ You cannot add an ONTAP Select node directly to an ONTAP hardware-based cluster.
 There are several planning issues related to host storage that you should consider.
 
 RAID type::
-When using direct-attached storage (DAS) on ESXi, you should decide whether to use a local hardware RAID controller or the software RAID feature included with ONTAP Select. If you use software RAID, see _Storage and RAID_ for more information.
+When using direct-attached storage (DAS) on ESXi, you should decide whether to use a local hardware RAID controller or the software RAID feature included with ONTAP Select. If you use software RAID, see link:reference_plan_ots_storage.html[Storage and RAID considerations] for more information.
 
 Local storage::
 When using local storage managed by a RAID controller, you must decide the following:

@@ -107,7 +107,7 @@ You can display the ONTAP Select images that are available when deploying a new 
 
 . Access the online documentation web page at the Deploy utility virtual machine and sign in using the administrator (admin) account:
 +
-`http://<FQDN|IP_ADDRESS>/api/ui`
+`\http://<FQDN|IP_ADDRESS>/api/ui`
 +
 Use the domain name or IP address of the Deploy virtual machine.
 

@@ -70,7 +70,7 @@ instance type or license offering.
 
 There are several additional hardware requirements based on the node instance type.
 
-Refer to link:ci_lic_platforms.html[Understanding the platform license offerings] for more information.
+Refer to link:concept_lic_platforms.html[Understanding the platform license offerings] for more information.
 
 Small::
 
@@ -100,4 +100,4 @@ Eighteen physical cores or greater, with sixteen reserved for ONTAP Select.
 Premium XL
 
 [NOTE]
-There are additional disk requirements based on the platform license. See link:ri_plan_ots_storage.html[Storage and RAID] for more information.
+There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
