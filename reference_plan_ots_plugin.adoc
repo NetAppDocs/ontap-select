@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_plugin.html
-keywords: planning, vCenter plug-in, Deploy plug-in
-summary: xxx
+keywords: planning, vcenter plug-in, deploy plug-in
+summary: When deploying ONTAP Select in a VMware environment, you can use the VMware vCenter plug-in instead of the Deploy administration utility.
 ---
 
 = VMware vCenter plug-in

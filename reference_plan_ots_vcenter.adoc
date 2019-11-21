@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_vcenter.html
-keywords: planning, VMware vCenter, vCenter server, vCenter
-summary: xxx
+keywords: planning, vmware vcenter, vcenter server, vcenter
+summary: There are several planning requirements related to VMware vCenter you should consider.
 ---
 
 = VMware vCenter server

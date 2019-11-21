@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_hardware.html
-keywords: planning, hardware
-summary: xxx
+keywords: planning, vmware, hardware
+summary: There are several hardware requirements and planning issues you should consider related to the VMware environment.
 ---
 
 = VMware hypervisor and hardware considerations
@@ -13,7 +13,7 @@ summary: xxx
 :imagesdir: ./media/
 
 [.lead]
-There are several requirements and planning issues you should consider related to the VMware environment.
+There are several hardware requirements and planning issues you should consider related to the VMware environment.
 
 == Hypervisor requirements
 

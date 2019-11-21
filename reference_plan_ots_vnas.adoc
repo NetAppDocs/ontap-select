@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_plan_ots_vnas.html
 keywords: planning, vnas
-summary: xxx
+summary: There are several planning issues related to the use of ONTAP Select vNAS that you should consider.
 ---
 
 = ONTAP Select vNAS requirements

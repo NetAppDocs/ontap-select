@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference_plan_ots_mcc_sds.html
 keywords: planning, metrocluster, metrocluster sds
-summary: xxx
+summary: There are several requirements MetroCluster SDS that you should consider as part of planning an ONTAP Select deployment.
 ---
 
 = Preparing for a MetroCluster SDS deployment
