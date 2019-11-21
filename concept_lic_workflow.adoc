@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_workflow.html
-keywords: ONTAP Select
-summary: xxx
+keywords: license, licensing, purchase, purchasing, workflow
+summary: You can follow a workflow to purchase and applying a license for your ONTAP Select deployment.
 ---
 
 = Workflow when purchasing a license
