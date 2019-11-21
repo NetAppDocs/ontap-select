@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_legal_notices.html
-keywords: copyrights, notice, trademarks, patents, privacy
+keywords: copyrights, notices, trademarks, patents, privacy
 summary: Legal notices provide access to copyright statements, trademarks, patents, and more.
 ---
 
