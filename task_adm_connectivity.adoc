@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_adm_connectivity.html
-keywords: administer, administration, web, connectivity, network connectivity
+keywords: administer, administering, web, connectivity, network connectivity
 summary: You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail.
 ---
 

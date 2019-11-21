@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_hardware.html
-keywords: planning, vmware, hardware
+keywords: plan, planning, vmware, hardware, hardware requirements
 summary: There are several hardware requirements and planning issues you should consider related to the VMware environment.
 ---
 

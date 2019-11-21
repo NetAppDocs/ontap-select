@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_cli_deploy_image_add.html
-keywords: administer, administration, cli, deploy, ontap select image, add
+keywords: administer, administering, cli, deploy, ontap select image, add
 summary: You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
 ---
 

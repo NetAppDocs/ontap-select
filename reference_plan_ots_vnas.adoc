@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_vnas.html
-keywords: planning, vnas
+keywords: plan, planning, vnas
 summary: There are several planning issues related to the use of ONTAP Select vNAS that you should consider.
 ---
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_two_node.html
-keywords: planning, two nodes, two node clusters
+keywords: plan, planning, two nodes, two node clusters
 summary: Deploying a two-node cluster with HA involves the same planning and configuration used with other cluster node configurations. However, there are several differences you should be aware of when creating a two-node cluster.
 ---
 

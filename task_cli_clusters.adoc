@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_cli_clusters.html
-keywords: administer, administration, cli, clusters
+keywords: administer, administering, cli, clusters
 summary: There are several related tasks you can perform to administer an ONTAP Select cluster.
 ---
 

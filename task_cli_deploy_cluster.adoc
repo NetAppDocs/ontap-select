@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_cli_deploy_cluster.html
-keywords: administer, administration, cli, create cluster, deploy cluster
+keywords: administer, administering, cli, create cluster, deploy cluster
 summary: You can use the command line interface provided with the ONTAP Select Deploy administration utility to create a single-node or multi-node ONTAP Select cluster.
 ---
 
