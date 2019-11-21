@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_vpi_adm_licenses.html
-keywords: ontap select
-summary: xxx
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, licenses, licensing
+summary: There are several related tasks you can perform as part of administering the ONTAP Select licenses.
 ---
 
 = ONTAP Select licenses

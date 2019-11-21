@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_vpi_adm_support.html
-keywords: ONTAP Select
-summary: xxx
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, diagnostics, support
+summary: There are several related diagnostic and support tasks you can perform as part of administering ONTAP Select.
 ---
 
 = Diagnostics and support
