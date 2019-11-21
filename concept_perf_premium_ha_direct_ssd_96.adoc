@@ -27,9 +27,11 @@ ONTAP Select 9.6 (Premium XL) Hardware (per Node)
 ** ESX 6.5U1
 
 Client hardware
+
 * 5 x NFSv3 IBM 3550m4 clients
 
 Configuration information
+
 * SW RAID 1 x 9 + 2 RAID-DP (11 drives)
 * 22+1 RAID-5 (RAID-0 in ONTAP) / RAID cache NVRAM
 * No storage efficiency features in use (compression, deduplication, Snapshot copies, SnapMirror, and so on)

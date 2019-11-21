@@ -90,7 +90,7 @@ Multiple file system extents can be used to create a single datastore up to the 
 
 Alternatively, one can start by creating a single datastore on a single LUN. When additional space requiring a larger ONTAP Select capacity license is needed, then that space can be added to the same datastore as an extent, up to the maximum size of the datastore. After the maximum size is reached, new datastores can be created and added to ONTAP Select. Both types of capacity extension operations are supported and can be achieved by using the ONTAP Deploy storage-add functionality. Each ONTAP Select node can be configured to support up to 400TB of storage. Provisioning capacity from multiple datastores requires a two-step process.
 
-The initial cluster create can be used to create an ONTAP Select cluster consuming part or all of the space in the initial datastore. A second step is to perform one or more capacity addition operations using additional datastores until the desired total capacity is reached. This functionality is detailed in the section link:ct_stor_capacity_inc.html[Increasing storage capacity].
+The initial cluster create can be used to create an ONTAP Select cluster consuming part or all of the space in the initial datastore. A second step is to perform one or more capacity addition operations using additional datastores until the desired total capacity is reached. This functionality is detailed in the section link:concept_stor_capacity_inc.html[Increasing storage capacity].
 
 [NOTE]
 VMFS overhead is nonzero (see link:https://kb.vmware.com/s/article/1001618[VMware KB 1001618]), and attempting to use the entire space reported as free by a datastore has resulted in spurious errors during cluster create operations.
@@ -127,7 +127,7 @@ ONTAP Select breaks up the underlying attached storage into equal-sized virtual 
 For example, an ONTAP Select can assigned a datastore or LUN that is 31TB (the space remaining after the VM is deployed and the system and root disks are provisioned). Then four ~7.75TB virtual disks are created and assigned to the appropriate ONTAP local and mirror plex.
 
 [NOTE]
-Adding capacity to an ONTAP Select VM likely results in VMDKs of different sizes. For details, see the section link:ct_stor_capacity_inc.html[Increasing storage capacity]. Unlike FAS systems, different sized VMDKs can exist in the same aggregate. ONTAP Select uses a RAID 0 stripe across these VMDKs, which results in the ability to fully use all the space in each VMDK regardless of its size.
+Adding capacity to an ONTAP Select VM likely results in VMDKs of different sizes. For details, see the section link:concept_stor_capacity_inc.html[Increasing storage capacity]. Unlike FAS systems, different sized VMDKs can exist in the same aggregate. ONTAP Select uses a RAID 0 stripe across these VMDKs, which results in the ability to fully use all the space in each VMDK regardless of its size.
 
 == Virtualized NVRAM
 

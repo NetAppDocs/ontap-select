@@ -99,7 +99,7 @@ Because the data disks on the ONTAP Select VM are associated with the underlying
 [NOTE]
 The root aggregate’s RAID group type depends on the number of disks available. ONTAP Deploy picks the appropriate RAID group type. If it has sufficient disks allocated to the node, it uses RAID-DP, otherwise it creates a RAID-4 root aggregate.
 
-When adding capacity to an ONTAP Select VM using software RAID, the administrator must consider the physical drive size and the number of drives required. For details, see the section link:ct_stor_capacity_inc.html[Increasing storage capacity].
+When adding capacity to an ONTAP Select VM using software RAID, the administrator must consider the physical drive size and the number of drives required. For details, see the section link:concept_stor_capacity_inc.html[Increasing storage capacity].
 
 Similar to FAS and AFF systems, only drives with equal or larger capacities can be added to an existing RAID group. Larger capacity drives are right sized. If you are creating new RAID groups, the new RAID group size should match the existing RAID group size to make sure that the overall aggregate performance does not deteriorate.
 
