@@ -17,4 +17,6 @@ When deploying ONTAP Select in a VMware environment, you can use the VMware vCen
 
 The VMware vCenter plug-in is packaged with the Deploy administration utility. To use the plug-in, you must install the Deploy utility and then use the Deploy user interface to install the plug-in to your vCenter server. After the plug-in is installed, you can use the vSphere web user interface to deploy and administer ONTAP Select clusters. Aside from managing the plug-in itself (installing, removing, updating), the functionality provided with the plug-in is equivalent to the Deploy utility user interface.
 
-See the _Integrate with vCenter_ section for the requirements and restrictions as well as information about installing and using the plug-in.
+See the
+
+link:concept_vpi_overview.html[Integrate with vCenter] section for the requirements and restrictions as well as information about installing and using the plug-in.
