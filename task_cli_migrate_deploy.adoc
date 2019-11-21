@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_cli_migrate_deploy.html
-keywords: ONTAP Select
-summary: xxx
+keywords: administer, administration, cli, deploy, deploy instance, migrate
+summary: You can migrate an existing instance of the Deploy administration utility to a new virtual machine using the command line interface.
 ---
 
 = Migrating a Deploy instance to a new virtual machine

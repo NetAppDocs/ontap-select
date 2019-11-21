@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_cli_deploy_image_remove.html
-keywords: ontap select
-summary: xxx
+keywords: administer, administration, cli, deploy, ontap select image, remove
+summary: You can remove ONTAP Select images from your instance of the Deploy administration utility when they are no longer needed.
 ---
 
 = Removing an ONTAP Select image from Deploy
