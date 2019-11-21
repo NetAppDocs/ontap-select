@@ -90,7 +90,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 .Steps
 . Point your browser to the Deploy utility using the IP address or domain name:
 +
-`https://<ip_address>/`
+`\https://<ip_address>/`
 
 . Provide the account information and sign in.
 
