@@ -27,7 +27,7 @@ If you use software RAID, you must create a storage pool for the system data and
 
 ===== *Available ONTAP Select versions*
 
-The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must first add the ONTAP Select image to your Deploy instance. See link:ti_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy] for more information.
+The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must first add the ONTAP Select image to your Deploy instance. See link:task_adm_deploy_image_add.html[Adding an ONTAP Select image to Deploy] for more information.
 
 ===== *Licensing ONTAP Select for a production deployment*
 

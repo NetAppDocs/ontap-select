@@ -30,4 +30,4 @@ The path determines the specific resource which the action applies to as part of
 
 === Constructing a URL to directly access the REST API
 In addition to the ONTAP Select documentation page, you can also access the Deploy REST API directly through a programming language such as Python. In this case, the core URL is slightly different than the URL used when accessing the online documentation page. When accessing the API directly, you must append /api to the domain and port string. For example:
-`http://deploy.mycompany.com/api`
+`\http://deploy.mycompany.com/api`

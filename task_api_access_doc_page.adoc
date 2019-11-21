@@ -26,7 +26,7 @@ You must have the following:
 
 . Type the URL in your browser and press *Enter*:
 +
-`https://<ip_address>/api/ui`
+`\https://<ip_address>/api/ui`
 
 . Sign in using the administrator user name and password.
 
