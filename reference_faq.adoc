@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_faq.html
-keywords: ontap select, faq, frequently asked questions
+keywords: faq, frequently asked questions
 summary: Find answers to common questions about ONTAP Select.
 ---
 

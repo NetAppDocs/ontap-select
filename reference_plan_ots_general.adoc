@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_general.html
-keywords: planning, general requirements
+keywords: plan, planning, general requirements
 summary: There are several general requirements that you should consider as part of planning an ONTAP Select deployment.
 ---
 

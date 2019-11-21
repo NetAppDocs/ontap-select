@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_storage.html
-keywords: planning, storage, software raid, hardware raid, raid
+keywords: plan, planning, storage, software raid, hardware raid, raid, nvme
 summary: There are several planning issues related to ONTAP Select host storage that you should consider.
 ---
 

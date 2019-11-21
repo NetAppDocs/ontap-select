@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_cli_connectivity.html
-keywords: administer, administration, cli, connectivity, network connectivity, network checker
+keywords: administer, administering, cli, connectivity, network connectivity, network checker
 summary: You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail.
 ---
 

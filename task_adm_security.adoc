@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_adm_security.html
-keywords: administer, administration, web, security
+keywords: administer, administering, web, security
 summary: There are several related tasks you can perform as part of securing an ONTAP Select deployment.
 ---
 

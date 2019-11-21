@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_adm_licenses.html
-keywords: administer, administration, web, licenses
+keywords: administer, administering, web, licenses
 summary: There are several related tasks you can perform as part of administering the ONTAP Select licenses.
 ---
 

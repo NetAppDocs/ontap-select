@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task_adm_mediators.html
-keywords: administer, administration, web, mediators
+keywords: administer, administering, web, mediators
 summary: Each ONTAP Select two-node cluster is monitored by the mediator service, which assists in managing the HA capability shared by the nodes.
 ---
 

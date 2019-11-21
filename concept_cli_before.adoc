@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept_cli_before.html
-keywords: administer, administration, cli, before you begin
+keywords: administer, administering, cli, before you begin
 summary: You can access the Deploy management shell using SSH. After signing in, you can perform various administrative procedures.
 ---
 
