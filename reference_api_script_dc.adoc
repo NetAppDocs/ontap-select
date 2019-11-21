@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_api_script_dc.html
-keywords: ontap select
-summary: xxx
+keywords: rest api, deploy rest api, rest, python script, delete cluster
+summary: You can use the following CLI script to delete an existing cluster.
 ---
 
 = Script to delete a cluster

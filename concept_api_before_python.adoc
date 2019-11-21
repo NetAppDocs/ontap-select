@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_api_before_python.html
-keywords: ontap select
-summary: xxxx
+keywords: rest api, deploy rest api, rest, python, before you begin
+summary: You must prepare the environment before running the sample Python scripts.
 ---
 
 = Before you access the API using Python

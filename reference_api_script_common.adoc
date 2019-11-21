@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference_api_script_common.html
-keywords: ontap select
-summary: xxx
+keywords: rest api, deploy rest api, rest, python script, common module
+summary: All of the Python scripts use a common Python class in a single module.
 ---
 
 = Common support module

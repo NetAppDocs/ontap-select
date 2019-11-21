@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_api_before_workflows.html
-keywords: ontap select
-summary: xxxx
+keywords: rest api, deploy rest api, rest, workflows, before you begin
+summary: You should prepare to review and use the workflow processes.
 ---
 
 = Before you use the API workflows

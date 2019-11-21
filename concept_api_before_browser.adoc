@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_api_before_browser.html
-keywords: ontap select
-summary: xxx
+keywords: rest api, deploy rest api, rest, access browser, before you begin
+summary: There are several things you should be aware of before using the Deploy online documentation page.
 ---
 
 = Before you access the API with a browser

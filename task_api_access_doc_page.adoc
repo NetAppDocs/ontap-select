@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task_api_access_doc_page.html
-keywords: ontap select
-summary: xxx
+keywords: rest api, deploy rest api, rest, deploy documentation, acess, accessing
+summary: You must access the ONTAP Select Deploy online documentation page to display the API documentation, as well as to manually issue an API call.
 ---
 
 = Accessing the Deploy documentation page

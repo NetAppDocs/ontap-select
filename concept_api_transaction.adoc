@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_api_transaction.html
-keywords: ontap select
-summary: xxx
+keywords: rest api, deploy rest api, rest, transaction, request, response, headers, input, output
+summary: Every Deploy API call is performed as an HTTP request to the Deploy virtual machine which generates an associated response to the client. This request/response pair is considered an API transaction. Before using the Deploy API, you should be familiar with the input variables available to control a request and the contents of the response output.
 ---
 
 = Request and response API transaction
