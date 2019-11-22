@@ -115,7 +115,7 @@ These interfaces cannot be assigned static IP addresses, and additional cluster 
 
 Cluster network traffic must flow through a low-latency, nonrouted layer-2 network. Due to cluster throughput and latency requirements, the ONTAP Select cluster is expected to be physically located within proximity (for example, multipack, single data center). Building four-node, six-node, or eight-node stretch cluster configurations by separating HA nodes across a WAN or across significant geographical distances is not supported. A stretched two-node configuration with a mediator is supported.
 
-For details, see the section link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices]."
+For details, see the section link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices].
 
 [NOTE]
 To make sure of maximum throughput for cluster network traffic, this network port is configured to use jumbo frames (7500 to 9000 MTU). For proper cluster operation, verify that jumbo frames are enabled on all upstream virtual and physical switches providing internal network services to ONTAP Select cluster nodes.
