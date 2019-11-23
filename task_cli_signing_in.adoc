@@ -17,7 +17,7 @@ You need to sign in to the Deploy management shell using SSH. After signing in, 
 
 .Before you begin
 
-You must have the current password for the Deploy administrator (admin) account. If you are signing in for the first time and used vCenter to install the Deploy virtual machine, you should use the password set during installation. If you are signing in for the first time and did not use vCenter, use the default password for the account which is _admin123_.
+You must have the current password for the Deploy administrator (admin) account. If you are signing in for the first time and used vCenter to install the Deploy virtual machine, you should use the password set during installation.
 
 .Steps
 

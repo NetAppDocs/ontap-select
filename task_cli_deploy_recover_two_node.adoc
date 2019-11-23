@@ -110,8 +110,10 @@ These commands allow the ONTAP Select nodes to discover the mailbox disks on the
 
 . Assign the mailbox disks to the two nodes:
 +
-.. `disk assign -disk <mediator-disk1-name> -owner <node1-name>``
-.. `disk assign -disk <mediator-disk2-name> -owner <node2-name>`
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
 
 . Verify that storage failover is enabled:
 +
