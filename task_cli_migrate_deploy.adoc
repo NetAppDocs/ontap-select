@@ -15,18 +15,86 @@ summary: You can migrate an existing instance of the Deploy administration utili
 [.lead]
 You can migrate an existing instance of the Deploy administration utility to a new virtual machine using the command line interface.
 
-== Before you begin
-
 This procedure is based on creating a new virtual machine that uses the configuration data from the original virtual machine. The new and original virtual machines must run the same version and release of the Deploy utility. You cannot migrate to a different version and release of the Deploy utility.
 
-At a high level, the process used to migrate a Deploy instance to a new virtual machine consists of three steps:
-
-. Backing up the Deploy configuration data
-. Installing a new instance of the Deploy virtual machine
-. Restore the Deploy configuration data to the new virtual machine
-
-You should be familiar with the procedures used to download and deploy the ONTAP Select Deploy virtual machine in a VMware environment.
-
 == Backing up the Deploy configuration data
+You must create a backup of the Deploy configuration data as part of migrating the virtual machine. You should also create a backup after deploying an ONTAP Select cluster. The data is saved to a single encrypted file that you can download to your local workstation.
 
-xxx
+.Before you begin
+Make sure that Deploy is not performing any other tasks during the backup operation.
+
+.About this task
+The backup file you create captures all the configuration data from the virtual machine. This data describes aspects of your deployment environment, including the ONTAP Select clusters.
+
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Create a backup of the Deploy configuration data, which is stored in an internal directory at the Deploy server:
+`deploy backup create`
+
+. Provide a password for the backup when prompted.
++
+The backup file is encrypted based on the password.
+
+. Display the available backups in the system:
+`deploy backup show -detailed`
+
+. Select your backup file based on the date in the Created field and record the Download URLvalue.
++
+You can access the backup file through the URL.
+
+. Using a web browser or utility such as CURL, download the backup file to your local workstation with the URL.
+
+== Installing a new instance of the Deploy virtual machine
+
+You must create a new instance of the Deploy virtual machine which you can update with the configuration data from the original virtual machine.
+
+.Before you begin
+You must be familiar with the procedures used to download and deploy the ONTAP Select Deploy virtual machine in a VMware environment.
+
+.About this task
+This task is described at a high level.
+
+.Steps
+
+. Create a new instance of the Deploy virtual machine:
+.. Download the virtual machine image.
+.. Deploy the virtual machine and configure the network interface.
+.. Access the Deploy utility using SSH.
+
+.Related information
+
+link:task_install_deploy.html[Installing ONTAP Select Deploy]
+
+== Restoring the Deploy configuration data to the new virtual machine
+
+You must restore the configuration data from the original Deploy utility virtual machine to the new virtual machine. The data is in a single file that you must upload from your local workstation.
+
+.Before you begin
+You must have the configuration data from a previous backup. The data is contained in a single file and must be available on your local workstation.
+
+.Steps
+
+. In a command shell on your local workstation, use the sftp utility to upload the backup file to the Deploy virtual machine.
++
+Example
++
+....
+sftp admin@10.234.81.101 (provide password when prompted)
+put deploy_backup_20180601162151.tar.gz
+exit
+....
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Restore the configuration data.
++
+'deploy backup restore -path PATHNAME -filename FILENAME'
++
+Example
++
+....
+deploy backup restore -path /home/admin -filename
+deploy_backup_20180601162151.tar.gz
+....
