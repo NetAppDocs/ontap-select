@@ -42,7 +42,7 @@ The backup file is encrypted based on the password.
 +
 `deploy backup show -detailed`
 
-. Select your backup file based on the date in the Created field and record the Download URLvalue.
+. Select your backup file based on the date in the *Created* field and record the *Download URL* value.
 +
 You can access the backup file through the URL.
 
@@ -84,7 +84,7 @@ Example
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
-put deploy_backup_20180601162151.tar.gz
+put deploy_backup_20190601162151.tar.gz
 exit
 ....
 
@@ -92,7 +92,7 @@ exit
 
 . Restore the configuration data.
 +
-'deploy backup restore -path PATHNAME -filename FILENAME'
+`deploy backup restore -path PATHNAME -filename FILENAME`
 +
 Example
 +

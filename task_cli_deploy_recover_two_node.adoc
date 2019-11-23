@@ -50,7 +50,7 @@ You must determine whether capacity pools or capacity tiers licensing is used. I
 ===== *Deciding which recovery procedure to use*
 You must decided which procedure to use when recovering an instance of the ONTAP Select Deploy utility. Your decision is based on whether or not you have a backup of the configuration data from the original failed Deploy utility that contains the ONTAP Select two-node cluster.
 
-[cols="20,80"*,options="header"]
+[cols="35,65"*,options="header"]
 |===
 
 |Do you have a Deploy backup containing the two-node cluster?
@@ -91,11 +91,16 @@ Refer to the related tasks for more detailed information about the install and r
 `set adv`
 
 . If the IP address of the new Deploy virtual machine is different than the original Deploy virtual machine, you must remove the old mediator iSCSI targets and add new targets:
-.. `storage iscsi-initiator remove-target -node * -target-type mailbox`
-.. `storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>`
-.. `storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>`
 +
-The _<ip_address>_ parameter is the IP address of the new Deploy virtual machine.
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+The `<ip_address>` parameter is the IP address of the new Deploy virtual machine.
 +
 These commands allow the ONTAP Select nodes to discover the mailbox disks on the new Deploy utility virtual machine.
 
@@ -205,4 +210,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 If you use capacity pools licensing, you must reinstall each capacity pool license. See Reinstalling a capacity pool license for additional details.
 
 .Related information
-xxx
+
+link:task_install_deploy.html[Installing ONTAP Select Deploy]
+link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restoring the Deploy configuration data to the new virtual machine]
+link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstalling a capacity pool license]
