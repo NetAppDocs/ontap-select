@@ -31,6 +31,7 @@ The backup file you create captures all the configuration data from the virtual 
 . Sign in to the Deploy utility CLI using SSH with the administrator account.
 
 . Create a backup of the Deploy configuration data, which is stored in an internal directory at the Deploy server:
++
 `deploy backup create`
 
 . Provide a password for the backup when prompted.
@@ -38,6 +39,7 @@ The backup file you create captures all the configuration data from the virtual 
 The backup file is encrypted based on the password.
 
 . Display the available backups in the system:
++
 `deploy backup show -detailed`
 
 . Select your backup file based on the date in the Created field and record the Download URLvalue.

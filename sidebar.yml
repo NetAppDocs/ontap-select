@@ -299,6 +299,8 @@ entries:
             url: /task_cli_deploy_image_add.html
           - title: Remove ONTAP Select images
             url: /task_cli_deploy_image_remove.html
+          - title: Recovering Deploy for a two-node cluster
+            url: /task_cli_deploy_recover_two_node.html
   - title: FAQ
     url: /reference_faq.html
   - title: Get more information
