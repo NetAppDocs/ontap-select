@@ -46,7 +46,7 @@ The backup file is encrypted based on the password.
 +
 You can access the backup file through the URL.
 
-. Using a web browser or utility such as CURL, download the backup file to your local workstation with the URL.
+. Using a web browser or utility such as Curl, download the backup file to your local workstation with the URL.
 
 == Installing a new instance of the Deploy virtual machine
 
@@ -96,7 +96,4 @@ exit
 +
 Example
 +
-....
-deploy backup restore -path /home/admin -filename
-deploy_backup_20180601162151.tar.gz
-....
+`deploy backup restore -path /home/admin -filename deploy_backup_20180601162151.tar.gz`

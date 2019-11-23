@@ -293,13 +293,13 @@ entries:
         entries:
           - title: Upgrade a Deploy instance
             url: /task_cli_upgrade_deploy.html
-          - title: Migrating a Deploy instance
+          - title: Migrate a Deploy instance
             url: /task_cli_migrate_deploy.html
           - title: Add ONTAP Select images
             url: /task_cli_deploy_image_add.html
           - title: Remove ONTAP Select images
             url: /task_cli_deploy_image_remove.html
-          - title: Recovering Deploy for a two-node cluster
+          - title: Recover Deploy for a two-node cluster
             url: /task_cli_deploy_recover_two_node.html
   - title: FAQ
     url: /reference_faq.html

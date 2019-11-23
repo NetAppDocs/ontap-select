@@ -140,7 +140,7 @@ The goal of the recovery procedure is to restore the two-node cluster to a healt
 .. Install a new Deploy utility virtual machine.
 .. Optionally restore the Deploy configuration from a previous backup to the new virtual machine.
 +
-If you restore a previous backup, the new Deploy instance will not contain the two-node cluster. Refer to the related tasks for more detailed information about the install and restore procedures.
+If you restore a previous backup, the new Deploy instance will not contain the two-node cluster. Refer to the related information section for more detailed information about the install and restore procedures.
 
 . Sign in to the ONTAP command line interface of the ONTAP Select two-node cluster.
 
@@ -154,25 +154,25 @@ If you restore a previous backup, the new Deploy instance will not contain the t
 
 . Access the online documentation web page at the new Deploy utility virtual machine and sign in using the admin account:
 +
-`http://<ip_address>/api/ui`
+`\http://<ip_address>/api/ui`
 +
 You must use the IP address of your Deploy virtual machine.
 
-. Click Mediator and then GET /mediators.
+. Click *Mediator* and then *GET /mediators*.
 
-. Click Try it out! to display a list of mediators maintained by Deploy.
+. Click *Try it out!* to display a list of mediators maintained by Deploy.
 +
 Note the ID of the desired mediator instance.
 
-. Click Mediator and then POST.
+. Click *Mediator* and then *POST*.
 
 . Provide the value for mediator_id.
 
-. Click the Model next to `iscsi_target` and complete the name value.
+. Click the *Model* next to `iscsi_target` and complete the name value.
 +
 Use the target name for the iqn_name parameter.
 
-. Click Try it out! to create the mediator iSCSI target.
+. Click *Try it out!* to create the mediator iSCSI target.
 +
 If the request is successful, you will receive HTTP status code 200.
 
@@ -186,7 +186,7 @@ storage iscsi-initiator add-target -node <node1_name> -label mediator -target-ty
 storage iscsi-initiator add-target -node <node2_name> -label mediator-target-type mailbox -target-portal <ip_address> -target-name <target>
 ....
 +
-The <ip_address> parameter is the IP address of the new Deploy virtual machine.
+The `<ip_address>` parameter is the IP address of the new Deploy virtual machine.
 
 These commands allow the ONTAP Select nodes to discover the mailbox disks on the new Deploy utility virtual machine.
 
