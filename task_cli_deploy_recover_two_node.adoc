@@ -50,7 +50,7 @@ You must determine whether capacity pools or capacity tiers licensing is used. I
 ===== *Deciding which recovery procedure to use*
 You must decided which procedure to use when recovering an instance of the ONTAP Select Deploy utility. Your decision is based on whether or not you have a backup of the configuration data from the original failed Deploy utility that contains the ONTAP Select two-node cluster.
 
-[cols="20,80"*,options="header"]
+[cols="35,65"*,options="header"]
 |===
 
 |Do you have a Deploy backup containing the two-node cluster?
@@ -91,11 +91,16 @@ Refer to the related tasks for more detailed information about the install and r
 `set adv`
 
 . If the IP address of the new Deploy virtual machine is different than the original Deploy virtual machine, you must remove the old mediator iSCSI targets and add new targets:
-.. `storage iscsi-initiator remove-target -node * -target-type mailbox`
-.. `storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>`
-.. `storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>`
 +
-The _<ip_address>_ parameter is the IP address of the new Deploy virtual machine.
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+The `<ip_address>` parameter is the IP address of the new Deploy virtual machine.
 +
 These commands allow the ONTAP Select nodes to discover the mailbox disks on the new Deploy utility virtual machine.
 
@@ -105,8 +110,10 @@ These commands allow the ONTAP Select nodes to discover the mailbox disks on the
 
 . Assign the mailbox disks to the two nodes:
 +
-.. `disk assign -disk <mediator-disk1-name> -owner <node1-name>``
-.. `disk assign -disk <mediator-disk2-name> -owner <node2-name>`
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
 
 . Verify that storage failover is enabled:
 +
@@ -116,4 +123,96 @@ These commands allow the ONTAP Select nodes to discover the mailbox disks on the
 
 If you use capacity pools licensing, you must reinstall each capacity pool license. See _Reinstalling a capacity pool license_ for additional details.
 
-*MUST COMPLETE*
+== Reconfiguring and recovering a Deploy utility instance
+
+If you do not have a backup of the failed Deploy utility instance containing the two-node cluster, you must configure the mediator iSCSI target and mailbox in the new Deploy virtual machine. You must then complete the recovery by performing additional configuration of the two nodes in the ONTAP Select cluster.
+
+.Before you begin
+You must have the name of the mediator target for the new Deploy utility instance. You must be able to sign in to the ONTAP CLI of the two-node cluster and know the ONTAP names of the two nodes.
+
+.About this task
+You can optionally restore a configuration backup to the new Deploy virtual machine even though it does not contain the two-node cluster. Because the two-node cluster is not recreated with the restore, you must manually add the mediator iSCSI target and mailbox to the new Deploy utility instance through the ONTAP Select online documentation web page at the Deploy. You must be able to sign in to the two-node cluster and know the ONTAP names of the two nodes.
+
+[NOTE]
+The goal of the recovery procedure is to restore the two-node cluster to a healthy state, where normal HA takeover and giveback operations can be performed.
+
+.Steps
+
+. Prepare a new instance of the ONTAP Select Deploy utility:
+.. Install a new Deploy utility virtual machine.
+.. Optionally restore the Deploy configuration from a previous backup to the new virtual machine.
++
+If you restore a previous backup, the new Deploy instance will not contain the two-node cluster. Refer to the related information section for more detailed information about the install and restore procedures.
+
+. Sign in to the ONTAP command line interface of the ONTAP Select two-node cluster.
+
+. Enter advanced privileged mode:
++
+`set adv`
+
+. Get the mediator iSCSI target name:
++
+`storage iscsi-initiator show -target-type mailbox`
+
+. Access the online documentation web page at the new Deploy utility virtual machine and sign in using the admin account:
++
+`\http://<ip_address>/api/ui`
++
+You must use the IP address of your Deploy virtual machine.
+
+. Click *Mediator* and then *GET /mediators*.
+
+. Click *Try it out!* to display a list of mediators maintained by Deploy.
++
+Note the ID of the desired mediator instance.
+
+. Click *Mediator* and then *POST*.
+
+. Provide the value for mediator_id.
+
+. Click the *Model* next to `iscsi_target` and complete the name value.
++
+Use the target name for the iqn_name parameter.
+
+. Click *Try it out!* to create the mediator iSCSI target.
++
+If the request is successful, you will receive HTTP status code 200.
+
+. If the IP address of the new Deploy virtual machine is different than the original Deploy virtual machine, you must use the ONTAP CLI to remove the old mediator iSCSI targets and add new targets:
++
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator-target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+The `<ip_address>` parameter is the IP address of the new Deploy virtual machine.
+
+These commands allow the ONTAP Select nodes to discover the mailbox disks on the new Deploy utility virtual machine.
+
+. Determine the names of the mediator disks:
++
+`disk show --container-type mediator`
+
+. Assign the mailbox disks to the two nodes:
++
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
+
+. Verify that storage failover is enabled:
++
+`storage failover show`
+
+.After you finish
+If you use capacity pools licensing, you must reinstall each capacity pool license. See Reinstalling a capacity pool license for additional details.
+
+.Related information
+
+link:task_install_deploy.html[Installing ONTAP Select Deploy]
+link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restoring the Deploy configuration data to the new virtual machine]
+link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstalling a capacity pool license]

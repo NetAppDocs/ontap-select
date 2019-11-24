@@ -25,7 +25,10 @@ To learn more about how to configure a vSwitch on a hypervisor host, see the lin
 
 ==== Upgrading to VMXNET3
 
-Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an existing ONTAP Select node to version 9.5, the driver is not automatically upgraded. You must manually upgrade to VMXNET3. You should contact NetApp support for assistance with the upgrade.
+Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an existing ONTAP Select node to version 9.5 or later, the driver is not automatically upgraded.
+
+[NOTE]
+Upgrading to VMXNET3 is not required at this time. However, if you choose to upgrade the driver, you must perform the upgrade manually. In this case, contact NetApp support for assistance.
 
 ==== Cluster MTU
 
