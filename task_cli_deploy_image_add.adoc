@@ -69,6 +69,12 @@ This task describes one method for uploading the file to the Deploy virtual mach
 Example
 +
 ....
+scp image_v_93_install_esx.tgz admin@10.234.81.101:/home/admin (provide password when prompted)
+....
++
+Example
++
+....
 sftp admin@10.234.81.101 (provide password when prompted)
 put image_v_93_install_esx.tgz
 exit

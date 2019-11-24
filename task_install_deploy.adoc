@@ -79,6 +79,10 @@ Host name :
 .. Type the host name and press *Enter*.
 .. Wait for the following prompt:
 +
+Provide a password for the admin user:
+.. Type the password and press *Enter*.
+.. Wait for the following prompt:
++
 Use DHCP to set networking information? [n]:
 .. Type *n* to define a static IP configuration or y to use DHCP, and press *Enter*.
 .. If you choose a static configuration, provide all network configuration information as required.

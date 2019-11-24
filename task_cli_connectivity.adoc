@@ -58,4 +58,4 @@ network connectivity-check start -host-names 10.234.81.14
 
 .After you finish
 
-The network connectivity checker normally cleans up by removing any temporary ports and IP addresses added to the ONTAP-Internal port group. However, if the connectivity checker fails to remove the temporary ports, you must perform a manual cleanup operation by rerunning the CLI command with the -mode cleanup option. If you do not remove the temporary ports from the ONTAP-Internal port group, the ONTAP Select virtual machine may not be created successfully.
+The network connectivity checker normally cleans up by removing any temporary ports and IP addresses added to the ONTAP-Internal port group. However, if the connectivity checker fails to remove the temporary ports, you must perform a manual cleanup operation by rerunning the CLI command with the option `-mode cleanup`. If you do not remove the temporary ports from the ONTAP-Internal port group, the ONTAP Select virtual machine may not be created successfully.
