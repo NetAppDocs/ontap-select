@@ -62,7 +62,7 @@ Example
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
-put ONTAPdeploy2.8_upgrade.tar.gz
+put ONTAPdeploy2.12_upgrade.tar.gz
 exit
 ....
 
@@ -88,7 +88,7 @@ Example
 +
 ....
 deploy upgrade -package-path /home/admin/
-ONTAPdeploy2.10_upgrade.tar.gz
+ONTAPdeploy2.12_upgrade.tar.gz
 ....
 
 .After you finish
