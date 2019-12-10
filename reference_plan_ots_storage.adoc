@@ -137,10 +137,19 @@ Standard::
 
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
 
-Premium and premium XL::
+Premium::
 
-* 4 to 60 internal SSD
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
+* 4 to 60 internal SSD
+
+Premium XL::
+
+* 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
+* 4 to 60 internal SSD
+* 4 to 14 internal NVMe
+
+[NOTE]
+Software RAID with local DAS drives is supported with the premium license (SSD only) and premium XL license (SSD or NVMe).
 
 == NVMe drives with software RAID
 
