@@ -77,7 +77,7 @@ image:ST_19.jpg[RDD disk partitioning for single-node clusters]
 
 image:ST_20.jpg[RDD disk partitioning for multinode clusters (HA pairs)]
 
-ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID-TEC. These are the same RAID constructs used by FAS and AFF platforms. However, ONTAP Select HA uses a shared-nothing architecture that replicates each node’s configuration to the other node. That means each node must store its root partition and a copy of the its peer’s root partition. Since a data disk has a single root partition, that the minimum number of data disks will vary depending on whether the ONTAP Select node is part of an HA pair or not.
+ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID-TEC. These are the same RAID constructs used by FAS and AFF platforms. For root provisioning ONTAP Select supports only RAID 4 and RAID-DP. When using RAID-TEC for the data aggregate, the overall protection is RAID-DP. ONTAP Select HA uses a shared-nothing architecture that replicates each node’s configuration to the other node. That means each node must store its root partition and a copy of the its peer’s root partition. Since a data disk has a single root partition, that the minimum number of data disks will vary depending on whether the ONTAP Select node is part of an HA pair or not.
 
 For single node clusters, all data partitions are used to store local (active) data. For nodes that are part of an HA pair, one data partition is used to store local (active) data for that node and the second data partition is used to mirror active data from the HA peer.
 
@@ -141,49 +141,60 @@ If the number of failed disks is more than the maximum number of failures that t
 A failed plex must be deleted and recreated for the proper mirroring of data to resume. Note that a multi-disk failure resulting in a data aggregate being degraded also results in a root aggregate being degraded. ONTAP Select uses the root-data-data (RDD) partitioning schema to split each physical drive into a root partition and two data partitions. Therefore, losing one or more disks might impact multiple aggregates, including the local root or the copy of the remote root aggregate, as well as the local data aggregate and the copy of the remote data aggregate.
 
 ----
-rx254023::> aggr plex delete -aggregate aggr_22a -plex plex0
-Warning: Deleting plex "plex0" of mirrored aggregate "aggr_22a" in a non-shared
-HA configuration will disable its synchronous mirror protection and
-may disable negotiated takeover of node "sdot-rx2540-22a" when
-aggregate "aggr_22a" is online.
+C3111E67::> storage aggregate plex delete -aggregate aggr1 -plex plex1
+Warning: Deleting plex "plex1" of mirrored aggregate "aggr1" in a non-shared HA configuration will disable its synchronous mirror protection and disable
+         negotiated takeover of node "sti-rx2540-335a" when aggregate "aggr1" is online.
 Do you want to continue? {y|n}: y
-[Job 53] Job succeeded: DONE
-rx254023::> aggr mirror -aggregate aggr_22a
-Info: Disks would be added to aggregate "aggr_22a" on node "sdot-rx2540-22a" in the following manner:
-Second Plex
-RAID Group rg0, 2 disks (advanced_zoned checksum, raid4)
-Position Disk Type Size
----------- ------------------------- ---------- ---------------
-shared NET-1.5 SSD -
-shared NET-1.6 SSD 424.6GB
-Aggregate capacity available for volume use would be 363.0GB.
+[Job 78] Job succeeded: DONE
+
+C3111E67::> storage aggregate mirror -aggregate aggr1
+Info: Disks would be added to aggregate "aggr1" on node "sti-rx2540-335a" in the following manner:
+      Second Plex
+        RAID Group rg0, 5 disks (advanced_zoned checksum, raid_dp)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          shared     NET-3.2                   SSD               -        -
+          shared     NET-3.3                   SSD               -        -
+          shared     NET-3.4                   SSD         208.4GB  208.4GB
+          shared     NET-3.5                   SSD         208.4GB  208.4GB
+          shared     NET-3.12                  SSD         208.4GB  208.4GB
+
+      Aggregate capacity available for volume use would be 526.1GB.
+      625.2GB would be used from capacity license.
 Do you want to continue? {y|n}: y
-Mirroring of aggregate "aggr_22a" has been initiated. 1 disk needs to be zeroed before it can be added to the aggregate. The process has been initiated. Once zeroing completes on this disk, all disks will be added at once. Note that if the system reboots before the disk zeroing is complete, an inactive plex will exist with no disks. The inactive plex can be removed manually. Use the "storage aggregate plex delete" command to delete the inactive plex.
-rx254023::> aggr show-status aggr_22a
-Owner Node: sdot-rx2540-22a
-Aggregate: aggr_22a (online, raid4, mirrored) (advanced_zoned checksums)
-Plex: /aggr_22a/plex1 (online, normal, active, pool1)
-RAID Group /aggr_22a/plex1/rg0 (normal, advanced_zoned checksums)
-Usable Physical
-Position Disk Pool Type RPM Size Size Status
--------- --------------------------- ---- ----- ------ -------- -------- ----------
-shared NET-3.4 1 SSD - 418.0GB 894.3GB (normal)
-shared NET-3.6 1 SSD - 418.0GB 894.3GB (normal)
-Plex: /aggr_22a/plex3 (online, normal, active, pool0)
-RAID Group /aggr_22a/plex3/rg0 (normal, advanced_zoned checksums)
-Usable Physical
-Position Disk Pool Type RPM Size Size Status
--------- --------------------------- ---- ----- ------ -------- -------- ----------
-shared NET-1.5 0 SSD - 418.0GB 894.3GB (normal)
-shared NET-1.6 0 SSD - 418.0GB 894.3GB (normal)
-4 entries were displayed.
+
+C3111E67::> storage aggregate show-status -aggregate aggr1
+Owner Node: sti-rx2540-335a
+ Aggregate: aggr1 (online, raid_dp, mirrored) (advanced_zoned checksums)
+  Plex: /aggr1/plex0 (online, normal, active, pool0)
+   RAID Group /aggr1/plex0/rg0 (normal, advanced_zoned checksums)
+                                                              Usable Physical
+     Position Disk                        Pool Type     RPM     Size     Size Status
+     -------- --------------------------- ---- ----- ------ -------- -------- ----------
+     shared   NET-1.1                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.2                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.3                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.10                     0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.11                     0   SSD        -  205.1GB  447.1GB (normal)
+  Plex: /aggr1/plex3 (online, normal, active, pool1)
+   RAID Group /aggr1/plex3/rg0 (normal, advanced_zoned checksums)
+                                                              Usable Physical
+     Position Disk                        Pool Type     RPM     Size     Size Status
+     -------- --------------------------- ---- ----- ------ -------- -------- ----------
+     shared   NET-3.2                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.3                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.4                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.5                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.12                     1   SSD        -  205.1GB  447.1GB (normal)
+10 entries were displayed..
 ----
 
 [NOTE]
 In order to test or simulate one or multiple drive failures, use the `storage disk fail -disk NET-x.y -immediate` command. If there is a spare in the system, the aggregate will begin to reconstruct. You can check the status of the reconstruction using the command `storage aggregate show`. You can remove the simulated failed drive using ONTAP Deploy. Note that ONTAP has marked the drive as `Broken`. The drive is not actually broken and can be added back using ONTAP Deploy. In order to erase the Broken label, enter the following commands in the ONTAP Select CLI:
 
 ----
-set diag
+set advanced
 disk unfail -disk NET-x.y -spare true
 disk show -broken
 ----
