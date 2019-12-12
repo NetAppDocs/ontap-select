@@ -57,9 +57,9 @@ entries:
     entries:
       - title: Options
         entries:
-          - title: Evaluation licences
+          - title: Evaluation licenses
             url: /concept_lic_evaluation.html
-          - title: Production licences
+          - title: Production licenses
             url: /concept_lic_production.html
           - title: Platform license offerings
             url: /concept_lic_platforms.html
@@ -167,7 +167,7 @@ entries:
         entries:
           - title: HA configuration
             url: /concept_ha_config.html
-          - title: Syncronous replication and mirrored aggregates
+          - title: Synchronous replication and mirrored aggregates
             url: /concept_ha_mirroring.html
           - title: Other high availability functions
             url: /concept_ha_other.html
