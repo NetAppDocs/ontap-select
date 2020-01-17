@@ -37,10 +37,8 @@ You must define a vCenter server account and associate it with a role containing
 
 ===== *Host*
 
-//
 ===== Configuration
 
-* Change SNMP settings
 * Network configuration
 * System management
 
