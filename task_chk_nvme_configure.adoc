@@ -15,6 +15,8 @@ summary: If you plan to use NVMe drives with software RAID, you need to configur
 [.lead]
 If you plan to use NVMe drives with software RAID, you need to configure the host to recognize the drives.
 
+Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
+
 .Before you begin
 
 Make sure your deployment environment meets the following minimum requirements:
@@ -26,7 +28,15 @@ Make sure your deployment environment meets the following minimum requirements:
 
 Follow the link:reference_chk_host_prep.html[host preparation checklist], review the link:reference_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:reference_chk_select_req_info.html[required information for ONTAP Select installation] topics for more information.
 
-Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
+.About this task
+
+This procedure is designed to be performed before creating a new ONTAP Select cluster. You can also perform the procedure to configure NVMe drives for existing cluster. In this case, after configuring the drives, you must add them through Deploy as you would additional SSD drives. The main difference is that Deploy detects the NVMe drives and reboots the nodes. When adding NVMe drives to an existing cluster, note the following about the reboot process:
+
+* Deploy handles the reboot orchestration.
+* HA takeover and giveback is performed in an orderly fashion, but it can be time consuming to resynchronize the aggregates.
+* A single-node cluster will incur downtime.
+
+See link:concept_stor_capacity_inc.html[Increasing storage capacity] for additional information.
 
 .Steps
 
