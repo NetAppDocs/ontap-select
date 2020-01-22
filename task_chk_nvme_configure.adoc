@@ -36,7 +36,7 @@ This procedure is designed to be performed before creating a new ONTAP Select cl
 * HA takeover and giveback is performed in an orderly fashion, but it can be time consuming to resynchronize the aggregates.
 * A single-node cluster will incur downtime.
 
-See link:concept_stor_capacity_inc.html[Increasing storage capacity] for more information.
+See link:concept_stor_capacity_inc.html[Increasing storage capacity] for additional information.
 
 .Steps
 
