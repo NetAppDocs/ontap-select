@@ -53,10 +53,5 @@ The premium XL offering provides the following capabilities:
 * vNAS
 * MetroCluster SDS
 
-When using the premium XL license with the large instance type, the following features are not supported:
-
-* Hardware RAID
-* vNAS
-* KVM hypervisor
-
-In short, ONTAP Select using the large instance type is only supported on ESXi with software RAID.
+[NOTE]
+The large instance type (using the premium XL license) is only supprted on VMware ESXi.

@@ -57,8 +57,7 @@ There are several common hardware requirements that apply to all platforms regar
 instance type or license offering.
 
 * Processor
-** Intel CPU E5-26xx v3 (Haswell) or higher
-** Intel CPU Skylake server processors (see link:https://ark.intel.com/products/codename/37572/Skylake#@server[Intel Skylake,window=_blank] for supported models)
+** Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
 * Ethernet network ports
 ** 4 x 10GbE (recommended)
 ** 2 x 10GbE

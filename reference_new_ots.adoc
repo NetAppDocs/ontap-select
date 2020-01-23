@@ -32,3 +32,11 @@ To use software RAID with an NVMe disk, you must first manually update the host'
 == Improvements to Deploy web user interface
 
 [big blue]*VMware ESXi and KVM.* The Deploy utility web user interface has been enhanced based on evolving industry standard best practices. Several of the existing administrative workflows have been updated and simplified.
+
+== Premium XL license offering
+
+[big blue]*VMware ESXi only.* When using the premium XL license offering and large instance type with ONTAP Select 9.7, you are no longer restricted to only software RAID. With this configuration, you can use either software or hardware RAID.
+
+== Enhanced Intel support
+
+[big blue]*VMware ESXi and KVM.* ONTAP Select now supports the Intel Cascade Lake processor, which is the successor to Skylake. Support is provided with ONTAP Select 9.7 and previous releases that support Skylake. With this change, support is considered to be provided for the Intel Xeon processors for server. See the _NetApp Interoperability Matrix Tool_ for more information.
