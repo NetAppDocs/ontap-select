@@ -59,7 +59,7 @@ You must deploy a new cluster with ONTAP Select 9.5 or later, using the Deploy a
 * No hardware RAID controller on the host
 
 [NOTE]
-If a hardware RAID controller is present, see the ONTAP Select Product Architecture and Best Practices Technical Report (TR-4517) for additional configuration requirements.
+If a hardware RAID controller is present, see the link:concept_stor_concepts_chars.html[Storage] section under _Deep dive_ for additional configuration requirements.
 
 * VMware VMotion, HA, and DRS are not supported
 
