@@ -93,4 +93,4 @@ ONTAPdeploy2.12_upgrade.tar.gz
 
 .After you finish
 
-It is recommended that you back up the configuration of the Deploy virtual machine after the upgrade procedure is completed. You should clear the browser cache to be able to view the newly created Deploy pages.
+After the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. You should also clear the browser cache to be able to view the newly created Deploy pages.
