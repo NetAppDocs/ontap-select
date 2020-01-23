@@ -30,7 +30,7 @@ Follow the link:reference_chk_host_prep.html[host preparation checklist], review
 
 .About this task
 
-This procedure is designed to be performed before creating a new ONTAP Select cluster. You can also perform the procedure to configure NVMe drives for existing cluster. In this case, after configuring the drives, you must add them through Deploy as you would additional SSD drives. The main difference is that Deploy detects the NVMe drives and reboots the nodes. When adding NVMe drives to an existing cluster, note the following about the reboot process:
+This procedure is designed to be performed before creating a new ONTAP Select cluster. You can also perform the procedure to configure additional NVMe drives for an existing SW-RAID NVMe cluster. In this case, after configuring the drives, you must add them through Deploy as you would additional SSD drives. The main difference is that Deploy detects the NVMe drives and reboots the nodes. When adding NVMe drives to an existing cluster, note the following about the reboot process:
 
 * Deploy handles the reboot orchestration.
 * HA takeover and giveback is performed in an orderly fashion, but it can be time consuming to resynchronize the aggregates.
