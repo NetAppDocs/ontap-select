@@ -172,4 +172,4 @@ The license upgrade for the cluster can take several minutes. Allow the process 
 
 .After you finish
 
-The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment will be replaced by the nine-digit long serial numbers from the production licenses used for the upgrade.
+The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment are replaced by the nine-digit serial numbers from the production licenses used for the upgrade.
