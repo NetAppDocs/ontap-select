@@ -38,7 +38,7 @@ Deploy uses the VMware VIX API to communicate with the vCenter server and ESXi h
 Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses using the following protocols:
 
 * PING command (ICMP)
-* SSH (port 23)
+* SSH (port 22)
 * SSL (port 443)
 
 == Support for IP version 4
