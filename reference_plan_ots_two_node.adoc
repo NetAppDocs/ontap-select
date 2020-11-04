@@ -35,7 +35,7 @@ If you have one or more active two-node clusters, the ONTAP Select Deploy virtua
 
 ==== Location of the cluster and mediator service
 
-Because the two-node clusters are typically deployed in a remote or branch office, they can be remote from the corporate data center and the Deploy utility providing administrative support. With this configuration, the management traffic between the Deploy utility and cluster flows over the WAN. See the Release Notes for more information about limitations and restrictions.
+Because the two-node clusters are typically deployed in a remote or branch office, they can be remote from the corporate data center and the Deploy utility providing administrative support. With this configuration, the management traffic between the Deploy utility and cluster flows over the WAN. See the release notes for more information about limitations and restrictions.
 
 ==== Backing up the Deploy configuration data
 

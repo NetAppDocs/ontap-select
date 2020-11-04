@@ -44,7 +44,7 @@ If you are using these earlier versions and attempt an upgrade, the ONTAP Select
 
 === Upgrading the Deploy administration utility
 
-Before performing an upgrade procedure using the Deploy utility, you may need to upgrade your Deploy instance. In general, you should upgrade to the most recent version of Deploy. At a minimum, you must use Deploy 2.5 or later. The Deploy utility must support the version of ONTAP Select you are using. Refer to the ONTAP Select Release Notes for more information.
+Before performing an upgrade procedure using the Deploy utility, you may need to upgrade your Deploy instance. In general, you should upgrade to the most recent version of Deploy. At a minimum, you must use Deploy 2.5 or later. The Deploy utility must support the version of ONTAP Select you are using. Refer to the ONTAP Select release notes for more information.
 
 === After the update procedure is complete
 

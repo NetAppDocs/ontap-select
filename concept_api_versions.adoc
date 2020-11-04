@@ -15,7 +15,7 @@ summary: The REST API included with ONTAP Select Deploy is assigned a version nu
 [.lead]
 The REST API included with ONTAP Select Deploy is assigned a version number. The API version number is independent of the Deploy release number. You should be aware of the API version included with your release of Deploy and how this might affect your use of the API.
 
-The current release of the Deploy administration utility includes version 3 of the REST API. Pastreleases of the Deploy utility include the following API versions:
+The current release of the Deploy administration utility includes version 3 of the REST API. Past releases of the Deploy utility include the following API versions:
 
 Deploy 2.8 and later::
 ONTAP Select Deploy 2.8 and all later releases include version 3 of the REST API.
