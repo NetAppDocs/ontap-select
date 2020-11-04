@@ -30,9 +30,9 @@ To deploy an ONTAP Select cluster, your organization must have a valid VMware vS
 
 ONTAP Select can be deployed on the following hypervisors:
 
-* VMware ESXi 6.0 GA (build 2494585 or greater)
 * VMware ESXi 6.5 U2 (build 8294253 or greater)
-* VMware ESXi 6.7 GA (build 8169922or greater) including 6.7 U1, U2, and U3
+* VMware ESXi 6.7 GA (build 8169922 or greater) including 6.7 U1, U2, and U3
+* VMware ESXi 7.0 GA (build 15843807 or greater)
 
 [NOTE]
 NetApp supports ONTAP Select on these versions of ESXi as long as VMware also continues to support the same versions.
