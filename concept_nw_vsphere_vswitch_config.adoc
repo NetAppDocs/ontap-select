@@ -103,10 +103,8 @@ When using two high speed (25/40Gb) NICs, the recommended port group configurati
 [cols=5*,options="header"]
 |===
 | Port Group | External 1 (e0a,e0b) | Internal 1 (e0c,e0e) | Internal 2 (e0d,e0f) | External 2 (e0g)
-| Active | vmnic0 | vmnic1 | vmnic2 | vmnic3
-| Standby 1 | vmnic1 | vmnic0 | vmnic3 | vmnic2
-| Standby 2 | vmnic2 | vmnic3 | vmnic0 | vmnic1
-| Standby 3 | vmnic3 | vmnic2 | vmnic1 | vmnic0
+| Active | vmnic0 | vmnic0 | vmnic1 | vmnic1
+| Standby | vmnic1 | vmnic1 | vmnic0 | vmnic0
 |===
 
 *vSwitch with two high speed (25/40Gb) physical ports per node*
