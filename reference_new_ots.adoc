@@ -5,7 +5,7 @@ keywords: new features, nvme, deploy versioning
 summary: There are several new and changed features provided with the current release of ONTAP Select.
 ---
 
-= What's new in ONTAP Select 9.7
+= What's new in ONTAP Select 9.8
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,28 +15,13 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-[NOTE]
-Software RAID using NVMe drives is only available on VMware ESXi. See the https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[Release Notes^] for more information.
+== High speed interface option
 
-== Software RAID using NVMe drives
+[big blue]*VMware ESXi only.* The high speed interface feature enhances network connectivity by providing an option for both 25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds, you should follow the best practices regarding port mapping configurations as described in the ONTAP Select documentation.
 
-[big blue]*VMware ESXi only.* Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocol. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives on ESXi.
+== Updated VMware ESXi support
 
-[IMPORTANT]
-To use software RAID with an NVMe disk, you must first manually update the host's BIOS and reboot the machine. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
+[big blue]*VMware ESXi and KVM.* There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi:
 
-== Versioning change for ONTAP Select Deploy
-
-[big blue]*VMware ESXi and KVM.* The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy update within a specific ONTAP Select release is assigned a unique build number.
-
-== Improvements to Deploy web user interface
-
-[big blue]*VMware ESXi and KVM.* The Deploy utility web user interface has been enhanced based on evolving industry standard best practices. Several of the existing administrative workflows have been updated and simplified.
-
-== Premium XL license offering
-
-[big blue]*VMware ESXi only.* When using the premium XL license offering and large instance type with ONTAP Select 9.7, you are no longer restricted to only software RAID. With this configuration, you can use either software or hardware RAID.
-
-== Enhanced Intel support
-
-[big blue]*VMware ESXi and KVM.* ONTAP Select now supports the Intel Cascade Lake processor, which is the successor to Skylake. Support is provided with ONTAP Select 9.7 and previous releases that support Skylake. With this change, support is considered to be provided for the Intel Xeon processors for server. See the _NetApp Interoperability Matrix Tool_ for more information.
+* ESXi 7.0 is supported (GA build 15843807 and later)
+* ESXi 6.0 is no longer supported

@@ -21,7 +21,7 @@ There are additional resources you can access to get help and find more informat
 
 The following product pages include links to a wide variety of ONTAP Select resources.
 
-* https://www.netapp.com/us/documentation/ontap-select.aspx[NetApp ONTAP Select resources^]
+* https://www.netapp.com/data-management/software-defined-storage-ontap-select/documentation[NetApp ONTAP Select resources^]
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 

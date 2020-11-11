@@ -15,9 +15,12 @@ summary: ONTAP Select vSwitch configuration and load-balancing policies for two-
 [.lead]
 ONTAP Select vSwitch configuration and load-balancing policies for two-NIC and four-NIC configurations.
 
-ONTAP Select supports the use of both standard and distributed vSwitch configurations. This section describes the vSwitch configuration and load-balancing policies that should be used in both two-NIC and four-NIC configurations.
+ONTAP Select supports the use of both standard and distributed vSwitch configurations. Distributed vSwitches support link aggregation constructs (LACP). Link aggregation is a common network construct used to aggregate bandwidth across multiple physical adapters. LACP is a vendor-neutral standard that provides an open protocol for network endpoints that bundle groups of physical network ports into a single logical channel. ONTAP Select can work with port groups that are configured as a Link Aggregation Group (LAG). However, NetApp recommends using the individual physical ports as simple uplink (trunk) ports to avoid the LAG configuration. In these cases, the best practices for standard and distributed vSwitches are identical.
 
-== Standard vSwitch
+This section describes the vSwitch configuration and load-balancing policies that should be used in both two-NIC and four-NIC configurations.
+
+When configuring the port groups to be used by ONTAP Select, the following best practices should be followed; the load-balancing policy at the port-group level is Route Based on Originating Virtual Port ID. VMware recommends that STP be set to Portfast on the switch ports connected to the ESXi hosts.
+
 
 All vSwitch configurations require a minimum of two physical network adapters bundled into a single NIC team. ONTAP Select supports a single 10Gb link for two-node clusters. However, it is a NetApp best practice to make sure of hardware redundancy through NIC aggregation.
 
@@ -95,11 +98,24 @@ Standby adapters: vmnic4, vmnic7, vmnic5
 
 == Standard or distributed vSwitch and two physical ports per node
 
-When using two physical ports, each port group should have an active adapter and a standby adapter configured opposite to each other. The internal network is only present for multinode ONTAP Select clusters. For single-node clusters, both adapters can be configured as active in the external port group.
+When using two high speed (25/40Gb) NICs, the recommended port group configuration is conceptually very similar to the configuration with four 10Gb adapters. Four port groups should be used even when using only two physical adapters. The port group assignments are as follows:
+
+[cols=5*,options="header"]
+|===
+| Port Group | External 1 (e0a,e0b) | Internal 1 (e0c,e0e) | Internal 2 (e0d,e0f) | External 2 (e0g)
+| Active | vmnic0 | vmnic0 | vmnic1 | vmnic1
+| Standby | vmnic1 | vmnic1 | vmnic0 | vmnic0
+|===
+
+*vSwitch with two high speed (25/40Gb) physical ports per node*
+
+image:DDN_17.jpg[vSwitch with two high speed (25/40Gb) physical ports per node]
+
+When using two physical ports (10Gb or less), each port group should have an active adapter and a standby adapter configured opposite to each other. The internal network is only present for multinode ONTAP Select clusters. For single-node clusters, both adapters can be configured as active in the external port group.
 
 The following example shows the configuration of a vSwitch and the two port groups responsible for handling internal and external communication services for a multinode ONTAP Select cluster. The external network can use the internal network VMNIC in the event of a network outage because the internal network VMNICs are part of this port group and configured in standby mode. The opposite is the case for the external network. Alternating the active and standby VMNICs between the two port groups is critical for the proper failover of the ONTAP Select VMs during network outages.
 
-*vSwitch with two physical ports per node*
+*vSwitch with two physical ports (10Gb or less) per node*
 
 image:DDN_13.jpg[vSwitch with two physical ports per node]
 

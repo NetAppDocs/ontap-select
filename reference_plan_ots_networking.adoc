@@ -19,9 +19,8 @@ You must configure the hypervisor network correctly before deploying ONTAP Selec
 
 You must configure a virtual switch on each of the ONTAP Select hosts to support the external network and internal network (multi-node clusters only). As part of deploying a multi-node cluster, you should test the network connectivity on the internal cluster network.
 
-To learn more about how to configure a vSwitch on a hypervisor host, see the link:concept_nw_concepts_chars.html[Deep dive networking] section.
-
- the ONTAP Select Product Architecture and Best Practices Technical Report.
+[NOTE]
+To learn more about how to configure a vSwitch on a hypervisor host and the high speed interface feature, see the link:concept_nw_concepts_chars.html[Deep dive networking] section.
 
 ==== Upgrading to VMXNET3
 

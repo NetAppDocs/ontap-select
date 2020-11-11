@@ -41,4 +41,4 @@ You should review the current release notes for additional information and any r
 
 .Related information
 
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046[ONTAP Select Release Notes]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2874429[ONTAP Select Release Notes]
