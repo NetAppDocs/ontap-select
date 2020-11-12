@@ -17,11 +17,11 @@ There are several new and changed features provided with the current release of 
 
 == High speed interface option
 
-[big blue]*VMware ESXi only.* The high speed interface feature enhances network connectivity by providing an option for both 25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds, you should follow the best practices regarding port mapping configurations as described in the ONTAP Select documentation.
+*VMware ESXi only.* The high speed interface feature enhances network connectivity by providing an option for both 25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds, you should follow the best practices regarding port mapping configurations as described in the ONTAP Select documentation.
 
 == Updated VMware ESXi support
 
-[big blue]*VMware ESXi only.* There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi:
+*VMware ESXi only.* There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi:
 
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
