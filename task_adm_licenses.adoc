@@ -125,7 +125,7 @@ You can upgrade an ONTAP Select evaluation cluster to use a production capacity 
 
 .About this task
 
-When the upgrade is started, all the nodes are upgraded and then the cluster is moved back online.
+Performing a modification of the cluster license for a single-node cluster is disruptive. However, this is not the case with a multi-node cluster because the conversion process reboots each node one at a time to apply the license.
 
 .Steps
 
