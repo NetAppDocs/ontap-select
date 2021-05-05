@@ -37,6 +37,6 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 == Open source
 
-Notice files provide information about third-party copyright and licenses used in NetApp software.
+Notice file provides information about third-party copyright and licenses used in NetApp software.
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2874818[Notice for ONTAP Select 9.9.1^]
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2876936[Notice for ONTAP Select 9.9.1^]
