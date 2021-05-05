@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference_release_notes_info.html
+permalink: reference_release_notes.html
 keywords:
 summary:
 ---
@@ -21,7 +21,7 @@ You need account credentials to sign in to the NetApp Support Site to access the
 
 ===== Current version of ONTAP Select
 
-You can view the https://library.netapp.com/ecm/ecm_download_file/ECMLP2876869[ONTAP Select 9.9.1 Release Notes] to the details of the current version.
+You can access the https://library.netapp.com/ecm/ecm_download_file/ECMLP2876869[ONTAP Select 9.9.1 Release Notes] to view details for the current version.
 
 ===== Past versions of ONTAP Select
 

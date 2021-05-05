@@ -22,7 +22,7 @@ One of the major changes beginning with ONTAP Select 9.7 is the [blue]*Deploy ad
 
 == Navigate the product documentation
 
-ONTAP Select 9.8 can be deployed on VMware ESXi or KVM. This site contains the documentation for ONTAP Select 9.8 and 9.7 running on VMware ESXi as well as the hypervisor-independent documentation (such as the REST API).
+ONTAP Select 9.9.1 can be deployed on VMware ESXi or KVM. This site contains the documentation for ONTAP Select 9.9.1, 9.8, and 9.7 running on VMware ESXi as well as the hypervisor-independent documentation (such as the REST API).
 
 You can find the documentation for the KVM version of the product and the release notes, as well as prior product releases, at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
 
