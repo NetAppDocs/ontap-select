@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: reference_release_notes.html
+keywords:
+summary:
+---
+
+= ONTAP Select Release Notes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+
+[.lead]
+The Release Notes for ONTAP Select provide release-specific information, including new features, supported configurations, upgrade notes, known issues, fixed issues, and known limitations.
+
+[NOTE]
+You need an account to sign in to the NetApp Support Site to access the Release Notes.
+
+===== Current version of ONTAP Select
+
+You can access the https://library.netapp.com/ecm/ecm_download_file/ECMLP2876869[ONTAP Select 9.9.1 Release Notes] to view details of the current version.
+
+===== Past versions of ONTAP Select
+
+To access the Release Notes for past versions of the product, see the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library].

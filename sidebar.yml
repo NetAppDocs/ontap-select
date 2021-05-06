@@ -1,6 +1,8 @@
 entries:
-  - title: ONTAP Select 9.8 docs
+  - title: ONTAP Select 9.9.1 docs
     url: /index.html
+  - title: Release Notes
+    url: /reference_release_notes.html
   - title: Concepts
     entries:
       - title: Product overview
