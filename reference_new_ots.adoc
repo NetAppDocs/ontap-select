@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference_new_ots.html
-keywords: new features, nvme, deploy versioning
+keywords: new features
 summary: There are several new and changed features provided with the current release of ONTAP Select.
 ---
 
-= What's new in ONTAP Select 9.8
+= What's new in ONTAP Select 9.9.1
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,13 +15,9 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-== High speed interface option
-
-*VMware ESXi only.* The high speed interface feature enhances network connectivity by providing an option for both 25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds, you should follow the best practices regarding port mapping configurations as described in the ONTAP Select documentation.
-
 == Updated VMware ESXi support
 
-*VMware ESXi only.* There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi:
+*VMware ESXi only.* There are changes for ONTAP Select 9.9.1 regarding the support for VMware ESXi:
 
-* ESXi 7.0 is supported (GA build 15843807 and later)
-* ESXi 6.0 is no longer supported
+* ESXi 7.0 U2 is supported
+* ESXi 7.0 U1 is supported
