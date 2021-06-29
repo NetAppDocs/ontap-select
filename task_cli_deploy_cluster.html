@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Deploying an ONTAP Select cluster using the CLI</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Deploying an ONTAP Select cluster using the CLI" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_cluster.html" />
+	<meta property="og:description" content="You can use the command line interface provided with the ONTAP Select Deploy administration utility to create a single-node or multi-node ONTAP Select cluster." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/ontap-select/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="You can use the command line interface provided with the ONTAP Select Deploy administration utility to create a single-node or multi-node ONTAP Select cluster.">
+  <meta name="keywords" content=" administer, administering, cli, create cluster, deploy cluster">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/ontap-select/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-select/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/ontap-select/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-select/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-select/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-select/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/ontap-select/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/ontap-select/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/ontap-select/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/ontap-select/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/ontap-select/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap-select/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap-select/css/na-pagenav.css' type='text/css'>
+
+  
+
+  
+  <link rel='stylesheet' href='/us-en/ontap-select/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/ontap-select/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/ontap-select/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/ontap-select/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap-select/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/ontap-select/js/na-utility.js'></script>
+  <script src='/us-en/ontap-select/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/ontap-select/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/ontap-select/js/toc.js'></script>
+  <script src='/us-en/ontap-select/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/ontap-select/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/ontap-select/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/ontap-select/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="No results were found for {query}" data-did-you-mean="Search for {suggestion}." data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar"><!-- Start Language Selector --><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/ontap-select/">ONTAP&nbsp;Select</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Deploying an ONTAP Select cluster using the CLI
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
+      <span class="n-pdf-section-title">Site</span>
+    </div>
+    <li>
+      <a target="_blank" href="/us-en/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_documentation.pdf" >
+        <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+        ONTAP Select documentation
+      </a>
+    </li>
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Concepts.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Concepts
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Business_use_cases.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Business use cases
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Plan.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Plan
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/ONTAP_Select.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            ONTAP Select
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/ONTAP_Select_Deploy.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            ONTAP Select Deploy
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/License.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            License
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Options.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Options
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Capacity_pools_licensing_model.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Capacity pools licensing model
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Purchase.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Purchase
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Install.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Install
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Pre_installation_checklist.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Pre-installation checklist
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Administer.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Administer
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Nodes_and_hosts.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Nodes and hosts
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Deep_dive.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Deep dive
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Storage.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Networking.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Networking
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/High_availability_architecture.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            High availability architecture
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Performance.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Performance
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Integrate_with_vCenter.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Integrate with vCenter
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Getting_started.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Getting started
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Manage_the_plug_in.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Manage the plug-in
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Administer.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Administer
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Automate_with_REST.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Automate with REST
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Concepts.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Concepts
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Access_with_a_browser.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Access with a browser
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Workflow_processes.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Workflow processes
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Access_with_Python.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Access with Python
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Python_code_samples.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Python code samples
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Use_the_CLI.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Use the CLI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">This page</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/us-en/ontap-select/pdfs/pages/task_cli_deploy_cluster.pdf" >
+    <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+    Deploying an ONTAP Select cluster using the CLI
+  </a>
+</li>
+
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Nodes_and_hosts.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Nodes and hosts
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap-select/pdfs/sidebar/Deploy_utility.pdf" >
+            <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>
+            Deploy utility
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="index.html">
+        ONTAP Select 9.9.1 docs
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_release_notes.html">
+        Release Notes
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_ots_overview.html">
+        Product overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_ots_deploy.html">
+        ONTAP Select Deploy
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Business use cases</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_usecase_overview.html">
+        Business needs and usage scenarios
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_usecase_robo.html">
+        Remote and branch office
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_usecase_private_cloud.html">
+        Private cloud and data center
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_usecase_mc_sds.html">
+        MetroCluster SDS
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_terminology.html">
+        Terminology
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Plan</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_workflow_deploy.html">
+        Deployment workflow
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_general.html">
+        General requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_hardware.html">
+        Hypervisor and hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_storage.html">
+        Storage and RAID
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_vnas.html">
+        ONTAP Select vNAS
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_networking.html">
+        Networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_two_node.html">
+        Two-node clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_robo.html">
+        Remote and branch offices
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_mcc_sds.html">
+        MetroCluster SDS
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_vcenter.html">
+        VMware vCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_plugin.html">
+        VMware vCenter plug-in
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select Deploy</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_plan_dep_general.html">
+        General requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_dep_vmware.html">
+        VMware environment
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_plan_best_practices.html">
+        Best practices
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> License</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Options</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_lic_evaluation.html">
+        Evaluation licenses
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_production.html">
+        Production licenses
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_platforms.html">
+        Platform license offerings
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Capacity pools licensing model</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_operation.html">
+        Operational details
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_serial_number.html">
+        Node serial numbers
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_restrictions.html">
+        Restrictions
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_compare_ct.html">
+        Capacity pools versus capacity tiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_benefits.html">
+        Summary of benefits
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Purchase</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_lic_workflow.html">
+        Licensing workflow
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_lic_acquire_ct.html">
+        Capacity tiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_lic_acquire_cp.html">
+        Capacity pools
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_lic_ontap_features.html">
+        ONTAP features
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Pre-installation checklist</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_chk_host_prep.html">
+        Host preparation checklist
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_chk_deploy_req_info.html">
+        Deploy utility required information
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_chk_select_req_info.html">
+        ONTAP Select required information
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_chk_nvme_configure.html">
+        NVMe host configuration
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_install_deploy.html">
+        Install ONTAP Select Deploy
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_deploy_cluster.html">
+        Deploy a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_initial_state.html">
+        Initial cluster state
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Administer</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_adm_before.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_adm_upgrading_nodes.html">
+        Upgrade nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_support.html">
+        Diagnostics and support
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_security.html">
+        Security
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_connectivity.html">
+        Network connectivity
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_mediators.html">
+        Mediators
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_clusters.html">
+        Clusters
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Nodes and hosts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_adm_video_console.html">
+        VM video console
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_resize.html">
+        Resizing the cluster nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_replace_drives_swraid.html">
+        Replacing failed SW RAID drives
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_upgrade_vmfs6.html">
+        Upgrading to VMFS6
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_adm_licenses.html">
+        Licenses
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deep dive</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_stor_concepts_chars.html">
+        General concepts and characteristics
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_hwraid_local.html">
+        Hardware RAID services for local attached storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_swraid_local.html">
+        Software RAID services for local attached storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_vsan_external.html">
+        VSAN and external array configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_capacity_inc.html">
+        Increasing storage capacity
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_eff_support.html">
+        Storage efficiency support
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Networking</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_nw_concepts_chars.html">
+        General concepts and characteristics
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_single_multi_node.html">
+        Single and multi node configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_internal_external.html">
+        Internal and external networks
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_supported_configs.html">
+        Supported configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_vsphere_vswitch_config.html">
+        VMWare vSphere VSwitch configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_physical_switch_config.html">
+        Physical switch configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_data_mgmt_separation.html">
+        Data and management separation
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> High availability architecture</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_ha_config.html">
+        HA configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_mirroring.html">
+        Synchronous replication and mirrored aggregates
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_other.html">
+        Other high availability functions
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Performance</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_perf_general.html">
+        General considerations
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_perf_premium_ha_direct_ssd_94.html">
+        9.4 Premium HA direct attached SSD storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_perf_premium_ha_direct_ssd_95.html">
+        9.5 Premium HA direct attached SSD storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_perf_premium_ha_direct_ssd_96.html">
+        9.6 Premium HA direct attached SSD storage
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Integrate with vCenter</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Getting started</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vpi_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_vpi_architecture.html">
+        Architecture
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_vpi_planning.html">
+        Planning
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage the plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vpi_manage_before.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_install.html">
+        Install
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_access.html">
+        Access
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_upgrade.html">
+        Upgrade and remove
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_vpi_manually_remove.html">
+        Manually remove the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_deploy_cluster.html">
+        Deploy a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_vpi_vcenter_integration.html">
+        vCenter integration
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Administer</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_support.html">
+        Diagnostics and support
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_network.html">
+        Networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_clusters.html">
+        Clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_licenses.html">
+        Licenses
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_vpi_troubleshooting.html">
+        Troubleshoot
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Automate with REST</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_rest.html">
+        REST web services
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_how_access.html">
+        Access the Deploy API
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_versions.html">
+        Deploy API versioning
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_operation.html">
+        Basic operation
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_transaction.html">
+        Request and response transaction
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_async_proc.html">
+        Asynchronous processing
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Access with a browser</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_before_browser.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_api_access_doc_page.html">
+        Access the doc page
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_api_understanding_call.html">
+        Understanding an API call
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Workflow processes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_before_workflows.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_workflow01.html">
+        Workflow 1 Creating a cluster
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Access with Python</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_before_python.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_understanding_scripts.html">
+        Understanding the scripts
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python code samples</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_api_script_cc.html">
+        Create a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_json_cc.html">
+        JSON to create a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_anl.html">
+        Add a node license
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_dc.html">
+        Delete a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_common.html">
+        Common support module
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_resize.html">
+        Resize cluster nodes
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_automate_ansible.html">
+        Automate with Ansible
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Use the CLI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_cli_before.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_signing_in.html">
+        Sign in using SSH
+      </a></li><li class="  active "><a class="na-navbar-padding" href="task_cli_deploy_cluster.html">
+        Deploy a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_security.html">
+        Security
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_connectivity.html">
+        Network connectivity
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_clusters.html">
+        Clusters
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Nodes and hosts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_cli_upgrade_esxi65.html">
+        Upgrading ESXi to 6.5 and higher
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deploy utility</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_cli_upgrade_deploy.html">
+        Upgrade a Deploy instance
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_migrate_deploy.html">
+        Migrate a Deploy instance
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_image_add.html">
+        Add ONTAP Select images
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_image_remove.html">
+        Remove ONTAP Select images
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_recover_two_node.html">
+        Recover Deploy for a two-node cluster
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_faq.html">
+        FAQ
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_additional_info.html">
+        Get more information
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_earlier_versions.html">
+        Earlier versions
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_legal_notices.html">
+        Legal notices
+      </a></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+
+
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Deploying an ONTAP Select cluster using the CLI</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2019-11-21 21:36:04 +0000">11/21/2019</time>
+    
+  
+
+
+  <span>
+    <a target="_blank" href="/us-en/ontap-select/pdfs/pages/task_cli_deploy_cluster.pdf" role="button">
+      <img src="/us-en/ontap-select/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
+  </span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>You can use the command line interface provided with the ONTAP Select Deploy administration utility to create a single-node or multi-node ONTAP Select cluster.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="before-you-begin">Before you begin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before creating an ONTAP Select cluster on ESXi, you should understand the required preparation.</p>
+</div>
+<div class="sect4">
+<h5 id="preparing-to-attach-storage-to-the-ontap-select-node"><strong>Preparing to attach storage to the ONTAP Select node</strong></h5>
+<div class="paragraph">
+<p>If you use a local hardware RAID controller, you must create at least one storage pool at each node for the system data as well as the root and data aggregates. You must attach the storage pool as part of configuring the ONTAP Select node.</p>
+</div>
+<div class="paragraph">
+<p>If you use software RAID, you must create a storage pool for the system data and make sure the SSD drives are available for the root and data aggregates. You must attach the storage pool and disks as part of configuring the ONTAP Select node.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="available-ontap-select-versions"><strong>Available ONTAP Select versions</strong></h5>
+<div class="paragraph">
+<p>The Deploy administration utility contains a single version of ONTAP Select. If you want to deploy clusters using an earlier version of ONTAP Select, you must first add the ONTAP Select image to your Deploy instance. See <a href="task_adm_deploy_image_add.html">Adding an ONTAP Select image to Deploy</a> for more information.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="licensing-ontap-select-for-a-production-deployment"><strong>Licensing ONTAP Select for a production deployment</strong></h5>
+<div class="paragraph">
+<p>Before deploying an ONTAP Select cluster in a production environment, you must purchase a storage capacity license and download the associated license file. You can license the storage at each node using the <em>capacity tiers</em> model or license a shared pool using the <em>capacity pools</em> model.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="uploading-and-registering-a-license-file">Uploading and registering a license file</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After acquiring a license file with storage capacity, you must upload the file containing the license to the Deploy virtual machine and register it.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are deploying a cluster for evaluation only, you can skip this step.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>You must have the password for the admin user account.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>In a command shell on your local workstation, use the sftp utility to upload the license file to the Deploy virtual machine.</p>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sftp admin@10.234.81.101 (provide password when prompted)
+put NLF-320000nnn.txt
+exit</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Sign in to the Deploy utility CLI with the administrator account using SSH.</p>
+</li>
+<li>
+<p>Register the license:</p>
+<div class="paragraph">
+<p><code>license add -file-name FILENAME</code></p>
+</div>
+<div class="paragraph">
+<p>Provide the administrator account password when prompted.</p>
+</div>
+</li>
+<li>
+<p>Display the licenses in the system to confirm the license was added properly:</p>
+<div class="paragraph">
+<p><code>license show</code></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adding-the-esxi-hypervisor-hosts">Adding the ESXi hypervisor hosts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You must register each hypervisor host where an ONTAP Select node will run. As part of this, the Deploy administration utility authenticates either to the vCenter server managing the host or directly to the ESXi standalone host.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>Before you register a host that is managed by vCenter, you must add a management server account for the vCenter server. If the host is not managed by vCenter, you can provide the host credential as part of registering the host. You should use this procedure to add each host.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Sign in to the Deploy utility CLI using SSH with the administrator account.</p>
+</li>
+<li>
+<p>If the host is managed by a vCenter server, add the vCenter account credential:</p>
+<div class="paragraph">
+<p><code>credential add -hostname &lt;FQDN|IP&gt; -type vcenter -username VCENTER_USERNAME</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>credential add -hostname vc.select.company-demo.com -type vcenter -username administrator@vsphere.local</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Register the host:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Register a standalone host not managed by vCenter:<br>
+<code>host register -name &lt;FQDN|IP&gt; -hypervisor-type ESX -username ESX_USERNAME</code></p>
+</li>
+<li>
+<p>Register a host managed by vCenter:<br>
+<code>host register -name &lt;FQDN|IP&gt; -hypervisor-type ESX -mgmt-server &lt;FQDN| IP&gt;</code></p>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Display the state of the host and confirm it is authenicated.</p>
+<div class="paragraph">
+<p><code>host show -name &lt;FQDN|IP&gt; -detailed</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>host show -name 10.234.81.14 -detailed</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creating-and-configuring-an-ontap-select-cluster">Creating and configuring an ONTAP Select cluster</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You must create and then configure the ONTAP Select cluster. After the cluster is configured, you can configure the individual nodes.</p>
+</div>
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>You must decide how many nodes the cluster contains and have the associated configuration information.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>When you create an ONTAP Select cluster, the Deploy utility automatically generates the node names based on the cluster name and node count that you provide. Deploy also generates the unique node identifiers.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Sign in to the Deploy utility CLI using SSH with the administrator account.</p>
+</li>
+<li>
+<p>Create the cluster:</p>
+<div class="paragraph">
+<p><code>cluster create -name CLUSTERNAME -node-count NODES</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster create -name test-cluster -node-count 1</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the cluster:</p>
+<div class="paragraph">
+<p><code>cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK -gateway IP_ADDRESS -dns-servers &lt;FQDN|IP&gt;_LIST -dns-domains DOMAIN_LIST</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
+-gateway 10.234.81.1 -dns-servers 10.221.220.10 -dnsdomains select.company-demo.com</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Display the configuration and state of the cluster:</p>
+<div class="paragraph">
+<p><code>cluster show -name CLUSTERNAME -detailed</code></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuring-an-ontap-select-node">Configuring an ONTAP Select node</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You must configure each of the nodes in the ONTAP Select cluster.</p>
+</div>
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>You must have the configuration information for the node. The capacity tier license file should be uploaded and installed at the Deploy utility.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>You should use this procedure to configure each node. A capacity tier license is applied to the node in this example.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Sign in to the Deploy utility CLI using SSH with the administrator account.</p>
+</li>
+<li>
+<p>Determine the names assigned to the cluster nodes:</p>
+<div class="paragraph">
+<p><code>node show -cluster-name CLUSTERNAME</code></p>
+</div>
+</li>
+<li>
+<p>Select the node and perform basic configuration:<br>
+<code>node modify -name NODENAME -cluster-name CLUSTERNAME -host-name &lt;FQDN|IP&gt; -license-serial-number NUMBER -instance-type TYPE -passthrough-disks false</code></p>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.81.14
+-license-serial-number 320000nnnn -instance-type small -passthrough-disks false</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The RAID configuration for the node is indicated with the <em>passthrough-disks</em> parameter. If you are using a local hardware RAID controller, this value must be false. If you are using software RAID, this value must be true.</p>
+</div>
+<div class="paragraph">
+<p>A capacity tier license is used for the ONTAP Select node.</p>
+</div>
+</li>
+<li>
+<p>Display the network configuration available at the host:</p>
+<div class="paragraph">
+<p><code>host network show -host-name &lt;FQDN|IP&gt; -detailed</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>host network show -host-name 10.234.81.14 -detailed</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Perform network configuration of the node:</p>
+<div class="paragraph">
+<p><code>node modify -name NODENAME -cluster-name CLUSTERNAME -mgmt-ip IP -management-networks NETWORK_NAME -data-networks NETWORK_NAME -internal-network NETWORK_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>When deploying a single-node cluster, you do not need an internal network and should remove -internal-network.</p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.21
+-management-networks sDOT_Network -data-networks sDOT_Network</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Display the configuration of the node:</p>
+<div class="paragraph">
+<p><code>node show -name NODENAME -cluster-name CLUSTERNAME -detailed</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>node show -name test-cluster-01 -cluster-name test-cluster -detailed</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="attaching-storage-to-an-ontap-select-nodes">Attaching storage to an ONTAP Select nodes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You must configure the storage used by each of the nodes in the ONTAP Select cluster. Each node must be assigned at least one storage pool.</p>
+</div>
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>You must have created the storage pool using VMware vSphere.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>This procedure assumes that a local hardware RAID controller is used. You should configure the storage at each node in the ONTAP Select cluster.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Sign in to the Deploy utility CLI using SSH with the administrator account.</p>
+</li>
+<li>
+<p>Display the storage pools available at the host:</p>
+<div class="paragraph">
+<p><code>host storage pool show -host-name &lt;FQDN|IP&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>host storage pool show -host-name 10.234.81.14</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also obtain the available storage pools through VMware vSphere.</p>
+</div>
+</li>
+<li>
+<p>Attach an available storage pool to the ONTAP Select node:</p>
+<div class="paragraph">
+<p><code>node storage pool attach -name POOLNAME -cluster-name CLUSTERNAME -node-name NODENAME -capacity-limit LIMIT</code></p>
+</div>
+<div class="paragraph">
+<p>If you include the -capacity-limit parameter, specify the value as GB or TB.</p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>node storage pool attach -name sDOT-02 -cluster-name test-cluster -
+node-name test-cluster-01 -capacity-limit 500GB</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Display the storage pools attached to the node:</p>
+<div class="paragraph">
+<p><code>node storage pool show -cluster-name CLUSTERNAME -node-name NODENAME</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>node storage pool show -cluster-name test-cluster -node-name testcluster-01</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="deploying-an-ontap-select-cluster">Deploying an ONTAP Select cluster</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After the cluster and nodes have been configured, you can deploy the cluster.</p>
+</div>
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>Before deploying a multi-node cluster, you should run the network connectivity checker to confirm the connectivity among the cluster nodes on the internal network.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Sign in to the Deploy utility CLI using SSH with the administrator account.</p>
+</li>
+<li>
+<p>Deploy the ONTAP Select cluster:</p>
+<div class="paragraph">
+<p><code>cluster deploy -name CLUSTERNAME</code></p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster deploy -name test-cluster</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Provide the password to be used for the ONTAP administrator account when prompted.</p>
+</div>
+</li>
+<li>
+<p>Display the status of the cluster to determine when it has been successfully deployed successfully:</p>
+<div class="paragraph">
+<p><code>cluster show -name CLUSTERNAME</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">After you finish</div>
+<p>You should back up the ONTAP Select Deploy configuration data.</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/main/task_cli_deploy_cluster.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-select/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[Deploying an ONTAP Select cluster using the CLI](https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_cluster.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-select/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-select/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/ontap-select/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/ontap-select/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/ontap-select/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/ontap-select/js/www-ntap.js'></script>
+  </body>
+
+  
+</html>
