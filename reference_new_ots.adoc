@@ -15,6 +15,10 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
+== Processor family support
+
+Beginning with ONTAP Select 9.9.1 only CPU models based on Intel Xeon Sandy Bridge or later are supported.
+
 == Updated VMware ESXi support
 
 *VMware ESXi only.* There are changes for ONTAP Select 9.9.1 regarding the support for VMware ESXi:
