@@ -43,7 +43,7 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 . Click the *Administration* tab at the top of the page.
 
-. Click *Licenses* and click *Capacity Tier*.
+. Click *Licenses* and click *Capacity Pools*.
 
 . Optionally click *Filter* and to limit the licenses displayed.
 

@@ -68,7 +68,7 @@ When configuring an ONTAP Select host, you should be aware of the following:
 
 ==== One or more RAID groups
 
-Each ONTAP Select host must have a single RAID controller. You should create a single RAID group for ONTAP Select. However, in certain situations you might consider creating more than one RAID group. Refer to link:rt_plan_best_practices.html[Best practices].
+Each ONTAP Select host must have a single RAID controller. You should create a single RAID group for ONTAP Select. However, in certain situations you might consider creating more than one RAID group. Refer to link:reference_plan_best_practices.html[Summary of best practices].
 
 === Storage pool considerations
 
