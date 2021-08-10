@@ -27,7 +27,7 @@ You must perform this task for each capacity pool used by the ONTAP Select nodes
 
 . Access the NetApp Support Site using a web browser and sign in.
 
-. Click *Products* at the top and then click *Software Licenses*.
+. Click *Systems* at the top and then click *Software Licenses*.
 
 . Type the license serial number for the capacity pool and click *Go!*.
 
