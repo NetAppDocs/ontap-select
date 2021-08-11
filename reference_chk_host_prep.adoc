@@ -39,6 +39,8 @@ NetApp recommends that the following firewall ports are opened to allow access t
 
 * Ports 7200 – 7400 (both inbound and outbound traffic)
 
+You should also be familiar with the vCenter rights that are required. See link:reference_plan_ots_vcenter.html[VMware vCenter server] for more information.
+
 == ONTAP Select cluster network preparation
 
 You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and HA capability.
