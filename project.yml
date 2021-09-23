@@ -1,0 +1,314 @@
+sidebar:
+  entries:
+    - title: ONTAP Select 9.9.1 docs
+      url: /index.html
+    - title: Release Notes
+      url: /reference_release_notes.html
+    - title: Concepts
+      entries:
+        - title: Product overview
+          url: /concept_ots_overview.html
+        - title: ONTAP Select Deploy
+          url: /concept_ots_deploy.html
+        - title: Business use cases
+          entries:
+            - title: Business needs and usage scenarios
+              url: /concept_usecase_overview.html
+            - title: Remote and branch office
+              url: /concept_usecase_robo.html
+            - title: Private cloud and data center
+              url: /concept_usecase_private_cloud.html
+            - title: MetroCluster SDS
+              url: /concept_usecase_mc_sds.html
+        - title: Terminology
+          url: /concept_terminology.html
+    - title: Plan
+      entries:
+        - title: Deployment workflow
+          url: /concept_workflow_deploy.html
+        - title: ONTAP Select
+          entries:
+            - title: General requirements
+              url: /reference_plan_ots_general.html
+            - title: Hypervisor and hardware
+              url: /reference_plan_ots_hardware.html
+            - title: Storage and RAID
+              url: /reference_plan_ots_storage.html
+            - title: ONTAP Select vNAS
+              url: /reference_plan_ots_vnas.html
+            - title: Networking
+              url: /reference_plan_ots_networking.html
+            - title: Two-node clusters
+              url: /reference_plan_ots_two_node.html
+            - title: Remote and branch offices
+              url: /reference_plan_ots_robo.html
+            - title: MetroCluster SDS
+              url: /reference_plan_ots_mcc_sds.html
+            - title: VMware vCenter
+              url: /reference_plan_ots_vcenter.html
+            - title: VMware vCenter plug-in
+              url: /reference_plan_ots_plugin.html
+        - title: ONTAP Select Deploy
+          entries:
+            - title: General requirements
+              url: /reference_plan_dep_general.html
+            - title: VMware environment
+              url: /reference_plan_dep_vmware.html
+        - title: Best practices
+          url: /reference_plan_best_practices.html
+    - title: License
+      entries:
+        - title: Options
+          entries:
+            - title: Evaluation licenses
+              url: /concept_lic_evaluation.html
+            - title: Production licenses
+              url: /concept_lic_production.html
+            - title: Platform license offerings
+              url: /concept_lic_platforms.html
+        - title: Capacity pools licensing model
+          entries:
+            - title: Operational details
+              url: /concept_lic_cp_operation.html
+            - title: Node serial numbers
+              url: /concept_lic_cp_serial_number.html
+            - title: Restrictions
+              url: /concept_lic_cp_restrictions.html
+            - title: Capacity pools versus capacity tiers
+              url: /concept_lic_cp_compare_ct.html
+            - title: Summary of benefits
+              url: /concept_lic_cp_benefits.html
+        - title: Purchase
+          entries:
+            - title: Licensing workflow
+              url: /concept_lic_workflow.html
+            - title: Capacity tiers
+              url: /task_lic_acquire_ct.html
+            - title: Capacity pools
+              url: /task_lic_acquire_cp.html
+        - title: ONTAP features
+          url: /reference_lic_ontap_features.html
+    - title: Install
+      entries:
+        - title: Pre-installation checklist
+          entries:
+            - title: Host preparation checklist
+              url: /reference_chk_host_prep.html
+            - title: Deploy utility required information
+              url: /reference_chk_deploy_req_info.html
+            - title: ONTAP Select required information
+              url: /reference_chk_select_req_info.html
+            - title: NVMe host configuration
+              url: /task_chk_nvme_configure.html
+        - title: Install ONTAP Select Deploy
+          url: /task_install_deploy.html
+        - title: Deploy a cluster
+          url: /task_deploy_cluster.html
+        - title: Initial cluster state
+          url: /reference_initial_state.html
+    - title: Administer
+      entries:
+        - title: Before you begin
+          url: /concept_adm_before.html
+        - title: Upgrade nodes
+          url: /concept_adm_upgrading_nodes.html
+        - title: Diagnostics and support
+          url: /task_adm_support.html
+        - title: Security
+          url: /task_adm_security.html
+        - title: Network connectivity
+          url: /task_adm_connectivity.html
+        - title: Mediators
+          url: /task_adm_mediators.html
+        - title: Clusters
+          url: /task_adm_clusters.html
+        - title: Nodes and hosts
+          entries:
+            - title: VM video console
+              url: /task_adm_video_console.html
+            - title: Resizing the cluster nodes
+              url: /task_adm_resize.html
+            - title: Replacing failed SW RAID drives
+              url: /task_adm_replace_drives_swraid.html
+            - title: Upgrading to VMFS6
+              url: /task_adm_upgrade_vmfs6.html
+        - title: Licenses
+          url: /task_adm_licenses.html
+    - title: Deep dive
+      entries:
+        - title: Storage
+          entries:
+            - title: General concepts and characteristics
+              url: /concept_stor_concepts_chars.html
+            - title: Hardware RAID services for local attached storage
+              url: /concept_stor_hwraid_local.html
+            - title: Software RAID services for local attached storage
+              url: /concept_stor_swraid_local.html
+            - title: VSAN and external array configurations
+              url: /concept_stor_vsan_external.html
+            - title: Increasing storage capacity
+              url: /concept_stor_capacity_inc.html
+            - title: Storage efficiency support
+              url: /concept_stor_eff_support.html
+        - title: Networking
+          entries:
+            - title: General concepts and characteristics
+              url: /concept_nw_concepts_chars.html
+            - title: Single and multi node configuration
+              url: /concept_nw_single_multi_node.html
+            - title: Internal and external networks
+              url: /concept_nw_internal_external.html
+            - title: Supported configurations
+              url: /concept_nw_supported_configs.html
+            - title: VMWare vSphere VSwitch configuration
+              url: /concept_nw_vsphere_vswitch_config.html
+            - title: Physical switch configuration
+              url: /concept_nw_physical_switch_config.html
+            - title: Data and management separation
+              url: /concept_nw_data_mgmt_separation.html
+        - title: High availability architecture
+          entries:
+            - title: HA configuration
+              url: /concept_ha_config.html
+            - title: Synchronous replication and mirrored aggregates
+              url: /concept_ha_mirroring.html
+            - title: Other high availability functions
+              url: /concept_ha_other.html
+        - title: Performance
+          entries:
+            - title: General considerations
+              url: /concept_perf_general.html
+            - title: 9.4 Premium HA direct attached SSD storage
+              url: /concept_perf_premium_ha_direct_ssd_94.html
+            - title: 9.5 Premium HA direct attached SSD storage
+              url: /concept_perf_premium_ha_direct_ssd_95.html
+            - title: 9.6 Premium HA direct attached SSD storage
+              url: /concept_perf_premium_ha_direct_ssd_96.html
+    - title: Integrate with vCenter
+      entries:
+        - title: Getting started
+          entries:
+            - title: Overview
+              url: /concept_vpi_overview.html
+            - title: Architecture
+              url: /concept_vpi_architecture.html
+            - title: Planning
+              url: /concept_vpi_planning.html
+        - title: Manage the plug-in
+          entries:
+            - title: Before you begin
+              url: /concept_vpi_manage_before.html
+            - title: Install
+              url: /task_vpi_install.html
+            - title: Access
+              url: /task_vpi_access.html
+            - title: Upgrade and remove
+              url: /task_vpi_upgrade.html
+        - title: Manually remove the plug-in
+          url: /task_vpi_manually_remove.html
+        - title: Deploy a cluster
+          url: /task_vpi_deploy_cluster.html
+        - title: vCenter integration
+          url: /concept_vpi_vcenter_integration.html
+        - title: Administer
+          entries:
+            - title: Diagnostics and support
+              url: /task_vpi_adm_support.html
+            - title: Networking
+              url: /task_vpi_adm_network.html
+            - title: Clusters
+              url: /task_vpi_adm_clusters.html
+            - title: Licenses
+              url: /task_vpi_adm_licenses.html
+        - title: Troubleshoot
+          url: /reference_vpi_troubleshooting.html
+    - title: Automate with REST
+      entries:
+        - title: Concepts
+          entries:
+            - title: REST web services
+              url: /concept_api_rest.html
+            - title: Access the Deploy API
+              url: /concept_api_how_access.html
+            - title: Deploy API versioning
+              url: /concept_api_versions.html
+            - title: Basic operation
+              url: /concept_api_operation.html
+            - title: Request and response transaction
+              url: /concept_api_transaction.html
+            - title: Asynchronous processing
+              url: /concept_api_async_proc.html
+        - title: Access with a browser
+          entries:
+            - title: Before you begin
+              url: /concept_api_before_browser.html
+            - title: Access the doc page
+              url: /task_api_access_doc_page.html
+            - title: Understanding an API call
+              url: /task_api_understanding_call.html
+        - title: Workflow processes
+          entries:
+            - title: Before you begin
+              url: /concept_api_before_workflows.html
+            - title: Workflow 1 Creating a cluster
+              url: /reference_api_workflow01.html
+        - title: Access with Python
+          entries:
+            - title: Before you begin
+              url: /concept_api_before_python.html
+            - title: Understanding the scripts
+              url: /concept_api_understanding_scripts.html
+        - title: Python code samples
+          entries:
+            - title: Create a cluster
+              url: /reference_api_script_cc.html
+            - title: JSON to create a cluster
+              url: /reference_api_json_cc.html
+            - title: Add a node license
+              url: /reference_api_script_anl.html
+            - title: Delete a cluster
+              url: /reference_api_script_dc.html
+            - title: Common support module
+              url: /reference_api_script_common.html
+            - title: Resize cluster nodes
+              url: /reference_api_script_resize.html
+    - title: Automate with Ansible
+      url: /concept_automate_ansible.html
+    - title: Use the CLI
+      entries:
+        - title: Before you begin
+          url: /concept_cli_before.html
+        - title: Sign in using SSH
+          url: /task_cli_signing_in.html
+        - title: Deploy a cluster
+          url: /task_cli_deploy_cluster.html
+        - title: Security
+          url: /task_cli_security.html
+        - title: Network connectivity
+          url: /task_cli_connectivity.html
+        - title: Clusters
+          url: /task_cli_clusters.html
+        - title: Nodes and hosts
+          entries:
+            - title: Upgrading ESXi to 6.5 and higher
+              url: /task_cli_upgrade_esxi65.html
+        - title: Deploy utility
+          entries:
+            - title: Upgrade a Deploy instance
+              url: /task_cli_upgrade_deploy.html
+            - title: Migrate a Deploy instance
+              url: /task_cli_migrate_deploy.html
+            - title: Add ONTAP Select images
+              url: /task_cli_deploy_image_add.html
+            - title: Remove ONTAP Select images
+              url: /task_cli_deploy_image_remove.html
+            - title: Recover Deploy for a two-node cluster
+              url: /task_cli_deploy_recover_two_node.html
+    - title: FAQ
+      url: /reference_faq.html
+    - title: Get more information
+      url: /reference_additional_info.html
+    - title: Earlier versions
+      url: /reference_earlier_versions.html
+    - title: Legal notices
+      url: /reference_legal_notices.html
