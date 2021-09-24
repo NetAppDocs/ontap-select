@@ -53,7 +53,7 @@ You can connect to ONTAP Select using the following supported NetApp client soft
 
 To identify the supported versions of the client software, review the _NetApp Interoperability Matrix Tool_. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
 
-[IMPORTANT]
+[NOTE]
 The use of SnapCenter and the corresponding plug-ins requires server-based licenses. Storage system licensing of the SnapCenter plug-ins is not currently supported with ONTAP Select.
 
 Any other NetApp client software that is not included in the list is not supported by ONTAP Select.
