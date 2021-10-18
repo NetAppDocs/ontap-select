@@ -15,7 +15,8 @@ summary: Prepare each of the hypervisor hosts where an ONTAP Select node is depl
 [.lead]
 Prepare each of the hypervisor hosts where an ONTAP Select node is deployed. As part of preparing the hosts, carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
 
-IMPORTANT: The ONTAP Select Deploy administration utility does not perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster.
+[NOTE]
+The ONTAP Select Deploy administration utility does not perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster.
 
 == General hypervisor preparation
 

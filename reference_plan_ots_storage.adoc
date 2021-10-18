@@ -80,7 +80,7 @@ As part of planning an ONTAP Select deployment, you should be aware of the restr
 
 The most important storage restrictions are presented below. You should also review the _NetApp Interoperability Matrix Tool_ for more detailed information.
 
-[IMPORTANT]
+[TIP]
 ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the _License_ section for more information.
 
 ==== Calculating raw storage capacity
