@@ -23,7 +23,7 @@ image:ST_10.jpg[Migrate]
 
 Make sure the new host can support the ONTAP Select node. For example, if a RAID controller and DAS storage are used on the original host, a similar configuration should exist on the new host.
 
-[IMPORTANT]
+[NOTE]
 Severe performance issues can result if the ONTAP Select VM is rehosted in an unsuitable environment.
 
 .Steps

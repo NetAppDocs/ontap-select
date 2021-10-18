@@ -29,7 +29,7 @@ Based on the application type, you should determine if the deployment follows th
 
 There are several planning issues related to the hypervisor host that you should consider.
 
-[IMPORTANT]
+[CAUTION]
 You should not directly modify the configuration of an ONTAP Select virtual machine unless directed to do so by NetApp support. A virtual machine should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select virtual machine outside of the Deploy utility without assistance from NetApp support can cause the virtual machine to fail and render it unusable.
 
 Hypervisor independent::
