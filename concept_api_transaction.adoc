@@ -88,7 +88,7 @@ Specify `fields=**` to retrieve all the object fields, including those requiring
 * Custom field selection
 Use `fields=FIELDNAME` to specify the exact field you want. When requesting multiple fields, the values must be separated using commas without spaces.
 
-[IMPORTANT]
+[TIP]
 As a best practice, you should always identify the specific fields you want. You should only retrieve the set of inexpensive or expensive fields when needed. The inexpensive and expensive classification is determined by NetApp based on internal performance analysis. The classification for a given field can change at any time.
 
 ===== *Sorting objects in the output set*

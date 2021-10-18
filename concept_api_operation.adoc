@@ -23,7 +23,7 @@ A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select vir
 
 Each resource instance or object is assigned a unique identifier when it is created. These identifiers are globally unique within a specific instance of ONTAP Select Deploy. After issuing an API call that creates a new object instance, the associated id value is returned to the caller in the `location` header of the HTTP response. You can extract the identifier and use it on subsequent calls when referring to the resource instance.
 
-[IMPORTANT]
+[NOTE]
 The content and internal structure of the object identifiers can change at any time. You should only use the identifiers on the applicable API calls as needed when referring to the associated objects.
 
 ===== *Request identifiers*

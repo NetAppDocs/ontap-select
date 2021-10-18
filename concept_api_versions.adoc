@@ -23,5 +23,5 @@ ONTAP Select Deploy 2.8 and all later releases include version 3 of the REST API
 Deploy 2.7.2 and earlier::
 ONTAP Select Deploy 2.7.2 and all earlier releases include version 2 of the REST API.
 
-[IMPORTANT]
+[NOTE]
 Versions 2 and 3 of the REST API are not compatible. If you upgrade to Deploy 2.8 or later from an earlier release that includes version 2 of the API, you must update any existing code that directly accesses the API as well as any scripts using the command line interface.
