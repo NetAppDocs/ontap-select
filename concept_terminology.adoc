@@ -84,7 +84,7 @@ When a virtual machine is moved, the Deploy utility updates its internal databas
 Mediator service::
 The ONTAP Select Deploy utility includes a mediator service which connects to the nodes in the active two-node clusters. This service monitors each HA pair and assists in managing failures.
 
-[NOTE]
+[CAUTION]
 If you have one or more active two-node clusters, the ONTAP Select Deploy virtual machine administering the clusters must be running at all times. If the Deploy virtual machine is halted, the mediator service is unavailable and HA capability is lost for the two-node clusters.
 
 MetroCluster SDS::
@@ -107,7 +107,7 @@ When using direct-attached storage (DAS), RAID functionality is traditionally pr
 ONTAP Select image install::
 Beginning with ONTAP Select Deploy 2.8, the Deploy administration utility contains only a single version of ONTAP Select. The version included is the most current available at the time of release. For example, Deploy 2.8 contains ONTAP Select 9.4. The ONTAP Select image install feature allows you to add earlier versions of ONTAP Select to your instance of the Deploy utility, which can then be used when deploying an ONTAP Select cluster. See link:task_cli_deploy_image_add.html[Add ONTAP Select images for more information].
 
-[TIP]
+[NOTE]
 You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of Deploy. Adding later versions of ONTAP Select as they become available is not supported.
 
 Administering an ONTAP Select cluster after it is deployed::

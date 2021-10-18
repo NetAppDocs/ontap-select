@@ -19,7 +19,7 @@ You can remove ONTAP Select images from your instance of the Deploy administrati
 
 You can remove older ONTAP Select images that are not currently in use by a cluster or planned for use with a future cluster deployment.
 
-[TIP]
+[CAUTION]
 You should not remove any ONTAP Select images that are in use by a cluster.
 
 .Steps
