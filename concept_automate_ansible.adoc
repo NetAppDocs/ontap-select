@@ -50,7 +50,9 @@ Make sure the installation file is available before running the playbook includi
 [NOTE]
 The simplest way to provide these input values is through a global variables file in YML format. Pass this YML file in the playbook.
 
-The role has a single task that imports the Deploy OVA file onto the host, creates the VM, and runs it. You can access and download this role from the NetApp Ansible GitHub here: link:https://github.com/NetApp/ansible/tree/master/na_ots_deploy[na_ots_deploy]
+The role has a single task that imports the Deploy OVA file onto the host, creates the VM, and runs it. You can access and download this role from the NetApp Ansible GitHub here: link:https://github.com/netapp-automation/na_ots_deploy[na_ots_deploy^]
+
+// link:https://github.com/NetApp/ansible/tree/master/na_ots_deploy[na_ots_deploy]
 
 === na_ots_cluster
 
@@ -74,7 +76,9 @@ The role performs the following tasks:
 
 * Deploying the cluster
 
-As a result, the role completes with the cluster VM up and running and the ONTAP Select cluster fully deployed. You can access and download this role from the NetApp Ansible GitHub here: link:https://github.com/NetApp/ansible/tree/master/na_ots_cluster[na_ots_cluster]
+As a result, the role completes with the cluster VM up and running and the ONTAP Select cluster fully deployed. You can access and download this role from the NetApp Ansible GitHub here: link:https://github.com/NetApp-Automation/na_ots_cluster[na_ots_cluster^]
+
+// link:https://github.com/NetApp/ansible/tree/master/na_ots_cluster[na_ots_cluster]
 
 == Example Playbook
 
