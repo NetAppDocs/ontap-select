@@ -13,7 +13,7 @@ summary: Documentation for previous releases of ONTAP Select is available if you
 :imagesdir: ./media/
 
 [.lead]
-Documentation for previous releases of ONTAP Select is available if you are not running the latest version. You can also access the documentation when using the KVM hypervisor in an earlier release.
+Documentation for previous releases of ONTAP Select is available if you are not running the latest version. You can also access the documentation needed when using the KVM hypervisor with an earlier release.
 
 ===== *ONTAP Select 9.6 and earlier*
 

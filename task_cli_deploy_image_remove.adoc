@@ -15,12 +15,15 @@ summary: You can remove ONTAP Select images from your instance of the Deploy adm
 [.lead]
 You can remove ONTAP Select images from your instance of the Deploy administration utility when they are no longer needed.
 
+[CAUTION]
+You should not remove any ONTAP Select images that are in use by a cluster.
+
 .About this task
 
 You can remove older ONTAP Select images that are not currently in use by a cluster or planned for use with a future cluster deployment.
 
-[CAUTION]
-You should not remove any ONTAP Select images that are in use by a cluster.
+[NOTE]
+Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported.
 
 .Steps
 

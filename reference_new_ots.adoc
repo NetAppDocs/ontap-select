@@ -15,9 +15,6 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
-[NOTE]
-One of the major changes beginning with ONTAP Select 9.7 is the [blue]*Deploy administration utility is no longer assigned a version number*. Deploy now has the same version number as the associated ONTAP Select release. However, each update of the Deploy utility within a specific ONTAP Select release has a unique build number.
-
 == KVM hypervisor no longer supported
 
 Beginning with ONTAP Select 9.10.1 support for KVM has been dropped. You can only deploy ONTAP Select 9.10.1 on VMware ESXi.
