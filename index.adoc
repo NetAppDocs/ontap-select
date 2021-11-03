@@ -25,7 +25,7 @@ Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported.
 
 ONTAP Select 9.10.1 can be deployed on VMware ESXi. This site contains the documentation for ONTAP Select 9.10.1, 9.9.1, 9.8, and 9.7 running on VMware ESXi as well as the hypervisor-independent documentation (such as the REST API).
 
-You can find the release notes as well as documentation for the KVM version of the product supported in prior product releases at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
+You can find the release notes as well as documentation for the KVM version of the product supported in prior releases at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
 
 == Get more information and connect with peers
 
