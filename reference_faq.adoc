@@ -200,7 +200,7 @@ ONTAP Deploy uses the VMware VIX API to communicate with the vCenter and/or the 
 ONTAP Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses as follows:
 
 * Ping
-* SSH (port 23)
+* SSH (port 22)
 * SSL (port 443)
 
 For two-node clusters, ONTAP Deploy hosts the cluster mailboxes. Each ONTAP Select node must be able to reach ONTAP Deploy through iSCSI (port 3260).
