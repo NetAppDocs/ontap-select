@@ -7,7 +7,7 @@ settings:
     pdf_enabled: true
 sidebar:
   entries:
-    - title: ONTAP Select 9.9.1 docs
+    - title: ONTAP Select 9.10.1 docs
       url: /index.html
     - title: Release Notes
       url: /reference_release_notes.html
