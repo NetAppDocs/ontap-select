@@ -15,6 +15,9 @@ summary: Find answers to common questions about ONTAP Select.
 [.lead]
 Find answers to common questions about ONTAP Select.
 
+[NOTE]
+Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported. Questions involving KVM are only applicable to earlier releases that support KVM.
+
 == General
 
 Browse some general questions and answers.

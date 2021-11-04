@@ -25,6 +25,16 @@ The following product pages include links to a wide variety of ONTAP Select reso
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 
+=== ONTAP 9 resources
+
+* https://docs.netapp.com/us-en/ontap/[ONTAP 9 Documentation^]
++
+Provides the documentation for ONTAP 9 (except the CLI commands).
+
+* https://docs.netapp.com/ontap-9/index.jsp[ONTAP 9 Documentation Center^]
++
+Provides documentation for the ONTAP 9 CLI commands.
+
 ////
 === Videos
 

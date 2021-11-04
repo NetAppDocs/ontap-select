@@ -20,7 +20,7 @@ The cluster creation workflow differs in the following situations:
 * The ESXi host is not managed by vCenter (standalone host)
 * Multiple nodes or hosts are used within the cluster
 * Cluster is deployed in a production environment with a purchased license
-* The KVM hypervisor is used instead of VMware ESXi
+* The KVM hypervisor is used instead of VMware ESXi (KVM is no longer supported beginning with ONTAP Select 9.10.1)
 
 == 1. Register vCenter server credential
 
