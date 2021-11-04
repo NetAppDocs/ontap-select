@@ -15,12 +15,12 @@ summary: You can remove ONTAP Select images from your instance of the Deploy adm
 [.lead]
 You can remove ONTAP Select images from your instance of the Deploy administration utility when they are no longer needed.
 
+[CAUTION]
+You should not remove any ONTAP Select images that are in use by a cluster.
+
 .About this task
 
 You can remove older ONTAP Select images that are not currently in use by a cluster or planned for use with a future cluster deployment.
-
-[CAUTION]
-You should not remove any ONTAP Select images that are in use by a cluster.
 
 .Steps
 
@@ -45,7 +45,7 @@ Note the version number and hypervisor platform in each case.
 Example
 `rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova`
 
-. Optionally remove a KVM image.
+. Optionally remove a KVM image when using a release prior to ONTAP Select 9.10.1.
 +
 Example
 `rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar`

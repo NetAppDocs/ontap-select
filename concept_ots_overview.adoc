@@ -33,6 +33,9 @@ An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each
 ===== *ONTAP Select Deploy administration utility*
 The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy ONTAP Select clusters in a production environment. A current version of the ONTAP Select node image is bundled with the Deploy utility.
 
+[NOTE]
+Beginning with ONTAP Select 9.7 the Deploy administration utility is no longer assigned a separate version number. Deploy has the same version number as the associated ONTAP Select release. However, each update of the Deploy utility within a specific ONTAP Select release has a unique build number.
+
 == Illustration of a typical deployment
 
 The following figure illustrates the ONTAP Select Deploy administration utility being used to deploy and support a four-node ONTAP Select cluster. The Deploy utility and ONTAP Select nodes run as separate virtual machines on dedicated hypervisor hosts.
