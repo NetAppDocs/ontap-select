@@ -33,7 +33,7 @@ In addition, you should make sure that the firewall ports are configured to allo
 
 By default, VMware allows access on the following ports:
 
-* Port 23 and ports 1024 – 65535 (inbound traffic)
+* Port 22 and ports 1024 – 65535 (inbound traffic)
 * Ports 0 – 65535 (outbound traffic)
 
 NetApp recommends that the following firewall ports are opened to allow access to vSphere:
