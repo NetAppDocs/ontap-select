@@ -17,4 +17,4 @@ There are several new and changed features provided with the current release of 
 
 == KVM hypervisor is no longer supported
 
-Beginning with ONTAP Select 9.10.1 support for KVM has been dropped. You can only deploy ONTAP Select 9.10.1 on VMware ESXi.
+Beginning with ONTAP Select 9.10.1 support for KVM has been dropped. You can deploy ONTAP Select 9.10.1 on VMware ESXi.
