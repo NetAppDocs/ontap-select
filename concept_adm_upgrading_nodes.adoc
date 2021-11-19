@@ -20,21 +20,21 @@ You cannot use the Deploy administration utility to perform upgrades of existing
 
 == General procedure
 
-At a high level, you should use the following steps to upgrade an existing ONTAP Select node:
+At a high level, you should use the following steps to upgrade an existing ONTAP Select node.
 
-. Navigate to downloads page at the NetApp support site.
+. Navigate to downloads page at the NetApp Support Site.
 +
 https://mysupport.netapp.com/site/downloads[NetApp Support Downloads^]
 
 . Click *ONTAP Select Node Upgrade*.
 
-. Select and download the appropriate upgrade version responding to all prompts as needed.
+. Select and download the appropriate upgrade image responding to all prompts as needed.
 
 . Review the Release Notes for additional information and any required procedures before upgrading an ONTAP Select node. You can access the Release Notes for your version of ONTAP Select at the product library page.
 +
 https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^]
 
-. Upgrade the ONTAP Select node using the ONTAP upgrade procedures and the ONTAP Select upgrade file.
+. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file.
 +
 https://docs.netapp.com/us-en/ontap/[ONTAP 9 documentation^]
 
