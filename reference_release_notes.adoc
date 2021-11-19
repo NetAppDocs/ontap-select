@@ -21,8 +21,8 @@ You need an account to sign in to the NetApp Support Site to access the Release 
 
 ===== Current version of ONTAP Select
 
-You can access the https://library.netapp.com/ecm/ecm_download_file/ECMLP2879854[ONTAP Select 9.10.1 Release Notes] to view details of the current version.
+You can access the https://library.netapp.com/ecm/ecm_download_file/ECMLP2879854[ONTAP Select 9.10.1 Release Notes^] to view details of the current version.
 
 ===== Past versions of ONTAP Select
 
-To access the Release Notes for past versions of the product, see the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library].
+To access the Release Notes for past versions of the product, see the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
