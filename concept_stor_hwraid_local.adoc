@@ -155,4 +155,5 @@ Although blocks changed on the NVRAM VMDK are cached in the local RAID controlle
 
 image:ST_13.jpg[Incoming writes to ONTAP Select VM]
 
-Note that the NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 6.5 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.
+[NOTE]
+The NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 6.5 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.
