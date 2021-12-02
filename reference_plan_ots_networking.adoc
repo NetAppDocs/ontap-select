@@ -133,11 +133,11 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |Description
 
 |TLS (443)
-|Deploy to either vSphere (managed) or ESXi (unmanaged)
+|Deploy to vCenter server (managed) or ESXi (unmanaged)
 |VMware VIX API
 
 |902
-|Deploy to vSphere/ESXi
+|Deploy to vCenter server (managed) or ESXi (unmanaged)
 |VMware VIX API
 
 |ICMP
