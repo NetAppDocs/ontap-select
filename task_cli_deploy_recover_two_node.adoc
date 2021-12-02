@@ -194,7 +194,7 @@ These commands allow the ONTAP Select nodes to discover the mailbox disks on the
 
 . Determine the names of the mediator disks:
 +
-`disk show --container-type mediator`
+`disk show -container-type mediator`
 
 . Assign the mailbox disks to the two nodes:
 +
