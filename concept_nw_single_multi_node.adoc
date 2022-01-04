@@ -41,7 +41,7 @@ Cluster and node management LIFs are automatically created during ONTAP Select c
 
 === Management and data LIFs (e0a, e0b, and e0c)
 
-ONTAP ports e0a, e0b, and e0g are delegated as candidate ports for LIFs that carry the following types of traffic:
+ONTAP ports e0a, e0b, and e0c are delegated as candidate ports for LIFs that carry the following types of traffic:
 
 * SAN/NAS protocol traffic (CIFS, NFS, and iSCSI)
 * Cluster, node, and SVM management traffic
