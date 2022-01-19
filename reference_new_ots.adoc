@@ -17,12 +17,18 @@ There are several new and changed features provided with the current release of 
 
 == Support for VMware NSX-T
 
-ONTAP Select 9.10.1 has been qualified for NSX-T version- 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed using an OVA file with the ONTAP Select Deploy user interface.
+ONTAP Select 9.10.1 has been qualified for NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed using an OVA file with the ONTAP Select Deploy web user interface.
 
-However, when using NSX-T with an ONTAP Select multi-node cluster, the following issues or deficiencies exist:
+However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations:
 
 Cluster MTU::
-You must manually adjust the cluster MTU to 8800 to account for the overhead before deploying the cluster. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
+You must manually adjust the cluster MTU size to 8800 before deploying the cluster to account for the additional overhead. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
+
+Network 4x10Gb configuration::
+With ONTAP Select configurations where the ESXi host has four NICs, the Deploy utility prompts you to follow the best practice of splitting internal traffic across two different port groups and external traffic across two different port groups. Note that when using an overlay network, this configuration will not work and so you should disregard the recommendation. In this case, you should instead use only one internal port group and one external port group.
+
+Network connectivity checker::
+This utility provided through the Select Deploy CLI will fail when run against an NSX-T based network.
 
 == KVM hypervisor is no longer supported
 
