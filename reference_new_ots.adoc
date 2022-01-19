@@ -23,10 +23,10 @@ Cluster MTU::
 You must manually adjust the cluster MTU size to 8800 before deploying the cluster to account for the additional overhead. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
 
 Network 4x10Gb configuration::
-For ONTAP Select configurations on a VMware ESXi host with four NICs, the Deploy utility will prompt you to follow the best practice of splitting internal traffic across two different port groups and external traffic across two different port groups. However, when using an overlay network this configuration will not work and you should disregard the recommendation. In this case, you should instead use only one internal port group and one external port group.
+For ONTAP Select deployments on a VMware ESXi host configured with four NICs, the Deploy utility will prompt you to follow the best practice of splitting internal traffic across two different port groups and external traffic across two different port groups. However, when using an overlay network this configuration does not work and you should disregard the recommendation. In this case, you should instead use only one internal port group and one external port group.
 
 Network connectivity checker::
-This utility provided through the Deploy CLI will fail when it is run against an NSX-T based network.
+This Deploy CLI utility fails when it is run against an NSX-T based network.
 
 == KVM hypervisor is no longer supported
 
