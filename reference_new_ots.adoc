@@ -15,6 +15,15 @@ summary: There are several new and changed features provided with the current re
 [.lead]
 There are several new and changed features provided with the current release of ONTAP Select.
 
+== Support for VMware NSX-T
+
+ONTAP Select 9.10.1 has been qualified for NSX-T version- 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed using an OVA file with the ONTAP Select Deploy user interface.
+
+However, when using NSX-T with an ONTAP Select multi-node cluster, the following issues or deficiencies exist:
+
+Cluster MTU::
+You must manually adjust the cluster MTU to 8800 to account for the overhead before deploying the cluster. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
+
 == KVM hypervisor is no longer supported
 
 Beginning with ONTAP Select 9.10.1 support for KVM has been dropped. You can deploy ONTAP Select 9.10.1 on VMware ESXi.
