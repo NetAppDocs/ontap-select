@@ -15,13 +15,16 @@ summary: After deploying an ONTAP Select cluster, you can upgrade the hypervisor
 [.lead]
 After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance type of the nodes using the Deploy administration utility.
 
+[NOTE]
+You can only perform the cluster nodes resizing operation when using the capacity tiers licensing model. ONTAP Select nodes that have a capacity pools license cannot be resized.
+
 .Before you begin
 
 The cluster must be in the online state.
 
 .About this task
 
-This task describes how to use the Deploy web user interface. You can also use the Deploy CLI to perform the instance resizing. Regardless of which interface you use, the time needed for the resizing operation can vary significantly based on several factors, and may take an extended amount of time to complete. You can only resize a node to a larger size.
+This task describes how to use the Deploy web user interface. You can also use the Deploy CLI to perform the instance resizing. Regardless of which interface you use, the time needed for the resizing operation can vary significantly based on several factors and may take an extended amount of time to complete. You can only resize a node to a larger size.
 
 .Steps
 
