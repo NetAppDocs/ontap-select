@@ -13,7 +13,7 @@ summary: There are several general requirements that you should consider as part
 :imagesdir: ./media/
 
 [.lead]
-There are several general requirements that you should consider as part of planning an ONTAP Select deployment.
+There are several general requirements you should consider as part of planning an ONTAP Select deployment.
 
 == Cluster size and related considerations
 
