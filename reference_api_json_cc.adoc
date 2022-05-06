@@ -163,7 +163,7 @@ When creating or deleting an ONTAP Select cluster using the Python code samples,
 == Single-node cluster on KVM
 
 [NOTE]
-Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported. The sample below is applicable to earlier releases that support KVM.
+Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported when creating new clusters. The sample below is applicable to earlier releases that support KVM.
 
 [source,json]
 ---------------------------------------------------------------------
