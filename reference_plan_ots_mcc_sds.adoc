@@ -21,7 +21,7 @@ Before deploying MetroCluster SDS, your must assure that the following requireme
 Each node must have a premium or higher ONTAP Select license.
 
 ===== *Hypervisor platforms*
-MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as supported for a two-node cluster in a ROBO environment. Note that KVM is no longer supported beginning with ONTAP Select 9.10.1.
+MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as supported for a two-node cluster in a ROBO environment. Note that KVM is no longer supported with ONTAP Select 9.10.1 and later releases.
 
 ===== *Network configuration*
 Layer 2 connectivity is required between the participating sites. Both 10GbE and 1GbE are supported, including the following configurations:
