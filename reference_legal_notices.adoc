@@ -39,4 +39,6 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice file provides information about third-party copyright and licenses used in NetApp software.
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2879851[Notice for ONTAP Select 9.10.1^]
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2882083[Notice for ONTAP Select 9.11.1^]
+
+//* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2879851[Notice for ONTAP Select 9.10.1^]

@@ -32,7 +32,7 @@ ONTAP Select can be deployed on the following hypervisors:
 
 * VMware ESXi 6.5 U2 (build 8294253 or greater)
 * VMware ESXi 6.7 GA (build 8169922 or greater) including 6.7 U1, U2, and U3
-* VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1 and U2
+* VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1, U2, and U3C
 
 [NOTE]
 NetApp supports ONTAP Select on the identified versions of ESXi as long as VMware also continues to support the same versions.

@@ -8,7 +8,7 @@ settings:
     harmony_enabled: true
 sidebar:
   entries:
-    - title: ONTAP Select 9.10.1 docs
+    - title: ONTAP Select docs
       url: /index.html
     - title: Release Notes
       url: /reference_release_notes.html

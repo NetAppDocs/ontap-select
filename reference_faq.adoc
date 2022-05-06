@@ -16,7 +16,7 @@ summary: Find answers to common questions about ONTAP Select.
 Find answers to common questions about ONTAP Select.
 
 [NOTE]
-Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported. Questions involving KVM are only applicable to earlier releases that support KVM.
+Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported when creating a new cluster. Questions involving KVM are applicable only to earlier releases that support KVM.
 
 == General
 
@@ -118,7 +118,7 @@ Software RAID is a layer in the ONTAP software stack. Software RAID provides mor
 
 Some of the requirements for software RAID are as follows:
 
-* Supported for KVM and ESX
+* Supported for ESX and KVM (prior to ONTAP Select 9.10.1)
 * Size of supported physical disks: 200GB – 32TB
 * Only supported on DAS configurations
 * Only supported with SSDs
