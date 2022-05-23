@@ -13,11 +13,12 @@ summary: ONTAP Select offers full support for most ONTAP functionality, except t
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select offers full support for most ONTAP functionality, except those features that have hardware-specific dependencies.
+ONTAP Select generally offers full support for most ONTAP functionality. Many of the ONTAP features are licensed automatically for each node when you deploy a cluster. However some features require a separate license.
 
-ONTAP Select automatically licenses several features for each node when you deploy a cluster.
+[NOTE]
+ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
-===== *Included features*
+=== ONTAP features included by default
 
 The following features are included and licensed by default:
 
@@ -29,14 +30,14 @@ The following features are included and licensed by default:
 * FlexClone
 * SnapRestore
 * NetApp Volume Encryption
-
 * Deduplication and compression
 * ONTAP multitenancy capability
+* ONTAP S3
 * NetApp Volume Encryption (non-restricted countries only)
 
-===== *Separately licensed features*
+=== ONTAP features that are separately licensed
 
-You must acquire a separate license for any other features, including:
+You must acquire a separate license for any other ONTAP feature that is not activated by default, including:
 
 * SnapLock Enterprise
 * FabricPool
