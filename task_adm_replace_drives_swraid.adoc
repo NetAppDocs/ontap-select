@@ -20,11 +20,11 @@ Both the removal of the failed drive and the addition of a new drive (marked as 
 
 == Identify the failed drive
 
-After a drive fails, use the Deploy utility CLI to identify the disk that failed.
+When a drive fails, you need to use the ONTAP CLI to identify the disk that failed.
 
 .Steps
 
-. Sign in to the Deploy utility CLI using the administrator account.
+. Sign in to the ONTAP CLI using the administrator account.
 
 . Identify the disk that has failed.
 +
