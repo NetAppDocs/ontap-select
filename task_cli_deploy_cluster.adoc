@@ -221,11 +221,11 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 == Attaching storage to an ONTAP Select nodes
 
-You must configure the storage used by each of the nodes in the ONTAP Select cluster. Each node must always be assigned at least one storage pool. When using software RAID, each node must also be assigned at least one disk drive.
+You must configure the storage used by each node in the ONTAP Select cluster. Every node must always be assigned at least one storage pool. When using software RAID, each node must also be assigned at least one disk drive.
 
 .Before you begin
 
-You must create the storage pool using VMware vSphere. If you are using software RAID, you also need at least one available disk.
+You must create the storage pool using VMware vSphere. If you are using software RAID, you also need at least one available disk drive.
 
 .About this task
 
