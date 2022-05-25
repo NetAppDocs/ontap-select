@@ -221,19 +221,19 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 == Attaching storage to an ONTAP Select nodes
 
-You must configure the storage used by each of the nodes in the ONTAP Select cluster. Each node must be assigned at least one storage pool.
+You must configure the storage used by each of the nodes in the ONTAP Select cluster. Each node must always be assigned at least one storage pool. When using software RAID, each node must also be assigned at least one disk drive.
 
 .Before you begin
 
-You must have created the storage pool using VMware vSphere. If you are using software RAID, you need an available disk.
+You must create the storage pool using VMware vSphere. If you are using software RAID, you also need at least one available disk.
 
 .About this task
 
-This procedure assumes that a local hardware RAID controller is used. You should configure the storage at each node in the ONTAP Select cluster using steps 1 through 4. If you are using software RAID, you must also perform steps 5 and 6.
+When using a local hardware RAID controller, you need to perform steps 1 through 4. When using software RAID, you need to perform steps 1 through 6.
 
 .Steps
 
-. Sign in to the Deploy utility CLI using SSH with the administrator account.
+. Sign in to the Deploy utility CLI using SSH with the administrator account credentials.
 
 . Display the storage pools available at the host:
 +
@@ -270,9 +270,25 @@ Example
 node storage pool show -cluster-name test-cluster -node-name testcluster-01
 ----
 
-. If you are using software RAID, attach an available disk >>>
+. If you are using software RAID, attach the available drive or drives:
++
+`node storage disk attach -node-name NODENAME -cluster-name CLUSTERNAME -disks LIST_OF_DRIVES`
++
+Example
++
+----
+node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000:66:00.0 0000:67:00.0 0000:68:00.0
+----
 
-. If you are using software RAID, display the disks >>>
+. If you are using software RAID, display the disks attached to the node:
++
+`node storage disk show -node-name NODENAME -cluster-name CLUSTERNAME`
++
+Example
++
+----
+node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
+----
 
 == Deploying an ONTAP Select cluster
 

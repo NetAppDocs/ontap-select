@@ -18,9 +18,9 @@ ONTAP Select offers full support for most ONTAP functionality. Many of the ONTAP
 [NOTE]
 ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
-== ONTAP features enabled by default
+== ONTAP features automatically enabled by default
 
-The following features are included and licensed by default:
+The following features are included with ONTAP Select and licensed by default:
 
 * NFS
 * CIFS
@@ -37,7 +37,7 @@ The following features are included and licensed by default:
 
 === ONTAP features that are separately licensed
 
-You must acquire a separate license for any ONTAP feature that is not activated by default, including:
+You must acquire a separate license for any ONTAP feature that is not enabled by default, including:
 
 * SnapLock Enterprise
 * FabricPool
