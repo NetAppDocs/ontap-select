@@ -219,7 +219,7 @@ Example
 node show -name test-cluster-01 -cluster-name test-cluster -detailed
 ....
 
-== Attaching storage to an ONTAP Select nodes
+== Attaching storage to the ONTAP Select nodes
 
 You must configure the storage used by each node in the ONTAP Select cluster. Every node must always be assigned at least one storage pool. When using software RAID, each node must also be assigned at least one disk drive.
 
