@@ -121,7 +121,7 @@ Some of the requirements for software RAID are as follows:
 * Supported for ESX and KVM (prior to ONTAP Select 9.10.1)
 * Size of supported physical disks: 200GB – 32TB
 * Only supported on DAS configurations
-* Only supported with SSDs
+* Supported with either SSDs or NVMe
 * Requires a Premium or Premium XL ONTAP Select license
 * The hardware RAID controller should be absent or disabled or it should operate in SAS HBA mode
 * An LVM storage pool or datastore based on a dedicated LUN must be used for system disks: core dump, boot/NVRAM, and the Mediator.
