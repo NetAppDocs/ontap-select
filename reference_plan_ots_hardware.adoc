@@ -59,14 +59,29 @@ Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix 
 There are several common hardware requirements that apply to all platforms regardless of the node
 instance type or license offering.
 
-* Processor
-** Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
-* Ethernet network ports
-** 4 x 10GbE (recommended)
-** 2 x 10GbE
-** 1 x 10GbE
-** 4 x 1GbE (only for a two-node ROBO cluster)
-** 2 x 1GbE (only for a single-node cluster)
+.Processor
+* Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
+
+.Ethernet configuration
+
+[cols=3*,options="header"]
+|===
+| Cluster size
+| Minimum Requirements
+| Recommendation
+
+|Single node cluster
+|2 x 1GbE
+|2 x 10GbE
+
+|Two-node cluster or MetroCluster SDS
+|4 x 1GbE or 1 x 10GbE
+|2 x 10GbE
+
+|4/6/8 node cluster
+|2 x 10GbE
+|4 x 10GbE or 2 x 25/40GbE
+|===
 
 ==== Additional hardware requirements based on the instance type
 
