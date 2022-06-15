@@ -61,9 +61,13 @@ instance type or license offering.
 
 .Processor
 
+The supported microprocessors include the following:
+
 * Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
 
 .Ethernet configuration
+
+There are several supported Ethernet configurations based on the cluster size.
 
 [cols="30,35,35"*,options="*"]
 |===

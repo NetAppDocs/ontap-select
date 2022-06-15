@@ -21,6 +21,8 @@ Because the performance of the ONTAP Select VM is tied directly to the character
 
 .Network minimum and recommended configurations
 
+There are several supported Ethernet configurations based on the cluster size.
+
 [cols="30,35,35"*,options="*"]
 |===
 | Cluster size
