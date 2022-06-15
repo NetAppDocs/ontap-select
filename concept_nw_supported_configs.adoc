@@ -19,9 +19,7 @@ Server vendors understand that customers have different needs and choice is crit
 
 Because the performance of the ONTAP Select VM is tied directly to the characteristics of the underlying hardware, increasing the throughput to the VM by selecting higher-speed NICs results in a higher-performing cluster and a better overall user experience. Four 10Gb NICs or two higher-speed NICs (25/40 Gb/s) can be used to achieve a high performance network layout. There are a number of other configurations that are also supported. For two-node clusters, 4 x 1Gb ports or 1 x 10Gb ports are supported. For single node clusters, 2 x 1Gb ports are supported.
 
-//[cols="30,35,35"*,options="header"]
-
-*Network minimum and recommended configurations*
+.Network minimum and recommended configurations
 
 [cols="30,35,35"*,options="*"]
 |===
@@ -42,7 +40,8 @@ Because the performance of the ONTAP Select VM is tied directly to the character
 |4 x 10GbE or 2 x 25/40GbE
 |===
 
-*Network configuration using multiple physical switches*
+.Network configuration using multiple physical switches
+
 When sufficient hardware is available, NetApp recommends using the multiswitch configuration shown in the following figure, due to the added protection against physical switch failures.
 
 image:BP_02.jpg[Network configuration using multiple physical switches]

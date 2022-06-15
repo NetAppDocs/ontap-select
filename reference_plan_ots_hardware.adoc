@@ -59,13 +59,13 @@ Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix 
 There are several common hardware requirements that apply to all platforms regardless of the node
 instance type or license offering.
 
-*Processor*
+.Processor
 
 * Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
 
-*Ethernet configuration*
+.Ethernet configuration
 
-[cols="30,35,35"*,options="header"]
+[cols="30,35,35"*,options="*"]
 |===
 | Cluster size
 | Minimum Requirements
