@@ -15,7 +15,7 @@ summary: The sample Python scripts allow you to perform several different tasks.
 [.lead]
 The sample Python scripts allow you to perform several different tasks. You should understand the scripts before using them at a live Deploy instance.
 
-=== Common design characteristics
+== Common design characteristics
 
 The scripts have been designed with the following common characteristics:
 
@@ -28,7 +28,7 @@ Each script reads an input file based on its purpose. When creating or deleting 
 * Use a common support module
 The common support module _deploy_requests.py_ contains a single class. It is imported and used by each of the scripts.
 
-=== Creating a cluster
+== Creating a cluster
 
 You can create an ONTAP Select cluster using the script cluster.py. Based on the CLI parameters and contents of the JSON input file, you can modify the script to your deployment environment as follows:
 
@@ -49,7 +49,7 @@ The CLI input parameters for the script include:
 * Name of the JSON configuration file
 * Verbose flag for message output
 
-=== Adding a node license
+== Adding a node license
 If you choose to deploy a production cluster, you must add a license for each node using the script _add_license.py_. You can add the license before or after you deploy the cluster.
 
 The CLI input parameters for the script include:
@@ -60,7 +60,7 @@ The CLI input parameters for the script include:
 * ONTAP user name with privileges to add the license
 * Password for the ONTAP user
 
-=== Deleting a cluster
+== Deleting a cluster
 
 You can delete an existing ONTAP Select cluster using the script _delete_cluster.py_.
 

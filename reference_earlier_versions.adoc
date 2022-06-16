@@ -15,6 +15,6 @@ summary: Documentation for previous releases of ONTAP Select is available if you
 [.lead]
 Documentation for previous releases of ONTAP Select is available if you are not running the latest version. You can also access the documentation needed when using the KVM hypervisor with an earlier supported release.
 
-===== *ONTAP Select 9.6 and earlier*
+===== *ONTAP Select 9.5 and earlier*
 
 * https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293&archive=true[ONTAP Select product library^]
