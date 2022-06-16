@@ -15,14 +15,14 @@ summary: Some of the Deploy API calls, particularly those that create or modify 
 [.lead]
 Some of the Deploy API calls, particularly those that create or modify a resource, can take longer to complete than other calls. ONTAP Select Deploy processes these long-running requests asynchronously.
 
-===== *Asynchronous requests described using Job object*
+== Asynchronous requests described using Job object
 
 After making an API call that runs asynchronously, the HTTP response code 202 indicates the request has been successfully validated and accepted, but not yet completed. The request is processed as a background task which continues to run after the initial HTTP response to the client. The response includes the Job object anchoring the request, including its unique identifier.
 
 [NOTE]
 You should refer to the ONTAP Select Deploy online documentation page to determine which API calls operate asynchronously.
 
-===== *Querying the Job object associated with an API request*
+== Querying the Job object associated with an API request
 
 The Job object returned in the HTTP response contains several properties. You can query the state property to determine if the request completed successfully. A Job object can be in one of the following states:
 
@@ -46,7 +46,7 @@ Standard polling and long polling use the same API call to query a Job object. H
 [TIP]
 You should always use long polling to reduce the workload on the Deploy virtual machine.
 
-===== *General procedure for issuing an asynchronous request*
+== General procedure for issuing an asynchronous request
 
 You can use the following high-level procedure to complete an asynchronous API call:
 
