@@ -35,7 +35,7 @@ The following features are included with ONTAP Select and licensed by default:
 * ONTAP S3
 * NetApp Volume Encryption (non-restricted countries only)
 
-=== ONTAP features that are separately licensed
+== ONTAP features that are separately licensed
 
 You must acquire a separate license for any ONTAP feature that is not enabled by default, including:
 

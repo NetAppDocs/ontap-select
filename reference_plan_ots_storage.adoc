@@ -39,7 +39,7 @@ The minimum requirements for the RAID controller include:
 
 When deploying an ONTAP Select cluster on the VMware ESXi hypervisor, you can utilize the software RAID capability provided by ONTAP Select instead of a local hardware RAID controller. There are several requirements and restrictions you must be aware before deploying a cluster using software RAID.
 
-==== General requirements
+=== General requirements
 
 The environment for a software RAID deployment on VMware ESXi must meet the following core requirements:
 
@@ -59,11 +59,11 @@ You must deploy a new cluster with ONTAP Select 9.5 or later, using the Deploy a
 * No hardware RAID controller on the host
 
 [NOTE]
-If a hardware RAID controller is present, see the link:concept_stor_concepts_chars.html[Storage] section under _Deep dive_ for additional configuration requirements.
+If a hardware RAID controller is present, see the link:concept_stor_concepts_chars.html[Deep dive storage] section for additional configuration requirements.
 
 * VMware VMotion, HA, and DRS are not supported
 
-==== ONTAP Select node configuration
+=== ONTAP Select node configuration
 
 You must configure each ONTAP Select node and hypervisor host as follows to separate the system disks from the root and data aggregates:
 
@@ -83,11 +83,11 @@ The most important storage restrictions are presented below. You should also rev
 [TIP]
 ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the _License_ section for more information.
 
-==== Calculating raw storage capacity
+=== Calculating raw storage capacity
 
 The ONTAP Select storage capacity corresponds to the total allowable size of the virtual data and root disks attached to the ONTAP Select virtual machine. You should consider this when allocating capacity.
 
-==== Minimum storage capacity for a single-node cluster
+=== Minimum storage capacity for a single-node cluster
 
 The minimum size of the storage pool allocated for the node in a single-node cluster is:
 
@@ -96,7 +96,7 @@ The minimum size of the storage pool allocated for the node in a single-node clu
 
 The minimum allocation for a production deployment consists of 1 TB for user data, plus approximately 266 GB used by various ONTAP Select internal processes, which is considered required overhead.
 
-==== Minimum storage capacity for a multi-node cluster
+=== Minimum storage capacity for a multi-node cluster
 
 The minimum size of the storage pool allocated for each node in a multi-node cluster is:
 
@@ -108,7 +108,7 @@ The minimum allocation for a production deployment consists of 2 TB for user dat
 [NOTE]
 Each node in an HA pair must have the same storage capacity.
 
-==== Storage capacity and multiple storage pools
+=== Storage capacity and multiple storage pools
 
 You can configure each ONTAP Select node to use up to 400 TB of storage when using local direct-attached storage, VMware vSAN, or external storage arrays. However, a single storage pool has a maximum size of 64 TB when using direct-attached storage or external storage arrays. Therefore, if you plan to use more than 64 TB of storage in these situations, you must allocate multiple storage pools as follows:
 
@@ -118,11 +118,11 @@ You can configure each ONTAP Select node to use up to 400 TB of storage when usi
 [NOTE]
 A 2% buffer is left unused in each storage pool and does not require a capacity license. This storage is not used by ONTAP Select, unless a capacity cap is specified. If a capacity cap is specified, then that amount of storage will be used unless the amount specified falls in the 2% buffer zone. The buffer is needed to prevent occasional errors that occur when attempting to allocate all of the space in a storage pool.
 
-==== Storage capacity and VMware vSAN
+=== Storage capacity and VMware vSAN
 
 When using VMware vSAN, a datastore can be larger than 64 TB. However, you can only initially allocate up to 64 TB when creating the ONTAP Select cluster. After the cluster is created, you can allocate additional storage from the existing vSAN datastore. The vSAN datastore capacity that can be consumed by ONTAP Select is based on the VM storage policy set.
 
-==== Best practices
+=== Best practices
 
 You should consider the following recommendations regarding the hypervisor core hardware:
 
@@ -135,16 +135,16 @@ The drives you choose are limited based on the platform license offering.
 [NOTE]
 The disk drive requirements apply when using a local RAID controller and drives, as well as software RAID. These requirements do not apply to external storage accessed through the ONTAP Select vNAS solution.
 
-Standard::
+.Standard
 
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
 
-Premium::
+.Premium
 
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
 * 4 to 60 internal SSD
 
-Premium XL::
+.Premium XL
 
 * 8 to 60 internal HDD (NL-SAS, SATA, 10K SAS)
 * 4 to 60 internal SSD
