@@ -56,7 +56,7 @@ For ONTAP Select upgrades from 9.4, you must install ONTAP Select 9.4 on DAS SSD
 
 The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the ONTAP Select version and media type.
 
-*ONTAP Select storage efficiency configurations*
+.ONTAP Select storage efficiency configurations
 
 [cols=6,options="header"]
 |===
@@ -134,7 +134,7 @@ The following table summarizes the various storage efficiency options available,
 [small]#^3^ONTAP Select 9.5 vNAS by default does not support any storage efficiency policies. Review the vNAS section for details on Single Instance Data Logging (SIDL).#
 [small]#^4^ONTAP Select 9.6 supports a new license (Premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the current release.#
 
-==== Notes on upgrade behavior for DAS SSD configurations
+.Notes on upgrade behavior for DAS SSD configurations
 
 After upgrading to ONTAP Select 9.5 or later, wait for the `system node upgrade-revert show` command to indicate that the upgrade has completed before verifying the storage efficiency values for existing volumes.
 
@@ -153,6 +153,6 @@ On a system upgraded to ONTAP Select 9.5 or later, a new volume created on an ex
 ** Volumes with `storage policy inline-only` have their policy set to auto.
 ** Volumes with user defined storage efficiency policies have no change in policy, with the exception of volumes with `space guarantee = none`. These volumes have aggregate background deduplication enabled.
 
-==== Notes on Upgrade Behavior for DAS HDD Configuration
+.Notes on Upgrade Behavior for DAS HDD Configuration
 
 Storage efficiency features enabled prior to the upgrade are retained after the upgrade to ONTAP Select 9.5 or later. If no storage efficiencies were enabled prior to the upgrade, no storage efficiencies are enabled post-upgrade.
