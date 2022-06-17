@@ -15,7 +15,7 @@ summary: There are several planning issues related to the use of ONTAP Select vN
 [.lead]
 ONTAP Select vNAS is a solution allowing the ONTAP Select datastores to be external to the hypervisor host where the ONTAP Select virtual machine runs. These remote datastores can be accessed through VMware vSAN or a generic external storage array.
 
-==== Basic requirements and restrictions
+== Basic requirements and restrictions
 
 The ONTAP Select vNAS solution can be used with an ONTAP Select cluster of any size.
 
@@ -36,14 +36,14 @@ The following VMware features are not supported:
 * Fault Tolerance (FT)
 * Virtual datastore (VVOL)
 
-==== Configuration requirements
+== Configuration requirements
 
 If you plan to use a VMFS datastore on an external storage array (iSCSI, Fibre Channel, Fibre Channel over Ethernet), you must create a VMFS storage pool before configuring ONTAP Select to use the storage. If you use an NFS datastore, there is no need to create a separate VMFS datastore. All vSAN datastores must be defined within the same ESXi cluster.
 
 [CAUTION]
 You must provide a capacity limit for every datastore on VMware vSAN or an external storage array when configuring a host or performing a storage add operation. The capacity you specify must be within the allowed storage limits of the external storage. An error will occur if you do not provide a capacity limit or the external storage runs out of space during the disk creation operation.
 
-==== Best practices
+== Best practices
 
 Consult the available VMware documentation and adhere to the applicable best practices identified for ESXi hosts. In addition:
 
