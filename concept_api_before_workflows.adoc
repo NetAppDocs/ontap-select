@@ -15,7 +15,7 @@ summary: You should prepare to review and use the workflow processes.
 [.lead]
 You should prepare to review and use the workflow processes.
 
-=== Understanding the API calls used in the workflows
+== Understanding the API calls used in the workflows
 
 The ONTAP Select online documentation page includes the details of every REST API call. Rather than repeat those details here, each API call used in the workflow samples includes only the information you need to locate the call on the documentation page. After locating a specific API call, you can review the complete details of the call, including the input parameters, output formats, HTTP status codes, and request processing type.
 
@@ -28,6 +28,6 @@ The HTTP verb identifies the action performed on a resource. Each API call is ex
 * Path
 The path determines the specific resource which the action applies to as part of performing a call. The path string is appended to the core URL to form the complete URL identifying the resource.
 
-=== Constructing a URL to directly access the REST API
+== Constructing a URL to directly access the REST API
 In addition to the ONTAP Select documentation page, you can also access the Deploy REST API directly through a programming language such as Python. In this case, the core URL is slightly different than the URL used when accessing the online documentation page. When accessing the API directly, you must append /api to the domain and port string. For example:
 `\http://deploy.mycompany.com/api`

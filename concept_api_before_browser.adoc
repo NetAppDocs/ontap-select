@@ -15,11 +15,11 @@ summary: There are several things you should be aware of before using the Deploy
 [.lead]
 There are several things you should be aware of before using the Deploy online documentation page.
 
-=== Deployment plan
+== Deployment plan
 
 If you intend to issue API calls as part of performing specific deployment or administrative tasks, you should consider creating a deployment plan. These plans can be formal or informal, and generally contain your goals and the API calls to be used. Refer to Workflow processes using the Deploy REST API for more information.
 
-=== JSON examples and parameter definitions
+== JSON examples and parameter definitions
 
 Each API call is described on the documentation page using a consistent format. The content includes implementation notes, query parameters, and HTTP status codes. In addition, you can display details about the JSON used with the API requests and responses as follows:
 
@@ -29,6 +29,6 @@ If you click _Example Value_ on an API call, a typical JSON structure for the ca
 * Model
 If you click _Model_, a complete list of the JSON parameters is displayed, with a description for each parameter.
 
-=== Caution when issuing API calls
+== Caution when issuing API calls
 
 All API operations you perform using the Deploy documentation page are live operations. You should be careful not to mistakenly create, update, or delete configuration or other data.

@@ -15,7 +15,7 @@ summary: You can purchase an ONTAP Select capacity tier or capacity pool license
 [.lead]
 You can purchase an ONTAP Select capacity tier or capacity pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 
-=== What a platform license offering provides
+== What a platform license offering provides
 
 A specific license offering defines and restrictions the capabilities of the hypervisor host in two areas:
 
@@ -23,6 +23,10 @@ A specific license offering defines and restrictions the capabilities of the hyp
 * Additional features
 
 The license offerings are arranged in an ascending order of capabilities from standard to premium XL. In general, the license option you choose grants you the capabilities of that level and all lower levels. For example, the premium level provides the capabilities of both premium and standard.
+
+== Platform license offerings
+
+There are three platform license offerings available.
 
 === Standard
 
