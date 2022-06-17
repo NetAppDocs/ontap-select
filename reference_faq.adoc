@@ -108,7 +108,7 @@ If the ESX hosts are properly licensed, then there is no need for the ESX hosts 
 
 ===== *What is Software RAID?*
 
-ONTAP Select can use servers without a RAID controller. Only SSDs are supported with software RAID. Other drive types (including NVME) are not supported. The ONTAP Select boot and core disks must still reside inside a virtualized partition (storage pool or datastore). ONTAP Select uses RD2 (root-data-data partitioning) to partition the SSDs. Therefore, the ONTAP Select root partition resides on the same physical spindles that are used for the data aggregates. However, the root aggregate and the boot and core virtualized disks do not count against the capacity license.
+ONTAP Select can use servers without a hardware RAID controller. In this case, the RAID functionality is implemented in software. When using software RAID, both SSD and NVMe drives are supported. The ONTAP Select boot and core disks must still reside inside a virtualized partition (storage pool or datastore). ONTAP Select uses RD2 (root-data-data partitioning) to partition the SSDs. Therefore, the ONTAP Select root partition resides on the same physical spindles that are used for the data aggregates. However, the root aggregate and the boot and core virtualized disks do not count against the capacity license.
 
 All RAID methods available on AFF/FAS are also available to ONTAP Select. This includes RAID 4, RAID DP, and RAID-TEC. The minimum number of SSDs varies depending on the type of RAID configuration chosen. Best practices require the presence of at least one spare. The spare and parity disks do not count toward the capacity license.
 
