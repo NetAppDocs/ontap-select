@@ -32,12 +32,12 @@ The minimum administrative privileges needed to create and manage an ONTAP Selec
 
 === Host
 
-==== Configuration
+Configuration::
 
 * Network configuration
 * System management
 
-==== Local operations
+Local operations::
 
 * Create virtual machine
 * Delete virtual machine
@@ -49,19 +49,19 @@ The minimum administrative privileges needed to create and manage an ONTAP Selec
 
 === Virtual machine
 
-==== Configuration
+Configuration::
 
 All privileges in the category.
 
-==== Interaction
+Interaction::
 
 All privileges in the category.
 
-==== Inventory
+Inventory::
 
 All privileges in the category.
 
-==== Provisioning
+Provisioning::
 
 All privileges in the category.
 
