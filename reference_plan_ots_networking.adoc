@@ -64,7 +64,7 @@ In this environment, you should configure the traffic using two port groups as f
 * NIC1 is standby
 * NIC2 in active
 
-See the link:concept_stor_concepts_chars.html[Deep dive] section for more information about two-NIC deployments.
+See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about two-NIC deployments.
 
 == Four-NIC host with standard vSwitch
 
@@ -100,7 +100,7 @@ In this environment, you should configure the traffic using four port groups as 
 * NIC4 is active
 * NIC1, NIC2, NIC3 in standby
 
-See the link:concept_stor_concepts_chars.html[Deep dive] section for more information about four-NIC deployments.
+See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about four-NIC deployments.
 
 == Network traffic requirements
 
