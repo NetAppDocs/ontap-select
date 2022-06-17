@@ -44,7 +44,7 @@ multiple accounts each with a single privilege. For simplicity, the following ex
 the vCenter privileges across three separate roles that can then be assigned to the three
 corresponding accounts.
 
-==== Validating end user access to the plug-in
+=== Validating end user access to the plug-in
 
 You need an account to validate access to the plug-in through vSphere. The account must have the following vCenter privilege: sessions.validate.session. After the account is created in vCenter, you must define it to the Deploy administration utility. In the Deploy web user interface, click the Administration tab and then Credentials to provide the vCenter server location and credentials.
 
@@ -53,7 +53,7 @@ This account is used in the following ways:
 * The named vCenter server becomes available as an installation target in the plug-in registration dialog window.
 * The account is used by Deploy to validate vSphere user requests to access the plug-in after the plug-in has been installed.
 
-==== Managing the plug-in
+=== Managing the plug-in
 
 In the Deploy web user interface, you can install the plug-in and then upgrade or remove it. Each time you perform one of these management actions, you are prompted for a vCenter account in the popup window. Each of the management actions is controlled through a separate vCenter privilege.
 
@@ -66,7 +66,7 @@ To install, upgrade, and remove the plug-in, you must assign the following privi
 
 You can create a single role and account with all three privileges or divide the privileges among multiple accounts as needed.
 
-==== Accessing the plug-in
+=== Accessing the plug-in
 
 End users can access the plug-in through vSphere. You must assign the following privilege to the accounts that will use the plug-in:
 

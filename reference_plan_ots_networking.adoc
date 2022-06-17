@@ -15,21 +15,21 @@ summary: You must configure the hypervisor network correctly before deploying ON
 [.lead]
 You must configure the hypervisor network correctly before deploying ONTAP Select.
 
-==== Virtual switch options
+== Virtual switch options
 
 You must configure a virtual switch on each of the ONTAP Select hosts to support the external network and internal network (multi-node clusters only). As part of deploying a multi-node cluster, you should test the network connectivity on the internal cluster network.
 
 [NOTE]
 To learn more about how to configure a vSwitch on a hypervisor host and the high speed interface feature, see the link:concept_nw_concepts_chars.html[Deep dive networking] section.
 
-==== Upgrading to VMXNET3
+== Upgrading to VMXNET3
 
 Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an existing ONTAP Select node to version 9.5 or later, the driver is not automatically upgraded.
 
 [NOTE]
 Upgrading to VMXNET3 is not required at this time. However, if you choose to upgrade the driver, you must perform the upgrade manually. In this case, contact NetApp support for assistance.
 
-==== Cluster MTU
+== Cluster MTU
 
 A separate internal network is used to connect the ONTAP Select nodes in a multi-node cluster. Typically the MTU size for this network is 9000. However, there are situations where this MTU size is too large for the network connecting the ONTAP Select nodes. To accommodate the smaller frames, the MTU size used by ONTAP Select on the internal network can be in the range of 7500-9000 bytes.
 
@@ -42,7 +42,7 @@ The MTU size is displayed in the Cluster Details section of the cluster creation
 [NOTE]
 You can manually set the cluster MTU value if needed, based on the design of your network.
 
-==== Two-NIC host with standard vSwitch
+== Two-NIC host with standard vSwitch
 
 In order to improve ONTAP Select performance in a two-NIC configuration, you should isolate the internal and external network traffic using two port groups. This recommendation applies to the following specific configuration:
 
@@ -52,21 +52,21 @@ In order to improve ONTAP Select performance in a two-NIC configuration, you sho
 
 In this environment, you should configure the traffic using two port groups as follows:
 
-Port group 1::
+.Port group 1
 
 * Internal network (cluster, RSM, HA-IC traffic)
 * NIC1 is active
 * NIC2 in standby
 
-Port group 2::
+.Port group 2
 
 * External network (data and management traffic)
 * NIC1 is standby
 * NIC2 in active
 
-See the _Deep dive_ section for more information about two-NIC deployments.
+See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about two-NIC deployments.
 
-==== Four-NIC host with standard vSwitch
+== Four-NIC host with standard vSwitch
 
 In order to improve ONTAP Select performance in a four-NIC configuration, you should isolate the internal and external network traffic using four port groups. This recommendation applies to the following specific configuration:
 
@@ -76,37 +76,38 @@ In order to improve ONTAP Select performance in a four-NIC configuration, you sh
 
 In this environment, you should configure the traffic using four port groups as follows:
 
-Port group 1::
+.Port group 1
 
 * Internal network (cluster, RSM traffic)
 * NIC1 is active
 * NIC2, NIC3, NIC4 in standby
 
-Port group 2::
+.Port group 2
 
 * Internal network (cluster, HA-IC traffic)
 * NIC3 is active
 * NIC1, NIC2, NIC4 in standby
 
-Port group 3::
+.Port group 3
 
 * External network (data and management traffic)
 * NIC2 is active
 * NIC1, NIC3, NIC4 in standby
 
-Port group 4::
+.Port group 4
 
 * External network (data traffic)
 * NIC4 is active
 * NIC1, NIC2, NIC3 in standby
 
-See the _Deep dive_ section for more information about four-NIC deployments.
+See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about four-NIC deployments.
 
-==== Network traffic requirements
+== Network traffic requirements
 
 You must make sure that your firewalls are configured properly to allow the network traffic to flow among the various participants in an ONTAP Select deployment environment.
 
-Participants::
+.Participants
+
 There are several participants or entities that exchange network traffic as part of an ONTAP Select deployment. These are introduced, and then used in the summary description of the network traffic requirements.
 
 * Deploy
@@ -122,7 +123,7 @@ An ONTAP Select cluster
 * Admin WS
 Local administrative workstation
 
-Summary of network traffic requirements::
+.Summary of network traffic requirements
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 

@@ -17,7 +17,7 @@ summary: There are additional resources you can access to get help and find more
 [.lead]
 There are additional resources you can access to get help and find more information about ONTAP Select.
 
-=== ONTAP Select product resources
+== ONTAP Select product resources
 
 The following product pages include links to a wide variety of ONTAP Select resources.
 
@@ -25,7 +25,7 @@ The following product pages include links to a wide variety of ONTAP Select reso
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 
-=== ONTAP 9 resources
+== ONTAP 9 resources
 
 * https://docs.netapp.com/us-en/ontap/[ONTAP 9 Documentation^]
 +
@@ -43,19 +43,19 @@ There are several helpful videos available at the dedicated YouTube channel.
 * https://www.youtube.com/playlist?list=PLdXI3bZJEw7nn1ZJMF3mG2fCBD0Esl--o[NetApp ONTAP Select channel at YouTube^]
 ////
 
-=== Blogs
+== Blogs
 
 There is a collection of blog articles covering different aspects of ONTAP Select.
 
 * https://blog.netapp.com/tag/ontap-select/[NetApp ONTAP Select blogs^]
 
-=== Community
+== Community
 
 You can connect with other users to ask questions and contribute to the NetApp ONTAP Select community.
 
 * http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select[NetApp Community: ONTAP Select^]
 
-=== NetApp Interoperability Matrix Tool
+== NetApp Interoperability Matrix Tool
 
 The Interoperability Matrix Tool contains detailed configuration and product support information.
 

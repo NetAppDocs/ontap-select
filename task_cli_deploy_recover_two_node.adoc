@@ -19,35 +19,35 @@ If the ONTAP Select Deploy utility fails or becomes unavailable for some reason,
 
 You should prepare before attempting to recover an instance of the Deploy utility to assure success.
 
-===== *Required skills and information*
+.Required skills and information
 
 You should be familiar with several administrative procedures and have the required information.
 
-===== *Installing the Deploy virtual machine*
+.Installing the Deploy virtual machine
 
 You must be able to install a new instance of the ONTAP Select Deploy utility in your hypervisor environment.
 
-===== *ONTAP command line interface*
+.ONTAP command line interface
 
 You must be able to sign in to the ONTAP CLI of the ONTAP Select cluster and use the shell interface.
 
-===== *Availability of Deploy utility configuration backup*
+.Availability of Deploy utility configuration backup
 
 You must determine if you have a backup of the configuration data from the failed Deploy utility instance that contains the ONTAP Select two-node cluster. You might have a backup that does not contain the cluster.
 
-===== *Restoring a backup of the Deploy configuration*
+.Restoring a backup of the Deploy configuration
 
 You should be able to restore a backup of the Deploy configuration data, depending on the recovery procedure used.
 
-===== *IP address of the original Deploy virtual machine*
+.IP address of the original Deploy virtual machine
 
 You must know the IP address of the original Deploy utility virtual machine that failed.
 
-===== *Storage capacity licensing*
+.Storage capacity licensing
 
 You must determine whether capacity pools or capacity tiers licensing is used. If you use capacity pools licensing, you must reinstall each capacity pool license after recovering or restoring the Deploy instance.
 
-===== *Deciding which recovery procedure to use*
+.Deciding which recovery procedure to use
 You must decided which procedure to use when recovering an instance of the ONTAP Select Deploy utility. Your decision is based on whether or not you have a backup of the configuration data from the original failed Deploy utility that contains the ONTAP Select two-node cluster.
 
 [cols="35,65"*,options="header"]
@@ -213,6 +213,6 @@ If you use capacity pools licensing, you must reinstall each capacity pool licen
 
 .Related information
 
-link:task_install_deploy.html[Installing ONTAP Select Deploy]
-link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restoring the Deploy configuration data to the new virtual machine]
-link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstalling a capacity pool license]
+* link:task_install_deploy.html[Installing ONTAP Select Deploy]
+* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restoring the Deploy configuration data to the new virtual machine]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstalling a capacity pool license]

@@ -17,17 +17,17 @@ There are best practices that you should consider as part of planning an ONTAP S
 
 == Storage
 
-Consider the following storage best practices.
+You should consider the following best practices for storage.
 
-===== All-Flash or Generic Flash arrays
+=== All-Flash or Generic Flash arrays
 
 ONTAP Select virtual NAS (vNAS) deployments using all-flash VSAN or generic flash arrays should follow the best practices for ONTAP Select with non-SSD DAS storage.
 
-===== Hypervisor core hardware
+=== Hypervisor core hardware
 
 All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
 
-===== RAID controller
+=== RAID controller
 
 The server RAID controller should be configured to operate in writeback mode. If write workload performance issues are seen, check the controller settings and make sure that writethrough or writearound is not enabled.
 
@@ -35,7 +35,7 @@ If the physical server contains a single RAID controller managing all locally at
 
 The RAID controller cache is used to store all incoming block changes, not just those targeted toward the NVRAM partition. Therefore, when choosing a RAID controller, select one with the largest cache available. A larger cache allows less frequent disk flushing and an increase in performance for the ONTAP Select VM, the hypervisor, and any compute VMs collocated on the server.
 
-*RAID groups*
+=== RAID groups
 
 The optimal RAID-group size is eight to 12 drives. The maximum number of drives per RAID group is 24.
 
@@ -45,7 +45,7 @@ A spare disk is optional, but recommended. NetApp also recommends using one spar
 
 ONTAP Select receives no performance benefits by increasing the number of LUNs within a RAID group. Multiple LUNs should only be used to follow best practices for SATA/NL-SAS configurations or to bypass hypervisor file system limitations.
 
-===== VMware ESXi hosts
+=== VMware ESXi hosts
 
 NetApp recommends using ESX 6.5 U2 or later and an NVMe disk for the datastore hosting the system disks. This configuration provides the best performance for the NVRAM partition.
 
@@ -58,50 +58,50 @@ Configure the capacity option to restrict storage utilization (ONTAP Select cann
 
 Assure that all generic external storage arrays use the available redundancy and HA features where possible.
 
-===== VMware Storage vMotion
+=== VMware Storage vMotion
 
 Available capacity on a new host is not the only factor when deciding whether to use VMware Storage vMotion with an ONTAP Select node. The underlying storage type, host configuration, and network capabilities should be able to sustain the same workload as the original host.
 
 == Networking
 
-Consider the following networking best practices.
+You should consider the following best practices for networking.
 
-===== Duplicate MAC addresses
+=== Duplicate MAC addresses
 
 To eliminate the possibility of having multiple Deploy instances assign duplicate MAC addresses, one Deploy instance per layer-2 network should be used to create or manage an ONTAP Select cluster or node.
 
-===== EMS messages
+=== EMS messages
 
 The ONTAP Select two-node cluster should be carefully monitored for EMS messages indicating that storage failover is disabled. These messages indicate a loss of connectivity to the mediator service and should be rectified immediately.
 
-===== Load balancing
+=== Load balancing
 
 To optimize load balancing across both the internal and the external ONTAP Select networks, use the Route Based on Originating Virtual Port load-balancing policy.
 
-===== Multiple layer-2 networks
+=== Multiple layer-2 networks
 
 If data traffic spans multiple layer-2 networks and the use of VLAN ports is required or when you are using multiple IPspaces, VGT should be used.
 
-===== Physical switch configuration
+=== Physical switch configuration
 
 VMware recommends that STP be set to Portfast on the switch ports connected to the ESXi hosts. Not setting STP to Portfast on the switch ports can affect the ONTAP Select ability to tolerate uplink failures. When using LACP, the LACP timer should be set to fast (1 second). The load-balancing policy should be set to Route Based on IP Hash on the port group and Source and Destination IP Address and TCP/UDP port and VLAN on the LAG.
 
 == HA
 
-Consider the following HA best practices.
+You should consider the following best practices for high availability.
 
-===== Deploy backups
+=== Deploy backups
 
 It is a best practice to back up the Deploy configuration data on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because the mediator configuration data is included with the backup.
 
 After creating or deploying a cluster, you should back up the ONTAP Select Deploy configuration data.
 
-===== Mirrored aggregates
+=== Mirrored aggregates
 
 Although the existence of the mirrored aggregate is needed to provide an up-to-date (RPO 0) copy of the primary aggregate, take care that the primary aggregate does not run low on free space. A low-space condition in the primary aggregate might cause ONTAP to delete the common NetApp Snapshot™ copy used as the baseline for storage giveback. This works as designed to accommodate client writes. However, the lack of a common Snapshot copy on failback requires the ONTAP Select node to do a full baseline from the mirrored aggregate. This operation can take a significant amount of time in a shared-nothing environment.
 A good baseline for monitoring aggregate space utilization is up to 85%.
 
-===== NIC aggregation, teaming, and failover
+=== NIC aggregation, teaming, and failover
 
 ONTAP Select supports a single 10Gb link for two-node clusters; however, it is a NetApp best practice to have hardware redundancy through NIC aggregation or NIC teaming on both the internal and the external networks of the ONTAP Select cluster.
 
@@ -111,7 +111,7 @@ NetApp recommends that the LACP mode be active on both the ESX and the physical 
 
 When using a distributed vSwitch with LACP, NetApp recommends that you configure the load-balancing policy to Route Based on IP Hash on the port group, Source and Destination IP Address, TCP/UDP Port, and VLAN on the LAG.
 
-===== Two-node stretched HA (MetroCluster SDS) best practices
+=== Two-node stretched HA (MetroCluster SDS) best practices
 
 Before you create a MetroCluster SDS, use the ONTAP Deploy connectivity checker to make sure that the network latency between the two data centers falls within the acceptable range.
 

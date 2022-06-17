@@ -20,11 +20,11 @@ There are two primary configurations available when deploying ONTAP Select in a 
 [NOTE]
 You can use any VMware vSphere license when deploying ONTAP Select.
 
-==== ONTAP Select two-node cluster with ONTAP HA
+.ONTAP Select two-node cluster with ONTAP HA
 
 The ONTAP Select two-node cluster consists of one HA pair and is ideal for ROBO deployments.
 
-==== ONTAP Select single-node cluster with VMware support
+.ONTAP Select single-node cluster with VMware support
 
 You can deploy an ONTAP Select single-node cluster in a ROBO environment. While a single node lacks native HA capability, you can deploy the cluster in one of the following ways to provide storage protection:
 
