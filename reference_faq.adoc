@@ -22,11 +22,11 @@ Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported whe
 
 There are several general questions and answers.
 
-.What is the difference between ONTAP Deploy and ONTAP Select?
+.What is the difference between ONTAP Select Deploy and ONTAP Select?
 
-ONTAP Deploy is the utility used to create ONTAP Select clusters. Currently ONTAP Deploy is the only method available for creating a production cluster. ONTAP Deploy can also be used to create an evaluation Select cluster to allow clients to test and document the actual steps of a production deployment. ONTAP Deploy can also convert an evaluation cluster to a production cluster using an appropriate Capacity Tier license with sufficient capacity to cover the space consumed during the evaluation.
+ONTAP Select Deploy is the utility used to create ONTAP Select clusters. Currently ONTAP Select Deploy is the only method available for creating a production cluster. ONTAP Select Deploy can also be used to create an evaluation Select cluster to allow clients to test and document the actual steps of a production deployment. ONTAP Select Deploy can also convert an evaluation cluster to a production cluster using an appropriate Capacity Tier license with sufficient capacity to cover the space consumed during the evaluation.
 
-ONTAP Deploy is a virtual machine that contains an image of ONTAP Select. During cluster installation, ONTAP Deploy enforces several checks to help make sure that the ONTAP Select minimum requirements are met. The ONTAP Deploy VM and Select clusters can be upgraded separately.
+ONTAP Select Deploy is a virtual machine that contains an image of ONTAP Select. During cluster installation, ONTAP Select Deploy enforces several checks to help make sure that the ONTAP Select minimum requirements are met. The ONTAP Select Deploy VM and Select clusters can be upgraded separately.
 
 .How can I troubleshoot a performance issue with ONTAP Select?
 
@@ -36,7 +36,7 @@ Just like ONTAP on FAS, performance data should be collected using the perfstat 
 perfstat8 –i N,m -t <sample time in minutes> --verbose --nodes=<filer IP> --diag-passwd=abcxyz --mode="cluster-mode" > <name of output file>
 ----
 
-.How do I access the Swagger API page for ONTAP Deploy?
+.How do I access the Swagger API page for ONTAP Select Deploy?
 
 ----
 http://<Deploy-IP-Address/api/ui
@@ -57,9 +57,9 @@ Contact link:mailto:ng-ses-ontap-select@netapp.com[ng-ses-ontap-select@netapp.co
 
 There are several questions and answers dealing with licenses, installation, upgrades, and reverts.
 
-.Can ONTAP Select and ONTAP Deploy be upgraded separately?
+.Can ONTAP Select and ONTAP Select Deploy be upgraded separately?
 
-Yes. The ONTAP Deploy utility can be upgraded separately from the ONTAP Select cluster. Similarly, the Select cluster can be upgraded separately from the ONTAP Deploy utility.
+Yes. The ONTAP Select Deploy utility can be upgraded separately from the ONTAP Select cluster. Similarly, the Select cluster can be upgraded separately from the ONTAP Select Deploy utility.
 
 .Can ONTAP Select be upgraded using the same procedure as a FAS cluster?
 
@@ -77,9 +77,9 @@ Yes, the revert procedure for an ONTAP Select cluster is almost identical to the
 
 Yes.
 
-.Can the IP addresses of the ONTAP Deploy and ONTAP Select cluster and node management be changed after installation?
+.Can the IP addresses of the ONTAP Select Deploy and ONTAP Select cluster and node management be changed after installation?
 
-Changes to the following ONTAP Select cluster properties are recognized by ONTAP Deploy using the cluster refresh operation available through the GUI, CLI, or REST API:
+Changes to the following ONTAP Select cluster properties are recognized by ONTAP Select Deploy using the cluster refresh operation available through the GUI, CLI, or REST API:
 
 * Network configuration (IP addresses, DNS, NTP, netmask, and gateway)
 * ONTAP Select cluster, node name, and version
@@ -90,21 +90,21 @@ The following ONTAP Select VM changes are also recognized:
 * Host network name and storage pool name changes
 
 [NOTE]
-Changing the IP address of the ONTAP Deploy VM is not supported.
+Changing the IP address of the ONTAP Select Deploy VM is not supported.
 
-Upgrading to ONTAP Deploy 2.6 enables support for these changes for any ONTAP Select cluster that is already deployed but has not been changed from its original configuration. In other words, if the ONTAP Select cluster properties mentioned above were changed using System Manager or vCenter, then upgrading to ONTAP Deploy 2.6 will not fix these inconsistencies. The ONTAP Select property changes must be first rolled back for ONTAP Deploy to add its unique metadata to each ONTAP Select VM.
+Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any ONTAP Select cluster that is already deployed but has not been changed from its original configuration. In other words, if the ONTAP Select cluster properties mentioned above were changed using System Manager or vCenter, then upgrading to ONTAP Select Deploy 2.6 will not fix these inconsistencies. The ONTAP Select property changes must be first rolled back for ONTAP Select Deploy to add its unique metadata to each ONTAP Select VM.
 
 == Storage
 
 There are several questions and answers dealing with storage.
 
-.Can a single ONTAP Deploy instance create clusters on both ESX and KVM?
+.Can a single ONTAP Select Deploy instance create clusters on both ESX and KVM?
 
-Yes. ONTAP Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.
+Yes. ONTAP Select Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.
 
 .Is vCenter required for ONTAP Select on ESX?
 
-If the ESX hosts are properly licensed, then there is no need for the ESX hosts to be managed by a vCenter Server. However, if the hosts are managed by a vCenter server, then you must configure ONTAP Deploy to use that vCenter Server. In other words, you cannot configure ESX hosts as standalone in ONTAP Deploy if they are being actively managed by a vCenter Server. Note that the ONTAP Deploy VM relies on vCenter to track all ONTAP Select VM migrations between ESXi hosts due to a vMotion or VMware HA event.
+If the ESX hosts are properly licensed, then there is no need for the ESX hosts to be managed by a vCenter Server. However, if the hosts are managed by a vCenter server, then you must configure ONTAP Select Deploy to use that vCenter Server. In other words, you cannot configure ESX hosts as standalone in ONTAP Select Deploy if they are being actively managed by a vCenter Server. Note that the ONTAP Select Deploy VM relies on vCenter to track all ONTAP Select VM migrations between ESXi hosts due to a vMotion or VMware HA event.
 
 .What is Software RAID?
 
@@ -146,15 +146,15 @@ When installing on datastores larger than the supported maximum size, you must u
 
 .How can I increase the capacity of an ONTAP Select node?
 
-ONTAP Deploy contains a storage add workflow that supports the capacity expansion operation on an ONTAP Select node. You can expand the storage under management by using space from the same datastore (if any space is still available) or add space from a separate datastore. The mixing of local datastores and remote datastores in the same aggregate is not supported.
+ONTAP Select Deploy contains a storage add workflow that supports the capacity expansion operation on an ONTAP Select node. You can expand the storage under management by using space from the same datastore (if any space is still available) or add space from a separate datastore. The mixing of local datastores and remote datastores in the same aggregate is not supported.
 
 Storage add also supports software RAID. However, in the case of software RAID, additional physical drives must be added to the ONTAP Select VM. The storage add in this case is similar to managing a FAS or AFF array. RAID group sizes and drive sizes must be considered when adding storage to an ONTAP Select node using software RAID.
 
 .Does ONTAP Select support vSAN or external array type datastores?
 
-ONTAP Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node cluster using either a vSAN or an external array type of datastore for its storage pool.
+ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node cluster using either a vSAN or an external array type of datastore for its storage pool.
 
-ONTAP Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI or FC/FCoE. Other types of storage pools are not supported.
+ONTAP Select Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI or FC/FCoE. Other types of storage pools are not supported.
 
 Multinode HA clusters on shared storage are supported.
 
@@ -162,11 +162,11 @@ Multinode HA clusters on shared storage are supported.
 
 Multinode clusters using external storage (multinode vNAS) are supported for both ESX and KVM. Mixing of hypervisors in the same cluster is not supported. An HA architecture on shared storage still implies that each node in an HA pair has a mirror copy of its partner data. However, a multinode cluster brings in the benefits of ONTAP nondisruptive operation as opposed to a single-node cluster which relies on VMware HA or KVM Live Motion.
 
-Although ONTAP Deploy adds support for multiple ONTAP Select VMs on the same host, it does not allow those instances to be part of the same ONTAP Select cluster during cluster creation. For ESX environments, NetApp recommends creating VM anti-affinity rules so that VMware HA does not attempt to migrate multiple ONTAP Select VMs from the same ONTAP Select cluster onto a single ESX host. Furthermore, if ONTAP Deploy detects that an administrative (user-initiated) vMotion or live migration of an ONTAP Select VM has resulted in a violation of our best practice such as two ONTAP Select nodes ending up on the same physical host, ONTAP Deploy posts an alert in the Deploy GUI and log. The only way that ONTAP Deploy becomes aware of the ONTAP Select VM location is as a result of a Cluster Refresh operation, which is a manual operation that the ONTAP Deploy administrator must initiate. There is no functionality in ONTAP Deploy that enables proactive monitoring, and the alert is only visible through the Deploy GUI or log. In other words, this alert cannot be forwarded to a centralized monitoring infrastructure.
+Although ONTAP Select Deploy adds support for multiple ONTAP Select VMs on the same host, it does not allow those instances to be part of the same ONTAP Select cluster during cluster creation. For ESX environments, NetApp recommends creating VM anti-affinity rules so that VMware HA does not attempt to migrate multiple ONTAP Select VMs from the same ONTAP Select cluster onto a single ESX host. Furthermore, if ONTAP Select Deploy detects that an administrative (user-initiated) vMotion or live migration of an ONTAP Select VM has resulted in a violation of our best practice such as two ONTAP Select nodes ending up on the same physical host, ONTAP Select Deploy posts an alert in the Deploy GUI and log. The only way that ONTAP Select Deploy becomes aware of the ONTAP Select VM location is as a result of a Cluster Refresh operation, which is a manual operation that the ONTAP Select Deploy administrator must initiate. There is no functionality in ONTAP Select Deploy that enables proactive monitoring, and the alert is only visible through the Deploy GUI or log. In other words, this alert cannot be forwarded to a centralized monitoring infrastructure.
 
 .Does ONTAP Select support VMware’s NSX VXLAN?
 
-NSX-V VXLAN port groups are supported. For multinode HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network MTU to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Deploy during cluster deployment.
+NSX-V VXLAN port groups are supported. For multinode HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network MTU to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Select Deploy during cluster deployment.
 
 .Does ONTAP Select support KVM live migration?
 
@@ -196,37 +196,37 @@ You must install and run open-source CLVM and pacemaker (pcs) components on each
 
 There are several questions and answers dealing with VMware vCenter.
 
-.How does ONTAP Deploy communicate with vCenter and what firewall ports should be opened?
+.How does ONTAP Select Deploy communicate with vCenter and what firewall ports should be opened?
 
-ONTAP Deploy uses the VMware VIX API to communicate with the vCenter and/or the ESX host. The VMware documentation states that the initial connection to either a vCenter Server or an ESX host is done using HTTPS/SOAP on TCP port 443. This is the port for secure HTTP over TLS/SSL. Secondly, a connection to the ESX host is opened on a socket on TCP port 902. Data going over this connection is encrypted with SSL. Additionally, ONTAP Deploy issues a `PING` command to verify that there is an ESX host responding at the IP address you specified.
+ONTAP Select Deploy uses the VMware VIX API to communicate with the vCenter and/or the ESX host. The VMware documentation states that the initial connection to either a vCenter Server or an ESX host is done using HTTPS/SOAP on TCP port 443. This is the port for secure HTTP over TLS/SSL. Secondly, a connection to the ESX host is opened on a socket on TCP port 902. Data going over this connection is encrypted with SSL. Additionally, ONTAP Select Deploy issues a `PING` command to verify that there is an ESX host responding at the IP address you specified.
 
-ONTAP Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses as follows:
+ONTAP Select Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses as follows:
 
 * Ping
 * SSH (port 22)
 * SSL (port 443)
 
-For two-node clusters, ONTAP Deploy hosts the cluster mailboxes. Each ONTAP Select node must be able to reach ONTAP Deploy through iSCSI (port 3260).
+For two-node clusters, ONTAP Select Deploy hosts the cluster mailboxes. Each ONTAP Select node must be able to reach ONTAP Select Deploy through iSCSI (port 3260).
 
 For multinode clusters, the internal network must be fully opened (no NAT or firewalls).
 
-.What vCenter rights does ONTAP Deploy need to create ONTAP Select clusters?
+.What vCenter rights does ONTAP Select Deploy need to create ONTAP Select clusters?
 
 The list of vCenter rights required is available here: link:reference_plan_ots_vcenter.html[VMware vCenter server].
 
 .What is the vCenter Deploy plug-in?
 
-It is possible to integrate the ONTAP Deploy functionality in the vCenter server with the ONTAP Deploy plug-in. Please note that the plug-in does not replace ONTAP Deploy. Rather ONTAP Deploy works in the background, and the vCenter admin can invoke most of the ONTAP Deploy functionality with the plug-in.  Some ONTAP Deploy operations are available only using CLI.
+It is possible to integrate the ONTAP Select Deploy functionality in the vCenter server with the ONTAP Select Deploy plug-in. Please note that the plug-in does not replace ONTAP Select Deploy. Rather ONTAP Select Deploy works in the background, and the vCenter admin can invoke most of the ONTAP Select Deploy functionality with the plug-in.  Some ONTAP Select Deploy operations are available only using CLI.
 
-.How many ONTAP Deploy VMs can register their plug-ins with one vCenter server?
+.How many ONTAP Select Deploy VMs can register their plug-ins with one vCenter server?
 
-Only one ONTAP Deploy VM can register its plug-in with a specific vCenter server.
+Only one ONTAP Select Deploy VM can register its plug-in with a specific vCenter server.
 
-.What is the benefit of the ONTAP Deploy vCenter plug-in?
+.What is the benefit of the ONTAP Select Deploy vCenter plug-in?
 
 The plug-in allows vCenter admins and IT generalists to create ONTAP Select clusters using the vCenter HTML5 GUI. Please note that the Flash vCenter GUI is not supported.
 
-Also, it allows ONTAP Deploy to use the vCenter RBAC for authentication. Users that are given the vCenter privilege of using the ONTAP Deploy plug-in have their vCenter account mapped to the ONTAP Deploy admin user. ONTAP Deploy logs the user ID of every operation and the following file can be used as a basic auditing log:
+Also, it allows ONTAP Select Deploy to use the vCenter RBAC for authentication. Users that are given the vCenter privilege of using the ONTAP Select Deploy plug-in have their vCenter account mapped to the ONTAP Select Deploy admin user. ONTAP Select Deploy logs the user ID of every operation and the following file can be used as a basic auditing log:
 
 ----
 nginx_access.log
@@ -238,7 +238,7 @@ There are several questions and answers dealing with HA pairs and clusters.
 
 .What is the difference between a four-node, six-node, or eight-node cluster and a two-node ONTAP Select cluster?
 
-Unlike four-node, six-node, and eight-node clusters in which the ONTAP Deploy VM is primarily used to create the cluster, a two-node cluster continuously relies on the ONTAP Deploy VM for HA quorum. If the ONTAP Deploy VM is unavailable, then failover services are disabled.
+Unlike four-node, six-node, and eight-node clusters in which the ONTAP Select Deploy VM is primarily used to create the cluster, a two-node cluster continuously relies on the ONTAP Select Deploy VM for HA quorum. If the ONTAP Select Deploy VM is unavailable, then failover services are disabled.
 
 .What is MetroCluster SDS?
 
@@ -276,9 +276,9 @@ No, only two-node clusters with a Mediator can be configured as MetroCluster SDS
 
 The requirements are as follows:
 
-* Three data centers (one for the ONTAP Deploy Mediator and one for each node).
+* Three data centers (one for the ONTAP Select Deploy Mediator and one for each node).
 * 5ms RTT and 5ms jitter for a max total of 10ms and maximum physical distance of 10km between the ONTAP Select nodes.
-* 125ms RTT and a minimum bandwidth of 5Mbps between the ONTAP Deploy Mediator and each ONTAP Select node.
+* 125ms RTT and a minimum bandwidth of 5Mbps between the ONTAP Select Deploy Mediator and each ONTAP Select node.
 * A Premium or Premium XL license.
 
 .Does ONTAP Select support vMotion or VMware HA?
@@ -287,7 +287,7 @@ ONTAP Select VMs that run on vSAN datastores or external array datastores (in ot
 
 .Does ONTAP Select support Storage vMotion?
 
-Storage vMotion is supported for all configurations, including single-node and multinode ONTAP Select clusters and the ONTAP Deploy VM. Storage vMotion can be used to migrate the ONTAP Select or the ONTAP Deploy VM between different VMFS versions (VMFS 5 to VMFS 6 for example), but it is not restricted to this use case. The best practice is to shut down the VM before initiating a Storage vMotion operation. ONTAP Deploy must issue the following operation after the storage vMotion operation is completed:
+Storage vMotion is supported for all configurations, including single-node and multinode ONTAP Select clusters and the ONTAP Select Deploy VM. Storage vMotion can be used to migrate the ONTAP Select or the ONTAP Select Deploy VM between different VMFS versions (VMFS 5 to VMFS 6 for example), but it is not restricted to this use case. The best practice is to shut down the VM before initiating a Storage vMotion operation. ONTAP Select Deploy must issue the following operation after the storage vMotion operation is completed:
 
 ----
 cluster refresh
@@ -307,23 +307,23 @@ There are several questions and answers dealing with the mediator service.
 
 .What is the Mediator service?
 
-A two-node cluster continuously relies on the ONTAP Deploy VM for HA quorum. An ONTAP Deploy VM taking part in a two-node HA quorum negotiation is labeled a Mediator VM.
+A two-node cluster continuously relies on the ONTAP Select Deploy VM for HA quorum. An ONTAP Select Deploy VM taking part in a two-node HA quorum negotiation is labeled a Mediator VM.
 
 .Can the Mediator service be remote?
 
-Yes. ONTAP Deploy acting as a Mediator for a two-node HA pair supports a WAN latency of up to 500ms RTT and requires a minimum bandwidth of 5Mbps.
+Yes. ONTAP Select Deploy acting as a Mediator for a two-node HA pair supports a WAN latency of up to 500ms RTT and requires a minimum bandwidth of 5Mbps.
 
 .What protocol does the Mediator service use?
 
-The Mediator traffic is iSCSI, originates on the ONTAP Select node management IP addresses, and terminates on the ONTAP Deploy IP address. Note that you cannot use IPv6 for the ONTAP Select node management IP address when using a two-node cluster.
+The Mediator traffic is iSCSI, originates on the ONTAP Select node management IP addresses, and terminates on the ONTAP Select Deploy IP address. Note that you cannot use IPv6 for the ONTAP Select node management IP address when using a two-node cluster.
 
 .Can I use one Mediator service for multiple two-node HA clusters?
 
-Yes. Each ONTAP Deploy VM can serve as a common Mediator service for up to 100 two-node ONTAP Select clusters.
+Yes. Each ONTAP Select Deploy VM can serve as a common Mediator service for up to 100 two-node ONTAP Select clusters.
 
 .Can the Mediator service location be changed after deployment?
 
-Yes. It is possible to use another ONTAP Deploy VM to host the Mediator service.
+Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator service.
 
 .Does ONTAP Select support stretched clusters with (or without) the Mediator?
 
