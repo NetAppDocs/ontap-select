@@ -2,10 +2,11 @@
 sidebar: sidebar
 permalink: reference_new_ots.html
 keywords: new features
-summary: There are several new and changed features provided with the current release of ONTAP Select.
+// summary: The current release includes several new features and improvements specific to ONTAP Select.
+summary: The current release does not include any new features or improvements specific to ONTAP Select.
 ---
 
-= What's new in ONTAP Select 9.10.1
+= What's new in this release
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,25 +14,9 @@ summary: There are several new and changed features provided with the current re
 :imagesdir: ./media/
 
 [.lead]
-There are several new and changed features provided with the current release of ONTAP Select.
+// The current release includes several new features and improvements specific to ONTAP Select.
+The current release does not include any new features or improvements specific to ONTAP Select. 
 
-== Enhanced VMware ESXi support
+== ONTAP Release Notes
 
-ONTAP Select 9.11.1 includes support for VMware ESXi 7.0 U3C.
-
-== Support for VMware NSX-T
-
-ONTAP Select 9.10.1 has been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed with an OVA file and the ONTAP Select Deploy administration utility.
-
-However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations for ONTAP Select 9.11.1:
-
-Network connectivity checker::
-The network connectivity checker available through the Deploy CLI fails when it is run against an NSX-T based network.
-
-== KVM hypervisor is no longer supported
-
-The KVM hypervisor is no longer supported.
-
-Beginning with ONTAP Select 9.10.1 and later releases, you were no longer able to create new KVM-based clusters or add KVM-based hosts using the Deploy utility. Further, 9.10.1 was the last release supporting the manageability functions, such as bring online, with existing KVM clusters and hosts.
-
-Then beginning with ONTAP Select 9.11.1 and later releases, all manageability functionality is no longer available for existing KVM clusters and hosts, except the take offline and delete functions.
+ONTAP Select benefits from most of the new developments in the current release of the core ONTAP product. Refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] for information about new features or improvements in each ONTAP 9 release.
