@@ -52,93 +52,68 @@ Cross Volume Background Deduplication:  true
 ----
 
 [NOTE]
-For ONTAP Select upgrades from 9.4, you must install ONTAP Select 9.4 on DAS SSD storage with a Premium license. In addition, the *Enable Storage Efficiencies* check box must be checked during initial cluster installation with ONTAP Deploy. Enabling an AFF-like personality post-ONTAP upgrade when prior conditions have not been met requires the manual creation of a boot argument and a node reboot. Contact technical support for further details.
+For ONTAP Select upgrades from 9.6 and later, you must install ONTAP Select on DAS SSD storage with a Premium license. In addition, you must check the *Enable Storage Efficiencies* check box during the initial cluster installation with ONTAP Deploy. Enabling an AFF-like personality post-ONTAP upgrade when prior conditions have not been met requires the manual creation of a boot argument and a node reboot. Contact technical support for further details.
 
 .ONTAP Select storage efficiency configurations
 
-The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the ONTAP Select version and media type.
+The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the media type and software license. The information in this table applies to ONTAP Select 9.6 and later releases. For prior releases, refer to the *ONTAP Select Storage Efficiency Support* section in https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
 
-[cols=6,options="header"]
+[cols=4,options="header"]
 |===
-| ONTAP Select Features | 9.6 / 9.5 Premium or Premium XL^4^ (DAS SSD) | 9.4^1^ / 9.3^2^ Premium (DAS SSD) | 9.6 / 9.5 / 9.4^1^ / 9.3^2^ All Licenses (DAS HDD) | 9.6 All Licenses (vNAS) | 9.5 / 9.4^1^ / 9.3^2^ Premium or Standard (vNAS)^3^
+| ONTAP Select Features | DAS SSD (Premium or Premium XL^1^)  | DAS HDD (All Licenses)  | vNAS (All Licenses)
 | Inline zero detection
 | Yes (default)
 | Yes Enabled by user on a per-volume basis
 | Yes Enabled by user on a per-volume basis
-| Yes Enabled by user on a per-volume basis
-| Not supported
 | Volume inline deduplication
 | Yes (default)
-| Yes (recommended) Enabled by user on a per-volume basis
 | Not available
-| Not supported
 | Not supported
 | 32K inline compression (secondary compression)
 | Yes Enabled by user on a per volume basis.
 | Yes Enabled by user on a per-volume basis
-| Yes Enabled by user on a per-volume basis
-| Not supported
 | Not supported
 | 8K inline compression (adaptive compression)
 | Yes (default)
-| Yes (recommended) Enabled by user on a per-volume basis
 | Yes Enabled by user on a per volume basis
-| Not supported
 | Not supported
 | Background compression
 | Not supported
-| Not supported
 | Yes Enabled by user on a per volume basis
 | Yes Enabled by user on a per-volume basis
-| Not supported
 | Compression scanner
 | Yes
-| Yes Enabled by user on a per-volume basis
 | Yes
 | Yes Enabled by user on a per-volume basis
-| Not supported
 | Inline data compaction
 | Yes (default)
-| Yes (recommended) Enabled by user on a per-volume basis
 | Yes Enabled by user on a per volume basis
-| Not supported
 | Not supported
 | Compaction scanner
 | Yes
-| Yes Enabled by user on a per-volume basis
 | Yes
-| Not supported
 | Not supported
 | Aggregate inline deduplication
 | Yes (default)
-| Yes (recommended) Enabled by user on a per volume basis with space guarantee = none)
 | N/A
-| Not supported
 | Not supported
 | Volume background deduplication
 | Yes (default)
-| Yes (recommended)
 | Yes Enabled by user on a per volume basis
 | Yes Enabled by user on a per-volume basis
-| Not supported
 | Aggregate background deduplication
 | Yes (default)
-| Yes (recommended) Enabled by user on a per volume basis with space guarantee = none)
 | N/A
-| Not supported
 | Not supported
 |===
 
-[small]#^1^ONTAP Select 9.4 on DAS SSDs (requires Premium license) allows existing data in an aggregate to be deduped using aggregate-level background cross volume scanners. This one-time operation is performed manually for volumes created before 9.4.#
-[small]#^2^ONTAP Select 9.3 on DAS SSDs (requires Premium license) supports aggregate-level background deduplication; however, this feature must be enabled after creating the aggregate.#
-[small]#^3^ONTAP Select 9.5 vNAS by default does not support any storage efficiency policies. Review the vNAS section for details on Single Instance Data Logging (SIDL).#
-[small]#^4^ONTAP Select 9.6 supports a new license (Premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the current release.#
+[small]#^1^ONTAP Select 9.6 supports a new license (Premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the 9.6 release.#
 
 .Notes on upgrade behavior for DAS SSD configurations
 
-After upgrading to ONTAP Select 9.5 or later, wait for the `system node upgrade-revert show` command to indicate that the upgrade has completed before verifying the storage efficiency values for existing volumes.
+After upgrading to ONTAP Select 9.6 or later, wait for the `system node upgrade-revert show` command to indicate that the upgrade has completed before verifying the storage efficiency values for existing volumes.
 
-On a system upgraded to ONTAP Select 9.5 or later, a new volume created on an existing aggregate or a newly created aggregate has the same behavior as a volume created on a fresh deployment. Existing volumes that undergo the ONTAP Select code upgrade have most of the same storage efficiency policies as a newly created volume with some variations:
+On a system upgraded to ONTAP Select 9.6 or later, a new volume created on an existing aggregate or a newly created aggregate has the same behavior as a volume created on a fresh deployment. Existing volumes that undergo the ONTAP Select code upgrade have most of the same storage efficiency policies as a newly created volume with some variations:
 
 Scenario 1::
 If no storage efficiency policies were enabled on a volume prior to the upgrade, then:
@@ -157,4 +132,4 @@ If some storage efficiencies are already enabled on a volume prior to the upgrad
 
 .Notes on Upgrade Behavior for DAS HDD Configuration
 
-Storage efficiency features enabled prior to the upgrade are retained after the upgrade to ONTAP Select 9.5 or later. If no storage efficiencies were enabled prior to the upgrade, no storage efficiencies are enabled post-upgrade.
+Storage efficiency features enabled prior to the upgrade are retained after the upgrade to ONTAP Select 9.6 or later. If no storage efficiencies were enabled prior to the upgrade, no storage efficiencies are enabled post-upgrade.
