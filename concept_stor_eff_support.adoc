@@ -17,7 +17,7 @@ ONTAP Select provides storage efficiency options that are similar to the storage
 
 ONTAP Select virtual NAS (vNAS) deployments using all-flash VSAN or generic flash arrays should follow the best practices for ONTAP Select with non-SSD direct-attached storage (DAS).
 
-An AFF-like personality is automatically enabled on new installations as long as you have DAS storage with SSD drives and a Premium license.
+An AFF-like personality is automatically enabled on new installations as long as you have DAS storage with SSD drives and a premium license.
 
 With an AFF-like personality, the following inline SE features are automatically enabled during installation:
 
@@ -52,7 +52,7 @@ Cross Volume Background Deduplication:  true
 ----
 
 [NOTE]
-For ONTAP Select upgrades from 9.6 and later, you must install ONTAP Select on DAS SSD storage with a Premium license. In addition, you must check the *Enable Storage Efficiencies* check box during the initial cluster installation with ONTAP Deploy. Enabling an AFF-like personality post-ONTAP upgrade when prior conditions have not been met requires the manual creation of a boot argument and a node reboot. Contact technical support for further details.
+For ONTAP Select upgrades from 9.6 and later, you must install ONTAP Select on DAS SSD storage with a premium license. In addition, you must check the *Enable Storage Efficiencies* check box during the initial cluster installation with ONTAP Deploy. Enabling an AFF-like personality post-ONTAP upgrade when prior conditions have not been met requires the manual creation of a boot argument and a node reboot. Contact technical support for further details.
 
 .ONTAP Select storage efficiency configurations
 
@@ -107,7 +107,7 @@ The following table summarizes the various storage efficiency options available,
 | Not supported
 |===
 
-[small]#^1^ONTAP Select 9.6 supports a new license (Premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the 9.6 release.#
+[small]#^1^ONTAP Select 9.6 supports a new license (premium XL) and a new VM size (large). However, the large VM is only supported for DAS configurations using software RAID. Hardware RAID and vNAS configurations are not supported with the large ONTAP Select VM in the 9.6 release.#
 
 .Notes on upgrade behavior for DAS SSD configurations
 
