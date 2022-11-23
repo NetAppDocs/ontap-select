@@ -15,7 +15,7 @@ summary: ONTAP Select provides storage efficiency options that are similar to th
 [.lead]
 ONTAP Select provides storage efficiency options that are similar to the storage efficiency options present on FAS and AFF arrays.
 
-ONTAP Select virtual NAS (vNAS) deployments using all-flash VSAN or generic flash arrays should follow the best practices for ONTAP Select with non-SSD DAS storage.
+ONTAP Select virtual NAS (vNAS) deployments using all-flash VSAN or generic flash arrays should follow the best practices for ONTAP Select with non-SSD direct-attached storage (DAS).
 
 An AFF-like personality is automatically enabled on new installations as long as you have DAS storage with SSD drives and a Premium license.
 
@@ -56,11 +56,11 @@ For ONTAP Select upgrades from 9.6 and later, you must install ONTAP Select on D
 
 .ONTAP Select storage efficiency configurations
 
-The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the media type and software license. The information in this table applies to ONTAP Select 9.6 and later releases. For prior releases, refer to the *ONTAP Select Storage Efficiency Support* section in https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
+The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the media type and software license. The information in the following table applies to ONTAP Select 9.6 and later releases. For prior releases, refer to the _ONTAP Select Storage Efficiency Support_ section in https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
 
 [cols=4,options="header"]
 |===
-| ONTAP Select Features | DAS SSD (Premium or Premium XL^1^)  | DAS HDD (All Licenses)  | vNAS (All Licenses)
+| ONTAP Select features | DAS SSD (premium or premium XL^1^)  | DAS HDD (all licenses)  | vNAS (all licenses)
 | Inline zero detection
 | Yes (default)
 | Yes Enabled by user on a per-volume basis
