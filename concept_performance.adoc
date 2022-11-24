@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: concept_performance.html
+keywords: ontap select, performance
+summary: Performance varies based on hardware configuration.
+---
+
+= Performance
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Performance varies based on hardware configuration.
+
+The performance of an ONTAP Select cluster can vary considerably due to the characteristics of the underlying hardware and configuration. The specific hardware configuration is the biggest factor in the performance of a particular ONTAP Select instance. Here are some of the factors that affect the performance of a specific ONTAP Select instance:
+
+* *Core frequency*. In general, a higher frequency is preferable.
+* *Single socket versus multisocket*. ONTAP Select does not use multisocket features, but the hypervisor overhead for supporting multisocket configurations accounts for some amount of deviation in total performance.
+* *RAID card configuration and associated hypervisor driver*. The default driver provided by the hypervisor might need to be replaced by the hardware vendor driver.
+* *Drive type and number of drives in the RAID group(s)*.
+* *Hypervisor version and patch level*.
+
+Performance testing details for ONTAP Select 9.4, 9.5, and 9.6 are available in the _ONTAP Select Performance_ section of https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
