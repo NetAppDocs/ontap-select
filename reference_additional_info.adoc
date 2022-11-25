@@ -21,7 +21,7 @@ There are additional resources you can access to get help and find more informat
 
 The following product pages include links to a wide variety of ONTAP Select resources.
 
-* https://www.netapp.com/data-management/software-defined-storage-ontap-select/documentation[NetApp ONTAP Select resources^]
+* https://www.netapp.com/data-management/ontap-select/documentation[NetApp ONTAP Select resources^]
 
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx[NetApp ONTAP Select product page^]
 
@@ -60,3 +60,5 @@ You can connect with other users to ask questions and contribute to the NetApp O
 The Interoperability Matrix Tool contains detailed configuration and product support information.
 
 * https://mysupport.netapp.com/matrix/[NetApp IMT^]
+
+// 2022 Nov 25, ontap-select-issues-185
