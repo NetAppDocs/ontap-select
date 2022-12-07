@@ -183,7 +183,7 @@ sidebar:
             - title: Other high availability functions
               url: /concept_ha_other.html
         - title: Performance
-          url: /concept_performance.html
+          url: /concept_perf_general.html
     - title: Integrate with vCenter
       entries:
         - title: Getting started

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: concept_performance.html
+permalink: concept_perf_general.html
 keywords: ontap select, performance
 summary: Performance varies based on hardware configuration.
 ---
