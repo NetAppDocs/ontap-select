@@ -13,7 +13,7 @@ summary: Performance varies based on hardware configuration.
 :imagesdir: ./media/
 
 [.lead]
-Performance varies based on hardware configuration.
+Performance varies based on hardware configuration. 
 
 The performance of an ONTAP Select cluster can vary considerably due to the characteristics of the underlying hardware and configuration. The specific hardware configuration is the biggest factor in the performance of a particular ONTAP Select instance. Here are some of the factors that affect the performance of a specific ONTAP Select instance:
 
