@@ -183,15 +183,7 @@ sidebar:
             - title: Other high availability functions
               url: /concept_ha_other.html
         - title: Performance
-          entries:
-            - title: General considerations
-              url: /concept_perf_general.html
-            - title: 9.4 Premium HA direct attached SSD storage
-              url: /concept_perf_premium_ha_direct_ssd_94.html
-            - title: 9.5 Premium HA direct attached SSD storage
-              url: /concept_perf_premium_ha_direct_ssd_95.html
-            - title: 9.6 Premium HA direct attached SSD storage
-              url: /concept_perf_premium_ha_direct_ssd_96.html
+          url: /concept_perf_general.html
     - title: Integrate with vCenter
       entries:
         - title: Getting started

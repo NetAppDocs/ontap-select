@@ -5,7 +5,7 @@ keywords: ontap select, performance
 summary: Performance varies based on hardware configuration.
 ---
 
-= Performance general considerations
+= Performance
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,9 @@ summary: Performance varies based on hardware configuration.
 :imagesdir: ./media/
 
 [.lead]
-Performance varies based on hardware configuration.
+Performance varies based on hardware configuration. 
 
-The performance numbers described in this section are intended as a rough estimate of the performance of an ONTAP Select cluster and are not a performance guarantee.
-
-The performance of an ONTAP Select cluster can vary considerably due to the characteristics of the underlying hardware and configuration. As a matter of fact, the specific hardware configuration is the biggest factor in the performance of a particular ONTAP Select instance. Here are some of the factors that affect the performance of a specific ONTAP Select instance:
+The performance of an ONTAP Select cluster can vary considerably due to the characteristics of the underlying hardware and configuration. The specific hardware configuration is the biggest factor in the performance of a particular ONTAP Select instance. Here are some of the factors that affect the performance of a specific ONTAP Select instance:
 
 * *Core frequency*. In general, a higher frequency is preferable.
 * *Single socket versus multisocket*. ONTAP Select does not use multisocket features, but the hypervisor overhead for supporting multisocket configurations accounts for some amount of deviation in total performance.
@@ -25,4 +23,4 @@ The performance of an ONTAP Select cluster can vary considerably due to the char
 * *Drive type and number of drives in the RAID group(s)*.
 * *Hypervisor version and patch level*.
 
-This section includes performance comparisons only when the testing was performed on the exact same test bed to highlight the impact of a specific feature. In general, we document the hardware environment and run the highest performance configuration possible on that platform.
+Performance testing details for ONTAP Select 9.4, 9.5, and 9.6 are available in the _ONTAP Select Performance_ section of https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
