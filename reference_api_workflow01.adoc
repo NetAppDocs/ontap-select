@@ -186,7 +186,7 @@ The Deploy administration utility automatically generates the node identifiers a
 Curl::
 You must provide the cluster ID.
 [source,curl]
-curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
+curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
 
 Processing type::
 Synchronous
@@ -250,7 +250,7 @@ You must identify the data and management networks used by the node in the singl
 Curl::
 You must provide the cluster ID and node ID.
 [source,curl]
-curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
+curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
 
 Processing type::
 Synchronous
