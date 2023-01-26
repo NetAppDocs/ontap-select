@@ -45,7 +45,7 @@ Note the version number and hypervisor platform in each case.
 Example
 `rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova`
 
-. Optionally remove a KVM image when using a release prior to ONTAP Select 9.10.1.
+. Optionally remove a KVM image when using a release earlier than ONTAP Select 9.10.1.
 +
 Example
 `rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar`
