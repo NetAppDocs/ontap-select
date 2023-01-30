@@ -14,7 +14,7 @@ summary: The current release does not include any new features or improvements s
 :imagesdir: ./media/
 
 [.lead]
-// NetApp periodically updates ONTAP Select to bring you new features and enhancements.
+NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
 == ONTAP 9.12.1
 
