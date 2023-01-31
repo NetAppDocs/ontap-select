@@ -16,11 +16,11 @@ summary: The current release does not include any new features or improvements s
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
-== ONTAP 9.12.1
+== ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 benefits from most of the new developments in the current release of the core ONTAP product. It does not include any new features or improvements specific to ONTAP Select. 
 
-== ONTAP 9.11.1
+== ONTAP Select 9.11.1
 
 ONTAP Select 9.11.1 includes several new features and improvements. 
 
@@ -33,18 +33,18 @@ Support for VMware NSX-T::
 ONTAP Select 9.10.1 and later releases have been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations for ONTAP Select 9.11.1:
 
 * Network connectivity checker
-
++
 The network connectivity checker available through the Deploy CLI fails when it is run against an NSX-T based network.
 
 * KVM hypervisor is no longer supported
-
++
 Beginning with ONTAP Select 9.10.1 and later releases, you were no longer able to create new KVM-based clusters or add KVM-based hosts using the Deploy utility. Further, 9.10.1 was the last release supporting the manageability functions, such as bring online, with existing KVM clusters and hosts.
-
++
 Then beginning with ONTAP Select 9.11.1 and later releases, all manageability functionality is no longer available for existing KVM clusters and hosts, except the take offline and delete functions.
-
++
 NetApp has strongly recommended that customers plan and execute a full data migration from ONTAP Select for KVM to any other ONTAP platform, including ONTAP Select for ESXi. For more information, see the https://mysupport.netapp.com/info/communications/ECMLP2877451.html[EOA Notice^]
 
-== ONTAP 9.10.1
+== ONTAP Select 9.10.1
 
 ONTAP Select 9.10.1 includes several new features and improvements.
 
@@ -53,45 +53,43 @@ Support for VMware NSX-T::
 ONTAP Select 9.10.1 has been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations:
 
 * Cluster MTU
++
 You must manually adjust the cluster MTU size to 8800 before deploying the cluster to account for the additional overhead. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
 
 * Network 4x10Gb configuration
++
 For ONTAP Select deployments on a VMware ESXi host configured with four NICs, the Deploy utility will prompt you to follow the best practice of splitting internal traffic across two different port groups and external traffic across two different port groups. However, when using an overlay network this configuration does not work and you should disregard the recommendation. In this case, you should instead use only one internal port group and one external port group.
 
 * Network connectivity checker
++
 The network connectivity checker available through the Deploy CLI fails when it is run against an NSX-T based network.
 
 KVM hypervisor is no longer supported::
 
 Beginning with ONTAP Select 9.10.1 you can no longer deploy a new cluster on the KVM hypervisor. However, if you upgrade a cluster from a previous release to 9.10.1 you can still use the Deploy utility to administer the cluster.
 
-== ONTAP 9.9.1
+== ONTAP Select 9.9.1
 
 ONTAP Select 9.9.1 includes several new features and improvements.
 
 Processor family support::
 
-Starting with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for
-ONTAP Select.
+Starting with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for ONTAP Select.
 
 Updated VMware ESXi support::
 
-Support for VMware ESXi has been enhanced with ONTAP Select 9.9.1. The following releases
-are now supported:
+Support for VMware ESXi has been enhanced with ONTAP Select 9.9.1. The following releases are now supported:
 
 * ESXi 7.0 U2
 * ESXi 7.0 U1
 
-== ONTAP 9.8
+== ONTAP Select 9.8
 
 There are several new and changed features included in ONTAP Select 9.8.
 
 High speed interface::
 
-The high speed interface feature enhances network connectivity by providing an option for both
-25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds,
-you should follow the best practices regarding port mapping configurations as described in the
-ONTAP Select documentation.
+The high speed interface feature enhances network connectivity by providing an option for both 25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds, you should follow the best practices regarding port mapping configurations as described in the ONTAP Select documentation.
 
 Updated VMware ESXi support::
 
@@ -100,7 +98,4 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
-== Related information   
-
-Refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[ONTAP Release Notes^] for detailed information about new features or improvements for each ONTAP 9 release.
-// 2023-02-01,jira
+// 2023-02-01,9.12.1 GA documentation update
