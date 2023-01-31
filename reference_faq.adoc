@@ -18,7 +18,7 @@ You can find answers to frequently asked questions about ONTAP Select.
 [NOTE]
 ====
 * Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
-* Beginning with ONTAP Select 9.11.1 and later, all manageability functionality is no longer available for existing KVM clusters and hosts, except the take offline and delete functions.
+* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except the take offline and delete functions.
 ====
 
 == General
