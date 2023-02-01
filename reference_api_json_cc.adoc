@@ -163,7 +163,10 @@ When creating or deleting an ONTAP Select cluster using the Python code samples,
 == Single-node cluster on KVM
 
 [NOTE]
-Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. The sample below is applicable to earlier releases that support KVM.
+====
+* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
+* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
+====
 
 [source,json]
 ---------------------------------------------------------------------
