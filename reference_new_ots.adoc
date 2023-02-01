@@ -36,7 +36,7 @@ ONTAP Select 9.10.1 and later releases have been qualified for VMware NSX-T vers
 +
 The network connectivity checker available through the Deploy CLI fails when it is run against an NSX-T based network.
 
-* KVM hypervisor is no longer supported
+KVM hypervisor is no longer supported::
 +
 Beginning with ONTAP Select 9.10.1 and later releases, you were no longer able to create new KVM-based clusters or add KVM-based hosts using the Deploy utility. Further, 9.10.1 was the last release supporting the manageability functions, such as bring online, with existing KVM clusters and hosts.
 +
