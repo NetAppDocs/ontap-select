@@ -38,11 +38,11 @@ The network connectivity checker available through the Deploy CLI fails when it 
 
 KVM hypervisor is no longer supported::
 +
-Beginning with ONTAP Select 9.10.1 and later releases, you were no longer able to create new KVM-based clusters or add KVM-based hosts using the Deploy utility. Further, 9.10.1 was the last release supporting the manageability functions, such as bring online, with existing KVM clusters and hosts.
+Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
 +
-Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except the take offline and delete functions.
+Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
 +
-NetApp has strongly recommended that customers plan and execute a full data migration from ONTAP Select for KVM to any other ONTAP platform, including ONTAP Select for ESXi. For more information, see the https://mysupport.netapp.com/info/communications/ECMLP2877451.html[EOA Notice^]
+NetApp strongly recommends that customers plan and execute a full data migration from ONTAP Select for KVM to any other ONTAP platform, including ONTAP Select for ESXi. For more information, see the https://mysupport.netapp.com/info/communications/ECMLP2877451.html[EOA Notice^]
 
 == ONTAP Select 9.10.1
 
