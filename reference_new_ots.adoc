@@ -30,7 +30,7 @@ ONTAP Select 9.11.1 includes support for VMware ESXi 7.0 U3C.
 
 Support for VMware NSX-T::
 
-ONTAP Select 9.10.1 and later releases have been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations for ONTAP Select 9.11.1:
+ONTAP Select 9.10.1 and later releases have been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following limitation for ONTAP Select 9.11.1:
 
 * Network connectivity checker
 +
@@ -50,7 +50,7 @@ ONTAP Select 9.10.1 includes several new features and improvements.
 
 Support for VMware NSX-T::
 
-ONTAP Select 9.10.1 has been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node Cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations:
+ONTAP Select 9.10.1 has been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations:
 
 * Cluster MTU
 +
@@ -98,4 +98,4 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
-// 2023-02-01,9.12.1 GA documentation update
+// 2023-02-01,mairead 9.12.1 GA documentation update
