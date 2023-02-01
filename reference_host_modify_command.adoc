@@ -1,0 +1,55 @@
+---
+sidebar: sidebar
+permalink: reference_host_modify_command.html
+keywords: host modify, command, syntax, host management server
+summary: "You can use the host modify command to modify a host management server with this instance of ONTAP Select Deploy."
+---
+
+= Command syntax for host modify command
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use the `host modify` command to modify a host management server with this instance of ONTAP Select Deploy.
+
+== Syntax
+
+`host modify [-help] [-foreground] -name _name_ -mgmt-server _management_server_ [-username _username_]`
+
+
+== Required arguments
+
+`-mgmt-server _management_server_` 
+
+The IP address or FQDN of the host management server to be set to the host. Enter "-" (hyphen) to unset the management server from the host. The credentials for this management server must be added prior to registering this host using the command `credential add`.
+
+== Identifying arguments (required)
+
+These arguments are required to identify the resource displayed or manipulated by the command.
+
+`-name _name__`
+
+The IP address or FQDN of the host you want to modify.
+
+= Optional arguments
+
+`-help`
+
+Displays the help message and exit.
+
+`-username _username_ `
+
+The username that has access to this host. This is required only if the host is not managed by a management server (that is, an ESX host managed by a vCenter).
+
+== Job argument (optional)
+
+This argument controls the behavior of long-running commands.
+
+`-foreground`
+
+If set, the command will run in the foreground and event messages related to the operation will be displayed as they occur.
+
+// 2023 FEB 01, BURT 1512785, new topic
