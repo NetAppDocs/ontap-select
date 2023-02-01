@@ -39,7 +39,7 @@ When deploying to an ESXi host managed by a vCenter server, you must add a crede
 
 Curl::
 [source,curl]
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step01 'https://10.21.191.150/api/security/credentials'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step01 'https://10.21.191.150/api/security/credentials'
 
 JSON input (step01)::
 [source,json]
@@ -73,7 +73,7 @@ You must add a hypervisor host where the virtual machine containing the ONTAP Se
 
 Curl::
 [source,curl]
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step02 'https://10.21.191.150/api/hosts'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step02 'https://10.21.191.150/api/hosts'
 
 JSON input (step02)::
 [source,json]
@@ -113,7 +113,7 @@ When you create an ONTAP Select cluster, the basic cluster configuration is regi
 Curl::
 The query parameter node_count should be set to 1 for a single-node cluster.
 [source,curl]
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step03 'https://10.21.191.150/api/clusters? node_count=1'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step03 'https://10.21.191.150/api/clusters? node_count=1'
 
 JSON input (step03)::
 [source,json]
@@ -146,7 +146,7 @@ There are several attributes you must provide as part of configuring the cluster
 Curl::
 You must provide the cluster ID.
 [source,curl]
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step04 'https://10.21.191.150/api/clusters/CLUSTERID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step04 'https://10.21.191.150/api/clusters/CLUSTERID'
 
 JSON input (step04)::
 [source,json]
@@ -186,7 +186,7 @@ The Deploy administration utility automatically generates the node identifiers a
 Curl::
 You must provide the cluster ID.
 [source,curl]
-curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
+curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
 
 Processing type::
 Synchronous
@@ -212,7 +212,7 @@ You must provide the basic configuration for the node, which is the first of thr
 Curl::
 You must provide the cluster ID and node ID.
 [source,curl]
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
 
 JSON input (step06)::
 You must provide the host ID where the ONTAP Select node will run.
@@ -250,7 +250,7 @@ You must identify the data and management networks used by the node in the singl
 Curl::
 You must provide the cluster ID and node ID.
 [source,curl]
-curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
+curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
 
 Processing type::
 Synchronous
@@ -278,7 +278,7 @@ NOTE: Issue the following API call two times, once for each network.
 Curl::
 You must provide the cluster ID, node ID, and network ID.
 [source,curl]
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
 
 JSON input (step08)::
 You need to provide the name of the network.
@@ -311,7 +311,7 @@ The final step in configuring a node is to attach a storage pool. You can determ
 Curl::
 You must provide the cluster ID, node ID, and network ID.
 [source,curl]
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step09 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step09 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
 
 JSON input (step09)::
 The pool capacity is 2 TB.
@@ -349,7 +349,7 @@ After the cluster and node have been configured, you can deploy the cluster.
 Curl::
 You must provide the cluster ID.
 [source,curl]
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
 
 JSON input (step10)::
 You must provide the password for the ONTAP administrator account.
@@ -365,3 +365,5 @@ Asynchronous
 
 Output::
 * Job object
+
+// 2022 Jan 20, ONTAPDOC-739
