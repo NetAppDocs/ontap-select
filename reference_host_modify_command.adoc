@@ -22,34 +22,43 @@ You can use the `host modify` command to modify a host management server with th
 
 == Required arguments
 
-`-mgmt-server _management_server_` 
+[cols="35,65"]
+|===
 
-The IP address or FQDN of the host management server to be set to the host. Enter "-" (hyphen) to unset the management server from the host. The credentials for this management server must be added prior to registering this host using the command `credential add`.
+a| `-mgmt-server _management_server_` 
+
+a| The IP address or FQDN of the host management server to be set to the host. Enter "-" (hyphen) to unset the management server from the host. The credentials for this management server must be added prior to registering this host using the command `credential add`.
+|===
 
 == Identifying arguments (required)
 
 These arguments are required to identify the resource displayed or manipulated by the command.
 
-`-name _name__`
+[cols="35,65"]
+|===
 
-The IP address or FQDN of the host you want to modify.
+a| `-name _name__`
+
+a| The IP address or FQDN of the host you want to modify.
+
+|===
 
 = Optional arguments
 
-`-help`
+[cols="35,65"]
+|===
 
-Displays the help message and exit.
+a| `-help`
 
-`-username _username_ `
+a| Displays the help message and exit.
 
-The username that has access to this host. This is required only if the host is not managed by a management server (that is, an ESX host managed by a vCenter).
+a| `-username _username_`
 
-== Job argument (optional)
+a| The username that has access to this host. This is required only if the host is not managed by a management server (that is, an ESX host managed by a vCenter).
 
-This argument controls the behavior of long-running commands.
+a| `-foreground`
 
-`-foreground`
-
-If set, the command will run in the foreground and event messages related to the operation will be displayed as they occur.
+a| This argument controls the behavior of long-running commands. If set, the command will run in the foreground and event messages related to the operation will be displayed as they occur.
+|===
 
 // 2023 FEB 01, BURT 1512785, new topic
