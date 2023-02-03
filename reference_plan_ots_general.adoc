@@ -39,7 +39,7 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 * Kernel-based Virtual Machine (KVM)
 
 [NOTE]
-Beginning with ONTAP Select 9.10.1 the KVM hypervisor is no longer supported when deploying a new cluster. You can still use KVM with an earlier supported release.
+Beginning with ONTAP Select 9.10.1, the KVM hypervisor is no longer supported when deploying a new cluster. You can still use KVM with an earlier supported release.
 
 Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
 
