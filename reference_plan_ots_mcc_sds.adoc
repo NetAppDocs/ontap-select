@@ -23,7 +23,13 @@ Each node must have a premium or higher ONTAP Select license.
 
 .Hypervisor platforms
 
-MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as supported for a two-node cluster in a ROBO environment. Note that KVM is no longer supported with ONTAP Select 9.10.1 and later releases.
+MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as supported for a two-node cluster in a ROBO environment.
+
+[NOTE]
+====
+* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
+* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
+====
 
 .Network configuration
 
@@ -53,3 +59,4 @@ When deploying MetroCluster SDS, you cannot use vSAN in a distributed or "stretc
 .Static IP address assigned to Deploy
 
 You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.
+
