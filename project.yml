@@ -1,6 +1,7 @@
 ---
 settings:
   name: ONTAP Select
+  harmony_integration: maestro
   internal:
     pdf_enabled: true
   prod:
