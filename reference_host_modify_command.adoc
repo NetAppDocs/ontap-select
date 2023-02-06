@@ -5,7 +5,7 @@ keywords: host modify, command, syntax, host management server
 summary: "You can use the host modify command to modify a host management server with this instance of ONTAP Select Deploy."
 ---
 
-= Command syntax for host modify command
+= Modify host management servers
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -37,7 +37,7 @@ These arguments are required to identify the resource displayed or manipulated b
 [cols="35,65"]
 |===
 
-a| `-name _name__`
+a| `-name _name_`
 
 a| The IP address or FQDN of the host you want to modify.
 
@@ -50,7 +50,7 @@ a| The IP address or FQDN of the host you want to modify.
 
 a| `-help`
 
-a| Displays the help message and exit.
+a| Displays the help message.
 
 a| `-username _username_`
 
