@@ -292,6 +292,8 @@ sidebar:
           entries:
             - title: Upgrading ESXi to 6.5 and higher
               url: /task_cli_upgrade_esxi65.html
+            - title: Command syntax for host modify command  
+              url: /reference_host_modify_command.html
         - title: Deploy utility
           entries:
             - title: Upgrade a Deploy instance
