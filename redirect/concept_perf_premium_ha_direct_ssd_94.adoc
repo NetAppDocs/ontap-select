@@ -1,5 +1,5 @@
 --- 
-permalink: ontap-select/concept_perf_premium_ha_direct_ssd_94.html
+permalink: concept_perf_premium_ha_direct_ssd_94.html
 redirect: ontap-select/concept_perf_general.html
 ---
 
