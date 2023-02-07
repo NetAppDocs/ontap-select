@@ -292,7 +292,7 @@ sidebar:
           entries:
             - title: Upgrading ESXi to 6.5 and higher
               url: /task_cli_upgrade_esxi65.html
-            - title: Command syntax for host modify command  
+            - title: Modify a host management server
               url: /reference_host_modify_command.html
         - title: Deploy utility
           entries:
@@ -313,5 +313,5 @@ sidebar:
     - title: Earlier versions
       url: /reference_earlier_versions.html
     - title: Legal notices
-      url: /reference_legal_notices.html
-
+      url: /reference_legal_notices.html   
+# 2023 Feb 06, Burt 1512785 
