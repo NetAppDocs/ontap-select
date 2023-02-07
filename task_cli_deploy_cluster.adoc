@@ -68,7 +68,7 @@ Provide the administrator account password when prompted.
 +
 `license show`
 
-== Adding the ESXi hypervisor hosts
+== Adding ESXi hypervisor hosts
 
 You must register each hypervisor host where an ONTAP Select node will run. As part of this, the Deploy administration utility authenticates either to the vCenter server managing the host or directly to the ESXi standalone host.
 
@@ -95,7 +95,7 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 * Register a standalone host not managed by vCenter:
 `host register -name <FQDN|IP> -hypervisor-type ESX -username ESX_USERNAME`
 * Register a host managed by vCenter:
-`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN| IP>`
+`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
 +
 Example
 +
