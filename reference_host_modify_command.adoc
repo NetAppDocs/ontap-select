@@ -19,7 +19,6 @@ You can use the `host modify` command to modify a host management server with th
 
 `host modify [-help] [-foreground] -name _name_ -mgmt-server _management_server_ [-username _username_]`
 
-
 == Required parameters
 
 [cols="35,65"]
@@ -47,6 +46,7 @@ h| Parameter h| Description
 a| `-help`
 
 a| Displays the help message.
+
 
 a| `-foreground`
 
