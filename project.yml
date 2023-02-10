@@ -12,6 +12,9 @@ sidebar:
       url: /index.html
     - title: Release Notes
       url: /reference_release_notes.html
+      entries:
+        - title: What's new
+          url: /reference_new_ots.html
     - title: Concepts
       entries:
         - title: Product overview
