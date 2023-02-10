@@ -12,7 +12,11 @@ sidebar:
     - title: ONTAP Select docs
       url: /index.html
     - title: Release Notes
-      url: /reference_release_notes.html
+      entries:
+        - title: ONTAP Select Release Notes
+          url: /reference_release_notes.html
+        - title: What's new
+          url: /reference_new_ots.html
     - title: Concepts
       entries:
         - title: Product overview
@@ -293,6 +297,8 @@ sidebar:
           entries:
             - title: Upgrading ESXi to 6.5 and higher
               url: /task_cli_upgrade_esxi65.html
+            - title: Modify a host management server
+              url: /reference_host_modify_command.html
         - title: Deploy utility
           entries:
             - title: Upgrade a Deploy instance
@@ -312,5 +318,5 @@ sidebar:
     - title: Earlier versions
       url: /reference_earlier_versions.html
     - title: Legal notices
-      url: /reference_legal_notices.html
-
+      url: /reference_legal_notices.html   
+# 2023 Feb 06, Burt 1512785 

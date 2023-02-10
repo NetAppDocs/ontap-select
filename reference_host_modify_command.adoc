@@ -1,0 +1,61 @@
+---
+sidebar: sidebar
+permalink: reference_host_modify_command.html
+keywords: host modify, command, syntax, host management server
+summary: "You can use the host modify command to modify a host management server with this instance of ONTAP Select Deploy."
+---
+
+= Modify a host management server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use the `host modify` command to modify a host management server with this instance of ONTAP Select Deploy.
+
+== Syntax
+
+`host modify [-help] [-foreground] -name _name_ -mgmt-server _management_server_ [-username _username_]`
+
+== Required parameters
+
+[cols="35,65"]
+|===
+
+h| Parameter h| Description
+
+a| `-name _name_`
+
+a| The IP address or FQDN of the host you want to modify.
+
+a| `-mgmt-server _management_server_` 
+
+a| The IP address or FQDN of the host management server to be set to the host. Specify "-" (hyphen) to unset the management server from the host. The credentials for this management server must be added prior to registering this host using the  `credential add` command.
+
+|===
+
+== Optional parameters
+
+[cols="35,65"]
+|===
+
+h| Parameter h| Description
+
+a| `-help`
+
+a| Displays the help message.
+
+
+a| `-foreground`
+
+a| This parameter controls the behavior of long-running commands. If set, the command will run in the foreground and event messages related to the operation will be displayed as they occur.
+
+a| `-username _username_`
+
+a| The username that has access to this host. This is required only if the host is not managed by a management server (that is, an ESX host managed by a vCenter).
+
+|===
+
+// 2023 Feb 06, BURT 1512785, new topic
