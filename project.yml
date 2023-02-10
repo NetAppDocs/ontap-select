@@ -11,7 +11,11 @@ sidebar:
     - title: ONTAP Select docs
       url: /index.html
     - title: Release Notes
-      url: /reference_release_notes.html
+      entries:
+        - title: ONTAP Select Release Notes
+          url: /reference_release_notes.html
+        - title: What's new
+          url: /reference_new_ots.html
     - title: Concepts
       entries:
         - title: Product overview
