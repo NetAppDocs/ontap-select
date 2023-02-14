@@ -29,7 +29,6 @@ The following features are included with ONTAP Select and licensed by default:
 * SnapVault
 * FlexClone
 * SnapRestore
-* NetApp Volume Encryption
 * Deduplication and compression
 * ONTAP multitenancy capability
 * ONTAP S3
