@@ -29,7 +29,6 @@ The following features are included with ONTAP Select and licensed by default:
 * SnapVault
 * FlexClone
 * SnapRestore
-* NetApp Volume Encryption
 * Deduplication and compression
 * ONTAP multitenancy capability
 * ONTAP S3
@@ -52,3 +51,5 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 .Related information
 
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
+
+// 2023 Feb 15, GH issue 192
