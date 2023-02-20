@@ -146,3 +146,9 @@ The license upgrade for the cluster can take several minutes. Allow the process 
 .After you finish
 
 The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment are replaced by the nine-digit serial numbers from the production licenses used for the upgrade.
+
+== Managing an expired capacity pool license
+
+Generally, when a license expires, nothing is brought down. However, you cannot install a different license because the nodes are associated with the expired license. Until you renew the license, you should _not_ do anything that would bring the aggregate offline, for example, a reboot or failover operation.  The recommended action is to expedite the renewal of the license.
+
+//You cannot install another license because the nodes are associated with the expired license. 2023 Feb 21, GH issue 196
