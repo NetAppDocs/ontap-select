@@ -184,7 +184,7 @@ sidebar:
               url: /concept_ha_other.html
         - title: Performance
           entries: 
-            - title: Performance Overview 
+            - title: Performance overview 
               url: /concept_perf_general.html
             - title: ONTAP Select 9.6 performance
               url: /concept_perf_premium_ha_direct_ssd_96.html
