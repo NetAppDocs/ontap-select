@@ -78,7 +78,7 @@ When each host includes two 10Gb ports, you should configure the vSwitch as foll
 
 * Configure a vSwitch and assign both the ports to the vSwitch. Create a NIC team using the two ports.
 * Set the load balancing policy to “Route based on the originating virtual port ID”.
-* Mark both adapters as “active”.
+* Mark both adapters as “active” or mark one adapter as “active” and the other as “standby”.
 * Set the “Failback” setting to “Yes”.
 image:CHK_04.jpg[vSwitch properties)]
 * Configure the vSwitch to use jumbo frames (9000 MTU).
