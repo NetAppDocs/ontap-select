@@ -36,7 +36,7 @@ Configuration information
 * 22+1 RAID-5 (RAID-0 in ONTAP) / RAID cache NVRAM
 * No storage efficiency features in use (compression, deduplication, Snapshot copies, SnapMirror, and so on)
 
-The following table lists the throughput measured against read/write workloads on an HA pair of ONTAP Select Premium nodes using both software RAID and hardware RAID. Performance measurements were taken using the SIO load-generating tool.
+The following table lists the throughput measured against read/write workloads on an HA pair of ONTAP Select nodes using both software RAID and hardware RAID. Performance measurements were taken using the SIO load-generating tool.
 
 [NOTE]
 These performance numbers are based on ONTAP Select 9.6.  
