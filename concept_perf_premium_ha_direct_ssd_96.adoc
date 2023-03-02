@@ -17,7 +17,7 @@ Performance information for the reference platform.
 
 == Reference platform
 
-ONTAP Select (Premium XL) Hardware (per Node)
+ONTAP Select (Premium XL) hardware (per node)
 
 * FUJITSU PRIMERGY RX2540 M4:
 ** Intel(R) Xeon(R) Gold 6142b CPU at 2.6 GHz
@@ -36,19 +36,19 @@ Configuration information
 * 22+1 RAID-5 (RAID-0 in ONTAP) / RAID cache NVRAM
 * No storage efficiency features in use (compression, deduplication, Snapshot copies, SnapMirror, and so on)
 
-The following table lists the throughput measured against read/write workloads on an HA pair of ONTAP Select nodes using both software RAID and hardware RAID. Performance measurements were taken using the SIO load-generating tool.
+The following table lists the throughput measured against read/write workloads on a high availability (HA) pair of ONTAP Select nodes using both software RAID and hardware RAID. Performance measurements were taken using the SIO load-generating tool.
 
 [NOTE]
 These performance numbers are based on ONTAP Select 9.6.  
 
-*Performance results for a single node (part of a four-node medium instance) ONTAP Select cluster on DAS (SSD) with software RAID and hardware RAID*
+*Performance results for a single node (part of a four-node medium instance) ONTAP Select cluster on a direct-attached storage (DAS) SSD, with software RAID and hardware RAID*
 
 [cols=6*,options="header"]
 |===
 | Description | Sequential Read 64KiB | Sequential Write 64KiB | Random Read 8KiB | Random Write 8KiB | Random WR/ RD (50/50) 8KiB
-| ONTAP Select Large instance with DAS (SSD) software RAID | 2171 MiBps | 559 MiBps | 954 MiBps | 394 MiBps | 564 MiBps
-| ONTAP Select Medium instance with DAS (SSD) software RAID | 2090 MiBps | 592 MiBps | 677 MiBps | 335 MiBps | 441 3MiBps
-| ONTAP Select Medium instance with DAS (SSD) hardware RAID | 2038 MiBps | 520 MiBps | 578 MiBps | 325 MiBps | 399 MiBps
+| ONTAP Select large instance with DAS (SSD) software RAID | 2171 MiBps | 559 MiBps | 954 MiBps | 394 MiBps | 564 MiBps
+| ONTAP Select medium instance with DAS (SSD) software RAID | 2090 MiBps | 592 MiBps | 677 MiBps | 335 MiBps | 441 3MiBps
+| ONTAP Select medium instance with DAS (SSD) hardware RAID | 2038 MiBps | 520 MiBps | 578 MiBps | 325 MiBps | 399 MiBps
 |===
 
 === 64K sequential read
@@ -69,10 +69,10 @@ Details:
 
 * SIO direct I/O enabled
 * 2 nodes
-* 2 x data NIC per node
+* 2 x data network interface cards (NICs) per node
 * 1 x data aggregate per node (2TB hardware RAID), (4TB software RAID)
 * 128 SIO procs, 1 thread per proc
-* volumes per node 32 (hardware RAID), 16 (software RAID)
+* Volumes per node: 32 (hardware RAID), 16 (software RAID)
 * 1 x files per proc; files are 30720MB each
 
 === 8K random read
@@ -81,10 +81,10 @@ Details:
 
 * SIO direct I/O enabled
 * 2 nodes
-* 2 x data NIC per node
+* 2 x data NICs per node
 * 1 x data aggregate per node (2TB hardware RAID), (4TB software RAID)
 * 64 SIO procs, 8 threads per proc
-* volumes per node 32
+* Volumes per node: 32
 * 1 x files per proc; files are 12228MB each
 
 === 8K random write
@@ -93,10 +93,10 @@ Details:
 
 * SIO direct I/O enabled
 * 2 nodes
-* 2 x data NIC per node
+* 2 x data NICs per node
 * 1 x data aggregate per node (2TB hardware RAID), (4TB software RAID)
 * 64 SIO procs, 8 threads per proc
-* volumes per node 32
+* Volumes per node: 32
 * 1 x files per proc; files are 8192MB each
 
 === 8K random 50% write 50% read
@@ -105,10 +105,10 @@ Details:
 
 * SIO direct I/O enabled
 * 2 nodes
-* 2 x data NIC per node
+* 2 x data NICs per node
 * 1 x data aggregate per node (2TB hardware RAID), (4TB software RAID)
 * 64 SIO proc208 threads per proc
-* volumes per node 32
+* Volumes per node: 32
 * 1 x files per proc; files are 12228MB each
 
 // 2023-Feb-08, restoration of deleted page
