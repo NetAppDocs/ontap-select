@@ -22,6 +22,10 @@ Support for NVMe over TCP::
 
 A new license is needed for NVMe/TCP if you're upgrading to ONTAP Select 9.13.1 from a previous version. The license is automatically included if you're deploying the feature for the first time from 9.13.1.
 
+Updated VMware ESXi support::
+
+VMware ESXi 8.0 GA (build 20513097) is supported with ONTAP Select 9.13.1, with hardware version support from 4 to 20.
+
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 benefits from most of the new developments in the current release of the core ONTAP product. It does not include any new features or improvements specific to ONTAP Select. 
@@ -107,3 +111,4 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 // 2023-02-01,mairead 9.12.1 GA documentation update
 // 2023 Feb 10, clean-up
 // 2023-04-05, ONTAPDOC-920
+// 2023-04-12, ONTAPDOC-979

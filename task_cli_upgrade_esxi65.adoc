@@ -13,7 +13,7 @@ summary: If you are running ONTAP Select on VMware ESXi, you can upgrade the ESX
 :imagesdir: ./media/
 
 [.lead]
-If you are running ONTAP Select on VMware ESXi, you can upgrade the ESXi software from an earlier supported version to ESXi 6.5 or 6.7. Before upgrading, you should understand the process and select the appropriate upgrade procedure.
+If you are running ONTAP Select on VMware ESXi, you can upgrade the ESXi software from an earlier supported version to ESXi 6.5 or later. Before upgrading, you should understand the process and select the appropriate upgrade procedure.
 
 == Before you begin
 
@@ -67,7 +67,7 @@ You must use Deploy version 2.5 or later.
 Example
 `node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
 
-. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or later using the procedure provided by VMware.
 +
 Refer to _Before you begin_ for more information.
 
@@ -110,7 +110,7 @@ You must perform this upgrade procedure for each of the nodes in the cluster, on
 Example
 `node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
 
-. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or later using the procedure provided by VMware.
 +
 Refer to Preparing to upgrade VMware ESXi for more information.
 
@@ -153,7 +153,7 @@ You can upgrade the VMware ESXi hypervisor hosting an ONTAP Select single-node c
 
 . Using VMware vSphere, confirm that the ONTAP Select virtual machine is powered off.
 
-. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or later using the procedure provided by VMware.
 +
 Refer to Preparing to upgrade VMware ESXi for more information.
 
@@ -188,7 +188,7 @@ You must perform this upgrade procedure for each of the nodes in the cluster, on
 
 . Using VMware vSphere, confirm that the ONTAP Select virtual machine is powered off.
 
-. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or 6.7 using the procedure provided by VMware.
+. Upgrade the hypervisor host where ONTAP Select is running to ESXi 6.5 or later using the procedure provided by VMware.
 +
 Refer to _Before you begin_ for more information.
 
@@ -220,3 +220,5 @@ sdot-d200-012d true true
 .After you finish
 
 You must perform the upgrade procedure for each host used in the ONTAP Select cluster.
+
+// 2023-04-12, ONTAPDOC-979
