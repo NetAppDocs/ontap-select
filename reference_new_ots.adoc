@@ -24,7 +24,7 @@ A new license is needed for NVMe/TCP if you're upgrading to ONTAP Select 9.13.1 
 
 Updated VMware ESXi support::
 
-VMware ESXi 8.0 GA (build 20513097) is supported with ONTAP Select 9.13.1, with hardware version support from 4 to 20.
+Beginning with ONTAP 9.13.1, VMware ESXi 8.0 GA (build 20513097) is supported with hardware version 4 and later.
 
 == ONTAP Select 9.12.1
 
