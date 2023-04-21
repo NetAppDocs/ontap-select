@@ -1,0 +1,42 @@
+---
+sidebar: sidebar
+permalink: concept_cluster_expansion.html
+keywords: plan, planning, cluster deployment workflow, deployment workflow, workflow, deployment steps
+summary: There is a workflow process that you can use to deploy an ONTAP Select cluster.
+---
+
+= Cluster expansion
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Beginning with ONTAP 9.13.1, you can expand an existing one-node cluster to a two node cluster by configuring both nodes as a HA pair. A larger cluster increases performance and storage capacity available in the cluster.
+
+The procedure is automated and initiated from ONTAP Select Deploy using REST API, CLI, or the Web interface. This is a disruptive procedure.  
+
+.Hardware and software requirements 
+
+* ONTAP Select Deploy supports expansion on clusters with both an evaluation license (90 days) and a production (standard or premium) license. For the new node, you must have the necessary capacity tier licenses. In the cse of capacity pool licenses, you can use unused capacity in an existing pool or acquire an additional capacity pool license. For more information, see the link:concept_lic_evaluation.html[License] section. The licenses must meet the following criteria:
+** Both nodes have the same license applied.
+** Total capacity on each node does not exceed the licensed capacity.
+** If both nodes have a capacity pool license, they must belong to the same capacity pool.
+* The existing node is running ONTAP 9.13.1 or later
+* The ESX host for the new node has the same configuration as the host for the existing node and has sufficient memory and CPUs.
+** The ESX host supports ESX 7.0U3 or later.
+** NetApp also recommends vCenter Server 7.0 or later. 
+* Cluster expansion is supported for hardware RAID node types. Expanding mixed software and hardware RAID node types is not supported.
+* The datastores attached to the nodes meet the following criteria:
+** The datastores on the existing node must be the same type, for example, VMFS-5, VMFS-6 or NFS. 
+** The datastore attached to the new node must be the same type as the default datastore for the existing node.
+** The datastores on the existing node must have free space either equal to or greater than the used space on the node, and total occupied space must not exceed 32TB. 
+** The free space on the datastore attached to the new node must be double the total occupied space on the existing node.
+
+The following figure illustrates the HA pair configuration after expanding from a one node to two node cluster. 
+image:cluster_expansion_two_node.PNG[One node to two node cluster expansion diagram]
+
+You must follow best practices when performing the cluster expansion, see _NetApp Techinical Report xxx: Best Practices for ONTAP Select cluster expansion_.
+
+// 2023 APR 21, ONTAPDOC-977

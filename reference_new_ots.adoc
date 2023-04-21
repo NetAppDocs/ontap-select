@@ -16,6 +16,13 @@ summary: The current release does not include any new features or improvements s
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
+== ONTAP Select 9.13.1
+
+ONTAP Select 9.13.1 includes several new features and improvements. 
+
+CLuster expansion::
+ONTAP Select 9.13.1 introduces cluster expansion to increase performance and storage capacity available in the cluster. Beginning with ONTAP Select 9.13.1, you can expand to a two node cluster by configuring both nodes as a HA pair. The procedure is automated and initiated from ONTAP Select Deploy using REST API, CLI, or the Web interface. To perform this procedure, you must meet certain hardware and software requirements. link:concept_cluster_expansion.html[Learn more].
+
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 benefits from most of the new developments in the current release of the core ONTAP product. It does not include any new features or improvements specific to ONTAP Select. 
