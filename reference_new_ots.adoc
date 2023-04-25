@@ -20,7 +20,7 @@ NetApp periodically updates ONTAP Select to bring you new features and enhanceme
 
 Support for NVMe over TCP::
 
-A new license is needed for NVMe/TCP if you're upgrading to ONTAP Select 9.13.1 from a previous version. The license is automatically included if you're deploying the feature for the first time from 9.13.1.
+When you upgrade to ONTAP Select 9.13.1, you must have the new license to support NVMe over TCP. This license is automatically included when you deploy ONTAP Select for the first time from version 9.13.1.
 
 Updated VMware ESXi support::
 
