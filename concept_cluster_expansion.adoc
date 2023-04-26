@@ -16,7 +16,8 @@ Beginning with ONTAP 9.13.1, you can expand an existing single-node cluster to a
 
 The procedure is automated and initiated from ONTAP Select Deploy using the CLI or Web interface. This is a disruptive procedure.  
 
-.Prerequisites
+.Cluster expansion prerequisites 
+Before initiating the cluster expansion procedure, verify that you meet the following prerequisites: 
 
 * The existing node is powered on.
 * You have successfully performed a cluster refresh on the existing node.
@@ -34,21 +35,23 @@ The procedure is automated and initiated from ONTAP Select Deploy using the CLI 
 * Both ONTAP Select nodes must be the same instance type.
 
 .Hardware and software requirements 
+The new and existing nodes must meet several hardware and software requirements:
 
-* The existing node is running ONTAP 9.13.1 or later.
+* The existing single-node cluster is running ONTAP 9.13.1 or later.
 * The ESX hosts for the existing and new nodes meet the following criteria:
 ** They support vCenter Server 7.0 Update 3 or later. NetApp also recommends vCenter Server 7.0 or later.
 ** They have an internal network for intercluster connects.
 * The existing and new node are hardware RAID types.
 * For a small instance type, the node has a minimum of 16GB of RAM and four CPU. For a large instance type, the node has a maximum of 128GB of RAM and 16 CPUs. 
 
-.Limitations
+.Cluster expansion limitations
+You should note the following limitations for an ONTAP Select cluster expansion: 
 
 * The procedure is limited to a single-node to two-node cluster expansion.
 * Expansion is limited to 64TB datastore total capacity; 32TB of data plus 32TB of additional space for data mirroring.
 * Cluster expansion is supported for hardware RAID node and cluster types only. Expanding to mixed software and hardware RAID types is not supported.
 
-The following figure illustrates the HA pair configuration after expanding from a single-node to a two-node cluster. 
+The following figure illustrates the single-node configuration before expansion and the two-node HA pair configuration after expansion. 
 image:cluster_expansion_two_node.PNG[single-node to two-node cluster expansion diagram]
 
 .Start the cluster expansion procedure
