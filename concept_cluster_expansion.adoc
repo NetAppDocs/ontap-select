@@ -1,11 +1,10 @@
 ---
 sidebar: sidebar
 permalink: concept_cluster_expansion.html
-keywords: plan, planning, cluster deployment workflow, deployment workflow, workflow, deployment steps
-summary: There is a workflow process that you can use to deploy an ONTAP Select cluster.
+keywords: cluster, expand, expansion, single, two, node deployment workflow, workflow, deployment steps
+summary: Expand an existing single-node cluster to a two-node cluster by configuring both nodes as a high-availability (HA) pair.
 ---
-
-= Cluster expansion
+= Expand the cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,30 +12,54 @@ summary: There is a workflow process that you can use to deploy an ONTAP Select 
 :imagesdir: ./media/
 
 [.lead]
-Beginning with ONTAP 9.13.1, you can expand an existing one-node cluster to a two node cluster by configuring both nodes as a HA pair. A larger cluster increases performance and storage capacity available in the cluster.
+Beginning with ONTAP 9.13.1, you can expand an existing single-node cluster to a two-node cluster by configuring both nodes as a high-availability (HA) pair. Expanding to a two-node HA cluster provides high-availability, which protects you from the impact of a node disruption on the capability of a cluster to serve data.
 
-The procedure is automated and initiated from ONTAP Select Deploy using REST API, CLI, or the Web interface. This is a disruptive procedure.  
+The procedure is automated and initiated from ONTAP Select Deploy using the CLI or Web interface. This is a disruptive procedure.  
 
-.Hardware and software requirements 
+.Prerequisites
 
+* The existing node is powered on.
+* You have successfully performed a cluster refresh on the existing node.
+* The ESX hosts for the existing and new nodes have the same configuration.
+* You have successfully run the network connectivity checker between the ESX hosts for the existing and new nodes.
 * ONTAP Select Deploy supports expansion on clusters with both an evaluation license (90 days) and a production (standard or premium) license. For the new node, you must have the necessary capacity tier licenses. In the cse of capacity pool licenses, you can use unused capacity in an existing pool or acquire an additional capacity pool license. For more information, see the link:concept_lic_evaluation.html[License] section. The licenses must meet the following criteria:
 ** Both nodes have the same license applied.
 ** Total capacity on each node does not exceed the licensed capacity.
 ** If both nodes have a capacity pool license, they must belong to the same capacity pool.
-* The existing node is running ONTAP 9.13.1 or later
-* The ESX host for the new node has the same configuration as the host for the existing node and has sufficient memory and CPUs.
-** The ESX host supports ESX 7.0U3 or later.
-** NetApp also recommends vCenter Server 7.0 or later. 
-* Cluster expansion is supported for hardware RAID node types. Expanding mixed software and hardware RAID node types is not supported.
 * The datastores attached to the nodes meet the following criteria:
-** The datastores on the existing node must be the same type, for example, VMFS-5, VMFS-6 or NFS. 
-** The datastore attached to the new node must be the same type as the default datastore for the existing node.
-** The datastores on the existing node must have free space either equal to or greater than the used space on the node, and total occupied space must not exceed 32TB. 
+** The datastores on the existing node must be the same type, for example, VMware Virtual Machine File System (VMFS)-5, VMFS-6, or NFS. 
+** The datastore attached to the new node must be the same type as the default datastore for the existing node. 
+** The datastores on the existing node must have free space either equal to or greater than the used space on the node.
 ** The free space on the datastore attached to the new node must be double the total occupied space on the existing node.
+* Both ONTAP Select nodes must be the same instance type.
 
-The following figure illustrates the HA pair configuration after expanding from a one node to two node cluster. 
-image:cluster_expansion_two_node.PNG[One node to two node cluster expansion diagram]
+.Hardware and software requirements 
 
-You must follow best practices when performing the cluster expansion, see _NetApp Techinical Report xxx: Best Practices for ONTAP Select cluster expansion_.
+* The existing node is running ONTAP 9.13.1 or later.
+* The ESX hosts for the existing and new nodes meet the following criteria:
+** They support vCenter Server 7.0 Update 3 or later. NetApp also recommends vCenter Server 7.0 or later.
+** They have an internal network for intercluster connects.
+* The existing and new node are hardware RAID types.
+* For a small instance type, the node has a minimum of 16GB of RAM and four CPU. For a large instance type, the node has a maximum of 128GB of RAM and 16 CPUs. 
+
+.Limitations
+
+* The procedure is limited to a single-node to two-node cluster expansion.
+* Expansion is limited to 64TB datastore total capacity; 32TB of data plus 32TB of additional space for data mirroring.
+* Cluster expansion is supported for hardware RAID node and cluster types only. Expanding to mixed software and hardware RAID types is not supported.
+
+The following figure illustrates the HA pair configuration after expanding from a single-node to a two-node cluster. 
+image:cluster_expansion_two_node.PNG[single-node to two-node cluster expansion diagram]
+
+.Start the cluster expansion procedure
+To initiate ONTAP Select Deploy to run the cluster expansion procedure, run the following commands from the CLI:
+
+. `node add -cluster-name <cluster_name> -nodes <2nd_node_name>`
+. `node modify -cluster-name <cluster_name> -name <1st_node_name> -internal-networks ONTAP-Internal`
+. `node modify -cluster-name <cluster_name> -name <2nd_node_name> -mgmt-ip <node_ip> -host-name <host_name> . -management-networks ONTAP-Management -internal-networks ONTAP-Internal -data-networks ONTAP-External -passthrough-disks false`
+. `node storage pool attach -cluster-name <cluster_name> -node-name <2nd_node_name> -name <storage_pool_name> -capacity-limit <capacity>`
+. `cluster expand -name <cluster_name>`
++
+When prompted, enter your ONTAP admin password.
 
 // 2023 APR 21, ONTAPDOC-977
