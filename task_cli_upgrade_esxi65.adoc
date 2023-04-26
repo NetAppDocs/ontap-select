@@ -21,7 +21,7 @@ Before upgrading the ESXi software on the hypervisors hosting an ONTAP Select cl
 prepare and select the upgrade procedure that is appropriate for your environment.
 
 [CAUTION]
-If you choose to upgrade to VMware ESXi 7.0, you should upgrade to ESXi U2 (build 8294253) or greater. Using ESXi 7.0 U1 can expose you to a virtual machine failure due to a known VMware bug.
+If you choose to upgrade to VMware ESXi 6.5, you should upgrade to ESXi U2 (build 8294253) or greater. Using ESXi 6.5 U1 can expose you to a virtual machine failure due to a known VMware bug.
 
 === Becoming familiar with how to upgrade VMware ESXi
 
