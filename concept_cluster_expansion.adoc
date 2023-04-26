@@ -32,7 +32,7 @@ Before initiating the cluster expansion procedure, verify that you meet the foll
 ** The datastore attached to the new node must be the same type as the default datastore for the existing node. 
 ** The datastores on the existing node must have free space either equal to or greater than the used space on the node.
 ** The free space on the datastore attached to the new node must be double the total occupied space on the existing node.
-* Both ONTAP Select nodes must be the same instance type.
+* Both ONTAP Select nodes are the same instance type.
 
 .Hardware and software requirements 
 The new and existing nodes must meet several hardware and software requirements:
