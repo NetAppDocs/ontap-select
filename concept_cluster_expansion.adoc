@@ -23,7 +23,7 @@ Before initiating the cluster expansion procedure, verify that you meet the foll
 * You have successfully performed a cluster refresh on the existing node.
 * The ESX hosts for the existing and new nodes have the same configuration.
 * You have successfully run the network connectivity checker between the ESX hosts for the existing and new nodes.
-* For the new node, you must have the necessary capacity tier licenses:
+* For the new node, you have the necessary capacity tier licenses:
 +
 --
 ** In the case of capacity pool licenses, you can use the unused capacity in an existing pool. If there is insufficient capacity in the pool, you must upgrade the license or increase the capacity. 
@@ -35,7 +35,7 @@ The license consumption for a single-node cluster is half the requirement for a 
 +
 --
 ** For a single-node cluster, the full license is available for data aggregates. For example, a single-node with a 1TB license can host 1TB of data aggregates. 
-** For a two-node cluster, half the license capacity is used for the data aggregates on each node and the other half is consumed by the mirror disks of the data aggregates for the corresponding partner node. For example, two nodes with a 2TB license host 1TB of data aggregates each to give a combined total available capacity for data aggregates of 2TB, and 2TB to host the mirror disks of the aggregates. This doubles the licensing requirements for each node (existing and new) in a two-node cluster.
+** For a two-node cluster, half the license capacity is used for the data aggregates on each node and the other half is consumed by the mirror disks of the data aggregates for the corresponding partner node. For example, two nodes with a 2TB license host 1TB of data aggregates each to give a combined 2TB total available capacity for data aggregates, and 2TB to host the mirror disks of the aggregates. This doubles the licensing requirements for each node (existing and new) in a two-node cluster.
 --
 +
 For more information on licenses, see the link:concept_lic_evaluation.html[License] section.
