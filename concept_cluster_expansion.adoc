@@ -23,10 +23,23 @@ Before initiating the cluster expansion procedure, verify that you meet the foll
 * You have successfully performed a cluster refresh on the existing node.
 * The ESX hosts for the existing and new nodes have the same configuration.
 * You have successfully run the network connectivity checker between the ESX hosts for the existing and new nodes.
-* ONTAP Select Deploy supports expansion on clusters with both an evaluation license (90 days) and a production (standard or premium) license. For the new node, you must have the necessary capacity tier licenses. In the cse of capacity pool licenses, you can use unused capacity in an existing pool or acquire an additional capacity pool license. For more information, see the link:concept_lic_evaluation.html[License] section. The licenses must meet the following criteria:
-** Both nodes have the same license applied.
-** Total capacity on each node does not exceed the licensed capacity.
+* For the new node, you must have the necessary capacity tier licenses:
++
+--
+** In the case of capacity pool licenses, you can use the unused capacity in an existing pool. If there is insufficient capacity in the pool, you must upgrade the license or increase the capacity. 
 ** If both nodes have a capacity pool license, they must belong to the same capacity pool.
+** You must apply the same license type to both nodes. 
+--
++
+The license consumption for a single-node cluster is half the requirement for a two-node cluster:
++
+--
+** For a single-node cluster, the full license is available for data aggregates. For example, a single-node with a 1TB license can host 1TB of data aggregates. 
+** For a two-node cluster, half the license capacity is used for the data aggregates on each node and the other half is consumed by the mirror disks of the data aggregates for the corresponding partner node. For example, two nodes with a 2TB license host 1TB of data aggregates each to give a combined total available capacity for data aggregates of 2TB, and 2TB to host the mirror disks of the aggregates. This doubles the licensing requirements for each node (existing and new) in a two-node cluster.
+--
++
+For more information on licenses, see the link:concept_lic_evaluation.html[License] section.
+
 * The datastores attached to the nodes meet the following criteria:
 ** The datastores on the existing node must be the same type, for example, VMware Virtual Machine File System (VMFS)-5, VMFS-6, or NFS. 
 ** The datastore attached to the new node must be the same type as the default datastore for the existing node. 
@@ -40,7 +53,7 @@ The new and existing nodes must meet several hardware and software requirements:
 * The existing single-node cluster is running ONTAP 9.13.1 or later.
 * The ESX hosts for the existing and new nodes meet the following criteria:
 ** They support vCenter Server 7.0 Update 3 or later. NetApp also recommends vCenter Server 7.0 or later.
-** They have an internal network for intercluster connects.
+** They have an internal network for intercluster connection.
 * The existing and new node are hardware RAID types.
 * For a small instance type, the node has a minimum of 16GB of RAM and four CPU. For a large instance type, the node has a maximum of 128GB of RAM and 16 CPUs. 
 
@@ -59,7 +72,7 @@ To initiate ONTAP Select Deploy to run the cluster expansion procedure, run the 
 
 . `node add -cluster-name <cluster_name> -nodes <2nd_node_name>`
 . `node modify -cluster-name <cluster_name> -name <1st_node_name> -internal-networks ONTAP-Internal`
-. `node modify -cluster-name <cluster_name> -name <2nd_node_name> -mgmt-ip <node_ip> -host-name <host_name> . -management-networks ONTAP-Management -internal-networks ONTAP-Internal -data-networks ONTAP-External -passthrough-disks false`
+. `node modify -cluster-name <cluster_name> -name <2nd_node_name> -mgmt-ip <node_ip> -host-name <host_name> -management-networks ONTAP-Management -internal-networks ONTAP-Internal -data-networks ONTAP-External -passthrough-disks false`
 . `node storage pool attach -cluster-name <cluster_name> -node-name <2nd_node_name> -name <storage_pool_name> -capacity-limit <capacity>`
 . `cluster expand -name <cluster_name>`
 +
