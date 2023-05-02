@@ -57,7 +57,7 @@ The new and existing nodes must meet several hardware and software requirements:
 ** They support vCenter Server 7.0 Update 3 or later. NetApp also recommends vCenter Server 7.0 or later.
 ** They have an internal network for intercluster connection.
 * The existing and new node are hardware RAID types.
-* For a small instance type, the node has a minimum of 16GB of RAM and four CPU. For a large instance type, the node has a maximum of 128GB of RAM and 16 CPUs. 
+* For a small instance type, the node has a minimum of 16GB of RAM and four CPUs. For a large instance type, the node has a maximum of 128GB of RAM and 16 CPUs. 
 
 .Cluster expansion limitations
 You should note the following limitations for an ONTAP Select cluster expansion: 
