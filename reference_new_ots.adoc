@@ -16,6 +16,16 @@ summary: The current release does not include any new features or improvements s
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
+== ONTAP Select 9.13.1
+
+Support for NVMe over TCP::
+
+When you upgrade to ONTAP Select 9.13.1, you must have the new license to support NVMe over TCP. This license is automatically included when you deploy ONTAP Select for the first time from version 9.13.1.
+
+Updated VMware ESXi support::
+
+Beginning with ONTAP 9.13.1, VMware ESXi 8.0 GA (build 20513097) is supported with hardware version 4 and later.
+
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 benefits from most of the new developments in the current release of the core ONTAP product. It does not include any new features or improvements specific to ONTAP Select. 
@@ -100,3 +110,5 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 
 // 2023-02-01,mairead 9.12.1 GA documentation update
 // 2023 Feb 10, clean-up
+// 2023-04-05, ONTAPDOC-920
+// 2023-04-12, ONTAPDOC-979
