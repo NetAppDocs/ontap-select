@@ -14,7 +14,7 @@ summary: Expand an existing single-node cluster to a two-node cluster by configu
 [.lead]
 Beginning with ONTAP 9.13.1, you can expand an existing single-node cluster to a two-node cluster by configuring both nodes as a high-availability (HA) pair. Expanding to a two-node HA cluster provides high-availability, which protects you from the impact of a node disruption on the capability of a cluster to serve data.
 
-The procedure is automated and initiated from ONTAP Select Deploy using the CLI or Web interface. This is a disruptive procedure.  
+The procedure is automated and initiated from ONTAP Select Deploy using the CLI or web interface. This is a disruptive procedure.  
 
 .Cluster expansion prerequisites 
 Before initiating the cluster expansion procedure, verify that you meet the following prerequisites: 
@@ -56,14 +56,14 @@ The new and existing nodes must meet several hardware and software requirements:
 * The ESX hosts for the existing and new nodes meet the following criteria:
 ** They support vCenter Server 7.0 Update 3 or later. NetApp also recommends vCenter Server 7.0 or later.
 ** They have an internal network for intercluster connection.
-* The existing and new node are hardware RAID types.
+* The existing node and the new node are hardware RAID types.
 * For a small instance type, the node has a minimum of 16GB of RAM and four CPUs. For a large instance type, the node has a maximum of 128GB of RAM and 16 CPUs. 
 
 .Cluster expansion limitations
 You should note the following limitations for an ONTAP Select cluster expansion: 
 
-* The procedure is limited to a single-node to two-node cluster expansion.
-* Expansion is limited to 64TB datastore total capacity; 32TB of data plus 32TB of additional space for data mirroring.
+* The procedure only supports expanding a single-node cluster to a two-node cluster.
+* Expansion is limited to 64TB datastore total capacity; data storage capacity is 32TB and the remaining 32TB is additional space for data mirroring.
 * Cluster expansion is supported for hardware RAID node and cluster types only. Expanding to mixed software and hardware RAID types is not supported.
 
 The following figure illustrates the single-node configuration before expansion and the two-node HA pair configuration after expansion. 
