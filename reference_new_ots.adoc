@@ -25,7 +25,7 @@ ONTAP Select 9.13.1 introduces cluster expansion which provides high-availabilit
 
 Support for NVMe over TCP::
 
-When you upgrade to ONTAP Select 9.13.1, you must have the new license to support NVMe over TCP. This license is automatically included when you deploy ONTAP Select 9.13.1 for the first time.
+When you upgrade to ONTAP Select 9.13.1, you must have the new license to support NVMe over TCP. This license is automatically included when you deploy ONTAP Select for the first time from version 9.13.1.
 
 Updated VMware ESXi support::
 
