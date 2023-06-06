@@ -19,6 +19,9 @@ You can upgrade an existing Deploy utility virtual machine in-place using the co
 
 Make sure that Deploy is not used to perform any other tasks during the upgrade. You should see the current release notes for information and restrictions about upgrading the Deploy utility.
 
+[NOTE] 
+If you have an instance of the ONTAP Select Deploy administration utility installed, you should consider upgrading to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See the section link:concept_adm_upgrading_nodes.html[Upgrading the ONTAP Select nodes^] for further details.
+
 == Downloading the upgrade package
 
 To begin the upgrade process, you must download the appropriate Deploy virtual machine upgrade file from the NetApp Support Site. The upgrade package is formatted as a single compressed file.
@@ -94,3 +97,5 @@ ONTAPdeploy2.12_upgrade.tar.gz
 .After you finish
 
 After the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. You should also clear the browser cache to be able to view the newly created Deploy pages.
+
+// 2023-06-06, github issue #178
