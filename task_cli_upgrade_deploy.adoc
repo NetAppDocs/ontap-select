@@ -59,12 +59,12 @@ This task describes one method for uploading the file to the Deploy virtual mach
 
 .Steps
 
-. In a command shell on your local workstation, use the sftp utility to upload the image file to the Deploy virtual machine.
+. In a command shell on your local workstation, use the scp utility to upload the image file to the Deploy virtual machine.
 +
 Example
 +
 ....
-sftp admin@10.234.81.101 (provide password when prompted)
+scp admin@10.234.81.101 (provide password when prompted)
 put ONTAPdeploy2.12_upgrade.tar.gz
 exit
 ....
@@ -90,8 +90,7 @@ You must known which directory the upgrade file has been placed in at the Deploy
 Example
 +
 ....
-deploy upgrade -package-path /home/admin/
-ONTAPdeploy2.12_upgrade.tar.gz
+deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 ....
 
 .After you finish
