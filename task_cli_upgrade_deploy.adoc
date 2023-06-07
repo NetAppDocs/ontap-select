@@ -64,9 +64,7 @@ This task describes one method for uploading the file to the Deploy virtual mach
 Example
 +
 ....
-scp admin@10.234.81.101 (provide password when prompted)
-put ONTAPdeploy2.12_upgrade.tar.gz
-exit
+scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
 ....
 
 .Result
