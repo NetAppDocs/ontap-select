@@ -77,7 +77,7 @@ The traditional health monitoring used with a hardware-based ONTAP deployment is
 Due to the virtualized environment used with ONTAP Select, the NIC offload facility is not supported.
 
 * Cluster IPspace
-Any modification to Cluster IPspace, including adding or removing ports, is not supported.
+Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
 
 * ONTAP port properties
 Modifying the properties of the ONTAP ports, including speed, duplex, and flow-control, is not supported.
@@ -88,9 +88,16 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 * Autonomous Ransomware Protection (ARP)
 
+* Tamperproof Snapshot copies
+
+* SVM migration
+
+* VMware HCX
+
 .Related information
 
 * link:reference_lic_ontap_features.html[ONTAP features enabled by default]
 
+// 2023-06-19, ONTAPDOC-1096
 // 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
 
