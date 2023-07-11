@@ -17,7 +17,7 @@ You should be aware of the initial state of a cluster after it has been deployed
 
 An ONTAP Select cluster has several characteristics after it is created.
 
-NOTE: It is important not to edit or adjust user roles and permissions. For more information, see the KB article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/OTS_Deploy_cluster_refresh_fails_with_error%3A_ONTAPSelectSysCLIVersionFailed_zapi_returned_bad_status_0%3A_None[OTS Deploy cluster refresh fails with error]. 
+NOTE: It is important not to edit or adjust user roles and permissions. For more information, see the KB article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/OTS_Deploy_cluster_refresh_fails_with_error%3A_ONTAPSelectSysCLIVersionFailed_zapi_returned_bad_status_0%3A_None[OTS Deploy cluster refresh fails with error^]. 
 
 .LIFs
 
