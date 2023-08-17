@@ -5,7 +5,7 @@ keywords: ontap select, standard and distributed vSwitch configurations, vSwitch
 summary: ONTAP Select vSwitch configuration and load-balancing policies for two-NIC and four-NIC configurations.
 ---
 
-= VMWare vSphere vSwitch Configuration
+= VMware vSphere vSwitch Configuration
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -139,3 +139,5 @@ image:DDN_16.jpg[Internal port group configurations using a distributed vSwitch 
 
 [NOTE]
 LACP requires that you configure the upstream switch ports as a port channel. Prior to enabling this on the distributed vSwitch, make sure that an LACP-enabled port channel is properly configured.
+
+// 2023-08-15, Github issue #213
