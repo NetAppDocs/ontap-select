@@ -172,7 +172,7 @@ sidebar:
               url: /concept_nw_internal_external.html
             - title: Supported configurations
               url: /concept_nw_supported_configs.html
-            - title: VMWare vSphere VSwitch configuration
+            - title: VMware vSphere VSwitch configuration
               url: /concept_nw_vsphere_vswitch_config.html
             - title: Physical switch configuration
               url: /concept_nw_physical_switch_config.html
