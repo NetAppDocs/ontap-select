@@ -37,6 +37,55 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 . Select and download the appropriate package, responding to all prompts as needed.
 
+== Verify the ONTAP Select Deploy OVA signature
+
+You should verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
+
+Before verifying the ONTAP Select Deploy OVA signature, your system must meet the following requirements:
+
+* OpenSSL versions 1.0.2 to 3.0 for basic verification
+* OpenSSL version 1.1.0 or later for Time Stamping Authority (TSA) operations
+* Public internet access for Online Certificate Status Protocol (OCSP) verification
+
+[cols=2*,options="header"]
+|===
+| File
+| Description
+| `ONTAP-Select-Deploy-Production.pub`
+| The public key used to verify the signature.
+| `csc-prod-chain-ONTAP-Select-Deploy.pem`
+| The public certification authority (CA) chain of trust.
+| `csc-prod-ONTAP-Select-Deploy.pem`
+| The certificate used to generate the key.
+| `ONTAPdeploy.ova`
+| The product installation executable for ONTAP Select 9.13.1.
+| `ONTAPdeploy.ova.sig`
+| The SHA-256 algorithm is hashed and then signed by the Remote Support Agent (RSA) using the `csc-prod` key and signature for the installer.
+| `ONTAPdeploy.ova.sig.tsr`
+| The revocation request used by OCSCP for the installer’s signature.
+| `tsa-prod-ONTAP-Select-Deploy.pem`
+| The public certificate for the TSR file.
+| `tsa-prod-chain-ONTAP-Select-Deploy.pem`
+| The public certificate CA Chain for the TSR file.
+|===
+
+Verify the `ONTAPdeploy.ova.sig` and `ONTAPdeploy.ova.sig.tsr` files using the associated certificates and validation commands.
+
+* Verify the signature with the following command:
++
+[source,cli]
+----
+openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
+----
+
+* Verify the timestamp with the following command: 
++
+[source,cli]
+----
+openssl ts -verify -data ONTAPdeploy.ova.sig -in ONTAPdeploy.ova.sig.tsr -CAfile tsa-prod-chain-ONTAP-Select-Deploy.pem  -untrusted tsa-prod-chain-ONTAP-Select-Deploy.pem
+----
+
+
 == Deploying the virtual machine
 
 You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
@@ -109,3 +158,5 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 .Related information
 
 link:task_cli_signing_in.html[Signing in to Deploy using SSH]
+
+// 2023-09-07, ONTAPDOC-1330
