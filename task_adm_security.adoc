@@ -74,10 +74,10 @@ You should be familiar with the types of credentials and how they are used by ON
 
 Beginning with ONTAP Select 9.13.1, multifactor authentication (MFA) is supported for the ONTAP Select Deploy administrator account:
 
-* <<ONTAP Select Deploy CLI MFA login using YubiKey Personal Identity Verification (PIV) or Fast IDentity Online (FIDO2) authentication>>
+* link:task_adm_security.html#ontap-select-deploy-cli-mfa-login-using-yubikey-piv-or-fido2-authentication[ONTAP Select Deploy CLI MFA login using YubiKey Personal Identity Verification (PIV) or Fast IDentity Online (FIDO2) authentication]
 * <<ONTAP Select Deploy CLI MFA login using ssh-keygen>>
 
-== ONTAP Select Deploy CLI MFA login using YubiKey Personal Identify Verification (PIV) or Fast IDentity Online (FIDO2) authentication
+== ONTAP Select Deploy CLI MFA login using YubiKey PIV or FIDO2 authentication
 
 === YubiKey PIV
 Configure the YubiKey PIN and generate or import the Remote Support Agent (RSA) or Elliptic Curve Digital Signature Algorithm (ECDSA) private key and certificate with the steps in link:https://docs.netapp.com/us-en/ontap-technical-reports/security.html#multifactor-authentication[TR-4647: Multifactor authentication in ONTAP^].
@@ -186,7 +186,7 @@ ssh-keygen -t ecdsa
 . Add a public key generated from `ssh-keygen` with the `security publickey add -key <key>` command.
 +
 ----
-(ONTAPdeploy) security publickey add -key "ssh-rsa <key> user@eng.netapp.com"
+(ONTAPdeploy) security publickey add -key "ssh-rsa <key> user@netapp.com"
 ----
 
 . Enable MFA Authentication with the `security multifactor authentication enable` command. 
