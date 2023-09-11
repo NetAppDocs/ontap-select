@@ -47,6 +47,8 @@ Before verifying the ONTAP Select Deploy OVA signature, your system must meet th
 * OpenSSL version 1.1.0 or later for Time Stamping Authority (TSA) operations
 * Public internet access for Online Certificate Status Protocol (OCSP) verification
 
+The following files should be obtained from the NetApp support site product download page:
+
 [cols=2*,options="header"]
 |===
 | File
@@ -62,7 +64,7 @@ Before verifying the ONTAP Select Deploy OVA signature, your system must meet th
 | `ONTAPdeploy.ova.sig`
 | The SHA-256 algorithm is hashed and then signed by the Remote Support Agent (RSA) using the `csc-prod` key and signature for the installer.
 | `ONTAPdeploy.ova.sig.tsr`
-| The revocation request used by OCSCP for the installer’s signature.
+| The revocation request used by OCSP for the installer’s signature.
 | `tsa-prod-ONTAP-Select-Deploy.pem`
 | The public certificate for the TSR file.
 | `tsa-prod-chain-ONTAP-Select-Deploy.pem`
@@ -73,14 +75,12 @@ Verify the `ONTAPdeploy.ova.sig` and `ONTAPdeploy.ova.sig.tsr` files using the a
 
 * Verify the signature with the following command:
 +
-[source,cli]
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
 ----
 
 * Verify the timestamp with the following command: 
 +
-[source,cli]
 ----
 openssl ts -verify -data ONTAPdeploy.ova.sig -in ONTAPdeploy.ova.sig.tsr -CAfile tsa-prod-chain-ONTAP-Select-Deploy.pem  -untrusted tsa-prod-chain-ONTAP-Select-Deploy.pem
 ----
