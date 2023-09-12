@@ -124,7 +124,7 @@ The public key is obtained from:
 .Steps
 . Find the generated key in the `.ssh/id_***.pub` file.
 
-. Add a public key generated from `ssh-keygen` with the `security publickey add -key <key>` command.
+. Add the generated key to ONTAP Select Deploy using the `security publickey add -key <key>` command.
 +
 ----
 (ONTAPdeploy) security publickey add -key "ssh-rsa <key> user@netapp.com"
@@ -183,7 +183,7 @@ ssh-keygen -t ecdsa
 .Steps
 . Find the generated key in the `.ssh/id_***.pub` file.
 
-. Add a public key generated from `ssh-keygen` with the `security publickey add -key <key>` command.
+. Add the generated key to ONTAP Select Deploy using the `security publickey add -key <key>` command.
 +
 ----
 (ONTAPdeploy) security publickey add -key "ssh-rsa <key> user@netapp.com"
