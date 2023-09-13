@@ -15,6 +15,8 @@ summary: There are several planning issues related to ONTAP Select host storage 
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
+NOTE: The external storage support information is outlined in link:reference_plan_ots_vnas.html[ONTAP Select vNAS requirements^].
+
 == Hardware RAID controller requirements
 
 The RAID controller on the hypervisor host where you deploy ONTAP Select must meet several requirements.
@@ -38,8 +40,6 @@ The minimum requirements for the RAID controller include:
 == Software RAID requirements
 
 When deploying an ONTAP Select cluster on the VMware ESXi hypervisor, you can utilize the software RAID capability provided by ONTAP Select instead of a local hardware RAID controller. There are several requirements and restrictions you must be aware before deploying a cluster using software RAID.
-
-NOTE: The external storage support information is outlined in link:reference_plan_ots_vnas.html[ONTAP Select vNAS requirements^].
 
 === General requirements
 
