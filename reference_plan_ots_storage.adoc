@@ -15,7 +15,7 @@ summary: There are several planning issues related to ONTAP Select host storage 
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
-NOTE: The external storage support information is outlined in link:reference_plan_ots_vnas.html[ONTAP Select vNAS requirements^].
+NOTE: External storage support information is outlined in link:reference_plan_ots_vnas.html[ONTAP Select vNAS requirements].
 
 == Hardware RAID controller requirements
 
