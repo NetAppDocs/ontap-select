@@ -197,5 +197,8 @@ If the cluster creation operation is initiated but fails to complete, the ONTAP 
 
 ====
 
+.After you finish
+
+You should confirm the ONTAP Select AutoSupport feature is configured and back up the ONTAP Select Deploy configuration data.
 
 // 2023-09-13, ONTAPDOC-1306
