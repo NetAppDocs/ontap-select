@@ -68,13 +68,13 @@ If you will deploy a multi-node cluster, you should be familiar with the network
 After deploying a cluster::
 You should back up the ONTAP Select Deploy configuration data.
 
-== Creating a single or multi-node cluster
+== Creating a single-node or multi-node cluster
 
 You can use the ONTAP Select Deploy web user interface to deploy a single-node or multi-node ONTAP Select cluster.
 
 .Before you begin
 
-See link:task_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster. The Deploy administration must be installed and initially configured (password, AutoSupport, vCenter).
+See link:task_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster. The Deploy administration must be installed and initially configured (password, AutoSupport, and vCenter).
 
 .About this task
 
@@ -138,20 +138,20 @@ It can take up to 30 minutes for the cluster to be created.
 The page is automatically refreshed at regular intervals.
 +
 [TIP]
-If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define may not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
 --
 
 .Multi-node cluster
 --
 . Sign in to the Deploy utility through the web interface using the administrator account (admin).
 
-. If the *Welcome to ONTAP Select* popup window is displayed, confirm you have met the configuration prerequisites and click *OK*.
+. If the *Welcome to ONTAP Select* popup window is displayed, confirm that you have met the configuration prerequisites and click *OK*.
 
 . If the *Getting Started* cluster launch page is not displayed, click image:icon_question_mark.gif[Question mark] at the top of the page and click *Getting Started*.
 
 . On the *Getting Started* page, click *Upload* and select a license from your local workstation and click *Open* to upload the license. Repeat to add a second license.
 
-. Click *Refresh* and confirm the licenses has been added.
+. Click *Refresh* and confirm the licenses have been added.
 
 . Click *Next* to add two hypervisor hosts and then click *Add*.
 +
@@ -163,7 +163,7 @@ Any account credentials you provide are added to the Deploy credential database.
 
 . Click *Next* to begin the cluster creation process.
 
-. In the *Cluster Details* section, select *2 node cluster* for the *Cluster Size* and provide all the required information describing the clusters and click *Done*.
+. In the *Cluster Details* section, select *2 node cluster* for the *Cluster Size*, provide all the required information describing the clusters, and click *Done*.
 
 . Under *Node Setup*, provide the node management IP addresses and select the licenses for each node; you can upload a new license if needed. You also can change the node names if needed.
 
@@ -171,7 +171,7 @@ Any account credentials you provide are added to the Deploy credential database.
 +
 There are three node configurations which define the virtual machine size and available feature set. These instance types are supported by the standard, premium, and premium XL offerings of the purchased license, respectively. The license you select for the nodes must match or exceed the instance type.
 +
-Select the hypervisor hosts as well as the management and data, and internal networks.
+Select the hypervisor hosts as well as the management, data, and internal networks.
 
 . Provide the *Storage* configuration and click *Done*.
 +
@@ -189,18 +189,18 @@ You can change the configuration by clicking image:icon_pencil.gif[Edit] in the 
 +
 It can take up to 45 minutes for the cluster to be created.
 
-. Monitor the multi-step cluster creation process to confirm the cluster is created successfully.
+. Monitor the multi-step cluster creation process to confirm that the cluster is created successfully.
 +
 The page is automatically refreshed at regular intervals.
 +
 [TIP]
-If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define may not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
 --
 
 ====
 
 .After you finish
 
-You should confirm the ONTAP Select AutoSupport feature is configured and back up the ONTAP Select Deploy configuration data.
+You should confirm the ONTAP Select AutoSupport feature is configured and then back up the ONTAP Select Deploy configuration data.
 
 // 2023-09-13, ONTAPDOC-1306
