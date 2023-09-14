@@ -82,6 +82,8 @@ An ONTAP Select cluster with one or more nodes is created for a production deplo
 
 .Steps
 
+The steps you follow depend on whether you want to create a single-node cluster or a multi-node cluster.
+
 [role="tabbed-block"]
 ====
 
