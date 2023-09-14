@@ -54,7 +54,7 @@ Getting started launch page::
 The initial page *Getting Started with ONTAP Select Deploy* guides you through the multi-step process of creating a cluster. There are five major steps, including:
 
 * Add licenses
-* Add host to inventory
+* Add hosts to inventory
 * Create a cluster
 * Network precheck
 * Deploy the cluster
