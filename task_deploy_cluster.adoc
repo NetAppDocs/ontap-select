@@ -54,7 +54,7 @@ Getting started launch page::
 The initial page *Getting Started with ONTAP Select Deploy* guides you through the multi-step process of creating a cluster. There are five major steps, including:
 
 * Add licenses
-* Add host to inventory
+* Add hosts to inventory
 * Create a cluster
 * Network precheck
 * Deploy the cluster
@@ -68,20 +68,27 @@ If you will deploy a multi-node cluster, you should be familiar with the network
 After deploying a cluster::
 You should back up the ONTAP Select Deploy configuration data.
 
-== Creating a single-node cluster
+== Creating a single-node or multi-node cluster
 
-You can use the ONTAP Select Deploy web user interface to deploy a single-node ONTAP Select cluster.
+You can use the ONTAP Select Deploy web user interface to deploy a single-node or multi-node ONTAP Select cluster.
 
 .Before you begin
 
-See link:task_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster. The Deploy administration must be installed and initially configured (password, AutoSupport, vCenter).
+See link:task_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster. The Deploy administration must be installed and initially configured (password, AutoSupport, and vCenter).
 
 .About this task
 
-An ONTAP Select cluster with one node is created for a production deployment.
+An ONTAP Select cluster with one or more nodes is created for a production deployment.
 
 .Steps
 
+The steps you follow depend on whether you want to create a single-node cluster or a multi-node cluster.
+
+[role="tabbed-block"]
+====
+
+.Single-node cluster
+--
 . Sign in to the Deploy utility through the web interface using the administrator account (admin).
 
 . If the *Welcome to ONTAP Select* popup window is displayed, confirm you have met the configuration prerequisites and click *OK*.
@@ -131,14 +138,69 @@ It can take up to 30 minutes for the cluster to be created.
 The page is automatically refreshed at regular intervals.
 +
 [TIP]
-If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define may not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
+--
+
+.Multi-node cluster
+--
+. Sign in to the Deploy utility through the web interface using the administrator account (admin).
+
+. If the *Welcome to ONTAP Select* popup window is displayed, confirm that you have met the configuration prerequisites and click *OK*.
+
+. If the *Getting Started* cluster launch page is not displayed, click image:icon_question_mark.gif[Question mark] at the top of the page and click *Getting Started*.
+
+. On the *Getting Started* page, click *Upload* and select a license from your local workstation and click *Open* to upload the license. Repeat to add a second license.
+
+. Click *Refresh* and confirm the licenses have been added.
+
+. Click *Next* to add two hypervisor hosts and then click *Add*.
++
+You can add the ESXi hosts directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
+
+. Click *Refresh* and confirm the *Type* value for the host is *ESX*.
++
+Any account credentials you provide are added to the Deploy credential database.
+
+. Click *Next* to begin the cluster creation process.
+
+. In the *Cluster Details* section, select *2 node cluster* for the *Cluster Size*, provide all the required information describing the clusters, and click *Done*.
+
+. Under *Node Setup*, provide the node management IP addresses and select the licenses for each node; you can upload a new license if needed. You also can change the node names if needed.
+
+. Provide the *Hypervisor* and *Network* configuration.
++
+There are three node configurations which define the virtual machine size and available feature set. These instance types are supported by the standard, premium, and premium XL offerings of the purchased license, respectively. The license you select for the nodes must match or exceed the instance type.
++
+Select the hypervisor hosts as well as the management, data, and internal networks.
+
+. Provide the *Storage* configuration and click *Done*.
++
+You can select the drives based on your platform license level and host configuration.
+
+. Review and confirm the configuration of the cluster.
++
+You can change the configuration by clicking image:icon_pencil.gif[Edit] in the applicable section.
+
+. Click *Next* and run the Network Precheck by clicking *Run*. This validates that the internal network selected for ONTAP cluster traffic is functioning correctly.
+
+. Click *Next* and provide the ONTAP administrator password.
+
+. Click *Create Cluster* to begin the cluster creation process and then click *OK* in the popup window.
++
+It can take up to 45 minutes for the cluster to be created.
+
+. Monitor the multi-step cluster creation process to confirm that the cluster is created successfully.
++
+The page is automatically refreshed at regular intervals.
++
+[TIP]
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
+--
+
+====
 
 .After you finish
 
-You should confirm the ONTAP Select AutoSupport feature is configured and back up the ONTAP Select Deploy configuration data.
+You should confirm the ONTAP Select AutoSupport feature is configured and then back up the ONTAP Select Deploy configuration data.
 
-////
-== Creating a multi-node cluster
-
-You can use the ONTAP Select Deploy web user interface to deploy a multi-node ONTAP Select cluster.
-////
+// 2023-09-13, ONTAPDOC-1306
