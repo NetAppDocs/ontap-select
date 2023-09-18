@@ -41,12 +41,16 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 You should verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
 
-Before verifying the ONTAP Select Deploy OVA signature, your system must meet the following requirements:
+.Before you begin
+Verify that your system meets the following requirements:
 
 * OpenSSL versions 1.0.2 to 3.0 for basic verification
 * Public internet access for Online Certificate Status Protocol (OCSP) verification
 
-The following files should be obtained from the NetApp support site product download page:
+.Steps
+
+. Obtain the following files from the  product download page on the NetApp support site:
++
 
 [cols=2*,options="header"]
 |===
@@ -64,9 +68,10 @@ The following files should be obtained from the NetApp support site product down
 | The SHA-256 algorithm is hashed and then signed by the Remote Support Agent (RSA) using the `csc-prod` key and signature for the installer.
 |===
 
-* Verify the `ONTAPdeploy.ova.sig` file using the associated certificates and validation commands.
+. Verify that the `ONTAPdeploy.ova.sig` file is using the associated certificates and validation commands.
 
-* Verify the signature with the following command:
++
+Verify the signature with the following command:
 +
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
