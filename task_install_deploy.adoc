@@ -15,7 +15,7 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 [.lead]
 You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 
-== Downloading the virtual machine image
+== Download the virtual machine image
 
 You can download the ONTAP Select package from the NetApp support site.
 
@@ -51,7 +51,6 @@ Verify that your system meets the following requirements:
 
 . Obtain the following files from the  product download page on the NetApp support site:
 +
-
 [cols=2*,options="header"]
 |===
 | File
@@ -70,16 +69,14 @@ Verify that your system meets the following requirements:
 
 . Verify that the `ONTAPdeploy.ova.sig` file is using the associated certificates and validation commands.
 
-+
-Verify the signature with the following command:
+. Verify the signature with the following command:
 +
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
 ----
 
 
-
-== Deploying the virtual machine
+== Deploy the virtual machine
 
 You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
 
@@ -129,7 +126,7 @@ Use DHCP to set networking information? [n]:
 .. Type *n* to define a static IP configuration or y to use DHCP, and press *Enter*.
 .. If you choose a static configuration, provide all network configuration information as required.
 
-== Signing in to the Deploy web interface
+== Sign in to the Deploy web interface
 
 You should sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
 
