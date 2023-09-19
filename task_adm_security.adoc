@@ -82,14 +82,14 @@ Beginning with ONTAP Select 9.13.1, multifactor authentication (MFA) is supporte
 === YubiKey PIV
 Configure the YubiKey PIN and generate or import the Remote Support Agent (RSA) or Elliptic Curve Digital Signature Algorithm (ECDSA) private key and certificate with the steps in link:https://docs.netapp.com/us-en/ontap-technical-reports/security.html#multifactor-authentication[TR-4647: Multifactor authentication in ONTAP^].
 
-* For Windows: The YubiKey PIV client configuration for Windows is on page 11 of the technical report. 
-* For MacOS: The YubiKey PIV client configuration For MacOS and Linux is on page 19 of the technical report.
+* For Windows: The *YubiKey PIV Client configuration for Windows* section of the technical report. 
+* For MacOS: The *YubiKey PIV client configuration For MAC OS and Linux* section of the technical report.
 
 === FIDO2
 If you choose to opt for YubiKey FIDO2 authentication, configure the YubiKey FIDO2 PIN using the YubiKey Manager and generate the FIDO2 key with a PuTTY-CAC (Common Access Card) for Windows or ssh-keygen for MacOS. The steps to do this are in the technical report link:https://docs.netapp.com/us-en/ontap-technical-reports/security.html#multifactor-authentication[TR-4647: Multifactor authentication in ONTAP^].
 
-* For Windows: The YubiKey FIDO2 client configuration for Windows is on page 27 of the TR-4647 technical report.
-* For MacOS: YubiKey FIDO2 client configuration For MacOS and Linux is on page 36 of the TR-4647 technical report.
+* For Windows: The *YubiKey FIDO2 client configuration for Windows* section of the technical report.
+* For MacOS: The *YubiKey FIDO2 client configuration For Mac OS and Linux* section of the technical report.
 
 === Obtaining the YubiKey PIV or FIDO2 public key
 Obtaining the public key depends on whether you're a Windows or MacOS client, and if you are using PIV or FIDO2.
@@ -250,4 +250,4 @@ MFA disabled successfully
 * The administrator can delete the public key with:
 `security publickey delete -key` 
 
-//2022-08-30, ONTAPDOC-1320
+//2023-08-30, ONTAPDOC-1320
