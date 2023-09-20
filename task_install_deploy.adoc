@@ -15,7 +15,7 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 [.lead]
 You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 
-== Downloading the virtual machine image
+== Download the virtual machine image
 
 You can download the ONTAP Select package from the NetApp support site.
 
@@ -37,7 +37,46 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 . Select and download the appropriate package, responding to all prompts as needed.
 
-== Deploying the virtual machine
+== Verify the ONTAP Select Deploy OVA signature
+
+You should verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
+
+.Before you begin
+Verify that your system meets the following requirements:
+
+* OpenSSL versions 1.0.2 to 3.0 for basic verification
+* Public internet access for Online Certificate Status Protocol (OCSP) verification
+
+.Steps
+
+. Obtain the following files from the  product download page on the NetApp support site:
++
+[cols=2*,options="header"]
+|===
+| File
+| Description
+| `ONTAP-Select-Deploy-Production.pub`
+| The public key used to verify the signature.
+| `csc-prod-chain-ONTAP-Select-Deploy.pem`
+| The public certification authority (CA) chain of trust.
+| `csc-prod-ONTAP-Select-Deploy.pem`
+| The certificate used to generate the key.
+| `ONTAPdeploy.ova`
+| The product installation executable for ONTAP Select 9.13.1.
+| `ONTAPdeploy.ova.sig`
+| The SHA-256 algorithm is hashed and then signed by the Remote Support Agent (RSA) using the `csc-prod` key and signature for the installer.
+|===
+
+. Verify that the `ONTAPdeploy.ova.sig` file is using the associated certificates and validation commands.
+
+. Verify the signature with the following command:
++
+----
+openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
+----
+
+
+== Deploy the virtual machine
 
 You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
 
@@ -87,7 +126,7 @@ Use DHCP to set networking information? [n]:
 .. Type *n* to define a static IP configuration or y to use DHCP, and press *Enter*.
 .. If you choose a static configuration, provide all network configuration information as required.
 
-== Signing in to the Deploy web interface
+== Sign in to the Deploy web interface
 
 You should sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
 
@@ -109,3 +148,5 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 .Related information
 
 link:task_cli_signing_in.html[Signing in to Deploy using SSH]
+
+// 2023-09-07, ONTAPDOC-1330

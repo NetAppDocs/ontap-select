@@ -22,6 +22,7 @@ ONTAP features that have hardware-specific dependencies are generally not suppor
 
 The following features are included with ONTAP Select and licensed by default:
 
+* NVMe over TCP
 * NFS
 * CIFS
 * iSCSI
@@ -53,3 +54,4 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
 
 // 2023 Feb 15, GH issue 192
+// 2023-04-05, ONTAPDOC-920
