@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference_plan_ots_vnas.html
-keywords: plan, planning, vnas
-summary: There are several planning issues related to the use of ONTAP Select vNAS that you should consider.
+keywords: plan, planning, vnas, vmware esxi,
+summary: There are several planning issues related to the use of VMware ESXi that you should consider.
 ---
 
-= ONTAP Select vNAS requirements
+= VMware ESXi requirements
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: There are several planning issues related to the use of ONTAP Select vN
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select vNAS is a solution allowing the ONTAP Select datastores to be external to the hypervisor host where the ONTAP Select virtual machine runs. These remote datastores can be accessed through VMware vSAN or a generic external storage array.
+ONTAP Select vNAS is a solution allowing the ONTAP Select datastores to be external to the ESXi hypervisor host where the ONTAP Select virtual machine runs. These remote datastores can be accessed through VMware vSAN or a generic external storage array.
 
 == Basic requirements and restrictions
 
@@ -50,3 +50,5 @@ Consult the available VMware documentation and adhere to the applicable best pra
 * Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage (VMware vSAN and generic storage array traffic when using iSCSI or NFS)
 * Configure the capacity option to restrict storage utilization (ONTAP Select cannot consume the entire capacity of an external vNAS datastore)
 * Assure that all generic external storage arrays use the available redundancy and HA features where possible
+
+// 2023-09-25, ONTAPDOC-1204

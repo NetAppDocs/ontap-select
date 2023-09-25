@@ -46,8 +46,12 @@ sidebar:
               url: /reference_plan_ots_hardware.html
             - title: Storage and RAID
               url: /reference_plan_ots_storage.html
-            - title: ONTAP Select vNAS
-              url: /reference_plan_ots_vnas.html
+            - title: External storage requirements
+              entries:
+                - title: VMware ESXi 
+                  url: /reference_plan_ots_vnas.html
+                - title: KVM
+                  url: /reference_plan_ots_kvm.html
             - title: Networking
               url: /reference_plan_ots_networking.html
             - title: Two-node clusters

@@ -30,6 +30,8 @@ To deploy an ONTAP Select cluster, your organization must have a valid VMware vS
 
 ONTAP Select can be deployed on the following hypervisors:
 
+* KVM on RedHat Enterprise Linux 7.7 and 7.6
+* KVM on CentOS 7.7 and 7.6
 * VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1, U2, and U3C
 * VMware ESXi 8.0 GA (build 20513097)
 * VMware ESXi 8.0 U1 (build 21495797)
@@ -128,3 +130,4 @@ Premium XL
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
 // 2023-04-12, ONTAPDOC-979
+// 2023-09-25, ONTAPDOC-1204
