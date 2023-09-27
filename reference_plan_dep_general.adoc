@@ -33,6 +33,74 @@ You can deploy and manage multiple ONTAP Select clusters in your organization us
 [NOTE]
 One instance of the Deploy utility can administer up to 400 ONTAP Select nodes or 100 clusters.
 
+== Requirements related to the KVM environment
+
+Before installing the Deploy administration utility in a KVM hypervisor environment, you should review the basic requirements and prepare for the deployment to assure success.
+
+.Requirements and restrictions for a deployment
+There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a KVM environment.
+
+.Linux KVM host server hardware requirements
+There are several minimum resource requirements that your Linux KVM hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
+
+* Linux server:
+** Hardware and software must be 64-bit
+** Must adhere to the same supported versions as defined for an ONTAP Select node
+* Virtual CPUs (2)
+* Virtual memory (4 GB)
+* Storage (40 GB)
+* DHCP enabled (can also assign a static IP address)
+
+.Network connectivity
+You must make sure that the Deploy virtual machine network interface is configured and is able to connect to the ONTAP Select hosts it manages.
+
+.Support for IP version 4
+ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
+
+* You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
+* Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
+
+== Required configuration information
+
+As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
+
+.Name of the Deploy virtual machine
+Name to use for the virtual machine
+
+.Name of the Linux KVM host
+Linux KVM host where the Deploy utility is installed
+
+.Name of the storage pool
+Storage pool holding the virtual machine files (approximately 40 GB is required)
+
+.Network for the virtual machine
+Network where the Deploy virtual machine is connected
+
+== Optional network configuration information
+
+The Deploy virtual machine is configured using DHCP by default. However, if needed, you can manually configure the network interface for the virtual machine.
+
+.Host name
+Name of the host
+
+.Host IP address
+Static IPv4 address
+
+.Subnet mask
+Subnetwork mask, based on the network the virtual machine is a part of
+
+.Gateway
+Default gateway or router
+
+.Primary DNS server
+Primary Domain Name Server
+
+.Secondary DNS server
+Secondary Domain Name Server
+
+.Search domains
+Search domains to use
+
 == Authentication using the credential store
 
 The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
@@ -52,3 +120,5 @@ Used to authenticate a vCenter server as part of deploying an ONTAP Select node 
 .Access
 
 The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.
+
+// 2023-09-26, ONTAPDOC-1204

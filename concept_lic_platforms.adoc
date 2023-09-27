@@ -58,4 +58,6 @@ The premium XL offering provides the following capabilities:
 * MetroCluster SDS
 
 [NOTE]
-The large instance type (using the premium XL license) is only supprted on VMware ESXi.
+The large instance type (using the premium XL license) can be used for any configuration but it is not supported on KVM due to performance issues.
+
+// 2023-09-26, ONTAPDOC-1204
