@@ -17,8 +17,7 @@ You can find answers to frequently asked questions about ONTAP Select.
 
 [NOTE]
 ====
-* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
-* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
+Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM cluster and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1. 
 ====
 
 == General
@@ -121,7 +120,8 @@ Software RAID is a layer in the ONTAP software stack. Software RAID provides mor
 
 Some of the requirements for software RAID are as follows:
 
-* Supported for ESX and KVM (prior to ONTAP Select 9.10.1)
+* Supported for ESX and KVM
+** Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for KVM hypervisor was removed in ONTAP Select 9.10.1. 
 * Size of supported physical disks: 200GB – 32TB
 * Only supported on DAS configurations
 * Supported with either SSDs or NVMe
@@ -331,3 +331,5 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 .Does ONTAP Select support stretched clusters with (or without) the Mediator?
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
+
+// 2023-09-29, ONTAPDOC-1204
