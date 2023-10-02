@@ -23,16 +23,12 @@ Unlike the multinode version of the ONTAP Select product, each ONTAP Select VM c
 
 These ports are used to provide the following services: management, data, and intercluster LIFs.
 
-[role="tabbed-block"]
-====
-
 .KVM
---
+
 ONTAP Select can be deployed as a single-node cluster. The hypervisor host includes a virtual switch that provides access to the external network.
---
 
 .ESXi
---
+
 The relationship between these ports and the underlying physical adapters can be seen in the following figure, which depicts one ONTAP Select cluster node on the ESX hypervisor.
 
 *Network configuration of single-node ONTAP Select cluster*
@@ -41,8 +37,6 @@ image:DDN_03.jpg[Network configuration of single-node ONTAP Select cluster]
 
 [NOTE]
 Even though two adapters are sufficient for a single-node cluster, NIC teaming is still required.
---
-====
 
 === LIF assignment
 

@@ -60,9 +60,9 @@ sidebar:
               url: /reference_plan_ots_robo.html
             - title: MetroCluster SDS
               url: /reference_plan_ots_mcc_sds.html
-            - title: VMware vCenter
+            - title: VMware vCenter on ESXi
               url: /reference_plan_ots_vcenter.html
-            - title: VMware vCenter plug-in
+            - title: VMware vCenter plug-in on ESXi
               url: /reference_plan_ots_plugin.html
         - title: ONTAP Select Deploy
           entries:
