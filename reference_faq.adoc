@@ -50,7 +50,7 @@ The API v3 release is not backward compatible with the prior version of the API.
 
 .Can the ONTAP Select VM be backed up with VMware or other third-party snapshots?
 
-No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror, SnapVault, or SVM DR (where applicable).
+No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror, or SnapVault.
 
 .Where do I get clarification for questions not covered in this FAQ?
 
@@ -331,3 +331,5 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 .Does ONTAP Select support stretched clusters with (or without) the Mediator?
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
+
+// 2023-10-09, GitHub issue #220
