@@ -50,7 +50,7 @@ The API v3 release is not backward compatible with the prior version of the API.
 
 .Can the ONTAP Select VM be backed up with VMware or other third-party snapshots?
 
-No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror, or SnapVault.
+No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror or SnapVault.
 
 .Where do I get clarification for questions not covered in this FAQ?
 
