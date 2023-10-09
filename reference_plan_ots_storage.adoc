@@ -75,13 +75,13 @@ There are additional requirements for the SSD flash storage devices used, includ
 
 * The SSD devices must accurately and persistently report themselves to the Linux host through the following methods:
 ** # cat /sys/block/<device>/queue/rotational
-** # lsblk -d -o name,rota
++
 The value reported for these commands must be '0'.
 
 * It is expected the devices are connected to an HBA or in some cases to a RAID controller configured to operate in JBOD mode. When using a RAID controller, the device function must be passed through the host without overlaying any RAID functionality. When using a RAID controller in JBOD mode, you should review the RAID documentation or contact the vendor as needed to make sure the device reports the rotational speed as '0'.
 * There are two separate storage components:
 ** Virtual machine storage
-This is an LVM pool (storage pool) containing the system data used to host the ONTAP Select virtual machine. The LVM pool must be backed by a high endurance flash device, and can be either SAS or NVMe. An NVMe device is recommended for improved performance.
+This is an LVM pool (storage pool) containing the system data used to host the ONTAP Select virtual machine. The LVM pool must be backed by a high endurance flash device, and can be either SAS, SATA, or NVMe. An NVMe device is recommended for improved performance.
 ** Data disks
 This is a set of SAS SSD drives used for data management. The SSD devices should be enterprise grade and durable. The NVMe interface is not supported.
 

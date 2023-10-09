@@ -19,7 +19,7 @@ ONTAP Select Deploy::
 ONTAP Select Deploy is the administration utility that you use to deploy ONTAP Select clusters. The Deploy utility runs in a dedicated Linux virtual machine. You can access the Deploy utility through the web user interface, CLI management shell, and REST API.
 
 Kernel-based Virtual Machine::
-Kernel-based Virtual Machine (KVM) is a virtualization feature of the Linux kernel allowing it to act as a hypervisor platform. A wide range of guest operating systems is supported.
+Kernel-based Virtual Machine (KVM) is a virtualization feature of the Linux kernel allowing it to act as a hypervisor platform. A wide range of guest operating systems are supported.
 
 Hypervisor host versus ONTAP Select node::
 A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select virtual machine. When an ONTAP Select virtual machine is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
@@ -85,7 +85,7 @@ The ONTAP Select Deploy utility detects the movement of the virtual machine as p
 When a virtual machine is moved, the Deploy utility updates its internal database and configures the new ESXi host. All actions performed on the ONTAP Select node are blocked until the movement of the virtual machine and Deploy updates are completed.
 
 Open vSwitch for KVM::
-Open vSwitch (OVS) is a software implementation of a distributed virtual switch supporting multiple networking protocols. OVS is open source and available according to the Apache License 2.0.
+Open vSwitch (OVS) is a software implementation of a virtual switch supporting multiple networking protocols. OVS is open source and available according to the Apache License 2.0.
 
 Mediator service::
 The ONTAP Select Deploy utility includes a mediator service which connects to the nodes in the active two-node clusters. This service monitors each HA pair and assists in managing failures.

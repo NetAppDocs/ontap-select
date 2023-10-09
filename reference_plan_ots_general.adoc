@@ -42,8 +42,7 @@ Networking and Open vSwitch configuration::
 You should be familiar with networking concepts and the configuration of network switches. In addition, you should have experience with Open vSwitch. You must use the following network commands a part of configuring the ONTAP Select network in a KVM environment:
 * `ovs-vsctl`
 * `ip`
-* `ifup`
-* `ifdown`
+* `ip link`
 * `systemctl`
 
 

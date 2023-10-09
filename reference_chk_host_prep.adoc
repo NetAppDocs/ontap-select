@@ -366,6 +366,7 @@ ifup <interface_1>
 ifup <interface_2>
 ----
 
+////
 === Setting the transmit queue length for virtual NICs
 
 You should set the transmit queue length for the ONTAP Select virtual NICs by adding a udev rule. You can create the rule using one of two different styles.
@@ -410,6 +411,7 @@ echo "KERNEL=="ontapnic*", RUN+="/sbin/ip link set %k txqueuelen 5000"" > /etc/u
 ----
 cat /etc/udev/rules.d/<rule_name>.rules
 ----
+////
 
 == ESXi host
 
