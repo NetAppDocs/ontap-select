@@ -366,53 +366,6 @@ ifup <interface_1>
 ifup <interface_2>
 ----
 
-////
-=== Setting the transmit queue length for virtual NICs
-
-You should set the transmit queue length for the ONTAP Select virtual NICs by adding a udev rule. You can create the rule using one of two different styles.
-
-.Before you begin
-You must have root access to the Linux server where the ONTAP Select virtual machine is deployed.
-
-.About this task
-You must create and confirm a single udev rule in the /etc/udev/rules.d directory to set the transmit queue length to 5000.
-
-* Create the rule
-You can create the rule in a number of ways; for example:
-+
-----
-echo "<rule>" > /etc/udev/rules.d/<rule_name>.rules
-----
-
-* Display the rule
-You can display the rule in a number of ways; for example:
-+
-----
-cat /etc/udev/rules.d/<rule_name>.rules
-----
-
-.Steps
-. Sign in to the Linux server with root access.
-. Create one rule.
-. Use the 99 ontapnic rules style.
-+
-----
-echo "SUBSYSTEM=="net", ACTION=="add", KERNEL=="ontapn*", ATTR{tx_queue_len}="5000"" > /etc/udev/rules.d/99-ontap-txqueuelen.rules
-----
-
-. Use the 98 ontapnic rules style.
-+
-----
-echo "KERNEL=="ontapnic*", RUN+="/sbin/ip link set %k txqueuelen 5000"" > /etc/udev/rules.d/98-ontapnic.rules
-----
-
-. Display the rule to confirm it has been added correctly.
-+
-----
-cat /etc/udev/rules.d/<rule_name>.rules
-----
-////
-
 == ESXi host
 
 === vSwitch configuration on a hypervisor host

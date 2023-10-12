@@ -161,7 +161,7 @@ The following table describes the network traffic requirements for an ONTAP Sele
 
 |SSH (22)
 |KVM
-|Deploy to OTS nodes and clusters
+|Deploy to hypervisor server nodes
 |Access ONTAP
 
 |TLS (443)
@@ -170,9 +170,9 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |Access ONTAP
 
 |TLS (443)
-|ESXi
+|ESXi or KVM
 |Each OTS node to Deploy
-|Access Deploy
+|Access Deploy (capacity pools licensing)
 
 |iSCSI (3260)
 |ESXi or KVM
