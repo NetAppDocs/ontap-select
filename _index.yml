@@ -27,12 +27,10 @@ indexpage:
       links:
         - title: ONTAP Select resources page
           url: https://www.netapp.com/data-management/ontap-select/documentation/ 
-        - title: ONTAP Select product page
-          url: https://www.netapp.com/data-management/ontap-select/
+        - title: ONTAP Select product library
+          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293
         - title: ONTAP 9 documentation
           url: https://docs.netapp.com/us-en/ontap/ 
-        - title: ONTAP 9 Documentation Center
-          url: https://docs.netapp.com/ontap-9/index.jsp
         - title: ONTAP Select blogs
           url: https://blog.netapp.com/tag/ontap-select/  
         - title: ONTAP Select community
