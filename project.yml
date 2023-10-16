@@ -1,8 +1,10 @@
 ---
 settings:
   name: ONTAP Select
+  harmony_integration: maestro
   internal:
     pdf_enabled: true
+    lipi_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
@@ -322,4 +324,4 @@ sidebar:
       url: /reference_earlier_versions.html
     - title: Legal notices
       url: /reference_legal_notices.html   
-# 2023 Feb 06, Burt 1512785 
+# 2023 Feb 06, Burt 1512785
