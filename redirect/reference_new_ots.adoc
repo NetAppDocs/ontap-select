@@ -1,0 +1,6 @@
+--- 
+permalink: reference_new_ots
+redirect: ontap-select/index.html
+---
+
+// 2023 Oct 16, moved information to landing page

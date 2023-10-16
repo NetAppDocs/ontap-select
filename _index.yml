@@ -1,0 +1,39 @@
+indexpage:
+  lead: "NetApp ONTAP Select is a software-defined storage appliance you can deploy on a variety of commodity hardware servers running the VMware ESXi hypervisor. It provides the agility you need to build a flexible and scalable private cloud infrastructure. ONTAP Select 9.13.1 can be deployed on VMware ESXi. This site contains the documentation for ONTAP Select 9.13.1, 9.12.1, 9.11.1, 9.10.1, 9.9.1, 9.8, and 9.7 running on VMware ESXi as well as the hypervisor-independent documentation (such as the REST API). You can find the release notes as well as documentation for the KVM version of the product as supported with prior releases at the ONTAP Select product library."
+  tiles:
+    - title: Get started
+      links:
+        - title: Release notes
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885795 
+        - title: What's new
+          url: /reference_new_ots.html
+        - title: Learn about ONTAP Select
+          url: /concept_ots_overview.html
+        - title: Licensing
+          url: /concept_lic_production.html
+        - title: FAQ
+          url: /reference_faq.html 
+    - title: Install and manage 
+      links:
+        - title: Plan your deployment
+          url: /concept_workflow_deploy.html
+        - title: Install 
+          url: /task_install_deploy.html 
+        - title: Manage your clusters
+          url: /concept_adm_before.html
+        - title: Use the REST API
+          url: /concept_api_how_access.html 
+    - title: More resources
+      links:
+        - title: ONTAP Select resources page
+          url: https://www.netapp.com/data-management/ontap-select/documentation/ 
+        - title: ONTAP Select product library
+          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293
+        - title: ONTAP 9 documentation
+          url: https://docs.netapp.com/us-en/ontap/ 
+        - title: ONTAP Select blogs
+          url: https://blog.netapp.com/tag/ontap-select/  
+        - title: ONTAP Select community
+          url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select 
+        - title: Interoperability matrix
+          url: https://mysupport.netapp.com/matrix/

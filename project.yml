@@ -8,7 +8,7 @@ settings:
     harmony_enabled: true
 sidebar:
   entries:
-    - title: ONTAP Select docs
+    - title: ONTAP Select documentation
       url: /index.html
     - title: Release Notes
       entries:
@@ -316,8 +316,6 @@ sidebar:
               url: /task_cli_deploy_recover_two_node.html
     - title: FAQ
       url: /reference_faq.html
-    - title: Get more information
-      url: /reference_additional_info.html
     - title: Earlier versions
       url: /reference_earlier_versions.html
     - title: Legal notices
