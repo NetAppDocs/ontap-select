@@ -2,16 +2,11 @@
 layout: landing-page
 sidebar: sidebar
 permalink: index.html
-summary: 
+summary: ONTAP Select 9.13.1 can be deployed on VMware ESXi. This site contains the documentation for ONTAP Select 9.13.1, 9.12.1, 9.11.1, 9.10.1, 9.9.1, 9.8, and 9.7 running on VMware ESXi as well as the hypervisor-independent documentation (such as the REST API). You can find the release notes as well as documentation for the KVM version of the product as supported with prior releases at the ONTAP Select product library.
 ---
 = ONTAP Select documentation
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ./media/
-
-[.lead]
-ONTAP Select 9.13.1 can be deployed on VMware ESXi. This site contains the documentation for ONTAP Select 9.13.1, 9.12.1, 9.11.1, 9.10.1, 9.9.1, 9.8, and 9.7 running on VMware ESXi as well as the hypervisor-independent documentation (such as the REST API). 
-
-You can find the release notes as well as documentation for the KVM version of the product as supported with prior releases at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^] 
+:imagesdir: ./media/ 
