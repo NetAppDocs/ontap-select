@@ -25,9 +25,6 @@ NetApp periodically updates ONTAP Select to bring you new features and enhanceme
 
 ONTAP Select 9.13.1 includes several new features and improvements. 
 
-Cluster expansion::
-ONTAP Select 9.13.1 introduces cluster expansion which provides high-availability (HA) protection from the impact of a node disruption on the capability of a cluster to serve data. Beginning with ONTAP Select 9.13.1, you can expand a single-node cluster to a two-node cluster by configuring both nodes as a HA pair. The procedure is automated and initiated from ONTAP Select Deploy using the CLI or web interface. To perform this procedure, you must meet certain hardware and software requirements. link:concept_cluster_expansion.html[Learn more].
-
 Support for NVMe over TCP::
 
 When you upgrade to ONTAP Select 9.13.1, you must have the new license to support NVMe over TCP. This license is automatically included when you deploy ONTAP Select for the first time from version 9.13.1.
