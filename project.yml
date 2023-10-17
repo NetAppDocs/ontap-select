@@ -8,7 +8,7 @@ settings:
     harmony_enabled: true
 sidebar:
   entries:
-    - title: ONTAP Select docs
+    - title: ONTAP Select documentation
       url: /index.html
     - title: Release Notes
       entries:
@@ -192,8 +192,6 @@ sidebar:
               url: /concept_perf_general.html
             - title: ONTAP Select 9.6 performance
               url: /concept_perf_premium_ha_direct_ssd_96.html
-        - title: Expand the cluster
-          url: /concept_cluster_expansion.html
     - title: Integrate with vCenter
       entries:
         - title: Getting started
@@ -316,8 +314,6 @@ sidebar:
               url: /task_cli_deploy_recover_two_node.html
     - title: FAQ
       url: /reference_faq.html
-    - title: Earlier versions
-      url: /reference_earlier_versions.html
     - title: Legal notices
       url: /reference_legal_notices.html   
 # 2023 Feb 06, Burt 1512785 
