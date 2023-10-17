@@ -76,7 +76,7 @@ Fibre Channel and Fibre Channel over Ethernet are not supported.
 The traditional health monitoring used with a hardware-based ONTAP deployment is  specific to the underlying hardware components. Due to the virtualized environment used with ONTAP Select, health monitors are not active.
 
 * Interface groups
-Interface groups (IFGRPs) are not supported.
+Interface groups are not supported.
 
 * NIC offload support
 Due to the virtualized environment used with ONTAP Select, the NIC offload facility is not supported.
