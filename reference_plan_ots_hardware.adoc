@@ -75,8 +75,8 @@ There are several supported Ethernet configurations based on the cluster size.
 [cols="30,35,35"*,options="*"]
 |===
 | Cluster size
-| Minimum Requirements
-| Recommendation
+| Minimum requirements
+| Recommended requirements
 
 |Single node cluster
 |2 x 1GbE
@@ -128,3 +128,4 @@ Premium XL
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
 // 2023-04-12, ONTAPDOC-979
+// 2023-10-17, Updated table headings

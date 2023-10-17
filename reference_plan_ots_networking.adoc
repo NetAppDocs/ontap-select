@@ -24,10 +24,7 @@ To learn more about how to configure a vSwitch on a hypervisor host and the high
 
 == Upgrading to VMXNET3
 
-Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an existing ONTAP Select node to version 9.5 or later, the driver is not automatically upgraded.
-
-[NOTE]
-Upgrading to VMXNET3 is not required at this time. However, if you choose to upgrade the driver, you must perform the upgrade manually. In this case, contact NetApp support for assistance.
+Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an older ONTAP Select node to version 9.5 or later, the driver is not automatically upgraded.
 
 == Cluster MTU
 
@@ -166,3 +163,5 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |Mediator/Mailbox disk
 
 |===
+
+// 2023-10-17, Removed mention of old OTS versions

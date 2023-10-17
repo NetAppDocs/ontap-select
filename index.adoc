@@ -30,6 +30,4 @@ ONTAP Select 9.13.1 can be deployed on VMware ESXi. This site contains the docum
 
 You can find the release notes as well as documentation for the KVM version of the product as supported with prior releases at the https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293[ONTAP Select product library^].
 
-== Get more information and connect with peers
-
-* link:reference_additional_info.html[Where to get help and find more information]
+// 2023-10-17, Removed link to deleted page

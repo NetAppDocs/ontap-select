@@ -119,7 +119,6 @@ You can upgrade an ONTAP Select evaluation cluster to use a production capacity 
 
 .Before you begin
 
-* You must use ONTAP Select 9.5P1 with Deploy 2.11 or later
 * Each node must have enough storage allocated to support the minimum required for a production license.
 * You must have capacity tier licenses for each node in the evaluation cluster.
 
@@ -152,3 +151,4 @@ The twenty-digit node serial numbers originally assigned to each node for the ev
 Generally, when a license expires, nothing happens. However, you cannot install a different license because the nodes are associated with the expired license. Until you renew the license, you should _not_ do anything that would bring the aggregate offline, such as a reboot or failover operation.  The recommended action is to expedite the license renewal.
 
 // 2023 Mar 08, GH issue 196
+// 2023-10-17, prep for repo version split
