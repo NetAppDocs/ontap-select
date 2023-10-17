@@ -1,5 +1,5 @@
 --- 
-permalink: reference_new_ots
+permalink: reference_additional_info
 redirect: ontap-select/index.html
 ---
 
