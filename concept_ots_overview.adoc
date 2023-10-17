@@ -64,37 +64,39 @@ Each node in an ONTAP Select cluster is automatically licensed to use several ON
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
+* Autonomous Ransomware Protection (ARP)
+
+* Cluster IPspace
+Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
+
 * Fibre Channel
 Fibre Channel and Fibre Channel over Ethernet are not supported.
-
-* Interface groups
-Interface groups (IFGRPs) are not supported.
 
 * Health monitors
 The traditional health monitoring used with a hardware-based ONTAP deployment is  specific to the underlying hardware components. Due to the virtualized environment used with ONTAP Select, health monitors are not active.
 
+* Interface groups
+Interface groups are not supported.
+
 * NIC offload support
 Due to the virtualized environment used with ONTAP Select, the NIC offload facility is not supported.
 
-* Cluster IPspace
-Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
+* NetApp storage encryption drives
 
 * ONTAP port properties
 Modifying the properties of the ONTAP ports, including speed, duplex, and flow-control, is not supported.
 
 * Service processors
 
-* NetApp storage encryption drives
+* SVM migration
 
-* Autonomous Ransomware Protection (ARP)
+* Storage VM disaster recovery (SVM DR)
+
+* SnapLock Compliance
 
 * Tamperproof Snapshot copies
 
-* SVM migration
-
 * VMware HCX
-
-* Storage VM disaster recovery (SVM DR)
 
 .Related information
 
@@ -103,3 +105,4 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 // 2023-06-19, ONTAPDOC-1096
 // 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
 // 2023-09-28, Adding SVM DR
+// 2023-10-09, GH issue #219
