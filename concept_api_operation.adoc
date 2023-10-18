@@ -40,7 +40,7 @@ The server performs the request immediately and responds with a status code of 2
 * Asynchronous
 The server accepts the request and responds with a status code of 202. This indicates the server has accepted the client request and started a background task to complete the request. Final success or failure is not immediately available and must be determined through additional API calls.
 
-== Confirming the completion of a long-running job
+== Confirm the completion of a long-running job
 
 Generally, any operation that can take a long time to complete is processed asynchronously using a
 background task at the server. With the Deploy REST API, every background task is anchored by a

@@ -15,7 +15,7 @@ summary: There are several related tasks you can perform to administer an ONTAP 
 [.lead]
 There are several related tasks you can perform to administer an ONTAP Select cluster.
 
-== Moving an ONTAP Select cluster offline and online
+== Move an ONTAP Select cluster offline and online
 
 After you've created a cluster, you can move it offline and online as needed.
 
@@ -41,7 +41,7 @@ If the offline option is not available, the cluster is already in the offline st
 
 . Click *Refresh* occasionally to confirm the cluster is online.
 
-== Deleting an ONTAP Select cluster
+== Delete an ONTAP Select cluster
 
 You can delete an ONTAP Select cluster when it is no longer needed.
 
@@ -61,7 +61,7 @@ If the delete option is not available, then the cluster is not in an offline sta
 
 . Click *Refresh* occasionally to confirm the cluster is removed from the list.
 
-== Refreshing the Deploy cluster configuration
+== Refresh the Deploy cluster configuration
 
 After creating an ONTAP Select cluster, you can make changes to the cluster or the virtual machine configuration outside of the Deploy utility using the ONTAP or hypervisor administration tools. The configuration of a virtual machine can also change after it is migrated.
 

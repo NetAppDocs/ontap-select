@@ -15,7 +15,7 @@ summary: There are several related tasks you can perform to administer an ONTAP 
 [.lead]
 There are several related tasks you can perform to administer an ONTAP Select cluster.
 
-== Deleting an ONTAP Select clusters
+== Delete an ONTAP Select clusters
 
 You can delete an ONTAP Select cluster when it is no longer needed using the command line interface.
 

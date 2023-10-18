@@ -15,7 +15,7 @@ summary: There are several related diagnostic and support tasks you can perform 
 [.lead]
 There are several related diagnostic and support tasks you can perform as part of administering ONTAP Select.
 
-== Displaying the system settings
+== Display the system settings
 
 You can view the basic settings for the Deploy administration utility through the vCenter Plugin.
 
@@ -29,7 +29,7 @@ You can view the basic settings for the Deploy administration utility through th
 
 . Update the system configuration as needed and click *Save*.
 
-== Displaying event messages
+== Display event messages
 
 The Deploy administration utility includes an event logging facility that provides information about the activity of the system. You can view the contents of the event log through the Deploy plug-in to debug any issues or when directed to do so by support.
 
@@ -52,7 +52,7 @@ You can filter the list of event messages based on several characteristics, incl
 
 . Optionally, click Filtering and create a filter to limit the event messages that are displayed.
 
-== Enabling AutoSupport
+== Enable AutoSupport
 
 AutoSupport is the primary troubleshooting tool used by NetApp to support ONTAP Select. You can enable or disable the AutoSupport feature as needed.
 
@@ -70,7 +70,7 @@ After deploying a new cluster, you should make sure AutoSupport is enabled. You 
 
 . Enable or disable AutoSupport as needed.
 
-== Generating an AutoSupport package
+== Generate an AutoSupport package
 
 The Deploy vCenter Plug-in includes the ability to generate an AutoSupport package. You should generate a package to debug issues or when directed to do so by support.
 

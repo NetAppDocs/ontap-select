@@ -85,15 +85,15 @@ The ONTAP Select Deploy option is roughly equivalent to the *Hypervisor Hosts* a
 
 |===
 
-== Comparing the vCenter plug-in to the native Deploy user interface
+== Compare the vCenter plug-in to the native Deploy user interface
 
 The functionality provided with the vCenter plug-in through vSphere is equivalent to the native Deploy user interface. However, there are a few features that are not provided with the plug-in and are only available with the Deploy user interface.
 
-=== Managing the vCenter plug-in
+=== Manage the vCenter plug-in
 
 You cannot install, update, remove, or verify the vCenter plug-in using the vCenter plug-in. You must perform these management tasks through the native Deploy user interface.
 
-=== Managing vCenter credentials
+=== Manage vCenter credentials
 
 Before installing the vCenter plug-in, you must add the necessary vCenter credentials to Deploy using the native Deploy user interface.
 

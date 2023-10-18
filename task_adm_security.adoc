@@ -15,7 +15,7 @@ summary: There are several related tasks you can perform as part of securing an 
 [.lead]
 There are several related tasks you can perform as part of securing an ONTAP Select deployment.
 
-== Changing the Deploy administrator password
+== Change the Deploy administrator password
 
 You can change the password for the Deploy virtual machine administrator account as needed using the web user interface.
 
@@ -27,7 +27,7 @@ You can change the password for the Deploy virtual machine administrator account
 
 . Provide the current and new password as prompted and click *Submit*.
 
-== Adding a management server account
+== Add a management server account
 
 You can add a management server account to the Deploy credential store database.
 
@@ -91,7 +91,7 @@ If you choose to opt for YubiKey FIDO2 authentication, configure the YubiKey FID
 * For Windows: The *YubiKey FIDO2 client configuration for Windows* section of the technical report.
 * For MacOS: The *YubiKey FIDO2 client configuration For Mac OS and Linux* section of the technical report.
 
-=== Obtaining the YubiKey PIV or FIDO2 public key
+=== Obtain the YubiKey PIV or FIDO2 public key
 Obtaining the public key depends on whether you're a Windows or MacOS client, and if you are using PIV or FIDO2.
 
 .For Windows:
@@ -104,7 +104,7 @@ Obtaining the public key depends on whether you're a Windows or MacOS client, an
 
 * The FIDO2 public key is in the `id_ecdsa_sk.pub` file or `id_edd519_sk.pub` file, depending on whether you use ECDSA or EDD519, as described in the section *Configure the MAC OS or Linux SSH client for YubiKey FIDO2 authentication* on page 39 of TR-4647.
 
-== Configuring the public key in ONTAP Select Deploy
+== Configure the public key in ONTAP Select Deploy
 SSH is used by the administrator account for the public key authentication method. The command used is the same whether the authentication method is the standard SSH public key authentication or YubiKey PIV or FIDO2 authentication.
 
 For hardware-based SSH MFA, the authentication factors in addition to the public key configured on ONTAP Select Deploy are as follows:
@@ -212,7 +212,7 @@ Version: NetApp Release 9.13.1 Build:6811765 08-17-2023 03:08:09
 (ONTAPdeploy) 
 ----
 
-=== Migration from MFA to single-factor authentication
+=== Migrate from MFA to single-factor authentication
 
 MFA can be disabled for the Deploy administrator account using the following methods:
 

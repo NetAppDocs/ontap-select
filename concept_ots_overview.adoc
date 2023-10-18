@@ -36,7 +36,7 @@ An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each
 The Deploy administration utility is packaged and installed as a separate Linux virtual machine. You must use the utility to deploy ONTAP Select clusters in a production environment. A current version of the ONTAP Select node image is bundled with the Deploy utility.
 
 [NOTE]
-Beginning with ONTAP Select 9.7 the Deploy administration utility is no longer assigned a separate version number. Deploy has the same version number as the associated ONTAP Select release. However, each update of the Deploy utility within a specific ONTAP Select release has a unique build number.
+The Deploy administration utility is not assigned a separate version number. Deploy has the same version number as the associated ONTAP Select release. However, each update of the Deploy utility within a specific ONTAP Select release has a unique build number.
 
 == Illustration of a typical deployment
 
@@ -44,7 +44,7 @@ The following figure illustrates the ONTAP Select Deploy administration utility 
 
 image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created with the Deploy administration utility.]
 
-== Comparing ONTAP Select and ONTAP 9
+== Compare ONTAP Select and ONTAP 9
 
 Both hardware-based ONTAP and ONTAP Select provide enterprise class storage solutions. However, because they are designed and implemented differently, each can address different business requirements and usage scenarios. You should become familiar with the major differences between the platforms before planning an ONTAP Select deployment.
 
@@ -64,42 +64,46 @@ Each node in an ONTAP Select cluster is automatically licensed to use several ON
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
+* Autonomous Ransomware Protection (ARP)
+
+* Cluster IPspace
+Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
+
 * Fibre Channel
 Fibre Channel and Fibre Channel over Ethernet are not supported.
-
-* Interface groups
-Interface groups (IFGRPs) are not supported.
 
 * Health monitors
 The traditional health monitoring used with a hardware-based ONTAP deployment is  specific to the underlying hardware components. Due to the virtualized environment used with ONTAP Select, health monitors are not active.
 
+* Interface groups
+Interface groups are not supported.
+
 * NIC offload support
 Due to the virtualized environment used with ONTAP Select, the NIC offload facility is not supported.
 
-* Cluster IPspace
-Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
+* NetApp storage encryption drives
 
 * ONTAP port properties
 Modifying the properties of the ONTAP ports, including speed, duplex, and flow-control, is not supported.
 
 * Service processors
 
-* NetApp storage encryption drives
+* SVM migration
 
-* Autonomous Ransomware Protection (ARP)
+* Storage VM disaster recovery (SVM DR)
+
+* SnapLock Compliance
 
 * Tamperproof Snapshot copies
 
-* SVM migration
-
 * VMware HCX
-
-* Storage VM disaster recovery (SVM DR)
 
 .Related information
 
 * link:reference_lic_ontap_features.html[ONTAP features enabled by default]
 
+// 2023-10-17, Removed mention of old OTS versions
 // 2023-06-19, ONTAPDOC-1096
 // 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
 // 2023-09-28, Adding SVM DR
+// 2023-10-09, GH issue #219

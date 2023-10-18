@@ -5,7 +5,7 @@ keywords: administer, administering, cli, esxi, upgrade, esxi 6.5
 summary: If you are running ONTAP Select on VMware ESXi, you can upgrade the ESXi software from an earlier supported version to ESXi 7.0 or later. Before upgrading, you should understand the process and select the appropriate upgrade procedure.
 ---
 
-= Upgrading VMware ESXi to version 7.0 or later
+= Upgrade VMware ESXi to version 7.0 or later
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -23,11 +23,11 @@ prepare and select the upgrade procedure that is appropriate for your environmen
 [CAUTION]
 If you choose to upgrade to VMware ESXi 6.5, you should upgrade to ESXi U2 (build 8294253) or greater. Using ESXi 6.5 U1 can expose you to a virtual machine failure due to a known VMware bug.
 
-=== Becoming familiar with how to upgrade VMware ESXi
+=== Become familiar with how to upgrade VMware ESXi
 
-Upgrading the ESXi software is a process described and supported by VMware. The hypervisor upgrade process is part of the larger upgrade procedure when using ONTAP Select. Refer to the VMware document Upgrading ESXi Hosts for more information.
+Upgrading the ESXi software is a process described and supported by VMware. The hypervisor upgrade process is part of the larger upgrade procedure when using ONTAP Select. Refer to the VMware documentation for more information.
 
-=== Selecting an upgrade procedure
+=== Select an upgrade procedure
 
 Several upgrade procedures are available. You should select the applicable procedure based on the following criteria:
 
@@ -41,22 +41,19 @@ TIP: You should select an upgrade procedure that uses the Deploy administration 
 
 Performing an ESXi upgrade using the Deploy administration utility is the more general and resilient option. However, there may be instances when Deploy is unavailable or cannot be used. For example, upgrading to ESXi 7.0 is not supported with earlier versions of ONTAP Select and the Deploy administration utility.
 
-If you are using these earlier versions and attempt an upgrade, the ONTAP Select virtual machine can be left in a state where it cannot be booted. In this case, you must select an upgrade procedure that does not use Deploy. Refer to *1172198* for more information.
+If you are using these earlier versions and attempt an upgrade, the ONTAP Select virtual machine can be left in a state where it cannot be booted. In this case, you must select an upgrade procedure that does not use Deploy. Refer to link:https://mysupport.netapp.com/site/bugs-online/product/ONTAPSELECT/BURT/1172198[1172198^] for more information.
 
-=== Upgrading the Deploy administration utility
+=== Upgrade the Deploy administration utility
 
-Before performing an upgrade procedure using the Deploy utility, you may need to upgrade your Deploy instance. In general, you should upgrade to the most recent version of Deploy. At a minimum, you must use Deploy 2.5 or later. The Deploy utility must support the version of ONTAP Select you are using. Refer to the ONTAP Select release notes for more information.
+Before performing an upgrade procedure using the Deploy utility, you may need to upgrade your Deploy instance. In general, you should upgrade to the most recent version of Deploy. The Deploy utility must support the version of ONTAP Select you are using. Refer to the ONTAP Select release notes for more information.
 
 === After the update procedure is complete
 
 If you select an upgrade procedure that uses the Deploy utility, you should perform a cluster refresh operation using Deploy after all of the nodes have been upgraded. See Refreshing the Deploy cluster configuration for more information.
 
-== Upgrading a single-node cluster using Deploy
+== Upgrade a single-node cluster using Deploy
 
 You can use the Deploy administration utility as part of the procedure to upgrade the VMware ESXi hypervisor hosting an ONTAP Select single-node cluster.
-
-.Before you begin
-You must use Deploy version 2.5 or later.
 
 .Steps
 
@@ -68,8 +65,6 @@ Example
 `node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
 
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 7.0 or later using the procedure provided by VMware.
-+
-Refer to _Before you begin_ for more information.
 
 . Move the node to the online state.
 +
@@ -90,13 +85,9 @@ sdot-d200-011d true true
 .After you finish
 You should perform a cluster refresh operation using the Deploy administration utility.
 
-== Upgrading a multi-node cluster using Deploy
+== Upgrade a multi-node cluster using Deploy
 
 You can use the Deploy administration utility as part of the procedure to upgrade the VMware ESXi hypervisors hosting an ONTAP Select multi-node cluster.
-
-.Before you begin
-
-You must use Deploy version 2.5 or later.
 
 .About this task
 You must perform this upgrade procedure for each of the nodes in the cluster, one node at a time. If the cluster contains four or more nodes, you should upgrade the nodes in each HA pair sequentially before proceeding to the next HA pair.
@@ -143,7 +134,7 @@ sdot-d200-012d true true
 
 You must perform the upgrade procedure for each host used in the ONTAP Select cluster. After all the ESXi hosts are upgraded, you should perform a cluster refresh operation using the Deploy administration utility.
 
-== Upgrading a single-node cluster without Deploy
+== Upgrade a single-node cluster without Deploy
 
 You can upgrade the VMware ESXi hypervisor hosting an ONTAP Select single-node cluster without using the Deploy administration utility.
 
@@ -175,7 +166,7 @@ sdot-d200-011d true true
 .After you finish
 You should perform a cluster refresh operation using the Deploy administration utility.
 
-== Upgrading a multi-node cluster without Deploy
+== Upgrade a multi-node cluster without Deploy
 
 You can upgrade the VMware ESXi hypervisors hosting an ONTAP Select multi-node cluster without using the Deploy administration utility.
 
@@ -189,8 +180,6 @@ You must perform this upgrade procedure for each of the nodes in the cluster, on
 . Using VMware vSphere, confirm that the ONTAP Select virtual machine is powered off.
 
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 7.0 or later using the procedure provided by VMware.
-+
-Refer to _Before you begin_ for more information.
 
 . Using VMware vSphere, access vCenter and do the following:
 .. Add a floppy drive to the ONTAP Select virtual machine.
@@ -222,3 +211,4 @@ sdot-d200-012d true true
 You must perform the upgrade procedure for each host used in the ONTAP Select cluster.
 
 // 2023-04-12, ONTAPDOC-979
+// 2023-10-17, prep for repo version split

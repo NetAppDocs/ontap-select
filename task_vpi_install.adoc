@@ -5,7 +5,7 @@ keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, install, installing
 summary: The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administration utility. You can use the ONTAP Select Deploy web user interface to install and register the plug-in at the vCenter server.
 ---
 
-= Installing the Deploy vCenter plug-in
+= Install the Deploy vCenter plug-in
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -25,7 +25,7 @@ The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administratio
 
 .About this task
 
-It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:task_adm_security.html[Adding a management server account] for more information.
+It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:task_adm_security.html[Add a management server account] for more information.
 
 .Steps
 

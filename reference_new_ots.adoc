@@ -5,7 +5,6 @@ keywords: new features
 // summary: The current release includes several new features and improvements specific to ONTAP Select.
 summary: The current release does not include any new features or improvements specific to ONTAP Select.
 ---
-
 = What's new in this release
 :hardbreaks:
 :nofooter:
@@ -16,12 +15,15 @@ summary: The current release does not include any new features or improvements s
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
+[NOTE]
+====
+* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
+* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
+====
+
 == ONTAP Select 9.13.1
 
 ONTAP Select 9.13.1 includes several new features and improvements. 
-
-Cluster expansion::
-ONTAP Select 9.13.1 introduces cluster expansion which provides high-availability (HA) protection from the impact of a node disruption on the capability of a cluster to serve data. Beginning with ONTAP Select 9.13.1, you can expand a single-node cluster to a two-node cluster by configuring both nodes as a HA pair. The procedure is automated and initiated from ONTAP Select Deploy using the CLI or web interface. To perform this procedure, you must meet certain hardware and software requirements. link:concept_cluster_expansion.html[Learn more].
 
 Support for NVMe over TCP::
 
@@ -89,7 +91,7 @@ ONTAP Select 9.9.1 includes several new features and improvements.
 
 Processor family support::
 
-Starting with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for ONTAP Select.
+Beginning with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for ONTAP Select.
 
 Updated VMware ESXi support::
 

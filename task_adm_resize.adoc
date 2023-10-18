@@ -5,7 +5,7 @@ keywords: administer, administering, web, resizing nodes, resizing
 summary: After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance type of the nodes using the Deploy administration utility.
 ---
 
-= Resizing the ONTAP Select cluster nodes
+= Resize the ONTAP Select cluster nodes
 :hardbreaks:
 :nofooter:
 :icons: font
