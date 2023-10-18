@@ -22,7 +22,7 @@ After making an API call that runs asynchronously, the HTTP response code 202 in
 [NOTE]
 You should refer to the ONTAP Select Deploy online documentation page to determine which API calls operate asynchronously.
 
-== Querying the Job object associated with an API request
+== Query the Job object associated with an API request
 
 The Job object returned in the HTTP response contains several properties. You can query the state property to determine if the request completed successfully. A Job object can be in one of the following states:
 

@@ -5,7 +5,7 @@ keywords: administer, administering, cli, connectivity, network connectivity, ne
 summary: You can test the network connectivity among two or more ONTAP Select nodes on the internal cluster network. You typically run this test before a multi-node cluster is deployed to detect issues that might cause the operation to fail.
 ---
 
-= Confirming network connectivity among the ONTAP Select nodes
+= Confirm network connectivity among the ONTAP Select nodes
 :hardbreaks:
 :nofooter:
 :icons: font

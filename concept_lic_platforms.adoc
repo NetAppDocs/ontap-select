@@ -5,7 +5,7 @@ keywords: license, licensing, platform license offerings, license offerings, sta
 summary: You can purchase an ONTAP Select capacity tier or capacity pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 ---
 
-= Understanding the platform license offerings
+= Understand the platform license offerings
 :hardbreaks:
 :nofooter:
 :icons: font

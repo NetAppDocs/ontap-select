@@ -15,7 +15,7 @@ summary: Select the best hardware and configure your network to optimize perform
 [.lead]
 Select the best hardware and configure your network to optimize performance and resiliency.
 
-Server vendors understand that customers have different needs and choice is critical. As a result, when purchasing a physical server, there are numerous options available when making network connectivity decisions. Most commodity systems ship with various NIC choices that provide single-port and multiport options with varying permutations of speed and throughput. Starting with ONTAP Select 9.8, 25Gb/s and 40Gb/s NIC adapters are supported with VMware ESX.
+Server vendors understand that customers have different needs and choice is critical. As a result, when purchasing a physical server, there are numerous options available when making network connectivity decisions. Most commodity systems ship with various NIC choices that provide single-port and multiport options with varying permutations of speed and throughput. This includes support for 25Gb/s and 40Gb/s NIC adapters with VMware ESX.
 
 Because the performance of the ONTAP Select VM is tied directly to the characteristics of the underlying hardware, increasing the throughput to the VM by selecting higher-speed NICs results in a higher-performing cluster and a better overall user experience. Four 10Gb NICs or two higher-speed NICs (25/40 Gb/s) can be used to achieve a high performance network layout. There are a number of other configurations that are also supported. For two-node clusters, 4 x 1Gb ports or 1 x 10Gb ports are supported. For single node clusters, 2 x 1Gb ports are supported.
 
@@ -23,7 +23,7 @@ Because the performance of the ONTAP Select VM is tied directly to the character
 
 There are several supported Ethernet configurations based on the cluster size.
 
-[cols="30,35,35"*,options="*"]
+[cols="30,35,35"*,options="header"]
 |===
 | Cluster size
 | Minimum Requirements

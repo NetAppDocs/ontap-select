@@ -21,7 +21,7 @@ Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficienc
 
 Make sure your deployment environment meets the following minimum requirements:
 
-* ONTAP Select 9.7 or later with the associated Deploy administration utility
+* ONTAP Select 9.7 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * VMware ESXi version 6.7 or later
 * NVMe devices conforming to specification 1.0 or later
@@ -36,7 +36,7 @@ This procedure is designed to be performed before creating a new ONTAP Select cl
 * HA takeover and giveback is performed in an orderly fashion, but it can be time consuming to resynchronize the aggregates.
 * A single-node cluster will incur downtime.
 
-See link:concept_stor_capacity_inc.html[Increasing storage capacity] for additional information.
+See link:concept_stor_capacity_inc.html[Increase storage capacity] for additional information.
 
 .Steps
 

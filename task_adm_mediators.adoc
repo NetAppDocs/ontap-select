@@ -15,7 +15,7 @@ summary: Each ONTAP Select two-node cluster is monitored by the mediator service
 [.lead]
 Each ONTAP Select two-node cluster is monitored by the mediator service, which assists in managing the HA capability shared by the nodes.
 
-== Viewing the status of the mediator service
+== View the status of the mediator service
 
 You can view the status of the mediator service with respect to each of the two-node clusters defined to the ONTAP Select Deploy utility.
 

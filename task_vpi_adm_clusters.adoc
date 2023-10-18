@@ -15,7 +15,7 @@ summary: There are several related tasks you can perform to administer an ONTAP 
 [.lead]
 There are several related tasks you can perform to administer an ONTAP Select cluster.
 
-== Moving an ONTAP Select cluster to the offline and online states
+== Move an ONTAP Select cluster to the offline and online states
 
 After you have created a cluster, you can change its status to offline or online as needed.
 
@@ -27,7 +27,7 @@ After you have created a cluster, you can change its status to offline or online
 
 . Click *Take Offline* or *Bring Online* as appropriate and click *Yes* to confirm the request.
 
-== Deleting an ONTAP Select cluster
+== Delete an ONTAP Select cluster
 
 You can delete an ONTAP Select cluster when it is no longer needed.
 

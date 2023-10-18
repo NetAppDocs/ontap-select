@@ -5,7 +5,7 @@ keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, deploy cluster, dep
 summary: You can use the Deploy vCenter plug-in through the vSphere web user interface to deploy ONTAP Select clusters.
 ---
 
-= Deploying an ONTAP Select cluster
+= Deploy an ONTAP Select cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -38,7 +38,7 @@ There are several steps you need to take regardless of the cluster size:
 
 In addition to common preparation, you should be familiar with the Deploy network checker before deploying a multi-node cluster.
 
-== Adding a hypervisor host
+== Add a hypervisor host
 
 You can add hypervisors hosts to the Deploy utility on which the ONTAP Select nodes will run before deploying a cluster. If needed, you can instead add the hosts as part of the cluster creation dialog.
 
@@ -62,7 +62,7 @@ You can add one or more hosts based on the size of the cluster.
 
 . Provide the host name or IP address of the host and then click *Add* or *Add and Exit*.
 
-== Creating a single-node cluster
+== Create a single-node cluster
 
 You can use the VMware vCenter plug-in through the vSphere web client to deploy an ONTAP Select cluster consisting of a single node.
 
@@ -114,7 +114,7 @@ If the cluster creation operation is initiated but fails to complete, the ONTAP 
 * Confirm that the ONTAP Select AutoSupport feature is enabled.
 * Back up the ONTAP Select Deploy configuration data.
 
-== Creating a multi-node cluster
+== Create a multi-node cluster
 
 You can use the VMware vCenter plug-in through the vSphere web client to deploy an ONTAP Select cluster consisting of multiple nodes.
 

@@ -15,7 +15,7 @@ summary: There are several related diagnostic and support tasks you can perform 
 [.lead]
 There are several related diagnostic and support tasks you can perform as part of administering ONTAP Select.
 
-== Configuring the Deploy system
+== Configure the Deploy system
 
 You should set the basic system configuration parameters that affect how the Deploy utility operates.
 
@@ -39,7 +39,7 @@ If you use a proxy server, you can configure the proxy URL as follows:
 Example
 `\http://user1:mypassword@proxy.company-demo.com:80`
 
-== Displaying the ONTAP Select Deploy event messages
+== Display the ONTAP Select Deploy event messages
 
 The ONTAP Select Deploy utility includes an event logging facility that provides information about the activity of the system. You should view the contents of the event log to debug any issues or when directed to do so by support.
 
@@ -64,7 +64,7 @@ You can filter the list of event messages based on several characteristics, incl
 
 . Optionally click *Filter* and create a filter to limit the event messages displayed.
 
-== Enabling AutoSupport
+== Enable AutoSupport
 
 You can enable and disable the AutoSupport feature as needed.
 
@@ -82,7 +82,7 @@ AutoSupport is the primary troubleshooting tool used by NetApp in supporting ONT
 
 . Enable or disable the AutoSupport feature as needed.
 
-== Generating and downloading an AutoSupport package
+== Generate and download an AutoSupport package
 
 ONTAP Select includes the ability to generate an AutoSupport package. You should generate a package to debug any issues or when directed to do so by support.
 

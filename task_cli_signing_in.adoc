@@ -5,7 +5,7 @@ keywords: administer, administering, cli, deploy, sign in, signing in
 summary: You need to sign in to the Deploy management shell using SSH. After signing in, you can issue CLI commands to create an ONTAP Select cluster and perform related administrative procedures.
 ---
 
-= Signing in to Deploy using SSH
+= Sign in to Deploy using SSH
 :hardbreaks:
 :nofooter:
 :icons: font
