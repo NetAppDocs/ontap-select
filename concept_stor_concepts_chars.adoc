@@ -122,7 +122,7 @@ image:ST_02.jpg[ESXi cluster]
 You can create a VMFS datastore residing on an external storage array. The storage is accessed using one of several different network protocols. The following figure illustrates a VMFS datastore on an external storage array accessed using the iSCSI protocol.
 
 [NOTE]
-ONTAP Select supports all external storage arrays described in the VMware Storage/SAN Compatibility Guide, including iSCSI, Fiber Channel, and Fiber Channel over Ethernet.
+ONTAP Select supports all external storage arrays described in the VMware Storage/SAN Compatibility documentation, including iSCSI, Fiber Channel, and Fiber Channel over Ethernet.
 
 image:ST_03.jpg[ESXi hypervisor host]
 

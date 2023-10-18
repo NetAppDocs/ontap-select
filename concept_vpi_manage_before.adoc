@@ -28,7 +28,7 @@ There are several steps you must take regardless of the management task. The com
 
 * Reading the section Getting started to become familiar with the Deploy vCenter plug-in.
 * Assuring that the ONTAP Select Deploy administration utility is installed and running.
-See the Installation and Cluster Deployment Guide for VMware for more information.
+See the Installation and Cluster Deployment documentation for VMware for more information.
 * Acquiring the account credentials:
 ** Deploy administrator account
 ** vCenter server accounts
