@@ -25,7 +25,7 @@ The Deploy vCenter plug-in is bundled with the ONTAP Select Deploy administratio
 
 .About this task
 
-It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:task_adm_security.html[Adding a management server account] for more information.
+It is assumed the vCenter management server has already been added to Deploy. If the vCenter server has not been added, see link:task_adm_security.html[Add a management server account] for more information.
 
 .Steps
 

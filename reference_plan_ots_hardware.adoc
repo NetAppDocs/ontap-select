@@ -95,7 +95,7 @@ There are several supported Ethernet configurations based on the cluster size.
 
 There are several additional hardware requirements based on the node instance type.
 
-Refer to link:concept_lic_platforms.html[Understanding the platform license offerings] for more information.
+Refer to link:concept_lic_platforms.html[Understand the platform license offerings] for more information.
 
 .Small
 

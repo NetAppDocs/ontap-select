@@ -44,7 +44,7 @@ License files::
 If you plan to deploy the cluster in a production environment, you must acquire the storage license files based on your licensing model.
 
 Deploy installation and account credentials::
-You must install the Deploy administration utility and perform initial configuration. See link:task_install_deploy.html[Installing ONTAP Select Deploy] for more information. You need to have the password for the Deploy administrator account that was configured as part of the installation process.
+You must install the Deploy administration utility and perform initial configuration. See link:task_install_deploy.html[Install ONTAP Select Deploy] for more information. You need to have the password for the Deploy administrator account that was configured as part of the installation process.
 
 Installing earlier ONTAP Select node images::
 

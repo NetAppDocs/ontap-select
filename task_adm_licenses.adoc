@@ -82,7 +82,7 @@ At a high level, this task is composed of three parts. You must regenerate and i
 
 . Acquire and download a new license file for each of the capacity pool licenses.
 +
-See link:task_lic_acquire_cp.html[Acquiring a capacity pool license] for more information.
+See link:task_lic_acquire_cp.html[Acquire a capacity pool license] for more information.
 
 . Install the capacity pool licenses at the new Deploy instance:
 .. Sign in to the Deploy utility web user interface using the administrator account.

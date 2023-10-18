@@ -67,7 +67,7 @@ This task is described at a high level.
 
 .Related information
 
-link:task_install_deploy.html[Installing ONTAP Select Deploy]
+link:task_install_deploy.html[Install ONTAP Select Deploy]
 
 == Restore the Deploy configuration data to the new virtual machine
 
