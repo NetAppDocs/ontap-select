@@ -5,7 +5,7 @@ keywords: administer, administering, cli, deploy, upgrade deploy
 summary: You can upgrade an existing Deploy utility virtual machine in-place using the command line interface.
 ---
 
-= Upgrading a Deploy instance
+= Upgrade a Deploy instance
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -20,9 +20,9 @@ You can upgrade an existing Deploy utility virtual machine in-place using the co
 Make sure that Deploy is not used to perform any other tasks during the upgrade. You should see the current release notes for information and restrictions about upgrading the Deploy utility.
 
 [NOTE] 
-If you have an instance of the ONTAP Select Deploy administration utility installed, you should consider upgrading to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See link:concept_adm_upgrading_nodes.html[Upgrading the ONTAP Select nodes^] for further details.
+If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
 
-== Downloading the upgrade package
+== Download the upgrade package
 
 To begin the upgrade process, you must download the appropriate Deploy virtual machine upgrade file from the NetApp Support Site. The upgrade package is formatted as a single compressed file.
 
@@ -45,7 +45,7 @@ To begin the upgrade process, you must download the appropriate Deploy virtual m
 .Related information
 link:https://mysupport.netapp.com[NetApp Support^]
 
-== Uploading the package to the Deploy virtual machine
+== Upload the package to the Deploy virtual machine
 
 After acquiring the upgrade package, you must upload the file to the Deploy virtual machine.
 
@@ -71,7 +71,7 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 The upgrade file is stored in the home directory of the admin user.
 
 
-== Applying the upgrade package
+== Apply the upgrade package
 
 After the upgrade file has been uploaded to the Deploy virtual machine, you can apply the upgrade.
 
@@ -96,3 +96,4 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 After the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. You should also clear the browser cache to be able to view the newly created Deploy pages.
 
 // 2023-06-06, github issue #178
+// 2023-10-17, prep for repo version split

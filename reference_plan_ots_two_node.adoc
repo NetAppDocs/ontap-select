@@ -37,7 +37,7 @@ If you have one or more active two-node clusters, the ONTAP Select Deploy virtua
 
 Because the two-node clusters are typically deployed in a remote or branch office, they can be remote from the corporate data center and the Deploy utility providing administrative support. With this configuration, the management traffic between the Deploy utility and cluster flows over the WAN. See the release notes for more information about limitations and restrictions.
 
-.Backing up the Deploy configuration data
+.Back up the Deploy configuration data
 
 It is a best practice to back up the Deploy configuration data on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because of the mediator configuration data included with the backup.
 
