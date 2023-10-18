@@ -91,7 +91,7 @@ ONTAP Select 9.9.1 includes several new features and improvements.
 
 Processor family support::
 
-Starting with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for ONTAP Select.
+Beginning with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for ONTAP Select.
 
 Updated VMware ESXi support::
 

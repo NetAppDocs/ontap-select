@@ -22,5 +22,3 @@ The performance of an ONTAP Select cluster can vary considerably due to the char
 * *RAID card configuration and associated hypervisor driver*. The default driver provided by the hypervisor might need to be replaced by the hardware vendor driver.
 * *Drive type and number of drives in the RAID group(s)*.
 * *Hypervisor version and patch level*.
-
-Performance testing details for ONTAP Select 9.4, 9.5, and 9.6 are available in the _ONTAP Select Performance_ section of https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
