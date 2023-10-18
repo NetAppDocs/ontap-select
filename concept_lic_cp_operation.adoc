@@ -17,7 +17,7 @@ The capacity pools licensing model is different from the capacity tiers model. I
 
 == License Manager
 
-The License Manager is a software component introduced with ONTAP Select 9.5 using ONTAP Select Deploy 2.10. LM runs as a separate process within each instance of the Deploy administration utility. Some of the functions provided by LM include:
+The License Manager runs as a separate process within each instance of the Deploy administration utility. Some of the functions provided by LM include:
 
 * Generate a unique twenty-digit serial number for each node based on the capacity pool license serial number
 * Create leases for capacity from the shared capacity pools based on requests from the ONTAP Select nodes
@@ -65,3 +65,5 @@ Storage capacity is allocated from a capacity pool as needed and each new reques
 
 [NOTE]
 If an ONTAP Select virtual machine is deleted, any active leases remain in effect until they expire. When this occurs, the capacity is returned to the pool.
+
+// 2023-10-17, Removed mention of old OTS versions

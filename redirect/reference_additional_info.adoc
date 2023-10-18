@@ -1,5 +1,5 @@
 --- 
-permalink: reference_additional_info
+permalink: reference_additional_info.html
 redirect: ontap-select/index.html
 ---
 

@@ -46,12 +46,6 @@ When deploying an ONTAP Select cluster on the VMware ESXi hypervisor, you can ut
 The environment for a software RAID deployment on VMware ESXi must meet the following core requirements:
 
 * VMware ESXi 7.0 GA (build 15843807) or later
-* ONTAP Select 9.5 or later
-* ONTAP Select Deploy 2.10 or later
-* New ONTAP Select clusters only
-
-[NOTE]
-You must deploy a new cluster with ONTAP Select 9.5 or later, using the Deploy administration utility. You cannot use software RAID with an existing node that has been upgraded from a previous version to ONTAP Select 9.5.
 
 * ONTAP Select premium license or higher
 * Local SSD drives only
@@ -62,6 +56,7 @@ You must deploy a new cluster with ONTAP Select 9.5 or later, using the Deploy a
 If a hardware RAID controller is present, see the link:concept_stor_concepts_chars.html[Deep dive storage] section for additional configuration requirements.
 
 * VMware VMotion, HA, and DRS are not supported
+* You cannot use software RAID with a node that has been upgraded from ONTAP Select 9.4 or earlier. If this is the case, you need to create a new node for software RAID deployment. 
 
 === ONTAP Select node configuration
 
@@ -78,10 +73,10 @@ The hypervisor host must have the required SSD disks attached and available for 
 
 As part of planning an ONTAP Select deployment, you should be aware of the restrictions related to storage allocation and use.
 
-The most important storage restrictions are presented below. You should also review the _NetApp Interoperability Matrix Tool_ for more detailed information.
+The most important storage restrictions are presented below. You should also review the link:https://mysupport.netapp.com/matrix/[NetApp Interoperability Matrix Tool^] for more detailed information.
 
 [TIP]
-ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the _License_ section for more information.
+ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html[License] section for more information.
 
 === Calculating raw storage capacity
 
@@ -126,7 +121,7 @@ When using VMware vSAN, a datastore can be larger than 64 TB. However, you can o
 
 You should consider the following recommendations regarding the hypervisor core hardware:
 
-* All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
+* All drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
 
 == Additional disk drive requirements based on the platform license
 
@@ -157,7 +152,7 @@ Software RAID with local DAS drives is supported with the premium license (SSD o
 
 You can configure software RAID to use NVMe SSD drives. Your environment must meet the following requirements:
 
-* ONTAP Select 9.7 or later with the associated Deploy administration utility
+* ONTAP Select 9.7 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * VMware ESXi version 6.7 or later
 * NVMe devices conforming to specification 1.0 or later
@@ -165,3 +160,4 @@ You can configure software RAID to use NVMe SSD drives. Your environment must me
 You need to manually configure the NVMe drives before using them. See link:task_chk_nvme_configure.html[Configuring a host to use NVMe drives] for more information.
 
 // 2023-09-12, ONTAPDOC-1174
+// 2023-10-17, Removed mention of old OTS versions

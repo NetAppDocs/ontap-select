@@ -284,8 +284,6 @@ sidebar:
       url: /concept_automate_ansible.html
     - title: Use the CLI
       entries:
-        - title: Before you begin
-          url: /concept_cli_before.html
         - title: Sign in using SSH
           url: /task_cli_signing_in.html
         - title: Deploy a cluster
