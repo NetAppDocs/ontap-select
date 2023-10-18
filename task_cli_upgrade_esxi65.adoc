@@ -103,7 +103,7 @@ Example
 
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 7.0 or later using the procedure provided by VMware.
 +
-Refer to https://review.docs.netapp.com/us-en/ontap-select_clone-prep/task_cli_upgrade_esxi65.html#before-you-begin[Upgrade VMware ESXi] for more information.
+Refer to Preparing to upgrade VMware ESXi for more information.
 
 . Move the node to the online state.
 +
@@ -146,7 +146,7 @@ You can upgrade the VMware ESXi hypervisor hosting an ONTAP Select single-node c
 
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 7.0 or later using the procedure provided by VMware.
 +
-Refer to https://review.docs.netapp.com/us-en/ontap-select_clone-prep/task_cli_upgrade_esxi65.html#before-you-begin[Upgrade VMware ESXi] for more information.
+Refer to Preparing to upgrade VMware ESXi for more information.
 
 . Using VMware vSphere, access vCenter and do the following:
 .. Add a floppy drive to the ONTAP Select virtual machine.
