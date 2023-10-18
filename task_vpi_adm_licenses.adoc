@@ -15,7 +15,7 @@ summary: There are several related tasks you can perform as part of administerin
 [.lead]
 There are several related tasks you can perform as part of administering the ONTAP Select licenses.
 
-== Managing licenses
+== Manage licenses
 
 You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 

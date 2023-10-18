@@ -115,6 +115,6 @@ After you deploy an ONTAP Select cluster, you can configure the cluster as you w
 
 .Related information
 
-link:task_cli_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
 
 // 2023-10-17, Removed mention of old OTS versions

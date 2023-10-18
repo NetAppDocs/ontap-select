@@ -138,11 +138,11 @@ sidebar:
           entries:
             - title: VM video console
               url: /task_adm_video_console.html
-            - title: Resizing the cluster nodes
+            - title: Resize the cluster nodes
               url: /task_adm_resize.html
-            - title: Replacing failed SW RAID drives
+            - title: Replace failed SW RAID drives
               url: /task_adm_replace_drives_swraid.html
-            - title: Upgrading to VMFS6
+            - title: Upgrade to VMFS6
               url: /task_adm_upgrade_vmfs6.html
         - title: Licenses
           url: /task_adm_licenses.html
@@ -158,7 +158,7 @@ sidebar:
               url: /concept_stor_swraid_local.html
             - title: VSAN and external array configurations
               url: /concept_stor_vsan_external.html
-            - title: Increasing storage capacity
+            - title: Increase storage capacity
               url: /concept_stor_capacity_inc.html
             - title: Storage efficiency support
               url: /concept_stor_eff_support.html
@@ -194,13 +194,13 @@ sidebar:
               url: /concept_perf_premium_ha_direct_ssd_96.html
     - title: Integrate with vCenter
       entries:
-        - title: Getting started
+        - title: Get started
           entries:
             - title: Overview
               url: /concept_vpi_overview.html
             - title: Architecture
               url: /concept_vpi_architecture.html
-            - title: Planning
+            - title: Plan
               url: /concept_vpi_planning.html
         - title: Manage the plug-in
           entries:
@@ -252,19 +252,19 @@ sidebar:
               url: /concept_api_before_browser.html
             - title: Access the doc page
               url: /task_api_access_doc_page.html
-            - title: Understanding an API call
+            - title: Understand an API call
               url: /task_api_understanding_call.html
         - title: Workflow processes
           entries:
             - title: Before you begin
               url: /concept_api_before_workflows.html
-            - title: Workflow 1 Creating a cluster
+            - title: Workflow 1 Create a cluster
               url: /reference_api_workflow01.html
         - title: Access with Python
           entries:
             - title: Before you begin
               url: /concept_api_before_python.html
-            - title: Understanding the scripts
+            - title: Understand the scripts
               url: /concept_api_understanding_scripts.html
         - title: Python code samples
           entries:

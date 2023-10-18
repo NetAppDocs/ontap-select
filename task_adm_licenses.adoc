@@ -15,7 +15,7 @@ summary: There are several related tasks you can perform as part of administerin
 [.lead]
 There are several related tasks you can perform as part of administering the ONTAP Select licenses.
 
-== Managing the capacity tier licenses
+== Manage the capacity tier licenses
 
 You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
@@ -33,7 +33,7 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
 . To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
-== Managing the capacity pool licenses
+== Manage the capacity pool licenses
 
 You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
@@ -61,7 +61,7 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 .. Click *Details*.
 .. Select and expand the cluster to see storage utilization.
 
-== Reinstalling a capacity pool license
+== Reinstall a capacity pool license
 
 Every active capacity pool license is locked to a specific License Manager instance, which is contained within an instance of the Deploy administration utility. If you are using a capacity pool license and then restore or recover the Deploy instance, the original license is no longer valid. You must generate a new capacity license file, and then install the license to the new Deploy instance.
 
@@ -113,7 +113,7 @@ See link:task_lic_acquire_cp.html[Acquiring a capacity pool license] for more in
 +
 `system license license-manager modify -host NEW_IP_ADDRESS`
 
-== Converting an evaluation license to a production license
+== Convert an evaluation license to a production license
 
 You can upgrade an ONTAP Select evaluation cluster to use a production capacity tier license with the Deploy administration utility.
 
@@ -146,7 +146,7 @@ The license upgrade for the cluster can take several minutes. Allow the process 
 
 The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment are replaced by the nine-digit serial numbers from the production licenses used for the upgrade.
 
-== Managing an expired capacity pool license 
+== Manage an expired capacity pool license 
 
 Generally, when a license expires, nothing happens. However, you cannot install a different license because the nodes are associated with the expired license. Until you renew the license, you should _not_ do anything that would bring the aggregate offline, such as a reboot or failover operation.  The recommended action is to expedite the license renewal.
 

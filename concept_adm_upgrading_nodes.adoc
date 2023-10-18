@@ -5,7 +5,7 @@ keywords: administer, administering, web, upgrading nodes
 summary: After you deploy an ONTAP Select cluster, you can upgrade the ONTAP image of each node as needed using the standard ONTAP software upgrade procedure.
 ---
 
-= Upgrading the ONTAP Select nodes
+= Upgrade the ONTAP Select nodes
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -36,7 +36,7 @@ Review the Release Notes for additional information and any required procedures 
 +
 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^]
 
-== Reverting an ONTAP Select node
+== Revert an ONTAP Select node
 
 You cannot revert an ONTAP Select node to a version prior to the one on which it was originally installed. For example:
 
@@ -45,7 +45,7 @@ You can upgrade the node to version 9.8 and then revert back to version 9.7 if n
 ONTAP Select 9.8 is initially installed::
 You cannot revert to version 9.7 because this version is prior to the version that was originally installed.
 
-== Using the VMXNET3 network driver
+== Use the VMXNET3 network driver
 
 VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an existing ONTAP Select node running ONTAP Select 9.4 or earlier, the network driver is not automatically upgraded. You must manually upgrade to VMXNET3. You should contact NetApp support for assistance with the upgrade.
 

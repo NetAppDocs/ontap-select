@@ -44,7 +44,7 @@ The following figure illustrates the ONTAP Select Deploy administration utility 
 
 image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created with the Deploy administration utility.]
 
-== Comparing ONTAP Select and ONTAP 9
+== Compare ONTAP Select and ONTAP 9
 
 Both hardware-based ONTAP and ONTAP Select provide enterprise class storage solutions. However, because they are designed and implemented differently, each can address different business requirements and usage scenarios. You should become familiar with the major differences between the platforms before planning an ONTAP Select deployment.
 

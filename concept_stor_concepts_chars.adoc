@@ -83,7 +83,7 @@ Each LUN is seen as a local disk on the hypervisor host and can be part of one s
 
 You must make sure that the storage pools are created properly as part of an ONTAP Select deployment. You can create a storage pool using the hypervisor administration tool. For example, with VMware you can use the vSphere client to create a storage pool. The storage pool is then passed in to the ONTAP Select Deploy administration utility.
 
-=== Managing the virtual disks
+=== Manage the virtual disks
 
 There are several issues related to the virtual disks that you should be aware of as part of preparing to deploy ONTAP Select.
 

@@ -78,7 +78,7 @@ The most important storage restrictions are presented below. You should also rev
 [TIP]
 ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html[License] section for more information.
 
-=== Calculating raw storage capacity
+=== Calculate raw storage capacity
 
 The ONTAP Select storage capacity corresponds to the total allowable size of the virtual data and root disks attached to the ONTAP Select virtual machine. You should consider this when allocating capacity.
 

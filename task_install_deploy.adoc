@@ -5,7 +5,7 @@ keywords: install, installing, ontap select deploy, deploy administration utilit
 summary: You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 ---
 
-= Installing ONTAP Select Deploy
+= Install ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -147,7 +147,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 .Related information
 
-link:task_cli_signing_in.html[Signing in to Deploy using SSH]
+link:task_cli_signing_in.html[Sign in to Deploy using SSH]
 
 // 2023-09-07, ONTAPDOC-1330
 // 2023-10-17, Removed mention of old OTS versions

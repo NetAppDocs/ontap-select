@@ -57,7 +57,7 @@ An ONTAP Select node must locate or request a valid capacity lease every time a 
 
 . If an existing lease cannot be located, the node requests a new lease from the License Manager.
 
-== Returning storage capacity to a capacity pool
+== Return storage capacity to a capacity pool
 Storage capacity is allocated from a capacity pool as needed and each new request can reduce the available storage in the pool. Storage capacity is returned to the pool in several situations, including:
 
 * Lease for a data aggregate expires and is not renewed by the node
