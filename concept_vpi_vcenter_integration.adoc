@@ -26,7 +26,7 @@ An ONTAP Select cluster runs on VMWare as a set of one or more nodes. Each node 
 
 There are several ways to view the VMware resources used by a specific ONTAP Select cluster.
 
-== Viewing the VMware resources for a cluster through the plug-in
+== View the VMware resources for a cluster through the plug-in
 
 You can view the VMware resources assigned to an ONTAP Select cluster through the Deploy plug-in.
 
@@ -42,7 +42,7 @@ You can view the VMware resources assigned to an ONTAP Select cluster through th
 
 . Select a specific VMware resource to display additional information.
 
-== Viewing the ONTAP Select clusters through an ESXi virtual machine
+== View the ONTAP Select clusters through an ESXi virtual machine
 
 You can view the ONTAP Select cluster and associated cluster resources by accessing a VMware virtual machine.
 
@@ -58,7 +58,7 @@ You can view the ONTAP Select cluster and associated cluster resources by access
 
 . To see the entire collection of VMware resources associated with the cluster, click the ONTAP Select cluster and then click the *More Objects* tab.
 
-== Creating a single-node cluster on an ESXI host
+== Create a single-node cluster on an ESXI host
 
 You can select an ESXI hypervisor host through the vSphere interface and deploy an ONTAP Select single-node cluster.
 
@@ -70,4 +70,4 @@ You can select an ESXI hypervisor host through the vSphere interface and deploy 
 
 . Right click the desired hypervisor host on the left, select *ONTAP Select*, and then click *New ONTAP Select*.
 
-. Complete the deployment process by following the steps in link:task_deploy_cluster.html[Deploying an ONTAP Select cluster].
+. Complete the deployment process by following the steps in link:task_deploy_cluster.html[Deploy an ONTAP Select cluster].

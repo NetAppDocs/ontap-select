@@ -15,9 +15,9 @@ summary: There are several things you need to do before installing and managing 
 [.lead]
 There are several things you need to do before installing and managing the Deploy vCenter plug-in.
 
-== Deciding whether to use the Deploy web user interface or the CLI
+== Decide whether to use the Deploy web user interface or the CLI
 
-In most situations, the Deploy web user interface provides the most convenient option when managing the vCenter plug-in, and this is the option described in this guide. However, you can also manage the plug-in using the Deploy command line interface. For more information, type the following commands at the Deploy CLI prompt:
+In most situations, the Deploy web user interface provides the most convenient option when managing the vCenter plug-in, and this is the option described in this procedure. However, you can also manage the plug-in using the Deploy command line interface. For more information, type the following commands at the Deploy CLI prompt:
 
 * `deploy plugin ?` (Subcommands include: install, remove, show, and update)
 * `deploy plugin-packages show`
@@ -28,7 +28,7 @@ There are several steps you must take regardless of the management task. The com
 
 * Reading the section Getting started to become familiar with the Deploy vCenter plug-in.
 * Assuring that the ONTAP Select Deploy administration utility is installed and running.
-See the Installation and Cluster Deployment Guide for VMware for more information.
+See the Installation and Cluster Deployment documentation for VMware for more information.
 * Acquiring the account credentials:
 ** Deploy administrator account
 ** vCenter server accounts
@@ -36,7 +36,7 @@ See the Installation and Cluster Deployment Guide for VMware for more informatio
 
 Additional preparation might be required depending on the management task.
 
-== Preparing the vCenter server accounts
+== Prepare the vCenter server accounts
 
 Before installing and using the Deploy plug-in, you must create the vCenter accounts with the
 required privileges. You can create a single account with all the necessary privileges or create
@@ -44,7 +44,7 @@ multiple accounts each with a single privilege. For simplicity, the following ex
 the vCenter privileges across three separate roles that can then be assigned to the three
 corresponding accounts.
 
-=== Validating end user access to the plug-in
+=== Validate end user access to the plug-in
 
 You need an account to validate access to the plug-in through vSphere. The account must have the following vCenter privilege: sessions.validate.session. After the account is created in vCenter, you must define it to the Deploy administration utility. In the Deploy web user interface, click the Administration tab and then Credentials to provide the vCenter server location and credentials.
 
@@ -53,7 +53,7 @@ This account is used in the following ways:
 * The named vCenter server becomes available as an installation target in the plug-in registration dialog window.
 * The account is used by Deploy to validate vSphere user requests to access the plug-in after the plug-in has been installed.
 
-=== Managing the plug-in
+=== Manage the plug-in
 
 In the Deploy web user interface, you can install the plug-in and then upgrade or remove it. Each time you perform one of these management actions, you are prompted for a vCenter account in the popup window. Each of the management actions is controlled through a separate vCenter privilege.
 
@@ -66,7 +66,7 @@ To install, upgrade, and remove the plug-in, you must assign the following privi
 
 You can create a single role and account with all three privileges or divide the privileges among multiple accounts as needed.
 
-=== Accessing the plug-in
+=== Access the plug-in
 
 End users can access the plug-in through vSphere. You must assign the following privilege to the accounts that will use the plug-in:
 

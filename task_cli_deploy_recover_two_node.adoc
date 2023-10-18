@@ -5,7 +5,7 @@ keywords: administer, administering, cli, two node cluster, recover, recovering
 summary: If the ONTAP Select Deploy utility fails or becomes unavailable for some reason, you lose the ability to administer ONTAP Select nodes and clusters. In addition, all two-node clusters lose HA capability because the mediator service included with Deploy is unavailable. If an unrecoverable failure occurs, you must recover the Deploy utility instance to restore administrative and HA functionality.
 ---
 
-= Recovering the Deploy utility for a two-node cluster
+= Recover the Deploy utility for a two-node cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -57,14 +57,14 @@ You must decided which procedure to use when recovering an instance of the ONTAP
 |Recovery procedure to use
 
 |Yes
-|Restoring a Deploy utility instance using a configuration backup
+|Restore a Deploy utility instance using a configuration backup
 
 |No
-|Reconfiguring and recovering a Deploy utility instance
+|Reconfigure and recover a Deploy utility instance
 
 |===
 
-== Restoring a Deploy utility instance using a configuration backup
+== Restore a Deploy utility instance using a configuration backup
 
 If you have a backup of the failed Deploy utility instance containing the two-node cluster, you can restore the configuration data to the new Deploy virtual machine instance. You must then complete the recovery by performing additional configuration of the two nodes in the ONTAP Select cluster.
 
@@ -123,7 +123,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 If you use capacity pools licensing, you must reinstall each capacity pool license. See _Reinstalling a capacity pool license_ for additional details.
 
-== Reconfiguring and recovering a Deploy utility instance
+== Reconfigure and recover a Deploy utility instance
 
 If you do not have a backup of the failed Deploy utility instance containing the two-node cluster, you must configure the mediator iSCSI target and mailbox in the new Deploy virtual machine. You must then complete the recovery by performing additional configuration of the two nodes in the ONTAP Select cluster.
 
@@ -213,6 +213,6 @@ If you use capacity pools licensing, you must reinstall each capacity pool licen
 
 .Related information
 
-* link:task_install_deploy.html[Installing ONTAP Select Deploy]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restoring the Deploy configuration data to the new virtual machine]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstalling a capacity pool license]
+* link:task_install_deploy.html[Install ONTAP Select Deploy]
+* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restore the Deploy configuration data to the new virtual machine]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstall a capacity pool license]

@@ -105,14 +105,16 @@ Software RAID::
 When using direct-attached storage (DAS), RAID functionality is traditionally provided through a local hardware RAID controller. You can instead configure a node to use _software RAID_ where the ONTAP Select node provides the RAID functionality. If you use software RAID, a hardware RAID controller is no longer needed.
 
 ONTAP Select image install::
-Beginning with ONTAP Select Deploy 2.8, the Deploy administration utility contains only a single version of ONTAP Select. The version included is the most current available at the time of release. For example, Deploy 2.8 contains ONTAP Select 9.4. The ONTAP Select image install feature allows you to add earlier versions of ONTAP Select to your instance of the Deploy utility, which can then be used when deploying an ONTAP Select cluster. See link:task_cli_deploy_image_add.html[Add ONTAP Select images for more information].
+Beginning with ONTAP Select Deploy 2.8, the Deploy administration utility contains only a single version of ONTAP Select. The version included is the most current available at the time of release. The ONTAP Select image install feature allows you to add earlier versions of ONTAP Select to your instance of the Deploy utility, which can then be used when deploying an ONTAP Select cluster. See link:task_cli_deploy_image_add.html[Add ONTAP Select images for more information].
 
 [NOTE]
-You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of Deploy. Adding later versions of ONTAP Select as they become available is not supported.
+You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of Deploy. Adding later versions of ONTAP Select without also updating Deploy is not supported.
 
 Administering an ONTAP Select cluster after it is deployed::
 After you deploy an ONTAP Select cluster, you can configure the cluster as you would a hardware-based ONTAP cluster. For example, you can configure an ONTAP Select cluster using System Manager or the standard ONTAP command line interface.
 
 .Related information
 
-link:task_cli_deploy_image_add.html[Adding an ONTAP Select image to Deploy]
+link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
+
+// 2023-10-17, Removed mention of old OTS versions

@@ -40,7 +40,7 @@ NetApp supports ONTAP Select on the identified versions of ESXi as long as VMwar
 [NOTE]
 ESXi 6.5 GA and ESXi 6.7 GA are reaching end of availability status. If you have ONTAP Select clusters with these versions, you must upgrade to the supported versions as per the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)^].
 
-=== Upgrading to VMware ESXi 6.5 U2 or later
+=== Upgrade to VMware ESXi 6.5 U2 or later
 
 If you currently have ONTAP Select deployed on VMware ESXi 6.5 U1, you should upgrade to ESXi 6.5 U2 or later as soon as possible. Using ESXi 6.5 U1 can expose you to a virtual machine failure due to a known VMware bug.
 
@@ -75,8 +75,8 @@ There are several supported Ethernet configurations based on the cluster size.
 [cols="30,35,35"*,options="*"]
 |===
 | Cluster size
-| Minimum Requirements
-| Recommendation
+| Minimum requirements
+| Recommended requirements
 
 |Single node cluster
 |2 x 1GbE
@@ -95,7 +95,7 @@ There are several supported Ethernet configurations based on the cluster size.
 
 There are several additional hardware requirements based on the node instance type.
 
-Refer to link:concept_lic_platforms.html[Understanding the platform license offerings] for more information.
+Refer to link:concept_lic_platforms.html[Understand the platform license offerings] for more information.
 
 .Small
 
@@ -128,3 +128,4 @@ Premium XL
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
 // 2023-04-12, ONTAPDOC-979
+// 2023-10-17, Updated table headings
