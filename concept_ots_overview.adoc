@@ -102,6 +102,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 * link:reference_lic_ontap_features.html[ONTAP features enabled by default]
 
+// 2023-10-17, Removed mention of old OTS versions
 // 2023-06-19, ONTAPDOC-1096
 // 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
 // 2023-09-28, Adding SVM DR

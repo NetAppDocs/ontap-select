@@ -22,3 +22,5 @@ The performance of an ONTAP Select cluster can vary considerably due to the char
 * *RAID card configuration and associated hypervisor driver*. The default driver provided by the hypervisor might need to be replaced by the hardware vendor driver.
 * *Drive type and number of drives in the RAID group(s)*.
 * *Hypervisor version and patch level*.
+
+// 2023-10-17, Removed mention of old OTS versions

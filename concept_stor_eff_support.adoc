@@ -130,3 +130,4 @@ If some storage efficiencies are already enabled on a volume prior to the upgrad
 * Volumes with `storage policy inline-only` have their policy set to auto.
 * Volumes with user defined storage efficiency policies have no change in policy, with the exception of volumes with `space guarantee = none`. These volumes have aggregate background deduplication enabled.
 
+// 2023-10-17, Removed mention of old OTS versions
