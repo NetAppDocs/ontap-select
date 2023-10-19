@@ -24,7 +24,7 @@ There are several instances in which you must manually remove the plug-in:
 * The plug-in was removed using the Deploy utility native user interface, but the vCenter server could not be rebooted.
 * The Deploy utility was decommissioned without removing the plug-in.
 
-== Using the VMware MOB to remove the plug-in
+== Use the VMware MOB to remove the plug-in
 
 The MOB is a VMware application that allows you to view and manage the objects on a VMware vCenter server. You can use the MOB to remove the Deploy vCenter plug-in.
 
@@ -48,7 +48,7 @@ The MOB is a VMware application that allows you to view and manage the objects o
 
 The plug-in is removed from the list of extensions.
 
-== Removing the plug-in from the vSphere UI folder
+== Remove the plug-in from the vSphere UI folder
 
 You should examine vSphere UI directory at the vCenter server and remove the Deploy plugin if found.
 
@@ -88,7 +88,7 @@ You must have the password for the root account at the vCenter server. You shoul
 
 It can take several minutes for the Deploy plug-in to restart and become available.
 
-== Removing the plug-in from the vSphere client folder
+== Remove the plug-in from the vSphere client folder
 
 You should examine the vSphere Client directory at the vCenter server and remove the Deploy plug-in if found. Although the Deploy plug-in does not use Flash, it is a best practice to examine this directory as part of the plug-in removal procedure.
 

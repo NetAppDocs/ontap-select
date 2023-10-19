@@ -56,7 +56,7 @@ For ONTAP Select upgrades from 9.6 and later, you must install ONTAP Select on D
 
 .ONTAP Select storage efficiency configurations
 
-The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the media type and software license. The information in the following table applies to ONTAP Select 9.6 and later releases. For prior releases, refer to the _ONTAP Select Storage Efficiency Support_ section in https://www.netapp.com/media/10662-tr4517.pdf[TR-4517^].
+The following table summarizes the various storage efficiency options available, enabled by default, or not enabled by default but recommended, depending on the media type and software license.
 
 [cols=4,options="header"]
 |===
@@ -130,6 +130,4 @@ If some storage efficiencies are already enabled on a volume prior to the upgrad
 * Volumes with `storage policy inline-only` have their policy set to auto.
 * Volumes with user defined storage efficiency policies have no change in policy, with the exception of volumes with `space guarantee = none`. These volumes have aggregate background deduplication enabled.
 
-.Notes on Upgrade Behavior for DAS HDD Configuration
-
-Storage efficiency features enabled prior to the upgrade are retained after the upgrade to ONTAP Select 9.6 or later. If no storage efficiencies were enabled prior to the upgrade, no storage efficiencies are enabled post-upgrade.
+// 2023-10-17, Removed mention of old OTS versions

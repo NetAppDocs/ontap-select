@@ -37,7 +37,7 @@ The content of the request body varies depending on the specific call. The HTTP 
 * JSON object with input variables (such as, the name of a new cluster)
 * Empty
 
-=== Filtering objects
+=== Filter objects
 
 When issuing an API call that uses GET, you can limit or filter the returned objects based on any attribute. For example, you can specify an exact value to match:
 
@@ -91,7 +91,7 @@ Use `fields=FIELDNAME` to specify the exact field you want. When requesting mult
 [TIP]
 As a best practice, you should always identify the specific fields you want. You should only retrieve the set of inexpensive or expensive fields when needed. The inexpensive and expensive classification is determined by NetApp based on internal performance analysis. The classification for a given field can change at any time.
 
-=== Sorting objects in the output set
+=== Sort objects in the output set
 
 The records in a resource collection are returned in the default order defined by the object. You can change the order using the order_by query parameter with the field name and sort direction as follows:
 `order_by=<field name> asc|desc`
@@ -111,7 +111,7 @@ If needed, you can combine this parameter with other query parameters to narrow 
 
 You can issue multiple requests to page through the events (or any object type). Each subsequent API call should use a new time value based on the latest event in the last result set.
 
-== Interpreting an API response
+== Interpret an API response
 
 Each API request generates a response back to the client. You can examine the response to determine
 whether it was successful and retrieve additional data as needed.

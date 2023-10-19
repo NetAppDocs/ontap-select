@@ -15,12 +15,10 @@ summary: After creating an ONTAP Select cluster, you can support the deployment 
 [.lead]
 After creating an ONTAP Select cluster, you can support the deployment by performing various administrative tasks. There are a few general considerations to be aware of.
 
-== Before you begin
-
 In general, the procedures you can perform using the Deploy web interface fall into one of three categories.
 
 .Deploy an ONTAP Select cluster
-You can deploy a single-node or multi-node cluster. See link:task_deploy_cluster.html[Deploying an ONTAP Select cluster] for more information.
+You can deploy a single-node or multi-node cluster. See link:task_deploy_cluster.html[Deploy an ONTAP Select cluster] for more information.
 
 .Perform a procedure with an existing ONTAP Select cluster
 The administrative procedures are organized in various categories, such as _Security_ and _Clusters_.
@@ -28,30 +26,29 @@ The administrative procedures are organized in various categories, such as _Secu
 .Perform a procedure on the Deploy utility
 There are several procedures specific to Deploy (such as changing the administrator's password).
 
-== Administering ONTAP Select
+== Administer ONTAP Select
 
-There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. In general, all use the Deploy web user interface. An administrative process can consist of a single step-by-step task or a sequence of multiple tasks.
+There are many different administrative procedures available as part of supporting ONTAP Select. In addition, there are procedures specific to the Deploy administrative utility. The most important of these procedures are presented below. In general, all use the Deploy web user interface.
 
 [NOTE]
-You can also use the command line interface to administer ONTAP Select. See the section _Using the CLI_ for more information.
+You can also link:https://docs.netapp.com/us-en/ontap-select/task_cli_signing_in.html[use the command line interface] to administer ONTAP Select.
 
-== Performing additional ONTAP configuration
+== Perform additional ONTAP configuration
 
-After an ONTAP Select cluster is deployed, you can configure and manage the cluster just as you would a hardware-based ONTAP system. For example, you can use OnCommand System Manager or the ONTAP CLI to configure the ONTAP Select cluster.
+After an ONTAP Select cluster is deployed, you can configure and manage the cluster just as you would a hardware-based ONTAP system. For example, you can use ONTAP System Manager or the ONTAP CLI to configure the ONTAP Select cluster.
 
 .NetApp client software
 
 You can connect to ONTAP Select using the following supported NetApp client software:
 
-* OnCommand System Manager
-* OnCommand Unified Manager
-* OnCommand Performance Manager
+* ONTAP System Manager
+* Active IQ Unified Manager
 * OnCommand Insight
 * OnCommand Workflow Automation
 * SnapCenter
 * Virtual Storage Console for VMware vSphere
 
-To identify the supported versions of the client software, review the _NetApp Interoperability Matrix Tool_. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
+To identify the supported versions of the client software, review the link:https://mysupport.netapp.com/matrix/[NetApp Interoperability Matrix Tool^]. If the client software supports ONTAP 9, then the same version is also supported with ONTAP Select.
 
 [NOTE]
 The use of SnapCenter and the corresponding plug-ins requires server-based licenses. Storage system licensing of the SnapCenter plug-ins is not currently supported with ONTAP Select.
@@ -64,7 +61,7 @@ There are several options available when configuring the cluster, including the 
 
 * Creating the networking configuration
 * Laying out your aggregates
-* Creating the data Storage Virtual Machines (SVMs)
+* Creating the data storage VMs (SVMs)
 
 .Purchased licenses with storage capacity
 
@@ -73,3 +70,5 @@ If you decided not to install the license files with storage capacity as part of
 .Mirrored aggregates
 
 There are data spare disks created by the Deploy administration utility on each ONTAP Select node from the usable datastore space (such as, Pool0 and Pool1). To implement high availability for your data on a multi-node cluster, you must create a mirrored aggregate using these spares.
+
+// 2023-10-17, prep for repo version split

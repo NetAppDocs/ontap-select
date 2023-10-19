@@ -26,12 +26,13 @@ The ONTAP Select evaluation license has the following characteristics:
 * The evaluation period provided by the license can be up to 90 days
 * The maximum storage allocated by each node is the same as a production license
 
-== Upgrading to a production license
+== Upgrade to a production license
 You can upgrade an ONTAP Select evaluation cluster to use a production license. You should be aware of the following restrictions:
 
 * You must use the Deploy administration utility to perform the license upgrade
-* License upgrade is only supported with ONTAP Select 9.5P1 using Deploy 2.11 or later
 * A capacity tier license can be used, however capacity pools licensing is not supported
 * Each node must have enough storage allocated to support the minimum required for a production license, based on the cluster size
 
-link:task_adm_licenses.html[Converting an evaluation license to a production license] for more information.
+See link:task_adm_licenses.html[Convert an evaluation license to a production license] for more information.
+
+// 2023-10-17, Removed mention of old OTS versions

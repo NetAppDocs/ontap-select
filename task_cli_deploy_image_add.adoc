@@ -5,7 +5,7 @@ keywords: administer, administering, cli, deploy, ontap select image, add
 summary: You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
 ---
 
-= Adding an ONTAP Select image to Deploy
+= Add an ONTAP Select image to Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -29,7 +29,7 @@ Before adding any new ONTAP Select images to Deploy, you should first remove any
 [NOTE]
 You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of the Deploy utility. Adding later versions of ONTAP Select as they become available from NetApp is not a supported configuration.
 
-== Downloading the install image
+== Download the install image
 
 To begin the process of adding an ONTAP Select image to an instance of the Deploy utility, you must download the install image from the NetApp Support Site. The ONTAP Select install image is formatted as a single compressed file.
 
@@ -51,7 +51,7 @@ To begin the process of adding an ONTAP Select image to an instance of the Deplo
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
-== Uploading the install image to Deploy
+== Upload the install image to Deploy
 
 After acquiring the ONTAP Select install image, you must upload the file to the Deploy virtual machine.
 
@@ -84,7 +84,7 @@ exit
 
 The node install file is stored in the home directory of the admin user.
 
-== Adding the install image
+== Add the install image
 
 You can add the ONTAP Select installation image to the Deploy images directory so it is available when deploying a new cluster.
 
@@ -105,7 +105,7 @@ You must know which directory the install image file has been placed in at the D
 Example
 `tar -xf image_v_93_install_esx.tgz -C /opt/netapp/images/`
 
-== Displaying the available install images
+== Display the available install images
 
 You can display the ONTAP Select images that are available when deploying a new cluster.
 

@@ -5,7 +5,7 @@ keywords: administer, administering, web, video console
 summary: You can access the video console of the ESXi virtual machine where ONTAP Select is running.
 ---
 
-= Accessing the ONTAP Select video console
+= Access the ONTAP Select video console
 :hardbreaks:
 :nofooter:
 :icons: font

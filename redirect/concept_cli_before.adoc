@@ -1,0 +1,6 @@
+---
+permalink: concept_cli_before.html
+redirect: ontap-select/task_cli_signing_in.html
+---
+
+// 2023-10-17, removed in prep for repo version split

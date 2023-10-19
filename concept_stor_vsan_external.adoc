@@ -51,7 +51,7 @@ Note that write performance is affected if the SIDL feature is turned off. It is
 volume efficiency stop -all true -vserver * -volume * (all volumes in the affected aggregate)
 ----
 
-== Collocating ONTAP Select Nodes When Using vNAS on ESXi
+== Collocate ONTAP Select Nodes When Using vNAS on ESXi
 
 ONTAP Select includes support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy enables the configuration of multiple ONTAP Select nodes on the same ESX host as long as these nodes are not part of the same cluster. Note that this configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
 

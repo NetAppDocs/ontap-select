@@ -45,11 +45,11 @@ http://<Deploy-IP-Address/api/ui
 ----
 
 [NOTE]
-The API v3 release is not backward compatible with the prior version of the API. A new API guide is available on the https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694[Field Portal].
+The API v3 release is not backward compatible with the prior version of the API. A new API procedure is available on the https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694[Field Portal^].
 
 .Can the ONTAP Select VM be backed up with VMware or other third-party snapshots?
 
-No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror, SnapVault, or SVM DR (where applicable).
+No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror or SnapVault.
 
 .Where do I get clarification for questions not covered in this FAQ?
 
@@ -333,3 +333,4 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
 
 // 2023-09-29, ONTAPDOC-1204
+// 2023-10-09, GitHub issue #220

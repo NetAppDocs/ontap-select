@@ -5,7 +5,7 @@ keywords: install, installing, ontap select deploy, deploy administration utilit
 summary: You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 ---
 
-= Installing ONTAP Select Deploy
+= Install ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -62,7 +62,7 @@ Verify that your system meets the following requirements:
 | `csc-prod-ONTAP-Select-Deploy.pem`
 | The certificate used to generate the key.
 | `ONTAPdeploy.ova`
-| The product installation executable for ONTAP Select 9.13.1.
+| The product installation executable for ONTAP Select.
 | `ONTAPdeploy.ova.sig`
 | The SHA-256 algorithm is hashed and then signed by the Remote Support Agent (RSA) using the `csc-prod` key and signature for the installer.
 |===
@@ -202,7 +202,8 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 .Related information
 
-link:task_cli_signing_in.html[Signing in to Deploy using SSH]
+link:task_cli_signing_in.html[Sign in to Deploy using SSH]
 
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
+// 2023-10-17, Removed mention of old OTS versions
