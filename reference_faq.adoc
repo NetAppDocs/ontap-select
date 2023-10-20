@@ -225,16 +225,6 @@ It is possible to integrate the ONTAP Select Deploy functionality in the vCenter
 
 Only one ONTAP Select Deploy VM can register its plug-in with a specific vCenter server.
 
-.What is the benefit of the ONTAP Select Deploy vCenter plug-in?
-
-The plug-in allows vCenter admins and IT generalists to create ONTAP Select clusters using the vCenter HTML5 GUI. Please note that the Flash vCenter GUI is not supported.
-
-Also, it allows ONTAP Select Deploy to use the vCenter RBAC for authentication. Users that are given the vCenter privilege of using the ONTAP Select Deploy plug-in have their vCenter account mapped to the ONTAP Select Deploy admin user. ONTAP Select Deploy logs the user ID of every operation and the following file can be used as a basic auditing log:
-
-----
-nginx_access.log
-----
-
 == HA and clusters
 
 There are several questions and answers dealing with HA pairs and clusters.
@@ -334,3 +324,4 @@ Only a two-node cluster with a Mediator is supported in a stretched HA deploymen
 
 // 2023-09-29, ONTAPDOC-1204
 // 2023-10-09, GitHub issue #220
+// 2023-10-20, ONTAPDOC-1293
