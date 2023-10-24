@@ -61,8 +61,6 @@ You should be familiar with the types of credentials and how they are used by ON
 
 |===
 
-. You can optionally register (install) the Deploy vCenter plug-in.
-
 . After the new management server is added, you can optionally click image:icon_kebab.gif[Options] and select one of the following:
 +
 * Update credentials
@@ -251,3 +249,4 @@ MFA disabled successfully
 `security publickey delete -key` 
 
 //2023-08-30, ONTAPDOC-1320
+// 2023-10-24, ONTAPDOC-1293
