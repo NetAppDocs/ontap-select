@@ -104,6 +104,9 @@ There are several questions and answers dealing with storage.
 
 Yes. ONTAP Select Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.
 
+.Is vCenter required for ONTAP Select on ESX?
+
+If the ESX hosts are properly licensed, then there is no need for the ESX hosts to be managed by a vCenter Server. However, if the hosts are managed by a vCenter server, then you must configure ONTAP Select Deploy to use that vCenter Server. In other words, you cannot configure ESX hosts as standalone in ONTAP Select Deploy if they are being actively managed by a vCenter Server. Note that the ONTAP Select Deploy VM relies on vCenter to track all ONTAP Select VM migrations between ESXi hosts due to a vMotion or VMware HA event.
 
 .What is Software RAID?
 
@@ -191,6 +194,28 @@ You can use a single 10GE port to connect to the external network. However, NetA
 .What additional processes do you need to run to do a live migration on KVM?
 
 You must install and run open-source CLVM and pacemaker (pcs) components on each host participating in the live migration. This is required to access the same volume groups on each host.
+
+== vCenter
+
+There are several questions and answers dealing with VMware vCenter.
+
+.How does ONTAP Select Deploy communicate with vCenter and what firewall ports should be opened?
+
+ONTAP Select Deploy uses the VMware VIX API to communicate with the vCenter and/or the ESX host. The VMware documentation states that the initial connection to either a vCenter Server or an ESX host is done using HTTPS/SOAP on TCP port 443. This is the port for secure HTTP over TLS/SSL. Secondly, a connection to the ESX host is opened on a socket on TCP port 902. Data going over this connection is encrypted with SSL. Additionally, ONTAP Select Deploy issues a `PING` command to verify that there is an ESX host responding at the IP address you specified.
+
+ONTAP Select Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses as follows:
+
+* Ping
+* SSH (port 22)
+* SSL (port 443)
+
+For two-node clusters, ONTAP Select Deploy hosts the cluster mailboxes. Each ONTAP Select node must be able to reach ONTAP Select Deploy through iSCSI (port 3260).
+
+For multinode clusters, the internal network must be fully opened (no NAT or firewalls).
+
+.What vCenter rights does ONTAP Select Deploy need to create ONTAP Select clusters?
+
+The list of vCenter rights required is available here: link:reference_plan_ots_vcenter.html[VMware vCenter server].
 
 == HA and clusters
 

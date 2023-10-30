@@ -22,8 +22,8 @@ ONTAP Select 9.14.1 includes several new features and improvements.
 Support for KVM hypervisor::
 Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM cluster and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
 
-VMware vCenter plug-in is no longer supported::
-Beginning with ONTAP Select 9.14.1, the VMWare vCenter plug-in is no longer supported.
+Deploy VMware vCenter plug-in is no longer supported::
+Beginning with ONTAP Select 9.14.1, the Deploy VMware vCenter plug-in is no longer supported.
 
 == ONTAP Select 9.13.1
 

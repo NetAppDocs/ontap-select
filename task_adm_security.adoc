@@ -64,7 +64,6 @@ You should be familiar with the types of credentials and how they are used by ON
 . After the new management server is added, you can optionally click image:icon_kebab.gif[Options] and select one of the following:
 +
 * Update credentials
-* Register as plug-in
 * Verify credentials
 * Remove management server
 
