@@ -46,7 +46,6 @@ Note the version number and hypervisor platform in each case.
 ====
 .ESXi example
 --
-Example
 
 [source,asciidoc]
 ----
@@ -54,9 +53,8 @@ rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
 ----
 --
 
-.KVM
+.KVM example
 --
-Example
 
 [source,asciidoc]
 ----

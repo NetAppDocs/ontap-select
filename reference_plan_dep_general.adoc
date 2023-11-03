@@ -65,41 +65,41 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
 
 .Name of the Deploy virtual machine
-Name to use for the virtual machine
+The name to use for the virtual machine.
 
 .Name of the Linux KVM host
-Linux KVM host where the Deploy utility is installed
+The Linux KVM host where the Deploy utility is installed.
 
 .Name of the storage pool
-Storage pool holding the virtual machine files (approximately 40GB is required)
+The storage pool holding the virtual machine files (approximately 40GB is required).
 
 .Network for the virtual machine
-Network where the Deploy virtual machine is connected
+The network where the Deploy virtual machine is connected.
 
 == Optional network configuration information
 
 The Deploy virtual machine is configured using the DHCP by default. However, if needed, you can manually configure the network interface for the virtual machine.
 
 .Host name
-Name of the host
+The name of the host.
 
 .Host IP address
-Static IPv4 address
+The static IPv4 address.
 
 .Subnet mask
-Subnetwork mask, based on the network the virtual machine is a part of
+The subnetwork mask, based on the network the virtual machine is a part of.
 
 .Gateway
-Default gateway or router
+The default gateway or router.
 
 .Primary DNS server
-Primary Domain Name Server
+The primary domain name server.
 
 .Secondary DNS server
-Secondary Domain Name Server
+The secondary domain name server.
 
 .Search domains
-Search domains to use
+The search domains to use.
 
 == Authentication using the credential store
 

@@ -52,7 +52,7 @@ You should install the same set of packages required for RedHat Enterprise Linux
 You should verify that the following packages and dependencies are installed when using RHEL 7.6 or CentOS 7.6. In each case, the package name and version are included.
 
 * qemu-kvm (1.5.3-160)
-
++
 NOTE: When using software RAID, you must use version 2.9.0 instead.
 
 * libvirt (4.5.0-10)
@@ -73,7 +73,7 @@ If you are using vNAS on KVM (external storage) and plan to migrate virtual mach
 You should verify that the following packages and dependencies are installed when using RHEL 7.5 or CentOS 7.5. In each case, the package name and version are included.
 
 * qemu-kvm (1.5.3-141)
-
++
 NOTE: When using software RAID, you must use version 2.9.0 instead.
 
 * libvirt (3.9.0)
@@ -93,8 +93,8 @@ If you are using vNAS on KVM (external storage) and plan to migrate virtual mach
 .Additional packages required for RedHat Enterprise Linux 7.4
 You should verify that the following packages and dependencies are installed when using RHEL 7.4 or CentOS 7.4. In each case the package name and version are included.
 
-*qemu-kvm (1.5.3-141)
-
+* qemu-kvm (1.5.3-141)
++
 NOTE: When using software RAID, you must use version 2.9.0 instead.
 
 * libvirt (3.2.0-14)

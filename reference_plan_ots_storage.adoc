@@ -63,7 +63,7 @@ If a hardware RAID controller is present, see the link:concept_stor_concepts_cha
 
 === KVM specific requirements
 
-There are also specific software package configuration requirements. See Preparation of the Linux server for more information.
+There are also specific software package configuration requirements. See link:https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html#kvm-hypervisor[Preparation of the Linux server] for more information.
 
 Media expectations for KVM::
 The SSD flash storage devices used must meet the following additional requirements:
@@ -76,8 +76,11 @@ The value reported for these commands must be '0'.
 * It is expected the devices are connected to an HBA or in some cases to a RAID controller configured to operate in JBOD mode. When using a RAID controller, the device function must be passed through the host without overlaying any RAID functionality. When using a RAID controller in JBOD mode, you should review the RAID documentation or contact the vendor as needed to make sure the device reports the rotational speed as '0'.
 * There are two separate storage components:
 ** Virtual machine storage
++
 This is an LVM pool (storage pool) containing the system data used to host the ONTAP Select virtual machine. The LVM pool must be backed by a high endurance flash device, and can be either SAS, SATA, or NVMe. An NVMe device is recommended for improved performance.
+
 ** Data disks
++
 This is a set of SAS or SATA SSD drives used for data management. The SSD devices should be enterprise grade and durable. The NVMe interface is not supported.
 
 * All devices must be formatted with 512BPS.

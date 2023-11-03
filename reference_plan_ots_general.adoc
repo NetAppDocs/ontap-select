@@ -40,6 +40,7 @@ You should be familiar with general virtualization concepts. In addition, there 
 
 Networking and Open vSwitch configuration::
 You should be familiar with networking concepts and the configuration of network switches. In addition, you should have experience with Open vSwitch. You must use the following network commands a part of configuring the ONTAP Select network in a KVM environment:
+
 * `ovs-vsctl`
 * `ip`
 * `ip link`
@@ -137,10 +138,12 @@ Types of credentials::
 The following types of credentials are supported:
 
 * host
-Used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM
++
+The *host* credential is used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM.
 
 * vcenter
-Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
++
+The *vcenter* credential is used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter.
 
 Access::
 The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.

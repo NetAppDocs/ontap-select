@@ -92,9 +92,11 @@ You must have the ONTAP Select and ONTAP Select Deploy administrator account cre
 . Sign in to the Deploy utility web user interface using the administrator account.
 . Select the *Clusters* tab at the top of the page and select the desired cluster from the list.
 . Click *+* next to the desired HA pair or node.
++
 If the option is disabled, Deploy is currently refreshing the storage information.
+
 . Click *Edit Storage* on the *Edit Node Storage* page.
-. Deselect the disks to be detached from the node, enter the ONTAP administrator credentials, and click *Edit Storage* to apply the changes.
+. Deselect the disks to be detached from the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
 . Click *Yes* to confirm the warning in the popup window.
 . Click the *Events* tab for the cluster to monitor and confirm the detach operation.
 +
@@ -174,7 +176,7 @@ image:ST_23.jpg[Edit node storage]
 +
 image:ST_24.jpg[Storage disk details]
 
-. Provide the cluster credentials and click *Edit Storage*.
+. Provide the cluster credentials and select *Edit Storage*.
 +
 image:ST_25.jpg[ONTAP credentials]
 
@@ -209,7 +211,7 @@ The new disk must be physically installed on the KVM Linux host.
 If the option is disabled, Deploy is currently refreshing the storage information.
 
 . Click *Edit Storage* on the *Edit Node Storage* page.
-. Select the disks to be attached to the node, enter the ONTAP administrator credentials, and click *Edit Storage* to apply the changes.
+. Select the disks to be attached to the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
 . Click the *Events* tab to monitor and confirm the attach operation.
 . Examine the node storage configuration to confirm that the disk is attached.
 --
@@ -250,7 +252,7 @@ image:ST_28.jpg[Edit node storage]
 +
 image:ST_29.jpg[Storage disk details]
 
-. Provide the cluster credentials and click *Edit Storage*.
+. Provide the cluster credentials and select *Edit Storage*.
 +
 image:ST_30.jpg[Storage disk details]
 
