@@ -20,7 +20,7 @@ You need to install the ONTAP Select Deploy administration utility and use the u
 You can download the ONTAP Select package from the NetApp support site.
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`.
 
 .Steps
 . Access the NetApp support site using a web browser and click *Support Quick Links*.
@@ -74,21 +74,21 @@ Verify that your system meets the following requirements:
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
 ----
-
+ 
 
 == Deploy the virtual machine
 
-You must install and start the ONTAP Select Deploy virtual machine using the OVF virtual machine image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
+You must install and start the ONTAP Select Deploy VM using the OVF VM image. As part of the installation process, you must configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
-You must prepare to deploy the ONTAP Select Deploy virtual machine:
+For an ESXi hypervisor, you must prepare to deploy the ONTAP Select Deploy VM:
 
 * Enable the OVF functionality in your browser by installing the VMware Client Integration Plugin or performing similar configuration as needed
-* Enabled DHCP in the VMware environment if you will dynamically assign an IP address to the Deploy virtual machine
+* Enabled DHCP in the VMware environment if you will dynamically assign an IP address to the Deploy VM
 
-You must have the configuration information to be used when creating the virtual machine, including the name of the virtual machine, external network, and host name. When defining a static network configuration, you need the following additional information:
+For ESXi and KVM hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
 
-* IP address of the Deploy virtual machine
+* IP address of the Deploy VM
 * Netmask
 * IP address of the gateway (router)
 * IP address of the primary DNS server
@@ -96,10 +96,16 @@ You must have the configuration information to be used when creating the virtual
 * DNS search domains
 
 .About this task
-If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy virtual machine to configure the network instead.
+If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy VM to configure the network instead.
 
 .Steps
+The steps you follow depend on whether you use an ESXi or KVM hypervisor. 
 
+[role="tabbed-block"]
+====
+
+.ESXi
+--
 . Access the vSphere client and sign in.
 
 . Navigate to the appropriate location in the hierarchy and select *Deploy OVF Template*.
@@ -108,9 +114,9 @@ If you use vSphere, the Deploy OVF template wizard includes a form to provide al
 +
 You must define the password for the administrator account. You need to provide this password when signing in to the Deploy utility.
 
-. After the virtual machine is deployed, select the new virtual machine and power it on if it is not already powered on based on your input to the deployment wizard.
+. After the VM is deployed, select the new VM and power it on if it is not already powered on based on your input to the deployment wizard.
 
-. If needed, you can configure the Deploy network using the virtual machine console:
+. If needed, you can configure the Deploy network using the VM console:
 .. Click the *Console* tab to access the ESXi host setup shell and monitor the power on process.
 .. Wait for the following prompt:
 +
@@ -123,8 +129,57 @@ Provide a password for the admin user:
 .. Wait for the following prompt:
 +
 Use DHCP to set networking information? [n]:
-.. Type *n* to define a static IP configuration or y to use DHCP, and press *Enter*.
+.. Type *n* to define a static IP configuration or *y* to use DHCP, and select *Enter*.
 .. If you choose a static configuration, provide all network configuration information as required.
+--
+
+.KVM
+--
+. Sign in to the command line interface at the Linux server:
++
+----
+ssh root@<ip_address>
+----
+
+. Create a new directory and extract the raw VM image:
++
+----
+mkdir /home/select_deploy25
+cd /home/select_deploy25
+mv /root/<file_name> .
+tar -xzvf <file_name>
+----
+
+. Create and start the KVM VM running the Deploy administration utility:
++
+----
+virt-install --name=select-deploy --vcpus=2 --ram=4096 --os-variant=debian10 --controller=scsi,model=virtio-scsi --disk path=/home/deploy/ONTAPdeploy.raw,device=disk,bus=scsi,format=raw --network "type=bridge,source=ontap-br,model=virtio,virtualport_type=openvswitch" --console=pty --import --noautoconsole
+----
+. If needed, you can configure the Deploy network using the VM console:
+.. Connect to the VM console:
++
+----
+virsh console <vm_name>
+----
+
+.. Wait for the following prompt:
++
+----
+Host name :
+----
+
+.. Type the host name and select *Enter*.
+.. Wait for the following prompt:
++
+----
+Use DHCP to set networking information? [n]:
+----
+
+.. Type *n* to define a static IP configuration or *y* to use DHCP, and select *Enter*.
+.. If you choose a static configuration, provide all network configuration information as required.
+--
+
+====
 
 == Sign in to the Deploy web interface
 
@@ -150,4 +205,5 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 link:task_cli_signing_in.html[Sign in to Deploy using SSH]
 
 // 2023-09-07, ONTAPDOC-1330
+// 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions

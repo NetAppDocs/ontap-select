@@ -101,7 +101,7 @@ The steps you follow depend on whether you want to create a single-node cluster 
 
 . Click *Next* to add a hypervisor host and then click *Add*.
 +
-You can add the ESXi host directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
+You can add the hypervisor host directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
 
 . Click *Refresh* and confirm the *Type* value for the host is *ESX*.
 +
@@ -155,7 +155,7 @@ If the cluster creation operation is initiated but fails to complete, the ONTAP 
 
 . Click *Next* to add two hypervisor hosts and then click *Add*.
 +
-You can add the ESXi hosts directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
+You can add the hypervisor hosts directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
 
 . Click *Refresh* and confirm the *Type* value for the host is *ESX*.
 +
@@ -204,4 +204,5 @@ If the cluster creation operation is initiated but fails to complete, the ONTAP 
 You should confirm the ONTAP Select AutoSupport feature is configured and then back up the ONTAP Select Deploy configuration data.
 
 // 2023-09-13, ONTAPDOC-1306
+// 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, adding hyperlink
