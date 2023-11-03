@@ -91,14 +91,14 @@ You must have the ONTAP Select and ONTAP Select Deploy administrator account cre
 .Steps
 . Sign in to the Deploy utility web user interface using the administrator account.
 . Select the *Clusters* tab at the top of the page and select the desired cluster from the list.
-. Click *+* next to the desired HA pair or node.
+. Select *+* next to the desired HA pair or node.
 +
 If the option is disabled, Deploy is currently refreshing the storage information.
 
-. Click *Edit Storage* on the *Edit Node Storage* page.
+. Select *Edit Storage* on the *Edit Node Storage* page.
 . Deselect the disks to be detached from the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
-. Click *Yes* to confirm the warning in the popup window.
-. Click the *Events* tab for the cluster to monitor and confirm the detach operation.
+. Select *Yes* to confirm the warning in the popup window.
+. Select the *Events* tab for the cluster to monitor and confirm the detach operation.
 +
 You can remove the physical disk from the host if it is no longer needed.
 --
@@ -164,15 +164,15 @@ You should update the disk path and any other configuration information as neede
 
 . Sign in to the Deploy web user interface using the administrator account.
 
-. Click the *Clusters* tab and select the relevant cluster.
+. Select the *Clusters* tab and select the relevant cluster.
 +
 image:ST_22.jpg[Node details]
 
-.  Click *+* to expand the storage view.
+.  Select *+* to expand the storage view.
 +
 image:ST_23.jpg[Edit node storage]
 
-. Click *Edit* to make changes to the attached disks and uncheck the failed drive.
+. Select *Edit* to make changes to the attached disks and uncheck the failed drive.
 +
 image:ST_24.jpg[Storage disk details]
 
@@ -205,14 +205,14 @@ The new disk must be physically installed on the KVM Linux host.
 
 .Steps
 . Sign in to the Deploy utility web user interface using the administrator account.
-. Click the *Clusters* tab at the top of the page and select the desired cluster from the list.
-. Click *+* next to the desired HA pair or node.
+. Select the *Clusters* tab at the top of the page and select the desired cluster from the list.
+. Select *+* next to the desired HA pair or node.
 +
 If the option is disabled, Deploy is currently refreshing the storage information.
 
-. Click *Edit Storage* on the *Edit Node Storage* page.
+. Select *Edit Storage* on the *Edit Node Storage* page.
 . Select the disks to be attached to the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
-. Click the *Events* tab to monitor and confirm the attach operation.
+. Select the *Events* tab to monitor and confirm the attach operation.
 . Examine the node storage configuration to confirm that the disk is attached.
 --
 
@@ -240,15 +240,15 @@ Because the node configuration has changed, you should perform a cluster refresh
 
 . Sign in to the Deploy web user interface using the administrator account.
 
-. Click the *Clusters* tab and select the relevant cluster.
+. Select the *Clusters* tab and select the relevant cluster.
 +
 image:ST_27.jpg[HA pair]
 
-. Click *+* to expand the storage view.
+. Select *+* to expand the storage view.
 +
 image:ST_28.jpg[Edit node storage]
 
-. Click *Edit* and confirm that the new drive is available and select it.
+. Select *Edit* and confirm that the new drive is available and select it.
 +
 image:ST_29.jpg[Storage disk details]
 
