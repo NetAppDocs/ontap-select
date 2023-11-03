@@ -28,7 +28,7 @@ You must prepare the hypervisor hosts.
 You must prepare each of the Linux KVM servers where an ONTAP Select node is deployed. You must also prepare the server where the ONTAP Select Deploy administration utility is deployed.
 
 .Install Red Hat Enterprise Linux
-You must install the RedHat Enterprise Linux operating system using the ISO image. During installation, you should configure the system as follows:
+You must install the Red Hat Enterprise Linux (RHEL) operating system using the ISO image. During installation, you should configure the system as follows:
 
 * Select Default as the security policy
 * Choose the Virtualized Host software selection
@@ -45,10 +45,10 @@ NOTE: Some of the required packages might already be installed if you chose Virt
 
 You should also review the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^] for additional information about the necessary packages and other configuration requirements.
 
-.Additional packages required for Red Hat Enterprise Linux 7.7
-You should install the same set of packages required for RedHat Enterprise Linux 7.6.
+.Additional packages required for RHEL 7.7
+You should install the same set of packages required for RHEL 7.6.
 
-.Additional packages required for RedHat Enterprise Linux 7.6
+.Additional packages required for RHEL 7.6
 You should verify that the following packages and dependencies are installed when using RHEL 7.6 or CentOS 7.6. In each case, the package name and version are included.
 
 * qemu-kvm (1.5.3-160)
@@ -69,7 +69,7 @@ If you are using vNAS on KVM (external storage) and plan to migrate virtual mach
 * pacemaker (1.1.19-8)
 * pcs (0.9.165-6)
 
-.Additional packages required for RedHat Enterprise Linux 7.5
+.Additional packages required for RHEL 7.5
 You should verify that the following packages and dependencies are installed when using RHEL 7.5 or CentOS 7.5. In each case, the package name and version are included.
 
 * qemu-kvm (1.5.3-141)
@@ -90,7 +90,7 @@ If you are using vNAS on KVM (external storage) and plan to migrate virtual mach
 * pacemaker (1.1.18-11)
 * pcs (0.9.16205)
 
-.Additional packages required for RedHat Enterprise Linux 7.4
+.Additional packages required for RHEL 7.4
 You should verify that the following packages and dependencies are installed when using RHEL 7.4 or CentOS 7.4. In each case the package name and version are included.
 
 * qemu-kvm (1.5.3-141)
