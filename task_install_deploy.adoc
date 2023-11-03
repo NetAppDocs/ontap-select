@@ -168,14 +168,14 @@ virsh console <vm_name>
 Host name :
 ----
 
-.. Type the host name and press *Enter*.
+.. Type the host name and select *Enter*.
 .. Wait for the following prompt:
 +
 ----
 Use DHCP to set networking information? [n]:
 ----
 
-.. Type *n* to define a static IP configuration or *y* to use DHCP, and press *Enter*.
+.. Type *n* to define a static IP configuration or *y* to use DHCP, and select *Enter*.
 .. If you choose a static configuration, provide all network configuration information as required.
 --
 

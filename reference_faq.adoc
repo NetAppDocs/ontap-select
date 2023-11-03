@@ -17,7 +17,7 @@ You can find answers to frequently asked questions about ONTAP Select.
 
 [NOTE]
 ====
-Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM cluster and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1. 
+Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1. 
 ====
 
 == General

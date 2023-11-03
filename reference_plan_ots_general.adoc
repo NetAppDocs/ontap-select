@@ -23,7 +23,7 @@ Linux server distribution::
 You should have experience with the specific Linux distribution to be used for your ONTAP Select Deployment. Specifically, you should be able to perform the following tasks:
 
 * Install the Linux distribution
-* Configure the system using the command line interface
+* Configure the system using the CLI
 * Add software packages as well as any dependencies
 
 For more information on preparing your Linux server, including the required configuration and software packages, see the host configuration checklist. Refer to the hypervisor requirements for the currently supported Linux distributions.
@@ -70,7 +70,7 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 * Kernel-based Virtual Machine (KVM)
 
 [NOTE]
-Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM cluster and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
+Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
 
 Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
 
@@ -129,9 +129,9 @@ You must select the capacity tiers or capacity pools licensing model for each ON
 
 == Authentication using the credential store
 
-The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
+The ONTAP Select Deploy credential store is a data base holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
 
-NOTE: The account information is stored securely in the database using the AES encryption algorithm and SHA-256 hashing algorithm.
+NOTE: The account information is stored securely in the data base using the Advanced Encryption Standard (AES) encryption algorithm and SHA-256 hashing algorithm.
 
 Types of credentials::
 The following types of credentials are supported:

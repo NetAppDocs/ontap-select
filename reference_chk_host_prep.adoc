@@ -27,7 +27,7 @@ You must prepare the hypervisor hosts.
 .Preparation of the Linux server
 You must prepare each of the Linux KVM servers where an ONTAP Select node is deployed. You must also prepare the server where the ONTAP Select Deploy administration utility is deployed.
 
-.Installing RedHat Enterprise Linux
+.Install Red Hat Enterprise Linux
 You must install the RedHat Enterprise Linux operating system using the ISO image. During installation, you should configure the system as follows:
 
 * Select Default as the security policy
@@ -35,22 +35,21 @@ You must install the RedHat Enterprise Linux operating system using the ISO imag
 * The destination should be the local boot disk and not a RAID LUN used by ONTAP Select
 * Make sure the host management interface is up after booting up
 
-NOTE: You can edit the correct network configuration file under /etc/sysconfig/network-scripts and then bring up the interface using the ifup command.
+NOTE: You can edit the correct network configuration file under /etc/sysconfig/network-scripts and then bring up the interface by using the `ifup` command.
 
-.Installing additional packages required for ONTAP Select
-There are several additional software packages that ONTAP Select requires. The exact list of packages varies based on the version of Linux you are using. As a first step, make sure that the yum repository is available on your server. If it is not available, you can retrieve it using the following command:
+.Install additional packages required for ONTAP Select
+ONTAP Select requires several additional software packages. The exact list of packages varies based on the version of Linux you are using. As a first step, make sure that the yum repository is available on your server. If it is not available, you can retrieve it using the `wget your_repository_location` command:
 
-`wget your_repository_location`
 
 NOTE: Some of the required packages might already be installed if you chose Virtualized Host for the software selection during installation of the Linux server. You might need to install the openvswitch package from sources.
 
 You should also review the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^] for additional information about the necessary packages and other configuration requirements.
 
-.Additional packages required for RedHat Enterprise Linux 7.7
+.Additional packages required for Red Hat Enterprise Linux 7.7
 You should install the same set of packages required for RedHat Enterprise Linux 7.6.
 
 .Additional packages required for RedHat Enterprise Linux 7.6
-You should make sure that the following packages and dependencies are installed when using RHEL 7.6 or CentOS 7.6. In each case, the package name and version are included.
+You should verify that the following packages and dependencies are installed when using RHEL 7.6 or CentOS 7.6. In each case, the package name and version are included.
 
 * qemu-kvm (1.5.3-160)
 
@@ -71,7 +70,7 @@ If you are using vNAS on KVM (external storage) and plan to migrate virtual mach
 * pcs (0.9.165-6)
 
 .Additional packages required for RedHat Enterprise Linux 7.5
-You should make sure that the following packages and dependencies are installed when using RHEL 7.5 or CentOS 7.5. In each case, the package name and version are included.
+You should verify that the following packages and dependencies are installed when using RHEL 7.5 or CentOS 7.5. In each case, the package name and version are included.
 
 * qemu-kvm (1.5.3-141)
 
@@ -92,7 +91,7 @@ If you are using vNAS on KVM (external storage) and plan to migrate virtual mach
 * pcs (0.9.16205)
 
 .Additional packages required for RedHat Enterprise Linux 7.4
-You should make sure that the following packages and dependencies are installed when using RHEL 7.4 or CentOS 7.4. In each case the package name and version are included.
+You should verify that the following packages and dependencies are installed when using RHEL 7.4 or CentOS 7.4. In each case the package name and version are included.
 
 *qemu-kvm (1.5.3-141)
 
@@ -119,12 +118,12 @@ An ONTAP Select storage pool is a logical data container that abstracts the unde
 You must create at least one storage pool at each ONTAP Select node. If you use software RAID instead of a local hardware RAID, storage disks are attached to the node for the root and data aggregates. However, in this case you must still create a storage pool for the system data.
 
 .Before you begin
-You must be able to sign in to the Linux command line interface on the host where ONTAP Select is deployed.
+Verify that you can sign in to the Linux command line interface on the host where ONTAP Select is deployed.
 
 .About this task
-The ONTAP Select Deploy administration utility expects the target location for the storage pool to be specified as: /dev/<pool_name> where <pool_name> is a unique pool name on the host.
+The ONTAP Select Deploy administration utility expects the target location for the storage pool to be specified as /dev/<pool_name>, where <pool_name> is a unique pool name on the host.
 
-NOTE: The entire capacity of the LUN is allocated when a storage pool created.
+NOTE: The entire capacity of the LUN is allocated when a storage pool is created.
 
 .Steps
 
@@ -160,7 +159,7 @@ virsh pool-build <pool_name>
 virsh pool-start <pool_name>
 ----
 
-. Configure the storage pool to automatically start at system boot up:
+. Configure the storage pool to automatically start at system boot:
 +
 ----
 virsh pool-autostart <pool_name>
@@ -177,10 +176,10 @@ virsh pool-list
 You can delete a storage pool when it is no longer needed.
 
 .Before you begin
-You must be able to sign in to the Linux command line interface where ONTAP Select is deployed.
+Verify that you can sign in to the Linux command line interface where ONTAP Select is deployed.
 
 .About this task
-The ONTAP Select Deploy administration utility expects the target location for the storage pool to be specified as `/dev/<pool_name>` where `<pool_name>` is a unique pool name on the host.
+The ONTAP Select Deploy administration utility expects the target location for the storage pool to be specified as `/dev/<pool_name>`, where `<pool_name>` is a unique pool name on the host.
 
 .Steps
 
@@ -297,19 +296,19 @@ image:CHK_03.jpg[Single node within a four-node cluster]
 
 == KVM host
 
-=== Configuring Open vSwitch on a KVM host
+=== Configure Open vSwitch on a KVM host
 
 You must configure a software-defined switch on each ONTAP Select using Open vSwitch.
 
 .Before you begin
-The network manager must be disabled and the native Linux network service must be enabled.
+Verify that the network manager is disabled and the native Linux network service is enabled.
 
 .About this task
 ONTAP Select requires two separate networks, both of which utilize port bonding to provide HA capability for the networks.
 
 .Steps
 
-. Make sure that Open vSwitch is active on the host:
+. Verify that Open vSwitch is active on the host:
 .. Determine if Open vSwitch is running:
 +
 ----

@@ -44,7 +44,7 @@ Note the version number and hypervisor platform in each case.
 +
 [role="tabbed-block"]
 ====
-.ESXi
+.ESXi example
 --
 Example
 

@@ -99,7 +99,7 @@ host register -name 10.234.81.14 -hypervisor-type KVM -username root
 +
 Provide the password for the host account when prompted.
 
-. Display the state of the host and confirm it is authenicated.
+. Display the state of the host and confirm it is authenticated:
 +
 [source,asciidoc]
 ----

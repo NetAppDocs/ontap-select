@@ -19,10 +19,10 @@ You can configure ONTAP Select on the KVM hypervisor with an external storage ar
 
 If you use an external array for the ONTAP Select storage pools, the following configuration restrictions apply:
 
-* Must define as the logical pool type using CLVM
-* Must provide a storage capacity limit
-* Supports Fibre Channel (FC), Fibre Channel over Ethernet (FCoE), and Internet Small Computer Systems Interface (iSCSI) only
-* Thinly provisioned storage is not recognized
+* You must define as the logical pool type using CLVM.
+* You must provide a storage capacity limit.
+* The configuration only supports FC, Fibre Channel over Ethernet (FCoE), and iSCSI protocols.
+* The configuration does not recognize thinly provisioned storage.
 
 CAUTION: The storage capacity you specify must be within the allowed storage limits of the external storage. An error occurs if you do not provide a capacity limit or the external storage runs out of space during the disk creation operation.
 
@@ -32,6 +32,6 @@ You should adhere to the following recommendations:
 
 * Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage
 * Configure the capacity option to restrict storage utilization (ONTAP Select cannot consume the entire capacity of an external storage pool)
-* Assure that all external storage arrays use the available redundancy and high-availability (HA) features where possible
+* Verify that all external storage arrays use the available redundancy and high-availability (HA) features where possible
 
 // 2023-09-25, ONTAPDOC-1204

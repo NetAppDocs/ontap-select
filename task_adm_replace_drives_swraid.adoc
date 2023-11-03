@@ -27,21 +27,21 @@ When a drive fails you need to use the ONTAP CLI to identify the failed disk.
 
 .KVM
 --
-.Before you Begin
+.Before you begin
 You must have the VM ID of the ONTAP Select virtual machine, as well as the ONTAP Select and ONTAP Select Deploy administrator account credentials.
 
 .About this task
 You should only use this procedure when the ONTAP Select node is running on KVM and configured to use software RAID.
 
 .Steps
-. At the ONTAP Select command line interface, identify the disk to be replaced:
+. At the ONTAP Select CLI, identify the disk to be replaced:
 .. Identify the disk by serial number, UUID, or target address in the virtual machine. 
 +
 ----
 disk show -fields serial,vmdisk-target-address,uuid
 ----
 
-.. Optionally display a complete list of the spare disk capacity with the partitioned disks.
+.. Optionally, display a complete list of the spare disk capacity with the partitioned disks.
 storage aggregate show-spare-disks
 . At the Linux command line interface, locate the disk.
 .. Examine the system devices, searching for the disk serial number or UUID (disk name):
@@ -90,7 +90,7 @@ You must have the ONTAP Select and ONTAP Select Deploy administrator account cre
 
 .Steps
 . Sign in to the Deploy utility web user interface using the administrator account.
-. Click the *Clusters* tab at the top of the page and select the desired cluster from the list.
+. Select the *Clusters* tab at the top of the page and select the desired cluster from the list.
 . Click *+* next to the desired HA pair or node.
 If the option is disabled, Deploy is currently refreshing the storage information.
 . Click *Edit Storage* on the *Edit Node Storage* page.

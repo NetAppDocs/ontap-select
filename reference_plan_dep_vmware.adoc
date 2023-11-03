@@ -21,7 +21,7 @@ CAUTION: You should not directly modify the configuration of an ONTAP Select vir
 
 Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervisor independent.
 
-The following hypervisors are supported for both:
+The following hypervisors are supported for both ONTAP Select and the ONTAP Select Deploy administration:
 
 * VMware ESXi
 * Kernel-based Virtual Machine (KVM)
@@ -29,7 +29,7 @@ The following hypervisors are supported for both:
 NOTE: Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
 
 .Hypervisor for ONTAP Select nodes and administration utility
-Both the Deploy administration utility and ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
+Both the Deploy administration utility and the ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
 
 * Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi or KVM
 * Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi or KVM
@@ -50,7 +50,7 @@ You must configure each host to use one, two, or four physical ports. Although y
 * A host in a single-node cluster should have two physical ports.
 * Each host in a multi-node cluster should have four physical ports
 
-.Integrating ONTAP Select with an ONTAP hardware-based cluster
+.Integrate ONTAP Select with an ONTAP hardware-based cluster
 You cannot add an ONTAP Select node directly to an ONTAP hardware-based cluster. However, you can optionally establish a cluster peering relationship between an ONTAP Select cluster and a hardware-based ONTAP cluster.
 
 == VMware hypervisor environment

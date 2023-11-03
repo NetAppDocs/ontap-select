@@ -66,7 +66,7 @@ If a hardware RAID controller is present, see the link:concept_stor_concepts_cha
 There are also specific software package configuration requirements. See Preparation of the Linux server for more information.
 
 Media expectations for KVM::
-There are additional requirements for the SSD flash storage devices used, including:
+The SSD flash storage devices used must meet the following additional requirements:
 
 * The SSD devices must accurately and persistently report themselves to the Linux host through the following methods:
 ** # cat /sys/block/<device>/queue/rotational
