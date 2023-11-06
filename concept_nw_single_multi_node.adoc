@@ -23,6 +23,12 @@ Unlike the multinode version of the ONTAP Select product, each ONTAP Select VM c
 
 These ports are used to provide the following services: management, data, and intercluster LIFs.
 
+.KVM
+
+ONTAP Select can be deployed as a single-node cluster. The hypervisor host includes a virtual switch that provides access to the external network.
+
+.ESXi
+
 The relationship between these ports and the underlying physical adapters can be seen in the following figure, which depicts one ONTAP Select cluster node on the ESX hypervisor.
 
 *Network configuration of single-node ONTAP Select cluster*
@@ -140,3 +146,5 @@ HA interconnect traffic flows through this network port using a single network i
 
 [NOTE]
 In a manner similar to the RSM port (e0e), neither the physical port nor the hosted network interface is visible to users from either the ONTAP CLI or from System Manager. As a result, the IP address of this interface cannot be modified, and the state of the port cannot be changed. This network port requires the use of jumbo frames (7500 to 9000 MTU).
+
+// 2023-09-29, ONTAPDOC-1204

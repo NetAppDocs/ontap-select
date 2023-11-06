@@ -17,7 +17,7 @@ You can use the command line interface provided with the ONTAP Select Deploy adm
 
 == Before you begin
 
-Before creating an ONTAP Select cluster on ESXi, you should understand the required preparation.
+Before creating an ONTAP Select cluster on a hypervisor, you should understand the required preparation.
 
 === Prepare to attach storage to the ONTAP Select node
 
@@ -48,7 +48,7 @@ You must have the password for the admin user account.
 
 . In a command shell on your local workstation, use the sftp utility to upload the license file to the Deploy virtual machine.
 +
-Example
+Example output
 +
 .....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -68,9 +68,54 @@ Provide the administrator account password when prompted.
 +
 `license show`
 
-== Add ESXi hypervisor hosts
+== Add hypervisor hosts
 
-You must register each hypervisor host where an ONTAP Select node will run. As part of this, the Deploy administration utility authenticates either to the vCenter server managing the host or directly to the ESXi standalone host.
+You must register each hypervisor host where an ONTAP Select node will run. 
+
+[role="tabbed-block"]
+====
+
+.KVM
+--
+You must register a hypervisor host where the ONTAP Select node will run. As part of this, the Deploy administration utility authenticates to the KVM host.
+
+.About this task
+If more than one hypervisor host is needed, you should use this procedure to add each host.
+
+.Steps
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+. Register the host:
++
+[source,asciidoc]
+----
+`host register -name <FQDN|IP> -hypervisor-type KVM -username KVM_USERNAME`
+----
++
+Example output
++
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+Provide the password for the host account when prompted.
+
+. Display the state of the host and confirm it is authenticated:
++
+[source,asciidoc]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+Example output
++
+----
+host show -name 10.234.81.14 -detailed
+----
+--
+
+.ESXi
+--
+As part of this, the Deploy administration utility authenticates either to the vCenter server managing the host or directly to the ESXi standalone host.
 
 .About this task
 
@@ -84,7 +129,7 @@ Before you register a host that is managed by vCenter, you must add a management
 +
 `credential add -hostname <FQDN|IP> -type vcenter -username VCENTER_USERNAME`
 +
-Example
+Example output
 +
 ....
 credential add -hostname vc.select.company-demo.com -type vcenter -username administrator@vsphere.local
@@ -97,7 +142,7 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 * Register a host managed by vCenter:
 `host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
 +
-Example
+Example output
 +
 ....
 host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com
@@ -107,11 +152,13 @@ host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.com
 +
 `host show -name <FQDN|IP> -detailed`
 +
-Example
+Example output
 +
 ....
 host show -name 10.234.81.14 -detailed
 ....
+--
+====
 
 == Creating and configuring an ONTAP Select cluster
 
@@ -133,7 +180,7 @@ When you create an ONTAP Select cluster, the Deploy utility automatically genera
 +
 `cluster create -name CLUSTERNAME -node-count NODES`
 +
-Example
+Example output
 +
 ....
 cluster create -name test-cluster -node-count 1
@@ -143,7 +190,7 @@ cluster create -name test-cluster -node-count 1
 +
 `cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK -gateway IP_ADDRESS -dns-servers <FQDN|IP>_LIST -dns-domains DOMAIN_LIST`
 +
-Example
+Example output
 +
 ....
 cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
@@ -175,7 +222,7 @@ You should use this procedure to configure each node. A capacity tier license is
 . Select the node and perform basic configuration:
 `node modify -name NODENAME -cluster-name CLUSTERNAME -host-name <FQDN|IP> -license-serial-number NUMBER -instance-type TYPE -passthrough-disks false`
 +
-Example
+Example output
 +
 ....
 node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.81.14
@@ -190,7 +237,7 @@ A capacity tier license is used for the ONTAP Select node.
 +
 `host network show -host-name <FQDN|IP> -detailed`
 +
-Example
+Example output
 +
 ....
 host network show -host-name 10.234.81.14 -detailed
@@ -202,7 +249,7 @@ host network show -host-name 10.234.81.14 -detailed
 +
 When deploying a single-node cluster, you do not need an internal network and should remove -internal-network.
 +
-Example
+Example output
 +
 ....
 node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.21
@@ -213,7 +260,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.
 +
 `node show -name NODENAME -cluster-name CLUSTERNAME -detailed`
 +
-Example
+Example output
 +
 ....
 node show -name test-cluster-01 -cluster-name test-cluster -detailed
@@ -239,7 +286,7 @@ When using a local hardware RAID controller, you need to perform steps 1 through
 +
 `host storage pool show -host-name <FQDN|IP>`
 +
-Example
+Example output
 +
 ----
 host storage pool show -host-name 10.234.81.14
@@ -253,7 +300,7 @@ You can also obtain the available storage pools through VMware vSphere.
 +
 If you include the -capacity-limit parameter, specify the value as GB or TB.
 +
-Example
+Example output
 +
 ----
 node storage pool attach -name sDOT-02 -cluster-name test-cluster -
@@ -264,7 +311,7 @@ node-name test-cluster-01 -capacity-limit 500GB
 +
 `node storage pool show -cluster-name CLUSTERNAME -node-name NODENAME`
 +
-Example
+Example output
 +
 ----
 node storage pool show -cluster-name test-cluster -node-name testcluster-01
@@ -274,7 +321,7 @@ node storage pool show -cluster-name test-cluster -node-name testcluster-01
 +
 `node storage disk attach -node-name NODENAME -cluster-name CLUSTERNAME -disks LIST_OF_DRIVES`
 +
-Example
+Example output
 +
 ----
 node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000:66:00.0 0000:67:00.0 0000:68:00.0
@@ -284,7 +331,7 @@ node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000
 +
 `node storage disk show -node-name NODENAME -cluster-name CLUSTERNAME`
 +
-Example
+Example output
 +
 ----
 node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
@@ -306,7 +353,7 @@ Before deploying a multi-node cluster, you should run the network connectivity c
 +
 `cluster deploy -name CLUSTERNAME`
 +
-Example
+Example output
 +
 ----
 cluster deploy -name test-cluster
@@ -323,3 +370,4 @@ Provide the password to be used for the ONTAP administrator account when prompte
 You should back up the ONTAP Select Deploy configuration data.
 
 // 2023-05-12, GH issue #59
+// 2023-09-29, ONTAPDOC-1204

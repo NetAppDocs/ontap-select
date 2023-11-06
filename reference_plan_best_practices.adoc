@@ -23,6 +23,15 @@ You should consider the following best practices for storage.
 
 ONTAP Select virtual NAS (vNAS) deployments using all-flash VSAN or generic flash arrays should follow the best practices for ONTAP Select with non-SSD DAS storage.
 
+=== External storage
+
+You should adhere to the following recommendations:
+
+* Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage
+* Configure the capacity option to restrict storage utilization (ONTAP Select cannot consume the entire capacity of an external storage pool)
+* Verify that all external storage arrays use the available redundancy and HA features where possible
+
+
 === Hypervisor core hardware
 
 All of the drives in a single ONTAP Select aggregate should be the same type. For example, you should not mix HDD and SSD drives in the same aggregate.
@@ -74,6 +83,10 @@ To eliminate the possibility of having multiple Deploy instances assign duplicat
 
 The ONTAP Select two-node cluster should be carefully monitored for EMS messages indicating that storage failover is disabled. These messages indicate a loss of connectivity to the mediator service and should be rectified immediately.
 
+=== Latency between nodes
+
+The network between the two nodes must support a mean latency of 5 ms with an additional 5 ms periodic jitter. Before deploying the cluster, test the network using the procedure described in the ONTAP Select Product Architecture and Best Practices technical report.
+
 === Load balancing
 
 To optimize load balancing across both the internal and the external ONTAP Select networks, use the Route Based on Originating Virtual Port load-balancing policy.
@@ -85,6 +98,12 @@ If data traffic spans multiple layer-2 networks and the use of VLAN ports is req
 === Physical switch configuration
 
 VMware recommends that STP be set to Portfast on the switch ports connected to the ESXi hosts. Not setting STP to Portfast on the switch ports can affect the ONTAP Select ability to tolerate uplink failures. When using LACP, the LACP timer should be set to fast (1 second). The load-balancing policy should be set to Route Based on IP Hash on the port group and Source and Destination IP Address and TCP/UDP port and VLAN on the LAG.
+
+=== Virtual switch options for KVM
+
+You must configure a virtual switch on each of the ONTAP Select hosts to support the external network and internal network (multi-node clusters only). As part of deploying a multi-node cluster, you should test the network connectivity on the internal cluster network.
+
+To learn more about how to configure an Open vSwitch on a hypervisor host, see the link:https://www.netapp.com/media/13134-tr4613.pdf[ONTAP Select on KVM Product Architecture and Best Practices^] technical report.
 
 == HA
 
@@ -120,3 +139,4 @@ Before you create a MetroCluster SDS, use the ONTAP Deploy connectivity checker 
 There is an extra caveat when using virtual guest tagging (VGT) and two-node clusters. In two-node cluster configurations, the node management IP address is used to establish early connectivity to the mediator before ONTAP is fully available. Therefore, only external switch tagging (EST) and virtual switch tagging (VST) tagging is supported on the port group mapped to the node management LIF (port e0a). Furthermore, if both the management and the data traffic are using the same port group, only EST and VST are supported for the entire two-node cluster.
 
 // 3 august 2023, ontapdoc-1213
+// 2023-09-26, ONTAPDOC-1204

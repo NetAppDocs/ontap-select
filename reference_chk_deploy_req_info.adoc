@@ -13,7 +13,7 @@ summary: Before installing the Deploy administration utility in a VMware environ
 :imagesdir: ./media/
 
 [.lead]
-Before installing the Deploy administration utility in a VMware environment, review the required configuration information and optional network configuration information to prepare for successful deployment.
+Before installing the Deploy administration utility in a hypervisor environment, review the required configuration information and optional network configuration information to prepare for successful deployment.
 
 == Required configuration information
 
@@ -24,8 +24,8 @@ As part of your deployment planning, you should determine the required configura
 | Required information
 | Description
 | Name of the Deploy virtual machine | Identifier to use for the virtual machine.
-| Name of the ESXi host | Identifier for the VMware ESXi host where the Deploy utility is installed.
-| Name of the datastore | Identifier for the VMware datastore holding the virtual machine files (approximately 40 GB is required).
+| Name of the hypervisor host | Identifier for the VMware ESXi or KVM hypervisor host where the Deploy utility is installed.
+| Name of the data store | Identifier for the hypervisor data store holding the virtual machine files (approximately 40GB is required).
 | Network for the virtual machine | Identifier for the Network where the Deploy virtual machine is connected.
 |===
 
@@ -45,3 +45,5 @@ The Deploy virtual machine is configured using DHCP by default. However, if need
 | Secondary DNS server | Secondary Domain Name Server.
 | Search domains | List of the search domains to use.
 |===
+
+// 2023-09-27, ONTAPDOC-1204

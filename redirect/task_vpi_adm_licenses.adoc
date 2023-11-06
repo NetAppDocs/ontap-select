@@ -1,0 +1,6 @@
+--- 
+permalink: task_vpi_adm_licenses.html
+redirect: ontap-select/index.html
+---
+
+// 2023-10-20, ONTAPDOC-1293
