@@ -41,7 +41,7 @@ Before installing the Deploy administration utility in a KVM hypervisor environm
 There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a KVM environment.
 
 .Linux KVM host server hardware requirements
-There are several minimum resource requirements that your Linux KVM hypervisor host must meet. You should verify that the hosts where ONTAP Select is deployed meet the following basic requirements:
+There are several minimum resource requirements that your Linux KVM hypervisor host must meet. Verify that the hosts where ONTAP Select is deployed meet the following basic requirements:
 
 * Linux server:
 ** The hardware and software must be 64-bit
@@ -57,28 +57,28 @@ Verify that the Deploy virtual machine network interface is configured and can t
 .Support for IP version 4
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
 
-* You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
+* You must assign an IPv4 address to the management LIF of the Deploy VM.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
 == Required configuration information
 
 As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
 
-.Name of the Deploy virtual machine
-The name to use for the virtual machine.
+.Name of the Deploy VM
+The name to use for the VM.
 
 .Name of the Linux KVM host
 The Linux KVM host where the Deploy utility is installed.
 
 .Name of the storage pool
-The storage pool holding the virtual machine files (approximately 40GB is required).
+The storage pool holding the VM files (approximately 40GB is required).
 
-.Network for the virtual machine
-The network where the Deploy virtual machine is connected.
+.Network for the VM
+The network where the Deploy VM is connected.
 
 == Optional network configuration information
 
-The Deploy virtual machine is configured using the DHCP by default. However, if needed, you can manually configure the network interface for the virtual machine.
+The Deploy VM is configured using the DHCP by default. However, if needed, you can manually configure the network interface for the VM.
 
 .Host name
 The name of the host.
@@ -87,7 +87,7 @@ The name of the host.
 The static IPv4 address.
 
 .Subnet mask
-The subnetwork mask, based on the network the virtual machine is a part of.
+The subnetwork mask, which is based on the network that the VM is a part of.
 
 .Gateway
 The default gateway or router.
