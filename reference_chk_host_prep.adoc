@@ -298,7 +298,7 @@ image:CHK_03.jpg[Single node within a four-node cluster]
 
 === Configure Open vSwitch on a KVM host
 
-You must configure a software-defined switch on each ONTAP Select using Open vSwitch.
+You must configure a software-defined switch on each ONTAP Select node using Open vSwitch.
 
 .Before you begin
 Verify that the network manager is disabled and the native Linux network service is enabled.
