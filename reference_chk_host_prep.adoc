@@ -41,7 +41,7 @@ NOTE: You can edit the correct network configuration file under /etc/sysconfig/n
 ONTAP Select requires several additional software packages. The exact list of packages varies based on the version of Linux you are using. As a first step, make sure that the yum repository is available on your server. If it is not available, you can retrieve it using the `wget your_repository_location` command:
 
 
-NOTE: Some of the required packages might already be installed if you chose Virtualized Host for the software selection during installation of the Linux server. You might need to install the openvswitch package from sources.
+NOTE: Some of the required packages might already be installed if you chose Virtualized Host for the software selection during installation of the Linux server. You might need to install the openvswitch package from source code as described in the link:https://docs.openvswitch.org/en/latest/intro/install/general/[Open vSwitch documentation^].
 
 You should also review the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^] for additional information about the necessary packages and other configuration requirements.
 
@@ -327,7 +327,7 @@ systemctl start openvswitch
 ovs-vsctl show
 ----
 +
-The configuration should be empty.
+The configuration appears empty if Open vSwitch has not already been configured on the host.
 
 . Add a new vSwitch instance:
 +
