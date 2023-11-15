@@ -30,11 +30,11 @@ To begin the upgrade process, you must download the appropriate Deploy virtual m
 
 . Access the link:https://mysupport.netapp.com/site/[NetApp Support Site^] using a web browser and choose *Downloads* from the Downloads menu.
 
-. Scroll down and click *ONTAP Select Deploy Upgrade*.
+. Scroll down and select *ONTAP Select Deploy Upgrade*.
 
 . Select the desired release of the upgrade package.
 
-. Review the End User License Agreement (EULA) and click *Accept & Continue*.
+. Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
