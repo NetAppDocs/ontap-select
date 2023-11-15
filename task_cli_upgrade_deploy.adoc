@@ -86,7 +86,7 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 .After you finish
 
-Before the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. You should also clear the browser cache to be able to view the newly created Deploy pages.
+Before the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created Deploy pages.
 
 // 2023-06-06, github issue #178
 // 2023-10-17, prep for repo version split
