@@ -28,22 +28,15 @@ To begin the upgrade process, you must download the appropriate Deploy virtual m
 
 .Steps
 
-. Access the NetApp Support Site using a web browser and click *Support Quick Links*.
+. Access the link:https://mysupport.netapp.com/site/[NetApp Support Site^] using a web browser and choose *Downloads* from the Downloads menu.
 
-. Click *Download Software* under *Top Tasks* and sign in.
-
-. Click *Find your product*.
-
-. Scroll down and click *ONTAP Select Deploy Upgrade*.
+. Scroll down and select *ONTAP Select Deploy Upgrade*.
 
 . Select the desired release of the upgrade package.
 
-. Review the End User License Agreement (EULA) and click *Accept & Continue*.
+. Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
-
-.Related information
-link:https://mysupport.netapp.com[NetApp Support^]
 
 == Upload the package to the Deploy virtual machine
 
@@ -93,7 +86,8 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 .After you finish
 
-After the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. You should also clear the browser cache to be able to view the newly created Deploy pages.
+Before the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created Deploy pages.
 
 // 2023-06-06, github issue #178
 // 2023-10-17, prep for repo version split
+// 2023-11-01, github issue #221
