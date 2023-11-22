@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: reference_plan_ots_kvm.html
+keywords: plan, planning, vnas, kvm
+summary: There are several planning issues related to the use of the KVM hypervisor that you should consider.
+---
+
+= KVM requirements
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can configure ONTAP Select on the KVM hypervisor with an external storage array.
+
+== Basic requirements and restrictions
+
+If you use an external array for the ONTAP Select storage pools, the following configuration restrictions apply:
+
+* You must define as the logical pool type using CLVM.
+* You must provide a storage capacity limit.
+* The configuration only supports FC, Fibre Channel over Ethernet (FCoE), and iSCSI protocols.
+* The configuration does not recognize thinly provisioned storage.
+
+CAUTION: The storage capacity you specify must be within the allowed storage limits of the external storage. An error occurs if you do not provide a capacity limit or the external storage runs out of space during the disk creation operation.
+
+== Best practices
+
+You should adhere to the following recommendations:
+
+* Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage
+* Configure the capacity option to restrict storage utilization (ONTAP Select cannot consume the entire capacity of an external storage pool)
+* Verify that all external storage arrays use the available redundancy and high-availability (HA) features where possible
+
+// 2023-09-25, ONTAPDOC-1204

@@ -17,8 +17,7 @@ You can find answers to frequently asked questions about ONTAP Select.
 
 [NOTE]
 ====
-* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
-* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
+Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1. 
 ====
 
 == General
@@ -121,7 +120,8 @@ Software RAID is a layer in the ONTAP software stack. Software RAID provides mor
 
 Some of the requirements for software RAID are as follows:
 
-* Supported for ESX and KVM (prior to ONTAP Select 9.10.1)
+* Supported for ESX and KVM
+** Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for KVM hypervisor was removed in ONTAP Select 9.10.1. 
 * Size of supported physical disks: 200GB – 32TB
 * Only supported on DAS configurations
 * Supported with either SSDs or NVMe
@@ -216,24 +216,6 @@ For multinode clusters, the internal network must be fully opened (no NAT or fir
 .What vCenter rights does ONTAP Select Deploy need to create ONTAP Select clusters?
 
 The list of vCenter rights required is available here: link:reference_plan_ots_vcenter.html[VMware vCenter server].
-
-.What is the vCenter Deploy plug-in?
-
-It is possible to integrate the ONTAP Select Deploy functionality in the vCenter server with the ONTAP Select Deploy plug-in. Please note that the plug-in does not replace ONTAP Select Deploy. Rather ONTAP Select Deploy works in the background, and the vCenter admin can invoke most of the ONTAP Select Deploy functionality with the plug-in.  Some ONTAP Select Deploy operations are available only using CLI.
-
-.How many ONTAP Select Deploy VMs can register their plug-ins with one vCenter server?
-
-Only one ONTAP Select Deploy VM can register its plug-in with a specific vCenter server.
-
-.What is the benefit of the ONTAP Select Deploy vCenter plug-in?
-
-The plug-in allows vCenter admins and IT generalists to create ONTAP Select clusters using the vCenter HTML5 GUI. Please note that the Flash vCenter GUI is not supported.
-
-Also, it allows ONTAP Select Deploy to use the vCenter RBAC for authentication. Users that are given the vCenter privilege of using the ONTAP Select Deploy plug-in have their vCenter account mapped to the ONTAP Select Deploy admin user. ONTAP Select Deploy logs the user ID of every operation and the following file can be used as a basic auditing log:
-
-----
-nginx_access.log
-----
 
 == HA and clusters
 
@@ -332,4 +314,6 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
 
+// 2023-09-29, ONTAPDOC-1204
 // 2023-10-09, GitHub issue #220
+// 2023-10-20, ONTAPDOC-1293

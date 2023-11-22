@@ -83,7 +83,7 @@ Each LUN is seen as a local disk on the hypervisor host and can be part of one s
 
 You must make sure that the storage pools are created properly as part of an ONTAP Select deployment. You can create a storage pool using the hypervisor administration tool. For example, with VMware you can use the vSphere client to create a storage pool. The storage pool is then passed in to the ONTAP Select Deploy administration utility.
 
-=== Manage the virtual disks
+=== Manage the virtual disks on ESXi
 
 There are several issues related to the virtual disks that you should be aware of as part of preparing to deploy ONTAP Select.
 
@@ -101,7 +101,7 @@ You should also be aware of the following regarding virtual disks:
 
 The virtual disks are managed by ONTAP Select. They are created automatically when you create a cluster using the Deploy administration utility.
 
-== Illustration of the external storage environment
+== Illustration of the external storage environment on ESXi
 
 The ONTAP Select vNAS solution enables ONTAP Select to use datastores residing on storage that is external to the hypervisor host. The datastores can be accessed through the network using VMware vSAN or directly at an external storage array.
 
@@ -131,3 +131,5 @@ image:ST_03.jpg[ESXi hypervisor host]
 You can create an NFS datastore residing on an external storage array. The storage is accessed using the NFS network protocol. The following figure illustrates an NFS datastore on external storage that is accessed through the NFS server appliance.
 
 image:ST_04.jpg[ESXi hypervisor host]
+
+// 2023-09-28, ONTAPDOC-1204
