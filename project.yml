@@ -3,9 +3,21 @@ settings:
   name: ONTAP Select
   internal:
     pdf_enabled: true
+    lipi_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  versions:
+    - version-number: "9.14.1"
+      url: /ontap-select  
+    - version-number: "9.13.1"
+      url: /ontap-select-9131        
+    - version-number: "9.12.1"
+      url: /ontap-select-9121    
+    - version-number: "9.11.1"
+      url: /ontap-select-9111    
+    - version-number: "9.10.1"
+      url: /ontap-select-9101        
 sidebar:
   entries:
     - title: ONTAP Select documentation
