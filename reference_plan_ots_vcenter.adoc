@@ -5,7 +5,7 @@ keywords: plan, planning, vmware vcenter, vcenter server, vcenter
 summary: There are several planning requirements related to VMware vCenter you should consider.
 ---
 
-= VMware vCenter server
+= VMware vCenter server on ESXi
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -68,3 +68,5 @@ All privileges in the category.
 === vApp
 
 All privileges in the category.
+
+// 2023-10-02, ONTAPDOC-1204

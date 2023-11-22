@@ -5,7 +5,7 @@ keywords: plan, planning, ontap select deploy, vmware requirements
 summary: There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 ---
 
-= VMware hypervisor environment
+= Hypervisor host considerations
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,9 +13,51 @@ summary: There are several requirements and restrictions specific to the VMware 
 :imagesdir: ./media/
 
 [.lead]
+There are several planning issues related to the hypervisor host that you should consider.
+
+CAUTION: You should not directly modify the configuration of an ONTAP Select virtual machine unless directed to do so by NetApp support. A virtual machine should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select virtual machine outside of the Deploy utility without assistance from NetApp support can cause the virtual machine to fail and render it unusable.
+
+== Hypervisor independent
+
+Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervisor independent.
+
+The following hypervisors are supported for both ONTAP Select and the ONTAP Select Deploy administration:
+
+* VMware ESXi
+* Kernel-based Virtual Machine (KVM)
+
+NOTE: Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
+
+.Hypervisor for ONTAP Select nodes and administration utility
+Both the Deploy administration utility and the ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
+
+* Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi or KVM
+* Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi or KVM
+
+.One or more instances of ONTAP Select node per host
+Each ONTAP Select node runs as a dedicated virtual machine. You can create multiple nodes on the same hypervisor host, with the following restrictions:
+
+* Multiple nodes from a single ONTAP Select cluster cannot run on the same host. All the nodes on a specific host must be from different ONTAP Select clusters.
+* You must use external storage.
+* If you use software RAID, you can only deploy one ONTAP Select node on the host.
+
+.Hypervisor consistency for the nodes within a cluster
+All of the hosts within an ONTAP Select cluster must run on the same version and release of the hypervisor software.
+
+.Number of physical ports on each host
+You must configure each host to use one, two, or four physical ports. Although you have flexibility when configuring the network ports, you should follow these recommendations where possible:
+
+* A host in a single-node cluster should have two physical ports.
+* Each host in a multi-node cluster should have four physical ports
+
+.Integrate ONTAP Select with an ONTAP hardware-based cluster
+You cannot add an ONTAP Select node directly to an ONTAP hardware-based cluster. However, you can optionally establish a cluster peering relationship between an ONTAP Select cluster and a hardware-based ONTAP cluster.
+
+== VMware hypervisor environment
+
 There are several requirements and restrictions specific to the VMware environment that you should consider before installing the ONTAP Select Deploy utility in a VMware environment.
 
-== ESXi host server hardware requirements
+.ESXi host server hardware requirements
 
 There are several minimum resource requirements that your ESXi hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
 
@@ -27,7 +69,7 @@ There are several minimum resource requirements that your ESXi hypervisor host m
 * Storage (40 GB)
 * DHCP enabled (can also assign a static IP address)
 
-== Network connectivity
+.Network connectivity
 
 You must make sure that the ONTAP Select Deploy virtual machine network interface is configured and has a single management IP address. You can use DHCP to dynamically assign an IP address or manually configure a static IP address.
 
@@ -41,13 +83,15 @@ Deploy must also be able to communicate with the ONTAP Select node and cluster m
 * SSH (port 22)
 * SSL (port 443)
 
-== Support for IP version 4
+.Support for IP version 4
 
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
 
 * You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
-== VMware vCenter language restriction
+.VMware vCenter language restriction
 
 If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version. ONTAP Select Deploy does not support vCenter on non-English versions of Windows.
+
+// 2023-09-26, ONTAPDOC-1204

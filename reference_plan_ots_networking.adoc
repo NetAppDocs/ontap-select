@@ -22,7 +22,7 @@ You must configure a virtual switch on each of the ONTAP Select hosts to support
 [NOTE]
 To learn more about how to configure a vSwitch on a hypervisor host and the high speed interface feature, see the link:concept_nw_concepts_chars.html[Deep dive networking] section.
 
-== Upgrade to VMXNET3
+== Upgrade to VMXNET3 (ESXi only)
 
 Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an older ONTAP Select node to version 9.5 or later, the driver is not automatically upgraded.
 
@@ -39,7 +39,7 @@ The MTU size is displayed in the Cluster Details section of the cluster creation
 [NOTE]
 You can manually set the cluster MTU value if needed, based on the design of your network.
 
-== Two-NIC host with standard vSwitch
+== Two-NIC host with standard vSwitch (ESXi only)
 
 In order to improve ONTAP Select performance in a two-NIC configuration, you should isolate the internal and external network traffic using two port groups. This recommendation applies to the following specific configuration:
 
@@ -63,7 +63,7 @@ In this environment, you should configure the traffic using two port groups as f
 
 See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about two-NIC deployments.
 
-== Four-NIC host with standard vSwitch
+== Four-NIC host with standard vSwitch (ESXi only)
 
 In order to improve ONTAP Select performance in a four-NIC configuration, you should isolate the internal and external network traffic using four port groups. This recommendation applies to the following specific configuration:
 
@@ -109,10 +109,10 @@ There are several participants or entities that exchange network traffic as part
 
 * Deploy
 ONTAP Select Deploy administration utility
-* vSphere/ESXi
+* vSphere (ESXi only)
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
 * Hypervisor server
-ESXi hypervisor host
+ESXi hypervisor host or Linux KVM host
 * OTS node
 An ONTAP Select node
 * OTS cluster
@@ -124,44 +124,59 @@ Local administrative workstation
 
 The following table describes the network traffic requirements for an ONTAP Select deployment.
 
-[cols="20,45,35"*,options="header"]
+[cols="20,20,35,25"*,options="header"]
 |===
 |Protocol / Port
+|ESXi / KVM
 |Direction
 |Description
 
 |TLS (443)
-|Deploy to vCenter server (managed) or ESXi (unmanaged)
+|ESXi
+|Deploy to vCenter server (managed) or ESXi (managed or unmanaged)
 |VMware VIX API
 
 |902
+|ESXi
 |Deploy to vCenter server (managed) or ESXi (unmanaged)
 |VMware VIX API
 
 |ICMP
+|ESXi or KVM
 |Deploy to hypervisor server
 |Ping
 
 |ICMP
+|ESXi or KVM
 |Deploy to each OTS node
 |Ping
 
 |SSH (22)
+|ESXi or KVM
 |Admin WS to each OTS node
 |Administration
 
+|SSH (22)
+|KVM
+|Deploy to hypervisor server nodes
+|Access hypervisor server
+
 |TLS (443)
+|ESXi or KVM
 |Deploy to OTS nodes and clusters
 |Access ONTAP
 
 |TLS (443)
+|ESXi or KVM
 |Each OTS node to Deploy
-|Access Deploy
+|Access Deploy (capacity pools licensing)
 
 |iSCSI (3260)
+|ESXi or KVM
 |Each OTS node to Deploy
 |Mediator/Mailbox disk
 
 |===
 
+// 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions

@@ -15,7 +15,7 @@ summary: There are several requirements MetroCluster SDS that you should conside
 [.lead]
 MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment, however the distance between the two nodes can be up to 10 km. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.
 
-Before deploying MetroCluster SDS, your must assure that the following requirements are met.
+Before deploying MetroCluster SDS, verify that the following requirements are met.
 
 .Licensing
 
@@ -27,8 +27,7 @@ MetroCluster SDS can be deployed on the same VMware ESXi and KVM hypervisors as 
 
 [NOTE]
 ====
-* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
-* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
+Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
 ====
 
 .Network configuration
@@ -60,3 +59,4 @@ When deploying MetroCluster SDS, you cannot use vSAN in a distributed or "stretc
 
 You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.
 
+// 2023-09-26, ONTAPDOC-1204

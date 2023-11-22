@@ -15,6 +15,38 @@ summary: There are several general requirements that you should consider as part
 [.lead]
 There are several general requirements you should consider as part of planning an ONTAP Select deployment.
 
+== Required Linux knowledge and skills for KVM
+
+Linux with the KVM hypervisor is a complex environment to work in. Before deploying ONTAP Select on KVM, you must have the necessary knowledge and skills.
+
+Linux server distribution::
+You should have experience with the specific Linux distribution to be used for your ONTAP Select Deployment. Specifically, you should be able to perform the following tasks:
+
+* Install the Linux distribution
+* Configure the system using the CLI
+* Add software packages as well as any dependencies
+
+For more information on preparing your Linux server, including the required configuration and software packages, see the host configuration checklist. Refer to the hypervisor requirements for the currently supported Linux distributions.
+
+KVM deployment and administration::
+You should be familiar with general virtualization concepts. In addition, there are several Linux CLI commands that you must use as part of installing and administering ONTAP Select in a KVM environment:
+
+* `virt-install`
+* `virsh`
+* `lsblk`
+* `lvs`
+* `vgs`
+* `pvs`
+
+Networking and Open vSwitch configuration::
+You should be familiar with networking concepts and the configuration of network switches. In addition, you should have experience with Open vSwitch. You must use the following network commands a part of configuring the ONTAP Select network in a KVM environment:
+
+* `ovs-vsctl`
+* `ip`
+* `ip link`
+* `systemctl`
+
+
 == Cluster size and related considerations
 
 There are several planning issues related to the cluster size that you should consider.
@@ -25,7 +57,7 @@ An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. You 
 Dedicated versus collocated::
 Based on the application type, you should determine if the deployment follows the dedicated or collocated model. Note that the collocated model can be more complex due to the workload diversity and tighter integration.
 
-== Hypervisor hosts
+== Hypervisor host considerations
 
 There are several planning issues related to the hypervisor host that you should consider.
 
@@ -39,7 +71,7 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 * Kernel-based Virtual Machine (KVM)
 
 [NOTE]
-Beginning with ONTAP Select 9.10.1, the KVM hypervisor is no longer supported when deploying a new cluster. You can still use KVM with an earlier supported release.
+Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
 
 Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
 
@@ -68,7 +100,7 @@ You must configure each host to use one, two, or four physical ports. Although y
 Integrating ONTAP Select with an ONTAP hardware-based cluster::
 You cannot add an ONTAP Select node directly to an ONTAP hardware-based cluster. However, you can optionally establish a cluster peering relationship between an ONTAP Select cluster and a hardware-based ONTAP cluster.
 
-== Storage
+== Storage considerations
 
 There are several planning issues related to host storage that you should consider.
 
@@ -96,6 +128,28 @@ The ONTAP Select storage capacity corresponds to the total allowable size of the
 Licensing model for production deployment::
 You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review the section _License_ for more information.
 
+== Authentication using the credential store
+
+The ONTAP Select Deploy credential store is a data base holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
+
+NOTE: The account information is stored securely in the data base using the Advanced Encryption Standard (AES) encryption algorithm and SHA-256 hashing algorithm.
+
+Types of credentials::
+The following types of credentials are supported:
+
+* host
++
+The *host* credential is used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM.
+
+* vcenter
++
+The *vcenter* credential is used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter.
+
+Access::
+The credential store is accessed internally as part of performing normal administrative tasks using Deploy, such as adding a hypervisor host. You can also manage the credential store directly through the Deploy web user interface and CLI.
+
 .Related information
 
 * link:reference_plan_ots_storage.html[Storage and RAID considerations]
+
+// 2023-09-25, ONTAPDOC-1204
