@@ -132,7 +132,7 @@ The minimum allocation for a production deployment consists of 2 TB for user dat
 ====
 Each node in an HA pair must have the same storage capacity.
 
-When estimating the amount of storage for an HA pair, you must take into account that all aggregates (root and data) are mirrored. As a result, each plex of the aggregate consumes an equal amount of storage.
+When estimating the amount of storage for an HA pair, you must consider that all aggregates (root and data) are mirrored. As a result, each plex of the aggregate consumes an equal amount of storage.
 
 For example, when a 2TB aggregate is created, it allocates 2TB to two plex instances (2TB for plex0 and 2TB for plex1) or 4TB of the total licensed amount of storage.
 ====
