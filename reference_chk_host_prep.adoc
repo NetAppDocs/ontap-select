@@ -352,8 +352,6 @@ ifdown <interface_2>
 +
 ----
 ovs-vsctl add-bond <internal_network> bond-br <interface_1> <interface_2> bond_mode=balance-slb lacp=active other_config:lacp-time=fast
-For example:
-ovs-vsctl add-bond ontap-internal bond-br enp18s0 enp19s0 bond_mode=balance-slb lacp=active other_config:lacp-time=fast
 ----
 
 NOTE: You only need to configure a bond if there is more than one interface.

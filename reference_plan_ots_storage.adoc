@@ -129,7 +129,13 @@ The minimum size of the storage pool allocated for each node in a multi-node clu
 The minimum allocation for a production deployment consists of 2 TB for user data, plus approximately 266 GB used by various ONTAP Select internal processes, which is considered required overhead.
 
 [NOTE]
+====
 Each node in an HA pair must have the same storage capacity.
+
+When estimating the amount of storage for an HA pair, you must consider that all aggregates (root and data) are mirrored. As a result, each plex of the aggregate consumes an equal amount of storage.
+
+For example, when a 2TB aggregate is created, it allocates 2TB to two plex instances (2TB for plex0 and 2TB for plex1) or 4TB of the total licensed amount of storage.
+====
 
 === Storage capacity and multiple storage pools
 
@@ -190,3 +196,4 @@ You need to manually configure the NVMe drives before using them. See link:task_
 // 2023-09-12, ONTAPDOC-1174
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
+// 2023-11-28, ONTAPDOC-1254
