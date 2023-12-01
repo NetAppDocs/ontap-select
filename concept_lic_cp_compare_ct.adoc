@@ -58,7 +58,7 @@ The following table compares the two production licensing models supported by ON
 |Yes
 |No
 
-|ONTAP Select virtual machine resize (small to medium to large)
+|ONTAP Select virtual machine resize (small to medium, medium to large)
 |Yes
 |Yes
 
