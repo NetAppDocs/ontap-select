@@ -28,6 +28,7 @@ The following features are included with ONTAP Select and licensed by default:
 * iSCSI
 * SnapMirror
 * SnapVault
+* FlexCache
 * FlexClone
 * SnapRestore
 * Deduplication and compression
@@ -56,3 +57,4 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 // 2023 Feb 15, GH issue 192
 // 2023-04-05, ONTAPDOC-920
 // 2023-10-17, Added info about snaplock compliance
+// 2023-12-07, moved FlexCache
