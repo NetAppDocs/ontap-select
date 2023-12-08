@@ -27,9 +27,9 @@ The following features are included with ONTAP Select and licensed by default:
 * FlexCache
 * FlexClone
 * iSCSI
+* NDMP
 * NetApp Volume Encryption (non-restricted countries only)
 * NFS
-* NDMP
 * NVMe over TCP
 * ONTAP multitenancy capability
 * ONTAP S3
