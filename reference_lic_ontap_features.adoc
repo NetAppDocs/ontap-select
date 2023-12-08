@@ -22,30 +22,31 @@ ONTAP features that have hardware-specific dependencies are generally not suppor
 
 The following features are included with ONTAP Select and licensed by default:
 
-* NVMe over TCP
-* NFS
 * CIFS
-* iSCSI
-* SnapMirror
-* SnapVault
+* Deduplication and compression
 * FlexCache
 * FlexClone
-* SnapRestore
-* Deduplication and compression
+* iSCSI
+* NetApp Volume Encryption (non-restricted countries only)
+* NFS
+* NDMP
+* NVMe over TCP
 * ONTAP multitenancy capability
 * ONTAP S3
-* NetApp Volume Encryption (non-restricted countries only)
+* SnapMirror
+* SnapRestore
+* SnapVault
 
 == ONTAP features that are separately licensed
 
 You must acquire a separate license for any ONTAP feature that is not enabled by default, including:
 
-* SnapLock Enterprise (SnapLock Compliance is not supported for ONTAP Select)
-* FabricPool
 * Data Availability Service
+* FabricPool
 * FlexCache (zero cost)
-* SyncMirror (zero cost)
 * MetroCluster SDS (ONTAP Select premium license offering)
+* SnapLock Enterprise (SnapLock Compliance is not supported for ONTAP Select)
+* SyncMirror (zero cost)
 
 [NOTE]
 You do not need a FabricPool license when utilizing StorageGRID Webscale.
@@ -57,4 +58,4 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 // 2023 Feb 15, GH issue 192
 // 2023-04-05, ONTAPDOC-920
 // 2023-10-17, Added info about snaplock compliance
-// 2023-12-07, moved FlexCache
+// 2023-12-07, ONTAPDOC-1523
