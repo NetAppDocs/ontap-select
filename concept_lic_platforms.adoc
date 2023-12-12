@@ -51,9 +51,9 @@ The premium offering provides the following capabilities:
 
 The premium XL offering provides the following capabilities:
 
-* Small, medium, or large instance type.
-* Hard disk drives (HDD) or Solid state drives (SSD)
-* Local hardware RAID controller or software RAID.
+* Small, medium, or large instance type
+* Hard disk drives (HDD), solid state drives (SSD), or NVMe drives
+* Local hardware RAID controller or software RAID
 * vNAS
 * MetroCluster SDS
 
@@ -61,3 +61,4 @@ The premium XL offering provides the following capabilities:
 You can use the large instance type (using the premium XL license) for any configuration but it is not supported on KVM due to performance issues.
 
 // 2023-09-26, ONTAPDOC-1204
+// 2023-12-12, ONTAPDOC-1525
