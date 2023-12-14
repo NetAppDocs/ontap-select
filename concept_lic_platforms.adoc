@@ -58,7 +58,7 @@ The premium XL offering provides the following capabilities:
 * MetroCluster SDS
 
 [NOTE]
-Use of the large instance type, and/or the use of NVMe drives in a SW-RAID configuration, are not supported on KVM.
+Use of the large instance type or NVMe drives in an SW-RAID configuration is not supported on KVM.
 
 // 2023-09-26, ONTAPDOC-1204
 // 2023-12-12, ONTAPDOC-1525
