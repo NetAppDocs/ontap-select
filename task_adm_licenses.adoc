@@ -29,7 +29,7 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
 . Optionally click *Filter* and to limit the licenses displayed.
 
-. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
+. To replace an existing license; select a license, click image:icon_kebab.gif[Options] and select *Update*.
 
 . To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
@@ -152,3 +152,4 @@ Generally, when a license expires, nothing happens. However, you cannot install 
 
 // 2023 Mar 08, GH issue 196
 // 2023-10-17, prep for repo version split
+// 2023-12-13, ONTAPDOC-1458
