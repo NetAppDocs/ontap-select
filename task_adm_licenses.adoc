@@ -29,7 +29,8 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
 . Optionally click *Filter* and to limit the licenses displayed.
 
-. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
+. To replace an existing license; select a license, click image:icon_kebab.gif[Options], and select *Update*.
+
 
 . To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
@@ -47,7 +48,7 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 . Optionally click *Filter* and to limit the licenses displayed.
 
-. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license
+. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license.
 
 . To add a new license or renew an existing license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
@@ -154,6 +155,8 @@ Generally, when a license expires, nothing happens. However, you cannot install 
 
 For the ONTAP Select product, add-on licenses are applied directly within ONTAP and are not managed through ONTAP Select Deploy. See link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html[Manage licenses overview (cluster administrators only)^] and link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html[Enable new features by adding license keys^] for more information.
 
+
 // 2023 Mar 08, GH issue 196
 // 2023-10-17, prep for repo version split
+// 2023-12-13, ONTAPDOC-1458
 // 2023-12-15, ONTAPDOC-834
