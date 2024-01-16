@@ -124,7 +124,7 @@ def main(args):
                 put_used_license(deploy, serial_number, args.license,
                                  args.ontap_username, args.ontap_password)
             else:
-                print "ERROR: The serial number for this license is in use. Please provide ONTAP credentials."
+                print("ERROR: The serial number for this license is in use. Please provide ONTAP credentials.")
         else:
             # License exists, but its not used
             put_free_license(deploy, serial_number, args.license)
@@ -149,3 +149,5 @@ if __name__ == '__main__':
     main(args)
 
 ---------------------------------------------------------------------
+
+// 2023-01-12, GitHub issue #227
