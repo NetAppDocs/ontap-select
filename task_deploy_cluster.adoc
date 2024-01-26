@@ -136,9 +136,6 @@ It can take up to 30 minutes for the cluster to be created.
 . Monitor the multi-step cluster creation process to confirm the cluster is created successfully.
 +
 The page is automatically refreshed at regular intervals.
-+
-[TIP]
-If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
 --
 
 .Multi-node cluster
@@ -192,17 +189,23 @@ It can take up to 45 minutes for the cluster to be created.
 . Monitor the multi-step cluster creation process to confirm that the cluster is created successfully.
 +
 The page is automatically refreshed at regular intervals.
-+
-[TIP]
-If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be registered. In this case, you can access the management interface for the ONTAP Select cluster using the password _changeme123_ for the admin account.
---
-
 ====
 
 .After you finish
 
 You should confirm the ONTAP Select AutoSupport feature is configured and then back up the ONTAP Select Deploy configuration data.
 
+[TIP]
+====
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be applied. In this case, you can determine the temporary administrative password for the ONTAP Select cluster using the following CLI command: 
+
+[source,asciidoc]
+----
+(ONTAPdeploy) !/opt/netapp/tools/get_cluster_temp_credentials --cluster-name my_cluster
+----
+====
+
 // 2023-09-13, ONTAPDOC-1306
 // 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, adding hyperlink
+// 2024-01-26, ONTAPDOC-1609
