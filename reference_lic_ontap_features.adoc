@@ -36,7 +36,6 @@ The following features are included with ONTAP Select and licensed by default:
 * SnapMirror
 * SnapRestore
 * SnapVault
-* Tamperproof Snapshot copies
 
 == ONTAP features that are separately licensed
 
@@ -46,6 +45,7 @@ You must acquire a separate license for any ONTAP feature that is not enabled by
 * FabricPool
 * MetroCluster SDS (ONTAP Select premium license offering)
 * SnapLock Enterprise (SnapLock Compliance is not supported for ONTAP Select)
+** Tamperproof Snapshot copies
 * SyncMirror (zero cost)
 
 [NOTE]
