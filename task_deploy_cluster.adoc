@@ -197,7 +197,7 @@ You should confirm the ONTAP Select AutoSupport feature is configured and then b
 
 [TIP]
 ====
-If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be applied. In this case, you can determine the temporary administrative password for the ONTAP Select cluster using the following CLI command: 
+If the cluster creation operation is initiated but fails to complete, the ONTAP administrative password you define might not be applied. If this occurs, you can determine the temporary administrative password for the ONTAP Select cluster by using the following CLI command: 
 
 ----
 (ONTAPdeploy) !/opt/netapp/tools/get_cluster_temp_credentials --cluster-name my_cluster
