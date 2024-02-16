@@ -96,6 +96,60 @@ Changing the IP address of the ONTAP Select Deploy VM is not supported.
 
 Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any ONTAP Select cluster that is already deployed but has not been changed from its original configuration. In other words, if the ONTAP Select cluster properties mentioned above were changed using System Manager or vCenter, then upgrading to ONTAP Select Deploy 2.6 will not fix these inconsistencies. The ONTAP Select property changes must be first rolled back for ONTAP Select Deploy to add its unique metadata to each ONTAP Select VM.
 
+.How does Deploy detect that the ONTAP Select licenses are renewed?
+The method is the same for all licenses, although the specifics vary depending on whether it is a capacity tier or capacity pool license.
+
+[cols="2,2" options="header"]
+|===
+
+| License type
+| Method of detection
+
+| Basic  
+| ONTAP Select Deploy detects if licenses and support contracts are renewed with the purchase of an updated license file from NetApp. The license file (.NLF) includes capacity, start, and end dates; and is generated on the link:https://mysupport.netapp.com/site/[NetApp Support site^] and then updated on the Deploy server.
+
+| Capacity tier 
+| A *capacity tier license* is a per-node permanent license tied to the ONTAP Select node serial number. It is sold with a separate support contract. While the license is permanent, the support contract must be renewed to allow access to ONTAP Select upgrades and to be able to receive assistance from NetApp technical support. A current support contract is also required to change license parameters, such as capacity or node size.
+
+Purchasing a capacity tier license update, parameter change, or support contract renewal requires the node serial number as part of the order. Capacity tier node serial numbers are 9 digits long, and begin with the number '32'.
+
+Once the purchase is completed, and the license file generated, it's uploaded to the Deploy server using the *Update* function.
+
+| Capacity pool 
+| A *capacity pool license* is a subscription for the right to use a specific pool of capacity and node size (standard, premium, premium XL) to deploy one or more clusters. The subscription includes both the right to use a license and support for a specified term. Both the right to use and the support have specified start and end dates.
+
+|===
+
+NOTE: Load the NLF into the Deploy server with the *Add* or *Update* function. *Add* is to add new licenses to the server, and *Update* is to update existing files with information such as capacity, node license (standard, premium, premium XL), support start and end dates (capacity tier license), or subscription start and end dates (capacity pool license).
+
+CAUTION: Do not attempt to modify the license file. Doing so invalidates the security key and renders the license invalid.
+
+
+.How does Deploy detect that the ONTAP Select licenses are renewed?
+The method is the same for all licenses, although the specifics vary depending on whether it is a capacity tier or capacity pool license
+
+ONTAP Select Deploy detects if licenses and support contracts are renewed with the purchase of an updated license file from NetApp. The license file (.NLF) includes capacity, start, and end dates; and is generated on the link:https://mysupport.netapp.com/site/[NetApp Support site^] and then updated on the Deploy server.
+
+NOTE: Load the NLF into the Deploy server with the *Add* and *Update* functions. *Add* is to add new licenses to the server, and *Update* is to update existing files with information such as capacity, node license (standard, premium, premium XL), support start and end dates (capacity tier license), or subscription start and end dates (capacity pool license).
+
+CAUTION: Do not attempt to modify the license file. Doing so invalidates the security key and renders the license invalid.
+
+A *capacity tier license* is a per-node permanent license tied to the ONTAP Select node serial number. It is sold with a separate support contract. While the license is permanent, the support contract must be renewed to allow access to ONTAP Select upgrades and to be able to receive assistance from NetApp technical support. A current support contract is also required to change license parameters, such as capacity or node size.
+
+Purchasing a capacity tier license update, parameter change, or support contract renewal requires the node serial number as part of the order. Capacity tier node serial numbers are 9 digits long, and begin with the number '32'.
+
+Once the purchase is completed, and the license file generated, it's uploaded to the Deploy server using the *Update* function.
+
+A *capacity pool license* is a subscription for the right to use a specific pool of capacity and node size (standard, premium, premium XL) to deploy one or more clusters. The subscription includes both the right to use a license and support for a specified term. Both the right to use and the support have specified start and end dates.
+
+.How does Deploy detect if the nodes have renewed licenses or support contract?
+
+Purchasing, generating, and uploading an updated license file is how Deploy detects renewed licenses and support contracts.
+
+If a capacity tier support contract end date has passed, the node can keep running, but you won't be able to download and install ONTAP updates, or call NetApp technical support for assistance without first bringing the support contract up-to-date.
+
+If a capacity pool subscription lapses, the system will warn you first but after 30 days, the system shuts down and won't reboot until an updated subscription is installed on the Deploy server. 
+
 == Storage
 
 There are several questions and answers dealing with storage.
@@ -317,3 +371,4 @@ Only a two-node cluster with a Mediator is supported in a stretched HA deploymen
 // 2023-09-29, ONTAPDOC-1204
 // 2023-10-09, GitHub issue #220
 // 2023-10-20, ONTAPDOC-1293
+// 2024-02-16, ONTAPDOC-1672
