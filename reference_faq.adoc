@@ -96,7 +96,7 @@ Changing the IP address of the ONTAP Select Deploy VM is not supported.
 
 Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any ONTAP Select cluster that is already deployed but has not been changed from its original configuration. In other words, if the ONTAP Select cluster properties mentioned above were changed using System Manager or vCenter, then upgrading to ONTAP Select Deploy 2.6 will not fix these inconsistencies. The ONTAP Select property changes must be first rolled back for ONTAP Select Deploy to add its unique metadata to each ONTAP Select VM.
 
-.Can changes be made to the ONTAP Select Deploy instance after it's already running in a environment?
+.Can changes be made to the ONTAP Select Deploy instance after it's already running in an environment?
 
 Modifying the DNS configuration of the Deploy instance after it's running in an environment is not supported. For more information, see the KB article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Modifying DNS configuration of ONTAP Deploy instance^].
 
