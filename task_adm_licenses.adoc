@@ -151,6 +151,8 @@ The twenty-digit node serial numbers originally assigned to each node for the ev
 
 Generally, when a license expires, nothing happens. However, you cannot install a different license because the nodes are associated with the expired license. Until you renew the license, you should _not_ do anything that would bring the aggregate offline, such as a reboot or failover operation.  The recommended action is to expedite the license renewal.
 
+For more information about ONTAP Select and license renewal, see the Licenses, installation, upgrades, and reverts section in the link:https://docs.netapp.com/us-en/ontap-select/reference_faq.html#licenses-installation-upgrades-and-reverts[FAQ].
+
 == Manage add-on licenses
 
 For the ONTAP Select product, add-on licenses are applied directly within ONTAP and are not managed through ONTAP Select Deploy. See link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html[Manage licenses overview (cluster administrators only)^] and link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html[Enable new features by adding license keys^] for more information.
@@ -160,3 +162,4 @@ For the ONTAP Select product, add-on licenses are applied directly within ONTAP 
 // 2023-10-17, prep for repo version split
 // 2023-12-13, ONTAPDOC-1458
 // 2023-12-15, ONTAPDOC-834
+// 2024-02-16, ONTAPDOC-1672
