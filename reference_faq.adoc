@@ -95,7 +95,7 @@ Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any O
 
 .Can the ONTAP Select Deploy network configuration be changed after installation?
 
-Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, see the KB article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Modifying DNS configuration of ONTAP Deploy instance^].
+Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, see the link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Knowledge Base article - Modifying DNS configuration of ONTAP Deploy instance^].
 
 .How does Deploy detect that ONTAP Select licenses are renewed?
 The method is the same for all licenses, although the specifics vary depending on whether it is a capacity tier or capacity pool license.
