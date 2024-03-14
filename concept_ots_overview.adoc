@@ -90,8 +90,6 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 * SVM migration
 
-* Storage VM disaster recovery (SVM DR)
-
 * SnapLock Compliance
 
 * VMware HCX
@@ -105,4 +103,5 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 // 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
 // 2023-09-28, Adding SVM DR
 // 2023-10-09, GH issue #219
-// 2023-01-12, ONTAPDOC-1573
+// 2024-01-12, ONTAPDOC-1573
+// 2024-03-14, ONTAPDOC-1778
