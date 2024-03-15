@@ -79,7 +79,7 @@ Yes, the revert procedure for an ONTAP Select cluster is almost identical to the
 
 Yes.
 
-.Can the IP addresses of the ONTAP Select Deploy and ONTAP Select cluster and node management be changed after installation?
+.Can the ONTAP Select cluster network configuration be changed after installation?
 
 Changes to the following ONTAP Select cluster properties are recognized by ONTAP Select Deploy using the cluster refresh operation available through the GUI, CLI, or REST API:
 
@@ -91,10 +91,11 @@ The following ONTAP Select VM changes are also recognized:
 * ONTAP Select VM name and state changes (for example, online or offline)
 * Host network name and storage pool name changes
 
-[NOTE]
-Changing the IP address of the ONTAP Select Deploy VM is not supported.
-
 Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any ONTAP Select cluster that is already deployed but has not been changed from its original configuration. In other words, if the ONTAP Select cluster properties mentioned above were changed using System Manager or vCenter, then upgrading to ONTAP Select Deploy 2.6 will not fix these inconsistencies. The ONTAP Select property changes must be first rolled back for ONTAP Select Deploy to add its unique metadata to each ONTAP Select VM.
+
+.Can the ONTAP Select Deploy network configuration be changed after installation?
+
+Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, see the link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Knowledge Base article - Modifying DNS configuration of ONTAP Deploy instance^].
 
 .How does Deploy detect that ONTAP Select licenses are renewed?
 The method is the same for all licenses, although the specifics vary depending on whether it is a capacity tier or capacity pool license.
@@ -343,3 +344,4 @@ Only a two-node cluster with a Mediator is supported in a stretched HA deploymen
 // 2023-10-09, GitHub issue #220
 // 2023-10-20, ONTAPDOC-1293
 // 2024-02-16, ONTAPDOC-1672
+// 2024-03-05, ONTAPDOC-1554
