@@ -38,7 +38,7 @@ The following features are included with ONTAP Select and licensed by default:
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
 +
-NOTE: ONTAP Select 9.12.1 and later now support SVM DR with a maximum of 16 relationships.
+NOTE: ONTAP Select 9.12.1 and later now support SVM DR as a source with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2, such as 9.12.1 to 9.14.1.
 
 == ONTAP features that are separately licensed
 
