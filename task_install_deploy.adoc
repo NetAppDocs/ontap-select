@@ -29,7 +29,7 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 . On the Downloads page, under All Products A-Z, select the letter *O*.
 
-. Scroll down and click *ONTAP Select*.
+. Scroll down and select *ONTAP Select*.
 
 . Select the desired release of the package.
 
@@ -192,7 +192,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 . Provide the administrator (admin) account name and password and sign in.
 
-. If the *Welcome to ONTAP Select* popup window is displayed, review the prerequisites and click *OK* to continue.
+. If the *Welcome to ONTAP Select* popup window is displayed, review the prerequisites and select *OK* to continue.
 
 . If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
 +
