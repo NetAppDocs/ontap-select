@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_adm_before.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_adm_upgrading_nodes.html</loc>
+        
+      
+      <lastmod>2023-11-13T16:35:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_async_proc.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_before_browser.html</loc>
+        
+      
+      <lastmod>2022-06-16T16:40:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_before_python.html</loc>
+        
+      
+      <lastmod>2019-11-21T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_before_workflows.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_how_access.html</loc>
+        
+      
+      <lastmod>2022-06-16T16:40:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_operation.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_rest.html</loc>
+        
+      
+      <lastmod>2022-06-16T16:40:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_transaction.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_understanding_scripts.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_api_versions.html</loc>
+        
+      
+      <lastmod>2021-10-18T14:31:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_automate_ansible.html</loc>
+        
+      
+      <lastmod>2021-10-27T15:40:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_cli_before.html</loc>
+        
+      
+      <lastmod>2023-10-17T10:57:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_ha_config.html</loc>
+        
+      
+      <lastmod>2023-07-27T21:05:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_ha_mirroring.html</loc>
+        
+      
+      <lastmod>2019-11-21T21:35:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_ha_other.html</loc>
+        
+      
+      <lastmod>2019-11-19T16:34:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_cp_benefits.html</loc>
+        
+      
+      <lastmod>2022-06-16T17:18:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_cp_compare_ct.html</loc>
+        
+      
+      <lastmod>2023-12-01T10:45:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_cp_operation.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_cp_restrictions.html</loc>
+        
+      
+      <lastmod>2022-06-16T17:18:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_cp_serial_number.html</loc>
+        
+      
+      <lastmod>2021-10-18T14:31:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:26:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_platforms.html</loc>
+        
+      
+      <lastmod>2023-12-18T15:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_production.html</loc>
+        
+      
+      <lastmod>2023-06-21T11:44:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_lic_workflow.html</loc>
+        
+      
+      <lastmod>2019-11-21T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_concepts_chars.html</loc>
+        
+      
+      <lastmod>2019-11-19T16:34:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_data_mgmt_separation.html</loc>
+        
+      
+      <lastmod>2019-11-19T16:34:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_internal_external.html</loc>
+        
+      
+      <lastmod>2019-11-21T21:35:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_physical_switch_config.html</loc>
+        
+      
+      <lastmod>2021-12-01T23:44:47+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_single_multi_node.html</loc>
+        
+      
+      <lastmod>2023-10-02T13:56:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_supported_configs.html</loc>
+        
+      
+      <lastmod>2023-10-18T15:31:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_nw_vsphere_vswitch_config.html</loc>
+        
+      
+      <lastmod>2023-09-29T11:47:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_ots_deploy.html</loc>
+        
+      
+      <lastmod>2022-06-16T17:18:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_ots_overview.html</loc>
+        
+      
+      <lastmod>2024-03-14T16:39:25+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_perf_general.html</loc>
+        
+      
+      <lastmod>2023-10-18T11:13:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_perf_premium_ha_direct_ssd_94.html</loc>
+        
+      
+      <lastmod>2023-02-07T16:15:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_perf_premium_ha_direct_ssd_95.html</loc>
+        
+      
+      <lastmod>2023-02-07T16:15:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_perf_premium_ha_direct_ssd_96.html</loc>
+        
+      
+      <lastmod>2023-03-02T12:50:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_stor_capacity_inc.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_stor_concepts_chars.html</loc>
+        
+      
+      <lastmod>2023-10-19T15:16:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_stor_eff_support.html</loc>
+        
+      
+      <lastmod>2023-10-18T11:13:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_stor_hwraid_local.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_stor_vsan_external.html</loc>
+        
+      
+      <lastmod>2024-01-15T14:40:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_terminology.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_usecase_mc_sds.html</loc>
+        
+      
+      <lastmod>2019-11-21T21:35:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_usecase_overview.html</loc>
+        
+      
+      <lastmod>2019-11-19T21:23:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_usecase_private_cloud.html</loc>
+        
+      
+      <lastmod>2019-11-19T21:23:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_usecase_robo.html</loc>
+        
+      
+      <lastmod>2023-09-25T16:05:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_vpi_architecture.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_vpi_manage_before.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_vpi_overview.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_vpi_planning.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_vpi_vcenter_integration.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/concept_workflow_deploy.html</loc>
+        
+      
+      <lastmod>2019-11-21T17:05:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/legal-notices.html</loc>
+        
+      
+      <lastmod>2023-12-07T17:18:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_additional_info.html</loc>
+        
+      
+      <lastmod>2023-10-18T10:17:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_json_cc.html</loc>
+        
+      
+      <lastmod>2023-02-01T16:22:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_script_anl.html</loc>
+        
+      
+      <lastmod>2024-01-12T11:28:05+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_script_cc.html</loc>
+        
+      
+      <lastmod>2019-11-21T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_script_common.html</loc>
+        
+      
+      <lastmod>2019-11-21T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_script_dc.html</loc>
+        
+      
+      <lastmod>2019-11-21T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_script_resize.html</loc>
+        
+      
+      <lastmod>2019-11-21T17:05:56+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_api_workflow01.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_chk_deploy_req_info.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html</loc>
+        
+      
+      <lastmod>2023-11-28T15:43:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_chk_select_req_info.html</loc>
+        
+      
+      <lastmod>2019-11-19T21:23:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_earlier_versions.html</loc>
+        
+      
+      <lastmod>2023-10-17T12:48:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_faq.html</loc>
+        
+      
+      <lastmod>2024-03-11T13:03:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_host_modify_command.html</loc>
+        
+      
+      <lastmod>2023-02-07T16:33:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_initial_state.html</loc>
+        
+      
+      <lastmod>2023-07-11T13:40:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_legal_notices.html</loc>
+        
+      
+      <lastmod>2023-12-07T17:18:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_lic_ontap_features.html</loc>
+        
+      
+      <lastmod>2024-03-22T11:04:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_new_ots.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_best_practices.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_general.html</loc>
+        
+      
+      <lastmod>2023-11-06T12:18:51+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_general.html</loc>
+        
+      
+      <lastmod>2023-11-03T17:04:03+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_hardware.html</loc>
+        
+      
+      <lastmod>2023-10-19T15:16:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_kvm.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_mcc_sds.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_networking.html</loc>
+        
+      
+      <lastmod>2023-10-30T11:37:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_plugin.html</loc>
+        
+      
+      <lastmod>2023-10-20T11:59:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_robo.html</loc>
+        
+      
+      <lastmod>2022-06-17T15:12:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_storage.html</loc>
+        
+      
+      <lastmod>2023-11-29T16:11:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_two_node.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_vcenter.html</loc>
+        
+      
+      <lastmod>2023-10-02T13:56:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_vnas.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_release_notes.html</loc>
+        
+      
+      <lastmod>2023-10-19T16:35:55+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/reference_vpi_troubleshooting.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select//search.html</loc>
+        
+      
+      <lastmod>2024-03-25T08:10:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_clusters.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_connectivity.html</loc>
+        
+      
+      <lastmod>2023-10-13T14:21:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_licenses.html</loc>
+        
+      
+      <lastmod>2024-02-16T15:15:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_mediators.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_replace_drives_swraid.html</loc>
+        
+      
+      <lastmod>2023-11-03T17:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_resize.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_security.html</loc>
+        
+      
+      <lastmod>2023-10-30T09:42:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_support.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_upgrade_vmfs6.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_adm_video_console.html</loc>
+        
+      
+      <lastmod>2023-10-19T15:16:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_api_access_doc_page.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_api_understanding_call.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_chk_nvme_configure.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_clusters.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_connectivity.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_cluster.html</loc>
+        
+      
+      <lastmod>2023-11-03T16:06:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_image_add.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_image_remove.html</loc>
+        
+      
+      <lastmod>2023-11-03T17:04:03+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_recover_two_node.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_migrate_deploy.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:26:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_security.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_signing_in.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:15:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_upgrade_deploy.html</loc>
+        
+      
+      <lastmod>2023-11-15T16:55:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_cli_upgrade_esxi65.html</loc>
+        
+      
+      <lastmod>2023-10-18T16:19:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_deploy_cluster.html</loc>
+        
+      
+      <lastmod>2024-01-31T12:52:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_install_deploy.html</loc>
+        
+      
+      <lastmod>2023-11-06T12:18:51+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_lic_acquire_cp.html</loc>
+        
+      
+      <lastmod>2023-10-18T13:26:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_lic_acquire_ct.html</loc>
+        
+      
+      <lastmod>2019-11-21T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_access.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_adm_clusters.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_adm_licenses.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_adm_network.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_adm_support.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_deploy_cluster.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_install.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_manually_remove.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/ontap-select/task_vpi_upgrade.html</loc>
+        
+      
+      <lastmod>2023-10-20T10:57:06+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
