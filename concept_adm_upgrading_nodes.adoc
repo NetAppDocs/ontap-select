@@ -32,7 +32,7 @@ https://mysupport.netapp.com/site/downloads[NetApp Support Downloads^]
 +
 Review the Release Notes for additional information and any required procedures before upgrading an ONTAP Select node. 
 
-. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. See link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^] for the detailed upgrade procedure.
+. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. For detailed information on the ONTAP upgrade procedure, including information such as supported upgrade paths, see the link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^].
 
 == Revert an ONTAP Select node
 
@@ -49,3 +49,4 @@ VMXNET3 is the default network driver included with new cluster deployments on V
 
 // 2023-10-17, prep for repo version split
 // 2023-11-13, GitHub issue #222
+// 2024-03-26, GitHub issue #244
