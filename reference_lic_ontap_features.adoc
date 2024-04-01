@@ -36,6 +36,9 @@ The following features are included with ONTAP Select and licensed by default:
 * SnapMirror
 * SnapRestore
 * SnapVault
+* Storage VM disaster recovery (SVM DR)
++
+NOTE: ONTAP Select 9.12.1 and later now supports SVM DR as a source with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2, such as 9.12.1 to 9.14.1.
 
 == ONTAP features that are separately licensed
 
@@ -59,4 +62,5 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 // 2023-04-05, ONTAPDOC-920
 // 2023-10-17, Added info about snaplock compliance
 // 2023-12-07, ONTAPDOC-1523
-// 2023-01-12, ONTAPDOC-1573
+// 2024-01-12, ONTAPDOC-1573
+// 2024-03-14, ONTAPDOC-1778
