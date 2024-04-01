@@ -20,20 +20,20 @@ You need to install the ONTAP Select Deploy administration utility and use the u
 You can download the ONTAP Select package from the NetApp support site.
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
-. Access the NetApp support site using a web browser and click *Support Quick Links*.
+. Access the link:https://mysupport.netapp.com/site/[NetApp Support Site^] using a web browser and sign in.
 
-. Click *Download Software* under *Top Tasks* and sign in.
+. Select *Downloads* from the menu, then select *Downloads* from the drop-down menu.
 
-. Click *Find your product*.
+. On the Downloads page, under All Products A-Z, select the letter *O*.
 
-. Scroll down and click *ONTAP Select*.
+. Scroll down and select *ONTAP Select*.
 
 . Select the desired release of the package.
 
-. Review the End User License Agreement (EULA) and click *Accept & Continue*.
+. Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
 . Select and download the appropriate package, responding to all prompts as needed.
 
@@ -192,7 +192,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 . Provide the administrator (admin) account name and password and sign in.
 
-. If the *Welcome to ONTAP Select* popup window is displayed, review the prerequisites and click *OK* to continue.
+. If the *Welcome to ONTAP Select* pop-up window is displayed, review the prerequisites and select *OK* to continue.
 
 . If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
 +
@@ -207,3 +207,4 @@ link:task_cli_signing_in.html[Sign in to Deploy using SSH]
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
+// 2024-03-22, GH issue #242 & #246
