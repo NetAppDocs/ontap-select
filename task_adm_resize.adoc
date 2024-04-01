@@ -18,6 +18,9 @@ After deploying an ONTAP Select cluster, you can upgrade the hypervisor instance
 [NOTE]
 You can perform the cluster nodes resizing operation when using the capacity tiers licensing model and the capacity pools licensing model.
 
+[NOTE]
+Resizing to the large instance type is only supported on ESXi.
+
 .Before you begin
 
 The cluster must be in the online state.
@@ -41,3 +44,4 @@ This task describes how to use the Deploy web user interface. You can also use t
 You must wait for the resize operation to complete.
 
 // 2023-07-11, ONTAPDOC-1136
+// 2024-03-18, ONTAPDOC-1692
