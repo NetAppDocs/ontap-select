@@ -32,7 +32,7 @@ https://mysupport.netapp.com/site/downloads[NetApp Support Downloads^]
 +
 Review the Release Notes for additional information and any required procedures before upgrading an ONTAP Select node. 
 
-. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. For detailed information on the ONTAP upgrade procedure, including information such as supported upgrade paths, see the link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^].
+. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. For information on supported upgrade paths, see the link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html[Supported ONTAP upgrade paths^].
 
 == Revert an ONTAP Select node
 
@@ -47,6 +47,11 @@ You cannot revert to version 9.7 because this version is prior to the version th
 
 VMXNET3 is the default network driver included with new cluster deployments on VMware ESXi. If you upgrade an existing ONTAP Select node running ONTAP Select 9.4 or earlier, the network driver is not automatically upgraded. You must manually upgrade to VMXNET3. You should contact NetApp support for assistance with the upgrade.
 
-// 2023-10-17, prep for repo version split
-// 2023-11-13, GitHub issue #222
-// 2024-03-26, GitHub issue #244
+.Related information
+
+* link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^]
+
+// 2023-Oct-17, prep for repo version split
+// 2023-Nov-13, GitHub issue #222
+// 2024-Mar-26, GitHub issue #244
+// 2024-Apr-04, GitHub issue #244
