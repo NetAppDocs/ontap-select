@@ -25,6 +25,8 @@ Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstat
 Deploy VMware vCenter plug-in is no longer supported::
 Beginning with ONTAP Select 9.14.1, the Deploy VMware vCenter plug-in is no longer supported.
 
+If you are running a version of ONTAP Select Deploy 9.14.1 lower than 9.14.1P2, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
+
 == ONTAP Select 9.13.1
 
 ONTAP Select 9.13.1 includes several new features and improvements. 
@@ -37,9 +39,13 @@ Updated VMware ESXi support::
 
 Beginning with ONTAP 9.13.1, VMware ESXi 8.0 GA (build 20513097) is supported with hardware version 4 and later.
 
+As of April 2024, ONTAP Select Deploy 9.13.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.13.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
+
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 benefits from most of the new developments in the current release of the core ONTAP product. It does not include any new features or improvements specific to ONTAP Select. 
+
+As of April 2024, ONTAP Select Deploy 9.12.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.12.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
 
 == ONTAP Select 9.11.1
 
