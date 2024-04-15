@@ -20,7 +20,7 @@ settings:
       url: /ontap-select-9101        
 sidebar:
   entries:
-    - title: ONTAP Select 9.14.1 docs
+    - title: ONTAP Select 9.15.1 docs
       url: /index.html
     - title: Release Notes
       entries:

@@ -15,6 +15,21 @@ summary: The current release does not include any new features or improvements s
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
+== ONTAP Select 9.15.1
+
+ONTAP Select 9.15.1 includes several new features and improvements.
+
+Support for cluster expansion and contraction::
+Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported.
+
+* Cluster expansion from six-node to eight-node clusters
++
+You can increase the cluster size from a six-node cluster to an eight-node cluster with the cluster expansion feature. Operate the cluster expansion feature from the API, CLI, or web interface; from a six-node cluster size up to the maximum eight-node cluster size.
+
+* Cluster contraction eight-node to six-node clusters
++
+You can decrease the cluster size from an eight-node cluster to six-node cluster with the cluster contraction feature. Operate the cluster contraction feature from the API, CLI, or web interface; from an eight-node cluster size to a six-node cluster size.
+
 == ONTAP Select 9.14.1
 
 ONTAP Select 9.14.1 includes several new features and improvements. 
@@ -127,8 +142,9 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
-// 2023-02-01,mairead 9.12.1 GA documentation update
+// 2023 Feb 01,mairead 9.12.1 GA documentation update
 // 2023 Feb 10, clean-up
-// 2023-04-05, ONTAPDOC-920
-// 2023-04-12, ONTAPDOC-979
-// 2023-09-25, ONTAPDOC-1204, ONTAPDOC-1293
+// 2023 Apr 05, ONTAPDOC-920
+// 2023 Apr 12, ONTAPDOC-979
+// 2023 Sep 25, ONTAPDOC-1204, ONTAPDOC-1293
+// 2024 Apr 11, ONTAPDOC-1797, ONTAPDOC-1802
