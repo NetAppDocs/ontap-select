@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: reference_new_ots.html
 keywords: new features
-// summary: The current release includes several new features and improvements specific to ONTAP Select.
-summary: The current release does not include any new features or improvements specific to ONTAP Select.
+summary: The current release includes several new features or improvements specific to ONTAP Select.
 ---
+
 = What's new in this release
 :hardbreaks:
 :nofooter:
@@ -29,6 +29,8 @@ You can increase the cluster size from a six-node cluster to an eight-node clust
 * Cluster contraction eight-node to six-node clusters
 +
 You can decrease the cluster size from an eight-node cluster to six-node cluster with the cluster contraction feature. Operate the cluster contraction feature from the API, CLI, or web interface; from an eight-node cluster size to a six-node cluster size.
+
+NOTE: Support for cluster expansion and contraction is limited to ESX clusters only.
 
 == ONTAP Select 9.14.1
 
