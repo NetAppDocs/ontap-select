@@ -24,11 +24,11 @@ Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is support
 
 * Cluster expansion from six-node to eight-node clusters
 +
-You can increase the cluster size from a six-node cluster to an eight-node cluster with the cluster expansion feature. Operate the cluster expansion feature from the API, CLI, or web interface; from a six-node cluster size up to the maximum eight-node cluster size.
+You can increase the cluster size from a six-node cluster to an eight-node cluster with the cluster expansion feature.
 
 * Cluster contraction eight-node to six-node clusters
 +
-You can decrease the cluster size from an eight-node cluster to six-node cluster with the cluster contraction feature. Operate the cluster contraction feature from the API, CLI, or web interface; from an eight-node cluster size to a six-node cluster size.
+You can decrease the cluster size from an eight-node cluster to six-node cluster with the cluster contraction feature.
 
 NOTE: Support for cluster expansion and contraction is limited to ESX clusters only.
 
