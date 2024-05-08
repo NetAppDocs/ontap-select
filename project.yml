@@ -147,7 +147,11 @@ sidebar:
         - title: Mediators
           url: /task_adm_mediators.html
         - title: Clusters
-          url: /task_adm_clusters.html
+          entries:
+            - title: ONTAP Select clusters
+              url: /task_adm_clusters.html
+            - title: Expand or contract the cluster
+              url: /concept_cluster_expansion_contraction.html
         - title: Nodes and hosts
           entries:
             - title: VM video console
@@ -206,8 +210,6 @@ sidebar:
               url: /concept_perf_general.html
             - title: ONTAP Select 9.6 performance
               url: /concept_perf_premium_ha_direct_ssd_96.html
-        - title: Expand or contract the cluster
-          url: /concept_cluster_expansion_contraction.html
     - title: Automate with REST
       entries:
         - title: Concepts

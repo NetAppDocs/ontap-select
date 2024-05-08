@@ -15,9 +15,21 @@ summary: Use Ansible roles to automate ONTAP Select deployments.
 [.lead]
 Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from a six-node cluster to an eight-node cluster with the cluster expansion feature, and you can decrease the cluster size from an eight-node cluster to a six-node cluster with the cluster contraction feature.
 
-The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface.
+The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface..
 
-NOTE: Support for cluster expansion and contraction is limited to ESX clusters only.
+== Hardware and storage requirements
+The cluster expansion and contraction functionalities are restricted in the following ways:
+
+* Support is limited to clusters created on ESX hypervisor hosts only. The following ESX versions are compatible with ONTAP Select 9.15.1:
+** ESXi 8.0u2 
+** ESXi 8.0u1
+** ESXi 8.0GA 
+** ESXi 7.0u3
+** ESXi 7.0
+
+* Expansion is only possible from 6 node clusters to 8 node clusters
+* Contraction is only possible from 8 node clusters to 6 node clusters
+* The ONTAP version of the cluster must be 9.15.1+
 
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node cluster to an eight-node cluster with the cluster expansion feature
