@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: concept_cluster_expansion_contraction.html
+permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
 summary: Use Ansible roles to automate ONTAP Select deployments.
 ---
@@ -27,24 +27,23 @@ The cluster expansion and contraction functionalities are restricted in the foll
 ** ESXi 7.0u3
 ** ESXi 7.0
 
-* Expansion is only possible from 6 node clusters to 8 node clusters
-* Contraction is only possible from 8 node clusters to 6 node clusters
-* The ONTAP version of the cluster must be 9.15.1+
+* Expansion is only possible from 6 node clusters to 8 node clusters.
+* Contraction is only possible from 8 node clusters to 6 node clusters.
+* The ONTAP version of the cluster must be 9.15.1+.
 
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node cluster to an eight-node cluster with the cluster expansion feature
 
 .About this task
-You must complete the following tasks during the cluster expansion procedure:
+The following tasks occur during the cluster expansion procedure:
 
-* Add licenses to ONTAP Select Deploy for the creation of new nodes
-* Add new ESX hosts to the inventory
-* Assign the details of the new nodes and prepare for cluster expansion
-* Network pre-check
-* Expand the cluster
+* New ESX hosts are added to the inventory.
+* The details of the new nodes are assigned to prepare for cluster expansion.
 
 .Before you begin
-If you deploy a multi-node cluster, you should be familiar with the network connectivity checker.
+If you deploy a multi-node cluster, you should be familiar with the link:https://docs.netapp.com/us-en/ontap-select/concept_nw_internal_external.html#internal-network-validation-and-troubleshooting[network connectivity checker]. 
+
+You should also have the license details for the creation of new nodes.
 
 .Steps
 . Sign in to the Deploy utility web user interface using the administrator account.
@@ -68,7 +67,9 @@ If you deploy a multi-node cluster, you should be familiar with the network conn
 
 . Provide the ONTAP credentials then select *Expand Cluster*.
 
-. Select *Next* and run the network pre-check by selecting *Run*. The network pre-check validates that the internal network selected for the ONTAP cluster traffic is functioning correctly.
+. Select *Next* and run the network pre-check by selecting *Run*. 
++
+The network pre-check validates that the internal network selected for the ONTAP cluster traffic is functioning correctly.
 
 . Select *Expand Cluster* to begin the cluster expansion process and then select *OK* in the dialog box.
 +
@@ -84,17 +85,14 @@ After expanding the cluster, you should back up the ONTAP Select Deploy configur
 == Contract the cluster
 
 .About this task
-You must complete the following tasks during the cluster contraction procedure:
-
-* Select the desired high-availability (HA) pair of nodes in the cluster and prepare for cluster contraction
-* Contract the cluster 
+The desired high-availability (HA) pair of nodes in the cluster are selected to prepare for cluster contraction during the procedure.
 
 .Steps
 . Sign in to the Deploy utility web user interface using the administrator account.
 
 . Select the *Cluster* tab at the top of the page and select the desired cluster from the list.
 
-. On the cluster details page, click the gear icon at the right of the page and select *Contract Cluster*.
+. On the cluster details page, select the gear icon at the right of the page, then select *Contract Cluster*.
 
 . Select the HA Pair configuration details for any HA Pair you want to remove and provide the ONTAP credentials, then select *Contract Cluster*.
 +
