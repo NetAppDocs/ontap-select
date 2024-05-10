@@ -13,7 +13,7 @@ summary: Use Ansible roles to automate ONTAP Select deployments.
 :imagesdir: ./media/
 
 [.lead]
-Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from a six-node cluster to an eight-node cluster with the cluster expansion feature, and you can decrease the cluster size from an eight-node cluster to a six-node cluster with the cluster contraction feature.
+Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight and you can decrease the cluster size from eight to six nodes. No other cluster expansion or contraction scenarios are supported.
 
 The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface..
 
@@ -29,7 +29,6 @@ The cluster expansion and contraction functionalities are restricted in the foll
 
 * Expansion is only possible from 6 node clusters to 8 node clusters.
 * Contraction is only possible from 8 node clusters to 6 node clusters.
-* The ONTAP version of the cluster must be 9.15.1+.
 
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node cluster to an eight-node cluster with the cluster expansion feature
@@ -38,7 +37,7 @@ You can increase the size of an existing cluster from a six-node cluster to an e
 In preparation for the cluster expansion procedure, new ESX hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
 
 .Before you begin
-* When deploying a multi-node cluster, you should be familiar with the link:https://docs.netapp.com/us-en/ontap-select/concept_nw_internal_external.html#internal-network-validation-and-troubleshooting[network connectivity checker]. 
+* When deploying a multi-node cluster, you should be familiar with the link:https://docs.netapp.com/us-en/ontap-select/task_adm_connectivity.html[network connectivity checker]. 
 
 * You have the license details for the new nodes. 
 
@@ -70,7 +69,7 @@ The network pre-check validates that the internal network selected for the ONTAP
 
 . Select *Expand Cluster* to begin the cluster expansion process and then select *OK* in the dialog box.
 +
-It can take up to 45 minutes for the cluster to be created.
+It can take up to 45 minutes for the cluster to be expanded.
 
 . Monitor the multi-step cluster expansion process to confirm that the cluster expanded successfully.
 
