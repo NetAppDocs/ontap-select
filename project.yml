@@ -147,7 +147,11 @@ sidebar:
         - title: Mediators
           url: /task_adm_mediators.html
         - title: Clusters
-          url: /task_adm_clusters.html
+          entries:
+            - title: ONTAP Select clusters
+              url: /task_adm_clusters.html
+            - title: Expand or contract the cluster
+              url: /task_cluster_expansion_contraction.html
         - title: Nodes and hosts
           entries:
             - title: VM video console
