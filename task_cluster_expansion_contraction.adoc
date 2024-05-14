@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
-summary: Use Ansible roles to automate ONTAP Select deployments.
+summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes.
 ---
 
 = Expand or contract the cluster
@@ -79,6 +79,7 @@ It can take up to 45 minutes for the cluster to be expanded.
 After expanding the cluster, you should back up the ONTAP Select Deploy configuration data.
 
 == Contract the cluster
+You can decrease the size of an existing cluster from an eight-node to a six-node cluster with the cluster contraction feature.
 
 .About this task
 The desired HA pair of nodes in the cluster are selected to prepare for cluster contraction during the procedure.
