@@ -31,7 +31,7 @@ The cluster expansion and contraction functionalities are restricted in the foll
 * Contraction is only possible from eight-node clusters to six-node clusters.
 
 == Expand the cluster
-You can increase the size of an existing cluster from a six-node cluster to an eight-node cluster with the cluster expansion feature.
+You can increase the size of an existing cluster from a six-node to an eight-node cluster with the cluster expansion feature.
 
 .About this task
 In preparation for the cluster expansion procedure, new ESX hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
@@ -67,7 +67,7 @@ In preparation for the cluster expansion procedure, new ESX hosts are added to t
 +
 The network pre-check validates that the internal network selected for the ONTAP cluster traffic is functioning correctly.
 
-. Select *Expand Cluster* to begin the cluster expansion process and then select *OK* in the dialog box.
+. Select *Expand Cluster* to begin the cluster expansion process, and then select *OK* in the dialog box.
 +
 It can take up to 45 minutes for the cluster to be expanded.
 
