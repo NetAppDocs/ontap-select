@@ -3,7 +3,7 @@ sidebar: sidebar
 permalink: reference_new_ots.html
 keywords: new features
 // summary: The current release includes several new features and improvements specific to ONTAP Select.
-summary: The current release does not include any new features or improvements specific to ONTAP Select.
+summary: The current release includes several new features or improvements specific to ONTAP Select.
 ---
 = What's new in this release
 :hardbreaks:
@@ -14,6 +14,24 @@ summary: The current release does not include any new features or improvements s
 
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
+
+== ONTAP Select 9.15.1
+
+ONTAP Select 9.15.1 includes several new features and improvements.
+
+Support for cluster expansion and contraction::
+Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported.
+
+* Cluster expansion from six-node to eight-node clusters
++
+You can increase the cluster size from a six-node cluster to an eight-node cluster with the cluster expansion feature. link:task_cluster_expansion_contraction.html#expand-the-cluster[Learn more].
+
+* Cluster contraction eight-node to six-node clusters
++
+You can decrease the cluster size from an eight-node cluster to six-node cluster with the cluster contraction feature. link:task_cluster_expansion_contraction.html#contract-the-cluster[Learn more].
+
+NOTE: Support for cluster expansion and contraction is limited to ESX clusters only.
+
 
 == ONTAP Select 9.14.1
 
@@ -132,3 +150,4 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 // 2023-04-05, ONTAPDOC-920
 // 2023-04-12, ONTAPDOC-979
 // 2023-09-25, ONTAPDOC-1204, ONTAPDOC-1293
+// 2024 Apr 11, ONTAPDOC-1797, ONTAPDOC-1802
