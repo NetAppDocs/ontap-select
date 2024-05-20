@@ -9,19 +9,19 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
-    - version-number: "9.14.1"
+    - version-number: "9.15.1"
       url: /ontap-select  
+    - version-number: "9.14.1"
+      url: /ontap-select-9141
     - version-number: "9.13.1"
       url: /ontap-select-9131        
     - version-number: "9.12.1"
       url: /ontap-select-9121    
     - version-number: "9.11.1"
-      url: /ontap-select-9111    
-    - version-number: "9.10.1"
-      url: /ontap-select-9101        
+      url: /ontap-select-9111         
 sidebar:
   entries:
-    - title: ONTAP Select 9.14.1 docs
+    - title: ONTAP Select 9.15.1 docs
       url: /index.html
     - title: Release Notes
       entries:
@@ -148,7 +148,11 @@ sidebar:
         - title: Mediators
           url: /task_adm_mediators.html
         - title: Clusters
-          url: /task_adm_clusters.html
+          entries:
+            - title: ONTAP Select clusters
+              url: /task_adm_clusters.html
+            - title: Expand or contract the cluster
+              url: /task_cluster_expansion_contraction.html
         - title: Nodes and hosts
           entries:
             - title: VM video console
