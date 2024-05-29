@@ -92,6 +92,7 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 
 .VMware vCenter language restriction
 
-If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version. ONTAP Select Deploy does not support vCenter on non-English versions of Windows.
+If you use ONTAP Select Deploy to create a cluster running on ESXi with vCenter on a Windows Server, you must use an English language version.
 
-// 2023-09-26, ONTAPDOC-1204
+// 2023-SEP-26, ONTAPDOC-1204
+// 2024-MAY-29, GitHub issue #252
