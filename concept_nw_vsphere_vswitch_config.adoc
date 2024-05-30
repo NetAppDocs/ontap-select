@@ -33,6 +33,8 @@ For single node clusters, ONTAP Deploy configures the ONTAP Select VM to use a p
 
 For multinode clusters, ONTAP Deploy configures each ONTAP Select VM to use one or two port groups for the internal network and separately, one or two port groups for the external network. The cluster and node management traffic can either use the same port group as the external traffic, or optionally a separate port group. The cluster and node management traffic cannot share the same port group with internal traffic.
 
+NOTE: ONTAP Select supports a maximum of four VMNICs. 
+
 == Standard or distributed vSwitch and four physical ports per Node
 
 Four port groups can be assigned to each node in a multinode cluster. Each port group has a single active physical port and three standby physical ports as in the following figure.
@@ -140,5 +142,6 @@ image:DDN_16.jpg[Internal port group configurations using a distributed vSwitch 
 [NOTE]
 LACP requires that you configure the upstream switch ports as a port channel. Prior to enabling this on the distributed vSwitch, make sure that an LACP-enabled port channel is properly configured.
 
-// 2023-08-15, Github issue #213
-// 2023-09-29, ONTAPDOC-1204
+// 2023-AUG-15, Github issue #213
+// 2023-SEP-29, ONTAPDOC-1204
+// 2024-MAY-30, ONTAPDOC-2006
