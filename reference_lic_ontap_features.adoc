@@ -32,7 +32,6 @@ The following features are included with ONTAP Select and licensed by default:
 * NFS
 * NVMe over TCP
 * ONTAP multitenancy capability
-* ONTAP S3
 * SnapMirror
 * SnapRestore
 * SnapVault
@@ -47,6 +46,7 @@ You must acquire a separate license for any ONTAP feature that is not enabled by
 * Data Availability Service
 * FabricPool
 * MetroCluster SDS (ONTAP Select premium license offering)
+* ONTAP S3
 * SnapLock Enterprise (SnapLock Compliance is not supported for ONTAP Select)
 ** Tamperproof Snapshot copies
 * SyncMirror (zero cost)
@@ -58,6 +58,7 @@ You do not need a FabricPool license when utilizing StorageGRID Webscale.
 
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
 
+// 2024 JUN 17, ONTAPDOC-2049
 // 2023 Feb 15, GH issue 192
 // 2023-APR-05, ONTAPDOC-920
 // 2023-OCT-17, Added info about snaplock compliance
