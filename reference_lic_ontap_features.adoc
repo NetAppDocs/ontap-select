@@ -46,7 +46,7 @@ You must acquire a separate license for any ONTAP feature that is not enabled by
 * Data Availability Service
 * FabricPool
 * MetroCluster SDS (ONTAP Select premium license offering)
-* ONTAP S3
+* ONTAP S3 (zero cost)
 * SnapLock Enterprise (SnapLock Compliance is not supported for ONTAP Select)
 ** Tamperproof Snapshot copies
 * SyncMirror (zero cost)
