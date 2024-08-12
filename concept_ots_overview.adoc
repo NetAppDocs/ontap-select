@@ -69,6 +69,8 @@ Several ONTAP features are not supported with ONTAP Select. In most cases, these
 * Cluster IPspace
 Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
 
+* ESXi 8.0 U3
+
 * Fibre Channel
 Fibre Channel and Fibre Channel over Ethernet are not supported.
 
@@ -100,11 +102,18 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 * link:reference_lic_ontap_features.html[ONTAP features enabled by default]
 
-// 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
-// 2023 Jun 19, ONTAPDOC-1096
-// 2023 Sep 28, Adding SVM DR
-// 2023 Oct 09, GH issue #219
-// 2023 Oct 17, Removed mention of old OTS versions
-// 2024 Jan 12, ONTAPDOC-1573
-// 2024 Mar 14, ONTAPDOC-1778
+// 2024 AUG 12, ONTAPDOC-2283
 // 2024 Apr 15, ONTAPDOC-1892
+// 2024 Mar 14, ONTAPDOC-1778
+// 2024 Jan 12, ONTAPDOC-1573
+// 2023 Oct 17, Removed mention of old OTS versions
+// 2023 Oct 09, GH issue #219
+// 2023 Sep 28, Adding SVM DR
+// 2023 Jun 19, ONTAPDOC-1096
+// 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
+
+
+
+
+
+
