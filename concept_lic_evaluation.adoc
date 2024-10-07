@@ -4,7 +4,6 @@ permalink: concept_lic_evaluation.html
 keywords: license, licensing, evaluation, upgrade license
 summary: You can use an evaluation license if you want to evaluate ONTAP Select before making the decision to purchase. The evaluation license is included with the ONTAP Select Deploy administration utility and is automatically applied to each ONTAP Select node as part of an evaluation deployment.
 ---
-
 = Evaluation licenses
 :hardbreaks:
 :nofooter:
@@ -13,7 +12,15 @@ summary: You can use an evaluation license if you want to evaluate ONTAP Select 
 :imagesdir: ./media/
 
 [.lead]
-You can use an evaluation license if you want to evaluate ONTAP Select before making the decision to purchase. The evaluation license is included with the ONTAP Select Deploy administration utility and is automatically applied to each ONTAP Select node as part of an evaluation deployment.
+You can deploy ONTAP Select with an evaluation license or a purchased license. The license you choose must apply to each of the nodes in the ONTAP Select cluster and therefore to the entire cluster. You can use an evaluation license if you want to evaluate ONTAP Select before making the decision to purchase. The evaluation license is included with the ONTAP Select Deploy administration utility and is automatically applied to each ONTAP Select node as part of an evaluation deployment.
+
+There are several considerations when deploying and supporting an evaluation cluster:
+
+* You can only use the cluster can only be used for evaluation purposes. You must not use a cluster with an evaluation license in a production environment.
+* You should use the ONTAP Select Deploy administration utility as
+follows when configuring each host:
+** Do not supply a serial number
+** Configure to use an evaluation license
 
 == Licensing characteristics
 
