@@ -15,15 +15,14 @@ summary: When a hardware RAID controller is available, ONTAP Select can move RAI
 When a hardware RAID controller is available, ONTAP Select can move RAID services to the hardware controller for both a write performance boost and protection against physical drive failures. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
 
 [NOTE]
-====
 ONTAP Select data aggregates are configured to use RAID 0 because the physical RAID controller is providing RAID striping to the underlying drives. No other RAID levels are supported.
 
-After you deploy a virtual machine running ONTAP Select, you can't remove a disk from the hardware RAID controller configuration.
-====
 
 == RAID controller configuration for local attached storage
 
 All locally attached disks that provide ONTAP Select with backing storage must sit behind a RAID controller. Most commodity servers come with multiple RAID controller options across multiple price points, each with varying levels of functionality. The intent is to support as many of these options as possible, providing they meet certain minimum requirements placed on the controller. 
+
+NOTE: After you deploy a virtual machine running ONTAP Select, you can't remove a disk from the hardware RAID controller configuration.
 
 The RAID controller that manages the ONTAP Select disks must meet the following requirements:
 
