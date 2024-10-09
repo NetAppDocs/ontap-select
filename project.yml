@@ -9,8 +9,10 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
+    - version-number: "9.16.1"
+      url: /ontap-select
     - version-number: "9.15.1"
-      url: /ontap-select  
+      url: /ontap-select-9151 
     - version-number: "9.14.1"
       url: /ontap-select-9141
     - version-number: "9.13.1"
