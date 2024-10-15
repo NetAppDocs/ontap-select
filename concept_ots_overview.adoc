@@ -64,8 +64,6 @@ Each node in an ONTAP Select cluster is automatically licensed to use several ON
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
-* Autonomous Ransomware Protection (ARP)
-
 * Cluster IPspace
 Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
 
