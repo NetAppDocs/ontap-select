@@ -4,7 +4,6 @@ permalink: concept_ots_overview.html
 keywords: overview, software defined storage, sds, typical deployment, ontap 9
 summary: ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream FAS and AFF ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.
 ---
-
 = ONTAP Select overview
 :hardbreaks:
 :nofooter:
