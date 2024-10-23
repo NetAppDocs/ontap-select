@@ -110,6 +110,7 @@ After creating a cluster, you can make changes to the cluster or virtual machine
 Software RAID::
 When using direct-attached storage (DAS), RAID functionality is traditionally provided through a local hardware RAID controller. You can instead configure a node to use _software RAID_ where the ONTAP Select node provides the RAID functionality. If you use software RAID, a hardware RAID controller is no longer needed.
 
+[[ontap-select-image-intsall]]
 ONTAP Select image install::
 Beginning with ONTAP Select Deploy 2.8, the Deploy administration utility contains only a single version of ONTAP Select. The version included is the most current available at the time of release. The ONTAP Select image install feature allows you to add earlier versions of ONTAP Select to your instance of the Deploy utility, which can then be used when deploying an ONTAP Select cluster. See link:task_cli_deploy_image_add.html[Add ONTAP Select images for more information].
 
