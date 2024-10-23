@@ -21,7 +21,7 @@ ONTAP features that have hardware-specific dependencies are generally not suppor
 
 The following features are included with ONTAP Select and licensed by default:
 
-* Autonomous Ransomware Protection (manual updates)
+* Autonomous Ransomware Protection (ARP) (manual updates)
 * CIFS
 * Deduplication and compression
 * FlexCache
