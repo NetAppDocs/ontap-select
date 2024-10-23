@@ -64,6 +64,8 @@ Each node in an ONTAP Select cluster is automatically licensed to use several ON
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
+* Autonomous Ransomware Protection (automatic updates)
+
 * Cluster IPspace
 Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
 
@@ -98,7 +100,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 .Related information
 
-* link:reference_lic_ontap_features.html[ONTAP features enabled by default]
+link:reference_lic_ontap_features.html[ONTAP features enabled by default]
 
 // 2024 AUG 12, ONTAPDOC-2283
 // 2024 Apr 15, ONTAPDOC-1892
