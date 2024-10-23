@@ -4,7 +4,6 @@ permalink: concept_adm_upgrading_nodes.html
 keywords: administer, administering, web, upgrading nodes
 summary: After you deploy an ONTAP Select cluster, you can upgrade the ONTAP image of each node as needed using the standard ONTAP software upgrade procedure.
 ---
-
 = Upgrade the ONTAP Select nodes
 :hardbreaks:
 :nofooter:

@@ -15,6 +15,19 @@ summary: The current release includes several new features or improvements speci
 [.lead]
 NetApp periodically updates ONTAP Select to bring you new features and enhancements.
 
+== ONTAP Select 9.16.1
+
+ONTAP Select 9.16.1 includes several new features and improvements.
+
+Support for Autonomous Ransomware Protection::
+
+Beginning with ONTAP Select 9.16.1, Autonomous Ransomware Protection (ARP) (manual updates) is supported. The ARP feature license is included in the NLF for ONTAP Select 9.16.1. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
+
+Updated NLF support::
+Beginning with ONTAP Select 9.16.1, the NetApp License File (NLF) support is updated. The new NLF format includes licenses for the ARP, ONTAP S3, and S3 SnapMirror features. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
++
+For a fresh ONTAP Select 9.16.1 Deploy, the new NLF format is automatically applied. When you upgrade an ONTAP Select Deploy to 9.16.1, you can download the updated NLF after you upgrade to avail of the feature licenses. If you revert to an ONTAP Select Deploy version earlier than 9.16.1, you must reinstall the feature licenses that you had before the upgrade.
+
 == ONTAP Select 9.15.1
 
 ONTAP Select 9.15.1 includes several new features and improvements.
