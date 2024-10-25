@@ -105,7 +105,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 .Related information
 
-link:reference_lic_ontap_features.html[ONTAP features enabled by default]
+link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[ONTAP features enabled by default]
 
 // 2024 AUG 12, ONTAPDOC-2283
 // 2024 Apr 15, ONTAPDOC-1892
