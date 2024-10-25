@@ -14,8 +14,6 @@ summary: After creating an ONTAP Select cluster, you can support the deployment 
 [.lead]
 After creating an ONTAP Select cluster, you can support the deployment by performing various administrative tasks. There are a few general considerations to be aware of.
 
-CAUTION: The automatic updates for Autonomous Ransomware Protection (ARP) are not supported with ONTAP Select.
-
 In general, the procedures you can perform using the Deploy web interface fall into one of three categories.
 
 .Deploy an ONTAP Select cluster
