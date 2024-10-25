@@ -21,7 +21,7 @@ ONTAP Select 9.16.1 includes several new features and improvements.
 
 Support for Autonomous Ransomware Protection::
 
-Beginning with ONTAP Select 9.16.1, Autonomous Ransomware Protection (ARP) (manual updates) is supported. The ARP feature license is included in the NetApp License File (NLF) for ONTAP Select 9.16.1. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
+Beginning with ONTAP Select 9.16.1, manual updates for Autonomous Ransomware Protection (ARP) are supported. The ARP feature license is included in the NetApp License File (NLF) for ONTAP Select 9.16.1. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
 +
 CAUTION: The automatic updates for ARP are not supported with ONTAP Select.
 

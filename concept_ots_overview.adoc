@@ -63,7 +63,9 @@ Each node in an ONTAP Select cluster is automatically licensed to use several ON
 
 Several ONTAP features are not supported with ONTAP Select. In most cases, these features require special hardware that is not available in the virtualized ONTAP Select environment.
 
-* Autonomous Ransomware Protection (ARP) (automatic updates)
+* Automatic Updates for Autonomous Ransomware Protection (ARP) 
++
+NOTE: Beginning with ONTAP Select 9.16.1, manual updates to ARP are supported and the ARP feature license is included in the NetApp License File (NLF).
 
 * Cluster IPspace
 +
