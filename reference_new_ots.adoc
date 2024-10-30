@@ -13,16 +13,16 @@ summary: The current release includes several new features or improvements speci
 :imagesdir: ./media/
 
 [.lead]
-NetApp periodically updates ONTAP Select to bring you new features and enhancements.
+Learn about the new features and enhancements in supported versions of ONTAP Select.
 
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 includes several new features and improvements.
 
-Updated NetApp License File (NLF) support::
-Beginning with ONTAP Select 9.16.1, the NLF support is updated. The new NLF format includes licenses for the ARP, ONTAP S3, and S3 SnapMirror features. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
+Updated NetApp License File support::
+Beginning with ONTAP Select 9.16.1, the NetApp License File (NLF) support is updated. The new NLF format includes licenses for the ARP, ONTAP S3, and S3 SnapMirror features. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
 +
-For a new ONTAP Select 9.16.1 Deploy, the new NLF format is automatically applied. When you upgrade an existing ONTAP Select Deploy to 9.16.1, the new NLF format is not applied. To get the the ARP, ONTAP S3, and S3 SnapMirror feature licenses, you must download the updated NLF after you upgrade. For ONTAP Select Deploy instances 9.15.1 and earlier, you must continue to manually install the ONTAP S3 and S3 SnapMirror feature licenses.
+For a new ONTAP Select 9.16.1 Deploy, the new NLF format is automatically applied. When you upgrade an existing ONTAP Select Deploy to 9.16.1, the new NLF format is not applied. To get the the ARP, ONTAP S3, and S3 SnapMirror feature licenses, you must download the updated NLF after you upgrade. For ONTAP Select Deploy instances 9.15.1 and earlier, you still manually install the ONTAP S3 and S3 SnapMirror feature licenses.
 
 Support for Autonomous Ransomware Protection::
 

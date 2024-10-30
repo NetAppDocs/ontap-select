@@ -4,7 +4,7 @@ permalink: reference_lic_ontap_features.html
 keywords: license, licensing, ontap features, default ontap features
 summary: ONTAP Select offers full support for most ONTAP functionality. Many of the ONTAP features are licensed automatically for each node when you deploy a cluster. However some features require a separate license.
 ---
-= ONTAP features
+= ONTAP Select support for ONTAP features
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ ONTAP features that have hardware-specific dependencies are generally not suppor
 
 == ONTAP features automatically enabled by default
 
-The following features are included with ONTAP Select and licensed by default:
+The following ONTAP features are supported with ONTAP Select and licensed by default:
 
 * Autonomous Ransomware Protection (ARP) (manual updates)
 * CIFS
@@ -39,7 +39,7 @@ The following features are included with ONTAP Select and licensed by default:
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
 +
-NOTE: ONTAP Select 9.12.1 and later now supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
+NOTE: ONTAP Select supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
 
 == ONTAP features that are separately licensed
 
@@ -51,7 +51,7 @@ You must acquire a separate license for any ONTAP feature that is not enabled by
 ** Tamperproof Snapshot copies
 
 [NOTE]
-You do not need a FabricPool license when utilizing StorageGRID Webscale.
+You do not need a FabricPool license when utilizing StorageGRID.
 
 .Related information
 
