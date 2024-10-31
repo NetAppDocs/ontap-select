@@ -22,7 +22,7 @@ ONTAP Select data aggregates are configured to use RAID 0 because the physical R
 
 All locally attached disks that provide ONTAP Select with backing storage must sit behind a RAID controller. Most commodity servers come with multiple RAID controller options across multiple price points, each with varying levels of functionality. The intent is to support as many of these options as possible, providing they meet certain minimum requirements placed on the controller. 
 
-NOTE: You cannot detach virtual disks from ONTAP Select VMs that are using the hardware RAID configuration. Detaching virtual disks is only supported for ONTAP Select VMs that are using the software RAID configuration. See link:task_adm_replace_drives_swraid.html[Replace a failed drive when using SW RAID] for more information.
+NOTE: You cannot detach virtual disks from ONTAP Select VMs that are using the hardware RAID configuration. Detaching disks is only supported for ONTAP Select VMs that are using the software RAID configuration. See link:task_adm_replace_drives_swraid.html[Replace a failed drive when using SW RAID] for more information.
 
 The RAID controller that manages the ONTAP Select disks must meet the following requirements:
 
