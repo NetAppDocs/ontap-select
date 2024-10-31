@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
 summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes.
 ---
-= Expand or contract the cluster
+= Expand or contract an ONTAP Select cluster
 :hardbreaks:
 :nofooter:
 :icons: font

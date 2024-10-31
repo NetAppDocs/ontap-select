@@ -4,8 +4,7 @@ permalink: reference_plan_ots_kvm.html
 keywords: plan, planning, vnas, kvm
 summary: There are several planning issues related to the use of the KVM hypervisor that you should consider.
 ---
-
-= KVM requirements
+= ONTAP Select KVM requirements
 :hardbreaks:
 :nofooter:
 :icons: font

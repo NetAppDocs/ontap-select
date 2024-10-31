@@ -4,8 +4,7 @@ permalink: reference_chk_host_prep.html
 keywords: ontap select, pre-installation checklist, host preparation
 summary: Prepare each of the hypervisor hosts where an ONTAP Select node is deployed. As part of preparing the hosts, carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
 ---
-
-= Host configuration and preparation checklist
+= ONTAP Select host configuration and preparation checklist
 :hardbreaks:
 :nofooter:
 :icons: font

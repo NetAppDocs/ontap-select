@@ -4,8 +4,7 @@ permalink: task_cli_migrate_deploy.html
 keywords: administer, administering, cli, deploy, deploy instance, migrate
 summary: You can migrate an existing instance of the Deploy administration utility to a new virtual machine using the command line interface.
 ---
-
-= Migrate a Deploy instance to a new virtual machine
+= Migrate an ONTAP Select Deploy instance to a new virtual machine
 :hardbreaks:
 :nofooter:
 :icons: font

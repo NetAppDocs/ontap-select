@@ -4,8 +4,7 @@ permalink: concept_stor_capacity_inc.html
 keywords: ontap select, deploy, increase storage
 summary: ONTAP Deploy can be used to add and license additional storage for each node in an ONTAP Select cluster.
 ---
-
-= Increase storage capacity
+= Increase ONTAP Select storage capacity
 :hardbreaks:
 :nofooter:
 :icons: font

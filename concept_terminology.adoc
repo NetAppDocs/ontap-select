@@ -4,8 +4,7 @@ permalink: concept_terminology.html
 keywords: terminology, key concepts, concepts
 summary: As you begin to explore ONTAP Select and plan a deployment, it is helpful to first become familiar with the terminology and key concepts.
 ---
-
-= Terminology and key concepts
+= ONTAP Select terminology and key concepts
 :hardbreaks:
 :nofooter:
 :icons: font

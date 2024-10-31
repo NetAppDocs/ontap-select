@@ -4,8 +4,7 @@ permalink: reference_api_json_cc.html
 keywords: rest api, deploy rest api, rest, python script, json, create cluster
 summary: When creating or deleting an ONTAP Select cluster using the Python code samples, you must provide a JSON file as input to the script. You can copy and modify the appropriate JSON sample based on your deployment plans.
 ---
-
-= JSON for script to create a cluster
+= JSON for script to create an ONTAP Select cluster
 :hardbreaks:
 :nofooter:
 :icons: font

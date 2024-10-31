@@ -4,7 +4,7 @@ permalink: concept_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection
 summary: When a hardware RAID controller is available, ONTAP Select can move RAID services to the hardware controller for both a write performance boost and protection against physical drive failures. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
 ---
-= Hardware RAID services for local attached storage
+= ONTAP Select hardware RAID configuration services for local attached storage
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -22,7 +22,7 @@ ONTAP Select data aggregates are configured to use RAID 0 because the physical R
 
 All locally attached disks that provide ONTAP Select with backing storage must sit behind a RAID controller. Most commodity servers come with multiple RAID controller options across multiple price points, each with varying levels of functionality. The intent is to support as many of these options as possible, providing they meet certain minimum requirements placed on the controller. 
 
-NOTE: You cannot detach virtual disks from ONTAP Select VMs that are using the hardware RAID configuration. Detaching disks is only supported for ONTAP Select VMs that are using the software RAID configuration. See link:task_adm_replace_drives_swraid.html[Replace a failed drive when using SW RAID] for more information.
+NOTE: You cannot detach virtual disks from ONTAP Select VMs that are using the hardware RAID configuration. Detaching disks is only supported for ONTAP Select VMs that are using the software RAID configuration. See link:task_adm_replace_drives_swraid.html[Replace a failed drive in an ONTAP Select software RAID configuration] for more information.
 
 The RAID controller that manages the ONTAP Select disks must meet the following requirements:
 

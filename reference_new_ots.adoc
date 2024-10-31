@@ -5,7 +5,7 @@ keywords: new features
 // summary: The current release includes several new features and improvements specific to ONTAP Select.
 summary: The current release includes several new features or improvements specific to ONTAP Select.
 ---
-= What's new in this release
+= What's new for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font

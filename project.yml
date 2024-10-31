@@ -31,7 +31,7 @@ sidebar:
           url: /reference_new_ots.html
     - title: Concepts
       entries:
-        - title: Product overview
+        - title: ONTAP Select overview
           url: /concept_ots_overview.html
         - title: ONTAP Select Deploy
           url: /concept_ots_deploy.html
@@ -141,25 +141,25 @@ sidebar:
           url: /concept_adm_upgrading_nodes.html
         - title: Diagnostics and support
           url: /task_adm_support.html
-        - title: Security
+        - title: Secure ONTAP Select
           url: /task_adm_security.html
-        - title: Network connectivity
+        - title: Confirm network connectivity
           url: /task_adm_connectivity.html
-        - title: Mediators
+        - title: Administer mediator services
           url: /task_adm_mediators.html
         - title: Clusters
           entries:
             - title: ONTAP Select clusters
               url: /task_adm_clusters.html
-            - title: Expand or contract the cluster
+            - title: Expand or contract a cluster
               url: /task_cluster_expansion_contraction.html
         - title: Nodes and hosts
           entries:
-            - title: VM video console
+            - title: Access the VM video console
               url: /task_adm_video_console.html
             - title: Resize the cluster nodes
               url: /task_adm_resize.html
-            - title: Replace failed SW RAID drives
+            - title: Replace failed woftware RAID drives
               url: /task_adm_replace_drives_swraid.html
             - title: Upgrade to VMFS6
               url: /task_adm_upgrade_vmfs6.html
@@ -277,7 +277,7 @@ sidebar:
           url: /task_cli_clusters.html
         - title: Nodes and hosts
           entries:
-            - title: Upgrading ESXi to 6.5 and higher
+            - title: Upgrade ESXi to 6.5 and higher
               url: /task_cli_upgrade_esxi65.html
             - title: Modify a host management server
               url: /reference_host_modify_command.html

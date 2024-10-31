@@ -4,8 +4,7 @@ permalink: reference_initial_state.html
 keywords: install, installing, initial state, cluster initial state
 summary: You should be aware of the initial state of a cluster after it has been deployed and configure the cluster as needed for your environment.
 ---
-
-= Initial state of the cluster after deployment
+= Initial state of the ONTAP Select cluster after deployment
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -4,8 +4,7 @@ permalink: concept_api_operation.html
 keywords: rest api, deploy rest api, rest, operation, basic operation
 summary: While REST establishes a common set of technologies and best practices, the details of each API can vary based on the design choices. You should be aware of the details and operational characteristics of the ONTAP Select Deploy API before using the API.
 ---
-
-= Basic operational characteristics
+= ONTAP Select Deploy API operational characteristics
 :hardbreaks:
 :nofooter:
 :icons: font

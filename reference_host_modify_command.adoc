@@ -4,8 +4,7 @@ permalink: reference_host_modify_command.html
 keywords: host modify, command, syntax, host management server
 summary: "You can use the host modify command to modify a host management server with this instance of ONTAP Select Deploy."
 ---
-
-= Modify a host management server
+= Modify a host management server for ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
