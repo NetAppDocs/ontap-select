@@ -159,7 +159,7 @@ sidebar:
               url: /task_adm_video_console.html
             - title: Resize the cluster nodes
               url: /task_adm_resize.html
-            - title: Replace failed woftware RAID drives
+            - title: Replace failed software RAID drives
               url: /task_adm_replace_drives_swraid.html
             - title: Upgrade to VMFS6
               url: /task_adm_upgrade_vmfs6.html
