@@ -28,7 +28,7 @@ You must prepare the hypervisor hosts.
 You must prepare each of the Linux KVM servers where an ONTAP Select node is deployed. You must also prepare the server where the ONTAP Select Deploy administration utility is deployed.
 
 .Install Red Hat Enterprise Linux
-You must install the Red Hat Enterprise Linux (RHEL) operating system using the ISO image. See the link:reference_plan_ots_hardware.html#software-compatibility[software compatibility information] for hypervisors for a list of the supported RHEL versions. During installation, you should configure the system as follows:
+You must install the Red Hat Enterprise Linux (RHEL) operating system using the ISO image. See the link:reference_plan_ots_hardware.html#software-compatibility[software compatibility information for hypervisors] for a list of the supported RHEL versions. During installation, you should configure the system as follows:
 
 * Select Default as the security policy
 * Choose the Virtualized Host software selection
