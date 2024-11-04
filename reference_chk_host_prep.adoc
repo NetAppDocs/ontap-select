@@ -44,72 +44,6 @@ NOTE: Some of the required packages might already be installed if you chose Virt
 
 For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^].
 
-.Additional packages required for RHEL 7.7
-Install the same set of packages required for RHEL 7.6.
-
-.Additional packages required for RHEL 7.6
-Verify that the following packages and dependencies are installed when using RHEL 7.6 or CentOS 7.6. In each case, the package name and version are included.
-
-* qemu-kvm (1.5.3-160)
-+
-NOTE: When using software RAID, you must use version 2.9.0 instead.
-
-* libvirt (4.5.0-10)
-* openvswitch (2.7.3)
-* virt-install (1.5.0-1)
-* lshw (B.02.18-12)
-* lsscsi (0.27-6)
-* lsof (4.87-6)
-
-If you are using vNAS on KVM (external storage) and plan to migrate virtual machines from one host to another, you should install the following additional packages and dependencies:
-
-* fence-agents-all (4.2.1-11)
-* lvm2-cluster (2.02.180-8)
-* pacemaker (1.1.19-8)
-* pcs (0.9.165-6)
-
-.Additional packages required for RHEL 7.5
-Verify that the following packages and dependencies are installed when using RHEL 7.5 or CentOS 7.5. In each case, the package name and version are included.
-
-* qemu-kvm (1.5.3-141)
-+
-NOTE: When using software RAID, you must use version 2.9.0 instead.
-
-* libvirt (3.9.0)
-* openvswitch (2.7.3)
-* virt-install (1.4.1-7)
-* lshw (B.02.18-12)
-* lsscsi (0.27-6)
-* lsof (4.87-5)
-
-If you are using vNAS on KVM (external storage) and plan to migrate virtual machines from one host to another, you should install the following additional packages and dependencies:
-
-* fence-agents-all (4.0.11-86)
-* lvm2-cluster (2.02.177-4)
-* pacemaker (1.1.18-11)
-* pcs (0.9.16205)
-
-.Additional packages required for RHEL 7.4
-Verify that the following packages and dependencies are installed when using RHEL 7.4 or CentOS 7.4. In each case the package name and version are included.
-
-* qemu-kvm (1.5.3-141)
-+
-NOTE: When using software RAID, you must use version 2.9.0 instead.
-
-* libvirt (3.2.0-14)
-* openvswitch (2.7.3)
-* virt-install (1.4.1-7)
-* lshw (B.02.18-7)
-* lsscsi (0.27-6)
-* lsof (4.87-4)
-
-If you are using vNAS on KVM (external storage) and plan to migrate virtual machines from one host to another, you should install the following additional packages and dependencies:
-
-* fence-agents-all (4.0.11-66)
-* lvm2-cluster (2.02.171-8)
-* pacemaker (1.1.16-12)
-* pcs (0.9.158-6)
-
 .Configuration of the storage pools
 An ONTAP Select storage pool is a logical data container that abstracts the underlying physical storage. You must manage the storage pools on the KVM hosts where ONTAP Select is deployed.
 
@@ -389,4 +323,5 @@ image:CHK_04.jpg[vSwitch properties)]
 
 The above vSwitch configuration is for a host with 2x10Gb ports in a typical network environment.
 
+// 2024 NOV 4, ONTAPDOC-2528
 // 2023-09-26, ONTAPDOC-1204
