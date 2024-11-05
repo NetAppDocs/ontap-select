@@ -4,7 +4,7 @@ indexpage:
     - title: Get started
       links:
         - title: Release notes
-          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3318065
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3330673
         - title: What's new
           url: /reference_new_ots.html
         - title: Learn about ONTAP Select
