@@ -28,6 +28,9 @@ Support for Autonomous Ransomware Protection::
 
 ONTAP Select 9.16.1 introduces support for Autonomous Ransomware Protection (ARP). ONTAP Select 9.16.1 only supports manual updates for ARP, automatic updates are not supported. The ARP feature license is included in the NLF for ONTAP Select 9.16.1. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
 
+Enhanced VMware ESXi support::
+ONTAP Select 9.16.1 includes support for VMware ESXi 8.0 U3.
+
 == ONTAP Select 9.15.1
 
 ONTAP Select 9.15.1 includes several new features and improvements.
