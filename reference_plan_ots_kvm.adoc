@@ -31,6 +31,6 @@ You should adhere to the following recommendations:
 
 * Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage
 * Configure the capacity option to restrict storage utilization (ONTAP Select cannot consume the entire capacity of an external storage pool)
-* Verify that all external storage arrays use the available redundancy and high-availability (HA) features where possible
+* Verify that all external storage arrays use the available redundancy and high availability (HA) features where possible
 
 // 2023-09-25, ONTAPDOC-1204

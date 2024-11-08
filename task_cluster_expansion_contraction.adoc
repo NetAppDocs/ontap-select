@@ -49,7 +49,7 @@ In preparation for the cluster expansion procedure, new ESX hosts are added to t
 
 . Navigate to the *HA Pair 4* section.
 
-. Choose the high-availability (HA) pair configuration details for the fourth HA pair, including: 
+. Choose the high availability (HA) pair configuration details for the fourth HA pair, including: 
 * Instance type
 * Node names 
 * Associated hypervisor hosts 

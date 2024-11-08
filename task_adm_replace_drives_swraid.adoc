@@ -4,7 +4,7 @@ permalink: task_adm_replace_drives_swraid.html
 keywords: administer, administering, web, software raid, replace drive
 summary: When a drive fails using software RAID, ONTAP Select uses a spare drive (if one is available) and starts the rebuild process automatically. This is similar to how ONTAP on FAS and AFF works. However, if no spare drive is available, you need to add one to the ONTAP Select node.
 ---
-= Replace a failed drive in an ONTAP Select software RAID configuration
+= Replace failed software RAID drives for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
