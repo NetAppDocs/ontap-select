@@ -16,7 +16,7 @@ Beginning with ONTAP Select 9.15.1, you can increase the size of an existing clu
 
 The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface.
 
-== Hardware and storage requirements
+== Hardware and storage considerations
 The cluster expansion and contraction functionalities are restricted in the following ways:
 
 * Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1 and later:
@@ -26,8 +26,10 @@ The cluster expansion and contraction functionalities are restricted in the foll
 ** ESXi 7.0U3
 ** ESXi 7.0
 
-* Expansion is only possible from six-node clusters to eight-node clusters.
-* Contraction is only possible from eight-node clusters to six-node clusters.
+The following cluster expansions and contractions are currently not supported:
+
+* Expansions from one, two, or  four-node clusters to six or eight-node clusters.
+* Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node to an eight-node cluster with the cluster expansion feature.
@@ -98,4 +100,5 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
+// 2024 NOV 5, ONTAPDOC-2518
 // 2023 May 06, ONTAPDOC-1797, -1802
