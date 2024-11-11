@@ -4,8 +4,7 @@ permalink: concept_perf_general.html
 keywords: ontap select, performance
 summary: Performance varies based on hardware configuration.
 ---
-
-= Performance
+= ONTAP Select performance overview
 :hardbreaks:
 :nofooter:
 :icons: font

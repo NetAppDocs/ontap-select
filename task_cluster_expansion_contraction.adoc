@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
 summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes.
 ---
-= Expand or contract the cluster
+= Expand or contract an ONTAP Select cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web i
 == Hardware and storage considerations
 The cluster expansion and contraction functionalities are restricted in the following ways:
 
-* Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1:
+* Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1 and later:
 ** ESXi 8.0U2 
 ** ESXi 8.0U1
 ** ESXi 8.0GA 
@@ -51,7 +51,7 @@ In preparation for the cluster expansion procedure, new ESX hosts are added to t
 
 . Navigate to the *HA Pair 4* section.
 
-. Choose the high-availability (HA) pair configuration details for the fourth HA pair, including: 
+. Choose the high availability (HA) pair configuration details for the fourth HA pair, including: 
 * Instance type
 * Node names 
 * Associated hypervisor hosts 

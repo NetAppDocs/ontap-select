@@ -4,8 +4,7 @@ permalink: reference_plan_ots_robo.html
 keywords: plan, planning, remote and branch office, robo
 summary: You can deploy ONTAP Select in a remote office/branch office (ROBO) environment. As part of planning a ROBO deployment, you must select the configuration supporting your objectives.
 ---
-
-= Remote and branch office deployments
+= ONTAP Select remote and branch office deployments
 :hardbreaks:
 :nofooter:
 :icons: font

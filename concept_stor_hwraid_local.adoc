@@ -4,8 +4,7 @@ permalink: concept_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection
 summary: When a hardware RAID controller is available, ONTAP Select can move RAID services to the hardware controller for both a write performance boost and protection against physical drive failures. As a result, RAID protection for all nodes within the ONTAP Select cluster is provided by the locally attached RAID controller and not through ONTAP software RAID.
 ---
-
-= Hardware RAID services for local attached storage
+= Hardware RAID services for ONTAP Select local attached storage
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -18,9 +17,12 @@ When a hardware RAID controller is available, ONTAP Select can move RAID service
 [NOTE]
 ONTAP Select data aggregates are configured to use RAID 0 because the physical RAID controller is providing RAID striping to the underlying drives. No other RAID levels are supported.
 
+
 == RAID controller configuration for local attached storage
 
-All locally attached disks that provide ONTAP Select with backing storage must sit behind a RAID controller. Most commodity servers come with multiple RAID controller options across multiple price points, each with varying levels of functionality. The intent is to support as many of these options as possible, providing they meet certain minimum requirements placed on the controller.
+All locally attached disks that provide ONTAP Select with backing storage must sit behind a RAID controller. Most commodity servers come with multiple RAID controller options across multiple price points, each with varying levels of functionality. The intent is to support as many of these options as possible, providing they meet certain minimum requirements placed on the controller. 
+
+NOTE: You cannot detach virtual disks from ONTAP Select VMs that are using the hardware RAID configuration. Detaching disks is only supported for ONTAP Select VMs that are using the software RAID configuration. See link:task_adm_replace_drives_swraid.html[Replace a failed drive in an ONTAP Select software RAID configuration] for more information.
 
 The RAID controller that manages the ONTAP Select disks must meet the following requirements:
 
@@ -157,3 +159,5 @@ image:ST_13.jpg[Incoming writes to ONTAP Select VM]
 
 [NOTE]
 The NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 6.5 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.
+
+// 2024 OCT 8, ONTAPDOC-2402 

@@ -4,8 +4,7 @@ permalink: concept_ha_config.html
 keywords: ontap select, high availability configurations, two-node ha, multi-node ha, mc sds
 summary: Discover high availability options to select the best HA configuration for your environment.
 ---
-
-= High availability configurations
+= ONTAP Select high availability configurations
 :hardbreaks:
 :nofooter:
 :icons: font

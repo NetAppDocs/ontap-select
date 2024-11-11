@@ -4,7 +4,6 @@ permalink: task_cli_clusters.html
 keywords: administer, administering, cli, clusters
 summary: There are several related tasks you can perform to administer an ONTAP Select cluster.
 ---
-
 = ONTAP Select clusters
 :hardbreaks:
 :nofooter:
