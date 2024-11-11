@@ -4,8 +4,7 @@ permalink: concept_perf_premium_ha_direct_ssd_96.html
 keywords: ontap select, performance
 summary: Performance information for ONTAP Select 9.6 performance - premium HA direct-attached SSD storage.
 ---
-
-= Performance: Premium HA direct-attached SSD storage
+= ONTAP Select 9.6 performance: Premium HA direct-attached SSD storage
 :hardbreaks:
 :nofooter:
 :icons: font

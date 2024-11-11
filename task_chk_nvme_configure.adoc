@@ -4,8 +4,7 @@ permalink: task_chk_nvme_configure.html
 keywords: ontap select, nvme storage, host preparation
 summary: If you plan to use NVMe drives with software RAID, you need to configure the host to recognize the drives.
 ---
-
-= Configuring a host to use NVMe drives
+= Configure an ONTAP Select host to use NVMe drives
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -4,8 +4,7 @@ permalink: concept_lic_cp_restrictions.html
 keywords: license, licensing, capacity pools, restrictions
 summary: The restrictions that apply when using the capacity pool licensing model are presented below.
 ---
-
-= Deployment restrictions for capacity pools licensing
+= Deployment restrictions for ONTAP Select capacity pools licensing
 :hardbreaks:
 :nofooter:
 :icons: font

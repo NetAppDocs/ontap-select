@@ -4,8 +4,7 @@ permalink: concept_lic_cp_benefits.html
 keywords: license, licensing, capacity pools, benefits
 summary: There are several benefits when using the capacity pools licensing model instead of the capacity tiers licensing model.
 ---
-
-= Summary of benefits
+= Summary of benefits for ONTAP Select capacity pools licensing
 :hardbreaks:
 :nofooter:
 :icons: font

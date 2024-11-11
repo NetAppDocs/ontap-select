@@ -4,8 +4,7 @@ permalink: concept_api_async_proc.html
 keywords: rest api, deploy rest api, rest, asynchronous processing, job object
 summary: Some of the Deploy API calls, particularly those that create or modify a resource, can take longer to complete than other calls. ONTAP Select Deploy processes these long-running requests asynchronously.
 ---
-
-= Asynchronous processing using the job object
+= Asynchronous processing using the Job object for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font

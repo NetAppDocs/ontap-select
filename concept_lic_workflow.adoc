@@ -4,8 +4,7 @@ permalink: concept_lic_workflow.html
 keywords: license, licensing, purchase, purchasing, workflow
 summary: You can follow a workflow to purchase and applying a license for your ONTAP Select deployment.
 ---
-
-= Workflow when purchasing a license
+= Workflow when purchasing an ONTAP Select license 
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -26,5 +25,9 @@ You must have the License Lock ID for your Deploy instance when using a capacity
 Licensing web site::
 You obtain a capacity tier and capacity pool license at different web sites
 
-
 image:purchased_license_workflow.png[Describes the process used to purchase and install a storage license for a production ONTAP Select deployment.]
+
+.Related information
+link:task_adm_licenses.html[ONTAP Select licenses]
+
+// 2024 OCT 14: ONTAPDOC-2225
