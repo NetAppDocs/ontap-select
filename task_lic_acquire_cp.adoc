@@ -4,8 +4,7 @@ permalink: task_lic_acquire_cp.html
 keywords: license, licensing, acquire, capacity pools
 summary: You must acquire a license file for each capacity pool used by the ONTAP Select nodes. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
 ---
-
-= Acquire a capacity pool license
+= Acquire an ONTAP Select capacity pool license
 :hardbreaks:
 :nofooter:
 :icons: font

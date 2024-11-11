@@ -4,8 +4,7 @@ permalink: reference_plan_best_practices.html
 keywords: plan, planning, best practices, recommendations
 summary: There are best practices that you should consider as part of planning an ONTAP Select deployment.
 ---
-
-= Summary of best practices
+= Summary of best practices for ONTAP Select deployment
 :hardbreaks:
 :nofooter:
 :icons: font

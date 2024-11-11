@@ -4,8 +4,7 @@ permalink: task_cli_security.html
 keywords: administer, administering, cli, security
 summary: There are several related tasks you can perform as part of securing an ONTAP Select deployment.
 ---
-
-= Security
+= Secure an ONTAP Select deployment
 :hardbreaks:
 :nofooter:
 :icons: font
