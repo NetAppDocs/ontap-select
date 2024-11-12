@@ -67,7 +67,7 @@ Updated ONTAP Select Deploy support::
 If you are running a version of ONTAP Select Deploy 9.14.1 lower than 9.14.1P2, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
 
 Enhanced VMware ESXi support::
-ONTAP Select 9.14.1 includes support for VMware ESXi 8.0.2.
+ONTAP Select 9.14.1 includes support for VMware ESXi 8.0 U2.
 
 == ONTAP Select 9.13.1
 
