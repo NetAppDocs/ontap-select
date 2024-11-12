@@ -20,10 +20,11 @@ The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web i
 The cluster expansion and contraction functionalities are restricted in the following ways:
 
 * Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1 and later:
-** ESXi 8.0U2 
-** ESXi 8.0U1
-** ESXi 8.0GA 
-** ESXi 7.0U3
+** ESXi 8.0 U3
+** ESXi 8.0 U2 
+** ESXi 8.0 U1
+** ESXi 8.0 GA 
+** ESXi 7.0 U3
 ** ESXi 7.0
 
 The following cluster expansions and contractions are currently not supported:
