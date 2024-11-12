@@ -4,8 +4,7 @@ permalink: task_cli_upgrade_deploy.html
 keywords: administer, administering, cli, deploy, upgrade deploy
 summary: You can upgrade an existing Deploy utility virtual machine in-place using the command line interface.
 ---
-
-= Upgrade a Deploy instance
+= Upgrade an ONTAP Select Deploy instance
 :hardbreaks:
 :nofooter:
 :icons: font

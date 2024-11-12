@@ -4,8 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
 summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes.
 ---
-
-= Expand or contract the cluster
+= Expand or contract an ONTAP Select cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,18 +16,20 @@ Beginning with ONTAP Select 9.15.1, you can increase the size of an existing clu
 
 The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface.
 
-== Hardware and storage requirements
+== Hardware and storage considerations
 The cluster expansion and contraction functionalities are restricted in the following ways:
 
-* Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1:
+* Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1 and later:
 ** ESXi 8.0U2 
 ** ESXi 8.0U1
 ** ESXi 8.0GA 
 ** ESXi 7.0U3
 ** ESXi 7.0
 
-* Expansion is only possible from six-node clusters to eight-node clusters.
-* Contraction is only possible from eight-node clusters to six-node clusters.
+The following cluster expansions and contractions are currently not supported:
+
+* Expansions from one, two, or  four-node clusters to six or eight-node clusters.
+* Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node to an eight-node cluster with the cluster expansion feature.
@@ -50,7 +51,7 @@ In preparation for the cluster expansion procedure, new ESX hosts are added to t
 
 . Navigate to the *HA Pair 4* section.
 
-. Choose the high-availability (HA) pair configuration details for the fourth HA pair, including: 
+. Choose the high availability (HA) pair configuration details for the fourth HA pair, including: 
 * Instance type
 * Node names 
 * Associated hypervisor hosts 
@@ -99,4 +100,5 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
+// 2024 NOV 5, ONTAPDOC-2518
 // 2023 May 06, ONTAPDOC-1797, -1802
