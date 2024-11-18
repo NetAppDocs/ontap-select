@@ -70,4 +70,7 @@ If you decided not to install the license files with storage capacity as part of
 
 There are data spare disks created by the Deploy administration utility on each ONTAP Select node from the usable datastore space (such as, Pool0 and Pool1). To implement high availability for your data on a multi-node cluster, you must create a mirrored aggregate using these spares.
 
+High availability takeover is not supported if data aggregates are not configured as mirrored.
+
+// 2024 Nov 18, GH268
 // 2023-10-17, prep for repo version split
