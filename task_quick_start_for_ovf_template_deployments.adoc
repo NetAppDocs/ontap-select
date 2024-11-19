@@ -12,7 +12,7 @@ summary: You can quickly deploy a 90-day evaluation instance of a single-node ON
 :imagesdir: ./media/
 
 [.lead]
-You can use the quick start for OVF template deployments to quickly deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an Open Virtualization Format (OVF) template on VMware ESXi.
+You can use the quick start for Open Virtualization Format (OVF) template deployments to quickly deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template on VMware ESXi.
 
 .About this task
 
