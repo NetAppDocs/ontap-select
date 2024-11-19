@@ -201,8 +201,8 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 * vCenter server with account credentials (optional)
 
 .Related information
-
-link:task_cli_signing_in.html[Sign in to Deploy using SSH]
+* link:task_cli_signing_in.html[Sign in to Deploy using SSH]
+* link:task_quick_start_for_ovf_template_deployments.html[ONTAP Select quick start for OVF template deployments]
 
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
