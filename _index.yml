@@ -24,9 +24,7 @@ indexpage:
         - title: Use the REST API
           url: /concept_api_how_access.html 
     - title: More resources
-      links:
-        - title: ONTAP Select resources page
-          url: https://www.netapp.com/data-management/ontap-select/documentation/ 
+      links: 
         - title: ONTAP Select product library
           url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293
         - title: ONTAP 9 documentation
