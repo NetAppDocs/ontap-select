@@ -204,6 +204,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 * link:task_cli_signing_in.html[Sign in to Deploy using SSH]
 * link:task_quick_start_for_ovf_template_deployments.html[ONTAP Select quick start for OVF template deployments]
 
+// 2024 NOV 18, ONTAPDOC-2547
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
