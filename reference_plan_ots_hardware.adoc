@@ -58,14 +58,15 @@ Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix 
 
 === Basic hardware requirements
 
-There are several common hardware requirements that apply to all platforms regardless of the node
-instance type or license offering.
+There are several common hardware requirements that apply to all platforms regardless of the node instance type or license offering.
 
 .Processor
 
 The supported microprocessors include the following:
 
 * Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
+
+NOTE: Advanced Micro Devices (AMD) processors aren't supported with ONTAP Select. 
 
 .Ethernet configuration
 
@@ -126,6 +127,7 @@ Premium XL
 [NOTE]
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
+// 2024-NOV-18, ONTAPDOC-2550
 // 2023-APR-12, ONTAPDOC-979
 // 2023-SEP-25, ONTAPDOC-1204
 // 2023-OCT-17, Updated table headings
