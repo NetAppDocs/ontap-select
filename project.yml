@@ -293,6 +293,8 @@ sidebar:
               url: /task_cli_deploy_image_remove.html
             - title: Recover Deploy for a two-node cluster
               url: /task_cli_deploy_recover_two_node.html
+    - title: Quick start for OVF template deployments
+      url: /task_quick_start_for_ovf_template_deployments.html
     - title: FAQ
       url: /reference_faq.html
     - title: Legal notices
