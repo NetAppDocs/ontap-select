@@ -120,7 +120,6 @@ Administering an ONTAP Select cluster after it is deployed::
 After you deploy an ONTAP Select cluster, you can configure the cluster as you would a hardware-based ONTAP cluster. For example, you can configure an ONTAP Select cluster using System Manager or the standard ONTAP command line interface.
 
 .Related information
-
 link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
 
 // 2023-09-25, ONTAPDOC-1204
