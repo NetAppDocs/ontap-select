@@ -38,13 +38,13 @@ Complete the following steps on a supported 64-bit ESXi host server.
 . Select the host using one of the following options:
 ** Select *File* > *Deploy OVF Template*.
 ** Select *Datacenter*. Then right-click and select *Deploy OVF Template*.
-. Select the ONTAP Select source OVA file on your local workstation, and select *Next*.
+. Select the ONTAP Select source OVA file on your local workstation, then select *Next*.
 . Review the OVF template details and select *Next*.
 . Review the EULA details and select *Accept*. Then select *Next*.
 . Type the name of the new virtual machine and select *Next*.
 . If more than one datastore is available, select the datastore and select *Next*.
-. Select Thick Provision Lazy Zeroed, and select *Next*.
-. Select the data and management networks, and select *Next*.
+. Select *Thick Provision Lazy Zeroed*, then select *Next*.
+. Select the data and management networks, then select *Next*.
 . On the *Properties* page, provide all the required values and select *Next*.
 . Review the deployment details and select *Power on after deployment*.
 . Select *Finish* to begin the deployment process.
