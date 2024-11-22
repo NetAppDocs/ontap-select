@@ -137,5 +137,6 @@ Before you create a MetroCluster SDS, use the ONTAP Deploy connectivity checker 
 
 There is an extra caveat when using virtual guest tagging (VGT) and two-node clusters. In two-node cluster configurations, the node management IP address is used to establish early connectivity to the mediator before ONTAP is fully available. Therefore, only external switch tagging (EST) and virtual switch tagging (VST) tagging is supported on the port group mapped to the node management LIF (port e0a). Furthermore, if both the management and the data traffic are using the same port group, only EST and VST are supported for the entire two-node cluster.
 
+// 2024 Nov 20, GH268
 // 3 august 2023, ontapdoc-1213
 // 2023-09-26, ONTAPDOC-1204
