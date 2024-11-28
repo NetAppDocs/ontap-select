@@ -23,7 +23,7 @@ indexpage:
           url: /concept_adm_before.html
         - title: Use the REST API
           url: /concept_api_how_access.html 
-        - title: Deploy a 90-day evaluation instance of an ONTAP Select cluster
+        - title: Deploy a 90-day evaluation instance of a cluster
           url: /deploy-evaluation-ontap-select-ovf-template.html
     - title: More resources
       links: 

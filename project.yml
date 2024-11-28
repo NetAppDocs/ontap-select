@@ -293,7 +293,7 @@ sidebar:
               url: /task_cli_deploy_image_remove.html
             - title: Recover Deploy for a two-node cluster
               url: /task_cli_deploy_recover_two_node.html
-    - title: Deploy a 90-day evaluation instance of an ONTAP Select cluster
+    - title: Deploy a 90-day evaluation instance of a cluster
       url: /deploy-evaluation-ontap-select-ovf-template.html
     - title: FAQ
       url: /reference_faq.html
