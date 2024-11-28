@@ -42,7 +42,7 @@ You can upgrade an ONTAP Select evaluation cluster to use a production license. 
 See link:task_adm_licenses.html[Convert an evaluation license to a production license] for more information.
 
 .Related information
-link:task_quick_start_for_ovf_template_deployments.html[ONTAP Select quick start for OVF template deployments]
+link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
 
 // 2024 NOV 18, ONTAPDOC-2547
 // 2024 OCT 7,  ONTAPDOC-2010
