@@ -366,7 +366,7 @@ Output::
 * Job object
 
 .Related information
-link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
+link:task_quick_start_for_ovf_template_deployments.html[Quick start for OVF template deployments]
 
 // 2024 NOV 18, ONTAPDOC-2547
 // 2022 Jan 20, ONTAPDOC-739
