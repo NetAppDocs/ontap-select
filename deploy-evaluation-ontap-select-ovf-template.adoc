@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: task_quick_start_for_ovf_template_deployments.html
-keywords: ontap select, ovf, template, deployment, evaluation, license
-summary: You can quickly deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template on VMware ESXi.
+permalink: deploy-evaluation-ontap-select-ovf-template.html
+keywords: ontap, select, ovf, template, deployment, evaluation, license
+summary: You deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template on VMware ESXi.
 ---
-= ONTAP Select quick start for OVF template deployments
+= Deploy a 90-day evaluation instance of an ONTAP Select cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,7 +12,7 @@ summary: You can quickly deploy a 90-day evaluation instance of a single-node ON
 :imagesdir: ./media/
 
 [.lead]
-You can deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template deployments on VMware ESXi.
+You can deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an Open Virtualization Format (OVF) template on VMware ESXi.
 
 .About this task
 
