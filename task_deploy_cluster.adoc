@@ -34,7 +34,7 @@ Review the _Plan_ and _License_ sections of the documentation. Based on this, yo
 Host preparation::
 You must prepare the hypervisor hosts where the ONTAP Select nodes will run and have the needed storage license files based on your licensing model. To view the preparation requirements:
 
-. Sign in to the Deploy web user interface.
+. Sign in to the Deploy web UI.
 . Select image:icon_question_mark.gif[Question mark] at the top of the page.
 . Select *Prerequisites*.
 . Scroll down to review the requirements and select *OK*.
