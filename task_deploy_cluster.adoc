@@ -90,25 +90,25 @@ The steps you follow depend on whether you want to create a single-node cluster 
 --
 . Sign in to the Deploy utility through the web interface using the administrator account (admin).
 
-. If the *Welcome to ONTAP Select* popup window is displayed, confirm you have met the configuration prerequisites, and select *OK*.
+. If the *Welcome to ONTAP Select* popup window is displayed, confirm you have met the configuration prerequisites and select *OK*.
 
 . If the *Getting Started* cluster launch page is not displayed, select image:icon_question_mark.gif[Question mark] at the top of the page and select *Getting Started*.
 
-. On the *Getting Started* page, select *Upload*. Select a license from your local workstation, and select *Open* to upload the license.
+. On the *Getting Started* page, select *Upload*. Select a license from your local workstation, and then select *Open* to upload the license.
 
 . Select *Refresh* and confirm the license has been added.
 
-. Select *Next* to add a hypervisor host, and then select *Add*.
+. Select *Next* to add a hypervisor host and then select *Add*.
 +
 You can add the hypervisor host directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
 
-. Select *Refresh*, and confirm the *Type* value for the host is *ESX*.
+. Select *Refresh* and confirm the *Type* value for the host is *ESX*.
 +
 Any account credentials you provide are added to the Deploy credential database.
 
 . Select *Next* to begin the cluster creation process.
 
-. In the *Cluster Details* section, provide all the required information describing the cluster, and select *Done*.
+. In the *Cluster Details* section, provide all the required information describing the cluster, and then select *Done*.
 
 . Under *Node Setup*, provide the node management IP address and select the license for the node; you can upload a new license if needed. You also can change the node name if needed.
 
@@ -126,7 +126,7 @@ You can select the drives based on your platform license level and host configur
 +
 You can change the configuration by selecting image:icon_pencil.gif[Edit] in the applicable section.
 
-. Select *Next*, and provide the ONTAP administrator password.
+. Select *Next* and provide the ONTAP administrator password.
 
 . Select *Create Cluster* to begin the cluster creation process, and then select *OK* in the popup window.
 +
@@ -143,7 +143,7 @@ The page is automatically refreshed at regular intervals.
 
 . If the *Welcome to ONTAP Select* popup window is displayed, confirm that you have met the configuration prerequisites and select *OK*.
 
-. If the *Getting Started* cluster launch page is not displayed, select image:icon_question_mark.gif[Question mark] at the top of the page, and select *Getting Started*.
+. If the *Getting Started* cluster launch page is not displayed, select image:icon_question_mark.gif[Question mark] at the top of the page and select *Getting Started*.
 
 . On the *Getting Started* page, select *Upload* and select a license from your local workstation and select *Open* to upload the license. Repeat to add additional licenses.
 
@@ -153,13 +153,13 @@ The page is automatically refreshed at regular intervals.
 +
 You can add the hypervisor hosts directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
 
-. Select *Refresh*, and confirm the *Type* value for the host is *ESX*.
+. Select *Refresh* and confirm the *Type* value for the host is *ESX*.
 +
 Any account credentials you provide are added to the Deploy credential database.
 
 . Select *Next* to begin the cluster creation process.
 
-. In the *Cluster Details* section, select the desired *Cluster Size*, provide all the required information describing the clusters, and select *Done*.
+. In the *Cluster Details* section, select the desired *Cluster Size*, provide all the required information describing the clusters and select *Done*.
 
 . Under *Node Setup*, provide the node management IP addresses and select the licenses for each node; you can upload a new license if needed. You also can change the node names if needed.
 
@@ -169,7 +169,7 @@ There are three node configurations which define the virtual machine size and av
 +
 Select the hypervisor hosts as well as the management, data, and internal networks.
 
-. Provide the *Storage* configuration, and select *Done*.
+. Provide the *Storage* configuration and select *Done*.
 +
 You can select the drives based on your platform license level and host configuration.
 
@@ -177,9 +177,9 @@ You can select the drives based on your platform license level and host configur
 +
 You can change the configuration by selecting image:icon_pencil.gif[Edit] in the applicable section.
 
-. Select *Next*, and run the Network Precheck by selecting *Run*. This validates that the internal network selected for ONTAP cluster traffic is functioning correctly.
+. Select *Next* and run the Network Precheck by selecting *Run*. This validates that the internal network selected for ONTAP cluster traffic is functioning correctly.
 
-. Select *Next*, and provide the ONTAP administrator password.
+. Select *Next* and provide the ONTAP administrator password.
 
 . Select *Create Cluster* to begin the cluster creation process, and then select *OK* in the popup window.
 +
