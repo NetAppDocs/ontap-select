@@ -34,7 +34,7 @@ Review the _Plan_ and _License_ sections of the documentation. Based on this, yo
 Host preparation::
 You must prepare the hypervisor hosts where the ONTAP Select nodes will run and have the needed storage license files based on your licensing model. To view the preparation requirements:
 
-. Sign in to the Deploy web user interface.
+. Sign in to the Deploy web UI.
 . Select image:icon_question_mark.gif[Question mark] at the top of the page.
 . Select *Prerequisites*.
 . Scroll down to review the requirements and select *OK*.
@@ -90,11 +90,11 @@ The steps you follow depend on whether you want to create a single-node cluster 
 --
 . Sign in to the Deploy utility through the web interface using the administrator account (admin).
 
-. If the *Welcome to ONTAP Select* popup window is displayed, confirm you have met the configuration prerequisites and select *OK*.
+. If the *Welcome to ONTAP Select* pop-up window is displayed, confirm you have met the configuration prerequisites, and select *OK*.
 
 . If the *Getting Started* cluster launch page is not displayed, select image:icon_question_mark.gif[Question mark] at the top of the page and select *Getting Started*.
 
-. On the *Getting Started* page, select *Upload*. Select a license from your local workstation, and then select *Open* to upload the license.
+. On the *Getting Started* page, select *Upload*. Select a license from your local workstation, and select *Open* to upload the license.
 
 . Select *Refresh* and confirm the license has been added.
 
