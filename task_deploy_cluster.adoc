@@ -118,7 +118,7 @@ There are three node configurations which define the virtual machine size and av
 +
 Select the hypervisor host as well as the management and data networks.
 
-. Provide the *Storage* configuration, and select *Done*.
+. Provide the *Storage* configuration and select *Done*.
 +
 You can select the drives based on your platform license level and host configuration.
 
