@@ -90,11 +90,11 @@ The steps you follow depend on whether you want to create a single-node cluster 
 --
 . Sign in to the Deploy utility through the web interface using the administrator account (admin).
 
-. If the *Welcome to ONTAP Select* pop-up window is displayed, confirm you have met the configuration prerequisites, and select *OK*.
+. If the *Welcome to ONTAP Select* pop-up window is displayed, confirm you have met the configuration prerequisites and select *OK*.
 
 . If the *Getting Started* cluster launch page is not displayed, select image:icon_question_mark.gif[Question mark] at the top of the page and select *Getting Started*.
 
-. On the *Getting Started* page, select *Upload*. Select a license from your local workstation, and select *Open* to upload the license.
+. On the *Getting Started* page, select *Upload*, and then select a license from your local workstation and select *Open* to upload the license.
 
 . Select *Refresh* and confirm the license has been added.
 
@@ -108,7 +108,7 @@ Any account credentials you provide are added to the Deploy credential database.
 
 . Select *Next* to begin the cluster creation process.
 
-. In the *Cluster Details* section, provide all the required information describing the cluster, and then select *Done*.
+. In the *Cluster Details* section, provide all the required information describing the cluster and select *Done*.
 
 . Under *Node Setup*, provide the node management IP address and select the license for the node; you can upload a new license if needed. You also can change the node name if needed.
 
@@ -128,7 +128,7 @@ You can change the configuration by selecting image:icon_pencil.gif[Edit] in the
 
 . Select *Next* and provide the ONTAP administrator password.
 
-. Select *Create Cluster* to begin the cluster creation process, and then select *OK* in the popup window.
+. Select *Create Cluster* to begin the cluster creation process and then select *OK* in the pop-up window.
 +
 It can take up to 30 minutes for the cluster to be created.
 
@@ -159,7 +159,7 @@ Any account credentials you provide are added to the Deploy credential database.
 
 . Select *Next* to begin the cluster creation process.
 
-. In the *Cluster Details* section, select the desired *Cluster Size*, provide all the required information describing the clusters and select *Done*.
+. In the *Cluster Details* section, select the desired *Cluster Size*, provide all the required information describing the clusters, and select *Done*.
 
 . Under *Node Setup*, provide the node management IP addresses and select the licenses for each node; you can upload a new license if needed. You also can change the node names if needed.
 
