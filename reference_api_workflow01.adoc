@@ -4,8 +4,7 @@ permalink: reference_api_workflow01.html
 keywords: rest api, deploy rest api, rest, workflow, create cluster, curl, json
 summary: You can deploy a single-node ONTAP Select cluster on a VMware ESXi host managed by vCenter. The cluster is created with an evaluation license.
 ---
-
-= Workflow 1: Create a single-node evaluation cluster on ESXi
+= Workflow 1: Create an ONTAP Select single-node evaluation cluster on ESXi
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -21,12 +20,6 @@ The cluster creation workflow differs in the following situations:
 * Multiple nodes or hosts are used within the cluster
 * Cluster is deployed in a production environment with a purchased license
 * The KVM hypervisor is used instead of VMware ESXi 
-+
-[NOTE]
-====
-* Beginning with ONTAP Select 9.10.1, you can no longer deploy a new cluster on the KVM hypervisor. 
-* Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
-====
 
 == 1. Register vCenter server credential
 
@@ -372,4 +365,8 @@ Asynchronous
 Output::
 * Job object
 
+.Related information
+link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
+
+// 2024 NOV 18, ONTAPDOC-2547
 // 2022 Jan 20, ONTAPDOC-739

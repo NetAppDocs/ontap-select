@@ -4,7 +4,6 @@ permalink: task_install_deploy.html
 keywords: install, installing, ontap select deploy, deploy administration utility, deploy utility
 summary: You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 ---
-
 = Install ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
@@ -201,9 +200,10 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 * vCenter server with account credentials (optional)
 
 .Related information
+* link:task_cli_signing_in.html[Sign in to Deploy using SSH]
+* link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
 
-link:task_cli_signing_in.html[Sign in to Deploy using SSH]
-
+// 2024 NOV 18, ONTAPDOC-2547
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions

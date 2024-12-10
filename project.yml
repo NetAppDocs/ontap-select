@@ -9,19 +9,19 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
+    - version-number: "9.16.1"
+      url: /ontap-select
     - version-number: "9.15.1"
-      url: /ontap-select  
+      url: /ontap-select-9151 
     - version-number: "9.14.1"
       url: /ontap-select-9141
     - version-number: "9.13.1"
       url: /ontap-select-9131        
     - version-number: "9.12.1"
-      url: /ontap-select-9121    
-    - version-number: "9.11.1"
-      url: /ontap-select-9111         
+      url: /ontap-select-9121             
 sidebar:
   entries:
-    - title: ONTAP Select 9.15.1 docs
+    - title: ONTAP Select 9.16.1 docs
       url: /index.html
     - title: Release Notes
       entries:
@@ -31,7 +31,7 @@ sidebar:
           url: /reference_new_ots.html
     - title: Concepts
       entries:
-        - title: Product overview
+        - title: ONTAP Select overview
           url: /concept_ots_overview.html
         - title: ONTAP Select Deploy
           url: /concept_ots_deploy.html
@@ -141,25 +141,25 @@ sidebar:
           url: /concept_adm_upgrading_nodes.html
         - title: Diagnostics and support
           url: /task_adm_support.html
-        - title: Security
+        - title: Secure ONTAP Select
           url: /task_adm_security.html
-        - title: Network connectivity
+        - title: Confirm network connectivity
           url: /task_adm_connectivity.html
-        - title: Mediators
+        - title: Administer mediator services
           url: /task_adm_mediators.html
         - title: Clusters
           entries:
             - title: ONTAP Select clusters
               url: /task_adm_clusters.html
-            - title: Expand or contract the cluster
+            - title: Expand or contract a cluster
               url: /task_cluster_expansion_contraction.html
         - title: Nodes and hosts
           entries:
-            - title: VM video console
+            - title: Access the VM video console
               url: /task_adm_video_console.html
             - title: Resize the cluster nodes
               url: /task_adm_resize.html
-            - title: Replace failed SW RAID drives
+            - title: Replace failed software RAID drives
               url: /task_adm_replace_drives_swraid.html
             - title: Upgrade to VMFS6
               url: /task_adm_upgrade_vmfs6.html
@@ -277,7 +277,7 @@ sidebar:
           url: /task_cli_clusters.html
         - title: Nodes and hosts
           entries:
-            - title: Upgrading ESXi to 6.5 and higher
+            - title: Upgrade ESXi to 6.5 and higher
               url: /task_cli_upgrade_esxi65.html
             - title: Modify a host management server
               url: /reference_host_modify_command.html
@@ -293,6 +293,8 @@ sidebar:
               url: /task_cli_deploy_image_remove.html
             - title: Recover Deploy for a two-node cluster
               url: /task_cli_deploy_recover_two_node.html
+    - title: Deploy a 90-day evaluation instance of a cluster
+      url: /deploy-evaluation-ontap-select-ovf-template.html
     - title: FAQ
       url: /reference_faq.html
     - title: Legal notices

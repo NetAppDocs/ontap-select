@@ -4,8 +4,7 @@ permalink: task_cli_migrate_deploy.html
 keywords: administer, administering, cli, deploy, deploy instance, migrate
 summary: You can migrate an existing instance of the Deploy administration utility to a new virtual machine using the command line interface.
 ---
-
-= Migrate a Deploy instance to a new virtual machine
+= Migrate an ONTAP Select Deploy instance to a new virtual machine
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -21,7 +20,10 @@ This procedure is based on creating a new virtual machine that uses the configur
 You must create a backup of the Deploy configuration data as part of migrating the virtual machine. You should also create a backup after deploying an ONTAP Select cluster. The data is saved to a single encrypted file that you can download to your local workstation.
 
 .Before you begin
-Make sure that Deploy is not performing any other tasks during the backup operation.
+* Make sure that Deploy is not performing any other tasks during the backup operation.
+* Save the original Deploy virtual machine image.
++
+CAUTION: The original Deploy virtual machine image is required later in this procedure when you restore the Deploy configuration data from the original to the new virtual machine.
 
 .About this task
 The backup file you create captures all the configuration data from the virtual machine. This data describes aspects of your deployment environment, including the ONTAP Select clusters.
@@ -97,3 +99,5 @@ exit
 Example
 +
 `deploy backup restore -path /home/admin -filename deploy_backup_20180601162151.tar.gz`
+
+// 2024 OCT 29, ONTAPDOC-2513

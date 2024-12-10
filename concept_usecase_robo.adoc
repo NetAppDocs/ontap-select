@@ -4,8 +4,7 @@ permalink: concept_usecase_robo.html
 keywords: ontap select, ROBO, remote office/branch office
 summary: Deploy ONTAP Select in remote office/branch office (ROBO) situations to support smaller offices while maintaining centralized administration and control.
 ---
-
-= Remote and branch office
+= Use ONTAP Select in remote and branch offices
 :hardbreaks:
 :nofooter:
 :icons: font

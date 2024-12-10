@@ -5,7 +5,7 @@ keywords: ontap select, vsan and external array configurations, vnas architectur
 summary: Virtual NAS (vNAS) deployments support ONTAP Select clusters on vSAN, some HCI products, NetApp HCI technology, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
 ---
 
-= vSAN and external array configurations
+= ONTAP Select vSAN and external array configurations
 :hardbreaks:
 :nofooter:
 :icons: font

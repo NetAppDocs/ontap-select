@@ -4,8 +4,7 @@ permalink: reference_plan_ots_hardware.html
 keywords: plan, planning, vmware, hardware, hardware requirements
 summary: There are several hardware requirements and planning issues you should consider related to the VMware environment.
 ---
-
-= VMware hypervisor and hardware considerations
+= ONTAP Select VMware hypervisor and hardware considerations
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -35,6 +34,8 @@ ONTAP Select can be deployed on the following hypervisors:
 * VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1, U2, and U3C
 * VMware ESXi 8.0 GA (build 20513097)
 * VMware ESXi 8.0 U1 (build 21495797)
+* VMware ESXi 8.0 U2
+* VMware ESXi 8.0 U3
 
 [NOTE]
 NetApp supports ONTAP Select on the identified versions of ESXi as long as VMware also continues to support the same versions.
@@ -57,14 +58,15 @@ Refer to the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix 
 
 === Basic hardware requirements
 
-There are several common hardware requirements that apply to all platforms regardless of the node
-instance type or license offering.
+There are several common hardware requirements that apply to all platforms regardless of the node instance type or license offering.
 
 .Processor
 
 The supported microprocessors include the following:
 
 * Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
+
+NOTE: Advanced Micro Devices (AMD) processors aren't supported with ONTAP Select. 
 
 .Ethernet configuration
 
@@ -125,6 +127,7 @@ Premium XL
 [NOTE]
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
+// 2024-NOV-18, ONTAPDOC-2550
 // 2023-APR-12, ONTAPDOC-979
 // 2023-SEP-25, ONTAPDOC-1204
 // 2023-OCT-17, Updated table headings

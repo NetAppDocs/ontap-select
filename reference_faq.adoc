@@ -4,8 +4,7 @@ permalink: reference_faq.html
 keywords: faq, frequently asked questions
 summary: Find answers to common questions about ONTAP Select.
 ---
-
-= Frequently asked questions
+= Frequently asked questions about ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
