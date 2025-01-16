@@ -1,0 +1,6 @@
+---
+permalink: concept_automate_ansible.html
+redirect: ontap-select/index.html
+---
+
+// 2025 JAN 15, ONTAPDOC-2640

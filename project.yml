@@ -261,8 +261,8 @@ sidebar:
               url: /reference_api_script_common.html
             - title: Resize cluster nodes
               url: /reference_api_script_resize.html
-    - title: Automate with Ansible
-      url: /concept_automate_ansible.html
+   # - title: Automate with Ansible
+   #   url: /concept_automate_ansible.html
     - title: Use the CLI
       entries:
         - title: Sign in using SSH
