@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: legal-notices.html
-keywords: 
-summary: 
+keywords: copyrights, notices, trademarks, patents, privacy
+summary: Legal notices provide access to copyright statements, trademarks, patents, and more.
 ---
 
 = Legal notices
@@ -12,33 +12,13 @@ summary:
 :linkattrs:
 :imagesdir: ./media/
 
-[.lead]
-Legal notices provide access to copyright statements, trademarks, patents, and more.
+// Include the common notices
+include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-legal-notices.adoc[]
 
-== Copyright
+// Include the open source notice intro
+include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
-link:https://www.netapp.com/company/legal/copyright/[https://www.netapp.com/company/legal/copyright/^]
-
-== Trademarks
-
-NETAPP, the NETAPP logo, and the marks listed on the NetApp Trademarks page are trademarks of NetApp, Inc. Other company and product names may be trademarks of their respective owners.
-
-link:https://www.netapp.com/company/legal/trademarks/[https://www.netapp.com/company/legal/trademarks/^]
-
-== Patents
-
-A current list of NetApp owned patents can be found at:
-
-link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf[https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf^]
-
-== Privacy policy
-
-link:https://www.netapp.com/company/legal/privacy-policy/[https://www.netapp.com/company/legal/privacy-policy/^]
-
-== Open source
-
-The notice file provides information about third-party copyright and licenses used in NetApp software.
-
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3330674[Notice for ONTAP Select 9.16.1^]
+// Add required link(s)
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3330674[Notice for ONTAP Select 9.16.1^]
 
 // 2023-12-07, ONTAPDOC-1460
