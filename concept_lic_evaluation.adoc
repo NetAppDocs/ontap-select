@@ -18,7 +18,7 @@ You can deploy ONTAP Select with an evaluation license or a purchased license. T
 ====
 To download the ONTAP Select Deploy administration utility, you need the following:
 
-* A  registered NetApp Support Site account. If you don't have an account, see https://mysupport.netapp.com/site/user/registration[User registration]. 
+* A  registered NetApp Support Site account. If you don't have an account, see https://mysupport.netapp.com/site/user/registration[User registration^]. 
 * To https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[accept the End User License agreement^] for an ONTAP Select deployment with an evaluation license.
 ====
 
