@@ -14,7 +14,13 @@ summary: You can use an evaluation license if you want to evaluate ONTAP Select 
 [.lead]
 You can deploy ONTAP Select with an evaluation license or a purchased license. The license you choose must apply to each of the nodes in the ONTAP Select cluster and therefore to the entire cluster. You can use an evaluation license if you want to evaluate ONTAP Select before making the decision to purchase. The evaluation license is included with the ONTAP Select Deploy administration utility and is automatically applied to each ONTAP Select node as part of an evaluation deployment.
 
-NOTE: You need a registered NetApp Support Site account to download the ONTAP Select Deploy administration utility. For more information, see link:https://docs.netapp.com/us-en/bluexp-tiering/task-support-registration.html[Register for support^].
+[NOTE]
+====
+To download the ONTAP Select Deploy administration utility, you need the following:
+
+* A  registered NetApp Support Site account. If you don't have an account, see https://mysupport.netapp.com/site/user/registration[User registration]. 
+* To https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[accept the End User License agreement^] for an ONTAP Select deployment with an evaluation license.
+====
 
 There are several considerations when deploying and supporting an evaluation cluster:
 
@@ -44,7 +50,8 @@ You can upgrade an ONTAP Select evaluation cluster to use a production license. 
 See link:task_adm_licenses.html[Convert an evaluation license to a production license] for more information.
 
 .Related information
-link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
+* link:https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[Download an evalution license^]
+* link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
 
 // 2025 JAN 17, ONTAPDOC-2556
 // 2024 NOV 18, ONTAPDOC-2547
