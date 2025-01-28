@@ -18,6 +18,10 @@ You need to install the ONTAP Select Deploy administration utility and use the u
 
 You can download the ONTAP Select package from the NetApp support site.
 
+.Before you begin
+https://mysupport.netapp.com/site/user/registration[You have a registered NetApp Support Site account^].
+
+
 .About this task
 The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
@@ -113,7 +117,7 @@ The steps you follow depend on whether you use an ESXi or KVM hypervisor.
 +
 You must define the password for the administrator account. You need to provide this password when signing in to the Deploy utility.
 
-. After the VM is deployed, select the new VM and power it on if it is not already powered on based on your input to the deployment wizard.
+. After the VM is deployed, select the new VM. If it isn't already powered on based on your input to the deployment wizard, power it on manually.
 
 . If needed, you can configure the Deploy network using the VM console:
 .. Click the *Console* tab to access the ESXi host setup shell and monitor the power on process.
@@ -193,7 +197,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 . If the *Welcome to ONTAP Select* pop-up window is displayed, review the prerequisites and select *OK* to continue.
 
-. If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
+. If this is the first time signing in and you didn't install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
 +
 * New password for the administrator account (required)
 * AutoSupport (optional)
@@ -203,6 +207,7 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 * link:task_cli_signing_in.html[Sign in to Deploy using SSH]
 * link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
 
+// 2025 JAN 17, ONTAPDOC-2556
 // 2024 NOV 18, ONTAPDOC-2547
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
