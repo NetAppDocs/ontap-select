@@ -39,7 +39,7 @@ The Deploy administration utility is not assigned a separate version number. Dep
 
 == Illustration of a typical deployment
 
-The following figure illustrates the ONTAP Select Deploy administration utility being used to deploy and support a four-node ONTAP Select cluster. The Deploy utility and ONTAP Select nodes run as separate virtual machines on dedicated hypervisor hosts.
+The following figure illustrates the NetApp ONTAP Select Deploy administration utility being used to deploy and support a four-node ONTAP Select cluster. The Deploy utility and ONTAP Select nodes run as separate virtual machines on dedicated hypervisor hosts.
 
 image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created with the Deploy administration utility.]
 

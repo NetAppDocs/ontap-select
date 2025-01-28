@@ -117,7 +117,7 @@ The steps you follow depend on whether you use an ESXi or KVM hypervisor.
 +
 You must define the password for the administrator account. You need to provide this password when signing in to the Deploy utility.
 
-. After the VM is deployed, select the new VM and power it on if it isn't already powered on based on your input to the deployment wizard.
+. After the VM is deployed, select the new VM. If it isn't already powered on based on your input to the deployment wizard, power it on manually.
 
 . If needed, you can configure the Deploy network using the VM console:
 .. Click the *Console* tab to access the ESXi host setup shell and monitor the power on process.
