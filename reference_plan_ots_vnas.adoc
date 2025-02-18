@@ -19,7 +19,7 @@ ONTAP Select vNAS is a solution allowing the ONTAP Select data stores to be exte
 The ONTAP Select vNAS solution can be used with an ONTAP Select cluster of any size.
 
 All related storage components, including hardware, software, and feature requirements, must adhere to the requirements described in the
-link:https://mysupport.netapp.com/matrix/[NetApp Interoperability Matrix Tool^]. In addition, ONTAP Select supports all external storage arrays described in the VMware Storage/SAN Compatibility documentation, including iSCSI, NAS (NFSv3), Fibre Channel, and Fibre Channel over Ethernet. External array support is limited by the ESXi version supported by ONTAP Select.
+link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. In addition, ONTAP Select supports all external storage arrays described in the VMware Storage/SAN Compatibility documentation, including iSCSI, NAS (NFSv3), Fibre Channel, and Fibre Channel over Ethernet. External array support is limited by the ESXi version supported by ONTAP Select.
 
 The following VMware features are supported when deploying a cluster with ONTAP Select vNAS:
 

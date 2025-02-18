@@ -100,7 +100,7 @@ The hypervisor host must have the required SSD disks attached and available for 
 
 As part of planning an ONTAP Select deployment, you should be aware of the restrictions related to storage allocation and use.
 
-The most important storage restrictions are presented below. You should also review the link:https://mysupport.netapp.com/matrix/[NetApp Interoperability Matrix Tool^] for more detailed information.
+The most important storage restrictions are presented below. You should also review the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^] for more detailed information.
 
 [TIP]
 ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html[License] section for more information.

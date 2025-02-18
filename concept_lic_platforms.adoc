@@ -57,7 +57,79 @@ The premium XL offering provides the following capabilities:
 * MetroCluster SDS
 
 [NOTE]
-Use of the large instance type or NVMe drives in an SW-RAID configuration is not supported on KVM.
+Use of the large instance type or NVMe drives in an SW-RAID configuration is not supported on Kernel-Based Virtual Machine (KVM).
 
+The standard, premium, and premium XL license offerings support a wide range of hardware. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
+
+|===
+
+3+^h| h| Standard h|Premium h| Premium XL
+
+.3+a| Core item
+2+| Host protocols 
+3+|  
+2+| Deployment options
+3+| NFS, SMB/CIFS, iSCSI, and NVMe over TCP
+2+| Supported capacity (per node)
+3+| Up to 400TB raw data (ESXi and KVM)
+
+.4+a| Hardware
+2+| CPU family 
+3+| Intel Xeon E5-26xx v3 (Haswell) or later	
+2+| Select CPU / Memory	
+| 4 vCPUs / 16GB of RAM	
+| 8 vCPUs / 64GB of RAM	
+| 16 vCPUs / 128GB of RAM
+2+| Host CPU / Memory minimum requirements ^1^	
+| 6 cores / 24GB of RAM	
+| 10 cores / 72GB of RAM
+| 18 cores / 136GB of RAM
+2+| Network (per node)
+3+| Minimum two x 1GbE ports for a single node
+
+Minimum four x 1GbE ports for a two-node cluster (HA pair)
+
+Minimum two x 10GbE ports for a four-, six-, or eight-node cluster
+
+.4+a| Storage types
+.2+a| Local DAS with hardware RAID controller
+
+| HDD (SAS, NL-SAS, SATA)
+3+| 8 - 60 drives
+| SSD (SAS)
+| N/A	
+| 4 – 60 drives	
+| 4 – 60 drives
+2+| Local DAS with software RAID
+| N/A
+| 4 – 60 drives (SSD only)
+| 4 – 60 drives (SSD only)
+2+| External arrays ^2^
+3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS is not supported for KVM). These datastores provide high availability and resilience.
+
+.3+a| Software
+2+|Hypervisor support (VMware)
+3+| VMware vSphere 7.0GA and updates 1, 2, and 3C 
+
+VMware vSphere 8.0GA and updates 1, 2, and 3
+2+| Hypervisor support (KVM)
+3+| RedHat Enterprise Linux 64-bit (KVM) 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
+
+Rocky Linux (KVM) 9 and 8
+2+| Management software
+3+| Active IQ Unified Manager management suite
+
+ONTAP Select Deploy Utility
+
+SnapCenter (optional)
+
+|===
+
+^1^ Assumes two cores and 8Gb RAM for the hypervisor
+
+^2^ External array protocol support reflects networked storage connectivity
+
+
+// 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
 // 2023-12-12, ONTAPDOC-1525
