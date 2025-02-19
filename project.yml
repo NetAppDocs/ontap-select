@@ -43,8 +43,8 @@ sidebar:
               url: /concept_usecase_robo.html
             - title: Private cloud and data center
               url: /concept_usecase_private_cloud.html
-            - title: MetroCluster SDS
-              url: /concept_usecase_mc_sds.html
+            - title: Learn about ONTAP Select data protection and efficiency
+              url: /concept-data-protection-and-efficiency.html
         - title: Terminology
           url: /concept_terminology.html
     - title: Plan
