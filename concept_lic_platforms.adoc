@@ -82,7 +82,7 @@ Four-, six-, or eight-node cluster
 2+| CPU family 
 3+| Intel Xeon E5-26xx v3 (Haswell) or later	
 2+| Select CPU / Memory	
-| 4 vCPUs / 16GB of RAM	
+| 4 virtual CPUs (vCPUs) / 16GB of RAM	
 | 8 vCPUs / 64GB of RAM	
 | 16 vCPUs / 128GB of RAM
 2+| Host CPU / Memory minimum requirements ^1^	
