@@ -14,9 +14,9 @@ summary: There are several related tasks you can perform as part of administerin
 [.lead]
 There are several related tasks you can perform as part of administering the ONTAP Select licenses.
 
-== Manage the capacity tier licenses
+== Manage the Capacity Tier licenses
 
-You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
+You can add, edit, and delete ONTAP Select Capacity Tier licenses as needed.
 
 .Steps
 
@@ -33,9 +33,9 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
 . To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
-== Manage the capacity pool licenses
+== Manage the Capacity Pool licenses
 
-You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
+You can add, edit, and delete ONTAP Select Capacity Pool licenses as needed.
 
 .Steps
 
@@ -51,7 +51,7 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 . To add a new license or renew an existing license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
 
-. To see a list of the capacity pools:
+. To see a list of the Capacity Pools:
 .. Click *Summary*.
 .. Select and expand a pool to see the clusters and nodes leasing storage from the pool.
 .. View the current status of the license under *License Information*.
@@ -61,30 +61,30 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 .. Click *Details*.
 .. Select and expand the cluster to see storage utilization.
 
-== Reinstall a capacity pool license
+== Reinstall a Capacity Pool license
 
-Every active capacity pool license is locked to a specific License Manager instance, which is contained within an instance of the Deploy administration utility. If you are using a capacity pool license and then restore or recover the Deploy instance, the original license is no longer valid. You must generate a new capacity license file, and then install the license to the new Deploy instance.
+Every active Capacity Pool license is locked to a specific License Manager instance, which is contained within an instance of the Deploy administration utility. If you are using a Capacity Pool license and then restore or recover the Deploy instance, the original license is no longer valid. You must generate a new capacity license file, and then install the license to the new Deploy instance.
 
 .Before you begin
 
-* Determine all the capacity pool licenses used by the original Deploy instance.
+* Determine all the Capacity Pool licenses used by the original Deploy instance.
 * If you restore a backup as part of creating the new Deploy instance, determine if the backup is current and up-to-date.
 * Locate the ONTAP Select nodes that were most recently created by the original Deploy instance (only if an up-to-date backup from the original Deploy instance is not restored to the new Deploy instance).
 * Restore or recreate the Deploy instance
 
 .About this task
 
-At a high level, this task is composed of three parts. You must regenerate and install all the capacity pool licenses used by the Deploy instance. After all the licenses have been reinstalled to the new Deploy instance, you can reset the serial sequence number if needed. Finally, if the Deploy IP address has changed, you must update every ONTAP Select node that uses a capacity pools license.
+At a high level, this task is composed of three parts. You must regenerate and install all the Capacity Pool licenses used by the Deploy instance. After all the licenses have been reinstalled to the new Deploy instance, you can reset the serial sequence number if needed. Finally, if the Deploy IP address has changed, you must update every ONTAP Select node that uses a Capacity Pools license.
 
 .Steps
 
-. Contact NetApp support and have all the capacity pool licenses for the original Deploy instance unbound and unregistered.
+. Contact NetApp support and have all the Capacity Pool licenses for the original Deploy instance unbound and unregistered.
 
-. Acquire and download a new license file for each of the capacity pool licenses.
+. Acquire and download a new license file for each of the Capacity Pool licenses.
 +
-See link:task_lic_acquire_cp.html[Acquire a capacity pool license] for more information.
+See link:task_lic_acquire_cp.html[Acquire a Capacity Pool license] for more information.
 
-. Install the capacity pool licenses at the new Deploy instance:
+. Install the Capacity Pool licenses at the new Deploy instance:
 .. Sign in to the Deploy utility web user interface using the administrator account.
 .. Click the *Administration* tab at the top of the page.
 .. Click *Licenses* and then click *Capacity Pool*.
@@ -101,7 +101,7 @@ See link:task_lic_acquire_cp.html[Acquire a capacity pool license] for more info
 +
 `license-manager modify -serial-sequence SEQ_NUMBER`
 
-. If the IP address assigned to the new Deploy instance is different than the IP address of the original Deploy instance, you must update the IP address at every ONTAP Select node that uses a capacity pools license:
+. If the IP address assigned to the new Deploy instance is different than the IP address of the original Deploy instance, you must update the IP address at every ONTAP Select node that uses a Capacity Pools license:
 .. Sign in to the ONTAP command line interface of the ONTAP Select node.
 .. Enter advanced privilege mode:
 +
@@ -115,12 +115,12 @@ See link:task_lic_acquire_cp.html[Acquire a capacity pool license] for more info
 
 == Convert an evaluation license to a production license
 
-You can upgrade an ONTAP Select evaluation cluster to use a production capacity tier license with the Deploy administration utility.
+You can upgrade an ONTAP Select evaluation cluster to use a production Capacity Tier license with the Deploy administration utility.
 
 .Before you begin
 
 * Each node must have enough storage allocated to support the minimum required for a production license.
-* You must have capacity tier licenses for each node in the evaluation cluster.
+* You must have Capacity Tier licenses for each node in the evaluation cluster.
 
 .About this task
 
@@ -146,7 +146,7 @@ The license upgrade for the cluster can take several minutes. Allow the process 
 
 The twenty-digit node serial numbers originally assigned to each node for the evaluation deployment are replaced by the nine-digit serial numbers from the production licenses used for the upgrade.
 
-== Manage an expired capacity pool license 
+== Manage an expired Capacity Pool license 
 
 Generally, when a license expires, nothing happens. However, you cannot install a different license because the nodes are associated with the expired license. Until you renew the license, you should _not_ do anything that would bring the aggregate offline, such as a reboot or failover operation.  The recommended action is to expedite the license renewal.
 

@@ -93,7 +93,7 @@ sidebar:
               url: /concept_lic_production.html
             - title: Platform license offerings
               url: /concept_lic_platforms.html
-        - title: Capacity pools licensing model
+        - title: Capacity Pools licensing model
           entries:
             - title: Operational details
               url: /concept_lic_cp_operation.html
@@ -101,7 +101,7 @@ sidebar:
               url: /concept_lic_cp_serial_number.html
             - title: Restrictions
               url: /concept_lic_cp_restrictions.html
-            - title: Capacity pools versus capacity tiers
+            - title: Capacity Pools versus Capacity Tiers
               url: /concept_lic_cp_compare_ct.html
             - title: Summary of benefits
               url: /concept_lic_cp_benefits.html
@@ -109,9 +109,9 @@ sidebar:
           entries:
             - title: Licensing workflow
               url: /concept_lic_workflow.html
-            - title: Capacity tiers
+            - title: Capacity Tiers
               url: /task_lic_acquire_ct.html
-            - title: Capacity pools
+            - title: Capacity Pools
               url: /task_lic_acquire_cp.html
         - title: ONTAP features
           url: /reference_lic_ontap_features.html

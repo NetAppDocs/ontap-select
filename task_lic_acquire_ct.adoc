@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
 permalink: task_lic_acquire_ct.html
-keywords: license, licensing, acquire, capacity tiers
-summary: When using capacity tiers licensing, you need to acquire a license file for each ONTAP Select node. The license file defines the storage capacity for the node and is locked to the node through the unique nine-digit serial number assigned by NetApp.
+keywords: license, licensing, acquire, Capacity Tiers
+summary: When using Capacity Tiers licensing, you need to acquire a license file for each ONTAP Select node. The license file defines the storage capacity for the node and is locked to the node through the unique nine-digit serial number assigned by NetApp.
 ---
-= Acquire an ONTAP Select capacity tier license
+= Acquire an ONTAP Select Capacity Tier license
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,13 +12,13 @@ summary: When using capacity tiers licensing, you need to acquire a license file
 :imagesdir: ./media/
 
 [.lead]
-When using capacity tiers licensing, you need to acquire a license file for each ONTAP Select node. The license file defines the storage capacity for the node and is locked to the node through the unique nine-digit serial number assigned by NetApp.
+When using Capacity Tiers licensing, you need to acquire a license file for each ONTAP Select node. The license file defines the storage capacity for the node and is locked to the node through the unique nine-digit serial number assigned by NetApp.
 
 .Before you begin
 You must have the nine-digit license serial number assigned to the node by NetApp. Before attempting to acquire a license file, you should wait at least twenty four hours after the shipped date of your purchase order.
 
 .About this task
-You must perform this task for each ONTAP Select node requiring a capacity tier license.
+You must perform this task for each ONTAP Select node requiring a Capacity Tier license.
 
 .Steps
 
