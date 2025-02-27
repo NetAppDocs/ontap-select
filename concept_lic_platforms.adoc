@@ -64,7 +64,7 @@ The standard, premium, and premium XL license offerings support a wide range of 
 
 |===
 
-2+h|Core item h| Standard h|Premium h| Premium XL
+2+h|Core item 3+h| Standard, Premium, and Premium XL
 
 2+| Host protocols 
 3+| NFS, SMB/CIFS, iSCSI, and NVMe over TCP
@@ -76,13 +76,12 @@ Two-node cluster (HA pair)
 Four-, six-, or eight-node cluster
 2+| Supported capacity (per node)
 3+| Up to 400TB raw data (ESXi and KVM)
-|===
-
-|===
 
 2+h|Hardware h| Standard h|Premium h| Premium XL
 2+| CPU family 
-3+| Intel Xeon E5-26xx v3 (Haswell) or later	
+| Intel Xeon E5-26xx v3 (Haswell) or later	
+| Intel Xeon E5-26xx v3 (Haswell) or later	
+| Intel Xeon E5-26xx v3 (Haswell) or later	
 2+| Select CPU / Memory	
 | 4 virtual CPUs (vCPUs) / 16GB of RAM	
 | 8 vCPUs / 64GB of RAM	
@@ -97,11 +96,6 @@ Four-, six-, or eight-node cluster
 Minimum of four x 1GbE ports for a two-node cluster (HA pair)
 
 Minimum of two x 10GbE ports for a four-, six-, or eight-node cluster
-|===
-
-^1^ Assumes two cores and 8Gb RAM for the hypervisor.
-
-|===
 
 2+h| Storage types h| Standard h|Premium h| Premium XL
 .2+a| Local DAS with hardware RAID controller
@@ -120,13 +114,8 @@ Minimum of two x 10GbE ports for a four-, six-, or eight-node cluster
 | 4 – 60 drives (SSD only)
 2+| External arrays ^2^
 3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
-|===
 
-^2^ External array protocol support reflects networked storage connectivity.
-
-|===
-
-2+h| Software h| Standard h|Premium h| Premium XL
+2+h| Software 3+h| Standard, Premium, and Premium XL
 2+|Hypervisor support (VMware)
 3+| VMware vSphere 7.0GA and updates 1, 2, and 3C 
 
@@ -144,6 +133,9 @@ SnapCenter (optional)
 
 |===
 
+^1^ Assumes two cores and 8Gb RAM for the hypervisor.
+
+^2^ External array protocol support reflects networked storage connectivity.
 // 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
 // 2023-12-12, ONTAPDOC-1525
