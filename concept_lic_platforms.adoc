@@ -62,7 +62,7 @@ Use of the large instance type or NVMe drives in an SW-RAID configuration isn't 
 == Compare hardware support for platform license offerings
 The standard, premium, and premium XL license offerings support a wide range of hardware. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
 
-[cols=5"35,65"*,options="header"]
+[cols=5"30,70"*]
 
 |===
 
