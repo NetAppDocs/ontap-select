@@ -22,16 +22,16 @@ You can add, edit, and delete ONTAP Select capacity tier licenses as needed.
 
 . Sign in to the Deploy utility through the web interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Licenses* and click *Capacity Tier*.
+. Select *Licenses* and select *Capacity Tier*.
 
-. Optionally click *Filter* and to limit the licenses displayed.
+. Optionally select *Filter* and to limit the licenses displayed.
 
-. To replace an existing license; select a license, click image:icon_kebab.gif[Options], and select *Update*.
+. To replace an existing license; select a license, select image:icon_kebab.gif[Options], and select *Update*.
 
 
-. To add a new license, click *Add* at the top of the page and then click *Upload License(s)* and select a license file from your local workstation.
+. To add a new license, select *Add* at the top of the page and then select *Upload License(s)* and select a license file from your local workstation.
 
 == Manage the capacity pool licenses
 
@@ -41,13 +41,13 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 . Sign in to the Deploy utility through the web interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Licenses* and click *Capacity Pools*.
+. Select *Licenses* and select *Capacity Pools*.
 
-. Optionally, click *Filter* and to limit the licenses displayed.
+. Optionally, select *Filter* and to limit the licenses displayed.
 
-. Optionally, select a license and click image:icon_kebab.gif[Options] to manage an existing license.
+. Optionally, select a license and select image:icon_kebab.gif[Options] to manage an existing license.
 
 . Add a new license or renew an existing license:
 +
@@ -71,13 +71,13 @@ To renew an existing license:
 ====
 
 . To see a list of the capacity pools:
-.. Click *Summary*.
+.. Select *Summary*.
 .. Select and expand a pool to see the clusters and nodes leasing storage from the pool.
 .. View the current status of the license under *License Information*.
 .. You can change the duration of the leases issued for the pool under Lease expiration.
 
 . To see a list of the clusters:
-.. Click *Details*.
+.. Select *Details*.
 .. Select and expand the cluster to see storage utilization.
 
 == Reinstall a capacity pool license
@@ -105,9 +105,9 @@ See link:task_lic_acquire_cp.html[Acquire a capacity pool license] for more info
 
 . Install the capacity pool licenses at the new Deploy instance:
 .. Sign in to the Deploy utility web user interface using the administrator account.
-.. Click the *Administration* tab at the top of the page.
-.. Click *Licenses* and then click *Capacity Pool*.
-.. Click *Add* and then *Upload License(s)* to select and upload the licenses.
+.. Select the *Administration* tab at the top of the page.
+.. Select *Licenses* and then select *Capacity Pool*.
+.. Select *Add* and then *Upload License(s)* to select and upload the licenses.
 
 . If you created the new Deploy instance without restoring a backup, or you used a backup that was not current and up-to-date, you must update the serial sequence number:
 .. Sign in to the Deploy utility command line interface using the administrator account.
@@ -149,15 +149,15 @@ Performing a modification of the cluster license for a single-node cluster is di
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Clusters* tab a the top of the page and select the desired cluster.
+. Select the *Clusters* tab a the top of the page and select the desired cluster.
 
-. At the top of the cluster details page, click *Click here* to modify the cluster license.
+. At the top of the cluster details page, select *Click here* to modify the cluster license.
 +
-You can also click *Modify* next to evaluation license in the *Cluster Details* section.
+You can also select *Modify* next to evaluation license in the *Cluster Details* section.
 
 . Select an available production license for each node or upload additional licenses as needed.
 
-. Provide the ONTAP credentials and click *Modify*.
+. Provide the ONTAP credentials and select *Modify*.
 +
 The license upgrade for the cluster can take several minutes. Allow the process to complete before leaving the page or making any other changes.
 
