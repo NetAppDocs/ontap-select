@@ -45,9 +45,9 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 . Click *Licenses* and click *Capacity Pools*.
 
-. Optionally click *Filter* and to limit the licenses displayed.
+. Optionally, click *Filter* and to limit the licenses displayed.
 
-. Optionally select a license and click image:icon_kebab.gif[Options] to manage an existing license.
+. Optionally, select a license and click image:icon_kebab.gif[Options] to manage an existing license.
 
 . Add a new license or renew an existing license:
 +
@@ -56,12 +56,13 @@ You can add, edit, and delete ONTAP Select capacity pool licenses as needed.
 
 .Add new license
 --
-* To add a new license, select *Add* at the top of the page.
+To add a new license, select *Add* at the top of the page.
 --
 
 .Renew existing license
 --
-* To renew an existing license: 
+To renew an existing license:
+ 
 .. Select image:icon_kebab.gif[Options] on an existing license.
 .. Select *Upload License(s)*. 
 .. Select a license file from your local workstation.
