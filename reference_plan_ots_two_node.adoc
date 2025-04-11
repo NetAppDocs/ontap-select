@@ -41,6 +41,30 @@ Because the two-node clusters are typically deployed in a remote or branch offic
 
 It is a best practice to back up the Deploy configuration data on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because of the mediator configuration data included with the backup.
 
+.Steps
+
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+
+. Create a backup of the Deploy configuration data, which is stored in an internal directory at the Deploy server:
++
+`deploy backup create`
+
+. Provide a password for the backup when prompted.
++
+The backup file is encrypted based on the password.
+
+. Display the available backups in the system:
++
+`deploy backup show -detailed`
+
+. Select your backup file based on the date in the *Created* field and record the *Download URL* value.
++
+You can access the backup file through the URL.
+
+. Using a web browser or utility such as Curl, download the backup file to your local workstation with the URL.
+
 .Static IP address assigned to Deploy
 
 You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.
+
+// 2025 Apr 11, ONTAPDOC-2246
