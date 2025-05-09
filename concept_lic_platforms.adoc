@@ -61,13 +61,13 @@ Use of the large instance type or NVMe drives in an SW-RAID configuration isn't 
 
 == Compare hardware support for platform license offerings
 
-The standard, premium, and premium XL license offerings support a wide range of hardware. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
+The standard, premium, and premium XL license offerings support a wide range of hardware and software. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
 
 [cols=5"30,70"*]
 
 |===
 
-2+h|Core item 3+h| Standard, Premium, and Premium XL
+2+h|Core item 3+h| Description
 
 2+| Host protocols 
 3+| NFS, SMB/CIFS, iSCSI, and NVMe over TCP
@@ -80,15 +80,21 @@ Four-, six-, or eight-node cluster
 2+| Supported capacity (per node)
 3+| Up to 400TB raw data (ESXi and KVM)
 
-2+h|Hardware h| Standard h|Premium h| Premium XL
+2+h|Hardware 3+h| Description
 2+| CPU family 
 | Intel Xeon E5-26xx v3 (Haswell) or later	
 | Intel Xeon E5-26xx v3 (Haswell) or later	
 | Intel Xeon E5-26xx v3 (Haswell) or later	
 2+| Select CPU / Memory	
-| 4 virtual CPUs (vCPUs) / 16GB of RAM	
-| 8 vCPUs / 64GB of RAM	
+| 4 virtual CPUs (vCPUs) / 16GB of RAM
+
+(small instance size)	
+| 8 vCPUs / 64GB of RAM
+
+(medium instance size)	
 | 16 vCPUs / 128GB of RAM
+
+(large instance size)
 2+| Host CPU / Memory minimum requirements ^1^	
 | 6 cores / 24GB of RAM	
 | 10 cores / 72GB of RAM
@@ -99,30 +105,41 @@ Four-, six-, or eight-node cluster
 Minimum of four x 1GbE ports for a two-node cluster (HA pair)
 
 Minimum of two x 10GbE ports for a four-, six-, or eight-node cluster
+|===
 
-2+h| Storage types h| Standard h|Premium h| Premium XL
-.2+a| Local DAS with hardware RAID controller
+^1^ Assumes two cores and 8Gb RAM for the hypervisor.
 
-| HDD (SAS, NL-SAS, SATA)
+[cols=5"30,70"*]
+
+|===
+
+2+h| License Types ^1^ h| Standard h|Premium h| Premium XL
+2+h| Instance size support h| Small h| Small, medium h| Small, medium, large
+2+h| Storage types 3+h| Description
+2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
 | 8 - 60 drives
 | 8 - 60 drives
-| SSD (SAS)
+2+| HDD (SAS, NL-SAS, SATA)
 | Not applicable	
 | 4 – 60 drives	
 | 4 – 60 drives
-2+| Local DAS with software RAID
+2+| SSD (SAS)
 | Not applicable
 | 4 – 60 drives (SSD only)
 | 4 – 60 drives (SSD only)
+2+| Local DAS with software RAID
+| Not applicable
+| Not applicable
+| 4 - 14 drives (NVMe only)
 2+| External arrays ^2^
 3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
 
-2+h| Software 3+h| Standard, Premium, and Premium XL
+2+h| Software 3+h| Description
 2+|Hypervisor support (VMware)
-3+| VMware vSphere 7.0GA and updates 1, 2, and 3C 
+3+| VMware vSphere 7.0GA and updates 1 through 3C 
 
-VMware vSphere 8.0GA and updates 1, 2, and 3
+VMware vSphere 8.0GA and updates 1 through 3
 2+| Hypervisor support (KVM)
 3+| RedHat Enterprise Linux 64-bit (KVM) 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
 
@@ -136,9 +153,12 @@ SnapCenter (optional)
 
 |===
 
-^1^ Assumes two cores and 8Gb RAM for the hypervisor.
+^1^ For storage types and software, the standard license is limited to a small instance and the premium license to a small or medium instance.
 
 ^2^ External array protocol support reflects networked storage connectivity.
+
+
+
 // 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
 // 2023-12-12, ONTAPDOC-1525
