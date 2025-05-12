@@ -126,6 +126,7 @@ The following table provides the minimum license type required for the specified
 
 |===
 2+h| Storage type 3+h| Description
+2+h|License type h| Standard h| Premium h| Pemium XL
 2+h|Instance size h| Small h| Small and medium h| Small medium, and large
 2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
