@@ -70,8 +70,8 @@ The standard, premium, and premium XL license offerings support a wide range of 
 [cols=5"30,70"*]
 |===
 
-2+h| License Models 3+h| Capacity Tiers and Capacity Pools
-2+h| License Types 3+h| Standard, premium, and premium XL
+2+h| License models 3+h| Capacity Tiers and Capacity Pools
+2+h| License types 3+h| Standard, premium, and premium XL
 
 2+| Host protocols 
 3+| NFS, SMB/CIFS, iSCSI, and NVMe over TCP
@@ -91,8 +91,8 @@ Four-, six-, or eight-node cluster
 [cols=5"30,70"*]
 |===
 
-2+h| License Models 3+h| Capacity Tiers and Capacity Pools
-2+h| License Types 3+h| Standard, premium, and premium XL
+2+h| License models 3+h| Capacity Tiers and Capacity Pools
+2+h| License types 3+h| Standard, premium, and premium XL
 2+h|Instance size h| Small h| Medium h| Large
 2+| CPU family 
 | Intel Xeon E5-26xx v3 (Haswell) or later	
@@ -128,8 +128,8 @@ The following table provides the minimum license type required for the specified
 [cols=5"30,70"*]
 
 |===
-2+h| License Models 3+h| Capacity Tiers and Capacity Pools
-2+h| License Types h| Standard h|Premium h| Premium XL
+2+h| License models 3+h| Capacity Tiers and Capacity Pools
+2+h| License type h| Standard h|Premium h| Premium XL
 2+h|Instance size h| Small h| Small and medium h| Small medium, and large
 2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
@@ -151,17 +151,17 @@ The following table provides the minimum license type required for the specified
 3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
 
 |===
---
+
 
 ^1^ External array protocol support reflects networked storage connectivity.
-
+--
 .Software
 --
 [cols=5"30,70"*]
 |===
 
-2+h| License Models 3+h| Capacity Tiers and Capacity Pools
-2+h| License Types 3+h| Standard, premium, and premium XL
+2+h| License models 3+h| Capacity Tiers and Capacity Pools
+2+h| License types 3+h| Standard, premium, and premium XL
 2+|Hypervisor support (VMware)
 3+| VMware vSphere 7.0GA and updates 1 through 3C 
 
