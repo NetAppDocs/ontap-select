@@ -12,7 +12,7 @@ summary: You can purchase an ONTAP Select Capacity Tier or Capacity Pool license
 :imagesdir: ./media/
 
 [.lead]
-You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
+You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in one of three platform capacity levels: Standard, Premium, and Premium XL. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 
 == What a platform license offering provides
 
@@ -63,11 +63,15 @@ Use of the large instance type or NVMe drives in an SW-RAID configuration isn't 
 
 The standard, premium, and premium XL license offerings support a wide range of hardware and software. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
 
+[role="tabbed-block"]
+====
+.Core item
+--
 [cols=5"30,70"*]
-
 |===
 
-2+h|Core item 3+h| Description
+2+h| License Models 3+h| Capacity Tiers and Capacity Pools
+2+h| License Types 3+h| Standard, premium, and premium XL
 
 2+| Host protocols 
 3+| NFS, SMB/CIFS, iSCSI, and NVMe over TCP
@@ -79,8 +83,17 @@ Two-node cluster (HA pair)
 Four-, six-, or eight-node cluster
 2+| Supported capacity (per node)
 3+| Up to 400TB raw data (ESXi and KVM)
+|===
+--
 
-2+h|Hardware 3+h| Description
+.Hardware
+--
+[cols=5"30,70"*]
+|===
+
+2+h| License Models 3+h| Capacity Tiers and Capacity Pools
+2+h| License Types 3+h| Standard, premium, and premium XL
+2+h|Instance size h| Small h| Medium h| Large
 2+| CPU family 
 | Intel Xeon E5-26xx v3 (Haswell) or later	
 | Intel Xeon E5-26xx v3 (Haswell) or later	
@@ -88,13 +101,10 @@ Four-, six-, or eight-node cluster
 2+| Select CPU / Memory	
 | 4 virtual CPUs (vCPUs) / 16GB of RAM
 
-(small instance size)	
 | 8 vCPUs / 64GB of RAM
-
-(medium instance size)	
+	
 | 16 vCPUs / 128GB of RAM
 
-(large instance size)
 2+| Host CPU / Memory minimum requirements ^1^	
 | 6 cores / 24GB of RAM	
 | 10 cores / 72GB of RAM
@@ -108,14 +118,19 @@ Minimum of two x 10GbE ports for a four-, six-, or eight-node cluster
 |===
 
 ^1^ Assumes two cores and 8Gb RAM for the hypervisor.
+--
+
+.Storage type
+--
+
+The following table provides the minimum license type required for the specified storage. 
 
 [cols=5"30,70"*]
 
 |===
-
-2+h| License Types ^1^ h| Standard h|Premium h| Premium XL
-2+h| Instance size support h| Small h| Small, medium h| Small, medium, large
-2+h| Storage types 3+h| Description
+2+h| License Models 3+h| Capacity Tiers and Capacity Pools
+2+h| License Types h| Standard h|Premium h| Premium XL
+2+h|Instance size h| Small h| Small and medium h| Small medium, and large
 2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
 | 8 - 60 drives
@@ -132,10 +147,21 @@ Minimum of two x 10GbE ports for a four-, six-, or eight-node cluster
 | Not applicable
 | Not applicable
 | 4 - 14 drives (NVMe only)
-2+| External arrays ^2^
+2+| External arrays ^1^
 3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
 
-2+h| Software 3+h| Description
+|===
+--
+
+^1^ External array protocol support reflects networked storage connectivity.
+
+.Software
+--
+[cols=5"30,70"*]
+|===
+
+2+h| License Models 3+h| Capacity Tiers and Capacity Pools
+2+h| License Types 3+h| Standard, premium, and premium XL
 2+|Hypervisor support (VMware)
 3+| VMware vSphere 7.0GA and updates 1 through 3C 
 
@@ -153,11 +179,10 @@ SnapCenter (optional)
 
 |===
 
-^1^ For storage types and software, the standard license is limited to a small instance and the premium license to a small or medium instance.
-
-^2^ External array protocol support reflects networked storage connectivity.
-
-
+--
+====
+.Related information
+link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types].
 
 // 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
