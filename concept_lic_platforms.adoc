@@ -12,7 +12,7 @@ summary: You can purchase an ONTAP Select Capacity Tier or Capacity Pool license
 :imagesdir: ./media/
 
 [.lead]
-You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in one of three platform capacity levels: Standard, Premium, and Premium XL. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
+You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in the standard, premium, or premium XL level. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 
 == What a platform license offering provides
 
@@ -127,7 +127,7 @@ The following table provides the minimum license type required for the specified
 |===
 2+h| Storage type 3+h| Description
 2+h|License type h| Standard h| Premium h| Pemium XL
-2+h|Instance size h| Small h| Small and medium h| Small medium, and large
+2+h|Instance size h| Small h| Small and medium h| Small, medium, and large
 2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
 | 8 - 60 drives
