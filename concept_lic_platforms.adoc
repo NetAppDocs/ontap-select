@@ -4,7 +4,7 @@ permalink: concept_lic_platforms.html
 keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl
 summary: You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 ---
-= Understand the platform license offerings for ONTAP Select
+= Learn about the platform license offerings for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -16,7 +16,7 @@ You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in the s
 
 == What a platform license offering provides
 
-A specific license offering defines and restrictions the capabilities of the hypervisor host in two areas:
+A specific license offering defines and restricts the capabilities of the hypervisor host in two areas:
 
 * Instance type (CPU, memory)
 * Additional features
@@ -41,7 +41,7 @@ The standard offering provides the following capabilities:
 The premium offering provides the following capabilities:
 
 * Small or medium instance type
-* Hard disk drives (HDD) or Solid state drives (SSD)
+* Hard disk drives (HDD) or solid state drives (SSD)
 * Local hardware RAID controller or software RAID
 * vNAS
 * MetroCluster SDS
@@ -95,23 +95,23 @@ Four-, six-, or eight-node cluster
 | Intel Xeon E5-26xx v3 (Haswell) or later	
 | Intel Xeon E5-26xx v3 (Haswell) or later	
 | Intel Xeon E5-26xx v3 (Haswell) or later	
-2+| Select CPU / Memory	
+2+| ONTAP Select CPU / memory	
 | 4 virtual CPUs (vCPUs) / 16GB of RAM
 
 | 8 vCPUs / 64GB of RAM
 	
 | 16 vCPUs / 128GB of RAM
 
-2+| Host CPU / Memory minimum requirements ^1^	
+2+| Host CPU / memory minimum requirements ^1^	
 | 6 cores / 24GB of RAM	
 | 10 cores / 72GB of RAM
 | 18 cores / 136GB of RAM
 2+| Network (per node)
-3+| Minimum of two x 1GbE ports for a single node
+3+| Minimum of two 1GbE ports for a single node cluster
 
-Minimum of four x 1GbE ports for a two-node cluster (HA pair)
+Minimum of four 1GbE ports for a two-node cluster (HA pair)
 
-Minimum of two x 10GbE ports for a four-, six-, or eight-node cluster
+Minimum of two 10GbE ports for a four-, six-, or eight-node cluster
 |===
 
 ^1^ Assumes two cores and 8Gb RAM for the hypervisor.
