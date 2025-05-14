@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_cp_operation.html
-keywords: license, licensing, capacity pools, operation details
-summary: The capacity pools licensing model is different from the capacity tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the capacity pools model.
+keywords: license, licensing, Capacity Pools, operation details
+summary: The Capacity Pools licensing model is different from the Capacity Tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the Capacity Pools model.
 ---
-= Operational details for ONTAP Select capacity pools licensing model
+= Operational details for ONTAP Select Capacity Pools licensing model
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,24 +12,24 @@ summary: The capacity pools licensing model is different from the capacity tiers
 :imagesdir: ./media/
 
 [.lead]
-The capacity pools licensing model is different from the capacity tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the capacity pools model.
+The Capacity Pools licensing model is different from the Capacity Tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the Capacity Pools model.
 
 == License Manager
 
 The License Manager runs as a separate process within each instance of the Deploy administration utility. Some of the functions provided by LM include:
 
-* Generate a unique twenty-digit serial number for each node based on the capacity pool license serial number
-* Create leases for capacity from the shared capacity pools based on requests from the ONTAP Select nodes
+* Generate a unique twenty-digit serial number for each node based on the Capacity Pool license serial number
+* Create leases for capacity from the shared Capacity Pools based on requests from the ONTAP Select nodes
 * Report pool usage information through the Deploy user interface
 
 == Lease characteristics
 
-The storage allocated for every data aggregate at a node using a capacity pool license must have an associated lease. The node requests a storage lease and if the capacity is available, the License Manager responds with a lease. Each lease has the following explicit or implicit attributes:
+The storage allocated for every data aggregate at a node using a Capacity Pool license must have an associated lease. The node requests a storage lease and if the capacity is available, the License Manager responds with a lease. Each lease has the following explicit or implicit attributes:
 
 * License Manager
 Every ONTAP Select node is associated with one License Manager instance
-* Capacity pool
-Every ONTAP Select node is associated with one capacity pool
+* Capacity Pool
+Every ONTAP Select node is associated with one Capacity Pool
 * Storage allocation
 A specific capacity value is assigned in the lease
 * Expiration date and time
@@ -37,7 +37,7 @@ Leases have a duration of between one hour and seven days depending on the user 
 
 == License Lock ID
 
-Each instance of the License Manager, and therefore each corresponding Deploy utility instance, is identified with a unique 128-bit number. This number is combined with the nine-digit capacity pool license serial number to lock the pool to a specific License Manager instance (which is effectively a Deploy instance). You must provide both values at the NetApp support site as part of generating the NetApp License File (NLF).
+Each instance of the License Manager, and therefore each corresponding Deploy utility instance, is identified with a unique 128-bit number. This number is combined with the nine-digit Capacity Pool license serial number to lock the pool to a specific License Manager instance (which is effectively a Deploy instance). You must provide both values at the NetApp support site as part of generating the NetApp License File (NLF).
 
 You can determine the License Lock ID for your Deploy instance using the web user interface in the following ways:
 
@@ -48,7 +48,7 @@ Click the *Administration* tab a the top of the page, then click *Systems* and *
 
 == Basic lease operations
 
-An ONTAP Select node must locate or request a valid capacity lease every time a data aggregate is created, expanded, or changed. A lease obtained from a previous request that is still valid can be used, or a new lease can be requested if needed. The following steps are taken by the ONTAP Select node to locate a capacity pool lease:
+An ONTAP Select node must locate or request a valid capacity lease every time a data aggregate is created, expanded, or changed. A lease obtained from a previous request that is still valid can be used, or a new lease can be requested if needed. The following steps are taken by the ONTAP Select node to locate a Capacity Pool lease:
 
 . If an existing lease is located at the node, it is used as long as all of the following are true:
 * Lease has not expired
@@ -56,8 +56,8 @@ An ONTAP Select node must locate or request a valid capacity lease every time a 
 
 . If an existing lease cannot be located, the node requests a new lease from the License Manager.
 
-== Return storage capacity to a capacity pool
-Storage capacity is allocated from a capacity pool as needed and each new request can reduce the available storage in the pool. Storage capacity is returned to the pool in several situations, including:
+== Return storage capacity to a Capacity Pool
+Storage capacity is allocated from a Capacity Pool as needed and each new request can reduce the available storage in the pool. Storage capacity is returned to the pool in several situations, including:
 
 * Lease for a data aggregate expires and is not renewed by the node
 * Data aggregate is deleted

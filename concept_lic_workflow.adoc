@@ -14,16 +14,16 @@ summary: You can follow a workflow to purchase and applying a license for your O
 [.lead]
 The following workflow illustrates the process of purchasing and applying a license for your ONTAP Select deployment. When purchasing a license, you must select the licensing model and storage capacity.
 
-The exact process varies based on whether you are using a capacity tier or capacity pool license:
+The exact process varies based on whether you are using a Capacity Tier or Capacity Pool license:
 
 Nine-digit license serial number::
-Serial number applies to either a node (capacity tiers) or a storage pool (capacity pools)
+Serial number applies to either a node (Capacity Tiers) or a storage pool (Capacity Pools)
 
 License Lock ID::
-You must have the License Lock ID for your Deploy instance when using a capacity pool license
+You must have the License Lock ID for your Deploy instance when using a Capacity Pool license
 
 Licensing web site::
-You obtain a capacity tier and capacity pool license at different web sites
+You obtain a Capacity Tier and Capacity Pool license at different web sites
 
 image:purchased_license_workflow.png[Describes the process used to purchase and install a storage license for a production ONTAP Select deployment.]
 

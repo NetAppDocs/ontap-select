@@ -44,7 +44,7 @@ The ONTAP Select evaluation license has the following characteristics:
 You can upgrade an ONTAP Select evaluation cluster to use a production license. You should be aware of the following restrictions:
 
 * You must use the Deploy administration utility to perform the license upgrade
-* A capacity tier license can be used, however capacity pools licensing isn't supported
+* You can use a Capacity Tier license, however Capacity Pools licensing isn't supported
 * Each node must have enough storage allocated to support the minimum required for a production license, based on the cluster size
 
 See link:task_adm_licenses.html[Convert an evaluation license to a production license] for more information.
