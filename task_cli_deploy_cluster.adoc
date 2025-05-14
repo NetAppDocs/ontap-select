@@ -31,7 +31,7 @@ The Deploy administration utility contains a single version of ONTAP Select. If 
 
 === License ONTAP Select for a production deployment
 
-Before deploying an ONTAP Select cluster in a production environment, you must purchase a storage capacity license and download the associated license file. You can license the storage at each node using the _capacity tiers_ model or license a shared pool using the _capacity pools_ model.
+Before deploying an ONTAP Select cluster in a production environment, you must purchase a storage capacity license and download the associated license file. You can license the storage at each node using the _Capacity Tiers_ model or license a shared pool using the _Capacity Pools_ model.
 
 == Upload and register a license file
 
@@ -206,10 +206,10 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 You must configure each of the nodes in the ONTAP Select cluster.
 
 .Before you begin
-You must have the configuration information for the node. The capacity tier license file should be uploaded and installed at the Deploy utility.
+You must have the configuration information for the node. The Capacity Tier license file should be uploaded and installed at the Deploy utility.
 
 .About this task
-You should use this procedure to configure each node. A capacity tier license is applied to the node in this example.
+You should use this procedure to configure each node. A Capacity Tier license is applied to the node in this example.
 
 .Steps
 
@@ -231,7 +231,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.8
 +
 The RAID configuration for the node is indicated with the _passthrough-disks_ parameter. If you are using a local hardware RAID controller, this value must be false. If you are using software RAID, this value must be true.
 +
-A capacity tier license is used for the ONTAP Select node.
+A Capacity Tier license is used for the ONTAP Select node.
 
 . Display the network configuration available at the host:
 +

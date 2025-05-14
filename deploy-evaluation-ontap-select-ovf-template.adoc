@@ -51,6 +51,6 @@ Complete the following steps on a supported 64-bit ESXi host server.
 . After the ONTAP Select cluster has been deployed, you can configure the cluster using the System Manager or the CLI interface. You must assign the disk using the standard ONTAP *disk assign* operation.
 
 .Related information
-link:http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^]
+link:http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^]
 
 // 2024 NOV 18, ONTAPDOC-2547

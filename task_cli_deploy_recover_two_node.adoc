@@ -44,7 +44,7 @@ You must know the IP address of the original Deploy utility virtual machine that
 
 .Storage capacity licensing
 
-You must determine whether capacity pools or capacity tiers licensing is used. If you use capacity pools licensing, you must reinstall each capacity pool license after recovering or restoring the Deploy instance.
+You must determine whether Capacity Pools or Capacity Tiers licensing is used. If you use Capacity Pools licensing, you must reinstall each Capacity Pool license after recovering or restoring the Deploy instance.
 
 .Deciding which recovery procedure to use
 You must decided which procedure to use when recovering an instance of the ONTAP Select Deploy utility. Your decision is based on whether or not you have a backup of the configuration data from the original failed Deploy utility that contains the ONTAP Select two-node cluster.
@@ -120,7 +120,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 .After you finish
 
-If you use capacity pools licensing, you must reinstall each capacity pool license. See _Reinstalling a capacity pool license_ for additional details.
+If you use Capacity Pools licensing, you must reinstall each Capacity Pool license. See _Reinstalling a Capacity Pool license_ for additional details.
 
 == Reconfigure and recover a Deploy utility instance
 
@@ -208,10 +208,10 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 `storage failover show`
 
 .After you finish
-If you use capacity pools licensing, you must reinstall each capacity pool license. See Reinstalling a capacity pool license for additional details.
+If you use Capacity Pools licensing, you must reinstall each Capacity Pool license. See Reinstalling a Capacity Pool license for additional details.
 
 .Related information
 
 * link:task_install_deploy.html[Install ONTAP Select Deploy]
 * link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restore the Deploy configuration data to the new virtual machine]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstall a capacity pool license]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstall a Capacity Pool license]
