@@ -168,7 +168,7 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |TLS (443)
 |ESXi or KVM
 |Each OTS node to Deploy
-|Access Deploy (capacity pools licensing)
+|Access Deploy (Capacity Pools licensing)
 
 |iSCSI (3260)
 |ESXi or KVM

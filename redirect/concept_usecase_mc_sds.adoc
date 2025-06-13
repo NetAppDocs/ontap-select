@@ -1,0 +1,6 @@
+---
+permalink: concept_usecase_mc_sds.html
+redirect: ontap-select/concept-data-protection-and-efficiency.html
+---
+
+// 2025 FEB 18, ONTAPDOC-2678

@@ -4,7 +4,7 @@ permalink: concept_ots_overview.html
 keywords: overview, software defined storage, sds, typical deployment, ontap 9
 summary: ONTAP Select is a software-only version of ONTAP that you deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream FAS and AFF ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.
 ---
-= ONTAP Select overview
+= Learn about ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,11 +12,19 @@ summary: ONTAP Select is a software-only version of ONTAP that you deploy as a v
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream FAS and AFF ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.
+ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream FAS, AFF, and ASA ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.
+
+ONTAP Select converts internal disk drives, NVMe, SSD or HDD, and external array storage, into a flexible storage system with many of the same benefits offered by dedicated ONTAP storage systems. You can also deploy ONTAP Select on new servers or on your existing server infrastructure. ONTAP Select is easy to manage and leverages the same management software as ONTAP based solutions, which means reduced operational overhead and training requirements.
+
+ONTAP Select adapts to your capacity consumption needs with two complementary licensing models — Capacity Tiers and the completely flexible Capacity Pools. Both licensing models allow you to increase capacity in increments of as little as 1TB. For example, you can start with a few terabytes and dynamically add capacity as your project grows. If you are using Capacity Pools, you can redistribute the capacity as you see fit when your project is finished. 
+
+ONTAP Select is integrated into cloud management frameworks such as VMware vSphere. This helps accelerate deployment of new projects such as file services, home directories, software development environments, and application testing. 
+
+SnapMirror software lets you move data between ONTAP storage across the hybrid cloud so that you can easily access your data where you want it. For example, you can bring up an environment quickly to prove an idea. Later, you can move the project to a dedicated storage platform for production deployment or make it more accessible in the cloud as part of a development workflow.
 
 == Software-defined storage
 
-The implementation and delivery of IT services through software allows administrators to rapidly provision resources with a speed and agility that was previously not possible. As modern data centers move to a software-defined infrastructure (SDI) architecture, the most valuable IT assets can be separated from the underlying physical infrastructure, providing flexibility, scalability, and programmability.
+The implementation and delivery of IT services through software allows administrators to rapidly provision resources with a speed and agility that was previously not possible. As modern data centers move to a software-defined infrastructure (SDI) architecture, you can separate the most valuable IT assets from the underlying physical infrastructure, providing flexibility, scalability, and programmability.
 
 In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become more complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
 
@@ -53,7 +61,7 @@ Depending on the number of nodes you define in a cluster, ONTAP Select provides 
 
 === Capacity licensing
 
-ONTAP Select introduces a consumption-based licensing model. You must purchase a license with storage capacity for each node or shared capacity pool when deploying an ONTAP Select cluster in a production environment. Using the Deploy utility, you must apply the license files which establish the storage capacity for the cluster nodes.
+ONTAP Select introduces a consumption-based licensing model. You must purchase a license with storage capacity for each node or shared Capacity Pool when deploying an ONTAP Select cluster in a production environment. Using the Deploy utility, you must apply the license files which establish the storage capacity for the cluster nodes.
 
 === ONTAP feature licensing
 
@@ -105,8 +113,11 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 .Related information
 
-link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[ONTAP features enabled by default]
+link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn about ONTAP features enabled by default]
+link:concept_lic_evaluation.html[Learn about ONTAP Select license options]
 
+
+// 2025 FEB 18, ONTAPDOC-2678
 // 2024 AUG 12, ONTAPDOC-2283
 // 2024 Apr 15, ONTAPDOC-1892
 // 2024 Mar 14, ONTAPDOC-1778
