@@ -15,6 +15,10 @@ summary: The current release includes several new features or improvements speci
 [.lead]
 Learn about the new features and enhancements in supported versions of ONTAP Select.
 
+== ONTAP Select 9.17.1
+
+ONTAP Select 9.16.1 includes several new features and improvements.
+
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 includes several new features and improvements.
