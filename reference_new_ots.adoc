@@ -23,7 +23,15 @@ Updated to FreBSD NDA driver::
 Beginning with ONTAP Select 9.17.1, the NDA driver has been changed to the FreBSD NDA (NVMe Direct Access device driver). This replaces the older driver NVD (NVMe express disk driver), also from FreeBSD.
 +
 This driver provides support for direct access devices, implementing the NVMe command protocol, that are attached to the system through a host adapter supported by the CAM subsystem. The NDA driver integrates with CAM, including its error recovery and advanced queueing. It also offers traffic
-shaping to the drive via the I/O scheduler to improve overall performance. The driver is invoked if NVME devices are attached in backed hardware, such as boot or data disks. Learn more.
+shaping to the drive via the I/O scheduler to improve overall performance. The driver is invoked if NVME devices are attached in backed hardware, such as boot or data disks. 
++
+The reasons for the driver change include the following:
+
+* FreeBSD has deprecated the NVD NVMe driver currently used by ONTAP Select, with the newer NDA driver serving as a supported replacement.
+* Other ONTAP Platforms will switch to the newer NDA driver, which means the driver used by OTS would differ from what other ONTAP platforms use and would become a special maintenance case going forward.
+
++
+Learn more.
 
 == ONTAP Select 9.16.1
 
