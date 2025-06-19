@@ -12,17 +12,17 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-You can increase the size of an existing ONTAP Select cluster from six to eight nodes and decrease the size from eight to six nodes. 
+You can increase the cluster size of an exiting ONTAP Select cluster from a six-node to an eight-node cluster and decrease the size from an eight-node to a six-node cluster 
 
 The following cluster expansions and contractions aren't supported:
 
-* Expansions from one, two, or  four-node clusters to six or eight-node clusters.
+* Expansions from one, two, or four-node clusters to six or eight-node clusters.
 * Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
-You intitiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
+You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
 == Hardware and storage considerations
-The cluster expansion and contraction feature is supported on ESX and KVM hypervisor hosts.
+The cluster expansion and contraction feature is supported on KVM and ESXi hypervisor hosts.
 
 [cols="2a,2a,2a" options="header"]
 |===
@@ -46,11 +46,10 @@ The cluster expansion and contraction feature is supported on ESX and KVM hyperv
 Use the cluster expansion feature to increase the size of an existing cluster from six nodes to eight nodes.
 
 .About this task
-In preparation for cluster expansion, new ESX and KVM hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
+In preparation for cluster expansion, new ESXi and KVM hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
 
 .Before you begin
-* When deploying a multi-node cluster, you should be familiar with the link:https://docs.netapp.com/us-en/ontap-select/task_adm_connectivity.html[network connectivity checker]. 
-
+* When deploying a multi-node cluster, you should be familiar with the link:task_adm_connectivity.html[network connectivity checker].
 * Verify that you have the license details for the new nodes. 
 
 .Steps
@@ -62,7 +61,7 @@ In preparation for cluster expansion, new ESX and KVM hosts are added to the inv
 
 . Navigate to the *HA Pair 4* section.
 
-. Choose the high availability (HA) pair configuration details for the fourth HA pair, including: 
+. Choose the following high availability (HA) pair configuration details for the fourth HA pair: 
 * Instance type
 * Node names 
 * Associated hypervisor hosts 
@@ -73,7 +72,7 @@ In preparation for cluster expansion, new ESX and KVM hosts are added to the inv
 
 . Select *Save HA Pair* to save the configuration details.
 
-. Provide the ONTAP credentials, then select *Expand Cluster*.
+. Provide the ONTAP credentials, and select *Expand Cluster*.
 
 . Select *Next* and run the network pre-check by selecting *Run*. 
 +
