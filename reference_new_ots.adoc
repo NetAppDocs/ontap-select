@@ -17,7 +17,14 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 == ONTAP Select 9.17.1
 
-ONTAP Select 9.16.1 includes several new features and improvements.
+ONTAP Select 9.17.1 includes several new features and improvements.
+
+Enhanced VMware ESXi support::
+ONTAP Select 9.17.1 includes support for VMware ESXi 9.6.
+
+Updated KVM hypervisor support::
+
+ONTAP Select 9.17.1 includes support for Kernel-Based Virtual Machine (KVM) hypervisor on Red Hat Enterprise Linux (RHEL) 9.6 and Rocky Linux 9.6.
 
 == ONTAP Select 9.16.1
 
