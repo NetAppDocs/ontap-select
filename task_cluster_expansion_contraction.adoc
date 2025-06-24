@@ -12,9 +12,16 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes. No other cluster expansion or contraction scenarios are supported.
+Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes. 
 
-The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface.
+The following cluster expansions and contractions aren't supported:
+
+* Expansions from one, two, or four-node clusters to six or eight-node clusters.
+* Contractions from six or eight-node clusters to one, two, or four-node clusters.
+
+NOTE: You need to link:task_deploy_cluster.html#[deploy a new multi-node cluster] if you need a cluster size that isn't supported by cluster expansion or contraction.
+
+You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
 == Hardware and storage considerations
 The cluster expansion and contraction functionalities are restricted in the following ways:
@@ -26,11 +33,6 @@ The cluster expansion and contraction functionalities are restricted in the foll
 ** ESXi 8.0 GA 
 ** ESXi 7.0 U3
 ** ESXi 7.0
-
-The following cluster expansions and contractions are currently not supported:
-
-* Expansions from one, two, or  four-node clusters to six or eight-node clusters.
-* Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node to an eight-node cluster with the cluster expansion feature.
@@ -101,8 +103,7 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
-.Related information
-link:task_deploy_cluster.html#create-single-or-multinode-cluster[Learn about creating a multi-node cluster]
+
 
 // 2024 NOV 5, ONTAPDOC-2518
 // 2023 May 06, ONTAPDOC-1797, -1802
