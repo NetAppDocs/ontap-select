@@ -2,7 +2,7 @@ You can deploy ONTAP Select as either a multi-node cluster or a single-node clus
 
 The following figures illustrate the ONTAP Select networks used with a single-node cluster and four-node cluster.
 
-[role=tabs]
+[role="tabbed-block"]
 ====
 .Single-node cluster
 --
