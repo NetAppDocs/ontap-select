@@ -67,6 +67,7 @@ If you will deploy a multi-node cluster, you should be familiar with the network
 After deploying a cluster::
 You should back up the ONTAP Select Deploy configuration data.
 
+[[create-single-or-multinode-cluster]]
 == Create a single-node or multi-node cluster
 
 You can use the ONTAP Select Deploy web user interface to deploy a single-node or multi-node ONTAP Select cluster.
