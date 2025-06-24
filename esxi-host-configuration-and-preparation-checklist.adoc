@@ -1,0 +1,71 @@
+---
+sidebar: sidebar
+permalink: esxi-host-configuration-and-preparation-checklist.html
+keywords: ontap select, pre-installation checklist, esxi, host preparation
+summary: Prepare each ESXi hypervisor hosts where an ONTAP Select node is deployed. As part of preparing the hosts, carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
+---
+= ESXi host configuration and preparation checklist for ONTAP Select
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Prepare each ESXi hypervisor host where an ONTAP Select node is deployed. As part of preparing the hosts, carefully assess the deployment environment to make sure that the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
+
+[NOTE]
+The ONTAP Select Deploy administration utility doesn't perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster.
+
+== Step 1: Prepare the ESXi hypervisor host
+
+Verify the configuration for the ESXi host and the firewall ports.
+
+Each ESXi host must be configured with the following:
+
+* A pre-installed and supported hypervisor
+* A VMware vSphere license
+
+Also, the same vCenter server must be able to manage all the hosts where an ONTAP Select node is deployed within the cluster.
+
+Verify that the firewall ports are configured to allow access to vSphere. These ports must be open to support serial port connectivity to the ONTAP Select virtual machines.
+
+By default, VMware allows access on the following ports:
+
+* Port 22 and ports 1024 – 65535 (inbound traffic)
+* Ports 0 – 65535 (outbound traffic)
+
+NetApp recommends that the following firewall ports are opened to allow access to vSphere:
+
+* Ports 7200 – 7400 (both inbound and outbound traffic)
+
+You should also be familiar with the vCenter rights that are required. See link:reference_plan_ots_vcenter.html[VMware vCenter server] for more information.
+
+== Step 2: Review the ONTAP Select cluster configuration
+
+include::_include/review-cluster-configuration.adoc[]
+
+== Step 3: Configure Open vSwitch
+
+The vSwitch is the core hypervisor component used to support the connectivity for the internal and external networks. There are several things you should consider as part of configuring each hypervisor vSwitch.
+
+The following steps are for a vSwitch configuration for an ESXi host with two physical ports (2x10Gb) in a typical network environment.
+
+.Steps
+. Configure a vSwitch and assign both the ports to the vSwitch. Create a NIC team using the two ports.
+. Set the load balancing policy to “Route based on the originating virtual port ID”.
+. Mark both adapters as “active” or mark one adapter as “active” and the other as “standby”.
+. Set the “Failback” setting to “Yes”.
+image:CHK_04.jpg[vSwitch properties)]
+. Configure the vSwitch to use jumbo frames (9000 MTU).
+. Configure a port group on the vSwitch for the internal traffic (ONTAP-internal):
+** The port group is assigned to ONTAP Select virtual network adapters e0c-e0g used for the cluster, HA interconnect, and mirroring traffic.
+** The port group should be on a non-routable VLAN because this network is expected to be private. You should add the appropriate VLAN tag to the port group to take this into account.
+** The load balancing, failback, and failover order settings of the port group should be the same as the vSwitch.
+. Configure a port group on the vSwitch for the external traffic (ONTAP-external):
+** The port group is assigned to ONTAP Select virtual network adapters e0a-e0c used for data and management traffic.
+** The port group can be on a routable VLAN. Also, depending on the network environment, you should add an appropriate VLAN tag or configure the port group for VLAN trunking.
+** The load balancing, failback, and failover order settings of the port group should be same as vSwitch.
+
+// 2024 NOV 4, ONTAPDOC-2528
+// 2023-09-26, ONTAPDOC-1204

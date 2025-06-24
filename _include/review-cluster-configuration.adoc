@@ -1,0 +1,27 @@
+You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and HA capability.
+
+The following figures illustrate the ONTAP Select networks used with a single-node cluster and four-node cluster.
+
+[role=tabs]
+====
+.Single-node cluster
+--
+The following figure illustrates a single-node cluster. The external network carries client, management, and cross-cluster replication traffic (SnapMirror/SnapVault).
+
+image:CHK_01.jpg[Single-node cluster showing one network]
+--
+
+.Four-node cluster 
+--
+The following figure illustrates a four-node cluster showing two networks. The internal network enables communication among the nodes in support of the ONTAP cluster network services. The external network carries client, management, and cross-cluster replication traffic (SnapMirror/SnapVault).
+
+image:CHK_02.jpg[Four-node cluster showing two networks]
+--
+
+.Single node within a four-node cluster
+--
+The following figure illustrates the typical network configuration for a single ONTAP Select virtual machine within a four-node cluster. There are two separate networks: ONTAP-internal and ONTAP-external.
+
+image:CHK_03.jpg[Single node within a four-node cluster]
+--
+====
