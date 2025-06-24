@@ -21,25 +21,28 @@ The ONTAP Select Deploy administration utility doesn't perform the required netw
 
 Verify the configuration for the ESXi host and the firewall ports.
 
-Each ESXi host must be configured with the following:
+.Steps
 
+. Verify that each ESXi is configured with the following:
++
 * A pre-installed and supported hypervisor
 * A VMware vSphere license
 
-Also, the same vCenter server must be able to manage all the hosts where an ONTAP Select node is deployed within the cluster.
+. Verify that the same vCenter server can manage all the hosts where an ONTAP Select node is deployed within the cluster.
 
-Verify that the firewall ports are configured to allow access to vSphere. These ports must be open to support serial port connectivity to the ONTAP Select virtual machines.
-
+. Verify that the firewall ports are configured to allow access to vSphere. These ports must be open to support serial port connectivity to the ONTAP Select virtual machines.
++
 By default, VMware allows access on the following ports:
-
++
 * Port 22 and ports 1024 – 65535 (inbound traffic)
 * Ports 0 – 65535 (outbound traffic)
 
++
 NetApp recommends that the following firewall ports are opened to allow access to vSphere:
 
 * Ports 7200 – 7400 (both inbound and outbound traffic)
 
-You should also be familiar with the vCenter rights that are required. See link:reference_plan_ots_vcenter.html[VMware vCenter server] for more information.
+. Familiarize yourself with the vCenter rights that are required. See link:reference_plan_ots_vcenter.html[VMware vCenter server] for more information.
 
 == Step 2: Review the ONTAP Select cluster configuration
 
