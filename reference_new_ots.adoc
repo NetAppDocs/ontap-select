@@ -24,6 +24,8 @@ Beginning with ONTAP Select 9.17.1, the FreBSD NDA (NVMe Direct Access) device d
 +
 The FreBSD driver provides support for direct access devices by implementing the NVMe command protocol. The FreBSD driver is automatically started when you configure NVMe devices for your ONTAP Select deployment. 
 +
+ONTAP Select 9.16.1 and earlier runs an older version of FreeBSD which supports the NVD configuration.
++
 For more information, refer to link:[].
 
 == ONTAP Select 9.16.1
