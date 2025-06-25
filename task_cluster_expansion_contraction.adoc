@@ -19,7 +19,10 @@ The following cluster expansions and contractions aren't supported:
 * Expansions from one, two, or four-node clusters to six or eight-node clusters.
 * Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
-NOTE: You need to link:task_deploy_cluster.html#[deploy a new multi-node cluster] if you need a cluster size that isn't supported by cluster expansion or contraction.
+NOTE: To change the number of nodes in a cluster to a size that isn't supported by cluster expansion or contraction, you need to deploy a new multi-node cluster by using the link:task_deploy_cluster.html#[ONTAP Select Deploy administration utility] or the link:task_cli_deploy_cluster.html[Deploy utility CLI] instead of changing the size of the existing cluster.
+
+
+
 
 You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
