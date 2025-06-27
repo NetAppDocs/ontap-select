@@ -19,7 +19,13 @@ The following cluster expansions and contractions aren't supported:
 * Expansions from one, two, or four-node clusters to six or eight-node clusters.
 * Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
-NOTE: To change the number of nodes in a cluster to a size that isn't supported by cluster expansion or contraction, you need to deploy a new multi-node cluster by using the link:task_cli_deploy_cluster.html[CLI] or the link:task_deploy_cluster.html[web UI] provided with ONTAP Select Deploy administration utility instead of changing the size of the existing cluster.
+[NOTE]
+====
+To change the number of nodes in a cluster to a size that isn't supported by cluster expansion or contraction, you need to perform the following tasks:
+
+. Deploy a new multi-node cluster by using the link:task_cli_deploy_cluster.html[CLI] or the link:task_deploy_cluster.html[web UI] provided with the ONTAP Select Deploy administration utility.
+. If applicable, migrate the data to the new cluster by using link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html[SnapMirror replication^].
+====
 
 You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
