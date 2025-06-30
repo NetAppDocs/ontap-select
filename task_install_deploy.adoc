@@ -14,9 +14,9 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 [.lead]
 You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 
-== Step 1: Download the virtual machine image
+== Download the virtual machine image
 
-Download the ONTAP Select package from the NetApp support site.
+You can download the ONTAP Select package from the NetApp support site.
 
 .Before you begin
 https://mysupport.netapp.com/site/user/registration[You have a registered NetApp Support Site account^].
@@ -40,9 +40,9 @@ The ONTAP Select Deploy administration utility is packaged as a virtual machine 
 
 . Select and download the appropriate package, responding to all prompts as needed.
 
-== Step 2: Verify the ONTAP Select Deploy OVA signature
+== Verify the ONTAP Select Deploy OVA signature
 
-Verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
+You should verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
 
 .Before you begin
 Verify that your system meets the following requirements:
@@ -79,7 +79,7 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 ----
  
 
-== Step 3: Deploy the virtual machine
+== Deploy the virtual machine
 
 You must install and start the ONTAP Select Deploy VM using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
 
@@ -184,9 +184,9 @@ Use DHCP to set networking information? [n]:
 
 ====
 
-== Step 4: Sign in to the Deploy web interface
+== Sign in to the Deploy web interface
 
-Sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
+You should sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
 
 .Steps
 . Point your browser to the Deploy utility using the IP address or domain name:
