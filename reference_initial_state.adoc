@@ -46,8 +46,8 @@ The root aggregate is created.
 All features are licensed and available. Both SnapLock and FabricPool require separate licenses.
 
 .Related information
-* link:https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html[Learn bout the types of SVMs contained in a cluster^]
-* link:reference_lic_ontap_features.html[Learn about the ONTAP features enabled by default]
+* link:https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html[Types of SVMs contained in a cluster^]
+* link:reference_lic_ontap_features.html[ONTAP features enabled by default]
 
 // 2025 JAN 10, ONTAPDOC-2633
 // 2023-07-11, ONTAPDOC-1128
