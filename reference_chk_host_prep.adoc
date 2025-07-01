@@ -46,6 +46,7 @@ For additional information about the necessary packages and other configuration 
 .Configuration of the storage pools
 An ONTAP Select storage pool is a logical data container that abstracts the underlying physical storage. You must manage the storage pools on the KVM hosts where ONTAP Select is deployed.
 
+[[create-storage-pool]]
 === Create a storage pool
 You must create at least one storage pool at each ONTAP Select node. If you use software RAID instead of a local hardware RAID, storage disks are attached to the node for the root and data aggregates. In this case, you must still create a storage pool for the system data.
 
