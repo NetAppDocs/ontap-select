@@ -21,8 +21,6 @@ The ONTAP Select Deploy administration utility does not perform the required net
 
 Prepare the KVM hypervisor host.
 
-.Steps
-
 . Prepare the Linux server
 +
 You must prepare each of the Linux KVM servers where an ONTAP Select node is deployed. You must also prepare the server where the ONTAP Select Deploy administration utility is deployed.
@@ -45,6 +43,12 @@ ONTAP Select requires several additional software packages. The exact list of pa
 NOTE: Some of the required packages might already be installed if you chose Virtualized Host for the software selection during installation of the Linux server. You might need to install the openvswitch package from source code as described in the link:https://docs.openvswitch.org/en/latest/intro/install/general/[Open vSwitch documentation^].
 +
 For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool^].
+
+. Configure PCI passthrough
++
+You need to configure PCI passthrough (DirectPath IO) to provide direct access to the locally attached storage NVMe discs on the KVM hypervisor host.
++
+For more information, see the link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/chap-virtualization-pci_passthrough#sect-Virtualization-PCI_passthrough-AI_device_to_a_host[Red Hat Documentation^].
 
 . Configure the storage pools
 An ONTAP Select storage pool is a logical data container that abstracts the underlying physical storage. You must manage the storage pools on the KVM hosts where ONTAP Select is deployed.
