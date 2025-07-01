@@ -19,16 +19,16 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 ONTAP Select 9.17.1 includes several new features and improvements.
 
+Support for SnapMirror cloud::
+Beginning with ONTAP Select 9.17.1, SnapMirror Cloud is supported with ONTAP Select. SnapMirror Cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1.
++
+Learn about https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[SnapMirror cloud backups to object storage^]. 
+
 Updated NDA driver support::
 Beginning with ONTAP Select 9.17.1, the FreBSD NDA (NVMe Direct Access) device driver replaces the NVD (NVMe express disk driver). The FreBSD driver provides support for direct access devices by implementing the NVMe command protocol. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, the FreBSD driver is started by default when you configure the NVMe devices. 
 +
 For ONTAP Select 9.16.1 and earlier, the NVD continues to provide support for NVMe devices in your ONTAP Select deployment.
 ONTAP Select 9.17.1 includes several new features and improvements
-
-Support for SnapMirror cloud::
-Beginning with ONTAP Select 9.17.1, SnapMirror Cloud is supported with ONTAP Select. SnapMirror Cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1.
-+
-Learn about https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[SnapMirror cloud backups to object storage^]. 
 
 == ONTAP Select 9.16.1
 
