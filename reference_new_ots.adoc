@@ -24,7 +24,7 @@ Beginning with ONTAP Select 9.17.1, SnapMirror Cloud is supported with ONTAP Sel
 +
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
 
-Support for SWRaid in locally attached KVM storage host::
+Software RAID support for local attached storage on  KVM host::
 Beginning with ONTAP Select 9.17.1, software RAID is supported for ONTAP Select locally attached NVMe disks on a KVM hypervisor host.
 + 
 When you are preparing the KVM host, you need to link:reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] to provide direct access to the locally attached NVMe disks. The direct access is required to use software RAID after you deploy the ONTAP Select cluster on the KVM host.
