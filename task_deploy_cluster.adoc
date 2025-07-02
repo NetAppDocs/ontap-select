@@ -19,13 +19,14 @@ When you create an ONTAP Select cluster using the Deploy utility web interface, 
 [TIP]
 You can also link:https://docs.netapp.com/us-en/ontap-select/task_cli_deploy_cluster.html[deploy ONTAP Select clusters using the Deploy utility CLI].
 
+[[prepare-for-deploy]]
 == Step 1: Prepare for the deployment
 Prepare for the deployment to make sure it's successful.
 
 .Steps
 . Initial planning.
 +
-Review the _Plan_ and _License_ sections of the documentation. Based on this, you can make decisions about the cluster, including:
+Review the link:concept_workflow_deploy.html[Plan] and link:concept_lic_evaluation.html[License] sections. Based on this review, you can make decisions about the cluster, including:
 +
 * Hypervisor
 * Number of nodes
@@ -48,11 +49,11 @@ If you plan to deploy the cluster in a production environment, you must acquire 
 
 . Deploy installation and account credentials.
 +
-You must install the Deploy administration utility and perform initial configuration. See link:task_install_deploy.html[Install ONTAP Select Deploy] for more information. You need to have the password for the Deploy administrator account that was configured as part of the installation process.
+link:task_install_deploy.html[Install the Deploy administration utility and perform initial configuration]. You need to have the password for the Deploy administrator account that was configured as part of the installation process.
 
 . Optionally, install earlier ONTAP Select node images.
 +
-By default, the Deploy administration utility contains the most current version of ONTAP Select at the time of release. If you want to deploy clusters using an earlier version of ONTAP Select, you need to add the ONTAP Select image to your Deploy instance. See link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy] for more information.
+By default, the Deploy administration utility contains the most current version of ONTAP Select at the time of release. If you want to deploy clusters using an earlier version of ONTAP Select, you need to link:task_cli_deploy_image_add.html[add the ONTAP Select image to your Deploy instance].
 
 . Learn about the "Getting started" launch page.
 +
@@ -69,9 +70,8 @@ You can perform the same steps independently by selecting the tabs at the top of
 
 . Review the network checker.
 +
-If you are deploying a multi-node cluster, you should be familiar with the network checker.
+If you are deploying a multi-node cluster, you should be familiar with the network checker. You can run the network connectivity checker using the link:task_adm_connectivity.html[web UI] or the link:task_cli_connectivity.html[CLI].
 
-. After deploying a cluster, you should back up the ONTAP Select Deploy configuration data.
 
 [[create-single-or-multinode-cluster]]
 == Step 2: Create a single-node or multi-node cluster
@@ -80,7 +80,7 @@ You can use the ONTAP Select Deploy web user interface to deploy a single-node o
 
 .Before you begin
 
-See link:task_deploy_cluster.html#before-you-begin[Before you begin] to prepare to deploy the cluster. The Deploy administration must be installed and initially configured (password, AutoSupport, and vCenter).
+Verify that you have installed the Deploy administration and completed the initial configuration (password, AutoSupport, and vCenter).
 
 .About this task
 
@@ -109,7 +109,7 @@ The steps you follow depend on whether you want to create a single-node cluster 
 +
 You can add the hypervisor host directly or by connecting to a vCenter server. Provide the appropriate host details and credentials as needed.
 
-. Select *Refresh* and confirm the *Type* value for the host is *ESX*.
+. Select *Refresh* and confirm the *Type* value for the host is *ESX* or *KVM*.
 +
 Any account credentials you provide are added to the Deploy credential database.
 
