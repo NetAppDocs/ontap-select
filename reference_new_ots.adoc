@@ -29,6 +29,13 @@ Beginning with ONTAP Select 9.17.1, the FreBSD NDA (NVMe Direct Access) device d
 +
 For ONTAP Select 9.16.1 and earlier, the NVD continues to provide support for NVMe devices in your ONTAP Select deployment.
 
+Support for SWRaid::
+Beginning with ONTAP Select 9.17.1, software RAID is supported for ONTAP Select locally attached NVMe discs on a KVM hypervisor host.
++ 
+When you are preparing the KVM host, you need to link:reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] to provide direct access to the locally attached NVMe discs. The direct access is required to use software RAID after you deploy the ONTAP Select cluster on the KVM host.
++ 
+link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage]
+
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 includes several new features and improvements.
