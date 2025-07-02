@@ -28,14 +28,18 @@ The cluster expansion and contraction feature is supported on KVM and ESXi hyper
 ====
 .KVM
 --
-Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported for the following KVM host versions:
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported on KVM hypervisor hosts.
+
+Cluster expansion and contraction is supported for the following KVM hypervisor versions:
 
 * RedHat Enterprise Linux 64-bit 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 * Rocky Linux 9 and 8
 --
 .ESXi
 --
-Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported for the following ESXi host versions: 
+Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported on ESXi hypervisor host. 
+
+Cluster expansion and contraction is supported for the following ESXi hypervisor versions:
 
 * ESXi 8.0 U3
 * ESXi 8.0 U2 
