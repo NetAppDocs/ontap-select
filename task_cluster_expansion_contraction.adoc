@@ -12,35 +12,52 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes. No other cluster expansion or contraction scenarios are supported.
+You can increase the cluster size of an exiting ONTAP Select cluster from a six-node to an eight-node cluster and decrease the size from an eight-node to a six-node cluster 
 
-The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface.
+The following cluster expansions and contractions aren't supported:
 
-== Hardware and storage considerations
-The cluster expansion and contraction functionalities are restricted in the following ways:
-
-* Support is limited to clusters created on ESX hypervisor hosts. The following ESX versions are compatible with ONTAP Select 9.15.1 and later:
-** ESXi 8.0 U3
-** ESXi 8.0 U2 
-** ESXi 8.0 U1
-** ESXi 8.0 GA 
-** ESXi 7.0 U3
-** ESXi 7.0
-
-The following cluster expansions and contractions are currently not supported:
-
-* Expansions from one, two, or  four-node clusters to six or eight-node clusters.
+* Expansions from one, two, or four-node clusters to six or eight-node clusters.
 * Contractions from six or eight-node clusters to one, two, or four-node clusters.
 
+You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
+
+== Hardware and storage considerations
+The cluster expansion and contraction feature is supported on KVM and ESXi hypervisor hosts.
+
+[role="tabbed-block"]
+====
+.KVM
+--
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported on KVM hypervisor hosts.
+
+Cluster expansion and contraction is supported for the following KVM hypervisor versions:
+
+* Red Hat Enterprise Linux 64-bit 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
+* Rocky Linux 9 and 8
+--
+.ESXi
+--
+Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported on ESXi hypervisor hosts. 
+
+Cluster expansion and contraction is supported for the following ESXi hypervisor versions:
+
+* ESXi 8.0 U3
+* ESXi 8.0 U2 
+* ESXi 8.0 U1
+* ESXi 8.0 GA 
+* ESXi 7.0 U3
+* ESXi 7.0
+--
+====
+
 == Expand the cluster
-You can increase the size of an existing cluster from a six-node to an eight-node cluster with the cluster expansion feature.
+Use the cluster expansion feature to increase the size of an existing cluster from six nodes to eight nodes.
 
 .About this task
-In preparation for the cluster expansion procedure, new ESX hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
+In preparation for cluster expansion, new ESXi and KVM hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
 
 .Before you begin
-* When deploying a multi-node cluster, you should be familiar with the link:https://docs.netapp.com/us-en/ontap-select/task_adm_connectivity.html[network connectivity checker]. 
-
+* When deploying a multi-node cluster, you should be familiar with the link:task_adm_connectivity.html[network connectivity checker].
 * Verify that you have the license details for the new nodes. 
 
 .Steps
@@ -52,7 +69,7 @@ In preparation for the cluster expansion procedure, new ESX hosts are added to t
 
 . Navigate to the *HA Pair 4* section.
 
-. Choose the high availability (HA) pair configuration details for the fourth HA pair, including: 
+. Choose the following high availability (HA) pair configuration details for the fourth HA pair: 
 * Instance type
 * Node names 
 * Associated hypervisor hosts 
@@ -63,7 +80,7 @@ In preparation for the cluster expansion procedure, new ESX hosts are added to t
 
 . Select *Save HA Pair* to save the configuration details.
 
-. Provide the ONTAP credentials, then select *Expand Cluster*.
+. Provide the ONTAP credentials, and select *Expand Cluster*.
 
 . Select *Next* and run the network pre-check by selecting *Run*. 
 +
@@ -81,7 +98,7 @@ It can take up to 45 minutes for the cluster to be expanded.
 After expanding the cluster, you should back up the ONTAP Select Deploy configuration data.
 
 == Contract the cluster
-You can decrease the size of an existing cluster from an eight-node to a six-node cluster with the cluster contraction feature.
+Use the cluster contraction feature to decrease the size of an existing cluster from eight nodes to six nodes.
 
 .About this task
 The desired HA pair of nodes in the cluster are selected to prepare for cluster contraction during the procedure.
@@ -101,5 +118,6 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
+// 2025 JUN 20, ONTAPDOC-2886
 // 2024 NOV 5, ONTAPDOC-2518
 // 2023 May 06, ONTAPDOC-1797, -1802

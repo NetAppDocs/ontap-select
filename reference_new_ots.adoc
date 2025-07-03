@@ -26,6 +26,13 @@ When you are preparing the KVM host, you need to link:reference_chk_host_prep.ht
 + 
 link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
 
+Support for cluster expansion and contraction on KVM hosts::
+Beginning with ONTAP Select 9.17.1, the cluster expansion and contraction feature is supported for both Kernel-Based Virtual Machine (KVM) and ESXi hypervisor hosts. For ONTAP Select 9.16.1 and 9.15.1, cluster expansion and contraction is only supported for ESXi hypervisor hosts.
++
+You can use the cluster expansion and contraction feature on an existing ONTAP Select cluster to increase the size from a six-node to an eight-node cluster or decrease the size from an eight-node to a six-node cluster. 
++
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+
 Support for SnapMirror cloud::
 Beginning with ONTAP Select 9.17.1, SnapMirror Cloud is supported with ONTAP Select. SnapMirror Cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1.
 +
@@ -54,7 +61,7 @@ ONTAP Select 9.16.1 includes support for VMware ESXi 8.0 U3.
 
 Updated KVM hypervisor support::
 
-Beginning with ONTAP Select 9.16.1, Kernel-Based Virtual Machine (KVM) hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.5 and Rocky Linux 9.5.
+Beginning with ONTAP Select 9.16.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.5 and Rocky Linux 9.5.
 
 == ONTAP Select 9.15.1
 
@@ -194,7 +201,7 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 6.0 is no longer supported
 
 
-// 2025 July 1, ONTAPDOC-2887
+// 2025 July 03, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
 // 2023 Feb 10, clean-up
 // 2023-04-05, ONTAPDOC-920
