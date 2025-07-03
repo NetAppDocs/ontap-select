@@ -19,12 +19,12 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 ONTAP Select 9.17.1 includes several new features and improvements.
 
-Software RAID support for local attached storage on  KVM host::
+Software RAID support for local attached storage on KVM host::
 Beginning with ONTAP Select 9.17.1, software RAID is supported for ONTAP Select locally attached NVMe disks on a KVM hypervisor host.
-+ 
-When you are preparing the KVM host, you need to link:reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] to provide direct access to the locally attached NVMe disks. The direct access is required to use software RAID after you deploy the ONTAP Select cluster on the KVM host.
-+ 
-link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
++
+To use software RAID for locally attached NVMe disks, you need to link:https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required to use software RAID after you deploy the cluster.
++
+link:https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
 
 Support for cluster expansion and contraction on KVM hosts::
 Beginning with ONTAP Select 9.17.1, the cluster expansion and contraction feature is supported for both Kernel-Based Virtual Machine (KVM) and ESXi hypervisor hosts. For ONTAP Select 9.16.1 and 9.15.1, cluster expansion and contraction is only supported for ESXi hypervisor hosts.
