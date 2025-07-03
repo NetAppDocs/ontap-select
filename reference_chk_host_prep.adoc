@@ -42,7 +42,7 @@ ONTAP Select requires several additional software packages. The exact list of pa
 NOTE: Some of the required packages might already be installed if you chose Virtualized Host for the software selection during installation of the Linux server. You might need to install the openvswitch package from source code as described in the link:https://docs.openvswitch.org/en/latest/intro/install/general/[Open vSwitch documentation^].
 
 For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool^].
- 
+
 .Configure PCI passthrough (for NVME disks)
 You need to configure PCI passthrough (DirectPath IO) to provide direct access for the KVM host to the locally attached NVMe disks in the ONTAP Select cluster.
 
