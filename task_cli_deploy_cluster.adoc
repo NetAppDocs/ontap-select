@@ -26,12 +26,12 @@ Before creating an ONTAP Select cluster on a hypervisor, you should understand t
 ====
 .Hardware RAID
 --
-If you use a local hardware RAID controller, you must link:reference_chk_host_prep.html#create-storage-pool[create at least one storage pool] at each node for the system data as well as the root and data aggregates. You must attach the storage pool as part of configuring the ONTAP Select node.
+If you use a local hardware RAID controller, you must create at least one datastore (ESX) or one link:reference_chk_host_prep.html#create-storage-pool[storage pool (KVM)] at each node for the system data as well as the root and data aggregates. You must attach the storage pool as part of configuring the ONTAP Select node.
 --
 
 .Software RAID
 --
-If you use software RAID, you must link:reference_chk_host_prep.html#create-storage-pool[create a storage pool] for the system data and make sure the SSD drives are available for the root and data aggregates. You must attach the storage pool and disks as part of configuring the ONTAP Select node.
+If you use software RAID, you must create at least one datastore (ESX) or one link:reference_chk_host_prep.html#create-storage-pool[storage pool (KVM)] for the system data and make sure the SSD drives are available for the root and data aggregates. You must attach the storage pool and disks as part of configuring the ONTAP Select node.
 --
 ====
 
@@ -70,13 +70,19 @@ exit
 
 . Register the license:
 +
-`license add -file-name <file_name>`
+[source,cli]
+----
+license add -file-name <file_name>
+----
 +
 Provide the administrator account password when prompted.
 
 . Display the licenses in the system to confirm the license was added properly:
 +
-`license show`
+[source,cli]
+----
+license show
+----
 
 == Step 3: Add hypervisor hosts
 
@@ -96,9 +102,9 @@ If more than one hypervisor host is needed, use this procedure to add each host.
 . Sign in to the Deploy utility CLI using SSH with the administrator account.
 . Register the host:
 +
-[source,asciidoc]
+[source,cli]
 ----
-`host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>`
+host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
 ----
 +
 Example output
@@ -111,7 +117,7 @@ Provide the password for the host account when prompted.
 
 . Display the state of the host and confirm it is authenticated:
 +
-[source,asciidoc]
+[source,cli]
 ----
 host show -name <FQDN|IP> -detailed
 ----
@@ -137,7 +143,10 @@ Before you register a host that is managed by vCenter, you must add a management
 
 . If the host is managed by a vCenter server, add the vCenter account credential:
 +
-`credential add -hostname <FQDN|IP> -type vcenter -username <vcenter_username>`
+[source,cli]
+----
+credential add -hostname <FQDN|IP> -type vcenter -username <vcenter_username>
+----
 +
 Example output
 +
@@ -148,9 +157,17 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 . Register the host:
 +
 * Register a standalone host not managed by vCenter:
-`host register -name <FQDN|IP> -hypervisor-type ESX -username <esx_username>`
++
+[source,cli]
+----
+host register -name <FQDN|IP> -hypervisor-type ESX -username <esx_username>
+----
 * Register a host managed by vCenter:
-`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
++
+[source,cli]
+----
+host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>
+----
 +
 Example output
 +
@@ -160,7 +177,10 @@ host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.com
 
 . Display the state of the host and confirm it is authenticated.
 +
-`host show -name <FQDN|IP> -detailed`
+[source,cli]
+----
+host show -name <FQDN|IP> -detailed
+----
 +
 Example output
 +
@@ -188,7 +208,10 @@ When you create an ONTAP Select cluster, the Deploy utility automatically genera
 
 . Create the cluster:
 +
-`cluster create -name <cluster_name> -node-count <nodes>`
+[source,cli]
+----
+cluster create -name <cluster_name> -node-count <counts>
+----
 +
 Example output
 +
@@ -198,7 +221,10 @@ cluster create -name test-cluster -node-count 1
 
 . Configure the cluster:
 +
-`cluster modify -name <cluster_name> -mgmt-ip <IP_address> -netmask <netmask> -gateway <IP_address> -dns-servers <FQDN|IP>_LIST -dns-domains <domain_list>`
+[source,cli]
+----
+cluster modify -name <cluster_name> -mgmt-ip <IP_address> -netmask <netmask> -gateway <IP_address> -dns-servers <FQDN|IP>_LIST -dns-domains <domain_list>
+----
 +
 Example output
 +
@@ -209,7 +235,10 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 
 . Display the configuration and state of the cluster:
 +
-`cluster show -name <cluster_name> -detailed`
+[source,cli]
+----
+cluster show -name <cluster_name> -detailed
+----
 
 == Step 5: Configure an ONTAP Select node
 
@@ -229,11 +258,16 @@ You should use this procedure to configure each node. A Capacity Tier license is
 
 . Determine the names assigned to the cluster nodes:
 +
-`node show -cluster-name <cluster_name>`
-
+[source,cli]
+----
+node show -cluster-name <cluster_name>
+----
 . Select the node and perform basic configuration:
 +
-`node modify -name <node_name> -cluster-name <cluster_name> -host-name <FQDN|IP> -license-serial-number <number> -instance-type TYPE -passthrough-disks false`
+[source,cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -host-name <FQDN|IP> -license-serial-number <number> -instance-type TYPE -passthrough-disks false
+----
 +
 Example output
 +
@@ -248,7 +282,10 @@ A Capacity Tier license is used for the ONTAP Select node.
 
 . Display the network configuration available at the host:
 +
-`host network show -host-name <FQDN|IP> -detailed`
+[source,cli]
+----
+host network show -host-name <FQDN|IP> -detailed
+----
 +
 Example output
 +
@@ -258,7 +295,23 @@ host network show -host-name 10.234.81.14 -detailed
 
 . Perform network configuration of the node:
 +
-`node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>`
+[role="tabbed-block"]
+====
+.ESXi host
+--
+[source,cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>
+----
+--
+.KVM host
+--
+[source,cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-vlans <vlan_id> -data-vlans <vlan_id> -internal-vlans <vlad_id>
+----
+--
+====
 +
 When deploying a single-node cluster, you do not need an internal network and should remove "-internal-network".
 +
@@ -271,7 +324,10 @@ node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.
 
 . Display the configuration of the node:
 +
-`node show -name <node_name> -cluster-name <cluster_name> -detailed`
+[source,cli]
+----
+node show -name <node_name> -cluster-name <cluster_name> -detailed
+----
 +
 Example output
 +
@@ -297,7 +353,10 @@ When using a local hardware RAID controller, you need to perform steps 1 through
 
 . Display the storage pools available at the host:
 +
-`host storage pool show -host-name <FQDN|IP>`
+[source,cli]
+----
+host storage pool show -host-name <FQDN|IP>
+----
 +
 Example output
 +
@@ -309,7 +368,10 @@ You can also obtain the available storage pools through VMware vSphere.
 
 . Attach an available storage pool to the ONTAP Select node:
 +
-`node storage pool attach -name <pool_name> -cluster-name <cluster_name> -node-name <node_name> -capacity-limit <limit>`
+[source,cli]
+----
+node storage pool attach -name <pool_name> -cluster-name <cluster_name> -node-name <node_name> -capacity-limit <limit>
+----
 +
 If you include the "-capacity-limit" parameter, specify the value as GB or TB.
 +
@@ -322,7 +384,10 @@ node-name test-cluster-01 -capacity-limit 500GB
 
 . Display the storage pools attached to the node:
 +
-`node storage pool show -cluster-name <cluster_name> -node-name <node_name>`
+[source,cli]
+----
+node storage pool show -cluster-name <cluster_name> -node-name <node_name>
+----
 +
 Example output
 +
@@ -332,7 +397,10 @@ node storage pool show -cluster-name test-cluster -node-name testcluster-01
 
 . If you are using software RAID, attach the available drive or drives:
 +
-`node storage disk attach -node-name <node_name> -cluster-name <cluster_name> -disks <list_of_drives>`
+[source,cli]
+----
+node storage disk attach -node-name <node_name> -cluster-name <cluster_name> -disks <list_of_drives>
+----
 +
 Example output
 +
@@ -342,7 +410,10 @@ node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000
 
 . If you are using software RAID, display the disks attached to the node:
 +
-`node storage disk show -node-name <node_name> -cluster-name <cluster_name>`
+[source,cli]
+----
+node storage disk show -node-name <node_name> -cluster-name <cluster_name>`
+----
 +
 Example output
 +
@@ -364,7 +435,10 @@ Run the network connectivity checker using the link:task_adm_connectivity.html[w
 
 . Deploy the ONTAP Select cluster:
 +
-`cluster deploy -name <cluster_name>`
+[source,cli]
+----
+cluster deploy -name <cluster_name>
+----
 +
 Example output
 +
@@ -376,7 +450,10 @@ Provide the password to be used for the ONTAP administrator account when prompte
 
 . Display the status of the cluster to determine when it has been successfully deployed successfully:
 +
-`cluster show -name <cluster_name>`
+[source,cli]
+----
+cluster show -name <cluster_name>
+----
 
 .After you finish
 
