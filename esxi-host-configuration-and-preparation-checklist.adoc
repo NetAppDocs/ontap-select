@@ -55,7 +55,8 @@ The vSwitch is the core hypervisor component used to support the connectivity fo
 The following steps are for a vSwitch configuration for an ESXi host with two physical ports (2x10Gb) in a typical network environment.
 
 .Steps
-. Configure a vSwitch and assign both the ports to the vSwitch. Create a NIC team using the two ports.
+. link:concept_nw_vsphere_vswitch_config.html[Configure a vSwitch and assign both the ports to the vSwitch]. 
+. link:concept_nw_vsphere_vswitch_config.html[Create a NIC team using the two ports].
 . Set the load balancing policy to “Route based on the originating virtual port ID”.
 . Mark both adapters as “active” or mark one adapter as “active” and the other as “standby”.
 . Set the “Failback” setting to “Yes”.

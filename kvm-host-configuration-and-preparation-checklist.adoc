@@ -51,7 +51,7 @@ For additional information about the necessary packages and other configuration 
 +
 An ONTAP Select storage pool is a logical data container that abstracts the underlying physical storage. You must manage the storage pools on the KVM hosts where ONTAP Select is deployed. 
 
-== Step 3: Create a storage pool
+== Step 2: Create a storage pool
 
 Create at least one storage pool at each ONTAP Select node. If you use software RAID instead of a local hardware RAID, storage disks are attached to the node for the root and data aggregates. In this case, you must still create a storage pool for the system data.
 
@@ -115,7 +115,7 @@ virsh pool-autostart <pool_name>
 virsh pool-list
 ----
 
-== Step 4: Optionally, delete a storage pool
+== Step 3: Optionally, delete a storage pool
 
 You can delete a storage pool when it is no longer needed.
 
@@ -201,11 +201,11 @@ pvremove <physical_volume_name>
 ----
 
 
-== Step 5: Review the ONTAP Select cluster configuration
+== Step 4: Review the ONTAP Select cluster configuration
 
 include::_include/review-cluster-configuration.adoc[]
 
-== Step 6: Configure Open vSwitch 
+== Step 5: Configure Open vSwitch 
 Configure a software-defined switch on each ONTAP Select node using Open vSwitch.
 
 .Before you begin
