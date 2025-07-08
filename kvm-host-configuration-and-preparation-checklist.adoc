@@ -67,6 +67,7 @@ NOTE: The entire capacity of the LUN is allocated when a storage pool is created
 
 . Display the local devices on the Linux host and choose the LUN that will contain the storage pool:
 +
+[source,cli]
 ----
 lsblk
 ----
@@ -75,6 +76,7 @@ The appropriate LUN is likely to be the device with the largest storage capacity
 
 . Define the storage pool on the device:
 +
+[source,cli]
 ----
 virsh pool-define-as <pool_name> logical --source-dev <device_name> --target=/dev/<pool_name>
 ----
@@ -87,24 +89,28 @@ virsh pool-define-as select_pool logical --source-dev /dev/sdb --target=/dev/sel
 
 . Build the storage pool:
 +
+[source,cli]
 ----
 virsh pool-build <pool_name>
 ----
 
 . Start the storage pool:
 +
+[source,cli]
 ----
 virsh pool-start <pool_name>
 ----
 
 . Configure the storage pool to automatically start at system boot:
 +
+[source,cli]
 ----
 virsh pool-autostart <pool_name>
 ----
 
 . Verify that the storage pool has been created:
 +
+[source,cli]
 ----
 virsh pool-list
 ----
@@ -123,24 +129,28 @@ The ONTAP Select Deploy administration utility expects the target location for t
 
 . Verify that the storage pool is defined:
 +
+[source,cli]
 ----
 virsh pool-list
 ----
 
 . Destroy the storage pool:
 +
+[source,cli]
 ----
 virsh pool-destroy <pool_name>
 ----
 
 . Undefine the configuration for the inactive storage pool:
 +
+[source,cli]
 ----
 virsh pool-undefine <pool_nanme>
 ----
 
 . Verify that the storage pool has been removed from the host:
 +
+[source,cli]
 ----
 virsh pool-list
 ----
@@ -148,12 +158,14 @@ virsh pool-list
 . Verify that all logical volumes for the storage pool volume group have been deleted.
 .. Display the logical volumes:
 +
+[source,cli]
 ----
 lvs
 ----
 
 .. If any logical volumes exist for the pool, delete them:
 +
+[source,cli]
 ----
 lvremove <logical_volume_name>
 ----
@@ -161,12 +173,14 @@ lvremove <logical_volume_name>
 . Verify that the volume group has been deleted:
 .. Display the volume groups:
 +
+[source,cli]
 ----
 vgs
 ----
 
 .. If a volume group exists for the pool, delete it:
 +
+[source,cli]
 ----
 vgremove <volume_group_name>
 ----
@@ -174,12 +188,14 @@ vgremove <volume_group_name>
 . Verify that the physical volume has been deleted:
 .. Display the physical volumes:
 +
+[source,cli]
 ----
 pvs
 ----
 
 .. If a physical volume exists for the pool, delete it:
 +
+[source,cli]
 ----
 pvremove <physical_volume_name>
 ----
@@ -203,18 +219,21 @@ ONTAP Select requires two separate networks, both of which utilize port bonding 
 . Verify that Open vSwitch is active on the host:
 .. Determine if Open vSwitch is running:
 +
+[source,cli]
 ----
 systemctl status openvswitch
 ----
 
 .. If Open vSwitch is not running, start it:
 +
+[source,cli]
 ----
 systemctl start openvswitch
 ----
 
 . Display the Open vSwitch configuration:
 +
+[source,cli]
 ----
 ovs-vsctl show
 ----
@@ -223,18 +242,21 @@ The configuration appears empty if Open vSwitch has not already been configured 
 
 . Add a new vSwitch instance:
 +
+[source,cli]
 ----
 ovs-vsctl add-br <bridge_name>
 ----
 +
 For example:
 +
+[source,cli]
 ----
 ovs-vsctl add-br ontap-br
 ----
 
 . Bring the network interfaces down:
 +
+[source,cli]
 ----
 ifdown <interface_1>
 ifdown <interface_2>
@@ -242,6 +264,7 @@ ifdown <interface_2>
 
 . Combine the links using LACP:
 +
+[source,cli]
 ----
 ovs-vsctl add-bond <internal_network> bond-br <interface_1> <interface_2> bond_mode=balance-slb lacp=active other_config:lacp-time=fast
 ----
@@ -250,6 +273,7 @@ NOTE: You only need to configure a bond if there is more than one interface.
 
 . Bring the network interfaces up:
 +
+[source,cli]
 ----
 ifup <interface_1>
 ifup <interface_2>
