@@ -43,7 +43,7 @@ NOTE: Some of the required packages might already be installed if you chose Virt
 
 For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool^].
 
-.Configure PCI passthrough (for NVME disks)
+.Configure PCI passthrough for NVME disks
 You need to configure PCI passthrough (DirectPath IO) to provide direct access for the KVM host to the locally attached NVMe disks in the ONTAP Select cluster.
 
 Direct access is required to use software RAID for locally attached NVMe disks after you deploy the cluster on the KVM host.
@@ -331,6 +331,6 @@ image:CHK_04.jpg[vSwitch properties)]
 The above vSwitch configuration is for a host with 2x10Gb ports in a typical network environment.
 
 
-// 2025 July 03, ONTAPDOC-2885
+// 2025 July 08, ONTAPDOC-2885
 // 2024 NOV 4, ONTAPDOC-2528
 // 2023-09-26, ONTAPDOC-1204
