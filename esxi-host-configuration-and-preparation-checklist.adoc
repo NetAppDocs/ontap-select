@@ -43,7 +43,7 @@ NetApp recommends that the following firewall ports are opened to allow access t
 * Ports 7200 – 7400 (both inbound and outbound traffic)
 
 +
-For more information, refer to Broadcom VMware vSphere documentation.
+For more information, refer to the link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-security-8-0/securing-esxi-hosts/customizing-hosts-with-the-security-profile/esxi-firewall-configuration.html[Broadcom VMware vSphere documentation^].
 
 . Familiarize yourself with the vCenter rights that are required. See link:reference_plan_ots_vcenter.html[VMware vCenter server] for more information.
 
