@@ -32,18 +32,25 @@ Verify the configuration for the ESXi host and the firewall ports.
 
 . Verify that the firewall ports are configured to allow access to vSphere. These ports must be open to support serial port connectivity to the ONTAP Select virtual machines.
 +
-By default, VMware allows access on the following ports:
-+
-* Port 22 and ports 1024 – 65535 (inbound traffic)
-* Ports 0 – 65535 (outbound traffic)
-
-+
-NetApp recommends that the following firewall ports are opened to allow access to vSphere:
+[role="tabbed-block"]
+====
+.Recommended
+--
+NetApp recommends that you open the following firewall ports to allow access to vSphere:
 
 * Ports 7200 – 7400 (both inbound and outbound traffic)
+--
 
+.Default
+--
+By default, VMware allows access on the following ports:
+
+* Port 22 and ports 1024 – 65535 (inbound traffic)
+* Ports 0 – 65535 (outbound traffic)
+--
+====
 +
-For more information, refer to the link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-security-8-0/securing-esxi-hosts/customizing-hosts-with-the-security-profile/esxi-firewall-configuration.html[Broadcom VMware vSphere documentation^].
+For more information, see the link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-security-8-0/securing-esxi-hosts/customizing-hosts-with-the-security-profile/esxi-firewall-configuration.html[Broadcom VMware vSphere documentation^].
 
 . Familiarize yourself with the vCenter rights that are required. See link:reference_plan_ots_vcenter.html[VMware vCenter server] for more information.
 
