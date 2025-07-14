@@ -210,7 +210,7 @@ When you create an ONTAP Select cluster, the Deploy utility automatically genera
 +
 [source,cli]
 ----
-cluster create -name <cluster_name> -node-count <counts>
+cluster create -name <cluster_name> -node-count <count>
 ----
 +
 Example output
