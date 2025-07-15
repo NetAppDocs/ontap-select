@@ -35,7 +35,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * ONTAP S3
 * SnapMirror
 * S3 SnapMirror
-* SnapMirror Cloud
+* SnapMirror cloud
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
