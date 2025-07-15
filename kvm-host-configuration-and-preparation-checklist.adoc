@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: kvm-host-configuration-and-preparation-checklist.html
 keywords: ontap select, pre-installation checklist, kvm, host preparation
-summary: Prepare each KVM hypervisor hosts where an ONTAP Select node is deployed. As part of preparing the hosts, carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
+summary: Prepare each KVM hypervisor hosts where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
 ---
 = KVM host configuration and preparation checklist for ONTAP Select
 :hardbreaks:
@@ -12,10 +12,10 @@ summary: Prepare each KVM hypervisor hosts where an ONTAP Select node is deploye
 :imagesdir: ./media/
 
 [.lead]
-Prepare each KVM hypervisor host where an ONTAP Select node is deployed. As part of preparing the hosts, carefully assess the deployment environment to make sure that the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
+Prepare each KVM hypervisor host where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
 
 [NOTE]
-The ONTAP Select Deploy administration utility doesn't perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host prior to deploying an ONTAP Select cluster.
+The ONTAP Select Deploy administration utility doesn't perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host before deploying an ONTAP Select cluster.
 
 [[prepare-linux-server]]
 == Step 1: Prepare the KVM hypervisor host
