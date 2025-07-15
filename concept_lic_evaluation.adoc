@@ -23,6 +23,7 @@ To download the ONTAP Select Deploy administration utility, you need the followi
 ====
 
 There are several considerations when deploying and supporting an evaluation cluster:
+
 * You can only use the cluster for evaluation purposes. You must not use a cluster with an evaluation license in a production environment.
 * You should use the ONTAP Select Deploy administration utility as follows when configuring each host:
 ** Don't supply a serial number
