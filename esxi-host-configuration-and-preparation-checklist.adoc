@@ -56,7 +56,7 @@ For more information, see the link:https://techdocs.broadcom.com/us/en/vmware-ci
 
 == Step 2: Review the ONTAP Select cluster configuration
 
-You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and HA capability.
+You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and high-availability (HA) capability.
 
 The following figures illustrate the ONTAP Select networks used with a single-node cluster and four-node cluster.
 
@@ -105,8 +105,8 @@ image:CHK_04.jpg[vSwitch properties)]
 ** The load balancing, failback, and failover order settings of the port group should be the same as the vSwitch.
 . Configure a port group on the vSwitch for the external traffic (ONTAP-external):
 ** The port group is assigned to ONTAP Select virtual network adapters e0a-e0c used for data and management traffic.
-** The port group can be on a routable VLAN. Also, depending on the network environment, you should add an appropriate VLAN tag or configure the port group for VLAN trunking.
-** The load balancing, failback, and failover order settings of the port group should be same as vSwitch.
+** The port group can be on a routable VLAN. Depending on the network environment, you should also add an appropriate VLAN tag or configure the port group for VLAN trunking.
+** The load balancing, failback, and failover order settings of the port group should be same as the vSwitch.
 
 // 2024 NOV 4, ONTAPDOC-2528
 // 2023-09-26, ONTAPDOC-1204

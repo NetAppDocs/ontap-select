@@ -20,13 +20,13 @@ The ONTAP Select Deploy administration utility doesn't perform the required netw
 [[prepare-linux-server]]
 == Step 1: Prepare the KVM hypervisor host
 
-Prepare each of the Linux KVM servers where an ONTAP Select node is deployed. You must also prepare the server where the ONTAP Select Deploy administration utility is deployed.
+You need to prepare each of the Linux KVM servers where an ONTAP Select node is deployed. You must also prepare the server where the ONTAP Select Deploy administration utility is deployed.
 
 .Steps
 
-. Install Red Hat Enterprise Linux
+. Install Red Hat Enterprise Linux (RHEL).
 +
-Install the Red Hat Enterprise Linux (RHEL) operating system using the ISO image. See the link:reference_plan_ots_hardware.html#software-compatibility[software compatibility information for hypervisors] for a list of the supported RHEL versions. During installation, configure the system as follows:
+Install the RHEL operating system using the ISO image. See the link:reference_plan_ots_hardware.html#software-compatibility[software compatibility information for hypervisors] for a list of the supported RHEL versions. During installation, configure the system as follows:
 +
 .. Select Default as the security policy.
 .. Choose the Virtualized Host software selection.
@@ -37,7 +37,7 @@ NOTE: You can edit the correct network configuration file under /etc/sysconfig/n
 
 . Install additional packages required for ONTAP Select.
 +
-ONTAP Select requires several additional software packages. The exact list of packages varies based on the version of Linux you are using. As a first step, verify that the yum repository is available on your server. If it isn't available, you can retrieve it by using the `wget your_repository_location` command.
+ONTAP Select requires several additional software packages. The exact list of packages varies based on the version of Linux that you're using. As a first step, verify that the yum repository is available on your server. If it isn't available, you can retrieve it by using the `wget your_repository_location` command.
 +
 NOTE: Some of the required packages might already be installed if you chose Virtualized Host for the software selection during installation of the Linux server. You might need to install the openvswitch package from source code as described in the link:https://docs.openvswitch.org/en/latest/intro/install/general/[Open vSwitch documentation^].
 +
@@ -55,7 +55,7 @@ Create at least one storage pool at each ONTAP Select node. If you use software 
 Verify that you can sign in to the Linux CLI on the host where ONTAP Select is deployed.
 
 .About this task
-The ONTAP Select Deploy administration utility expects the target location for the storage pool to be specified as /dev/<pool_name>, where <pool_name> is a unique pool name on the host.
+The ONTAP Select Deploy administration utility expects the target location for the storage pool to be specified as `/dev/<pool_name>`, where `<pool_name>` is a unique pool name on the host.
 
 NOTE: The entire capacity of the LUN is allocated when a storage pool is created.
 
@@ -113,7 +113,7 @@ virsh pool-list
 
 == Step 3: Optionally, delete a storage pool
 
-You can delete a storage pool when it is no longer needed.
+You can delete a storage pool when it's no longer needed.
 
 .Before you begin
 Verify that you can sign in to the Linux CLI where ONTAP Select is deployed.
@@ -199,7 +199,7 @@ pvremove <physical_volume_name>
 
 == Step 4: Review the ONTAP Select cluster configuration
 
-You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and HA capability.
+You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and high-availability (HA) capability.
 
 The following figures illustrate the ONTAP Select networks used with a single-node cluster and four-node cluster for an ESXi host.
 
@@ -284,7 +284,7 @@ ifdown <interface_1>
 ifdown <interface_2>
 ----
 
-. Combine the links using LACP:
+. Combine the links using the Link Aggregation Control Protocol (LACP):
 +
 [source,cli]
 ----
