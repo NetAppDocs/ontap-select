@@ -27,21 +27,34 @@ To deploy an ONTAP Select cluster, your organization must have a valid VMware vS
 
 === Software compatibility
 
-ONTAP Select can be deployed on the following hypervisors:
+You can deploy ONTAP Select on KVM and ESXi hypervisors.
 
-* KVM on Red Hat Enterprise Linux 8.6, 8.7, 8.8, 9.0, 9.1, 9.2, 9.4, and 9.5
-* KVM on Rocky Linux 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5
-* VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1, U2, and U3C
-* VMware ESXi 8.0 GA (build 20513097)
+[role="tabbed-block"]
+====
+.KVM
+--
+ONTAP Select supports the following KVM hypervisor versions:  
+
+* KVM on Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* KVM on Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
+--
+.ESXi
+--
+ONTAP Select supports the following ESXi hypervisor versions:
+
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U3
+* VMware ESXi 8.0 GA (build 20513097)
+* VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1, U2, and U3C
 
 [NOTE]
 NetApp supports ONTAP Select on the identified versions of ESXi as long as VMware also continues to support the same versions.
 
 [NOTE]
 ESXi 6.5 GA and ESXi 6.7 GA reached end of availability status. If you have ONTAP Select clusters with these versions, you must upgrade to the supported versions as per the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)^].
+--
+====
 
 === VMware vCenter and standalone ESXi hosts
 
@@ -62,9 +75,7 @@ There are several common hardware requirements that apply to all platforms regar
 
 .Processor
 
-The supported microprocessors include the following:
-
-* Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
+The supported microprocessors include Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
 
 NOTE: Advanced Micro Devices (AMD) processors aren't supported with ONTAP Select. 
 
@@ -72,7 +83,7 @@ NOTE: Advanced Micro Devices (AMD) processors aren't supported with ONTAP Select
 
 There are several supported Ethernet configurations based on the cluster size.
 
-[cols="30,35,35"*,options="*"]
+[cols="2,3,3" options="header"]
 |===
 | Cluster size
 | Minimum requirements
@@ -97,32 +108,22 @@ There are several additional hardware requirements based on the node instance ty
 
 Refer to link:concept_lic_platforms.html[Understand the platform license offerings] for more information.
 
-.Small
-
-* CPU cores
-Six physical cores or greater, with four reserved for ONTAP Select.
-* Memory
-24GB or greater with 16GB reserved for ONTAP Select.
-* Required platform license offering
-Standard, premium, or premium XL
-
-.Medium
-
-* CPU cores
-Ten physical cores or greater, with eight reserved for ONTAP Select.
-* Memory
-72GB or greater with 64GB reserved for ONTAP Select
-* Required platform license offering
-Premium or premium XL
-
-.Large
-
-* CPU cores
-Eighteen physical cores or greater, with sixteen reserved for ONTAP Select.
-* Memory
-136GB or greater with 128GB reserved for ONTAP Select
-* Required platform license offering
-Premium XL
+[cols="a1,a2,a2,a2" options="header"]
+|===
+|Node size |CPU cores |Memory |Required platform license offering
+|Small
+|Six physical cores or greater, with four reserved for ONTAP Select
+|24GB or greater, with 16GB reserved for ONTAP Select
+|Standard, premium, or premium XL
+|Medium
+|Ten physical cores or greater, with eight reserved for ONTAP Select
+|72GB or greater, with 64GB reserved for ONTAP Select
+|Premium or premium XL
+|Large
+|Eighteen physical cores or greater, with sixteen reserved for ONTAP Select
+|136GB or greater, with 128GB reserved for ONTAP Select
+|Premium XL
+|===
 
 [NOTE]
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
