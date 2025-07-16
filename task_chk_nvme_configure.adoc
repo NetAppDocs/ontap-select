@@ -36,8 +36,8 @@ VMware ESXi version 6.7 or later
 --
 KVM is supported on the following hypervisor versions:
 
-* Red Hat Enterprise Linux 8.6, 8.7, 8.8, 9.0, 9.1, 9.2, 9.4, 9.5, and 9.6
-* Rocky Linux 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, and 9.6
+* Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 --
 
 ====
