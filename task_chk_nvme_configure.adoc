@@ -44,7 +44,7 @@ KVM is supported on the following hypervisor versions:
 
 * NVMe devices conforming to specification 1.0 or later
 
-Follow the link:kvm-host-configuration-and-preparation-checklist.html[host preparation checklist], and review link:reference_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:reference_chk_select_req_info.html[required information for ONTAP Select installation] for more information.
+Follow the link:reference_chk_host_prep.html[host preparation checklist], and review the required information for link:reference_chk_deploy_req_info.html[Deploy utility installation] and link:reference_chk_select_req_info.html[ONTAP Select installation] for more information.
 
 .About this task
 
@@ -60,7 +60,7 @@ See link:concept_stor_capacity_inc.html[Increase storage capacity] for additiona
 
 . Access the *BIOS configuration* menu on the host to enable support for I/O virtualization.
 
-. Enable the *Intel® VT for Directed I/O (VT-d)* setting.
+. Enable the *Intel VT for Directed I/O (VT-d)* setting.
 +
 image:nvme_01.png[Socket Configuration]
 
@@ -89,7 +89,7 @@ image:nvme_03.png[Reboot This Host]
 
 .After you finish
 
-After the hosts are prepared, you can install the ONTAP Select Deploy utility. Deploy guides you through creating ONTAP Select storage clusters on your newly prepared hosts. During this process, Deploy detects the presence of the NVMe drives configured for pass-through and automatically select them for use as ONTAP data disks. You can adjust the default selection if needed.
+After the hosts are prepared, you can install the ONTAP Select Deploy utility. Deploy guides you through creating ONTAP Select storage clusters on your newly prepared hosts. During this process, Deploy detects the presence of the NVMe drives configured for pass-through and automatically selects them for use as ONTAP data disks. You can adjust the default selection if needed.
 
 [NOTE]
 A maximum of 14 NVMe devices are supported for each ONTAP Select node.
