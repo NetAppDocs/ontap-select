@@ -48,7 +48,7 @@ You need to configure PCI passthrough (DirectPath IO) to provide direct access f
 
 * link:task_chk_nvme_configure.html[Configure the KVM host to use NVMe drives]
 * link:concept_stor_swraid_local.html[Use software RAID after you deploy the cluster]
-
++
 For more information, see the link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/chap-virtualization-pci_passthrough#sect-Virtualization-PCI_passthrough-AI_device_to_a_host[Red Hat Documentation^].
 
 . Configure the storage pools.
