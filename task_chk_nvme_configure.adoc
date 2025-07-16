@@ -44,7 +44,7 @@ KVM is supported on the following hypervisor versions:
 
 * NVMe devices conforming to specification 1.0 or later
 
-Follow the link:reference_chk_host_prep.html[host preparation checklist], and review the required information for link:reference_chk_deploy_req_info.html[Deploy utility installation] and link:reference_chk_select_req_info.html[ONTAP Select installation] for more information.
+Follow the link:kvm-host-configuration-and-preparation-checklist[host preparation checklist], and review the required information for the link:reference_chk_deploy_req_info.html[Deploy utility installation] and link:reference_chk_select_req_info.html[ONTAP Select installation] for more information.
 
 .About this task
 
