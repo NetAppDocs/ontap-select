@@ -32,15 +32,16 @@ You can deploy ONTAP Select on KVM and ESXi hypervisors.
 [role="tabbed-block"]
 ====
 .KVM
-ONTAP Select supports the following KVM hypervisor versions:  
 --
+ONTAP Select supports the following KVM hypervisor versions:  
+
 * KVM on Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
 * KVM on Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
 --
 .ESXi
-ONTAP Select supports the following ESXi hypervisor versions:
 --
-* VMware ESXi 9.6
+ONTAP Select supports the following ESXi hypervisor versions:
+
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U3

@@ -160,9 +160,7 @@ The following table provides the minimum license type required for the specified
 2+h| Software type 3+h| Description
 
 2+|Hypervisor support (VMware)
-3+| VMware vSphere 9.6
-
-VMware vSphere 8.0GA and updates 1 through 3
+3+| VMware vSphere 8.0GA and updates 1 through 3
 
 VMware vSphere 7.0GA and updates 1 through 3C 
 
@@ -170,7 +168,7 @@ VMware vSphere 7.0GA and updates 1 through 3C
 2+| Hypervisor support (KVM)
 3+| RedHat Enterprise Linux 64-bit (KVM) 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
 
-Rocky Linux (KVM) 9 and 8
+Rocky Linux (KVM) 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
 2+| Management software
 3+| NetApp Active IQ Unified Manager management suite
 
