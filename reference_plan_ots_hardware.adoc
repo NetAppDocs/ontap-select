@@ -19,7 +19,7 @@ There are several hardware requirements and planning issues you should consider 
 There are several requirements related to the hypervisor where ONTAP Select runs.
 
 [NOTE]
-You should review the current releaseix physical cores or greater, with four reserved for ONTAP Sel notes for your version of ONTAP Select for any additional known restrictions or limitations.
+You should review the current release notes for your version of ONTAP Select for any additional known restrictions or limitations.
 
 === VMware licensing
 
