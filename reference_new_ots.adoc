@@ -20,9 +20,13 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 ONTAP Select 9.17.1 includes several new features and improvements.
 
 Software RAID support for locally attached NVMe disks on KVM hosts::
-ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a KVM hypervisor host.
+ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a KVM hypervisor host. 
 +
-To use software RAID for locally attached NVMe disks, you need to link:https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required to use software RAID after you deploy the cluster.
+To use software RAID for locally attached NVMe disks, you need to link:https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required for the following tasks: 
++
+* Configuring the KVM host to use NVMe drives
+* Using software RAID after you deploy the cluster
+
 +
 link:https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage^].
 
@@ -201,6 +205,7 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 6.0 is no longer supported
 
 
+// 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
 // 2023 Feb 10, clean-up

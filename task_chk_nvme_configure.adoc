@@ -22,9 +22,26 @@ Make sure your deployment environment meets the following minimum requirements:
 
 * ONTAP Select 9.7 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
-* VMware ESXi version 6.7 or later
-* KVM on Red Hat Enterprise Linux 8.6, 8.7, 8.8, 9.0, 9.1, 9.2, 9.4, and 9.5
-* KVM on Rocky Linux 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5
+* The ESXi or KVM host is running a supported hypervisor version:
++
+[role="tabbed-block"]
+====
+
+.ESXi
+--
+VMware ESXi version 6.7 or later
+--
+
+.KVM
+--
+KVM is supported on the following hypervisor versions:
+
+* Red Hat Enterprise Linux 8.6, 8.7, 8.8, 9.0, 9.1, 9.2, 9.4, 9.5, and 9.6
+* Rocky Linux 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, and 9.6
+--
+
+====
+
 * NVMe devices conforming to specification 1.0 or later
 
 Follow the link:reference_chk_host_prep.html[host preparation checklist], and review link:reference_chk_deploy_req_info.html[required information for Deploy utility installation], and the link:reference_chk_select_req_info.html[required information for ONTAP Select installation] for more information.
