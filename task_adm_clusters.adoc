@@ -4,8 +4,7 @@ permalink: task_adm_clusters.html
 keywords: administer, administering, web, clusters
 summary: There are several related tasks you can perform to administer an ONTAP Select cluster.
 ---
-
-= ONTAP Select clusters
+= Manage ONTAP Select clusters
 :hardbreaks:
 :nofooter:
 :icons: font
