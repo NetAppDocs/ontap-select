@@ -43,6 +43,14 @@ NOTE: Some of the required packages might already be installed if you chose Virt
 +
 For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool^].
 
+. Configure PCI passthrough for NVME disks
+You need to configure PCI passthrough (DirectPath IO) to provide direct access for the KVM host to the locally attached NVMe disks in the ONTAP Select cluster. You need direct access to perform the following tasks:
+
+* link:task_chk_nvme_configure.html[Configure the KVM host to use NVMe drives]
+* link:concept_stor_swraid_local.html[Use software RAID after you deploy the cluster]
+
+For more information, see the link:https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/chap-virtualization-pci_passthrough#sect-Virtualization-PCI_passthrough-AI_device_to_a_host[Red Hat Documentation^].
+
 . Configure the storage pools.
 +
 An ONTAP Select storage pool is a logical data container that abstracts the underlying physical storage. You must manage the storage pools on the KVM hosts where ONTAP Select is deployed. 
@@ -301,5 +309,6 @@ ifup <interface_1>
 ifup <interface_2>
 ----
 
+// 2025 July 16, ONTAPDOC-2885
 // 2024 NOV 4, ONTAPDOC-2528
 // 2023-09-26, ONTAPDOC-1204
