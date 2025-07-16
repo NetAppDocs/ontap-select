@@ -85,6 +85,8 @@ You need a VMFS datastore that is also backed by an NVMe device to host the ONTA
 
 . Select *Reboot This Host*.
 +
+The following example output is for an ESXi host:
++
 image:nvme_03.png[Reboot This Host]
 
 .After you finish
@@ -93,6 +95,8 @@ After the hosts are prepared, you can install the ONTAP Select Deploy utility. D
 
 [NOTE]
 A maximum of 14 NVMe devices are supported for each ONTAP Select node.
+
+The following example output is for an ESXi host:
 
 image:nvme_04.png[ONTAP Select Deploy Clusters]
 
