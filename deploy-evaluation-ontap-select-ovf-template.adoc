@@ -27,7 +27,7 @@ Use the following requirements to prepare the ESXi host where the ONTAP Select c
 
 image:prepare_ESXi_host_requirements.png[Requirements to prepare the ESXi host]
 
-For additional information about host configuration options, see the link:reference_chk_host_prep.html[ONTAP Select Install documentation].
+For additional information about host configuration options, see the link:esxi-host-configuration-and-preparation-checklist.html[ONTAP Select Install documentation].
 
 == Deploy a single-node ONTAP Select cluster using an OVF template
 Complete the following steps on a supported 64-bit ESXi host server.

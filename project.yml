@@ -120,7 +120,11 @@ sidebar:
         - title: Pre-installation checklist
           entries:
             - title: Host preparation checklist
-              url: /reference_chk_host_prep.html
+              entries:
+                - title: KVM host checklist 
+                  url: /kvm-host-configuration-and-preparation-checklist.html
+                - title: ESXi host checklist
+                  url: /esxi-host-configuration-and-preparation-checklist.html
             - title: Deploy utility required information
               url: /reference_chk_deploy_req_info.html
             - title: ONTAP Select required information
