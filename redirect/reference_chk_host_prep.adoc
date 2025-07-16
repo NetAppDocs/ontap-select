@@ -1,0 +1,4 @@
+---
+permalink: reference_chk_host_prep.html
+redirect: ontap-select/kvm-host-configuration-and-preparation-checklist.html
+---
