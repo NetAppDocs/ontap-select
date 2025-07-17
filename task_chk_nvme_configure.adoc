@@ -35,7 +35,7 @@ ESXi is supported on the following hypervisor versions:
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U3
-* VMware ESXi 7.0 GA (build 15843807 or greater) including 7.0 U1, U2, and U3C
+* VMware ESXi 7.0 GA (build 15843807 or greater), including 7.0 U1, U2, and U3C
 --
 
 .KVM
@@ -113,4 +113,4 @@ image:nvme_05.png[preparing local storage]
 image:nvme_06.png[ONTAP System Manager]
 
 
-// 2025 July 16, ONTAPDOC-2885 
+// 2025 July 17, ONTAPDOC-2885 
