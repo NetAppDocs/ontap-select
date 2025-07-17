@@ -42,9 +42,6 @@ Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Sel
 +
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
 
-Updated KVM hypervisor support::
-ONTAP Select 9.17.1 includes support for KVM hypervisors on Red Hat Enterprise Linux (RHEL) 9.6 and Rocky Linux 9.6.
-
 Updated NDA driver support::
 Beginning with ONTAP Select 9.17.1, the FreBSD NDA (NVMe Direct Access) device driver replaces the NVD (NVMe express disk driver). The FreBSD driver provides support for direct access devices by implementing the NVMe command protocol. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, the FreBSD driver is started by default when you configure the NVMe devices. 
 +
