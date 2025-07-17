@@ -22,7 +22,7 @@ ONTAP Select 9.17.1 includes several new features and improvements.
 Software RAID support for locally attached NVMe disks on KVM hosts::
 ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a Kernel-Based Virtual Machine (KVM) hypervisor host. 
 +
-To use software RAID for locally attached NVMe disks, you need to link:reference_chk_host_prep.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required for the following tasks: 
+To use software RAID for locally attached NVMe disks, you need to link:kvm-host-configuration-and-preparation-checklist.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required for the following tasks: 
 +
 * Configuring the KVM host to use NVMe drives
 * Using software RAID after you deploy the cluster
