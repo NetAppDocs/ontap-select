@@ -103,7 +103,7 @@ When adding capacity to an ONTAP Select VM using software RAID, the administrato
 
 Similar to FAS and AFF systems, you can only add drives with equal or larger capacities to an existing RAID group. Larger capacity drives are right sized. If you are creating new RAID groups, the new RAID group size should match the existing RAID group size to make sure that the overall aggregate performance does not deteriorate.
 
-== Match an ONTAP Select disk to the corresponding ESX disk
+== Match an ONTAP Select disk to the corresponding ESX or KVM disk
 
 ONTAP Select disks are usually labeled NET x.y. You can use the following ONTAP command to obtain the disk UUID:
 
@@ -124,12 +124,25 @@ Plex: -This UID can be matched with the device UID displayed in the ‘storage d
 
 image:ST_21.jpg[Matching an ONTAP Select Disk to the Corresponding ESX Disk]
 
-In the ESXi shell, you can enter the following command to blink the LED for a given physical disk (identified by its naa.unique-id).
+In the ESXi or KVM shell, you can enter the following command to blink the LED for a given physical disk (identified by its naa.unique-id).
 
+[role="tabbed-block"]
+====
+.ESX
+--
 [source,cli]
 ----
 esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>
 ----
+--
+.KVM
+--
+[source,cli]
+----
+cat /sys/block/<block_device_id>/device/wwid
+----
+--
+====
 
 == Multiple drive failures when using software RAID
 
