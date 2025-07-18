@@ -75,7 +75,7 @@ There are several common hardware requirements that apply to all platforms regar
 
 .Processor
 
-The supported microprocessors include Intel Xeon processors for Server (see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information)
+The supported microprocessors include Intel Xeon processors for Server, see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information.
 
 NOTE: Advanced Micro Devices (AMD) processors aren't supported with ONTAP Select. 
 
