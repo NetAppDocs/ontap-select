@@ -35,7 +35,7 @@ Independent of the hardware RAID configurations, ONTAP Select also provides a so
 When using software RAID, the absence of a hardware RAID controller is ideal, but, if a system does have an existing RAID controller, it must adhere to the following requirements:
 
 * You must disable the hardware RAID controller so that disks can be presented directly to the system (a JBOD). You can usually make this change in the RAID controller BIOS.
-* Alternatively, the hardware RAID controller should be in the SAS HBA mode. For example, some BIOS configurations allow an “AHCI” mode in addition to RAID, which you could choose to enable the JBOD mode. This enables a passthrough, so that the physical drives can be seen as is on the host.
+* Or the hardware RAID controller should be in the SAS HBA mode. For example, some BIOS configurations allow an “AHCI” mode in addition to RAID, which you could choose to enable the JBOD mode. This enables a passthrough, so that the physical drives can be seen as is on the host.
 
 Depending on the maximum number of drives supported by the controller, an additional controller might be required. With the SAS HBA mode, ensure that the IO controller (SAS HBA) is supported with a minimum of 6Gbs speed. However, NetApp recommends a 12Gbps speed.
 
