@@ -48,7 +48,7 @@ VMXNET3 is the default network driver included with new cluster deployments on V
 
 .Related information
 
-* link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^]
+link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP upgrade overview^]
 
 // 2023-Oct-17, prep for repo version split
 // 2023-Nov-13, GitHub issue #222

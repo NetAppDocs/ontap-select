@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
 permalink: task_lic_acquire_cp.html
-keywords: license, licensing, acquire, capacity pools
-summary: You must acquire a license file for each capacity pool used by the ONTAP Select nodes. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
+keywords: license, licensing, acquire, Capacity Pools
+summary: You must acquire a license file for each Capacity Pool used by the ONTAP Select nodes. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
 ---
-= Acquire an ONTAP Select capacity pool license
+= Acquire an ONTAP Select Capacity Pool license
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,15 +12,15 @@ summary: You must acquire a license file for each capacity pool used by the ONTA
 :imagesdir: ./media/
 
 [.lead]
-You must acquire a license file for each capacity pool used by the ONTAP Select nodes. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
+You must acquire a license file for each Capacity Pool used by the ONTAP Select nodes. The license file defines the storage capacity and expiration for the pool. It is locked to the License Manager through a combination of the unique license serial number assigned by NetApp and the License Lock ID associated with the Deploy instance.
 
 .Before you begin
 
-You must have the nine-digit license serial number assigned to the capacity pool by NetApp. Before attempting to acquire a license file, you should wait at least twenty four hours after the shipped date of your purchase order.
+You must have the nine-digit license serial number assigned to the Capacity Pool by NetApp. Before attempting to acquire a license file, you should wait at least twenty four hours after the shipped date of your purchase order.
 
 .About this task
 
-You must perform this task for each capacity pool used by the ONTAP Select nodes.
+You must perform this task for each Capacity Pool used by the ONTAP Select nodes.
 
 .Steps
 
@@ -28,7 +28,7 @@ You must perform this task for each capacity pool used by the ONTAP Select nodes
 
 . Click *Systems* at the top and then click *Software Licenses*.
 
-. Type the license serial number for the capacity pool and click *Go!*.
+. Type the license serial number for the Capacity Pool and click *Go!*.
 
 . On the license details page, navigate to the *Product Details* column.
 
@@ -42,4 +42,4 @@ You must perform this task for each capacity pool used by the ONTAP Select nodes
 
 .After you finish
 
-You must upload the license file to the Deploy administration utility before the capacity pool can be used by an ONTAP Select node.
+You must upload the license file to the Deploy administration utility before the Capacity Pool can be used by an ONTAP Select node.

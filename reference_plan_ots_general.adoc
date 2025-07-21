@@ -125,7 +125,7 @@ You should determine how much storage is required for the ONTAP Select nodes. Th
 The ONTAP Select storage capacity corresponds to the total allowable size of the data disks attached to the ONTAP Select virtual machine.
 
 Licensing model for production deployment::
-You must select the capacity tiers or capacity pools licensing model for each ONTAP Select cluster deployed in a production environment. Review the section _License_ for more information.
+You must select the Capacity Tiers or Capacity Pools licensing model for each ONTAP Select cluster deployed in a production environment. Review the section _License_ for more information.
 
 == Authentication using the credential store
 

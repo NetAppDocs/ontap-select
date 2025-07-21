@@ -12,9 +12,22 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes. No other cluster expansion or contraction scenarios are supported.
+Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes. 
 
-The procedure is initiated from ONTAP Select Deploy using the CLI, API, or web interface.
+The following cluster expansions and contractions aren't supported:
+
+* Expansions from one, two, or four-node clusters to six or eight-node clusters.
+* Contractions from six or eight-node clusters to one, two, or four-node clusters.
+
+[NOTE]
+====
+To change the number of nodes in a cluster to a size that isn't supported by cluster expansion or contraction, you need to perform the following tasks:
+
+. Deploy a new multi-node cluster by using the link:task_cli_deploy_cluster.html[CLI] or the link:task_deploy_cluster.html[web UI] provided with the ONTAP Select Deploy administration utility.
+. If applicable, migrate the data to the new cluster by using link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html[SnapMirror replication^].
+====
+
+You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
 == Hardware and storage considerations
 The cluster expansion and contraction functionalities are restricted in the following ways:
@@ -27,11 +40,6 @@ The cluster expansion and contraction functionalities are restricted in the foll
 ** ESXi 7.0 U3
 ** ESXi 7.0
 
-The following cluster expansions and contractions are currently not supported:
-
-* Expansions from one, two, or  four-node clusters to six or eight-node clusters.
-* Contractions from six or eight-node clusters to one, two, or four-node clusters.
-
 == Expand the cluster
 You can increase the size of an existing cluster from a six-node to an eight-node cluster with the cluster expansion feature.
 
@@ -39,7 +47,7 @@ You can increase the size of an existing cluster from a six-node to an eight-nod
 In preparation for the cluster expansion procedure, new ESX hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
 
 .Before you begin
-* When deploying a multi-node cluster, you should be familiar with the link:https://docs.netapp.com/us-en/ontap-select/task_adm_connectivity.html[network connectivity checker]. 
+* When deploying a multi-node cluster, you should be familiar with the network connectivity checker. You can run the network connectivity checker using the link:task_adm_connectivity.html[web UI] or the link:task_cli_connectivity.html[CLI].
 
 * Verify that you have the license details for the new nodes. 
 
@@ -100,6 +108,8 @@ It can take up to 30 minutes for the cluster to be contracted.
 . Monitor the multi-step cluster contraction process to confirm that the cluster contracted successfully.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
+
+
 
 // 2024 NOV 5, ONTAPDOC-2518
 // 2023 May 06, ONTAPDOC-1797, -1802

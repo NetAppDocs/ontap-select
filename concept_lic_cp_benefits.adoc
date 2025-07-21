@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
 permalink: concept_lic_cp_benefits.html
-keywords: license, licensing, capacity pools, benefits
-summary: There are several benefits when using the capacity pools licensing model instead of the capacity tiers licensing model.
+keywords: license, licensing, Capacity Pools, benefits
+summary: There are several benefits when using the Capacity Pools licensing model instead of the Capacity Tiers licensing model.
 ---
-= Summary of benefits for ONTAP Select capacity pools licensing
+= Summary of benefits for ONTAP Select Capacity Pools licensing
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,18 +12,18 @@ summary: There are several benefits when using the capacity pools licensing mode
 :imagesdir: ./media/
 
 [.lead]
-There are several benefits when using the capacity pools licensing model instead of the capacity tiers licensing model.
+There are several benefits when using the Capacity Pools licensing model instead of the Capacity Tiers licensing model.
 
 == More efficient use of storage capacity
 
-When using capacity tiers licensing, you allocate a fixed storage capacity to each node. Any unused space cannot be shared with the other nodes and is effectively wasted. With capacity pools licensing, each node only consumes the capacity it needs, based on the size of the data aggregates.
+When using Capacity Tiers licensing, you allocate a fixed storage capacity to each node. Any unused space cannot be shared with the other nodes and is effectively wasted. With Capacity Pools licensing, each node only consumes the capacity it needs, based on the size of the data aggregates.
 
 And because the capacity is anchored in a central pool, it can be shared among many nodes in your organization.
 
 == Significantly reduced administrative overhead resulting in lower cost
 
-If you use capacity tier licenses, you must obtain and install a license for each node. When using capacity pools, there is one license for each shared pool. This can dramatically reduce the administrative overhead and result in lower cost.
+If you use Capacity Tier licenses, you must obtain and install a license for each node. When using Capacity Pools, there is one license for each shared pool. This can dramatically reduce the administrative overhead and result in lower cost.
 
 == Improved usage metrics
 
-The Deploy web user interface provides enhanced usage information for the capacity pools. You can quickly determine how much storage is used and available in a capacity pool, which nodes are using storage from a pool, and what pools a cluster is allocating capacity from.
+The Deploy web user interface provides enhanced usage information for the Capacity Pools. You can quickly determine how much storage is used and available in a Capacity Pool, which nodes are using storage from a pool, and what pools a cluster is allocating capacity from.

@@ -36,14 +36,14 @@ Every ONTAP Select node runs with either an _evaluation license_ or a _purchased
 * Storage capacity
 * Platform license offering
 
-Capacity tiers licensing model::
-The capacity tiers licensing model is the original option when licensing storage for an ONTAP Select deployment. It is based on the ONTAP model used with NetApp AFF and FAS. A separate license is required for each node. The storage capacity is locked to the node and perpetual (no renewal required).
+Capacity Tiers licensing model::
+The Capacity Tiers licensing model is the original option when licensing storage for an ONTAP Select deployment. It is based on the ONTAP model used with NetApp AFF and FAS. A separate license is required for each node. The storage capacity is locked to the node and perpetual (no renewal required).
 
-Capacity pools licensing model::
-The capacity pools licensing model was introduced with ONTAP Select 9.5 using Deploy 2.10. A separate license is required for each storage capacity pool. The capacity pool license is locked to a License Manager instance (that is a Deploy instance) and must be renewed based on the terms of your purchase. You can license and use any number of capacity pools in your organization. However, because the capacity pools are shared by the ONTAP Select nodes, fewer licenses are typically required than capacity tiers licensing.
+Capacity Pools licensing model::
+The Capacity Pools licensing model was introduced with ONTAP Select 9.5 using Deploy 2.10. A separate license is required for each storage Capacity Pool. The Capacity Pool license is locked to a License Manager instance (that is a Deploy instance) and must be renewed based on the terms of your purchase. You can license and use any number of Capacity Pools in your organization. However, because the Capacity Pools are shared by the ONTAP Select nodes, fewer licenses are typically required than Capacity Tiers licensing.
 
 License Manager::
-The License Manager is a software component which supports capacity pools licensing. It is currently part of the Deploy administration utility. LM leases storage to the ONTAP Select nodes from the shared pools it manages. The _License Lock ID_ is a numeric string uniquely identifying each LM instance, and therefore each Deploy instance. You must use both the capacity pool license serial number and LLID to generate a license file.
+The License Manager is a software component which supports Capacity Pools licensing. It is currently part of the Deploy administration utility. LM leases storage to the ONTAP Select nodes from the shared pools it manages. The _License Lock ID_ is a numeric string uniquely identifying each LM instance, and therefore each Deploy instance. You must use both the Capacity Pool license serial number and LLID to generate a license file.
 
 Platform license offerings::
 There are three license offerings available which determine the size capabilities of the ONTAP Select virtual machine when you purchase a license:

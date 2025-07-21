@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: concept_lic_platforms.html
 keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl
-summary: You can purchase an ONTAP Select capacity tier or capacity pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
+summary: You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 ---
-= Understand the platform license offerings for ONTAP Select
+= Learn about the platform license offerings for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,11 +12,11 @@ summary: You can purchase an ONTAP Select capacity tier or capacity pool license
 :imagesdir: ./media/
 
 [.lead]
-You can purchase an ONTAP Select capacity tier or capacity pool license in one of three platform capacity levels. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
+You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in the standard, premium, or premium XL level. These license offerings determine the capabilities of the hosts where you deploy ONTAP Select.
 
 == What a platform license offering provides
 
-A specific license offering defines and restrictions the capabilities of the hypervisor host in two areas:
+A specific license offering defines and restricts the capabilities of the hypervisor host in two areas:
 
 * Instance type (CPU, memory)
 * Additional features
@@ -41,7 +41,7 @@ The standard offering provides the following capabilities:
 The premium offering provides the following capabilities:
 
 * Small or medium instance type
-* Hard disk drives (HDD) or Solid state drives (SSD)
+* Hard disk drives (HDD) or solid state drives (SSD)
 * Local hardware RAID controller or software RAID
 * vNAS
 * MetroCluster SDS
@@ -57,7 +57,130 @@ The premium XL offering provides the following capabilities:
 * MetroCluster SDS
 
 [NOTE]
-Use of the large instance type or NVMe drives in an SW-RAID configuration is not supported on KVM.
+Use of the large instance type or NVMe drives in an SW-RAID configuration isn't supported on Kernel-Based Virtual Machine (KVM).
 
+== Compare hardware support for platform license offerings
+
+The standard, premium, and premium XL license offerings support a wide range of hardware and software. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
+
+[role="tabbed-block"]
+====
+.Core item 
+--
+[cols=5"30,70"*]
+|===
+
+2+h| Core item type 3+h| Description
+
+2+| Host protocols 
+3+| NFS, SMB/CIFS, iSCSI, and NVMe over TCP
+2+| Deployment options
+3+| Single node
+
+Two-node cluster (HA pair)
+
+Four-, six-, or eight-node cluster
+2+| Supported capacity (per node)
+3+| Up to 400TB raw data (ESXi and KVM)
+|===
+--
+
+.Hardware
+--
+[cols=5"30,70"*]
+|===
+2+h| Hardware type 3+h| Description
+2+h|Instance size h| Small h| Medium h| Large
+2+| CPU family 
+| Intel Xeon E5-26xx v3 (Haswell) or later	
+| Intel Xeon E5-26xx v3 (Haswell) or later	
+| Intel Xeon E5-26xx v3 (Haswell) or later	
+2+| ONTAP Select CPU / memory	
+| 4 virtual CPUs (vCPUs) / 16GB of RAM
+
+| 8 vCPUs / 64GB of RAM
+	
+| 16 vCPUs / 128GB of RAM
+
+2+| Host CPU / memory minimum requirements ^1^	
+| 6 cores / 24GB of RAM	
+| 10 cores / 72GB of RAM
+| 18 cores / 136GB of RAM
+2+| Network (per node)
+3+| Minimum of two 1GbE ports for a single node cluster
+
+Minimum of four 1GbE ports for a two-node cluster (HA pair)
+
+Minimum of two 10GbE ports for a four-, six-, or eight-node cluster
+|===
+
+^1^ Assumes two cores and 8Gb RAM for the hypervisor.
+--
+
+.Storage type
+--
+
+The following table provides the minimum license type required for the specified storage. 
+
+[cols=5"30,70"*]
+
+|===
+2+h| Storage type 3+h| Description
+2+h|License type h| Standard h| Premium h| Pemium XL
+2+h|Instance size h| Small h| Small and medium h| Small, medium, and large
+2+| Local DAS with hardware RAID controller
+| 8 - 60 drives
+| 8 - 60 drives
+| 8 - 60 drives
+2+| HDD (SAS, NL-SAS, SATA)
+| Not applicable	
+| 4 – 60 drives	
+| 4 – 60 drives
+2+| SSD (SAS)
+| Not applicable
+| 4 – 60 drives (SSD only)
+| 4 – 60 drives (SSD only)
+2+| Local DAS with software RAID
+| Not applicable
+| Not applicable
+| 4 - 14 drives (NVMe only)
+2+| External arrays ^1^
+3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
+
+|===
+
+
+^1^ External array protocol support reflects networked storage connectivity.
+--
+.Software
+--
+[cols=5"30,70"*]
+|===
+
+2+h| Software type 3+h| Description
+
+2+|Hypervisor support (VMware)
+3+| VMware vSphere 7.0GA and updates 1 through 3C 
+
+VMware vSphere 8.0GA and updates 1 through 3
+2+| Hypervisor support (KVM)
+3+| RedHat Enterprise Linux 64-bit (KVM) 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
+
+Rocky Linux (KVM) 9 and 8
+2+| Management software
+3+| NetApp Active IQ Unified Manager management suite
+
+ONTAP Select Deploy Utility
+
+SnapCenter (optional)
+
+|===
+
+--
+====
+.Related information
+link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types].
+
+// 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
 // 2023-12-12, ONTAPDOC-1525
