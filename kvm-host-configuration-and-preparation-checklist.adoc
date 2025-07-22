@@ -43,9 +43,9 @@ NOTE: Some of the required packages might already be installed if you chose Virt
 +
 For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool^].
 
-. Configure PCI passthrough for NVME disks.
+. Configure PCI passthrough for NVMe disks.
 +
-You need to configure PCI passthrough (DirectPath IO) to provide direct access for the KVM host to the locally attached NVMe disks in the ONTAP Select cluster. You need direct access to perform the following tasks:
+If you're using NVMe disks in your configuration, you need to configure PCI passthrough (DirectPath IO) to provide direct access for the KVM host to the locally attached NVMe disks in the ONTAP Select cluster. You need direct access to perform the following tasks:
 +
 * link:task_chk_nvme_configure.html[Configure the KVM host to use NVMe drives]
 * link:concept_stor_swraid_local.html[Use software RAID after you deploy the cluster]
