@@ -40,8 +40,8 @@ Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is support
 
 Cluster expansion and contraction is supported for the following KVM hypervisor versions:
 
-* Red Hat Enterprise Linux 64-bit 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
+* Red Hat Enterprise Linux 64-bit 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 --
 .ESXi
 --

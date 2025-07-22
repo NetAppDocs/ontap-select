@@ -20,7 +20,8 @@ Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficienc
 
 Make sure your deployment environment meets the following minimum requirements:
 
-* ONTAP Select 9.7 or later with a supported Deploy administration utility
+* For an ESX host, ONTAP Select 9.7 or later with a supported Deploy administration utility
+* For a KVM host, ONTAP Select 9.17.1 with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * The ESXi or KVM host is running a supported hypervisor version:
 +
@@ -42,8 +43,8 @@ ESXi is supported on the following hypervisor versions:
 --
 KVM is supported on the following hypervisor versions:
 
-* Red Hat Enterprise Linux 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
+* Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 --
 
 ====

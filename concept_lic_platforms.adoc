@@ -166,9 +166,9 @@ VMware vSphere 7.0GA and updates 1 through 3C
 
 
 2+| Hypervisor support (KVM)
-3+| Red Hat Enterprise Linux 64-bit (KVM) 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6 
+3+| Red Hat Enterprise Linux 64-bit (KVM) 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6 
 
-Rocky Linux (KVM) 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
+Rocky Linux (KVM) 9.6 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
 2+| Management software
 3+| NetApp Active IQ Unified Manager management suite
 

@@ -47,6 +47,10 @@ Beginning with ONTAP Select 9.17.1, the FreeBSD NDA (NVMe Direct Access) device 
 +
 For ONTAP Select 9.16.1 and earlier, the NVD continues to provide support for NVMe devices in your ONTAP Select deployment.
 
+Updated KVM hypervisor support::
+
+Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.6 and Rocky Linux 9.6.
+
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 includes several new features and improvements.
@@ -65,7 +69,7 @@ ONTAP Select 9.16.1 includes support for VMware ESXi 8.0 U3.
 
 Updated KVM hypervisor support::
 
-Beginning with ONTAP Select 9.16.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.5 and Rocky Linux 9.5.
+Beginning with ONTAP Select 9.16.1, KVM hypervisor is supported on RHEL 9.5 and Rocky Linux 9.5.
 
 == ONTAP Select 9.15.1
 
