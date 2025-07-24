@@ -58,7 +58,7 @@ ONTAP Select receives no performance benefits by increasing the number of LUNs w
 NetApp recommends using ESX 6.5 U2 or later and an NVMe disk for the datastore hosting the system disks. This configuration provides the best performance for the NVRAM partition.
 
 [NOTE]
-When installing on ESX 6.5 U2 and higher, ONTAP Select uses the vNVME driver regardless of whether the system disk resides on an SSD or on an NVME disk. This sets the VM hardware level to 13, which is compatible with ESX 6.5 and later.
+When installing on ESX 6.5 U2 and higher, ONTAP Select uses the vNVMEe driver regardless of whether the system disk resides on an SSD or on an NVMe disk. This sets the VM hardware level to 13, which is compatible with ESX 6.5 and later.
 
 Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage (VMware vSAN and generic storage array traffic when using iSCSI or NFS).
 
