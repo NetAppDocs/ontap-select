@@ -51,7 +51,7 @@ This task describes one method for uploading the file to the Deploy virtual mach
 
 .Steps
 
-. In a command shell on your local workstation, use the scp utility to upload the image file to the Deploy virtual machine.
+. In a command shell on your local workstation, use the SCP utility to upload the image file to the Deploy virtual machine.
 +
 Example
 +
@@ -68,7 +68,10 @@ The upgrade file is stored in the home directory of the admin user.
 After the upgrade file has been uploaded to the Deploy virtual machine, you can apply the upgrade.
 
 .Before you begin
-You must known which directory the upgrade file has been placed in at the Deploy utility virtual machine. Also, assure that Deploy is not used to perform any other tasks while the upgrade is performed.
+You must know which directory the upgrade file has been placed in at the Deploy utility virtual machine. Also, assure that Deploy is not used to perform any other tasks while the upgrade is performed.
+
+[NOTE]
+You can upgrade ONTAP Select Deploy 9.17.1 from ONTAP Select Deploy 9.16.1 and 9.15.1. To upgrade from older versions, review the previous release notes.
 
 .Steps
 
@@ -87,6 +90,8 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 Before the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created Deploy pages.
 
+
+// 2025 Aug 05, ONTAPDOC-3158
 // 2023-06-06, github issue #178
 // 2023-10-17, prep for repo version split
 // 2023-11-01, github issue #221
