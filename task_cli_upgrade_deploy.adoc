@@ -16,7 +16,7 @@ You can upgrade an existing ONTAP Select Deploy utility virtual machine in-place
 
 .Before you begin
 
-Make sure that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. See the current release notes for information and restrictions about upgrading the Deploy utility.
+Make sure that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. See the current release notes for information and restrictions about upgrading the ONTAP Select Deploy utility.
 
 [NOTE]
 ====
@@ -42,13 +42,13 @@ To begin the upgrade process, download the appropriate ONTAP Select Deploy virtu
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
-== Step 2: Upload the package to the Deploy virtual machine
+== Step 2: Upload the package to the ONTAP Select Deploy virtual machine
 
 After you download the package, you need to upload the file to the ONTAP Select Deploy virtual machine.
 
 .About this task
 
-This task describes one method for uploading the file to the Deploy virtual machine. There might be other options more suitable for your environment.
+This task describes one method for uploading the file to the ONTAP Select Deploy virtual machine. There might be other options more suitable for your environment.
 
 .Before you begin
 
@@ -57,7 +57,7 @@ This task describes one method for uploading the file to the Deploy virtual mach
 
 .Steps
 
-. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the Deploy virtual machine.
+. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine.
 +
 .Example
 +
@@ -93,7 +93,7 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 .After you finish
 
-Before the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created Deploy pages.
+Before the upgrade procedure completes, you are asked to create a backup of the ONTAP Select Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created ONTAP Select Deploy pages.
 
 
 // 2025 Aug 08, ONTAPDOC-3158
