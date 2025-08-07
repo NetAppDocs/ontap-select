@@ -26,9 +26,9 @@ If you have an older instance of the ONTAP Select Deploy administration utility 
 You can upgrade ONTAP Select Deploy 9.17.1 from ONTAP Select Deploy 9.16.1 or 9.15.1. To upgrade from ONTAP Select Deploy 9.14.1 or earlier, review the release notes for your ONTAP Select version.
 ====
 
-== Step 1: Download the upgrade package
+== Step 1: Download the package
 
-To begin the upgrade process, you download the appropriate Deploy virtual machine upgrade file from the link:https://mysupport.netapp.com/site/[NetApp Support Site^]. The upgrade package is formatted as a single compressed file.
+To begin the upgrade process, download the appropriate ONTAP Select Deploy virtual machine upgrade file from the link:https://mysupport.netapp.com/site/[NetApp Support Site^]. The upgrade package is formatted as a single compressed file.
 
 .Steps
 
@@ -44,7 +44,7 @@ To begin the upgrade process, you download the appropriate Deploy virtual machin
 
 == Step 2: Upload the package to the Deploy virtual machine
 
-After you download the upgrade package, you need to upload the file to the ONTAP Select Deploy virtual machine.
+After you download the package, you need to upload the file to the ONTAP Select Deploy virtual machine.
 
 .About this task
 
