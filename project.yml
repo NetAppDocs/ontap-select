@@ -9,19 +9,19 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
-    - version-number: "9.16.1"
+    - version-number: "9.17.1"
       url: /ontap-select
+    - version-number: "9.16.1"
+      url: /ontap-select-9161
     - version-number: "9.15.1"
       url: /ontap-select-9151 
     - version-number: "9.14.1"
       url: /ontap-select-9141
     - version-number: "9.13.1"
-      url: /ontap-select-9131        
-    - version-number: "9.12.1"
-      url: /ontap-select-9121             
+      url: /ontap-select-9131                    
 sidebar:
   entries:
-    - title: ONTAP Select 9.16.1 docs
+    - title: ONTAP Select 9.17.1 docs
       url: /index.html
     - title: Release Notes
       entries:
@@ -120,7 +120,11 @@ sidebar:
         - title: Pre-installation checklist
           entries:
             - title: Host preparation checklist
-              url: /reference_chk_host_prep.html
+              entries:
+                - title: KVM host checklist 
+                  url: /kvm-host-configuration-and-preparation-checklist.html
+                - title: ESXi host checklist
+                  url: /esxi-host-configuration-and-preparation-checklist.html
             - title: Deploy utility required information
               url: /reference_chk_deploy_req_info.html
             - title: ONTAP Select required information

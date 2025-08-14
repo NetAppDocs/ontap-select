@@ -15,6 +15,42 @@ summary: The current release includes several new features or improvements speci
 [.lead]
 Learn about the new features and enhancements in supported versions of ONTAP Select.
 
+== ONTAP Select 9.17.1
+
+ONTAP Select 9.17.1 includes several new features and improvements.
+
+Software RAID support for locally attached NVMe disks on KVM hosts::
+ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a Kernel-Based Virtual Machine (KVM) hypervisor host. 
++
+To use software RAID for locally attached NVMe disks, you need to link:kvm-host-configuration-and-preparation-checklist.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required for the following tasks: 
++
+* Configuring the KVM host to use NVMe drives
+* Using software RAID after you deploy the cluster
+
++
+link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
+
+Support for cluster expansion and contraction on KVM hosts::
+Beginning with ONTAP Select 9.17.1, the cluster expansion and contraction feature is supported for both Kernel-Based Virtual Machine (KVM) and ESXi hypervisor hosts. For ONTAP Select 9.16.1 and 9.15.1, cluster expansion and contraction is only supported for ESXi hypervisor hosts.
++
+You can use the cluster expansion and contraction feature on an existing ONTAP Select cluster to increase the size from a six-node to an eight-node cluster or decrease the size from an eight-node to a six-node cluster. 
++
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+
+Support for SnapMirror cloud::
+Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1.
++
+https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
+
+Updated NDA driver support::
+Beginning with ONTAP Select 9.17.1, the FreeBSD NDA (NVMe Direct Access) device driver replaces the NVD (NVMe express disk driver). The FreeBSD driver provides support for direct access devices by implementing the NVMe command protocol. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, the FreeBSD driver is started by default when you configure the NVMe devices. 
++
+For ONTAP Select 9.16.1 and earlier, the NVD continues to provide support for NVMe devices in your ONTAP Select deployment.
+
+Updated KVM hypervisor support::
+
+Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.6 and Rocky Linux 9.6.
+
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 includes several new features and improvements.
@@ -33,7 +69,7 @@ ONTAP Select 9.16.1 includes support for VMware ESXi 8.0 U3.
 
 Updated KVM hypervisor support::
 
-Beginning with ONTAP Select 9.16.1, Kernel-Based Virtual Machine (KVM) hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.5 and Rocky Linux 9.5.
+Beginning with ONTAP Select 9.16.1, KVM hypervisor is supported on RHEL 9.5 and Rocky Linux 9.5.
 
 == ONTAP Select 9.15.1
 
@@ -172,6 +208,9 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
+
+// 2025 July 17, ONTAPDOC-2885
+// 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
 // 2023 Feb 10, clean-up
 // 2023-04-05, ONTAPDOC-920

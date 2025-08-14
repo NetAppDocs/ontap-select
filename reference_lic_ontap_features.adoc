@@ -33,8 +33,9 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * NVMe over TCP
 * ONTAP multitenancy capability
 * ONTAP S3
-* SnapMirror
 * S3 SnapMirror
+* SnapMirror
+* SnapMirror cloud
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
@@ -58,6 +59,7 @@ You do not need a FabricPool license when utilizing StorageGRID.
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys[NetApp ONTAP Master License Keys^]
 
+// 2025 JUN 25, ONTAPDOC-2741
 // 2024 JUN 17, ONTAPDOC-2049
 // 2023 Feb 15, GH issue 192
 // 2023-APR-05, ONTAPDOC-920
