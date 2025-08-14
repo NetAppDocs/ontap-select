@@ -57,7 +57,7 @@ The premium XL offering provides the following capabilities:
 * MetroCluster SDS
 
 [NOTE]
-Use of the large instance type isn't supported on Kernel-Based Virtual Machine (KVM).
+Use of the large instance type isn't supported on a Kernel-Based Virtual Machine (KVM).
 
 == Compare hardware support for platform license offerings
 
