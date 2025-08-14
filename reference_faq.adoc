@@ -252,7 +252,7 @@ Unlike four-node, six-node, and eight-node clusters in which the ONTAP Select De
 
 .What is MetroCluster SDS?
 
-MetroCluster SDS is a lower-cost synchronous replication option that falls under the category of the MetroCluster Business Continuity solutions from NetApp. It is available only with ONTAP Select, unlike NetApp MetroCluster that is available on FAS Hybrid Flash, AFF, NetApp Private Storage for Cloud, and NetApp FlexArray® technology.
+MetroCluster SDS is a lower-cost synchronous replication option that falls under the category of the MetroCluster Business Continuity solutions from NetApp. It is available only with ONTAP Select, unlike NetApp MetroCluster that is available on FAS Hybrid Flash, AFF, and NetApp Private Storage for Cloud.
 
 .How is the MetroCluster SDS different from NetApp MetroCluster?
 
@@ -339,8 +339,11 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
 
-// 2023-09-29, ONTAPDOC-1204
-// 2023-10-09, GitHub issue #220
-// 2023-10-20, ONTAPDOC-1293
-// 2024-02-16, ONTAPDOC-1672
+// 2025 JULY 15, ontap-select-internal-issue-206
 // 2024-03-05, ONTAPDOC-1554
+// 2024-02-16, ONTAPDOC-1672
+// 2023-10-20, ONTAPDOC-1293
+// 2023-10-20, ONTAPDOC-1293
+// 2023-10-09, GitHub issue #220
+// 2023-09-29, ONTAPDOC-1204
+
