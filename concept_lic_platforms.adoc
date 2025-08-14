@@ -57,7 +57,7 @@ The premium XL offering provides the following capabilities:
 * MetroCluster SDS
 
 [NOTE]
-Use of the large instance type in a software RAID configuration isn't supported on a Kernel-Based Virtual Machine (KVM).
+Use of the large instance type isn't supported on a Kernel-Based Virtual Machine (KVM).
 
 == Compare hardware support for platform license offerings
 
@@ -183,7 +183,7 @@ SnapCenter (optional)
 .Related information
 link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types].
 
-
+// 2025 AUG 13, ONTAPDOC-3206
 // 2025 July 17, ONTAPDOC-2885 
 // 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
