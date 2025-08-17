@@ -12,18 +12,23 @@ summary: You can upgrade an existing Deploy utility virtual machine in-place usi
 :imagesdir: ./media/
 
 [.lead]
-You can upgrade an existing Deploy utility virtual machine in-place using the command line interface.
+You can upgrade an existing ONTAP Select Deploy utility virtual machine in-place using the ONTAP Select Deploy utility CLI.
 
-== Before you begin
+.Before you begin
 
-Make sure that Deploy is not used to perform any other tasks during the upgrade. You should see the current release notes for information and restrictions about upgrading the Deploy utility.
+Make sure that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. See the current release notes for information and restrictions about upgrading the ONTAP Select Deploy utility.
 
-[NOTE] 
+[NOTE]
+====
 If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
 
-== Download the upgrade package
 
-To begin the upgrade process, you must download the appropriate Deploy virtual machine upgrade file from the NetApp Support Site. The upgrade package is formatted as a single compressed file.
+You can upgrade ONTAP Select Deploy 9.17.1 from ONTAP Select Deploy 9.16.1 or 9.15.1. To upgrade from ONTAP Select Deploy 9.14.1 or earlier, review the release notes for your ONTAP Select version.
+====
+
+== Step 1: Download the package
+
+To begin the upgrade process, download the appropriate ONTAP Select Deploy virtual machine upgrade file from the link:https://mysupport.netapp.com/site/[NetApp Support Site^]. The upgrade package is formatted as a single compressed file.
 
 .Steps
 
@@ -37,23 +42,24 @@ To begin the upgrade process, you must download the appropriate Deploy virtual m
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
-== Upload the package to the Deploy virtual machine
+== Step 2: Upload the package to the ONTAP Select Deploy virtual machine
 
-After acquiring the upgrade package, you must upload the file to the Deploy virtual machine.
+After you download the package, you need to upload the file to the ONTAP Select Deploy virtual machine.
+
+.About this task
+
+This task describes one method for uploading the file to the ONTAP Select Deploy virtual machine. There might be other options more suitable for your environment.
 
 .Before you begin
 
-You must have the upgrade file available on your local workstation. You must also have the password for the administrator user account.
-
-.About this Tasks
-
-This task describes one method for uploading the file to the Deploy virtual machine. There may be other options more suitable for your environment.
+* Verify that the upgrade file is available on your local workstation.
+* Verify that you have the password for the administrator user account.
 
 .Steps
 
-. In a command shell on your local workstation, use the scp utility to upload the image file to the Deploy virtual machine.
+. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine.
 +
-Example
+.Example
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -63,21 +69,23 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 The upgrade file is stored in the home directory of the admin user.
 
 
-== Apply the upgrade package
+== Step 3: Apply the upgrade package
 
-After the upgrade file has been uploaded to the Deploy virtual machine, you can apply the upgrade.
+After you upload the upgrade file to the ONTAP Select Deploy virtual machine, you can apply the upgrade.
 
 .Before you begin
-You must known which directory the upgrade file has been placed in at the Deploy utility virtual machine. Also, assure that Deploy is not used to perform any other tasks while the upgrade is performed.
+
+* Verify which directory the upgrade file has been placed in at the ONTAP Select Deploy utility virtual machine. 
+* Verify that ONTAP Select Deploy is not used to perform any other tasks while the upgrade is performed.
 
 .Steps
 
-. Sign in to the Deploy utility CLI using SSH with the administrator account.
+. Sign in to the ONTAP Select Deploy utility CLI using SSH with the administrator account.
 . Perform the upgrade using the appropriate directory path and file name:
 +
 `deploy upgrade -package-path FILEPATH`
 +
-Example
+.Example
 +
 ....
 deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
@@ -85,8 +93,10 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 .After you finish
 
-Before the upgrade procedure completes, you are asked to create a backup of the Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created Deploy pages.
+Before the upgrade procedure completes, you are asked to create a backup of the ONTAP Select Deploy virtual machine configuration. Also, you should clear the browser cache so you can view the newly created ONTAP Select Deploy pages.
 
+
+// 2025 Aug 08, ONTAPDOC-3158
 // 2023-06-06, github issue #178
 // 2023-10-17, prep for repo version split
 // 2023-11-01, github issue #221
