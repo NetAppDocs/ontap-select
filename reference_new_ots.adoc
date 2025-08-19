@@ -37,6 +37,23 @@ You can use the cluster expansion and contraction feature on an existing ONTAP S
 +
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
+Enhanced support for cluster expansion and contraction on ESXi hosts::
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported for between six-node and twelve-node clusters on ESXi hosts:
++
+--
+You can increase the cluster size for an existing ESXi cluster in the following increments:
+
+* From a six-node to an eight-node, ten-node, or twelve-node cluster
+* From an eight-node to a ten-node or twelve-node cluster
+* From a ten-node to a twelve node cluster 
+
+You can decrease the cluster size for an existing ESXi cluster in the following increments:
+
+* From a twelve-node to a ten-node, eight-node, or six-node cluster 
+* From a ten-node to an eight-node or six-node cluster
+* From an eight-node to a six-node cluster 
+--
+
 Support for SnapMirror cloud::
 Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1.
 +
@@ -208,7 +225,7 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
-
+// 2025 AUG 19, ONTAPDOC-3002
 // 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
