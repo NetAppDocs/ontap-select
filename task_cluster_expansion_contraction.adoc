@@ -70,7 +70,7 @@ You can increase the size of an existing ESXi cluster in the following increment
 
 * From a six-node to an eight-node, ten-node, or twelve-node cluster
 * From an eight-node to a ten-node or twelve-node cluster
-* From a ten-node to a twelve node cluster 
+* From a ten-node to a twelve-node cluster 
 --
 .KVM
 --
