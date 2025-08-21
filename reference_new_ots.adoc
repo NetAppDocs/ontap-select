@@ -43,15 +43,15 @@ Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is support
 --
 You can increase the cluster size for an existing ESXi cluster in the following increments:
 
-* From a six-node to an eight-node, ten-node, or twelve-node cluster
-* From an eight-node to a ten-node or twelve-node cluster
-* From a ten-node to a twelve node cluster 
+* From six to eight, ten, or twelve nodes
+* From eight to ten or twelve nodes
+* From ten to twelve nodes 
 
 You can decrease the cluster size for an existing ESXi cluster in the following increments:
 
-* From a twelve-node to a ten-node, eight-node, or six-node cluster 
-* From a ten-node to an eight-node or six-node cluster
-* From an eight-node to a six-node cluster 
+* From twelve to ten, eight, or six nodes 
+* From ten to eight or six nodes
+* From eight to six-nodes 
 --
 
 Support for SnapMirror cloud::

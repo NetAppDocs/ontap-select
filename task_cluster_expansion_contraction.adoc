@@ -12,7 +12,7 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-You can increase the cluster size of an exiting ONTAP Select cluster for ESXi and KVVM hypervisor hosts. For KVM hosts, you can increase the size from a six-node to an eight-node cluster and decrease the size from an eight-node to a six-node cluster. For ESXi hosts, you increase and decrease the cluster size in increments between six-node and twelve-node clusters. 
+You can increase the cluster size of an exiting ONTAP Select cluster for ESXi and KVVM hypervisor hosts. For KVM hosts, you can increase the cluster size from six nodes to an eight nodes and decrease the size from an eight nodes to six nodes. For ESXi hosts, you increase and decrease the cluster size in increments between six-node and twelve-node clusters. 
 
 The following cluster expansions and contractions aren't for ESXi and KVVM hosts supported:
 
@@ -68,9 +68,9 @@ Use the cluster expansion feature to increase the size of an existing ESXi or KV
 --
 You can increase the size of an existing ESXi cluster in the following increments:
 
-* From a six-node to an eight-node, ten-node, or twelve-node cluster
-* From an eight-node to a ten-node or twelve-node cluster
-* From a ten-node to a twelve-node cluster 
+* From six to eight, ten, or twelve nodes
+* From eight to ten or twelve nodes
+* From ten to twelve nodes 
 --
 .KVM
 --
@@ -132,9 +132,9 @@ Use the cluster contraction feature to decrease the size of an existing ESXi or 
 --
 You can decrease the size of an existing ESXi cluster in the following increments:
 
-* From a twelve-node to a ten-node, eight-node, or six-node cluster 
-* From a ten-node to an eight-node or six-node cluster
-* From an eight-node to a six-node cluster 
+* From twelve to ten, eight, or six nodes 
+* From ten to eight or six nodes
+* From eight to six-nodes 
 --
 .KVM
 --
