@@ -12,7 +12,7 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-You can increase the cluster size of an exiting ONTAP Select cluster for ESXi and KVM hypervisor hosts. For KVM hosts, you can increase the cluster size from six to eight nodes and decrease the size from eight to six nodes. For ESXi hosts, you increase and decrease the cluster size in increments between six and twelve nodes. 
+You can increase the cluster size of an existing ONTAP Select cluster for ESXi and KVM hypervisor hosts. For KVM hosts, you can increase the cluster size from six to eight nodes and decrease the size from eight to six nodes. For ESXi hosts, you increase and decrease the cluster size in increments between six and twelve nodes. 
 
 The following cluster expansions and contractions aren't for ESXi and KVM hosts supported:
 
