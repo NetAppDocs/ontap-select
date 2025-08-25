@@ -41,7 +41,7 @@ Support for ONTAP features::
 Beginning with ONTAP Select 9.17.1, the following licensed ONTAP features are supported with ONTAP Select:
 * SnapLock Select
 +
-Beginning with ONTAP Select 9.17.1, SnapLock Select is supported with ONTAP Select. New deployments will have SnapLock Select licensed automatically. For upgrading from ONTAP Select 9.16.1 and earlier, users will need to download the SnapLock Select license from the ONTAP Select support site and apply it manually.
+Beginning with ONTAP Select 9.17.1, new deployments will have SnapLock Select licensed automatically. For upgrading from ONTAP Select 9.16.1 and earlier, users will need to download the SnapLock Select license from the ONTAP Select support site and apply it manually.
 +
 * SnapMirror Cloud
 +
