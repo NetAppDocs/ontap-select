@@ -43,13 +43,11 @@ Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Sel
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
 
 Support for vSAN ESA on multi-node Clusters::
-Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) has been extended to deploy multi node clusters. vSAN Express Storage Architecture is an ESX specific configuration, a new architecture for VMware vSAN introduced in vSphere 8.
+Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) has been extended to deploy multi node clusters. This enhancement enables customers to deploy vSAN Express Storage Architecture configurations. 
 +
-ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node and multi-node cluster using either a vSAN or an external array type of datastore for its storage pool.
+vSAN Express Storage Architecture is an ESX specific configuration, and is a new architecture for VMware vSAN which has been introduced in vSphere 8. vSAN Express Storage Architecture is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
 +
-vSAN Express Storage Architecture is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
-+
-This enhancement enables customers to deploy vSAN Express Storage Architecture configurations.
+ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node and multi-node cluster, using either a vSAN or an external array type of datastore for its storage pool.
 +
 [NOTE] 
 ====
@@ -225,6 +223,7 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 6.0 is no longer supported
 
 
+// 2025 Aug 26, ONTAPDOC-3140
 // 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
