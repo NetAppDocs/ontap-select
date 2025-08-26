@@ -29,6 +29,18 @@ The minimum administrative privileges needed to create and manage an ONTAP Selec
 * Update virtual machine files
 * Update virtual machine metadata
 
+=== Content Library
+
+* Add library item
+* Create local library
+* Delete library item
+* Delete local library
+* Read storage
+* Update files
+* Update library
+* Update library item
+* Update local library
+
 === Host
 
 Configuration::
