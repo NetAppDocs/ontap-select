@@ -53,7 +53,7 @@ ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONT
 ====
 To perform content library operations, you'll need access to additional permission levels. This is required for vSAN Express Storage Architecture deployments if you are working with restricted roles.
 
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels^].
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels for content library operations^].
 ====
 
 Updated NDA driver support::

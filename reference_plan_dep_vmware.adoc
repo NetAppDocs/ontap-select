@@ -90,7 +90,7 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
 .Privileges
-Specific privileges needed to create and manage vSAN ESA is below,
+The specific privileges needed to create and manage vSAN ESA can be found below:
 
 === Content Library
 * Add library item
