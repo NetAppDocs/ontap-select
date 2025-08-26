@@ -50,6 +50,13 @@ ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONT
 vSAN Express Storage Architecture is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
 +
 This enhancement enables customers to deploy vSAN Express Storage Architecture configurations.
++
+[NOTE] 
+====
+To perform content library operations, you'll need access to additional permission levels. This is required for vSAN Express Storage Architecture deployments if you are working with restricted roles.
+
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_vcenter.html#administrative-privileges[Learn about accessing permission levels^].
+====
 
 Updated NDA driver support::
 Beginning with ONTAP Select 9.17.1, the FreeBSD NDA (NVMe Direct Access) device driver replaces the NVD (NVMe express disk driver). The FreeBSD driver provides support for direct access devices by implementing the NVMe command protocol. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, the FreeBSD driver is started by default when you configure the NVMe devices. 
