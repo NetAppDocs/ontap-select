@@ -42,16 +42,16 @@ Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Sel
 +
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
 
-Support for vSAN ESA on multi-node Clusters::
-Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) has been extended to deploy multi node clusters. This enhancement enables customers to deploy vSAN Express Storage Architecture configurations. 
+Support for vSAN ESA on multi-node clusters::
+Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) is extended to deploy multi-node clusters. This enhancement enables you to deploy vSAN ESA configurations.
 +
-vSAN Express Storage Architecture is an ESX specific configuration, and is a new architecture for VMware vSAN which has been introduced in vSphere 8. vSAN Express Storage Architecture is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
+vSAN ESA is an ESX specific configuration and is a new architecture for VMware vSAN introduced in vSphere 8. vSAN ESA is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
 +
 ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node and multi-node cluster, using either a vSAN or an external array type of datastore for its storage pool.
 +
 [NOTE] 
 ====
-To perform content library operations, you'll need access to additional permission levels. This is required for vSAN Express Storage Architecture deployments if you are working with restricted roles.
+To perform content library operations, you'll need access to additional permission levels. This is required for vSAN ESA deployments if you are working with restricted roles.
 
 link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels for content library operations^].
 ====
