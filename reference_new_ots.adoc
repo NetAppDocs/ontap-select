@@ -41,9 +41,9 @@ Support for ONTAP features::
 Beginning with ONTAP Select 9.17.1, the following licensed ONTAP features are supported with ONTAP Select:
 * SnapLock Select
 +
-Beginning with ONTAP Select 9.17.1, new deployments will have SnapLock Select licensed automatically. For upgrading from ONTAP Select 9.16.1 and earlier, users will need to download the SnapLock Select license from the ONTAP Select support site and apply it manually.
+Beginning with ONTAP Select 9.17.1, new deployments will have SnapLock Select licensed automatically. For upgrades from ONTAP Select 9.16.1 and earlier, you'll need to download the SnapLock Select license from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually.
 +
-* SnapMirror Cloud
+* SnapMirror cloud
 +
 Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1. 
 +
@@ -216,7 +216,7 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 6.0 is no longer supported
 
 
-// 2025 Aug 25, ONTAPDOC-3141
+// 2025 Aug 26, ONTAPDOC-3141
 // 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
