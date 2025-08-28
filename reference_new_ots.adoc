@@ -49,6 +49,20 @@ Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Sel
 +
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
 
+Support for vSAN ESA on multi-node clusters::
+Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) is extended to deploy multi-node clusters. This enhancement enables you to deploy vSAN ESA configurations.
++
+vSAN ESA is an ESX specific configuration and is a new architecture for VMware vSAN introduced in vSphere 8. vSAN ESA is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
++
+ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node and multi-node cluster, using either a vSAN or an external array type of datastore for its storage pool.
++
+[NOTE] 
+====
+To perform content library operations, you'll need access to additional permission levels. This is required for vSAN ESA deployments if you are working with restricted roles.
+
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels for content library operations^]. 
+====
+
 Updated NDA driver support::
 Beginning with ONTAP Select 9.17.1, the FreeBSD NDA (NVMe Direct Access) device driver replaces the NVD (NVMe express disk driver). The FreeBSD driver provides support for direct access devices by implementing the NVMe command protocol. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, the FreeBSD driver is started by default when you configure the NVMe devices. 
 +
@@ -215,8 +229,8 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
-
 // 2025 Aug 26, ONTAPDOC-3141
+// 2025 Aug 26, ONTAPDOC-3140
 // 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
