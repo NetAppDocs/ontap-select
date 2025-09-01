@@ -51,7 +51,7 @@ From six to eight nodes, six to ten nodes, six to twelve nodes, eight to ten nod
 From twelve to ten nodes, twelve to eight nodes, twelve to six nodes, ten to eight nodes, ten to six nodes, and eight to six nodes.
 
 +
-Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster.
+Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster. link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
 Support for ONTAP features::
 Beginning with ONTAP Select 9.17.1, the following licensed ONTAP features are supported with ONTAP Select:
