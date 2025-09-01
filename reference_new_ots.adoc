@@ -37,15 +37,13 @@ Currently, the capability to expand up to 12 nodes is limited to ESXi hosts only
 +
 This enhancement provides greater flexibility for scaling ONTAP Select clusters on ESXi, while KVM support remains unchanged at this time.
 +
-.Updated Supported Expansion and Contraction Combinations on ESXi hosts:
+* You can expand clusters in the following increments:
 +
-* Expansion: 
+From 6 to 8 nodes, 6 to 10 nodes, 6 to 12 nodes, 8 to 10 nodes, 8 to 12 nodes, and 10 to 12 nodes.
 +
-You can expand clusters in the following increments: from 6 to 8 nodes, 6 to 10 nodes, 6 to 12 nodes, 8 to 10 nodes, 8 to 12 nodes, and 10 to 12 nodes.
+* You can contract clusters as follows: 
 +
-* Contraction: 
-+
-You can contract clusters as follows: from 12 to 10 nodes, 12 to 8 nodes, 12 to 6 nodes, 10 to 8 nodes, 10 to 6 nodes, and 8 to 6 nodes.
+From 12 to 10 nodes, 12 to 8 nodes, 12 to 6 nodes, 10 to 8 nodes, 10 to 6 nodes, and 8 to 6 nodes.
 
 
 Support for cluster expansion and contraction on KVM hosts::
