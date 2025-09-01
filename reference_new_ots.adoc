@@ -30,20 +30,20 @@ To use software RAID for locally attached NVMe disks, you need to link:kvm-host-
 +
 link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
 
-Support for 12 node cluster expansion and contraction on ESXi hosts::
-Beginning with ONTAP Select 9.17.1, customers can now expand or contract clusters between 6 and 12 nodes when running on ESXi hypervisor hosts. This means you can increase the size of an existing ONTAP Select cluster from 6 nodes up to 12 nodes, or reduce it from 12 nodes down to as few as 6 nodes.
+Support for twelve-node cluster expansion and contraction on ESXi hosts::
+Beginning with ONTAP Select 9.17.1, customers can now expand or contract clusters between a six-node and a twelve-node cluster when running on ESXi hypervisor hosts. This means you can increase the size of an existing ONTAP Select cluster from a six-node and a twelve-node cluster, or reduce it from a twelve-node cluster down to as few as a six-node cluster.
 +
-Currently, the capability to expand up to 12 nodes is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains 8 nodes.
+Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster.
 +
 This enhancement provides greater flexibility for scaling ONTAP Select clusters on ESXi, while KVM support remains unchanged at this time.
 +
 * You can expand clusters in the following increments:
 +
-From 6 to 8 nodes, 6 to 10 nodes, 6 to 12 nodes, 8 to 10 nodes, 8 to 12 nodes, and 10 to 12 nodes.
+From six to eight nodes, six to ten nodes, six to twelve nodes, eight to ten nodes, eight to twelve nodes, and ten to twelve nodes.
 +
 * You can contract clusters as follows: 
 +
-From 12 to 10 nodes, 12 to 8 nodes, 12 to 6 nodes, 10 to 8 nodes, 10 to 6 nodes, and 8 to 6 nodes.
+From twelve to ten nodes, twelve to eight nodes, twelve to six nodes, ten to eight nodes, ten to six nodes, and eight to six nodes.
 
 
 Support for cluster expansion and contraction on KVM hosts::
