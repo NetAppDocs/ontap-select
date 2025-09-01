@@ -31,9 +31,7 @@ To use software RAID for locally attached NVMe disks, you need to link:kvm-host-
 link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
 
 Support for twelve-node cluster expansion and contraction on ESXi hosts::
-Beginning with ONTAP Select 9.17.1, customers can now expand or contract clusters between six-node and twelve-node clusters when running on ESXi hypervisor hosts. Users can increase the size of an existing ONTAP Select cluster from a six-node and a twelve-node cluster, or reduce it from a twelve-node cluster down to as few as a six-node cluster.
-+
-Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster.
+Beginning with ONTAP Select 9.17.1, customers can now expand or contract clusters between six-node and twelve-node clusters when running on ESXi hypervisor hosts. You can increase the size of an existing ONTAP Select cluster from a six-node and a twelve-node cluster, or reduce it from a twelve-node cluster down to as few as a six-node cluster.
 +
 * You can expand clusters in the following increments:
 +
@@ -44,7 +42,7 @@ From six to eight nodes, six to ten nodes, six to twelve nodes, eight to ten nod
 From twelve to ten nodes, twelve to eight nodes, twelve to six nodes, ten to eight nodes, ten to six nodes, and eight to six nodes.
 
 +
-This enhancement provides greater flexibility for scaling ONTAP Select clusters on ESXi, while KVM support remains unchanged at this time.
+Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster. This enhancement to six to twelve-node clusters provides greater flexibility for scaling ONTAP Select clusters on ESXi, while KVM support remains unchanged from six to eight-node clusters at this time.
 
 
 Support for cluster expansion and contraction on KVM hosts::
@@ -246,6 +244,8 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
+
+// 2025 Sep 01, ONTAPDOC-9.17.1GA
 // 2025 Aug 26, ONTAPDOC-3141
 // 2025 Aug 26, ONTAPDOC-3140
 // 2025 July 17, ONTAPDOC-2885
