@@ -92,7 +92,7 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 == ONTAP Select Deploy VMware vCenter server Considerations
 
 === Privileges
-The specific privileges needed to create and manage vSAN ESA in vcenter can be found below:
+The following lists the specific privileges that you need to create and manage vSAN Express Storage Architecture (ESA) in vCenter:
 
 .Content Library
 * Add library item
