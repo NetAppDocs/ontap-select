@@ -14,7 +14,7 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 [.lead]
 You can increase the cluster size of an existing ONTAP Select cluster for ESXi and KVM hypervisor hosts. For KVM hosts, you can increase the cluster size from six to eight nodes and decrease the size from eight to six nodes. For ESXi hosts, you increase and decrease the cluster size in increments between six and twelve nodes. 
 
-The following cluster expansions and contractions aren't for ESXi and KVM hosts supported:
+The following cluster expansions and contractions aren't supported for ESXi and KVM hosts:
 
 * Expansions from one, two, or four-node clusters to six or eight-node clusters.
 * Contractions from six or eight-node clusters to one, two, or four-node clusters.

@@ -53,6 +53,8 @@ You can decrease the cluster size for an existing ESXi cluster in the following 
 * From ten nodes to eight or six nodes
 * From eight to six nodes 
 --
++
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
 Support for ONTAP features::
 Beginning with ONTAP Select 9.17.1, the following licensed ONTAP features are supported with ONTAP Select:
