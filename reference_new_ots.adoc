@@ -248,6 +248,7 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
+
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 Aug 26, ONTAPDOC-3141
 // 2025 Aug 26, ONTAPDOC-3140

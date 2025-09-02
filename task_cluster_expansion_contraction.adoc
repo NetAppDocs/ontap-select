@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
 summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes.
 ---
-= Expand or contract an ONTAP Select cluster
+= Expand or contract an ONTAP Select ESXi or KVM cluster
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -160,6 +160,8 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
+
+// 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 AUG 19, ONTAPDOC-3002
 // 2025 JUN 20, ONTAPDOC-2886
 // 2024 NOV 5, ONTAPDOC-2518
