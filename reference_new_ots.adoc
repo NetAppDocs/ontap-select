@@ -38,21 +38,20 @@ You can use the cluster expansion and contraction feature on an existing ONTAP S
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
 Support for twelve-node cluster expansion and contraction on ESXi hosts::
-Beginning with ONTAP Select 9.17.1, you can expand a six-node cluster or contract a twelve-node cluster on ESXi hypervisor hosts. This enhancement provides greater flexibility for scaling ONTAP Select clusters on ESXi hosts. KVM support remains unchanged.
-+
-You can increase the size of an existing ONTAP Select cluster from six-nodes up to a maximum of twelve-nodes. You can reduce the size of an existing ONTAP Select cluster from twelve-nodes down to a minimum of six-nodes.
+
+ONTAP Select 9.17.1 includes enhanced support for cluster expansion and contraction on ESXi hypervisor hosts. You can increase the size of an existing ONTAP Select cluster from six-nodes up to a maximum of twelve-nodes. You can reduce the size of an existing ONTAP Select cluster from twelve-nodes down to a minimum of six-nodes. This enhancement provides greater flexibility for scaling ONTAP Select clusters on ESXi hosts. KVM support remains unchanged.
 +
 * You can perform the following cluster expansions:
 +
-** From six to eight, ten, or twelve nodes
-** From eight to ten or twelve nodes
-** From ten to twelve nodes
+** From six nodes to eight, ten, or twelve nodes
+** From eight nodes to ten or twelve nodes
+** From ten nodes to twelve nodes
 +
 * You can perform the following cluster contractions: 
 +
-** From twelve to ten, eight, or six nodes
-** From ten to eight or six nodes
-** From eight to six nodes
+** From twelve nodes to ten, eight, or six nodes
+** From ten nodes to eight or six nodes
+** From eight nodes to six nodes
 
 +
 Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster. link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
