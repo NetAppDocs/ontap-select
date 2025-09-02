@@ -12,9 +12,9 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-You can increase the cluster size of an exiting ONTAP Select cluster from a six-node to an eight-node cluster and decrease the size from an eight-node to a six-node cluster 
+You can increase the cluster size of an existing ONTAP Select cluster for ESXi and KVM hypervisor hosts. For KVM hosts, you can increase the cluster size from six to eight nodes and decrease the size from eight to six nodes. For ESXi hosts, you increase and decrease the cluster size in increments between six and twelve nodes. 
 
-The following cluster expansions and contractions aren't supported:
+The following cluster expansions and contractions aren't for ESXi and KVM hosts supported:
 
 * Expansions from one, two, or four-node clusters to six or eight-node clusters.
 * Contractions from six or eight-node clusters to one, two, or four-node clusters.
@@ -30,19 +30,10 @@ To change the number of nodes in a cluster to a size that isn't supported by clu
 You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
 == Hardware and storage considerations
-The cluster expansion and contraction feature is supported on KVM and ESXi hypervisor hosts.
+The cluster expansion and contraction feature is supported on the following KVM and ESXi hypervisor hosts.
 
 [role="tabbed-block"]
 ====
-.KVM
---
-Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported on KVM hypervisor hosts.
-
-Cluster expansion and contraction is supported for the following KVM hypervisor versions:
-
-* Red Hat Enterprise Linux 64-bit 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
---
 .ESXi
 --
 Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported on ESXi hypervisor hosts. 
@@ -56,10 +47,36 @@ Cluster expansion and contraction is supported for the following ESXi hypervisor
 * ESXi 7.0 U3
 * ESXi 7.0
 --
+.KVM
+--
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported on KVM hypervisor hosts.
+
+Cluster expansion and contraction is supported for the following KVM hypervisor versions:
+
+* Red Hat Enterprise Linux 64-bit 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
+--
+
 ====
 
 == Expand the cluster
-Use the cluster expansion feature to increase the size of an existing cluster from six nodes to eight nodes.
+Use the cluster expansion feature to increase the size of an existing ESXi or KVM cluster.
+
+[role="tabbed-block"]
+====
+.ESXi
+--
+You can increase the size of an existing ESXi cluster in the following increments:
+
+* From six nodes to eight, ten, or twelve nodes
+* From eight nodes to ten or twelve nodes
+* From ten to twelve nodes 
+--
+.KVM
+--
+You can increase the size of an existing KVM cluster from six to eight nodes.
+--
+====
 
 .About this task
 In preparation for cluster expansion, new ESXi and KVM hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
@@ -107,7 +124,23 @@ It can take up to 45 minutes for the cluster to be expanded.
 After expanding the cluster, you should back up the ONTAP Select Deploy configuration data.
 
 == Contract the cluster
-Use the cluster contraction feature to decrease the size of an existing cluster from eight nodes to six nodes.
+Use the cluster contraction feature to decrease the size of an existing ESXi or KVM cluster.
+
+[role="tabbed-block"]
+====
+.ESXi
+--
+You can decrease the size of an existing ESXi cluster in the following increments:
+
+* From twelve nodes to ten, eight, or six nodes 
+* From ten nodes to eight or six nodes
+* From eight to six nodes 
+--
+.KVM
+--
+You can decrease the size of an existing cluster from eight to six nodes.
+--
+====
 
 .About this task
 The desired HA pair of nodes in the cluster are selected to prepare for cluster contraction during the procedure.
@@ -127,7 +160,7 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
-
+// 2025 AUG 19, ONTAPDOC-3002
 // 2025 JUN 20, ONTAPDOC-2886
 // 2024 NOV 5, ONTAPDOC-2518
 // 2023 May 06, ONTAPDOC-1797, -1802

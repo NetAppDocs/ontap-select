@@ -37,24 +37,22 @@ You can use the cluster expansion and contraction feature on an existing ONTAP S
 +
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
-Support for twelve-node cluster expansion and contraction on ESXi hosts::
+Enhanced support for cluster expansion and contraction on ESXi hosts::
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported for between six-node and twelve-node clusters on ESXi hosts:
++
+--
+You can increase the cluster size for an existing ESXi cluster in the following increments:
 
-ONTAP Select 9.17.1 includes enhanced support for cluster expansion and contraction on ESXi hypervisor hosts. You can increase the size of an existing ONTAP Select cluster from six-nodes up to a maximum of twelve-nodes. You can reduce the size of an existing ONTAP Select cluster from twelve-nodes down to a minimum of six-nodes. This enhancement provides greater flexibility for scaling ONTAP Select clusters on ESXi hosts. KVM support remains unchanged.
-+
-* You can perform the following cluster expansions:
-+
-** From six nodes to eight, ten, or twelve nodes
-** From eight nodes to ten or twelve nodes
-** From ten nodes to twelve nodes
-+
-* You can perform the following cluster contractions: 
-+
-** From twelve nodes to ten, eight, or six nodes
-** From ten nodes to eight or six nodes
-** From eight nodes to six nodes
+* From six nodes to eight, ten, or twelve nodes
+* From eight nodes to ten or twelve nodes
+* From ten to twelve nodes 
 
-+
-Currently, the capability to expand up to a twelve-node cluster is limited to ESXi hosts only. For clusters running on KVM hypervisor hosts, the maximum supported size remains an eight-node cluster. link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+You can decrease the cluster size for an existing ESXi cluster in the following increments:
+
+* From twelve nodes to ten, eight, or six nodes 
+* From ten nodes to eight or six nodes
+* From eight to six nodes 
+--
 
 Support for ONTAP features::
 Beginning with ONTAP Select 9.17.1, the following licensed ONTAP features are supported with ONTAP Select:
@@ -248,10 +246,10 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 7.0 is supported (GA build 15843807 and later)
 * ESXi 6.0 is no longer supported
 
-
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 Aug 26, ONTAPDOC-3141
 // 2025 Aug 26, ONTAPDOC-3140
+// 2025 AUG 19, ONTAPDOC-3002
 // 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
