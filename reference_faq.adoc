@@ -164,7 +164,12 @@ When using a hardware RAID controller, ONTAP Select is largely unaware of underl
 
 You should use a minimum of two physical NICs to avoid a single point of failure at the network layer. NetApp recommends that Data, Mgmt, and Internal port groups have NIC teaming and bonding configured with two or more uplinks in the team or bond. Such configuration ensures that, if there is any uplink failure, the virtual switch moves the traffic from the failed uplink to a healthy uplink in the NIC team. For details about the recommended network configuration, see link:reference_plan_best_practices.html#networking[Summary of best practices: Networking].
 
-All other errors are handled by ONTAP HA in the case of a two-node or four-node cluster. If the hypervisor server needs to be replaced and the ONTAP Select cluster needs to be reconstituted with a new server, contact NetApp Technical Support.
+All other errors are handled by ONTAP HA in the case of a two-node or four-node cluster. If the hypervisor server needs to be replaced and the ONTAP Select cluster needs to be reconstituted with a new server, refer to <<restore-ontap-select-cluster,Can I recover an ONTAP Select node?>>.
+
+[[restore-ontap-select-cluster]]
+.Can I recover an ONTAP Select node? 
+
+Contact NetApp Technical Support if you need to recover an ONTAP Select node, for example, if an ONTAP Select VM or host is completely lost or a single-node cluster is accidentally deleted. For more information, see the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster[ONTAP Select node VM recovery in case of disaster^].
 
 .What is the maximum datastore size that ONTAP Select supports?
 
@@ -339,6 +344,7 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
 
+// 2025 SEP 8, ONTAPDOC-3320
 // 2025 JULY 15, ontap-select-internal-issue-206
 // 2024-03-05, ONTAPDOC-1554
 // 2024-02-16, ONTAPDOC-1672
@@ -346,4 +352,3 @@ Only a two-node cluster with a Mediator is supported in a stretched HA deploymen
 // 2023-10-20, ONTAPDOC-1293
 // 2023-10-09, GitHub issue #220
 // 2023-09-29, ONTAPDOC-1204
-
