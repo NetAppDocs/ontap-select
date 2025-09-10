@@ -126,7 +126,7 @@ The following table provides the minimum license type required for the specified
 
 |===
 2+h| Storage type 3+h| Description
-2+h|License type h| Standard h| Premium h| Pemium XL
+2+h|License type h| Standard h| Premium h| Premium XL
 2+h|Instance size h| Small h| Small and medium h| Small, medium, and large
 2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
@@ -181,8 +181,10 @@ SnapCenter (optional)
 --
 ====
 .Related information
-link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types].
+* link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types]
 
+
+// 2025 Sep 10, ONTAPDOC-3305
 // 2025 AUG 13, ONTAPDOC-3206
 // 2025 July 17, ONTAPDOC-2885 
 // 2025 FEB 18, ONTAPDOC-2678
