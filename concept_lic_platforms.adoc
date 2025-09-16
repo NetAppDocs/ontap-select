@@ -50,7 +50,7 @@ The premium offering provides the following capabilities:
 
 The premium XL offering provides the following capabilities:
 
-* Small, medium, or large instance type
+* Small, medium, or large instance types
 * HDDs, SSDs, or NVMe drives
 * Local hardware RAID controller or software RAID
 * vNAS
@@ -114,7 +114,7 @@ Minimum of four 1GbE ports for a two-node cluster (HA pair)
 Minimum of two 10GbE ports for a four-, six-, or eight-node cluster
 |===
 
-^1^ Assumes two cores and 8Gb RAM for the hypervisor.
+^1^ Assumes two cores and 8GB of RAM for the hypervisor.
 --
 
 .Storage type
@@ -184,7 +184,7 @@ SnapCenter (optional)
 * link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types]
 
 
-// 2025 Sep 10, ONTAPDOC-3305
+// 2025 Sep 16, ONTAPDOC-3305
 // 2025 AUG 13, ONTAPDOC-3206
 // 2025 July 17, ONTAPDOC-2885 
 // 2025 FEB 18, ONTAPDOC-2678
