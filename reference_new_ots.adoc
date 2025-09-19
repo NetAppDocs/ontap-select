@@ -37,10 +37,50 @@ You can use the cluster expansion and contraction feature on an existing ONTAP S
 +
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
-Support for SnapMirror cloud::
-Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1.
+Enhanced support for cluster expansion and contraction on ESXi hosts::
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported for between six-node and twelve-node clusters on ESXi hosts:
++
+--
+You can increase the cluster size for an existing ESXi cluster in the following increments:
+
+* From six nodes to eight, ten, or twelve nodes
+* From eight nodes to ten or twelve nodes
+* From ten to twelve nodes 
+
+You can decrease the cluster size for an existing ESXi cluster in the following increments:
+
+* From twelve nodes to ten, eight, or six nodes 
+* From ten nodes to eight or six nodes
+* From eight to six nodes 
+--
++
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+
+Support for ONTAP features::
+Beginning with ONTAP Select 9.17.1, the following licensed ONTAP features are supported with ONTAP Select:
+* SnapLock Select
++
+Beginning with ONTAP Select 9.17.1, new deployments will have SnapLock Select licensed automatically. For upgrades from ONTAP Select 9.16.1 and earlier, you'll need to download the SnapLock Select license from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually.
++
+* SnapMirror cloud
++
+Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1. 
 +
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
+
+Support for vSAN ESA on multi-node clusters::
+Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) is extended to deploy multi-node clusters. This enhancement enables you to deploy vSAN ESA configurations.
++
+vSAN ESA is an ESX specific configuration and is a new architecture for VMware vSAN introduced in vSphere 8. vSAN ESA is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
++
+ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node and multi-node cluster, using either a vSAN or an external array type of datastore for its storage pool.
++
+[NOTE] 
+====
+To perform content library operations, you'll need access to additional permission levels. This is required for vSAN ESA deployments if you are working with restricted roles.
+
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels for content library operations^]. 
+====
 
 Updated NDA driver support::
 Beginning with ONTAP Select 9.17.1, the FreeBSD NDA (NVMe Direct Access) device driver replaces the NVD (NVMe express disk driver). The FreeBSD driver provides support for direct access devices by implementing the NVMe command protocol. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, the FreeBSD driver is started by default when you configure the NVMe devices. 
@@ -209,6 +249,10 @@ There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi
 * ESXi 6.0 is no longer supported
 
 
+// 2025 Sep 02, ONTAPDOC-9.17.1GA
+// 2025 Aug 26, ONTAPDOC-3141
+// 2025 Aug 26, ONTAPDOC-3140
+// 2025 AUG 19, ONTAPDOC-3002
 // 2025 July 17, ONTAPDOC-2885
 // 2025 July 08, ONTAPDOC-2887
 // 2023-02-01,mairead 9.12.1 GA documentation update
