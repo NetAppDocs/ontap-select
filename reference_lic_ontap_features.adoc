@@ -48,8 +48,12 @@ You must acquire a separate license for any ONTAP feature that is not enabled by
 
 * FabricPool
 * MetroCluster SDS (ONTAP Select premium license offering)
-* SnapLock Enterprise (SnapLock Compliance is not supported for ONTAP Select)
+* SnapLock Enterprise for ONTAP Select 9.16.1 and earlier (available from the link:https://mysupport.netapp.com/site/[NetApp Support Site^])
++
+NOTE: SnapLock Compliance is not supported for ONTAP Select.
+
 ** Tamperproof Snapshot copies
+* SnapLock Select
 
 [NOTE]
 You do not need a FabricPool license when utilizing StorageGRID.
@@ -59,6 +63,9 @@ You do not need a FabricPool license when utilizing StorageGRID.
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys[NetApp ONTAP Master License Keys^]
 
+
+// 2025 Sep 03, ONTAPDOC-9.17.1GA
+// 2025 Aug 22, ONTAPDOC-3141
 // 2025 JUN 25, ONTAPDOC-2741
 // 2024 JUN 17, ONTAPDOC-2049
 // 2023 Feb 15, GH issue 192
