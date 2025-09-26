@@ -33,7 +33,7 @@ You have several options available when accessing the Deploy administration util
 
 === Web graphical user interface
 
-You can access the Deploy utility through a modern web browser. The web GUI provides an intuitive and easy-to-use interface, and in most cases will be your primary interface when using the utility.
+You can access the Deploy utility through a modern web browser. The web UI provides an intuitive and easy-to-use interface, and in most cases will be your primary interface when using the utility.
 
 === Command line interface
 
