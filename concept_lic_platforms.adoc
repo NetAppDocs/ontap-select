@@ -34,14 +34,15 @@ The standard offering provides the following capabilities:
 * Small instance type only
 * Hard disk drives (HDD) only
 * Local hardware RAID controller only
-* vNAS
+* Solid state drives (SSDs) in a vNAS configuration
 
 === Premium
 
 The premium offering provides the following capabilities:
 
 * Small or medium instance type
-* Hard disk drives (HDD) or solid state drives (SSD)
+* HDDs in vNAS or DAS configuration
+* SSDs in a DAS configuration
 * Local hardware RAID controller or software RAID
 * vNAS
 * MetroCluster SDS
@@ -51,7 +52,8 @@ The premium offering provides the following capabilities:
 The premium XL offering provides the following capabilities:
 
 * Small, medium, or large instance type
-* HDDs, SSDs, or NVMe drives
+* HDDs or NVMe drives
+* SSDs in a DAS configuration
 * Local hardware RAID controller or software RAID
 * vNAS
 * MetroCluster SDS
