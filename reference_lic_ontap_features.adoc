@@ -53,7 +53,6 @@ You must acquire a separate license for any ONTAP feature that is not enabled by
 NOTE: SnapLock Compliance is not supported for ONTAP Select.
 
 ** Tamperproof Snapshot copies
-* SnapLock Select
 
 [NOTE]
 You do not need a FabricPool license when utilizing StorageGRID.
