@@ -32,9 +32,9 @@ There are three platform license offerings available.
 The standard offering provides the following capabilities:
 
 * Small instance type only
-* Hard disk drives (HDD) only
+* Hard disk drives (HDD) in a DAS or vNAS configuration
+* Solid state drives (SSDs) in a vNAS configuration only
 * Local hardware RAID controller only
-* Solid state drives (SSDs) in a vNAS configuration
 
 === Premium
 
@@ -42,7 +42,6 @@ The premium offering provides the following capabilities:
 
 * Small or medium instance type
 * HDDs in vNAS or DAS configuration
-* SSDs in a DAS configuration
 * Local hardware RAID controller or software RAID
 * vNAS
 * MetroCluster SDS

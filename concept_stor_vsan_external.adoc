@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: concept_stor_vsan_external.html
 keywords: ontap select, vsan and external array configurations, vnas architecture
-summary: Virtual NAS (vNAS) deployments support ONTAP Select clusters on VSAN, some HCI products, NetApp HCI technology, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
+summary: Virtual NAS (vNAS) deployments support ONTAP Select clusters on vSAN, some HCI products, NetApp HCI technology, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
 ---
-= ONTAP Select VSAN and external array configurations
+= ONTAP Select vSAN and external array configurations
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,9 +12,9 @@ summary: Virtual NAS (vNAS) deployments support ONTAP Select clusters on VSAN, s
 :imagesdir: ./media/
 
 [.lead]
-Virtual NAS (vNAS) deployments support ONTAP Select clusters on virtual SAN (VSAN), some HCI products, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
+Virtual NAS (vNAS) deployments support ONTAP Select clusters on virtual SAN (vSAN), some HCI products, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
 
-The minimum requirement is that the underlying configuration is supported by VMware and should be listed on the respective VMware HCLs.
+The minimum requirement is that the underlying configuration is supported by the hypervisor that your are using (VMware ESXi or KVM on a supported Linux host). If the hypervisor is ESXi, it should be listed on the respective VMware HCLs.
 
 == vNAS architecture
 
