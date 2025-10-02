@@ -16,49 +16,71 @@ You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in the s
 
 == What a platform license offering provides
 
-A specific license offering defines and restricts the capabilities of the hypervisor host in two areas:
+A specific license offering determines the capabilities of the hypervisor host in two areas:
 
 * Instance type (CPU, memory)
 * Additional features
 
 The license offerings are arranged in an ascending order of capabilities from standard to premium XL. In general, the license option you choose grants you the capabilities of that level and all lower levels. For example, the premium level provides the capabilities of both premium and standard.
 
-== Platform license offerings
+There following table compares the capabilities for the standard, premium, and premium XL license offerings.
 
-There are three platform license offerings available.
+[cols="25,25,25,25,25",options="header"]
+|===
+2+| License supports ... | Standard | Premium | Premium XL
 
-=== Standard
+2+| Instance type
+| Small only
+| Small or medium
+| Small, medium, or large
 
-The standard offering provides the following capabilities:
+.2+| Hard disk drives (HDD) in a ...
+| Hardware RAID configuration
+| Yes
+| Yes
+| Yes
 
-* Small instance type only
-* Hard disk drives (HDD) in a DAS or vNAS configuration
-* Solid state drives (SSDs) in a vNAS configuration only
-* Local hardware RAID controller only
+| vNAS configuration
+| Yes
+| Yes
+| Yes
 
-=== Premium
+.3+| Solid state drives (SSD) in a ...
+| Hardware RAID configuration
+| No
+| Yes
+| Yes
+| Software RAID configuration
+| No
+| Yes
+| Yes
+| vNAS configuration
+| Yes
+| Yes
+| Yes
 
-The premium offering provides the following capabilities:
+.3+| NVMe drives in a ...
+| Hardware RAID configuration
+| No
+| No
+| Yes
+| Software RAID configuration
+| No
+| No
+| Yes
+| vNAS configuration
+| Yes
+| Yes
+| Yes
 
-* Small or medium instance type
-* HDDs in vNAS or DAS configuration
-* Local hardware RAID controller or software RAID
-* vNAS
-* MetroCluster SDS
-
-=== Premium XL
-
-The premium XL offering provides the following capabilities:
-
-* Small, medium, or large instance type
-* HDDs or NVMe drives
-* SSDs in a DAS configuration
-* Local hardware RAID controller or software RAID
-* vNAS
-* MetroCluster SDS
+2+| MetroCluster SDS
+| No
+| Yes
+| Yes
+|===
 
 [NOTE]
-Use of the large instance type isn't supported on a Kernel-Based Virtual Machine (KVM).
+Kernel-Based Virtual Machines (KVM) do not support the large instance type.
 
 == Compare hardware support for platform license offerings
 
