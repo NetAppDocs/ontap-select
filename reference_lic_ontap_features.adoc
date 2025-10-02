@@ -15,7 +15,7 @@ summary: ONTAP Select offers full support for most ONTAP functionality. Many of 
 ONTAP Select supports most ONTAP features. Many of the ONTAP features are licensed automatically for each node when you deploy a cluster. However some features require a separate license.
 
 [NOTE]
-ONTAP features that have hardware-specific dependencies are genusuerally not supported with ONTAP Select.
+ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
 == ONTAP features automatically enabled by default
 
