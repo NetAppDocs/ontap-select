@@ -23,7 +23,7 @@ A specific license offering determines the capabilities of the hypervisor host i
 
 The license offerings are arranged in an ascending order of capabilities from standard to premium XL. In general, the license option you choose grants you the capabilities of that level and all lower levels. For example, the premium level provides the capabilities of both premium and standard.
 
-There following table compares the capabilities for the standard, premium, and premium XL license offerings.
+The following table compares the capabilities for the standard, premium, and premium XL license offerings.
 
 [cols="25,25,25,25,25",options="header"]
 |===
