@@ -14,7 +14,7 @@ summary: Virtual NAS (vNAS) deployments support ONTAP Select clusters on vSAN, s
 [.lead]
 Virtual NAS (vNAS) deployments support ONTAP Select clusters on virtual SAN (vSAN), some HCI products, and external array types of datastores. The underlying infrastructure of these configurations provide datastore resiliency.
 
-The minimum requirement is that the underlying configuration is supported by the hypervisor that your are using (VMware ESXi or KVM on a supported Linux host). If the hypervisor is ESXi, it should be listed on the respective VMware HCLs.
+The minimum requirement is that the underlying configuration is supported by the hypervisor that you are using (VMware ESXi or KVM on a supported Linux host). If the hypervisor is ESXi, it should be listed on the respective VMware HCLs.
 
 == vNAS architecture
 
