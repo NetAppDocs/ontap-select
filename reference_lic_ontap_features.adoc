@@ -12,7 +12,7 @@ summary: ONTAP Select offers full support for most ONTAP functionality. Many of 
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select offers full support for most ONTAP functionality. Many of the ONTAP features are licensed automatically for each node when you deploy a cluster. However some features require a separate license.
+ONTAP Select supports most ONTAP features. Many of the ONTAP features are licensed automatically for each node when you deploy a cluster. However some features require a separate license.
 
 [NOTE]
 ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
@@ -44,19 +44,17 @@ NOTE: ONTAP Select supports SVM DR as both a source and destination with a maxim
 
 == ONTAP features that are separately licensed
 
-You must acquire a separate license for any ONTAP feature that is not enabled by default, including:
+You need to acquire a separate license for any ONTAP feature that is not enabled by default, including:
 
 * FabricPool
 * MetroCluster SDS (ONTAP Select premium license offering)
-* SnapLock Enterprise for ONTAP Select 9.16.1 and earlier (available from the link:https://mysupport.netapp.com/site/[NetApp Support Site^])
-+
-NOTE: SnapLock Compliance is not supported for ONTAP Select.
-
-** Tamperproof Snapshot copies
-* SnapLock Select
 
 [NOTE]
-You do not need a FabricPool license when utilizing StorageGRID.
+====
+* For ONTAP Select 9.16.1 and earlier, SnapLock Select Enterprise (including tamperproof snapshot locking) is available from the link:https://mysupport.netapp.com/site/[NetApp Support Site^].
+* SnapLock Compliance is not supported for ONTAP Select.
+* You do not need a FabricPool license when utilizing StorageGRID.
+====
 
 .Related information
 
