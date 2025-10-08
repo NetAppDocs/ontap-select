@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: concept-capacity-tiers-license.html
+permalink: concept-capacity-pool-space.html
 keywords: license, licensing, Capacity Pools, operation details
 summary: The Capacity Pools licensing model is different from the Capacity Tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the Capacity Pools model.
 ---
-= ONTAP Select Capacity Tiers license capacity
+= ONTAP Select Capacity Pools license capacity
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,17 +12,15 @@ summary: The Capacity Pools licensing model is different from the Capacity Tiers
 :imagesdir: ./media/
 
 [.lead]
-The Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
-
-The licensed capacity for a Capacity Tier license is in full TiB amounts, with a minimum of 1 TiB. The usable capacity is the amount of licensed capacity divided by the overhead factor. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
+The licensed capacity for a Capacity Pool license is in full TiB amounts, with a minimum of 2 TiB. The usable capacity is the amount of licensed capacity divided by the overhead factor. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
 
 * Overhead factor for single-node clusters is 1.13
 * Overhead factor for multi-node clusters is 2.67
 
 To determine the usable space from licensed space, you divide the licensed space by the overhead factor, as shown in the following examples:
 
-* Licensed single-node space: 10 TiB. Usable space: 10 / 1.13 = 8.84 TiB
-* Licensed HA pair space: 10 TiB. Usable space: 10 / 2.67 = 3.75 TiB
+* Licensed single-node space: 20 TiB. Usable space: 20 / 1.13 = 17.70 TiB
+* Licensed HA pair space: 20 TiB. Usable space: 20 / 2.67 = 7.48 TiB
 
 You need to calculate the licensed capacity and the usable space to ensure you have enough capacity for your deployment.
 
@@ -31,18 +29,18 @@ You need to calculate the licensed capacity and the usable space to ensure you h
 | Description | Single node | HA pair
 
 | Usable space
-| 10 TiB
-| 5 TiB per node
+| 20 TiB
+| 10 TiB per node
 
-10 TiB for HA pair
+20 TiB for HA pair
 
 | Licensed space
-| 12 TiB 
+| 23 TiB 
 
-(10 x 1.13 = 11.3, round up to next full TiB)
-| Two 14 TiB licenses 
+(20 x 1.13 = 22.6, round up to next full TiB)
+| 54 TiB 
 
-(5 x 2.67 = 13.35, round up to next full TiB)
+(20 x 2.67 = 53.4, round up to next full TiB)
 
 
 | Maximum usable space per node
