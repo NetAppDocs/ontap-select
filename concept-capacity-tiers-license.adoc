@@ -1,0 +1,62 @@
+---
+sidebar: sidebar
+permalink: concept-capacity-tiers-license.html
+keywords: license, licensing, Capacity Pools, operation details
+summary: The Capacity Pools licensing model is different from the Capacity Tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the Capacity Pools model.
+---
+= Operational details for ONTAP Select Capacity Tiers licensing model
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
+
+The licensed capacity for a Capacity Tier license is in full TiB amounts, with a minimum of 1 TiB. The usable capacity is the amount of licensed capacity divided by the overhead factor. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
+
+* Overhead factor for single-node clusters is 1.13
+* Overhead factor for multi-node clusters is 2.67
+
+To determine the usable space from licensed space, you divide the licensed space by the overhead factor, as shown in the following examples:
+
+* Licensed single-node space: 10 TiB. Usable space: 10 / 1.13 = 8.84 TiB
+* Licensed HA pair space: 10 TiB. Usable space: 10 / 2.67 = 3.75 TiB
+
+You need to calculate the licensed capacity and the usable space to ensure you have enough capacity for your deployment.
+
+[cols="25,30,45",options="header"]
+|===
+| Description | Single node | HA pair
+
+| Usable space
+| 10 TiB
+| 5 TiB per node
+
+10 TiB for HA pair
+
+| Licensed space
+| 12 TiB 
+
+(10 x 1.13 = 11.3, round up to next full TiB)
+| Two 14 TiB licenses 
+
+(5 x 2.67 = 13.35, round up to next full TiB)
+
+
+| Maximum usable space per node
+|  353 TiB 
+
+(400 / 1.13)
+a| Per node in a HA pair:
+
+* 74 TiB [(400 / 2) / 2.67]
+
+Per node in a multi-node cluster:
+
+* Two-node: 148 TiB (2 x 74)
+* Four-node: 296 TiB (4 x 74)
+* Six-node: 444 TiB (6 x 74)
+* Eight-node: 592 TiB (8 x 74)
+|===
