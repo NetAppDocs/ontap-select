@@ -95,7 +95,7 @@ sidebar:
                 url: /concept_lic_production.html
               - title: Platform license offerings
                 url: /concept_lic_platforms.html
-        - title: Compare Capacity Tiers and Capacity Pools
+        - title: Compare Capacity Pools and Capacity Tiers
           entries:  
           - title: Capacity Pools licensing model
             entries:
@@ -103,8 +103,6 @@ sidebar:
                 url: /concept_lic_cp_operation.html
               - title: Node serial numbers
                 url: /concept_lic_cp_serial_number.html
-              - title: Capacity Pool space
-                url: /concept-capacity-pool-space.html
               - title: Restrictions
                 url: /concept_lic_cp_restrictions.html
           - title: Capacity Tiers licensing model
