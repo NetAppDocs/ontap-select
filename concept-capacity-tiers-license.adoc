@@ -19,7 +19,7 @@ The licensed capacity for a Capacity Tier license is in full TiB amounts, with a
 * Overhead factor for single-node clusters is 1.13
 * Overhead factor for multi-node clusters is 2.67
 
-You need to calculate the licensed capacity to ensure you have enough for your deployment.
+You need to calculate the licensed capacity based on the usable space to ensure you have enough for your deployment.
 
 [cols="25,30,45",options="header"]
 |===

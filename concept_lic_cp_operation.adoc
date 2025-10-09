@@ -72,15 +72,15 @@ The licensed capacity for a Capacity Pool license is in full TiB amounts, with a
 * Overhead factor for single-node clusters is 1.13
 * Overhead factor for multi-node clusters is 2.67
 
-You need to calculate the licensed capacity to ensure you have enough for your deployment.
+You need to calculate the licensed capacity based on the usable space to ensure you have enough for your deployment.
 
 [cols="25,30,45",options="header"]
 |===
-| Description | Single node | HA pair
+| Description | Single-node | HA pair or mix of HA and single-node
 
 | Usable space
 | 20 TiB
-| 10 TiB per node
+| 10 TiB per single-node cluster
 
 20 TiB for HA pair
 
@@ -99,16 +99,13 @@ You need to calculate the licensed capacity to ensure you have enough for your d
 |  353 TiB 
 
 (400 / 1.13)
-a| Per node in a HA pair:
+a| Per single-node cluster: 
 
-* 74 TiB [(400 / 2) / 2.67]
+74 TiB [(400 / 2) / 2.67]
 
-Per HA pair in a multi-node cluster:
+Per HA pair cluster: 
 
-* Two-node: 148 TiB (2 x 74)
-* Four-node: 296 TiB (4 x 74)
-* Six-node: 444 TiB (6 x 74)
-* Eight-node: 592 TiB (8 x 74)
+148 TiB (2 x 74)
 |===
 
 // 2023-10-17, Removed mention of old OTS versions
