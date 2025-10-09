@@ -94,6 +94,8 @@ You need to calculate the licensed capacity to ensure you have enough for your d
 
 
 | Maximum usable space per node
+
+*Note*: The maximum managed space per node or HA pair is 400 TiB
 |  353 TiB 
 
 (400 / 1.13)
