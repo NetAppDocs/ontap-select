@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
 permalink: concept-capacity-tiers-license.html
-keywords: license, licensing, Capacity Pools, operation details
-summary: The Capacity Pools licensing model is different from the Capacity Tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the Capacity Pools model.
+keywords: license, licensing, Capacity Tiers, usable, space
+summary: TThe Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
 ---
-= ONTAP Select Capacity Tiers license capacity
+= ONTAP Select Capacity Tiers licensing model
 :hardbreaks:
 :nofooter:
 :icons: font
