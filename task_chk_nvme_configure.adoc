@@ -21,7 +21,7 @@ Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficienc
 Make sure your deployment environment meets the following minimum requirements:
 
 * For an ESX host, ONTAP Select 9.7 or later with a supported Deploy administration utility
-* For a KVM host, ONTAP Select 9.17.1 with a supported Deploy administration utility
+* For a KVM host, ONTAP Select 9.17.1 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * The ESXi or KVM host is running a supported hypervisor version:
 +

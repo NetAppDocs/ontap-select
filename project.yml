@@ -9,19 +9,19 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
-    - version-number: "9.17.1"
+    - version-number: "9.18.1"
       url: /ontap-select
+    - version-number: "9.17.1"
+      url: /ontap-select-9171
     - version-number: "9.16.1"
       url: /ontap-select-9161
     - version-number: "9.15.1"
       url: /ontap-select-9151 
     - version-number: "9.14.1"
-      url: /ontap-select-9141
-    - version-number: "9.13.1"
-      url: /ontap-select-9131                    
+      url: /ontap-select-9141                    
 sidebar:
   entries:
-    - title: ONTAP Select 9.17.1 docs
+    - title: ONTAP Select 9.18.1 docs
       url: /index.html
     - title: Release Notes
       entries:
