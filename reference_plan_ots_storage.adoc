@@ -186,7 +186,7 @@ You can configure software RAID to use NVMe SSD drives. Your environment must me
 
 * ONTAP Select 9.7 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
-* VMware ESXi version 6.7 or later
+* VMware ESXi version 8.0 or later
 * NVMe devices conforming to specification 1.0 or later
 
 You need to manually configure the NVMe drives before using them. See link:task_chk_nvme_configure.html[Configure a host to use NVMe drives] for more information.

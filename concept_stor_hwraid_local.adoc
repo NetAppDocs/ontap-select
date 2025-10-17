@@ -137,7 +137,7 @@ NetApp FAS systems are traditionally fitted with a physical NVRAM PCI card, a hi
 
 Commodity systems are not typically fitted with this type of equipment. Therefore, the functionality of this NVRAM card has been virtualized and placed into a partition on the ONTAP Select system boot disk. It is for this reason that placement of the system virtual disk of the instance is extremely important. This is also why the product requires the presence of a physical RAID controller with a resilient cache for local attached storage configurations.
 
-NVRAM is placed on its own VMDK. Splitting the NVRAM in its own VMDK allows the ONTAP Select VM to use the vNVMe driver to communicate with its NVRAM VMDK. It also requires that the ONTAP Select VM uses hardware version 13, which is compatible with ESX 6.5 and newer.
+NVRAM is placed on its own VMDK. Splitting the NVRAM in its own VMDK allows the ONTAP Select VM to use the vNVMe driver to communicate with its NVRAM VMDK. It also requires that the ONTAP Select VM uses hardware version 13, which is compatible with ESX 8.0 and later.
 
 == Data path explained: NVRAM and RAID controller
 The interaction between the virtualized NVRAM system partition and the RAID controller can be best highlighted by walking through the data path taken by a write request as it enters the system.
@@ -158,6 +158,6 @@ Although blocks changed on the NVRAM VMDK are cached in the local RAID controlle
 image:ST_13.jpg[Incoming writes to ONTAP Select VM]
 
 [NOTE]
-The NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 6.5 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.
+The NVRAM partition is separated on its own VMDK. That VMDK is attached using the vNVME driver available in ESX versions of 8.0 or later. This change is most significant for ONTAP Select installations with software RAID, which do not benefit from the RAID controller cache.
 
 // 2024 OCT 8, ONTAPDOC-2402 
