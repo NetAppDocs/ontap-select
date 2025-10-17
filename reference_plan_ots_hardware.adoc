@@ -51,7 +51,7 @@ ONTAP Select supports the following ESXi hypervisor versions:
 NetApp supports ONTAP Select on the identified versions of ESXi as long as VMware also continues to support the same versions.
 
 [NOTE]
-ESXi 6.5 GA and ESXi 6.7 GA reached end of availability status. If you have ONTAP Select clusters with these versions, you must upgrade to the supported versions as per the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)^].
+ESXi 7.0 reached end of availability status. If you have ONTAP Select clusters with this version, you must upgrade to the supported versions as per the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)^].
 --
 ====
 
