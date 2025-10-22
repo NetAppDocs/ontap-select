@@ -16,48 +16,71 @@ You can purchase an ONTAP Select Capacity Tier or Capacity Pool license in the s
 
 == What a platform license offering provides
 
-A specific license offering defines and restricts the capabilities of the hypervisor host in two areas:
+A specific license offering determines the capabilities of the hypervisor host in two areas:
 
 * Instance type (CPU, memory)
 * Additional features
 
 The license offerings are arranged in an ascending order of capabilities from standard to premium XL. In general, the license option you choose grants you the capabilities of that level and all lower levels. For example, the premium level provides the capabilities of both premium and standard.
 
-== Platform license offerings
+The following table compares the capabilities for the standard, premium, and premium XL license offerings.
 
-There are three platform license offerings available.
+[cols="25,25,25,25,25",options="header"]
+|===
+2+| License supports ... | Standard | Premium | Premium XL
 
-=== Standard
+2+| Instance type
+| Small only
+| Small or medium
+| Small, medium, or large
 
-The standard offering provides the following capabilities:
+.2+| Hard disk drives (HDD) in a ...
+| Hardware RAID configuration
+| Yes
+| Yes
+| Yes
 
-* Small instance type only
-* Hard disk drives (HDD) only
-* Local hardware RAID controller only
-* vNAS
+| vNAS configuration
+| Yes
+| Yes
+| Yes
 
-=== Premium
+.3+| Solid state drives (SSD) in a ...
+| Hardware RAID configuration
+| No
+| Yes
+| Yes
+| Software RAID configuration
+| No
+| Yes
+| Yes
+| vNAS configuration
+| Yes
+| Yes
+| Yes
 
-The premium offering provides the following capabilities:
+.3+| NVMe drives in a ...
+| Hardware RAID configuration
+| No
+| No
+| Yes
+| Software RAID configuration
+| No
+| No
+| Yes
+| vNAS configuration
+| Yes
+| Yes
+| Yes
 
-* Small or medium instance type
-* Hard disk drives (HDD) or solid state drives (SSD)
-* Local hardware RAID controller or software RAID
-* vNAS
-* MetroCluster SDS
-
-=== Premium XL
-
-The premium XL offering provides the following capabilities:
-
-* Small, medium, or large instance type
-* HDDs, SSDs, or NVMe drives
-* Local hardware RAID controller or software RAID
-* vNAS
-* MetroCluster SDS
+2+| MetroCluster SDS
+| No
+| Yes
+| Yes
+|===
 
 [NOTE]
-Use of the large instance type isn't supported on a Kernel-Based Virtual Machine (KVM).
+Kernel-Based Virtual Machines (KVM) do not support the large instance type.
 
 == Compare hardware support for platform license offerings
 
@@ -114,7 +137,7 @@ Minimum of four 1GbE ports for a two-node cluster (HA pair)
 Minimum of two 10GbE ports for a four-, six-, or eight-node cluster
 |===
 
-^1^ Assumes two cores and 8Gb RAM for the hypervisor.
+^1^ Assumes two cores and 8GB of RAM for the hypervisor.
 --
 
 .Storage type
@@ -126,7 +149,7 @@ The following table provides the minimum license type required for the specified
 
 |===
 2+h| Storage type 3+h| Description
-2+h|License type h| Standard h| Premium h| Pemium XL
+2+h|License type h| Standard h| Premium h| Premium XL
 2+h|Instance size h| Small h| Small and medium h| Small, medium, and large
 2+| Local DAS with hardware RAID controller
 | 8 - 60 drives
@@ -142,7 +165,7 @@ The following table provides the minimum license type required for the specified
 | 4 – 60 drives (SSD only)
 2+| Local DAS with software RAID
 | Not applicable
-| Not applicable
+| Applicable
 | 4 - 14 drives (NVMe only)
 2+| External arrays ^1^
 3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
@@ -181,8 +204,10 @@ SnapCenter (optional)
 --
 ====
 .Related information
-link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types].
+* link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types]
 
+
+// 2025 Sep 16, ONTAPDOC-3305
 // 2025 AUG 13, ONTAPDOC-3206
 // 2025 July 17, ONTAPDOC-2885 
 // 2025 FEB 18, ONTAPDOC-2678
