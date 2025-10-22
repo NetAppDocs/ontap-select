@@ -42,6 +42,7 @@ ONTAP Select supports the following KVM hypervisor versions:
 --
 ONTAP Select supports the following ESXi hypervisor versions:
 
+* VMware ESXi 9.03
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)

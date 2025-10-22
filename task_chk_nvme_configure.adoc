@@ -32,6 +32,7 @@ Make sure your deployment environment meets the following minimum requirements:
 --
 ESXi is supported on the following hypervisor versions:
 
+* VMware ESXi 9.0
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)
