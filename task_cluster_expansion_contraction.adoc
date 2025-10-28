@@ -44,8 +44,6 @@ Cluster expansion and contraction is supported for the following ESXi hypervisor
 * ESXi 8.0 U2 
 * ESXi 8.0 U1
 * ESXi 8.0 GA 
-* ESXi 7.0 U3
-* ESXi 7.0
 --
 .KVM
 --

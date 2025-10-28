@@ -20,7 +20,7 @@ You can quickly deploy a 90-day evaluation instance of a single-node ONTAP Selec
 * You can allocate the same amount of storage for user data as a purchased license.
 * You can't upgrade the node from an evaluation license to a purchased license.
 * You can only use a vCenter account to deploy the OVF template. Installing directly to an ESXi host is currently not supported.
-* You must install the OVF template (contained in an ova file) using the vSphere standalone client or vSphere web client (the only option for ESXi 6.5 and later). You don't use the ONTAP Select Deploy administration utility.
+* You must install the OVF template (contained in an ova file) using the vSphere standalone client or vSphere web client (the only option for ESXi 8.0 and later). You don't use the ONTAP Select Deploy administration utility.
 
 == Prepare the ONTAP Select cluster host
 Use the following requirements to prepare the ESXi host where the ONTAP Select cluster is deployed. The platform description is based on the standard or small instance type configuration with local direct-attached storage (DAS) formatted using the VMFS-5 or VMFS-6 file system.

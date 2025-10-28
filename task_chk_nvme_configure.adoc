@@ -36,7 +36,6 @@ ESXi is supported on the following hypervisor versions:
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 GA (build 20513097)
-* VMware ESXi 7.0 GA (build 15843807 or greater), including 7.0 U1, U2, and U3C
 --
 
 .KVM
