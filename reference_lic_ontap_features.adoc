@@ -51,7 +51,7 @@ You need to acquire a separate license for any ONTAP feature that is not enabled
 
 [NOTE]
 ====
-* For ONTAP Select 9.16.1 and earlier, SnapLock Select Enterprise (including tamperproof snapshot locking) is available from the link:https://mysupport.netapp.com/site/[NetApp Support Site^].
+* For ONTAP Select 9.16.1 and earlier, you can download the Enterprise version of the SnapLock Select license free of charge from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually.
 * SnapLock Compliance is not supported for ONTAP Select.
 * You do not need a FabricPool license when utilizing StorageGRID.
 ====
