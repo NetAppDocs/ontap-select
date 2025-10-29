@@ -19,7 +19,7 @@ There are several hardware requirements and planning issues you should consider 
 There are several requirements related to the hypervisor where ONTAP Select runs.
 
 [NOTE]
-You should review the current release notes for your version of ONTAP Select for any additional known restrictions or limitations.
+You should review the link:reference_release_notes.html[ONTAP Select Release Notes] for any additional known restrictions or limitations.
 
 === VMware licensing
 
@@ -42,7 +42,7 @@ ONTAP Select supports the following KVM hypervisor versions:
 --
 ONTAP Select supports the following ESXi hypervisor versions:
 
-* VMware ESXi 9.03
+* VMware ESXi 9.0
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)
@@ -66,7 +66,7 @@ If an ESXi hypervisor host is managed by a vCenter server, you must register the
 The physical hypervisor host where you deploy ONTAP Select must meet several hardware requirements. You can choose any platform for the hypervisor host, as long as it meets the minimum hardware requirements. The following vendors provide supported hardware platforms: Cisco, Dell, HP, Fujitsu, Lenovo, and Supermicro.
 
 [NOTE]
-Beginning with ONTAP Select 9.9.1 only CPU models based on Intel Xeon Sandy Bridge or later are supported.
+Beginning with ONTAP Select 9.9.1, only CPU models based on Intel Xeon Sandy Bridge or later are supported.
 
 Refer to the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool,window=_blank] for more information.
 
@@ -98,7 +98,7 @@ There are several supported Ethernet configurations based on the cluster size.
 |4 x 1GbE or 1 x 10GbE
 |2 x 10GbE
 
-|4/6/8 node cluster
+|Four, six, or eight-node cluster
 |2 x 10GbE
 |4 x 10GbE or 2 x 25/40GbE
 |===

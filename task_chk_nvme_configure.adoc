@@ -16,6 +16,9 @@ If you plan to use NVMe drives with software RAID, you need to configure the ESX
 
 Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
 
+== Step 1: Configure the host
+Configure the ESXi or KVM host to recognize the drives.
+
 .Before you begin
 
 Make sure your deployment environment meets the following minimum requirements:
@@ -97,7 +100,7 @@ The following example output is for an ESXi host:
 +
 image:nvme_03.png[Reboot This Host]
 
-.After you finish
+== Step 2: Install the ONTAP Select Deploy utility
 
 After the hosts are prepared, you can install the ONTAP Select Deploy utility. Deploy guides you through creating ONTAP Select storage clusters on your newly prepared hosts. During this process, Deploy detects the presence of the NVMe drives configured for pass-through and automatically selects them for use as ONTAP data disks. You can adjust the default selection if needed.
 
@@ -108,7 +111,7 @@ The following example output is for an ESXi host:
 
 image:nvme_04.png[ONTAP Select Deploy Clusters]
 
-After the cluster is successfully deployed, ONTAP System Manager allows you to provision the storage according to best practices. ONTAP will automatically enable flash-optimized storage efficiency features that make the best use of your NVMe storage.
+After the cluster is successfully deployed, ONTAP System Manager allows you to provision the storage according to best practices. ONTAP automatically enables flash-optimized storage efficiency features that make the best use of your NVMe storage.
 
 image:nvme_05.png[preparing local storage]
 
