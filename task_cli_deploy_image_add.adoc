@@ -107,11 +107,8 @@ Display the ONTAP Select images that are available when deploying a new cluster.
 
 . Access the online documentation web page at the Deploy utility virtual machine and sign in using the administrator (admin) account:
 +
-[source,cli]
- ----
-\http://<FQDN|IP_ADDRESS>/api/ui
-----
-+
+`\http://<FQDN|IP_ADDRESS>/api/ui`
+
 Use the domain name or IP address of the Deploy virtual machine.
 
 . Navigate to the bottom of the page and select *Deploy* and then select *GET /images*.
