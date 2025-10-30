@@ -18,17 +18,17 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 == ONTAP Select 9.18.1
 
 Enhanced support for cluster expansion and contraction::
-Beginning with ONTAP Select 9.18.1, cluster expansion and contraction is supported between four-node and twelve-node clusters on ESXi and KVM hosts.
+Beginning with ONTAP Select 9.18.1, cluster expansion and contraction is supported between four-node and twelve-node ONTAP Select clusters on ESXi and KVM hypervisor hosts.
 +
 --
-You can increase the cluster size for an existing ESXi or KVM cluster in the following increments:
+You can increase the cluster size for an existing cluster on an ESXi or KVM host in the following increments:
 
 * From four nodes to six, eight, ten, or twelve nodes
 * From six nodes to eight, ten, or twelve nodes
 * From eight nodes to ten or twelve nodes
 * From ten to twelve nodes 
 
-You can decrease the cluster size for an existing ESXi or KVM cluster in the following increments:
+You can decrease the cluster size for an existing cluster on an ESXi or KVM host in the following increments:
 
 * From twelve nodes to ten, eight, six, or four nodes
 * From ten nodes to eight, six, or four nodes
