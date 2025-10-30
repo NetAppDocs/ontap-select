@@ -4,7 +4,7 @@ permalink: cli-upgrade-esxi.html
 keywords: administer, administering, cli, esxi, upgrade, esxi 6.5
 summary: If you are running ONTAP Select on VMware ESXi, you can upgrade the ESXi software from an earlier supported version to ESXi 8.0 or later. Before upgrading, you should understand the process and select the appropriate upgrade procedure.
 ---
-= Upgrade ONTAP Select VMware ESXi to version 8.0 or later
+= Upgrade VMware ESXi to version 8.0 or later for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
