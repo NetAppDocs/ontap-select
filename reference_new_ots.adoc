@@ -87,6 +87,9 @@ Updated KVM hypervisor support::
 
 Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 9.6 and Rocky Linux 9.6.
 
+Enhanced VMware ESXi support::
+ONTAP Select 9.17.1 includes support for VMware ESXi 9.0.
+
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 includes several new features and improvements.

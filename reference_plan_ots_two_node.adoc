@@ -31,16 +31,12 @@ You can deploy a two-node cluster using any VMware vSphere license. However, the
 When a cluster consists of two nodes, it is not possible to achieve the quorum required when a node fails or loses communication. To resolve these types of split-brain situations, every instance of the ONTAP Select Deploy utility includes a mediator service. This service connects to each node in the active two-node clusters to monitor the HA pairs and assist in managing failures. The mediator service maintains the HA state information at a dedicated iSCSI target associated with each two-node cluster.
 
 [CAUTION]
-If you have one or more active two-node clusters, the ONTAP Select Deploy virtual machine administering the clusters must be running at all times. If the Deploy virtual machine is halted or fails, the mediator service is unavailable and HA capability is lost for the two-node clusters.
+If you have one or more active two-node clusters, the ONTAP Select Deploy virtual machine administering the clusters must be running at all times. If the ONTAP Select Deploy virtual machine is halted or fails, the mediator service is unavailable and HA capability is lost for the two-node clusters.
 
 .Location of the cluster and mediator service
 
-Because the two-node clusters are typically deployed in a remote or branch office, they can be remote from the corporate data center and the Deploy utility providing administrative support. With this configuration, the management traffic between the Deploy utility and cluster flows over the WAN. See the release notes for more information about limitations and restrictions.
+Because the two-node clusters are typically deployed in a remote or branch office, they can be remote from the corporate data center and the ONTAP Select Deploy utility providing administrative support. With this configuration, the management traffic between the ONTAP Select Deploy utility and cluster flows over the WAN. See the release notes for more information about limitations and restrictions.
 
-.Back up the Deploy configuration data
+. Static IP address assigned to ONTAP Select Deploy
 
-It is a best practice to back up the Deploy configuration data on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because of the mediator configuration data included with the backup.
-
-.Static IP address assigned to Deploy
-
-You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.
+You must assign a static IP address to the ONTAP Select Deploy administration utility. This requirement applies to all ONTAP Select Deploy instances that manage one or more ONTAP Select two-node clusters.
