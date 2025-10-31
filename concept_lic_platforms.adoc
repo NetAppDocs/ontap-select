@@ -183,7 +183,9 @@ The following table provides the minimum license type required for the specified
 2+h| Software type 3+h| Description
 
 2+|Hypervisor support (VMware)
-3+| VMware vSphere 8.0GA and updates 1 through 3
+3+|VMware vSphere 9.0 
+
+VMware vSphere 8.0GA and updates 1 through 3
 
 VMware vSphere 7.0GA and updates 1 through 3C 
 
