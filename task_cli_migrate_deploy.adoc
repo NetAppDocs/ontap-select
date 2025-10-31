@@ -16,7 +16,7 @@ You can migrate an existing instance of the Deploy administration utility to a n
 
 This procedure is based on creating a new virtual machine that uses the configuration data from the original virtual machine. The new and original virtual machines must run the same version and release of the Deploy utility. You cannot migrate to a different version and release of the Deploy utility.
 
-== Back up the Deploy configuration data
+== Step 1:Back up the Deploy configuration data
 You must create a backup of the Deploy configuration data as part of migrating the virtual machine. You should also create a backup after deploying an ONTAP Select cluster. The data is saved to a single encrypted file that you can download to your local workstation.
 
 .Before you begin
@@ -50,7 +50,7 @@ You can access the backup file through the URL.
 
 . Using a web browser or utility such as Curl, download the backup file to your local workstation with the URL.
 
-== Install a new instance of the Deploy virtual machine
+== Step 2: Install a new instance of the Deploy virtual machine
 
 You must create a new instance of the Deploy virtual machine which you can update with the configuration data from the original virtual machine.
 
@@ -71,7 +71,7 @@ This task is described at a high level.
 
 link:task_install_deploy.html[Install ONTAP Select Deploy]
 
-== Restore the Deploy configuration data to the new virtual machine
+== Step 3: Restore the Deploy configuration data to the new virtual machine
 
 You must restore the configuration data from the original Deploy utility virtual machine to the new virtual machine. The data is in a single file that you must upload from your local workstation.
 
