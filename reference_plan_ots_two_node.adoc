@@ -39,7 +39,7 @@ Because the two-node clusters are typically deployed in a remote or branch offic
 
 .Back up the Deploy configuration data
 
-It is a best practice to back up the Deploy configuration data on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because of the mediator configuration data included with the backup.
+It is a best practice to link:task_cli_clusters.html[back up the ONTAP Select Deploy configuration data] on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because of the mediator configuration data included with the backup.
 
 .Static IP address assigned to Deploy
 
