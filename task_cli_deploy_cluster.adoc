@@ -455,9 +455,9 @@ Provide the password to be used for the ONTAP administrator account when prompte
 cluster show -name <cluster_name>
 ----
 
-.After you finish
+.What's next?
 
-You should back up the ONTAP Select Deploy configuration data.
+link:task_cli_clusters.html[Back up the ONTAP Select Deploy configuration data].
 
 // 2023-05-12, GH issue #59
 // 2023-09-29, ONTAPDOC-1204
