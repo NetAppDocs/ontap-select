@@ -185,7 +185,7 @@ Software RAID with local DAS drives is supported with the premium license (SSD o
 
 You can configure software RAID to use NVMe SSD drives. Your environment must meet the following requirements:
 
-* ONTAP Select 9.7 or later with a supported Deploy administration utility
+* ONTAP Select with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * VMware ESXi version 6.7 or later
 * NVMe devices conforming to specification 1.0 or later

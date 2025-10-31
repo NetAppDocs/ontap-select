@@ -223,8 +223,8 @@ sidebar:
               url: /concept_api_rest.html
             - title: Access the Deploy API
               url: /concept_api_how_access.html
-            - title: Deploy API versioning
-              url: /concept_api_versions.html
+          # - title: Deploy API versioning
+          #   url: /concept_api_versions.html
             - title: Basic operation
               url: /concept_api_operation.html
             - title: Request and response transaction
