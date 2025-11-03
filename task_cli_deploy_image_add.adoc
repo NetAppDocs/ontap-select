@@ -56,15 +56,11 @@ This task describes one method for uploading the file to the Deploy virtual mach
 
 .Step
 
-. In a command shell on your local workstation, upload the image file to the Deploy virtual machine.
-+
-Example:
+. In a command shell on your local workstation, upload the image file to the Deploy virtual machine, as shown in the following examples:
 +
 ....
 scp image_v_93_install_esx.tgz admin@10.234.81.101:/home/admin (provide password when prompted)
 ....
-+
-Example:
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -95,9 +91,9 @@ You must know which directory the install image file has been placed in at the D
 shell bash
 ----
 
-. Place the install image file into the images directory.
+. Place the install image file into the images directory, as shown in the following example:
 +
-Example: `tar -xf image_v_93_install_esx.tgz -C /opt/netapp/images/`
+`tar -xf image_v_93_install_esx.tgz -C /opt/netapp/images/`
 
 == Step 4: Display the available install images
 
@@ -108,7 +104,7 @@ Display the ONTAP Select images that are available when deploying a new cluster.
 . Access the online documentation web page at the Deploy utility virtual machine and sign in using the administrator (admin) account:
 +
 `\http://<FQDN|IP_ADDRESS>/api/ui`
-
++
 Use the domain name or IP address of the Deploy virtual machine.
 
 . Navigate to the bottom of the page and select *Deploy* and then select *GET /images*.

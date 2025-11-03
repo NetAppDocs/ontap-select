@@ -34,15 +34,20 @@ The backup file you create captures all the configuration data from the virtual 
 
 . Create a backup of the Deploy configuration data, which is stored in an internal directory at the Deploy server:
 +
-`deploy backup create`
-
+[source,cli]
+----
+deploy backup create
+----
 . Provide a password for the backup when prompted.
 +
 The backup file is encrypted based on the password.
 
 . Display the available backups in the system:
 +
-`deploy backup show -detailed`
+[source,cli]
+----
+deploy backup show -detailed
+----
 
 . Select your backup file based on the date in the *Created* field and record the *Download URL* value.
 +
@@ -80,9 +85,7 @@ You must have the configuration data from a previous backup. The data is contain
 
 .Steps
 
-. In a command shell on your local workstation, use the sftp utility to upload the backup file to the Deploy virtual machine.
-+
-Example
+. In a command shell on your local workstation, use the sftp utility to upload the backup file to the Deploy virtual machine, as shown in the following example:
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -92,11 +95,14 @@ exit
 
 . Sign in to the Deploy utility CLI using SSH with the administrator account.
 
-. Restore the configuration data.
+. Restore the configuration data:
 +
-`deploy backup restore -path PATHNAME -filename FILENAME`
+[source,cli]
+----
+deploy backup restore -path <path_name> -filename <file_name>
+----
 +
-Example
+Example command:
 +
 `deploy backup restore -path /home/admin -filename deploy_backup_20180601162151.tar.gz`
 
