@@ -14,7 +14,7 @@ summary: If the ONTAP Select Deploy utility fails or becomes unavailable for som
 [.lead]
 If the ONTAP Select Deploy utility fails or becomes unavailable for some reason, you lose the ability to administer ONTAP Select nodes and clusters. In addition, all two-node clusters lose HA capability because the mediator service included with Deploy is unavailable. If an unrecoverable failure occurs, you must recover the Deploy utility instance to restore administrative and HA functionality.
 
-== Step 1: Prepare to recover the Deploy utility
+== Prepare to recover the Deploy utility
 
 You need to prepare before attempting to recover an instance of the Deploy utility to assure success. You must be familiar with several administrative procedures and have the required information.
 
