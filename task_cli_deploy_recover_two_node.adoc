@@ -16,14 +16,15 @@ If the ONTAP Select Deploy utility fails or becomes unavailable for some reason,
 
 == Prepare to recover the Deploy utility
 
-You need to prepare before attempting to recover an instance of the Deploy utility to assure success. You must be familiar with several administrative procedures and have the required information.
+You need to prepare before attempting to recover an instance of the Deploy utility to ensure success. You must be familiar with several administrative procedures and have the required information.
 
 .Steps
 
 . Verify that you can install a new instance of the ONTAP Select Deploy utility in your hypervisor environment.
 +
 link:task_install_deploy.html[Learn about installing the ONTAP Select Deploy utility]
-. Verify that you can sign in to the ONTAP CLI of the ONTAP Select cluster and use the shell interface.
+
+. Verify that you can log in to the ONTAP Select cluster and access the ONTAP cluster shell (CLI).
 
 . Determine if you have a backup of the configuration data from the failed Deploy utility instance that contains the ONTAP Select two-node cluster. You might have a backup that does not contain the cluster.
 
