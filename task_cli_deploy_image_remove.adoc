@@ -4,7 +4,6 @@ permalink: task_cli_deploy_image_remove.html
 keywords: administer, administering, cli, deploy, ontap select image, remove
 summary: You can remove ONTAP Select images from your instance of the Deploy administration utility when they are no longer needed.
 ---
-
 = Remove an ONTAP Select image from Deploy
 :hardbreaks:
 :nofooter:
@@ -28,17 +27,26 @@ You can remove older ONTAP Select images that are not currently in use by a clus
 
 . Display the clusters managed by Deploy and record the ONTAP images in use:
 +
-`cluster show`
+[source,cli]
+----
+cluster show
+----
 +
 Note the version number and hypervisor platform in each case.
 
 . Start the Bash shell:
 +
-`shell bash`
+[source,cli]
+----
+shell bash
+----
 
 . Display all of the available ONTAP Select images:
 +
-`ls -lh /opt/netapp/images`
+[source,cli]
+----
+ls -lh /opt/netapp/images
+----
 
 . Optionally remove the ONTAP Select image with your hypervisor host.
 +
