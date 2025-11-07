@@ -1,0 +1,4 @@
+---
+permalink: task_cli_upgrade_esxi65.html
+redirect: ontap-select/cli-upgrade-esxi.html
+---
