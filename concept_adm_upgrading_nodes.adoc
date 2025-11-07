@@ -41,7 +41,7 @@ ONTAP Select 9.16.1 is initially installed::
 You can upgrade the node to version 9.17.1 and then revert back to version 9.16.1 if needed.
 
 ONTAP Select 9.17.1 is initially installed::
-Reversion not possible as there was no earlier version previously installed.
+Reversion is not possible because there was no earlier version previously installed.
 
 == Use the VMXNET3 network driver
 

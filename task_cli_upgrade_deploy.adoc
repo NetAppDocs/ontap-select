@@ -57,9 +57,7 @@ This task describes one method for uploading the file to the ONTAP Select Deploy
 
 .Steps
 
-. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine.
-+
-.Example
+. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine, as shown in the following example:
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -83,9 +81,11 @@ After you upload the upgrade file to the ONTAP Select Deploy virtual machine, yo
 . Sign in to the ONTAP Select Deploy utility CLI using SSH with the administrator account.
 . Perform the upgrade using the appropriate directory path and file name:
 +
-`deploy upgrade -package-path FILEPATH`
-+
-.Example
+[source,cli]
+----
+deploy upgrade -package-path <file_path>
+----
+Example command:
 +
 ....
 deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
