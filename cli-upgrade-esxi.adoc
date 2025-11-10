@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: cli-upgrade-esxi.html
-keywords: administer, administering, cli, esxi, upgrade, esxi 6.5
+keywords: administer, administering, cli, esxi, upgrade, esxi 8.0
 summary: If you are running ONTAP Select on VMware ESXi, you can upgrade the ESXi software from an earlier supported version to ESXi 8.0 or later. Before upgrading, you should understand the process and select the appropriate upgrade procedure.
 ---
 = Upgrade to VMware ESXi 8.0 or later for ONTAP Select
@@ -30,7 +30,7 @@ Several upgrade procedures are available. You should select the applicable proce
 * ONTAP Select cluster size
 +
 Both single-node and multi-node clusters are supported.
-
++
 * Use of ONTAP Select Deploy
 +
 Upgrade is possible both with and without the Deploy utility.
@@ -61,7 +61,7 @@ You can use the Deploy administration utility as part of the procedure to upgrad
 +
 [source,cli]
 ----
-node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
+node stop --cluster-name <cluster_name> --node-name <node_name>
 ----
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 8.0 or later using the procedure provided by VMware.
 
@@ -69,8 +69,9 @@ node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>`
 +
 [source,cli]
 ----
-node start --cluster-name <CLUSTERNAME> --node-name <NODENAME>
+node start --cluster-name <cluster_name> --node-name <node_name>
 ----
+
 . After the node comes up, verify that the cluster is healthy.
 +
 Example:
@@ -96,22 +97,23 @@ You must perform this upgrade procedure for each of the nodes in the cluster, on
 
 . Sign in to the Deploy utility CLI using SSH with the administrator account.
 
-. Move the node to the offline state.
+. Move the node to the offline state:
 +
 [source,cli]
 ----
-node stop --cluster-name <CLUSTERNAME> --node-name <NODENAME>
+node stop --cluster-name <cluster_name> --node-name <node_name>
 ----
 . Upgrade the hypervisor host where ONTAP Select is running to ESXi 8.0 or later using the procedure provided by VMware.
 +
 Refer to Preparing to upgrade VMware ESXi for more information.
 
-. Move the node to the online state.
+. Move the node to the online state:
 +
 [source,cli]
 ----
-node start --cluster-name <CLUSTERNAME> --node-name <NODENAME>
+node start --cluster-name <cluster_name> --node-name <node_name>
 ----
+
 . After the node comes up, verify that storage failover is enabled and the cluster is healthy.
 +
 .Show example

@@ -33,7 +33,7 @@ To begin the process of adding an ONTAP Select image to an instance of the Deplo
 
 . Select *Find your product*.
 
-. Scroll down and select *ONTAP Select*.
+. Scroll down and click *ONTAP Select*.
 
 . Under *Other Available Select Software* select *Deploy Upgrade, Node Upgrade, Image Install*.
 
