@@ -21,7 +21,7 @@ A large portion of the SDS market is built on the notion of shared-nothing stora
 [NOTE]
 In an ONTAP Select cluster, synchronous replication functionality is a function of HA implementation, not a replacement for the asynchronous SnapMirror or SnapVault replication engines. Synchronous replication cannot be used independently from HA.
 
-There are two ONTAP Select HA deployment models: the multinode clusters (four, six, or eight nodes) and the two-node clusters. The salient feature of a two-node ONTAP Select cluster is the use of an external mediator service to resolve split-brain scenarios. The ONTAP Deploy VM serves as the default mediator for all the two-node HA pairs that it configures.
+There are two ONTAP Select HA deployment models: the multinode clusters (four, six, eight, ten, or twelve nodes) and the two-node clusters. The salient feature of a two-node ONTAP Select cluster is the use of an external mediator service to resolve split-brain scenarios. The ONTAP Deploy VM serves as the default mediator for all the two-node HA pairs that it configures.
 
 The two architectures are represented in the following figures.
 
@@ -36,7 +36,7 @@ The two-node ONTAP Select cluster is composed of one HA pair and a mediator. Wit
 image:DDHA_02.jpg[Four-node ONTAP Select cluster using local-attached storage]
 
 [NOTE]
-* The four-node ONTAP Select cluster is composed of two HA pairs. Six-node and eight-node clusters are composed of three and four HA pairs, respectively. Within each HA pair, data aggregates on each cluster node are synchronously mirrored, and, in the event of a failover, there is no loss of data.
+* The four-node ONTAP Select cluster is composed of two HA pairs. Six-node, eight-node, ten-node, and twelve-node clusters are composed of three, four, five, and six HA pairs, respectively. Within each HA pair, data aggregates on each cluster node are synchronously mirrored, and, in the event of a failover, there is no loss of data.
 * Only one ONTAP Select instance can be present on a physical server when using DAS storage. ONTAP Select requires unshared access to the local RAID controller of the system and is designed to manage the locally attached disks, which would be impossible without physical connectivity to the storage.
 
 == Two-node HA versus multi-node HA
