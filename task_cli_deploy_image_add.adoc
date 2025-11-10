@@ -85,6 +85,7 @@ You must know which directory the install image file has been placed in at the D
 . Sign in to the Deploy utility CLI using SSH with the administrator (admin) account.
 
 . Start the Bash shell:
++
 [source,cli]
 ----
 shell bash
