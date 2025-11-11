@@ -14,7 +14,7 @@ summary: You must prepare the environment before running the sample Python scrip
 [.lead]
 You must prepare the environment before running the sample Python scripts.
 
-Before you run the Python scripts, you must make sure the environment is configured properly:
+Before you run the Python scripts, you must make sure the environment is configured correctly:
 
 * The latest applicable version of Python2 must be installed.
 The sample codes have been tested using Python2. They should also be portable to Python3, but have not been tested for compatibility.

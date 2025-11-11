@@ -30,7 +30,7 @@ link:task_install_deploy.html[Learn about installing the ONTAP Select Deploy uti
 
 . Verify that you can restore a backup of the Deploy configuration data, depending on the recovery procedure used.
 +
-link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Learn about restoring the Deploy configuration data to the new virtual machine]
+link:task_cli_migrate_deploy.html#step-3-restore-the-deploy-configuration-data-to-the-new-virtual-machine[Learn about restoring the Deploy configuration data to the new virtual machine]
 
 . You have the IP address of the original Deploy utility virtual machine that failed.
 
