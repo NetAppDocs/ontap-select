@@ -21,7 +21,7 @@ A large portion of the SDS market is built on the notion of shared-nothing stora
 [NOTE]
 In an ONTAP Select cluster, synchronous replication functionality is a function of HA implementation, not a replacement for the asynchronous SnapMirror or SnapVault replication engines. Synchronous replication cannot be used independently from HA.
 
-There are two ONTAP Select HA deployment models: the multinode clusters (four, six, eight, ten, or twelve nodes) and the two-node clusters. The salient feature of a two-node ONTAP Select cluster is the use of an external mediator service to resolve split-brain scenarios. The ONTAP Deploy VM serves as the default mediator for all the two-node HA pairs that it configures.
+There are two ONTAP Select HA deployment models: the multinode clusters (four, six, eight, ten, or twelve nodes) and the two-node clusters. The salient feature of a two-node ONTAP Select cluster is the use of an external mediator service to resolve split-brain scenarios. The ONTAP Deploy VM serves as the default mediator for all of the two-node HA pairs that it configures.
 
 The two architectures are represented in the following figures.
 
