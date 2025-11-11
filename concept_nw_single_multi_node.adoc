@@ -118,7 +118,7 @@ ONTAP ports e0c and e0d are delegated as home ports for cluster interfaces. With
 [NOTE]
 These interfaces cannot be assigned static IP addresses, and additional cluster interfaces should not be created.
 
-Cluster network traffic must flow through a low-latency, nonrouted layer-2 network. Due to cluster throughput and latency requirements, the ONTAP Select cluster is expected to be physically located within proximity (for example, multipack, single data center). Building four, six, eight, ten, or twelve-node stretch cluster configurations by separating HA nodes across a WAN or across significant geographical distances is not supported. A stretched two-node configuration with a mediator is supported.
+Cluster network traffic must flow through a low-latency, non-routed layer-2 network. Due to cluster throughput and latency requirements, the ONTAP Select cluster is expected to be physically located within proximity (for example, multipack, single data center). Building four, six, eight, ten, or twelve-node stretch cluster configurations by separating HA nodes across a WAN or across significant geographical distances is not supported. A stretched two-node configuration with a mediator is supported.
 
 For details, see the section link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices].
 
