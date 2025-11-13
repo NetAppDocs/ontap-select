@@ -23,7 +23,7 @@ Make sure that ONTAP Select Deploy is not used to perform any other tasks during
 If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
 
 
-You can upgrade directly to ONTAP Select Deploy 9.17.1 from ONTAP Select Deploy 9.16.1 or 9.15.1. To upgrade from ONTAP Select Deploy 9.14.1 or earlier, review the release notes for your ONTAP Select version.
+You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from ONTAP Select Deploy 9.15.1 or earlier, review the release notes for your ONTAP Select version.
 ====
 
 == Step 1: Download the package
@@ -85,6 +85,7 @@ After you upload the upgrade file to the ONTAP Select Deploy virtual machine, yo
 ----
 deploy upgrade -package-path <file_path>
 ----
++
 Example command:
 +
 ....

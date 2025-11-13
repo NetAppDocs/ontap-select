@@ -38,7 +38,6 @@ The backup file you create captures all the configuration data from the virtual 
 ----
 deploy backup create
 ----
-
 . Provide a password for the backup when prompted.
 +
 The backup file is encrypted based on the password.
@@ -103,7 +102,7 @@ exit
 deploy backup restore -path <path_name> -filename <file_name>
 ----
 +
-Example command
+Example command:
 +
 `deploy backup restore -path /home/admin -filename deploy_backup_20180601162151.tar.gz`
 
