@@ -88,7 +88,7 @@ An ONTAP Select cluster with one or more nodes is created for a production deplo
 
 .Steps
 
-The steps you follow depend on whether you want to create a single-node cluster or a multi-node cluster. A multi-node cluster can have two, four, six, or eight nodes. 
+The steps you follow depend on whether you want to create a single-node cluster or a multi-node cluster. A multi-node cluster can have two, four, six, eight, ten, or twelve nodes. 
 
 [role="tabbed-block"]
 ====

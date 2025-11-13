@@ -40,7 +40,6 @@ Note the version number and hypervisor platform in each case.
 ----
 shell bash
 ----
-
 . Display all of the available ONTAP Select images:
 +
 [source,cli]
