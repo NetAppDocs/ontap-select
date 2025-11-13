@@ -15,9 +15,30 @@ summary: The current release includes several new features or improvements speci
 [.lead]
 Learn about the new features and enhancements in supported versions of ONTAP Select.
 
-== ONTAP Select 9.17.1
+== ONTAP Select 9.18.1
 
-ONTAP Select 9.17.1 includes several new features and improvements.
+Enhanced support for cluster expansion and contraction::
+Beginning with ONTAP Select 9.18.1, cluster expansion and contraction is supported between four-node and twelve-node ONTAP Select clusters on ESXi and KVM hypervisor hosts.
++
+--
+You can increase the cluster size for an existing cluster on an ESXi or KVM host in the following increments:
+
+* From four nodes to six, eight, ten, or twelve nodes
+* From six nodes to eight, ten, or twelve nodes
+* From eight nodes to ten or twelve nodes
+* From ten to twelve nodes 
+
+You can decrease the cluster size for an existing cluster on an ESXi or KVM host in the following increments:
+
+* From twelve nodes to ten, eight, six, or four nodes
+* From ten nodes to eight, six, or four nodes
+* From eight to six or four nodes
+* From six to four nodes
+--
++
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+
+== ONTAP Select 9.17.1
 
 Software RAID support for locally attached NVMe disks on KVM hosts::
 ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a Kernel-Based Virtual Machine (KVM) hypervisor host. 
@@ -38,7 +59,7 @@ You can use the cluster expansion and contraction feature on an existing ONTAP S
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
 Enhanced support for cluster expansion and contraction on ESXi hosts::
-Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported for between six-node and twelve-node clusters on ESXi hosts:
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported between six-node and twelve-node clusters on ESXi hosts:
 +
 --
 You can increase the cluster size for an existing ESXi cluster in the following increments:
@@ -92,8 +113,6 @@ ONTAP Select 9.17.1 includes support for VMware ESXi 9.0.
 
 == ONTAP Select 9.16.1
 
-ONTAP Select 9.16.1 includes several new features and improvements.
-
 Updated NetApp License File support::
 Beginning with ONTAP Select 9.16.1, the NetApp License File (NLF) support is updated. The new NLF format includes licenses for the ARP, ONTAP S3, and S3 SnapMirror features. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn more].
 +
@@ -111,8 +130,6 @@ Updated KVM hypervisor support::
 Beginning with ONTAP Select 9.16.1, KVM hypervisor is supported on RHEL 9.5 and Rocky Linux 9.5.
 
 == ONTAP Select 9.15.1
-
-ONTAP Select 9.15.1 includes several new features and improvements.
 
 Updated KVM hypervisor support::
 
@@ -134,8 +151,6 @@ NOTE: Support for cluster expansion and contraction is limited to ESX clusters o
 
 == ONTAP Select 9.14.1
 
-ONTAP Select 9.14.1 includes several new features and improvements. 
-
 Support for KVM hypervisor::
 Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
 
@@ -149,8 +164,6 @@ Enhanced VMware ESXi support::
 ONTAP Select 9.14.1 includes support for VMware ESXi 8.0 U2.
 
 == ONTAP Select 9.13.1
-
-ONTAP Select 9.13.1 includes several new features and improvements. 
 
 Support for NVMe over TCP::
 
@@ -170,8 +183,6 @@ ONTAP Select 9.12.1 benefits from most of the new developments in the current re
 As of April 2024, ONTAP Select Deploy 9.12.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.12.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
 
 == ONTAP Select 9.11.1
-
-ONTAP Select 9.11.1 includes several new features and improvements. 
 
 Enhanced VMware ESXi support::
 
@@ -195,8 +206,6 @@ NetApp strongly recommends that customers plan and execute a full data migration
 
 == ONTAP Select 9.10.1
 
-ONTAP Select 9.10.1 includes several new features and improvements.
-
 Support for VMware NSX-T::
 
 ONTAP Select 9.10.1 has been qualified for VMware NSX-T version 3.1.2. There are no functional issues or deficiencies when using NSX-T with an ONTAP Select single-node cluster deployed with an OVA file and the ONTAP Select Deploy administration utility. However, when using NSX-T with an ONTAP Select multi-node cluster, you should note the following requirements and limitations:
@@ -219,8 +228,6 @@ Beginning with ONTAP Select 9.10.1 you can no longer deploy a new cluster on the
 
 == ONTAP Select 9.9.1
 
-ONTAP Select 9.9.1 includes several new features and improvements.
-
 Processor family support::
 
 Beginning with ONTAP Select 9.9.1, only CPU models from Intel Xeon Sandy Bridge or later are supported for ONTAP Select.
@@ -233,8 +240,6 @@ Support for VMware ESXi has been enhanced with ONTAP Select 9.9.1. The following
 * ESXi 7.0 U1
 
 == ONTAP Select 9.8
-
-There are several new and changed features included in ONTAP Select 9.8.
 
 High speed interface::
 

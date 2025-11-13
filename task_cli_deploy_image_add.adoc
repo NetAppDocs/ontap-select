@@ -33,13 +33,13 @@ To begin the process of adding an ONTAP Select image to an instance of the Deplo
 
 . Select *Find your product*.
 
-. Scroll down and select *ONTAP Select*.
+. Scroll down and click *ONTAP Select*.
 
 . Under *Other Available Select Software* select *Deploy Upgrade, Node Upgrade, Image Install*.
 
 . Select the desired release of the upgrade package.
 
-. Review the End User License Agreement (EULA) and click *Accept & Continue*.
+. Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
@@ -94,7 +94,6 @@ shell bash
 . Place the install image file into the images directory, as shown in the following example:
 +
 `tar -xf image_v_93_install_esx.tgz -C /opt/netapp/images/`
-
 
 == Step 4: Display the available install images
 

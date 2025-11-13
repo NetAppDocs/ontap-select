@@ -23,8 +23,8 @@ Configure the ESXi or KVM host to recognize the drives.
 
 Make sure your deployment environment meets the following minimum requirements:
 
-* For an ESX host, ONTAP Select with a supported Deploy administration utility
-* For a KVM host, ONTAP Select 9.17.1 with a supported Deploy administration utility
+* For an ESX host, ONTAP Select 9.7 or later with a supported Deploy administration utility
+* For a KVM host, ONTAP Select 9.17.1 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * The ESXi or KVM host is running a supported hypervisor version:
 +
@@ -40,7 +40,6 @@ ESXi is supported on the following hypervisor versions:
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 GA (build 20513097)
-* VMware ESXi 7.0 GA (build 15843807 or greater), including 7.0 U1, U2, and U3C
 --
 
 .KVM

@@ -51,7 +51,7 @@ You should be familiar with networking concepts and the configuration of network
 There are several planning issues related to the cluster size that you should consider.
 
 Number of nodes in the cluster::
-An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. You should determine the size of the cluster based on the application requirements. For example, if HA capability is needed for an enterprise deployment, then a multi-node cluster should be used.
+An ONTAP Select cluster is composed of one, two, four, six, eight, ten, or twelve nodes. You should determine the size of the cluster based on the application requirements. For example, if HA capability is needed for an enterprise deployment, then a multi-node cluster should be used.
 
 Dedicated versus collocated::
 Based on the application type, you should determine if the deployment follows the dedicated or collocated model. Note that the collocated model can be more complex due to the workload diversity and tighter integration.
