@@ -55,10 +55,10 @@ ONTAP Select receives no performance benefits by increasing the number of LUNs w
 
 === VMware ESXi hosts
 
-NetApp recommends using ESX 6.5 U2 or later and an NVMe disk for the datastore hosting the system disks. This configuration provides the best performance for the NVRAM partition.
+NetApp recommends using ESX 8.0 or later and an NVMe disk for the datastore hosting the system disks. This configuration provides the best performance for the NVRAM partition.
 
 [NOTE]
-When installing on ESX 6.5 U2 and higher, ONTAP Select uses the vNVMEe driver regardless of whether the system disk resides on an SSD or on an NVMe disk. This sets the VM hardware level to 13, which is compatible with ESX 6.5 and later.
+When installing on ESX 8.0 or later, ONTAP Select uses the vNVMEe driver regardless of whether the system disk resides on an SSD or on an NVMe disk. This sets the VM hardware level to 13, which is compatible with ESX 8.0 and later.
 
 Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage (VMware vSAN and generic storage array traffic when using iSCSI or NFS).
 
@@ -110,9 +110,9 @@ You should consider the following best practices for high availability.
 
 === Deploy backups
 
-It is a best practice to back up the Deploy configuration data on a regular basis, including after creating a cluster. This becomes particularly important with two-node clusters, because the mediator configuration data is included with the backup.
+It is a best practice to regularly back up the Deploy configuration data, including after creating a cluster. This becomes particularly important with two-node clusters, because the mediator configuration data is included with the backup.
 
-After creating or deploying a cluster, you should back up the ONTAP Select Deploy configuration data.
+After creating or deploying a cluster, you should link:task_cli_clusters.html[back up the ONTAP Select Deploy configuration data].
 
 === Mirrored aggregates
 

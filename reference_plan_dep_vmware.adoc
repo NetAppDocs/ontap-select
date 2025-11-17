@@ -98,13 +98,15 @@ The following lists the specific privileges for the vSphere content library that
 * Create local library
 * Delete library item
 * Delete local library
+* Download files
 * Read storage
 * Update files
 * Update library
 * Update library item
 * Update local library
+* View configuration settings
 
-
+// 2025 OCT 30, ONTAPDOC-3457 9.18.1RC
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 Aug 26, ONTAPDOC-3140
 // 2023-SEP-26, ONTAPDOC-1204

@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
-summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an existing cluster from six to eight nodes and decrease the cluster size from eight to six nodes.
+summary: Beginning with ONTAP Select 9.15.1, you can increase or decrease the size of an existing cluster.
 ---
-= Expand or contract an ONTAP Select ESXi or KVM cluster
+= Expand or contract an ONTAP Select cluster on ESXi or KVM host
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,12 +12,12 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase the size of an exi
 :imagesdir: ./media/
 
 [.lead]
-You can increase the cluster size of an existing ONTAP Select cluster for ESXi and KVM hypervisor hosts. For KVM hosts, you can increase the cluster size from six to eight nodes and decrease the size from eight to six nodes. For ESXi hosts, you increase and decrease the cluster size in increments between six and twelve nodes. 
+Increase or decrease the cluster size of an existing ONTAP Select cluster for ESXi and KVM hypervisor hosts. For both host types, you can increase and decrease the cluster size in increments between four and twelve nodes.
 
 The following cluster expansions and contractions aren't supported for ESXi and KVM hosts:
 
-* Expansions from one, two, or four-node clusters to six or eight-node clusters.
-* Contractions from six or eight-node clusters to one, two, or four-node clusters.
+* Expansions from one or two-node clusters to six, eight, ten, or twelve-node clusters.
+* Contractions from six, eight, ten, or twelve-node clusters to one or two-node clusters.
 
 [NOTE]
 ====
@@ -40,12 +40,11 @@ Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is support
 
 Cluster expansion and contraction is supported for the following ESXi hypervisor versions:
 
+* ESXi 9.0
 * ESXi 8.0 U3
 * ESXi 8.0 U2 
 * ESXi 8.0 U1
 * ESXi 8.0 GA 
-* ESXi 7.0 U3
-* ESXi 7.0
 --
 .KVM
 --
@@ -60,23 +59,14 @@ Cluster expansion and contraction is supported for the following KVM hypervisor 
 ====
 
 == Expand the cluster
-Use the cluster expansion feature to increase the size of an existing ESXi or KVM cluster.
+Use the cluster expansion feature to increase the size of an existing ONTAP Select cluster.
 
-[role="tabbed-block"]
-====
-.ESXi
---
-You can increase the size of an existing ESXi cluster in the following increments:
+You can increase the size of an existing cluster on an ESXi or KVM host in the following increments:
 
+* From four nodes to six, eight, ten, or twelve nodes
 * From six nodes to eight, ten, or twelve nodes
 * From eight nodes to ten or twelve nodes
-* From ten to twelve nodes 
---
-.KVM
---
-You can increase the size of an existing KVM cluster from six to eight nodes.
---
-====
+* From ten to twelve nodes
 
 .About this task
 In preparation for cluster expansion, new ESXi and KVM hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
@@ -121,26 +111,17 @@ It can take up to 45 minutes for the cluster to be expanded.
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
 .After you finish
-After expanding the cluster, you should back up the ONTAP Select Deploy configuration data.
+After expanding the cluster, you should link:task_cli_clusters.html[back up the ONTAP Select Deploy configuration data].
 
 == Contract the cluster
-Use the cluster contraction feature to decrease the size of an existing ESXi or KVM cluster.
+Use the cluster contraction feature to decrease the size of an existing ONTAP Select cluster.
 
-[role="tabbed-block"]
-====
-.ESXi
---
-You can decrease the size of an existing ESXi cluster in the following increments:
+You can decrease the size of an existing cluster on an ESXi or KVM host in the following increments:
 
-* From twelve nodes to ten, eight, or six nodes 
-* From ten nodes to eight or six nodes
-* From eight to six nodes 
---
-.KVM
---
-You can decrease the size of an existing cluster from eight to six nodes.
---
-====
+* From twelve nodes to ten, eight, six, or four nodes
+* From ten nodes to eight, six, or four nodes
+* From eight to six or four nodes
+* From six to four nodes
 
 .About this task
 The desired HA pair of nodes in the cluster are selected to prepare for cluster contraction during the procedure.
@@ -161,6 +142,7 @@ It can take up to 30 minutes for the cluster to be contracted.
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
 
+// 2025 OCT 10, ONAPDOC-3333
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 AUG 19, ONTAPDOC-3002
 // 2025 JUN 20, ONTAPDOC-2886

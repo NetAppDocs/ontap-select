@@ -9,19 +9,19 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
-    - version-number: "9.17.1"
+    - version-number: "9.18.1"
       url: /ontap-select
+    - version-number: "9.17.1"
+      url: /ontap-select-9171
     - version-number: "9.16.1"
       url: /ontap-select-9161
     - version-number: "9.15.1"
       url: /ontap-select-9151 
     - version-number: "9.14.1"
-      url: /ontap-select-9141
-    - version-number: "9.13.1"
-      url: /ontap-select-9131                    
+      url: /ontap-select-9141                    
 sidebar:
   entries:
-    - title: ONTAP Select 9.17.1 docs
+    - title: ONTAP Select 9.18.1 docs
       url: /index.html
     - title: Release Notes
       entries:
@@ -229,8 +229,8 @@ sidebar:
               url: /concept_api_rest.html
             - title: Access the Deploy API
               url: /concept_api_how_access.html
-            - title: Deploy API versioning
-              url: /concept_api_versions.html
+          # - title: Deploy API versioning
+          #   url: /concept_api_versions.html
             - title: Basic operation
               url: /concept_api_operation.html
             - title: Request and response transaction
@@ -287,8 +287,8 @@ sidebar:
           url: /task_cli_clusters.html
         - title: Nodes and hosts
           entries:
-            - title: Upgrade ESXi to 6.5 and higher
-              url: /task_cli_upgrade_esxi65.html
+            - title: Upgrade ESXi
+              url: /cli-upgrade-esxi.html
             - title: Modify a host management server
               url: /reference_host_modify_command.html
         - title: Deploy utility

@@ -68,7 +68,9 @@ All privileges in the category.
 
 All privileges in the category.
 
+.Related information
 
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html#ontap-select-deploy-vmware-vcenter-server-considerations[Learn about VMware vSphere privileges for vSAN ESA in vCenter]
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 Aug 26, ONTAPDOC-3140
 // 2023-10-02, ONTAPDOC-1204

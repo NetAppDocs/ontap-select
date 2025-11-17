@@ -5,7 +5,7 @@ keywords: administer, administering, cli, two node cluster, recover, recovering
 summary: If the ONTAP Select Deploy utility fails or becomes unavailable for some reason, you lose the ability to administer ONTAP Select nodes and clusters. In addition, all two-node clusters lose HA capability because the mediator service included with Deploy is unavailable. If an unrecoverable failure occurs, you must recover the Deploy utility instance to restore administrative and HA functionality.
 ---
 = Recover the ONTAP Select Deploy utility for a two-node cluster
-:hardbreaks:
+:hardbreaks:reints
 :nofooter:
 :icons: font
 :linkattrs:
@@ -14,62 +14,52 @@ summary: If the ONTAP Select Deploy utility fails or becomes unavailable for som
 [.lead]
 If the ONTAP Select Deploy utility fails or becomes unavailable for some reason, you lose the ability to administer ONTAP Select nodes and clusters. In addition, all two-node clusters lose HA capability because the mediator service included with Deploy is unavailable. If an unrecoverable failure occurs, you must recover the Deploy utility instance to restore administrative and HA functionality.
 
-== Before you begin
+== Prepare to recover the Deploy utility
 
-You should prepare before attempting to recover an instance of the Deploy utility to assure success.
+You need to prepare before attempting to recover an instance of the Deploy utility to ensure success. You must be familiar with several administrative procedures and have the required information.
 
-.Required skills and information
+.Steps
 
-You should be familiar with several administrative procedures and have the required information.
+. Verify that you can install a new instance of the ONTAP Select Deploy utility in your hypervisor environment.
++
+link:task_install_deploy.html[Learn about installing the ONTAP Select Deploy utility]
 
-.Installing the Deploy virtual machine
+. Verify that you can log in to the ONTAP Select cluster and access the ONTAP cluster shell (CLI).
 
-You must be able to install a new instance of the ONTAP Select Deploy utility in your hypervisor environment.
+. Determine if you have a backup of the configuration data from the failed Deploy utility instance that contains the ONTAP Select two-node cluster. You might have a backup that does not contain the cluster.
 
-.ONTAP command line interface
+. Verify that you can restore a backup of the Deploy configuration data, depending on the recovery procedure used.
++
+link:task_cli_migrate_deploy.html#step-3-restore-the-deploy-configuration-data-to-the-new-virtual-machine[Learn about restoring the Deploy configuration data to the new virtual machine]
 
-You must be able to sign in to the ONTAP CLI of the ONTAP Select cluster and use the shell interface.
+. You have the IP address of the original Deploy utility virtual machine that failed.
 
-.Availability of Deploy utility configuration backup
+. Determine whether Capacity Pools or Capacity Tiers licensing is used. If you use Capacity Pools licensing, you must reinstall each Capacity Pool license after recovering or restoring the Deploy instance.
 
-You must determine if you have a backup of the configuration data from the failed Deploy utility instance that contains the ONTAP Select two-node cluster. You might have a backup that does not contain the cluster.
-
-.Restoring a backup of the Deploy configuration
-
-You should be able to restore a backup of the Deploy configuration data, depending on the recovery procedure used.
-
-.IP address of the original Deploy virtual machine
-
-You must know the IP address of the original Deploy utility virtual machine that failed.
-
-.Storage capacity licensing
-
-You must determine whether Capacity Pools or Capacity Tiers licensing is used. If you use Capacity Pools licensing, you must reinstall each Capacity Pool license after recovering or restoring the Deploy instance.
-
-.Deciding which recovery procedure to use
-You must decided which procedure to use when recovering an instance of the ONTAP Select Deploy utility. Your decision is based on whether or not you have a backup of the configuration data from the original failed Deploy utility that contains the ONTAP Select two-node cluster.
-
+. Decide which procedure to use when recovering an instance of the ONTAP Select Deploy utility. Your decision is based on whether or not you have a backup of the configuration data from the original failed Deploy utility that contains the ONTAP Select two-node cluster.
++
 [cols="35,65"*,options="header"]
 |===
 
 |Do you have a Deploy backup containing the two-node cluster?
-|Recovery procedure to use
+|Use the recovery procedure...
 
 |Yes
-|Restore a Deploy utility instance using a configuration backup
+|<<restore-deploy-backup,Restore a Deploy utility instance using a configuration backup>>
 
 |No
-|Reconfigure and recover a Deploy utility instance
+|<<restore-and-recover-deploy,Reconfigure and recover a Deploy utility instance>>
 
 |===
 
+[[restore-deploy-backup]]
 == Restore a Deploy utility instance using a configuration backup
 
 If you have a backup of the failed Deploy utility instance containing the two-node cluster, you can restore the configuration data to the new Deploy virtual machine instance. You must then complete the recovery by performing additional configuration of the two nodes in the ONTAP Select cluster.
 
 .Before you begin
 
-You must have a backup of the configuration data from the original failed Deploy virtual machine that contains the two-node cluster. You must be able to sign in to the ONTAP CLI of the two-node cluster and know the ONTAP names of the two nodes.
+Backup the configuration data from the original failed Deploy virtual machine that contains the two-node cluster. You must be able to sign in to the ONTAP CLI of the two-node cluster and know the ONTAP names of the two nodes.
 
 .About this task
 
@@ -87,17 +77,27 @@ Refer to the related tasks for more detailed information about the install and r
 
 . Enter advanced privilege mode:
 +
-`set adv`
+[source,cli]
+----
+set adv
+----
 
-. If the IP address of the new Deploy virtual machine is different than the original Deploy virtual machine, you must remove the old mediator iSCSI targets and add new targets:
+. If the IP address of the new Deploy virtual machine is different than the original Deploy virtual machine, remove the old mediator iSCSI targets and add new targets:
 +
-....
+[source,cli]
+----
 storage iscsi-initiator remove-target -node * -target-type mailbox
-
+----
++
+[source,cli]
+----
 storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
-
+----
++
+[source,cli]
+----
 storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
-....
+----
 +
 The `<ip_address>` parameter is the IP address of the new Deploy virtual machine.
 +
@@ -105,29 +105,38 @@ These commands allow the ONTAP Select nodes to discover the mailbox disks on the
 
 . Determine the names of the mediator disks:
 +
-`disk show -container-type mediator`
+[source,cli]
+----
+disk show -container-type mediator
+----
 
 . Assign the mailbox disks to the two nodes:
 +
-....
+[source,cli]
+----
 disk assign -disk <mediator-disk1-name> -owner <node1-name>
+
 disk assign -disk <mediator-disk2-name> -owner <node2-name>
-....
+----
 
 . Verify that storage failover is enabled:
 +
-`storage failover show`
+[source,cli]
+----
+storage failover show
+----
 
 .After you finish
 
-If you use Capacity Pools licensing, you must reinstall each Capacity Pool license. See _Reinstalling a Capacity Pool license_ for additional details.
+If you use Capacity Pools licensing, reinstall each Capacity Pool license. See link:task_adm_licenses.html#reinstall-a-capacity-pool-license[Reinstall a Capacity Pool license] for additional details.
 
+[[restore-and-recover-deploy]]
 == Reconfigure and recover a Deploy utility instance
 
-If you do not have a backup of the failed Deploy utility instance containing the two-node cluster, you must configure the mediator iSCSI target and mailbox in the new Deploy virtual machine. You must then complete the recovery by performing additional configuration of the two nodes in the ONTAP Select cluster.
+If you do not have a backup of the failed Deploy utility instance containing the two-node cluster, configure the mediator iSCSI target and mailbox in the new Deploy virtual machine. You then complete the recovery by performing additional configuration of the two nodes in the ONTAP Select cluster.
 
 .Before you begin
-You must have the name of the mediator target for the new Deploy utility instance. You must be able to sign in to the ONTAP CLI of the two-node cluster and know the ONTAP names of the two nodes.
+Verify that you have the name of the mediator target for the new Deploy utility instance. You must be able to sign in to the ONTAP CLI of the two-node cluster and know the ONTAP names of the two nodes.
 
 .About this task
 You can optionally restore a configuration backup to the new Deploy virtual machine even though it does not contain the two-node cluster. Because the two-node cluster is not recreated with the restore, you must manually add the mediator iSCSI target and mailbox to the new Deploy utility instance through the ONTAP Select online documentation web page at the Deploy. You must be able to sign in to the two-node cluster and know the ONTAP names of the two nodes.
@@ -147,71 +156,82 @@ If you restore a previous backup, the new Deploy instance will not contain the t
 
 . Enter advanced privileged mode:
 +
-`set adv`
-
+[source,cli]
+----
+set adv
+----
 . Get the mediator iSCSI target name:
 +
-`storage iscsi-initiator show -target-type mailbox`
-
+[source,cli]
+----
+storage iscsi-initiator show -target-type mailbox
+----
 . Access the online documentation web page at the new Deploy utility virtual machine and sign in using the admin account:
 +
 `\http://<ip_address>/api/ui`
 +
 You must use the IP address of your Deploy virtual machine.
 
-. Click *Mediator* and then *GET /mediators*.
+. Select *Mediator* and then *GET /mediators*.
 
-. Click *Try it out!* to display a list of mediators maintained by Deploy.
+. Select *Try it out!* to display a list of mediators maintained by Deploy.
 +
 Note the ID of the desired mediator instance.
 
-. Click *Mediator* and then *POST*.
+. Select *Mediator* and then *POST*.
 
 . Provide the value for mediator_id.
 
-. Click the *Model* next to `iscsi_target` and complete the name value.
+. Select the *Model* next to `iscsi_target` and complete the name value.
 +
 Use the target name for the iqn_name parameter.
 
-. Click *Try it out!* to create the mediator iSCSI target.
+. Select *Try it out!* to create the mediator iSCSI target.
 +
 If the request is successful, you will receive HTTP status code 200.
 
 . If the IP address of the new Deploy virtual machine is different than the original Deploy virtual machine, you must use the ONTAP CLI to remove the old mediator iSCSI targets and add new targets:
 +
-....
+[source,cli]
+----
 storage iscsi-initiator remove-target -node * -target-type mailbox
-
+----
++
+[source,cli]
+----
 storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
-
+----
++
+[source,cli]
+----
 storage iscsi-initiator add-target -node <node2_name> -label mediator-target-type mailbox -target-portal <ip_address> -target-name <target>
-....
+----
 +
 The `<ip_address>` parameter is the IP address of the new Deploy virtual machine.
-
++
 These commands allow the ONTAP Select nodes to discover the mailbox disks on the new Deploy utility virtual machine.
 
 . Determine the names of the mediator disks:
 +
-`disk show -container-type mediator`
-
+[source,cli]
+----
+disk show -container-type mediator`
+----
 . Assign the mailbox disks to the two nodes:
 +
-....
+[source,cli]
+----
 disk assign -disk <mediator-disk1-name> -owner <node1-name>
 
 disk assign -disk <mediator-disk2-name> -owner <node2-name>
-....
+----
 
 . Verify that storage failover is enabled:
 +
-`storage failover show`
+[source,cli]
+----
+storage failover show
+----
 
 .After you finish
-If you use Capacity Pools licensing, you must reinstall each Capacity Pool license. See Reinstalling a Capacity Pool license for additional details.
-
-.Related information
-
-* link:task_install_deploy.html[Install ONTAP Select Deploy]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine[Restore the Deploy configuration data to the new virtual machine]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license[Reinstall a Capacity Pool license]
+If you use Capacity Pools licensing, reinstall each Capacity Pool license. See link:task_adm_licenses.html#reinstall-a-capacity-pool-license[Reinstall a Capacity Pool license] for additional details.

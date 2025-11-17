@@ -23,7 +23,7 @@ Make sure that ONTAP Select Deploy is not used to perform any other tasks during
 If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
 
 
-You can upgrade ONTAP Select Deploy 9.17.1 from ONTAP Select Deploy 9.16.1 or 9.15.1. To upgrade from ONTAP Select Deploy 9.14.1 or earlier, review the release notes for your ONTAP Select version.
+You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from ONTAP Select Deploy 9.15.1 or earlier, review the release notes for your ONTAP Select version.
 ====
 
 == Step 1: Download the package
@@ -57,9 +57,7 @@ This task describes one method for uploading the file to the ONTAP Select Deploy
 
 .Steps
 
-. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine.
-+
-.Example
+. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine, as shown in the following example:
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -83,9 +81,12 @@ After you upload the upgrade file to the ONTAP Select Deploy virtual machine, yo
 . Sign in to the ONTAP Select Deploy utility CLI using SSH with the administrator account.
 . Perform the upgrade using the appropriate directory path and file name:
 +
-`deploy upgrade -package-path FILEPATH`
+[source,cli]
+----
+deploy upgrade -package-path <file_path>
+----
 +
-.Example
+Example command:
 +
 ....
 deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
