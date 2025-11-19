@@ -105,8 +105,6 @@ sidebar:
               url: /concept_lic_cp_compare_ct.html
             - title: Summary of benefits
               url: /concept_lic_cp_benefits.html
-        - title: Try ONTAP Select evaluation software
-          url: /access-evaluation-software.html
         - title: Purchase and ONTAP Select license 
           entries:
             - title: Licensing workflow
