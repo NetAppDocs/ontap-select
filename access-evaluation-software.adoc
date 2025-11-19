@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: access-evaluation-software.html
+keywords: ontap select, pre-installation checklist, esxi, host preparation
+summary: Prepare each ESXi hypervisor hosts where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
+---
+= Access ONTAP Select evaluation software
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can link:https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[access the ONTAP Select evaluation software^] if you are a current customer of ONTAP Select and you have an active entitlement or a NetApp Partner and would like to download a new Capacity Tiers evaluation license.
+
+If you are neither of the above and would like to try ONTAP Select for an evaluation, you can follow these steps to request access to download the evaluation software.
+
+.About this task
+This instruction is for NetApp sales, partners, and prospects engaged with NetApp.
+
+== Step 1: Register for an account
+Complete the NetApp account registration and request prospect access.
+
+.Steps
+. Register for an account on the link:https://mysupport.netapp.com/site/user/registration[NetApp Support site^] using your business email.
++
+NOTE: Free email accounts such as gmail or yahoo are not acceptable.
+
+.. Make sure you are not signed in with the newly created account.
+.. If you already have an account, make sure you are not signed in and proceed with the next step.
+. Create a non-technical support case to elevate access levels to "prospect." 
+.. Select "Report an Issue".
+.. Select "User Registration Issue" as the feedback category.
+.. Select "Create case" and in the comments section, write: "My account email address is <your-email-address>. I would like to get prospect access to download the ONTAP Select evaluation software."
++
+Mention the name of the NetApp internal person who suggested the request for prospect access.
+
+== Step 2: Download ONTAP Select
+After your support case has been reviewed and approved, NetApp support notifies you using the email for the account that has been granted prospect access.
+
+.Steps
+. Download the ONTAP Select evaluation software.
++
+The evaluation license file is located within the zip file. It is <insert text> once unzipped.
++
+The software download process involves trade compliance measures to adhere to legal requirements. To ensure compliance, you must create an account and open a support case before gaining access. This process helps NetApp maintain the correct control and documentation while providing prospects with the production-ready software they need.
++
+NetApp provides the "production-ready" version of ONTAP Select, which is not an open-source or alternative version. It is important to note that support is not provided unless you upgrade to a production license.
++
+NOTE: ONTAP Select Capacity Tiers evaluation licenses are limited to 90 days from when they are installed. They cannot be extended. At the end of the 90 days, the license stops functioning and the data associated with it is not accessible.
