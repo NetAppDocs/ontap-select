@@ -36,11 +36,11 @@ NOTE: Free email accounts such as gmail or yahoo are not acceptable.
 +
 Mention the name of the NetApp internal person who suggested the request for prospect access.
 
-== Step 2: Download ONTAP Select
+== Step 2: Download ONTAP Select evaluation software
 After your support case has been reviewed and approved, NetApp support notifies you using the email for the account that has been granted prospect access.
 
-.Steps
-. Download the ONTAP Select evaluation software.
+.Step
+. https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[Download the ONTAP Select evaluation software^].
 +
 The evaluation license file is located within the zip file. It is <insert text> once unzipped.
 +
@@ -49,3 +49,7 @@ The software download process involves trade compliance measures to adhere to le
 NetApp provides the "production-ready" version of ONTAP Select, which is not an open-source or alternative version. It is important to note that support is not provided unless you upgrade to a production license.
 +
 NOTE: ONTAP Select Capacity Tiers evaluation licenses are limited to 90 days from when they are installed. They cannot be extended. At the end of the 90 days, the license stops functioning and the data associated with it is not accessible.
+
+
+.Related information
+link:concept_lic_production.html[Learn about ONTAP Select production licenses]

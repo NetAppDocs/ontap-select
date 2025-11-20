@@ -10,8 +10,10 @@ indexpage:
           url: /reference_new_ots.html
         - title: Learn about ONTAP Select
           url: /concept_ots_overview.html
+        - title: Try ONTAP Select
+          url: /access-evaluation-software.html
         - title: Licensing
-          url: /concept_lic_production.html
+          url: /concept_lic_evaluation.html
         - title: FAQ
           url: /reference_faq.html 
     - title: Install and manage 
