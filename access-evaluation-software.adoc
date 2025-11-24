@@ -12,7 +12,7 @@ summary: Prepare each ESXi hypervisor hosts where an ONTAP Select node is deploy
 :imagesdir: ./media/
 
 [.lead]
-You can link:https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[access the ONTAP Select evaluation software^] if you are a current customer of ONTAP Select and you have an active entitlement or a NetApp Partner and would like to download a new Capacity Tiers evaluation license.
+You can access the link:https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[ONTAP Select evaluation software^] if you are a current customer of ONTAP Select and you have an active entitlement or a NetApp Partner and would like to download a new Capacity Tiers evaluation license.
 
 If you are neither of the above and would like to try ONTAP Select for an evaluation, you can follow these steps to request access to download the evaluation software.
 
