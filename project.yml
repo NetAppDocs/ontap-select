@@ -105,7 +105,7 @@ sidebar:
               url: /concept_lic_cp_compare_ct.html
             - title: Summary of benefits
               url: /concept_lic_cp_benefits.html
-        - title: Purchase and ONTAP Select license 
+        - title: Purchase
           entries:
             - title: Licensing workflow
               url: /concept_lic_workflow.html
