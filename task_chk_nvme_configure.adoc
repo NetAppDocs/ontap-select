@@ -29,7 +29,7 @@ Make sure your deployment environment meets the following minimum requirements:
 * The ESXi or KVM host is running a supported hypervisor version:
 +
 [role="tabbed-block"]
-====
+=====
 
 .ESXi
 --
@@ -46,11 +46,12 @@ ESXi is supported on the following hypervisor versions:
 --
 KVM is supported on the following hypervisor versions:
 
-* Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
---
+* Red Hat Enterprise Linux (RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 
-====
+include::./_include/rhel-and-rockylinux10-rl-support.adoc[]
+--
+=====
 
 * NVMe devices conforming to specification 1.0 or later
 
@@ -116,5 +117,5 @@ image:nvme_05.png[preparing local storage]
 
 image:nvme_06.png[ONTAP System Manager]
 
-
+// 2025 DEC 9. ONTAPDOC-3461
 // 2025 July 17, ONTAPDOC-2885 
