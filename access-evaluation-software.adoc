@@ -42,7 +42,7 @@ After your support case has been reviewed and approved, NetApp support notifies 
 .Step
 . https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[Download the ONTAP Select evaluation software^].
 +
-The evaluation license file is located within the zip file. It is <insert text> once unzipped.
+The evaluation license file is located within the zip file.
 
 . To comply with legal requirements, create an account and open a support case before gaining access. This helps NetApp maintain the correct control and documentation while providing prospects with the production-ready software they need.
 +
