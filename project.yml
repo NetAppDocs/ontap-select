@@ -88,7 +88,11 @@ sidebar:
         - title: Options
           entries:
             - title: Evaluation licenses
-              url: /concept_lic_evaluation.html
+              entries:
+              - title: Learn about evaluation licenses
+                url: /concept_lic_evaluation.html
+              - title: Try ONTAP Select
+                url: /access-evaluation-software.html
             - title: Production licenses
               url: /concept_lic_production.html
             - title: Platform license offerings
@@ -105,8 +109,6 @@ sidebar:
               url: /concept_lic_cp_compare_ct.html
             - title: Summary of benefits
               url: /concept_lic_cp_benefits.html
-        - title: Try ONTAP Select
-          url: /access-evaluation-software.html
         - title: Purchase a license 
           entries:
             - title: Licensing workflow
