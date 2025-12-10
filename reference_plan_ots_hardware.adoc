@@ -30,13 +30,16 @@ To deploy an ONTAP Select cluster, your organization must have a valid VMware vS
 You can deploy ONTAP Select on KVM and ESXi hypervisors.
 
 [role="tabbed-block"]
-====
+=====
 .KVM
 --
 ONTAP Select supports the following KVM hypervisor versions:  
 
-* KVM on Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* KVM on Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
+* KVM on Red Hat Enterprise Linux (RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* KVM on Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6 
+
+include::./_include/rhel-and-rockylinux10-rl-support.adoc[]
+
 --
 .ESXi
 --
@@ -54,7 +57,7 @@ NetApp supports ONTAP Select on the identified versions of ESXi as long as VMwar
 [NOTE]
 ESXi 7.0 GA reached end of availability status. If you have ONTAP Select clusters with this version, you must upgrade to the supported versions as per the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool (IMT)^].
 --
-====
+=====
 
 === VMware vCenter and standalone ESXi hosts
 
@@ -128,6 +131,7 @@ Refer to link:concept_lic_platforms.html[Understand the platform license offerin
 [NOTE]
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
+// 2025 DEC 9. ONTAPDOC-3461
 // 2024-NOV-18, ONTAPDOC-2550
 // 2023-APR-12, ONTAPDOC-979
 // 2023-SEP-25, ONTAPDOC-1204
