@@ -95,22 +95,22 @@ sidebar:
                 url: /concept_lic_production.html
               - title: Platform license offerings
                 url: /concept_lic_platforms.html
-            - title: Compare Capacity Pools and Capacity Tiers
-              entries:  
-              - title: Capacity Pools licensing model
-                entries:
-                  - title: Operational details
-                    url: /concept_lic_cp_operation.html
-                  - title: Node serial numbers
-                    url: /concept_lic_cp_serial_number.html
-                  - title: Restrictions
-                    url: /concept_lic_cp_restrictions.html
-              - title: Capacity Tiers licensing model
-                url: /concept-capacity-tiers-license.html
-              - title: Capacity Pools versus Capacity Tiers
-                url: /concept_lic_cp_compare_ct.html
-              - title: Summary of benefits
-                url: /concept_lic_cp_benefits.html
+              - title: Compare Capacity Pools and Capacity Tiers
+                entries:  
+                - title: Capacity Pools licensing model
+                  entries:
+                    - title: Operational details
+                      url: /concept_lic_cp_operation.html
+                    - title: Node serial numbers
+                      url: /concept_lic_cp_serial_number.html
+                    - title: Restrictions
+                      url: /concept_lic_cp_restrictions.html
+                    - title: Summary of benefits
+                      url: /concept_lic_cp_benefits.html
+                - title: Capacity Tiers licensing model
+                  url: /concept-capacity-tiers-license.html
+                - title: Capacity Pools versus Capacity Tiers
+                  url: /concept_lic_cp_compare_ct.html
         - title: Purchase
           entries:
             - title: Licensing workflow

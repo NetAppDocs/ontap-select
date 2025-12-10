@@ -4,7 +4,7 @@ permalink: concept_lic_production.html
 keywords: license, licensing, production, purchased, standard, premium, premium xl
 summary: After you determine that ONTAP Select is suitable for your organization, you can purchase the licenses needed to support a production deployment. You must choose either the Capacity Tiers or Capacity Pools licensing model as well as the storage capacity for each deployment.
 ---
-= ONTAP Select purchased licenses for production deployments
+= Learn about ONTAP Select purchased licenses for production deployments
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -22,9 +22,9 @@ The _Capacity Tiers_ and _Capacity Pools_ licensing models are very different in
 * The storage capacity for a license is allocated in 1 TB increments.
 * The storage capacity identifies the raw capacity and corresponds to the total allowable size of the data disks available to the ONTAP Select virtual machine.
 * All platform licensing offerings are supported (standard, premium, premium XL).
-* You should contact your NetApp account team or partner for assistance as needed when acquiring the necessary licenses.
+* Contact your NetApp account team or partner for assistance as needed when acquiring the necessary licenses.
 * You must upload the license files to the Deploy administration utility, which then applies the licenses based on the licensing model.
-* After installing and applying a license, you can add additional capacity by contacting your NetApp account team or partner to procure an updated license.
+* After installing and applying a license, you can add additional capacity by contacting your NetApp account team or partner to get an updated license.
 * Both nodes in an HA pair must have the same storage and license capacity.
 * An ONTAP Select node that is initially deployed with a purchased license cannot be converted to an evaluation license.
 
