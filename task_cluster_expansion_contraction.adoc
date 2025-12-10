@@ -33,7 +33,7 @@ You initiate the cluster expansion and contraction procedures from ONTAP Select 
 The cluster expansion and contraction feature is supported on the following KVM and ESXi hypervisor hosts.
 
 [role="tabbed-block"]
-====
+=====
 .ESXi
 --
 Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported on ESXi hypervisor hosts. 
@@ -52,11 +52,12 @@ Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is support
 
 Cluster expansion and contraction is supported for the following KVM hypervisor versions:
 
-* Red Hat Enterprise Linux 64-bit 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
---
+* Red Hat Enterprise Linux (RHEL) 64-bit 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 
-====
+include::./_include/rhel-and-rockylinux10-rl-support.adoc[]
+--
+=====
 
 == Expand the cluster
 Use the cluster expansion feature to increase the size of an existing ONTAP Select cluster.
@@ -141,7 +142,7 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
-
+// 2025 DEC 9. ONTAPDOC-3461
 // 2025 OCT 10, ONAPDOC-3333
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 AUG 19, ONTAPDOC-3002
