@@ -49,7 +49,7 @@ If you already have an account, make sure that you are not signed in.
 Mention the name of the NetApp internal person who suggested the request for prospect access.
 
 == Step 2: Download ONTAP Select evaluation software
-After your support case has been reviewed and approved, NetApp support notifies you using the email for the account that has been granted prospect access.
+After your support case is reviewed and approved, NetApp support notifies you using the email address for the account that has been granted prospect access.
 
 .Step
 . https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[Download the ONTAP Select evaluation software^].
