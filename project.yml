@@ -87,7 +87,7 @@ sidebar:
       entries:
         - title: Options
           entries:
-            - title: Learn about evaluation licenses
+            - title: Evaluation licenses
               url: /concept_lic_evaluation.html
             - title: Production licenses
               url: /concept_lic_production.html
