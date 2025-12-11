@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: access-evaluation-software.html
-keywords: ontap select, pre-installation checklist, esxi, host preparation
-summary: Prepare each ESXi hypervisor hosts where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
+keywords: ontap select, evaluation, software, register, download, access
+summary: Request access to to download the ONTAP Select evaluation software.
 ---
 = Access ONTAP Select evaluation software
 :hardbreaks:
@@ -20,15 +20,27 @@ If you are neither of the above and would like to try ONTAP Select for an evalua
 This instruction is for NetApp sales, partners, and prospects engaged with NetApp.
 
 == Step 1: Register for an account
-Complete the NetApp account registration and request prospect access.
+Complete the NetApp account registration, if needed, and request prospect access.
 
 .Steps
-. Register for an account on the link:https://mysupport.netapp.com/site/user/registration[NetApp Support site^] using your business email.
+. Create a new account or sign out of an existing account.
 +
+[role="tabbed-block"]
+====
+.Create new account
+--
+Register for an account on the link:https://mysupport.netapp.com/site/user/registration[NetApp Support site^] using your business email.
+
 NOTE: Free email accounts such as gmail or yahoo are not acceptable.
 
-.. Make sure you are not signed in with the newly created account.
-.. If you already have an account, make sure you are not signed in and proceed with the next step.
+Make sure you are not signed in with the newly created account.
+--
+
+.Existing account
+--
+If you already have an account, make sure that you are not signed in.
+--
+====
 . Create a non-technical support case to elevate access levels to "prospect." 
 .. Select "Report an Issue".
 .. Select "User Registration Issue" as the feedback category.
@@ -44,7 +56,7 @@ After your support case has been reviewed and approved, NetApp support notifies 
 +
 The evaluation license file is located within the zip file.
 
-. To comply with legal requirements, create an account and open a support case before gaining access. This helps NetApp maintain the correct control and documentation while providing prospects with the production-ready software they need.
+. To comply with legal requirements, link:https://mysupport.netapp.com/site/help[open a support case^] before gaining access. This helps NetApp maintain the correct control and documentation while providing prospects with the production-ready software they need.
 +
 [NOTE]
 ====

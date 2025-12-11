@@ -87,12 +87,8 @@ sidebar:
       entries:
         - title: Options
           entries:
-            - title: Evaluation licenses
-              entries:
-              - title: Learn about evaluation licenses
-                url: /concept_lic_evaluation.html
-              - title: Try ONTAP Select
-                url: /access-evaluation-software.html
+            - title: Learn about evaluation licenses
+              url: /concept_lic_evaluation.html
             - title: Production licenses
               url: /concept_lic_production.html
             - title: Platform license offerings
@@ -301,8 +297,12 @@ sidebar:
               url: /task_cli_deploy_image_remove.html
             - title: Recover Deploy for a two-node cluster
               url: /task_cli_deploy_recover_two_node.html
-    - title: Deploy a 90-day evaluation instance of a cluster
-      url: /deploy-evaluation-ontap-select-ovf-template.html
+    - title: Try ONTAP Select
+      entries:
+       - title: Access evaluation software
+         url: /access-evaluation-software.html
+       - title: Deploy a 90-day evaluation instance of a cluster
+         url: /deploy-evaluation-ontap-select-ovf-template.html
     - title: FAQ
       url: /reference_faq.html
     - title: Legal notices
