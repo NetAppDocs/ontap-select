@@ -12,7 +12,7 @@ summary: You can quickly deploy a 90-day evaluation instance of a single-node ON
 :imagesdir: ./media/
 
 [.lead]
-You can quickly deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template on VMware ESXi.
+You can deploy a 90-day evaluation instance of an ONTAP select cluster ranging in size from a single-node up to 99 nodes using an OVF template on VMware ESXi. You can download an evaluation license if you are an existing or new customer. For example, you are an existing customer and you want to try a new configuration before purchasing a license.
 
 .About this task
 
@@ -51,6 +51,7 @@ Complete the following steps on a supported 64-bit ESXi host server.
 . After the ONTAP Select cluster has been deployed, you can configure the cluster using the System Manager or the CLI interface. You must assign the disk using the standard ONTAP *disk assign* operation.
 
 .Related information
-link:http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^]
+*link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
+* link:http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^]
 
 // 2024 NOV 18, ONTAPDOC-2547

@@ -38,7 +38,7 @@ Make sure you are not signed in with the newly created account.
 
 .Existing account
 --
-If you already have an account, make sure that you are not signed in.
+If you already have an account, go to the link:https://mysupport.netapp.com/site/[NetApp Support site^] and make sure that you are not signed in.
 --
 ====
 . Create a non-technical support case to elevate access levels to "prospect." 
@@ -69,6 +69,6 @@ The evaluation license file is located within the zip file.
 ====
 
 .Related information
-link:concept_lic_production.html[Learn about ONTAP Select production licenses]
+link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
 
 // 2025 NOV 25, ONTAPDOC-3443
