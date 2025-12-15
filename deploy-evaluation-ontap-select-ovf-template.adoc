@@ -24,14 +24,14 @@ NOTE: The following steps are for an ONTAP select cluster on an ESXi host. You c
 * You can only use a vCenter account to deploy the OVF template. Installing directly to an ESXi host is currently not supported.
 * You must install the OVF template (contained in an ova file) using the vSphere standalone client or vSphere web client (the only option for ESXi 8.0 and later). You don't use the ONTAP Select Deploy administration utility.
 
-== Prepare the ONTAP Select cluster host
+== Step 1: Prepare the ONTAP Select cluster host
 Use the following requirements to prepare the ESXi host where the ONTAP Select cluster is deployed. The platform description is based on the standard or small instance type configuration with local direct-attached storage (DAS) formatted using the VMFS-5 or VMFS-6 file system.
 
 image:prepare_ESXi_host_requirements.png[Requirements to prepare the ESXi host]
 
 For additional information about host configuration options, see the link:esxi-host-configuration-and-preparation-checklist.html[ONTAP Select Install documentation].
 
-== Deploy a single-node ONTAP Select cluster using an OVF template
+== Step 2: Deploy a single-node ONTAP Select cluster using an OVF template
 Complete the following steps on a supported 64-bit ESXi host server.
 
 .Steps
