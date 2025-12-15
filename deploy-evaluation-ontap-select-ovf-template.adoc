@@ -14,7 +14,7 @@ summary: You can quickly deploy a 90-day evaluation instance of a single-node ON
 [.lead]
 You can deploy a 90-day evaluation instance of an ONTAP select cluster ranging in size from a single-node up to 99 nodes using an OVF template on VMware ESXi. You can download an evaluation license if you are an existing or new customer. For example, you are an existing customer and you want to try a new configuration before purchasing a license.
 
-NOTE: The following steps are for an ONTAP select cluster on an ESXi host. You can also deploy a 90-day evaluation instance of an ONTAP select cluster on a KVM host. Contact NetApp support for more information
+NOTE: The following steps are for an ONTAP select cluster on an ESXi host. You can also deploy a 90-day evaluation instance on a KVM host. For more information, contact NetApp support.
 
 .About this task
 
