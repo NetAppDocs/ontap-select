@@ -17,7 +17,8 @@ You can access the link:https://mysupport.netapp.com/site/downloads/evaluation/o
 If you are neither of the above and would like to try ONTAP Select for an evaluation, you can follow these steps to request access to download the evaluation software.
 
 .About this task
-This instruction is for NetApp sales, partners, and prospects engaged with NetApp.
+* This instruction is for NetApp sales, partners, and prospects engaged with NetApp.
+* ONTAP Select Capacity Tiers evaluation licenses are limited to 90 days from the day you install them. You cannot extend these licenses. At the end of the 90 days, the license no longer functions and you cannot access the associated data.
 
 == Step 1: Register for an account
 Complete the NetApp account registration, if needed, and request prospect access.
@@ -59,14 +60,12 @@ After your support case is reviewed and approved, NetApp support notifies you us
 +
 The evaluation license file is located within the zip file.
 
-. To comply with legal requirements, link:https://mysupport.netapp.com/site/help[open a support case^] before gaining access. This helps NetApp maintain the correct control and documentation while providing prospects with the production-ready software they need.
+. To comply with legal requirements, you need to link:https://mysupport.netapp.com/site/help[open a support case^] before gaining access. This helps NetApp maintain the correct control and documentation while providing you with the production-ready software you need.
 +
-[NOTE]
-====
-* NetApp provides the "production-ready" version of ONTAP Select, which is not an open-source or alternative version. Support is only available if you upgrade to a production license.
+NOTE: NetApp provides the "production-ready" version of ONTAP Select, which is not an open-source or alternative version. Support is only available if you upgrade to a production license.
 
-* ONTAP Select Capacity Tiers evaluation licenses are limited to 90 days from the day you install them. You cannot extend these licenses. At the end of the 90 days, the license no longer functions and you cannot access the associated data.
-====
+.What's next?
+link:task_install_deploy.html[Install ONTAP Select Deploy]
 
 .Related information
 link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
