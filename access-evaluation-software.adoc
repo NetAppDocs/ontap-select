@@ -64,10 +64,10 @@ The evaluation license file is located within the zip file.
 +
 NOTE: NetApp provides the "production-ready" version of ONTAP Select, which is not an open-source or alternative version. Support is only available if you upgrade to a production license.
 
-.What's next?
-link:task_install_deploy.html[Install ONTAP Select Deploy]
+. After the evaluation software download completes, follow the instructions to create an ONTAP Select Deploy instance.
 
 .Related information
-link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
 
+* link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
+* link:task_adm_licenses.html#convert-license[Convert an evaluation license to a production license]
 // 2025 NOV 25, ONTAPDOC-3443
