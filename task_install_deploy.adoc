@@ -26,15 +26,11 @@ https://mysupport.netapp.com/site/user/registration[You have a registered NetApp
 The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
-. Access the link:https://mysupport.netapp.com/site/[NetApp Support Site^] using a web browser and sign in.
+. Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
 
-. Select *Downloads* from the menu, then select *Downloads* from the drop-down menu.
+. Scroll down and select *ONTAP Select Deploy*.
 
-. On the Downloads page, under All Products A-Z, select the letter *O*.
-
-. Scroll down and select *ONTAP Select*.
-
-. Select the desired release of the package.
+. Select ONTAP Select 9.18.1.
 
 . Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
