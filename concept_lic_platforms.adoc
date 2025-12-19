@@ -84,7 +84,7 @@ Kernel-Based Virtual Machines (KVM) do not support the large instance type.
 
 == Compare hardware support for platform license offerings
 
-The standard, premium, and premium XL license offerings support a wide range of hardware and software. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
+The standard, premium, and premium XL license offerings support a wide range of hardware and software. For current information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
 
 [role="tabbed-block"]
 ====
