@@ -27,6 +27,11 @@ You obtain a Capacity Tier and Capacity Pool license at different web sites
 
 image:purchased_license_workflow.png[Describes the process used to purchase and install a storage license for a production ONTAP Select deployment.]
 
+.What's next?
+
+* link:task_lic_acquire_cp.html[Acquire an ONTAP Select Capacity Pool license]
+* link:task_lic_acquire_ct.html[Acquire an ONTAP Select Capacity Tier license]
+
 .Related information
 link:task_adm_licenses.html[ONTAP Select licenses]
 

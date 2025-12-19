@@ -56,4 +56,8 @@ There are several characteristics unique to the Capacity Pools licensing model, 
 
 For more details on the Capacity Pools licensing model, see the _Capacity Pools licensing model_ for more information.
 
+.What's next?
+
+link:concept_lic_platforms.html[Learn about the platform license offerings for ONTAP Select]
+
 // 2025 DEC 19, ONTAPDOC-3021

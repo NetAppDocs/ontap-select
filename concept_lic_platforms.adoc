@@ -205,9 +205,11 @@ SnapCenter (optional)
 
 --
 ====
-.Related information
-* link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types]
 
+.What's next?
+
+* link:concept_lic_cp_operation.html[Learn about the Capacity Pool license model]
+* link:concept-capacity-tiers-license.html[Learn about the Capacity Tier license model]
 
 // 2025 Sep 16, ONTAPDOC-3305
 // 2025 AUG 13, ONTAPDOC-3206

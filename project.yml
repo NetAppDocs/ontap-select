@@ -109,14 +109,15 @@ sidebar:
                 url: /concept-capacity-tiers-license.html
               - title: Capacity Pools versus Capacity Tiers
                 url: /concept_lic_cp_compare_ct.html
-        - title: Purchase
+        - title: Purchase a license
           entries:
             - title: Licensing workflow
               url: /concept_lic_workflow.html
-            - title: Capacity Tiers
-              url: /task_lic_acquire_ct.html
             - title: Capacity Pools
               url: /task_lic_acquire_cp.html
+            - title: Capacity Tiers
+              url: /task_lic_acquire_ct.html
+            
         - title: ONTAP features
           url: /reference_lic_ontap_features.html
     - title: Install
