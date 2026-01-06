@@ -18,7 +18,9 @@ If you are neither of the above and would like to try ONTAP Select for an evalua
 
 .About this task
 * This instruction is for NetApp sales, partners, and prospects engaged with NetApp.
-* ONTAP Select Capacity Tiers evaluation licenses are limited to 90 days from the day you install them. You cannot extend these licenses. At the end of the 90 days, the license no longer functions and you cannot access the associated data.
+* ONTAP Select Capacity Tiers evaluation licenses are limited to 90 days from the day you install them. 
++
+NOTE: You cannot extend these licenses. At the end of the 90 days, the license no longer functions and you cannot access the associated data.
 * The evaluation software has all the information that you need to download the ONTAP Select Deploy administration utility and deploy a cluster.
 
 == Step 1: Register for an account
