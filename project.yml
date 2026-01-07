@@ -89,9 +89,9 @@ sidebar:
           entries:
             - title: Learn about evaluation licenses
               url: /concept_lic_evaluation.html
-            - title: Production licenses
+            - title: Learn about production licenses
               entries:
-              - title: Learn about production licenses
+              - title: Overview
                 url: /concept_lic_production.html
               - title: Platform license offerings
                 url: /concept_lic_platforms.html 

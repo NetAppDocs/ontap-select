@@ -33,6 +33,6 @@ image:purchased_license_workflow.png[Describes the process used to purchase and 
 * link:task_lic_acquire_ct.html[Acquire an ONTAP Select Capacity Tier license]
 
 .Related information
-link:task_adm_licenses.html[ONTAP Select licenses]
+link:task_adm_licenses.html[Learn about managing ONTAP Select licenses]
 
 // 2024 OCT 14: ONTAPDOC-2225

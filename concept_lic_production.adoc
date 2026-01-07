@@ -12,33 +12,19 @@ summary: After you determine that ONTAP Select is suitable for your organization
 :imagesdir: ./media/
 
 [.lead]
-After you determine that ONTAP Select is suitable for your organization, you can purchase the licenses needed to support a production deployment. You must choose either the Capacity Tiers or Capacity Pools licensing model as well as the storage capacity for each deployment.
+After you determine that ONTAP Select is suitable for your organization, you can purchase the licenses needed to support a production deployment. You must choose either the Capacity Pools or Capacity Tiers licensing model as well as the storage capacity for each deployment.
 
 == Common licensing characteristics
 
-The _Capacity Tiers_ and _Capacity Pools_ licensing models are very different in several respects. However, the two licensing models share several common characteristics, including:
+The _Capacity Pools_ and  _Capacity Tiers_ licensing models are very different in several respects. However, the two licensing models share several common characteristics, including:
 
 * You must purchase one or more licenses as needed when deploying ONTAP Select in a production environment.
-* NetApp allocates the storage capacity for a license in 1 TB increments.
+* The storage capacity for a license is allocated in 1 TB increments.
 * All platform licensing offerings are supported (standard, premium, premium XL).
 * You should contact your NetApp account team or partner for assistance as needed when acquiring the necessary licenses.
 * You must upload the license files to the Deploy administration utility, which then applies the licenses based on the licensing model.
 * After installing and applying a license, you can add additional capacity by contacting your NetApp account team or partner to procure an updated license.
 * An ONTAP Select node that is initially deployed with a purchased license cannot be converted to an evaluation license.
-
-== Capacity Tiers licensing model
-
-There are several characteristics unique to the Capacity Tiers licensing model, including:
-
-* You must purchase a license for each ONTAP Select node.
-* The minimum amount you can purchase is 1 TB.
-* Each Capacity Tier license has a storage capacity and is locked to a specific node.
-* The storage capacity identifies the raw capacity and corresponds to the total allowable size of the data disks available to the ONTAP Select virtual machine.
-* NetApp generates a nine-digit license serial number for each ONTAP Select node.
-* The storage allocated to a node is perpetual (no renewal required), but you must renew the support contract associated with the license.
-* Each node in an HA pair requires a license that is at least as large as the raw storage attached to the node.
-* The node serial number is nine digits and equal to the license serial number.
-* You can apply the license file during cluster deployment or within 30 days after creating a cluster.
 
 == Capacity Pools licensing model
 
@@ -54,10 +40,25 @@ There are several characteristics unique to the Capacity Pools licensing model, 
 * All nodes in a cluster share the same license capacity. This means the license must be large enough to provide for the storage allocated to all nodes in the cluster.
 * Each node automatically leases storage capacity for its local data aggregates from a shared Capacity Pool.
 
-For more details on the Capacity Pools licensing model, see the _Capacity Pools licensing model_ for more information.
+== Capacity Tiers licensing model
+
+There are several characteristics unique to the Capacity Tiers licensing model, including:
+
+* You must purchase a license for each ONTAP Select node.
+* The minimum amount you can purchase is 1 TB.
+* Each Capacity Tier license has a storage capacity and is locked to a specific node.
+* The storage capacity identifies the raw capacity and corresponds to the total allowable size of the data disks available to the ONTAP Select virtual machine.
+* NetApp generates a nine-digit license serial number for each ONTAP Select node.
+* The storage allocated to a node is perpetual (no renewal required), but you must renew the support contract associated with the license.
+* Each node in an HA pair requires a license that is at least as large as the raw storage attached to the node.
+* The node serial number is nine digits and equal to the license serial number.
+* You can apply the license file during cluster deployment or within 30 days after creating a cluster.
+
 
 .What's next?
 
-link:concept_lic_platforms.html[Learn about the platform license offerings for ONTAP Select]
+* link:concept_lic_platforms.html[Learn about the platform license offerings for ONTAP Select]
+* link:concept_lic_cp_operation.html[Learn more about the ONTAP Select Capacity Pools licensing model]
+* link:concept-capacity-tiers-license.html[Learn more about the ONTAP Select Capacity Tiers licensing model]
 
 // 2025 DEC 19, ONTAPDOC-3021
