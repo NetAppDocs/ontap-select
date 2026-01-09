@@ -52,11 +52,11 @@ If you already have an account, go to the link:https://mysupport.netapp.com/site
 +
 Fill out all required information and in the comments section, write: "My business email address is <your-email-address>. I would like to get prospect access to download the ONTAP Select evaluation software."
 +
-Mention the name of the NetApp internal person who suggested the request for prospect access.
+Include the name of your NetApp contact.
 .. Select *Submit*.
 
 == Step 2: Download ONTAP Select evaluation software
-After your support case is reviewed and approved, NetApp support notifies you using the email address for the account that has been granted prospect access.
+After your support case is reviewed and approved, NetApp support notifies you using the email address supplied.
 
 .Step
 . https://mysupport.netapp.com/site/downloads/evaluation/ontap-select[Download the ONTAP Select evaluation software^].
