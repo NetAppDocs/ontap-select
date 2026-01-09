@@ -9,7 +9,7 @@ indexpage:
         - title: What's new
           url: /reference_new_ots.html
         - title: Learn about ONTAP Select
-          url: /access-evaluation-software.html
+          url: /concept_ots_overview.html
         - title: Licensing
           url: /concept_lic_evaluation.html
         - title: Try ONTAP Select
