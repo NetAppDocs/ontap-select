@@ -29,8 +29,8 @@ image:purchased_license_workflow.png[Describes the process used to purchase and 
 
 .What's next?
 
-* link:task_lic_acquire_cp.html[Acquire an ONTAP Select Capacity Pool license]
 * link:task_lic_acquire_ct.html[Acquire an ONTAP Select Capacity Tier license]
+* link:task_lic_acquire_cp.html[Acquire an ONTAP Select Capacity Pool license]
 
 .Related information
 link:task_adm_licenses.html[Learn about managing ONTAP Select licenses]
