@@ -132,6 +132,7 @@ See link:task_lic_acquire_cp.html[Acquire a Capacity Pool license] for more info
 +
 `system license license-manager modify -host NEW_IP_ADDRESS`
 
+[[convert-license]]
 == Convert an evaluation license to a production license
 
 You can upgrade an ONTAP Select evaluation cluster to use a production Capacity Tier license with the Deploy administration utility.
