@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: deploy-evaluation-ontap-select-ovf-template.html
 keywords: ontap, select, ovf, template, deployment, evaluation, license
-summary: You can quickly deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template on VMware ESXi.
+summary: You can deploy a 90-day evaluation instance of a single-node ONTAP Select cluster.
 ---
 = Deploy a 90-day evaluation instance of an ONTAP Select cluster
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: You can quickly deploy a 90-day evaluation instance of a single-node ON
 :imagesdir: ./media/
 
 [.lead]
-You can quickly deploy a 90-day evaluation instance of a single-node ONTAP Select cluster using an OVF template on VMware ESXi.
+You can deploy a 90-day evaluation instance of an ONTAP select cluster ranging in size from a single-node up to 99 nodes using an OVF template on VMware ESXi. You can download an evaluation license if you are an existing or new customer. For example, you are an existing customer and you want to try a new configuration before purchasing a license.
 
 .About this task
 
@@ -22,14 +22,14 @@ You can quickly deploy a 90-day evaluation instance of a single-node ONTAP Selec
 * You can only use a vCenter account to deploy the OVF template. Installing directly to an ESXi host is currently not supported.
 * You must install the OVF template (contained in an ova file) using the vSphere standalone client or vSphere web client (the only option for ESXi 8.0 and later). You don't use the ONTAP Select Deploy administration utility.
 
-== Prepare the ONTAP Select cluster host
+== Step 1: Prepare the ONTAP Select cluster host
 Use the following requirements to prepare the ESXi host where the ONTAP Select cluster is deployed. The platform description is based on the standard or small instance type configuration with local direct-attached storage (DAS) formatted using the VMFS-5 or VMFS-6 file system.
 
 image:prepare_ESXi_host_requirements.png[Requirements to prepare the ESXi host]
 
 For additional information about host configuration options, see the link:esxi-host-configuration-and-preparation-checklist.html[ONTAP Select Install documentation].
 
-== Deploy a single-node ONTAP Select cluster using an OVF template
+== Step 2: Deploy a single-node ONTAP Select cluster using an OVF template
 Complete the following steps on a supported 64-bit ESXi host server.
 
 .Steps
@@ -51,6 +51,8 @@ Complete the following steps on a supported 64-bit ESXi host server.
 . After the ONTAP Select cluster has been deployed, you can configure the cluster using the System Manager or the CLI interface. You must assign the disk using the standard ONTAP *disk assign* operation.
 
 .Related information
-link:http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^]
+
+* link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
+* link:http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^]
 
 // 2024 NOV 18, ONTAPDOC-2547
