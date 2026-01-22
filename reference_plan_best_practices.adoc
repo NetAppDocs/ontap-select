@@ -55,10 +55,10 @@ ONTAP Select receives no performance benefits by increasing the number of LUNs w
 
 === VMware ESXi hosts
 
-NetApp recommends using ESX 8.0 or later and an NVMe disk for the datastore hosting the system disks. This configuration provides the best performance for the NVRAM partition.
+NetApp recommends using ESXi 8.0 or later and an NVMe disk for the datastore hosting the system disks. This configuration provides the best performance for the NVRAM partition.
 
 [NOTE]
-When installing on ESX 8.0 or later, ONTAP Select uses the vNVMEe driver regardless of whether the system disk resides on an SSD or on an NVMe disk. This sets the VM hardware level to 13, which is compatible with ESX 8.0 and later.
+When installing on ESXi 8.0 or later, ONTAP Select uses the vNVMEe driver regardless of whether the system disk resides on an SSD or on an NVMe disk. This sets the VM hardware level to 13, which is compatible with ESXi 8.0 and later.
 
 Define dedicated network ports, bandwidth, and vSwitch configurations for the ONTAP Select networks and external storage (VMware vSAN and generic storage array traffic when using iSCSI or NFS).
 
@@ -127,7 +127,7 @@ ONTAP Select supports a single 10Gb link for two-node clusters; however, it is a
 
 If a NIC has multiple application-specific integrated circuits (ASICs), select one network port from each ASIC when building network constructs through NIC teaming for the internal and external networks.
 
-NetApp recommends that the LACP mode be active on both the ESX and the physical switches. Furthermore, the LACP timer should be set to fast (1 second) on the physical switch, ports, port channel interfaces, and on the VMNICs.
+NetApp recommends that the LACP mode be active on both the ESXi and the physical switches. Furthermore, the LACP timer should be set to fast (1 second) on the physical switch, ports, port channel interfaces, and on the VMNICs.
 
 When using a distributed vSwitch with LACP, NetApp recommends that you configure the load-balancing policy to Route Based on IP Hash on the port group, Source and Destination IP Address, TCP/UDP Port, and VLAN on the LAG.
 

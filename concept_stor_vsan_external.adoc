@@ -52,7 +52,7 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 
 == Collocate ONTAP Select Nodes When Using vNAS on ESXi
 
-ONTAP Select includes support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy enables the configuration of multiple ONTAP Select nodes on the same ESX host as long as these nodes are not part of the same cluster. Note that this configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
+ONTAP Select includes support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy enables the configuration of multiple ONTAP Select nodes on the same ESXi host as long as these nodes are not part of the same cluster. Note that this configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
 
 ONTAP Deploy makes sure that the initial deployment of the multinode VNAS cluster does not place multiple ONTAP Select instances from the same cluster on the same host. The following figure illustrates an example of a correct deployment of two four-node clusters that intersect on two hosts.
 
@@ -63,7 +63,7 @@ image:ST_14.jpg[Initial deployment of multinode VNAS clusters]
 After deployment, the ONTAP Select nodes can be migrated between hosts. This could result in nonoptimal and unsupported configurations for which two or more ONTAP Select nodes from the same cluster share the same underlying host. NetApp recommends the manual creation of VM anti-affinity rules so that VMware automatically maintains physical separation between the nodes of the same cluster, not just the nodes from the same HA pair.
 
 [NOTE]
-Anti-affinity rules require that DRS is enabled on the ESX cluster.
+Anti-affinity rules require that DRS is enabled on the ESXi cluster.
 
 See the following example on how to create an anti-affinity rule for the ONTAP Select VMs. If the ONTAP Select cluster contains more than one HA pair, all nodes in the cluster must be included in this rule.
 
@@ -71,7 +71,7 @@ image:ST_15.jpg[VM/Host rules]
 
 image:ST_16.jpg[Edit VM/Host rule]
 
-Two or more ONTAP Select nodes from the same ONTAP Select cluster could potentially be found on the same ESX host for one of the following reasons:
+Two or more ONTAP Select nodes from the same ONTAP Select cluster could potentially be found on the same ESXi host for one of the following reasons:
 
 * DRS is not present due to VMware vSphere license limitations or if DRS is not enabled.
 * The DRS anti-affinity rule is bypassed because a VMware HA operation or administrator-initiated VM migration takes precedence.

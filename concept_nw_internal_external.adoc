@@ -35,7 +35,7 @@ Network packets traversing the internal network must be on a dedicated VLAN-tagg
 In all cases, VLAN tagging for internal network traffic is done outside of the ONTAP Select VM.
 
 [NOTE]
-Only ESX standard and distributed vSwitches are supported. Other virtual switches or direct connectivity between ESX hosts are not supported. The internal network must be fully opened; NAT or firewalls are not supported.
+Only ESXi standard and distributed vSwitches are supported. Other virtual switches or direct connectivity between ESXi hosts are not supported. The internal network must be fully opened; NAT or firewalls are not supported.
 
 Within an ONTAP Select cluster, internal traffic and external traffic are separated using virtual layer-2 network objects known as port groups. Correct vSwitch assignment of these port groups is extremely important, especially for the internal network, which is responsible for providing cluster, HA interconnect, and mirror replication services. Insufficient network bandwidth to these network ports can cause performance degradation and even affect the stability of the cluster node. Therefore, four, six, eight, ten, and twelve-node clusters require that the internal ONTAP Select network use 10Gb connectivity; 1Gb NICs are not supported. Trade-offs can be made to the external network, however, because limiting the flow of incoming data to an ONTAP Select cluster does not affect its ability to operate reliably.
 
