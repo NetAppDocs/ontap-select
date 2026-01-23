@@ -17,19 +17,23 @@ After deploying an ONTAP Select cluster, you can upgrade the ONTAP image at each
 [CAUTION]
 You cannot use the Deploy administration utility to perform upgrades of existing ONTAP Select nodes. The Deploy utility can only be used to create new ONTAP Select clusters.
 
-== General procedure
+== General upgrade procedure
 
 At a high level, you should use the following steps to upgrade an existing ONTAP Select node.
 
-. Navigate to downloads page at the NetApp Support Site.
-+
-https://mysupport.netapp.com/site/downloads[NetApp Support Downloads^]
+.Steps
 
-. Click *ONTAP Select Node Upgrade*.
+. Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
 
-. Select and download the appropriate upgrade image responding to all prompts as needed.
+. Scroll down and select *ONTAP Select Image*.
+
+. Select the desired release of the install image.
+
+. Review the End User License Agreement (EULA) and select *Accept & Continue*.
+
+. Select and download the appropriate *ONTAP Select Image Upgrade* package. Respond to all prompts as needed.
 +
-Review the Release Notes for additional information and any required procedures before upgrading an ONTAP Select node. 
+Review the link:reference_release_notes.html[release notes] for additional information and any required procedures before upgrading an ONTAP Select node. 
 
 . Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. For information on supported upgrade paths, see the link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html[Supported ONTAP upgrade paths^].
 
