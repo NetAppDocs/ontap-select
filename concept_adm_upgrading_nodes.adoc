@@ -17,7 +17,7 @@ After deploying an ONTAP Select cluster, you can upgrade the ONTAP image at each
 [CAUTION]
 You cannot use the Deploy administration utility to perform upgrades of existing ONTAP Select nodes. The Deploy utility can only be used to create new ONTAP Select clusters.
 
-== General procedure
+== General upgrade procedure
 
 At a high level, you should use the following steps to upgrade an existing ONTAP Select node.
 
