@@ -17,6 +17,16 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 == ONTAP Select 9.18.1
 
+Updates to the ONTAP Select product download options::
+NetApp have updated the ONTAP Select product download options on the NetApp Support site with the ONTAP Select 9.18.1 release. Previously, there were four options, ONTAP Select, ONTAP Select Deploy Upgrade, ONTAP Select Image Install, and ONTAP Select Node Upgrade. With the ONTAP Select 9.18.1 release, these four options are replaced by two new options, *ONTAP Select Deploy* and *ONTAP Select image*. The changes to the product download options also apply to ONTAP Select 9.17.1, 9.16.1, 9.15.1, and 9.14.1.
++
+For information on downloading the *ONTAP Select Deploy* and *ONTAP Select image* options, see the following procedures:
++
+* link:task_install_deploy.html[Install ONTAP Select Deploy]
+* link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
+* link:task_cli_upgrade_deploy.html[Upgrade an ONTAP Select Deploy instance]
+* link:concept_adm_upgrading_nodes.html[Upgrade ONTAP Select nodes]
+
 Enhanced support for cluster expansion and contraction::
 Beginning with ONTAP Select 9.18.1, cluster expansion and contraction is supported between four-node and twelve-node ONTAP Select clusters on ESXi and KVM hypervisor hosts.
 +
