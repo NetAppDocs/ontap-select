@@ -25,7 +25,7 @@ If you have an older instance of the ONTAP Select Deploy administration utility 
 You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from ONTAP Select Deploy 9.15.1 or earlier, review the release notes for your ONTAP Select version.
 ====
 
-== Step 1: Download the package
+== Step 1: Download the upgrade package
 
 To begin the upgrade process, download the ONTAP Select Deploy Upgrade file from the NetApp Support Site. The upgrade package is formatted as a single compressed file.
 
