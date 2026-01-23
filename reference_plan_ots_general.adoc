@@ -72,7 +72,7 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 [NOTE]
 Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
 
-Refer to the hypervisor-specific planning information and release notes for additional details regarding the supported platforms.
+Refer to the hypervisor-specific planning information and link:reference_release_notes.html[release notes] for additional details regarding the supported platforms.
 
 Hypervisor for ONTAP Select nodes and administration utility::
 Both the Deploy administration utility and ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
