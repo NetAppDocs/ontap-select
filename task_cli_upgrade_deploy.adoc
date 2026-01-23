@@ -65,7 +65,6 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 .Result
 The upgrade file is stored in the home directory of the admin user.
 
-
 == Step 3: Apply the upgrade package
 
 After you upload the upgrade file to the ONTAP Select Deploy virtual machine, you can apply the upgrade.
