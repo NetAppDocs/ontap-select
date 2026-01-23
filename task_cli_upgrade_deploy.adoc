@@ -35,7 +35,7 @@ To begin the upgrade process, download the ONTAP Select Deploy Upgrade file from
 
 . Scroll down and select *ONTAP Select Deploy*.
 
-. Select your desired ONTAP Select version.
+. Select the desired ONTAP Select version.
 
 . Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
