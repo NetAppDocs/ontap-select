@@ -18,14 +18,26 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 == ONTAP Select 9.18.1
 
 Updates to the ONTAP Select product download options::
-NetApp have updated the ONTAP Select product download options on the NetApp Support site with the ONTAP Select 9.18.1 release. Previously, there were four options, ONTAP Select, ONTAP Select Deploy Upgrade, ONTAP Select Image Install, and ONTAP Select Node Upgrade. With the ONTAP Select 9.18.1 release, these four options are replaced by two new options, *ONTAP Select Deploy* and *ONTAP Select image*. The changes to the product download options also apply to ONTAP Select 9.17.1, 9.16.1, 9.15.1, and 9.14.1.
+The ONTAP Select product download options on the NetApp Support site are changing with the ONTAP Select 9.18.1 release, as shown in the following table:
 +
-For information on downloading the *ONTAP Select Deploy* and *ONTAP Select image* options, see the following procedures:
+[cols="40,30,30"*,options="header"]
+|===
+|Procedure |Previous product download option |New product download option
+|link:task_install_deploy.html[Install ONTAP Select Deploy]
+|ONTAP Select 
+|ONTAP Select Deploy 
+|link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
+|ONTAP Select Image Install
+|ONTAP Select Image
+|link:task_cli_upgrade_deploy.html[Upgrade an ONTAP Select Deploy instance]
+|ONTAP Select Deploy Upgrade
+|ONTAP Select Deploy
+|link:concept_adm_upgrading_nodes.html[Upgrade ONTAP Select nodes]
+|ONTAP Select Node Upgrade
+| ONTAP Select Image
+|===
 +
-* link:task_install_deploy.html[Install ONTAP Select Deploy]
-* link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
-* link:task_cli_upgrade_deploy.html[Upgrade an ONTAP Select Deploy instance]
-* link:concept_adm_upgrading_nodes.html[Upgrade ONTAP Select nodes]
+The product download changes also apply to ONTAP Select 9.17.1, 9.16.1, 9.15.1, and 9.14.1.
 
 Enhanced support for cluster expansion and contraction::
 Beginning with ONTAP Select 9.18.1, cluster expansion and contraction is supported between four-node and twelve-node ONTAP Select clusters on ESXi and KVM hypervisor hosts.
