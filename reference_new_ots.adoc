@@ -18,7 +18,7 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 == ONTAP Select 9.18.1
 
 Updates to the ONTAP Select product download options::
-The ONTAP Select product download options on the NetApp Support site are changing with the ONTAP Select 9.18.1 release, as shown in the following table:
+The ONTAP Select product download options on the NetApp Support site are changing with the ONTAP Select 9.18.1 release to *ONTAP Select Deploy* and *ONTAP Select Image*. These two new product download options replace the previous four options, as shown in the following table:
 +
 [cols="30,30,40"*,options="header"]
 |===
