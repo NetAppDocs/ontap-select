@@ -20,21 +20,21 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 Updates to the ONTAP Select product download options::
 The ONTAP Select product download options on the NetApp Support site are changing with the ONTAP Select 9.18.1 release, as shown in the following table:
 +
-[cols="40,30,30"*,options="header"]
+[cols="30,30,40"*,options="header"]
 |===
-|Procedure |Previous product download option |New product download option
-|link:task_install_deploy.html[Install ONTAP Select Deploy]
+|Previous product download option |New product download option |For more information, go to....
 |ONTAP Select 
-|ONTAP Select Deploy 
-|link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
+|ONTAP Select Deploy
+|link:task_install_deploy.html[Install ONTAP Select Deploy]
 |ONTAP Select Image Install
 |ONTAP Select Image
-|link:task_cli_upgrade_deploy.html[Upgrade an ONTAP Select Deploy instance]
+|link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
 |ONTAP Select Deploy Upgrade
 |ONTAP Select Deploy
-|link:concept_adm_upgrading_nodes.html[Upgrade ONTAP Select nodes]
+|link:task_cli_upgrade_deploy.html[Upgrade an ONTAP Select Deploy instance]
 |ONTAP Select Node Upgrade
-| ONTAP Select Image
+|ONTAP Select Image
+|link:concept_adm_upgrading_nodes.html[Upgrade ONTAP Select nodes]
 |===
 +
 The product download changes also apply to ONTAP Select 9.17.1, 9.16.1, 9.15.1, and 9.14.1.
