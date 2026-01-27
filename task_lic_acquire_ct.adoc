@@ -15,28 +15,29 @@ summary: When using Capacity Tiers licensing, you need to acquire a license file
 When using Capacity Tiers licensing, you need to acquire a license file for each ONTAP Select node. The license file defines the storage capacity for the node and is locked to the node through the unique nine-digit serial number assigned by NetApp.
 
 .Before you begin
-You must have the nine-digit license serial number assigned to the node by NetApp. Before attempting to acquire a license file, you should wait at least twenty four hours after the shipped date of your purchase order.
+* You must have the nine-digit license serial number assigned to the ONTAP Select node by NetApp.
+* You should wait at least 24 hours after the shipped date of your purchase order before acquiring a license file.
 
 .About this task
 You must perform this task for each ONTAP Select node requiring a Capacity Tier license.
 
 .Steps
 
-. Access the ONTAP Select license site using a web browser:
-+
-`https://register.netapp.com/register/getlicensefile`
+. link:https://register.netapp.com/register/getlicensefile[Access the ONTAP Select license site^].
 
 . Sign in using your NetApp account credentials.
 
 . On the *License Generator* page, select the desired license offering from the dropdown box.
 
-. Fill in the remaining fields on the same page, including the *Product Serial #*, which is the serial number for the ONTAP Select node.
+. Fill in the remaining fields on the *License Generator* page, including the *Product Serial #*.
++
+The product serial # is the serial number for the ONTAP Select node.
 
-. Click *Submit*.
+. Select *Submit*.
 
 . After the request has been validated, select the delivery method for the license.
 +
-You can click either *Download License* or *Email License*.
+You can select either *Download License* or *Email License*.
 
 . Confirm that you received the license file based on your selected delivery method.
 

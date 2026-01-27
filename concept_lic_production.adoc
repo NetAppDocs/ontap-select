@@ -4,7 +4,7 @@ permalink: concept_lic_production.html
 keywords: license, licensing, production, purchased, standard, premium, premium xl
 summary: After you determine that ONTAP Select is suitable for your organization, you can purchase the licenses needed to support a production deployment. You must choose either the Capacity Tiers or Capacity Pools licensing model as well as the storage capacity for each deployment.
 ---
-= ONTAP Select purchased licenses for production deployments
+= Learn about ONTAP Select purchased licenses for production deployments
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -58,7 +58,6 @@ There are several characteristics unique to the Capacity Pools licensing model, 
 .What's next?
 
 * link:concept_lic_platforms.html[Learn about the platform license offerings for ONTAP Select]
-* link:concept-capacity-tiers-license.html[Learn more about the ONTAP Select Capacity Tiers licensing model]
 * link:concept_lic_cp_operation.html[Learn more about the ONTAP Select Capacity Pools licensing model]
 
 // 2025 DEC 19, ONTAPDOC-3021

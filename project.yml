@@ -89,14 +89,12 @@ sidebar:
           entries:
             - title: Learn about evaluation licenses
               url: /concept_lic_evaluation.html
-            - title: Learn about production licenses
+            - title: Production licenses
               entries:
-              - title: Overview
+              - title: Learn about production licenses
                 url: /concept_lic_production.html
               - title: Platform license offerings
                 url: /concept_lic_platforms.html 
-              - title: Capacity Tiers licensing model
-                url: /concept-capacity-tiers-license.html
               - title: Capacity Pools licensing model
                 entries:
                   - title: Operational details
@@ -114,7 +112,11 @@ sidebar:
             - title: Licensing workflow
               url: /concept_lic_workflow.html
             - title: Capacity Tiers
-              url: /task_lic_acquire_ct.html
+              entries:
+                - title: Considerations for sizing a license 
+                  url: /capacity-tiers-license.html
+                - title: Acquire a Capacity Tier license
+                  url: /task_lic_acquire_ct.html
             - title: Capacity Pools
               url: /task_lic_acquire_cp.html
         - title: ONTAP features

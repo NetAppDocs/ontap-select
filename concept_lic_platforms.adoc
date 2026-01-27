@@ -213,8 +213,7 @@ SnapCenter (optional)
 
 .What's next?
 
-* link:concept_lic_cp_operation.html[Learn about the Capacity Pool license model]
-* link:concept-capacity-tiers-license.html[Learn about the Capacity Tier license model]
+link:concept_lic_workflow.html[Learn about purchasing an ONTAP Select license]
 
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 Sep 16, ONTAPDOC-3305
