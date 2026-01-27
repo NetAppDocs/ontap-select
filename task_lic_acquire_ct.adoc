@@ -32,7 +32,7 @@ You must perform this task for each ONTAP Select node requiring a Capacity Tiers
 
 . Fill in the remaining fields on the *License Generator* page, including the *Product Serial #*.
 +
-The product serial # is the serial number for the ONTAP Select node.
+The "product serial #" is the serial number for the ONTAP Select node.
 
 . Select *Submit*.
 
