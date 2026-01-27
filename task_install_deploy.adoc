@@ -14,35 +14,31 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 [.lead]
 You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 
-== Download the virtual machine image
+== Step 1: Download the virtual machine image
 
-You can download the ONTAP Select package from the NetApp support site.
+Download the ONTAP Select Deploy package from the NetApp support site.
 
 .Before you begin
 https://mysupport.netapp.com/site/user/registration[You have a registered NetApp Support Site account^].
 
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova`. The VM provides the Deploy server and installation images for ONTAP Select nodes.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESX hosts and `TGZ` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
-. Access the link:https://mysupport.netapp.com/site/[NetApp Support Site^] using a web browser and sign in.
+. Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
 
-. Select *Downloads* from the menu, then select *Downloads* from the drop-down menu.
+. Scroll down and select *ONTAP Select Deploy*.
 
-. On the Downloads page, under All Products A-Z, select the letter *O*.
-
-. Scroll down and select *ONTAP Select*.
-
-. Select the desired release of the package.
+. Select the desired ONTAP Select version.
 
 . Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
-. Select and download the appropriate package, responding to all prompts as needed.
+. Select and download the appropriate *ONTAP Select Deploy Install* package. Respond to all prompts as needed.
 
-== Verify the ONTAP Select Deploy OVA signature
+== Step 2: Verify the ONTAP Select Deploy OVA signature
 
-You should verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
+Verify the ONTAP Select Open Virtualization Appliance (OVA) signature before installing the installation package.
 
 .Before you begin
 Verify that your system meets the following requirements:
@@ -52,7 +48,7 @@ Verify that your system meets the following requirements:
 
 .Steps
 
-. Obtain the following files from the  product download page on the NetApp support site:
+. Obtain the following files from the product download page on the NetApp support site:
 +
 [cols=2*,options="header"]
 |===
@@ -72,16 +68,17 @@ Verify that your system meets the following requirements:
 
 . Verify that the `ONTAPdeploy.ova.sig` file is using the associated certificates and validation commands.
 
-. Verify the signature with the following command:
+. Verify the signature:
 +
+[source,cli]
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
 ----
  
 
-== Deploy the virtual machine
+== Step 3: Deploy the virtual machine
 
-You must install and start the ONTAP Select Deploy VM using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
+Install and start the ONTAP Select Deploy VM using the OVF VM image. During the installation, you configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
 For an ESXi hypervisor, you must prepare to deploy the ONTAP Select Deploy VM:
@@ -113,14 +110,14 @@ The steps you follow depend on whether you use an ESXi or KVM hypervisor.
 
 . Navigate to the appropriate location in the hierarchy and select *Deploy OVF Template*.
 
-. Select the OVA file and complete the Deploy OVF Template wizard, selecting the options as appropriate for your environment.
+. Select the OVA file and complete the Deploy OVF Template wizard. Select the options that are appropriate for your environment.
 +
 You must define the password for the administrator account. You need to provide this password when signing in to the Deploy utility.
 
 . After the VM is deployed, select the new VM. If it isn't already powered on based on your input to the deployment wizard, power it on manually.
 
 . If needed, you can configure the Deploy network using the VM console:
-.. Click the *Console* tab to access the ESXi host setup shell and monitor the power on process.
+.. Select the *Console* tab to access the ESXi host setup shell and monitor the power on process.
 .. Wait for the following prompt:
 +
 Host name :
@@ -133,7 +130,7 @@ Provide a password for the admin user:
 +
 Use DHCP to set networking information? [n]:
 .. Type *n* to define a static IP configuration or *y* to use the DHCP, and select *Enter*.
-.. If you choose a static configuration, provide all network configuration information as required.
+.. If you choose a static configuration, provide all the required network configuration information.
 --
 
 .KVM
@@ -179,14 +176,14 @@ Use DHCP to set networking information? [n]:
 ----
 
 .. Type *n* to define a static IP configuration or *y* to use the DHCP, and select *Enter*.
-.. If you choose a static configuration, provide all network configuration information as required.
+.. If you choose a static configuration, provide all the required network configuration information.
 --
 
 ====
 
-== Sign in to the Deploy web interface
+== Step 4: Sign in to the Deploy web interface
 
-You should sign in to the web user interface to confirm the Deploy utility is available and perform initial configuration.
+Sign in to the web user interface to confirm that the Deploy utility is available and set up the initial configuration.
 
 .Steps
 . Point your browser to the Deploy utility using the IP address or domain name:
@@ -197,15 +194,18 @@ You should sign in to the web user interface to confirm the Deploy utility is av
 
 . If the *Welcome to ONTAP Select* pop-up window is displayed, review the prerequisites and select *OK* to continue.
 
-. If this is the first time signing in and you didn't install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
+. If this is the first time signing in and you did not install Deploy using the wizard available with vCenter, provide the following configuration information when prompted:
 +
 * New password for the administrator account (required)
 * AutoSupport (optional)
 * vCenter server with account credentials (optional)
 
+.What's next:
+link:task_deploy_cluster.html[Deploy an ONTAP Select cluster]
+
 .Related information
-* link:task_cli_signing_in.html[Sign in to Deploy using SSH]
-* link:deploy-evaluation-ontap-select-ovf-template.html[Deploy a 90-day evaluation instance of an ONTAP Select cluster]
+* link:task_cli_signing_in.html[Learn about signing in to Deploy using SSH]
+* link:deploy-evaluation-ontap-select-ovf-template.html[Learn about deploying a 90-day evaluation instance of an ONTAP Select cluster]
 
 // 2025 JAN 17, ONTAPDOC-2556
 // 2024 NOV 18, ONTAPDOC-2547
