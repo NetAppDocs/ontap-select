@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: capacity-tiers-license.html
 keywords: license, licensing, Capacity Tiers, usable, space
-summary: TThe Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
+summary: The Capacity Tier license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
 ---
-= Considerations for sizing an ONTAP Select Capacity Tiers license
+= Considerations for sizing an ONTAP Select Capacity Tier license
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,7 +12,7 @@ summary: TThe Capacity Tiers license is based on the underlying disk capacity ma
 :imagesdir: ./media/
 
 [.lead]
-The Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
+The Capacity Tier license is based on the underlying disk capacity managed by each ONTAP Select node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tier license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
 
 The licensed capacity for a Capacity Tier license is in full TiB amounts, with a minimum of 1 TiB. You calculate the licensed capacity by multiplying the amount of usable space by the overhead factor. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
 
@@ -59,4 +59,4 @@ Per HA pair in a multi-node cluster:
 |===
 
 .What's next
-link:task_lic_acquire_ct.html[Acquire a Capacity Tiers license for ONTAP Select]
+link:task_lic_acquire_ct.html[Acquire a Capacity Tier license for ONTAP Select]
