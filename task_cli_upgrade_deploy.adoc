@@ -12,35 +12,34 @@ summary: You can upgrade an existing Deploy utility virtual machine in-place usi
 :imagesdir: ./media/
 
 [.lead]
-You can upgrade an existing ONTAP Select Deploy utility virtual machine in-place using the ONTAP Select Deploy utility CLI.
+Upgrade an existing ONTAP Select Deploy utility virtual machine in-place using the ONTAP Select Deploy utility CLI.
 
 .Before you begin
 
-Make sure that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. See the current release notes for information and restrictions about upgrading the ONTAP Select Deploy utility.
+Verify that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. See the link:reference_release_notes.html[release notes] for information and restrictions about upgrading the ONTAP Select Deploy utility.
 
 [NOTE]
 ====
 If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. See link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
-
 
 You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from ONTAP Select Deploy 9.15.1 or earlier, review the release notes for your ONTAP Select version.
 ====
 
 == Step 1: Download the upgrade package
 
-To begin the upgrade process, download the appropriate ONTAP Select Deploy virtual machine upgrade file from the link:https://mysupport.netapp.com/site/[NetApp Support Site^]. The upgrade package is formatted as a single compressed file.
+To begin the upgrade process, download the ONTAP Select Deploy Upgrade file from the NetApp Support Site. The upgrade package is formatted as a single compressed file.
 
 .Steps
 
-. Access the link:https://mysupport.netapp.com/site/[NetApp Support Site^] using a web browser and choose *Downloads* from the Downloads menu.
+. Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
 
-. Scroll down and select *ONTAP Select Deploy Upgrade*.
+. Scroll down and select *ONTAP Select Deploy*.
 
 . Select the desired ONTAP Select version.
 
 . Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
-. Select and download the appropriate package, responding to all prompts as needed for your environment.
+. Select and download the appropriate *ONTAP Select Deploy Upgrade* package. Respond to all prompts as needed.
 
 == Step 2: Upload the package to the ONTAP Select Deploy virtual machine
 
