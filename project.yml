@@ -114,7 +114,7 @@ sidebar:
             - title: Capacity Tiers
               entries:
                 - title: Considerations for sizing a license 
-                  url: /capacity-tiers-license.html
+                  url: /sizing-capacity-tier-license.html
                 - title: Acquire a license
                   url: /task_lic_acquire_ct.html
             - title: Capacity Pools

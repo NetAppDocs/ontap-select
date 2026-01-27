@@ -17,7 +17,7 @@ When using Capacity Tiers licensing, you need to acquire a license file for each
 .Before you begin
 * You must have the nine-digit license serial number assigned to the ONTAP Select node by NetApp.
 * You should wait at least 24 hours after the shipped date of your purchase order before acquiring a license file.
-* You have reviewed the link:capacity-tiers-license.html[considerations for sizing a Capacity Tiers license]. 
+* You have reviewed the link:sizing-capacity-tier-license.html[considerations for sizing a Capacity Tiers license]. 
 
 .About this task
 You must perform this task for each ONTAP Select node requiring a Capacity Tiers license.
