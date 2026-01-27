@@ -62,7 +62,7 @@ link:task_cluster_expansion_contraction.html[Learn about cluster expansion and c
 
 Updated KVM hypervisor support::
 
-Beginning with ONTAP Select 9.18.1, there are no software RAID workflow limitations for the KVM hypervisor on Red Hat Enterprise Linux (RHEL) 10.1 and 10.0 and Rocky Linux 10.0. The software RAID workflow limitations only affect RHEL 10.1 and 10.0 and Rocky Linux 10.0 deployed with ONTAP Select 9.17.1.
+Beginning with ONTAP Select 9.18.1, there are no software RAID workflow limitations for the KVM hypervisor on Red Hat Enterprise Linux (RHEL) 10.1 and 10.0 and Rocky Linux 10.1 and 10.0.
 
 == ONTAP Select 9.17.1
 
@@ -132,11 +132,11 @@ For ONTAP Select 9.16.1 and earlier, the NVD continues to provide support for NV
 
 Updated KVM hypervisor support::
 
-Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, and 9.6 and Rocky Linux 10.0 and 9.6.
+Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, and 9.6 and Rocky Linux 10.1, 10.0, 9.7, and 9.6.
 +
 [NOTE]
 ====
-There are software RAID workflow limitations for KVM hypervisors on RHEL 10.0 and Rocky Linux 10.0 hosts. For more information, see the following Knowledge Base articles:
+There are software RAID workflow limitations for KVM hypervisors on RHEL 10.1 and 10.0 and Rocky Linux 10.1 and 10.0 hosts. For more information, see the following Knowledge Base articles:
 
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020[CDEPLOY-4020: ONTAP Select Deploy: Warning message while create the Cluster HWR using RHEL 10 and ROCKY 10^]
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025[CDEPLOY-4025: ONTAP Select DeployGUI: Storage pools and storage disks not visible for SWR in cluster creation page on hosts with RHEL10/Rocky 10^]
