@@ -45,3 +45,5 @@ You must perform this task for each Capacity Pool used by the ONTAP Select nodes
 .After you finish
 
 You must upload the license file to the Deploy administration utility before an ONTAP Select node can use the Capacity Pool.
+
+// 2026 JAN 27, ONTAPDOC-3021 and NADIAA updates

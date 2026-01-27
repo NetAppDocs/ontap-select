@@ -45,4 +45,4 @@ You can select either *Download License* or *Email License*.
 .After you finish
 You must upload the license file to the Deploy administration utility before it can be applied to an ONTAP Select node.
 
-// 2026 JAN 27, ONTAPDOC-3021
+// 2026 JAN 27, ONTAPDOC-3021 and NADIAA updates
