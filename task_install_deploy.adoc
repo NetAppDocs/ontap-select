@@ -23,7 +23,7 @@ https://mysupport.netapp.com/site/user/registration[You have a registered NetApp
 
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESX hosts and `TGZ` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESXi hosts and `TGZ` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
 . Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
