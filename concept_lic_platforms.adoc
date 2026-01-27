@@ -195,8 +195,6 @@ VMware vSphere 7.0GA and updates 1 through 3C
 
 Rocky Linux (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 
-* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020[CDEPLOY-4020: ONTAP Select Deploy: Warning message while create the Cluster HWR using RHEL 10 and ROCKY 10^]
-* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025[CDEPLOY-4025: ONTAP Select DeployGUI: Storage pools and storage disks not visible for SWR in cluster creation page on hosts with RHEL10/Rocky 10^]
 2+| Management software
 3+| NetApp Active IQ Unified Manager management suite
 
