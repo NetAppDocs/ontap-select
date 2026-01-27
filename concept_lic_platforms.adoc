@@ -191,11 +191,11 @@ VMware vSphere 7.0GA and updates 1 through 3C
 
 
 2+| Hypervisor support (KVM)
-3+a| Red Hat Enterprise Linux 64-bit (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6 
+3+a| Red Hat Enterprise Linux 64-bit (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6 
 
 Rocky Linux (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 
-*Note*: There are software RAID workflow limitations for KVM hypervisors on RHEL 10.0 and Rocky Linux 10.0 hosts. For more information, see the following Knowledge Base articles:
+*Note*: There are software RAID workflow limitations for KVM hypervisors on RHEL 10.1 and 10.0 and Rocky Linux 10.0 hosts. For more information, see the following Knowledge Base articles:
 
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020[CDEPLOY-4020: ONTAP Select Deploy: Warning message while create the Cluster HWR using RHEL 10 and ROCKY 10^]
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025[CDEPLOY-4025: ONTAP Select DeployGUI: Storage pools and storage disks not visible for SWR in cluster creation page on hosts with RHEL10/Rocky 10^]
