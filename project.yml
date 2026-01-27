@@ -118,7 +118,11 @@ sidebar:
                 - title: Acquire a license
                   url: /task_lic_acquire_ct.html
             - title: Capacity Pools
-              url: /task_lic_acquire_cp.html
+              entries:
+                - title: Considerations for sizing a license 
+                  url: /sizing-capacity-pool-license.html
+                - title: Acquire a license
+                  url: /task_lic_acquire_cp.html
         - title: ONTAP features
           url: /reference_lic_ontap_features.html
     - title: Install

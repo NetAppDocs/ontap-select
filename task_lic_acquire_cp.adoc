@@ -18,6 +18,7 @@ You must acquire a license file for each Capacity Pool used by the ONTAP Select 
 
 * You must have the nine-digit license serial number assigned to the Capacity Pool by NetApp. 
 * You should wait at least 24 hours after the shipped date of your purchase order before acquiring a license file.
+* You have reviewed the link:sizing-capacity-pool-license.html[considerations for sizing a Capacity Pools license].
 
 .About this task
 
