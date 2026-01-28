@@ -18,7 +18,7 @@ There are several benefits when using the Capacity Pools licensing model instead
 
 When using Capacity Tiers licensing, you allocate a fixed storage capacity to each node. Any unused space cannot be shared with the other nodes and is effectively wasted. With Capacity Pools licensing, each node only consumes the capacity it needs, based on the size of the data aggregates.
 
-Because the capacity is anchored in a central pool, it can be shared among many nodes in your organization.
+Capacity is anchored in a central pool where it can be shared among many nodes in your organization.
 
 == Significantly reduced administrative overhead resulting in lower cost
 
