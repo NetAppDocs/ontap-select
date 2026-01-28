@@ -60,9 +60,6 @@ You can decrease the cluster size for an existing cluster on an ESXi or KVM host
 +
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
-Updated KVM hypervisor support::
-
-Beginning with ONTAP Select 9.18.1, the software RAID workflow limitations that applied in ONTAP Select 9.17.1 for the KVM hypervisor on Red Hat Enterprise Linux (RHEL) 10.1 and 10.0 and Rocky Linux 10.1 and 10.0 have been removed.
 
 == ONTAP Select 9.17.1
 
