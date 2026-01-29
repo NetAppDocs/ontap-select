@@ -17,6 +17,7 @@ ONTAP Select supports most ONTAP features. Many of the ONTAP features are licens
 [NOTE]
 ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
+[[enabled-ontap-features]]
 == ONTAP features automatically enabled by default
 
 The following ONTAP features are supported with ONTAP Select and licensed by default:
@@ -33,9 +34,13 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * NVMe over TCP
 * ONTAP multitenancy capability
 * ONTAP S3
+* SnapLock Select Enterprise
++
+SnapLock Select Enterprise is the implementation of the ONTAP SnapLock feature designed for ONTAP Select. For more information, refer to link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock documentation^].
+
 * S3 SnapMirror
 * SnapMirror
-* SnapMirror cloud
+* SnapMirror Cloud
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
