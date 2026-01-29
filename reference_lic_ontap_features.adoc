@@ -34,9 +34,9 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * NVMe over TCP
 * ONTAP multitenancy capability
 * ONTAP S3
-* SnapLock Select Enterprise
+* SnapLock Select
 +
-SnapLock Select Enterprise is the implementation of the ONTAP SnapLock feature designed for ONTAP Select. For more information, refer to link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock documentation^].
+SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance. For more information, refer to the link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock documentation^].
 
 * S3 SnapMirror
 * SnapMirror
@@ -56,8 +56,6 @@ You need to acquire a separate license for any ONTAP feature that is not enabled
 
 [NOTE]
 ====
-* For ONTAP Select 9.16.1 and earlier, you can download the Enterprise version of the SnapLock Select license free of charge from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually.
-* SnapLock Compliance is not supported for ONTAP Select.
 * You do not need a FabricPool license when utilizing StorageGRID.
 ====
 

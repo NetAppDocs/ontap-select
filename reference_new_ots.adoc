@@ -61,8 +61,8 @@ Beginning with ONTAP Select 9.17.1, SnapMirror Cloud is supported with ONTAP Sel
 +
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror Cloud backups to object storage^]. 
 
-Support for SnapLock Select Enterprise::
-Beginning with ONTAP Select 9.17.1, new deployments have SnapLock Select Enterprise (including tamperproof snapshot locking) licensed automatically. For upgrades from ONTAP Select 9.16.1 and earlier, you can download the Enterprise version of the SnapLock Select license (SnapLock Compliance is not supported on ONTAP Select) free of charge from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually. For more information, see link:reference_lic_ontap_features.html#enabled-ontap-features[ONTAP features automatically enabled by default].
+Support for SnapLock Select::
+Beginning with ONTAP Select 9.17.1, new deployments have SnapLock Select (including tamperproof snapshot locking) licensed automatically. For upgrades from ONTAP Select 9.16.1 and earlier, you can download the SnapLock Select license free of charge from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually. For more information, see link:reference_lic_ontap_features.html#enabled-ontap-features[ONTAP features automatically enabled by default].
 
 Support for vSAN ESA on multi-node clusters::
 Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) is extended to deploy multi-node clusters. This enhancement enables you to deploy vSAN ESA configurations.
