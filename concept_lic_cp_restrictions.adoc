@@ -20,7 +20,7 @@ All of the nodes within a single ONTAP Select cluster must use the same licensin
 
 .All nodes in a cluster use the same License Manager instance
 
-All the nodes with a Capacity Pool license in an ONTAP Select cluster must use the same License Manager instance. Because there is one instance of License Manager within each Deploy instance, this restriction is a restatement of the existing requirement that all nodes in a cluster must be managed by the same Deploy instance.
+All the nodes with a Capacity Pool license in an ONTAP Select cluster must use the same License Manager instance. Because there is one instance of License Manager within each Deploy instance, this restriction is a restatement of the existing requirement that the same Deploy instance must manage all nodes in a cluster.
 
 .One Capacity Pool per node
 
