@@ -83,7 +83,7 @@ For single node clusters, all data partitions are used to store local (active) d
 
 == Passthrough (DirectPath IO) devices vs. Raw Device Maps (RDMs)
 
-ESX and KVM hypervisors don't support NVMe disks as Raw Device Maps (RDMs). To allow ONTAP Select to take direct control of NVMe disks, you must configure these drives as passthrough devices within ESX or KVM. When configuring an NVMe device as a passthrough device, it requires support from the server BIOS and you might need to reboot the host. Additionally, there are limits to the number of passthrough devices that can be assigned per host, which might vary depending on the platform. However, ONTAP Deploy limits this to 14 NVMe devices per ONTAP Select node. This means that the NVMe configuration provides a very high IOPs density (IOPs/TB) at the expense of total capacity. Alternatively, if you desire a high performance configuration with larger storage capacity, the recommended configuration is a large ONTAP Select VM size, an INTEL Optane card for the system disk, and a nominal number of SSD drives for data storage.
+ESXi and KVM hypervisors don't support NVMe disks as Raw Device Maps (RDMs). To allow ONTAP Select to take direct control of NVMe disks, you must configure these drives as passthrough devices within ESXi or KVM. When configuring an NVMe device as a passthrough device, it requires support from the server BIOS and you might need to reboot the host. Additionally, there are limits to the number of passthrough devices that can be assigned per host, which might vary depending on the platform. However, ONTAP Deploy limits this to 14 NVMe devices per ONTAP Select node. This means that the NVMe configuration provides a very high IOPs density (IOPs/TB) at the expense of total capacity. Alternatively, if you desire a high performance configuration with larger storage capacity, the recommended configuration is a large ONTAP Select VM size, an INTEL Optane card for the system disk, and a nominal number of SSD drives for data storage.
 
 [NOTE]
 To take full advantage of NVMe performance, consider the large ONTAP Select VM size.
@@ -103,7 +103,7 @@ When adding capacity to an ONTAP Select VM using software RAID, the administrato
 
 Similar to FAS and AFF systems, you can only add drives with equal or larger capacities to an existing RAID group. Larger capacity drives are right sized. If you are creating new RAID groups, the new RAID group size should match the existing RAID group size to make sure that the overall aggregate performance does not deteriorate.
 
-== Match an ONTAP Select disk to the corresponding ESX or KVM disk
+== Match an ONTAP Select disk to the corresponding ESXi or KVM disk
 
 ONTAP Select disks are usually labeled NET x.y. You can use the following ONTAP command to obtain the disk UUID:
 
@@ -122,7 +122,7 @@ Aggregate: -
 Plex: -This UID can be matched with the device UID displayed in the ‘storage devices’ tab for the ESX host
 ----
 
-image:ST_21.jpg[Matching an ONTAP Select Disk to the Corresponding ESX Disk]
+image:ST_21.jpg[Matching an ONTAP Select Disk to the Corresponding ESXi Disk]
 
 In the ESXi or KVM shell, you can enter the following command to blink the LED for a given physical disk (identified by its naa.unique-id).
 

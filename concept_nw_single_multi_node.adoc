@@ -28,7 +28,7 @@ ONTAP Select can be deployed as a single-node cluster. The hypervisor host inclu
 
 .ESXi
 
-The relationship between these ports and the underlying physical adapters can be seen in the following figure, which depicts one ONTAP Select cluster node on the ESX hypervisor.
+The relationship between these ports and the underlying physical adapters can be seen in the following figure, which depicts one ONTAP Select cluster node on the ESXi hypervisor.
 
 *Network configuration of single-node ONTAP Select cluster*
 
@@ -81,7 +81,7 @@ These ports are preconfigured to provide the following services:
 
 Ports e0a, e0b, and e0g reside on the external network. Although ports e0c through e0f perform several different functions, collectively they compose the internal Select network. When making network design decisions, these ports should be placed on a single layer-2 network. There is no need to separate these virtual adapters across different networks.
 
-The relationship between these ports and the underlying physical adapters is illustrated in the following figure, which depicts one ONTAP Select cluster node on the ESX hypervisor.
+The relationship between these ports and the underlying physical adapters is illustrated in the following figure, which depicts one ONTAP Select cluster node on the ESXi hypervisor.
 
 *Network configuration of a single node that is part of a multinode ONTAP Select cluster*
 

@@ -88,9 +88,9 @@ Beginning with ONTAP Select 9.17.1, new deployments have SnapLock Select Enterpr
 Support for vSAN ESA on multi-node clusters::
 Beginning with ONTAP Select 9.17.1, support for vSAN Express Storage Architecture (ESA) is extended to deploy multi-node clusters. This enhancement enables you to deploy vSAN ESA configurations.
 +
-vSAN ESA is an ESX specific configuration and is a new architecture for VMware vSAN introduced in vSphere 8. vSAN ESA is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
+vSAN ESA is an ESXi specific configuration and is a new architecture for VMware vSAN introduced in vSphere 8. vSAN ESA is designed to offer enhanced efficiency, scalability, and performance, particularly when using NVMe-based TLC flash devices.
 +
-ONTAP Select Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node and multi-node cluster, using either a vSAN or an external array type of datastore for its storage pool.
+ONTAP Select Deploy and ONTAP Select for ESXi support the configuration of an ONTAP Select single-node and multi-node cluster, using either a vSAN or an external array type of datastore for its storage pool.
 +
 [NOTE] 
 ====
@@ -148,7 +148,7 @@ You can increase the cluster size from a six-node cluster to an eight-node clust
 +
 You can decrease the cluster size from an eight-node cluster to six-node cluster with the cluster contraction feature. Cluster contractions from six or eight-node clusters to one, two, or four-node clusters are not currently supported. link:task_cluster_expansion_contraction.html#contract-the-cluster[Learn more].
 
-NOTE: Support for cluster expansion and contraction is limited to ESX clusters only.
+NOTE: Support for cluster expansion and contraction is limited to ESXi clusters only.
 
 
 == ONTAP Select 9.14.1
