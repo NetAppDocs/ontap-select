@@ -45,19 +45,19 @@ SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Selec
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
 +
-NOTE: ONTAP Select supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
+ONTAP Select supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
 
 == ONTAP features that are separately licensed
 
 You need to acquire a separate license for any ONTAP feature that is not enabled by default, including:
 
 * FabricPool
++
+NOTE: You do not need a FabricPool license when utilizing StorageGRID.
+
 * MetroCluster SDS (ONTAP Select premium license offering)
 
-[NOTE]
-====
-* You do not need a FabricPool license when utilizing StorageGRID.
-====
+
 
 .Related information
 
