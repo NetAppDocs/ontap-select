@@ -84,7 +84,7 @@ Kernel-Based Virtual Machines (KVM) do not support the large instance type.
 
 == Compare hardware support for platform license offerings
 
-The standard, premium, and premium XL license offerings support a wide range of hardware and software. For up-to-date information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
+The standard, premium, and premium XL license offerings support a wide range of hardware and software. For current information on hardware and software versions, see the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^]. 
 
 [role="tabbed-block"]
 ====
@@ -210,8 +210,10 @@ SnapCenter (optional)
 
 --
 ====
-.Related information
-* link:concept_lic_production.html[Learn about Capacity Tier and Capacity Pool license types]
+
+.What's next?
+
+link:concept_lic_workflow.html[Learn about purchasing an ONTAP Select license]
 
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 Sep 16, ONTAPDOC-3305
