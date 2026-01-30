@@ -106,7 +106,7 @@ For ONTAP Select 9.16.1 and earlier, the NVD continues to provide support for NV
 
 Updated KVM hypervisor support::
 
-Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 10.0 and 9.6 and Rocky Linux 10.0 and 9.6.
+Beginning with ONTAP Select 9.17.1, KVM hypervisor is supported on Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, and 9.6 and Rocky Linux 10.0 and 9.6.
 +
 include::./_include/rhel-and-rockylinux10-rl-support.adoc[]
 
