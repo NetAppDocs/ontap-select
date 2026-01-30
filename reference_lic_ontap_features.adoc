@@ -40,7 +40,7 @@ SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Selec
 
 * S3 SnapMirror
 * SnapMirror
-* SnapMirror Cloud
+* SnapMirror cloud
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
