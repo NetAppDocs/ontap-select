@@ -16,38 +16,42 @@ If you plan to use NVMe drives with software RAID, you need to configure the ESX
 
 Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
 
+== Step 1: Configure the host
+Configure the ESXi or KVM host to recognize the drives.
+
 .Before you begin
 
 Make sure your deployment environment meets the following minimum requirements:
 
 * For an ESX host, ONTAP Select 9.7 or later with a supported Deploy administration utility
-* For a KVM host, ONTAP Select 9.17.1 with a supported Deploy administration utility
+* For a KVM host, ONTAP Select 9.17.1 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
 * The ESXi or KVM host is running a supported hypervisor version:
 +
 [role="tabbed-block"]
-====
+=====
 
 .ESXi
 --
 ESXi is supported on the following hypervisor versions:
 
+* VMware ESXi 9.0
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 GA (build 20513097)
-* VMware ESXi 7.0 GA (build 15843807 or greater), including 7.0 U1, U2, and U3C
 --
 
 .KVM
 --
 KVM is supported on the following hypervisor versions:
 
-* Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
---
+* Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 
-====
+include::./_include/rhel-and-rockylinux10-rl-support.adoc[]
+--
+=====
 
 * NVMe devices conforming to specification 1.0 or later
 
@@ -96,7 +100,7 @@ The following example output is for an ESXi host:
 +
 image:nvme_03.png[Reboot This Host]
 
-.After you finish
+== Step 2: Install the ONTAP Select Deploy utility
 
 After the hosts are prepared, you can install the ONTAP Select Deploy utility. Deploy guides you through creating ONTAP Select storage clusters on your newly prepared hosts. During this process, Deploy detects the presence of the NVMe drives configured for pass-through and automatically selects them for use as ONTAP data disks. You can adjust the default selection if needed.
 
@@ -107,11 +111,11 @@ The following example output is for an ESXi host:
 
 image:nvme_04.png[ONTAP Select Deploy Clusters]
 
-After the cluster is successfully deployed, ONTAP System Manager allows you to provision the storage according to best practices. ONTAP will automatically enable flash-optimized storage efficiency features that make the best use of your NVMe storage.
+After the cluster is successfully deployed, ONTAP System Manager allows you to provision the storage according to best practices. ONTAP automatically enables flash-optimized storage efficiency features that make the best use of your NVMe storage.
 
 image:nvme_05.png[preparing local storage]
 
 image:nvme_06.png[ONTAP System Manager]
 
-
+// 2025 DEC 9. ONTAPDOC-3461
 // 2025 July 17, ONTAPDOC-2885 

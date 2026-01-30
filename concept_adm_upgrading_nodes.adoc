@@ -37,10 +37,11 @@ Review the Release Notes for additional information and any required procedures 
 
 You cannot revert an ONTAP Select node to a version prior to the one on which it was originally installed. For example:
 
-ONTAP Select 9.7 is initially installed::
-You can upgrade the node to version 9.8 and then revert back to version 9.7 if needed.
-ONTAP Select 9.8 is initially installed::
-You cannot revert to version 9.7 because this version is prior to the version that was originally installed.
+ONTAP Select 9.16.1 is initially installed::
+You can upgrade the node to version 9.17.1 and then revert back to version 9.16.1 if needed.
+
+ONTAP Select 9.17.1 is initially installed::
+Reversion is not possible because there was no earlier version previously installed.
 
 == Use the VMXNET3 network driver
 

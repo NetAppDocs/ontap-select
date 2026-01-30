@@ -4,7 +4,6 @@ permalink: task_cli_deploy_image_add.html
 keywords: administer, administering, cli, deploy, ontap select image, add
 summary: You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
 ---
-
 = Add an ONTAP Select image to Deploy
 :hardbreaks:
 :nofooter:
@@ -15,43 +14,36 @@ summary: You can add an ONTAP Select image to your instance of the Deploy admini
 [.lead]
 You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
 
-== Before you begin
-
-At a high level, the process used to add an ONTAP Select image to an instance of Deploy consists of four steps:
-
-. Downloading the install image
-. Uploading the install image to the Deploy virtual machine
-. Adding the install image
-. Displaying the available install images
+.Before you begin
 
 Before adding any new ONTAP Select images to Deploy, you should first remove any unneeded images.
 
 [NOTE]
 You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of the Deploy utility. Adding later versions of ONTAP Select as they become available from NetApp is not a supported configuration.
 
-== Download the install image
+== Step 1: Download the install image
 
 To begin the process of adding an ONTAP Select image to an instance of the Deploy utility, you must download the install image from the NetApp Support Site. The ONTAP Select install image is formatted as a single compressed file.
 
 .Steps
 
-. Access the NetApp Support Site using a web browser and click *Support Quick Links*.
+. Access the NetApp Support Site using a web browser and select *Support Quick Links*.
 
-. Click *Download Software* under *Top Tasks* and sign in to the site.
+. Select *Download Software* under *Top Tasks* and sign in to the site.
 
-. Click *Find your product*.
+. Select *Find your product*.
 
 . Scroll down and click *ONTAP Select*.
 
-. Under *Other Available Select Software* click *Deploy Upgrade, Node Upgrade, Image Install*.
+. Under *Other Available Select Software* select *Deploy Upgrade, Node Upgrade, Image Install*.
 
 . Select the desired release of the upgrade package.
 
-. Review the End User License Agreement (EULA) and click *Accept & Continue*.
+. Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
 . Select and download the appropriate package, responding to all prompts as needed for your environment.
 
-== Upload the install image to Deploy
+== Step 2: Upload the install image to Deploy
 
 After acquiring the ONTAP Select install image, you must upload the file to the Deploy virtual machine.
 
@@ -64,15 +56,11 @@ This task describes one method for uploading the file to the Deploy virtual mach
 
 .Step
 
-. In a command shell on your local workstation, upload the image file to the Deploy virtual machine.
-+
-Example
+. In a command shell on your local workstation, upload the image file to the Deploy virtual machine, as shown in the following examples:
 +
 ....
 scp image_v_93_install_esx.tgz admin@10.234.81.101:/home/admin (provide password when prompted)
 ....
-+
-Example
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -84,9 +72,9 @@ exit
 
 The node install file is stored in the home directory of the admin user.
 
-== Add the install image
+== Step 3: Add the install image
 
-You can add the ONTAP Select installation image to the Deploy images directory so it is available when deploying a new cluster.
+Add the ONTAP Select installation image to the Deploy images directory so it is available when deploying a new cluster.
 
 .Before you begin
 
@@ -98,16 +86,18 @@ You must know which directory the install image file has been placed in at the D
 
 . Start the Bash shell:
 +
-`shell bash`
+[source,cli]
+----
+shell bash
+----
 
-. Place the install image file into the images directory.
+. Place the install image file into the images directory, as shown in the following example:
 +
-Example
 `tar -xf image_v_93_install_esx.tgz -C /opt/netapp/images/`
 
-== Display the available install images
+== Step 4: Display the available install images
 
-You can display the ONTAP Select images that are available when deploying a new cluster.
+Display the ONTAP Select images that are available when deploying a new cluster.
 
 .Steps
 
@@ -117,8 +107,8 @@ You can display the ONTAP Select images that are available when deploying a new 
 +
 Use the domain name or IP address of the Deploy virtual machine.
 
-. Navigate to the bottom of the page and click *Deploy* and then click *GET /images*.
+. Navigate to the bottom of the page and select *Deploy* and then select *GET /images*.
 
-. Click *Try it out!* to display the available ONTAP Select images.
+. Select *Try it out!* to display the available ONTAP Select images.
 
 . Confirm that the desired image is available.

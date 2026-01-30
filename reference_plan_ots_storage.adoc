@@ -44,8 +44,7 @@ When deploying an ONTAP Select cluster on the hypervisor, you can utilize the so
 
 The environment for a software RAID deployment must meet the following core requirements:
 
-* VMware ESXi 7.0 GA (build 15843807) or later
-
+* VMware ESXi 8.0 GA (build 20513097) or later
 * ONTAP Select premium license or higher
 * Local SSD drives only
 * Separation of system disks from the root and data aggregates
@@ -56,7 +55,7 @@ If a hardware RAID controller is present, see the link:concept_stor_concepts_cha
 
 === ESXi specific requirements
 
-* VMware ESXi 7.0 GA (build 15843807) or later
+* VMware ESXi 8.0 GA (build 20513097) or later
 * VMware VMotion, HA, and DRS are not supported
 * You cannot use software RAID with a node that has been upgraded from ONTAP Select 9.4 or earlier. If this is the case, you need to create a new node for software RAID deployment. 
 
@@ -185,9 +184,9 @@ Software RAID with local DAS drives is supported with the premium license (SSD o
 
 You can configure software RAID to use NVMe SSD drives. Your environment must meet the following requirements:
 
-* ONTAP Select 9.7 or later with a supported Deploy administration utility
+* ONTAP Select with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
-* VMware ESXi version 6.7 or later
+* VMware ESXi version 8.0 or later
 * NVMe devices conforming to specification 1.0 or later
 
 You need to manually configure the NVMe drives before using them. See link:task_chk_nvme_configure.html[Configure a host to use NVMe drives] for more information.

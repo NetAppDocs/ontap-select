@@ -9,19 +9,19 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
   versions:
-    - version-number: "9.17.1"
+    - version-number: "9.18.1"
       url: /ontap-select
+    - version-number: "9.17.1"
+      url: /ontap-select-9171
     - version-number: "9.16.1"
       url: /ontap-select-9161
     - version-number: "9.15.1"
       url: /ontap-select-9151 
     - version-number: "9.14.1"
-      url: /ontap-select-9141
-    - version-number: "9.13.1"
-      url: /ontap-select-9131                    
+      url: /ontap-select-9141                    
 sidebar:
   entries:
-    - title: ONTAP Select 9.17.1 docs
+    - title: ONTAP Select 9.18.1 docs
       url: /index.html
     - title: Release Notes
       entries:
@@ -87,32 +87,42 @@ sidebar:
       entries:
         - title: Options
           entries:
-            - title: Evaluation licenses
+            - title: Learn about evaluation licenses
               url: /concept_lic_evaluation.html
             - title: Production licenses
-              url: /concept_lic_production.html
-            - title: Platform license offerings
-              url: /concept_lic_platforms.html
-        - title: Capacity Pools licensing model
-          entries:
-            - title: Operational details
-              url: /concept_lic_cp_operation.html
-            - title: Node serial numbers
-              url: /concept_lic_cp_serial_number.html
-            - title: Restrictions
-              url: /concept_lic_cp_restrictions.html
-            - title: Capacity Pools versus Capacity Tiers
-              url: /concept_lic_cp_compare_ct.html
-            - title: Summary of benefits
-              url: /concept_lic_cp_benefits.html
-        - title: Purchase
+              entries:
+              - title: Learn about production licenses
+                url: /concept_lic_production.html
+              - title: Platform license offerings
+                url: /concept_lic_platforms.html 
+              - title: Capacity Pools licensing model
+                entries:
+                  - title: Operational details
+                    url: /concept_lic_cp_operation.html
+                  - title: Node serial numbers
+                    url: /concept_lic_cp_serial_number.html
+                  - title: Restrictions
+                    url: /concept_lic_cp_restrictions.html
+                  - title: Summary of benefits
+                    url: /concept_lic_cp_benefits.html              
+              - title: Capacity Tiers versus Capacity Pools
+                url: /concept_lic_cp_compare_ct.html
+        - title: Purchase a license
           entries:
             - title: Licensing workflow
               url: /concept_lic_workflow.html
             - title: Capacity Tiers
-              url: /task_lic_acquire_ct.html
+              entries:
+                - title: Considerations for sizing a license 
+                  url: /sizing-capacity-tier-license.html
+                - title: Acquire a license
+                  url: /task_lic_acquire_ct.html
             - title: Capacity Pools
-              url: /task_lic_acquire_cp.html
+              entries:
+                - title: Considerations for sizing a license 
+                  url: /sizing-capacity-pool-license.html
+                - title: Acquire a license
+                  url: /task_lic_acquire_cp.html
         - title: ONTAP features
           url: /reference_lic_ontap_features.html
     - title: Install
@@ -223,8 +233,8 @@ sidebar:
               url: /concept_api_rest.html
             - title: Access the Deploy API
               url: /concept_api_how_access.html
-            - title: Deploy API versioning
-              url: /concept_api_versions.html
+          # - title: Deploy API versioning
+          #   url: /concept_api_versions.html
             - title: Basic operation
               url: /concept_api_operation.html
             - title: Request and response transaction
@@ -281,8 +291,8 @@ sidebar:
           url: /task_cli_clusters.html
         - title: Nodes and hosts
           entries:
-            - title: Upgrade ESXi to 6.5 and higher
-              url: /task_cli_upgrade_esxi65.html
+            - title: Upgrade ESXi
+              url: /cli-upgrade-esxi.html
             - title: Modify a host management server
               url: /reference_host_modify_command.html
         - title: Deploy utility
@@ -297,8 +307,12 @@ sidebar:
               url: /task_cli_deploy_image_remove.html
             - title: Recover Deploy for a two-node cluster
               url: /task_cli_deploy_recover_two_node.html
-    - title: Deploy a 90-day evaluation instance of a cluster
-      url: /deploy-evaluation-ontap-select-ovf-template.html
+    - title: Try ONTAP Select
+      entries:
+       - title: Access evaluation software
+         url: /access-evaluation-software.html
+       - title: Deploy a 90-day evaluation instance of a cluster
+         url: /deploy-evaluation-ontap-select-ovf-template.html
     - title: FAQ
       url: /reference_faq.html
     - title: Legal notices

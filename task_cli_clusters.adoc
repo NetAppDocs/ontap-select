@@ -4,7 +4,7 @@ permalink: task_cli_clusters.html
 keywords: administer, administering, cli, clusters
 summary: There are several related tasks you can perform to administer an ONTAP Select cluster.
 ---
-= ONTAP Select clusters
+= Manage ONTAP Select clusters using the CLI
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,13 +12,50 @@ summary: There are several related tasks you can perform to administer an ONTAP 
 :imagesdir: ./media/
 
 [.lead]
-There are several related tasks you can perform to administer an ONTAP Select cluster.
+There are several related tasks you can perform to administer an ONTAP Select cluster using the CLI.
 
-== Delete an ONTAP Select clusters
+== Back up the ONTAP Select Deploy configuration data
 
-You can delete an ONTAP Select cluster when it is no longer needed using the command line interface.
+Backup of the ONTAP Select Deploy configuration data, for example, after deploying a cluster. The data is saved to a single encrypted file that you can download to your local workstation.
 
-.About this task
+The backup file you create captures all the configuration data. This data describes aspects of your deployment environment, including the ONTAP Select clusters.
+
+.Before you begin
+Make sure that Deploy is not performing any other tasks during the backup operation.
+
+.Steps
+
+. Sign in to the ONTAP Select Deploy utility CLI using SSH with the administrator account.
+
+. Create a backup of the ONTAP Select Deploy configuration data, which is stored in an internal directory at the ONTAP Select Deploy server:
++
+[source,cli]
+----
+deploy backup create
+----
+
+. Provide a password for the backup when prompted.
++
+The backup file is encrypted based on the password.
+
+. Display the available backups in the system:
++
+[source,cli]
+----
+deploy backup show -detailed
+----
+
+. Select your backup file based on the date in the *Created* field and record the *Download URL* value.
++
+You can access the backup file through the URL.
+
+. Using a web browser or utility such as Curl, download the backup file to your local workstation with the URL.
+
+== Delete an ONTAP Select cluster
+
+You can delete an ONTAP Select cluster when it is no longer needed.
+
+.Before you begin
 
 The cluster must be in the offline state.
 
@@ -27,10 +64,24 @@ The cluster must be in the offline state.
 . Sign in to the Deploy virtual machine CLI using the administrator account.
 
 . Display the cluster status:
-`cluster show -name CLUSTERNAME`
++
+[source,cli]
+----
+cluster show -name <cluster_name>
+----
 
 . If the cluster is not offline, move it to an offline state:
-`cluster offline -name CLUSTERNAME`
++
+[source,cli]
+----
+cluster offline -name <cluster_name>
+----
 
 . After confirming the cluster is in an offline status, delete the cluster:
-`cluster delete -name CLUSTERNAME`
++
+[source,cli]
+----
+cluster delete -name <cluster_name>
+----
+
+// 2025 OCT 22, ONTAPDOC-2246

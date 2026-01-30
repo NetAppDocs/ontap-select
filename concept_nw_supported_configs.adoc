@@ -36,7 +36,7 @@ There are several supported Ethernet configurations based on the cluster size.
 |4 x 1GbE or 1 x 10GbE
 |2 x 10GbE
 
-|4/6/8 node cluster
+|Four, six, eight, ten, or twelve-node cluster
 |2 x 10GbE
 |4 x 10GbE or 2 x 25/40GbE
 |===

@@ -14,6 +14,8 @@ summary: Because of the inherent flexibility of REST web services, the ONTAP Sel
 [.lead]
 Because of the inherent flexibility of REST web services, the ONTAP Select Deploy API can be accessed in several different ways.
 
+NOTE: The REST API included with ONTAP Select Deploy is assigned a version number. The API version number is independent of the Deploy release number. The ONTAP Select 9.17.1 Deploy administration utility includes version 3 of the REST API.
+
 == Deploy utility native user interface
 
 The primary way you access the API is through the ONTAP Select Deploy web user interface. The browser makes calls to the API and reformats the data according to the design of the user interface. You also access the API through the Deploy utility command line interface.
@@ -25,3 +27,5 @@ The ONTAP Select Deploy online documentation page provides an alternative access
 == Custom program
 
 You can access the Deploy API using any of several different programming languages and tools. Popular choices include Python, Java, and cURL. A program, script, or tool that uses the API acts as a REST web services client. Using a programming language allows you to better understand the API and provides an opportunity to automate the ONTAP Select deployments.
+
+// 2025 OCT 21, ONTAPDOC-3148

@@ -12,7 +12,7 @@ summary: ONTAP Select MetroCluster SDS offers enhanced protection and a cost eff
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select is built on ONTAP storage software to deliver enterprise storage services efficiently with a highly available, shared-nothing scale-out architecture. You can deploy a solution with one, two, four, six, or eight nodes with up to 400TB of raw capacity for NFS, SMB/CIFS, and iSCSI connected storage per node. You can leverage native deduplication and compression to lower storage costs by increasing your effective capacity. The scale-out architecture enables high availability and non-disruptive data mobility for load balancing or to service hardware. 
+ONTAP Select is built on ONTAP storage software to deliver enterprise storage services efficiently with a highly available, shared-nothing scale-out architecture. You can deploy a solution with one, two, four, six, eight, ten, or twelve nodes with up to 400TB of raw capacity for NFS, SMB/CIFS, and iSCSI connected storage per node. You can leverage native deduplication and compression to lower storage costs by increasing your effective capacity. The scale-out architecture enables high availability and non-disruptive data mobility for load balancing or to service hardware. 
 
 == Snapshot data protection
 ONTAP Select includes data protection features, including snapshot and SnapMirror software. You can quickly replicate your data to other ONTAP storage, whether on premises, at a remote site, or in the cloud. If you must recover your data quickly, SnapRestore software can use local snapshots to recover entire file systems or data volumes in seconds, regardless of the capacity or number of files.

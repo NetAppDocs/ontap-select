@@ -36,7 +36,7 @@ ONTAP Select is composed of two major software components:
 
 === ONTAP Select node
 
-An ONTAP Select cluster is composed of one, two, four, six, or eight nodes. Each cluster node is deployed as a separate virtual machine and runs a specially-designed version of the ONTAP 9 software.
+An ONTAP Select cluster is composed of one, two, four, six, eight, ten, or twelve nodes. Each cluster node is deployed as a separate virtual machine and runs a specially-designed version of the ONTAP 9 software.
 
 === ONTAP Select Deploy administration utility
 

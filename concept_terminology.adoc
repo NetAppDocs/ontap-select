@@ -24,7 +24,7 @@ Hypervisor host versus ONTAP Select node::
 A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select virtual machine. When an ONTAP Select virtual machine is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
 
 ONTAP Select cluster::
-You can create an _ONTAP Select cluster_ composed of one, two, four, six, or eight nodes. Multi-node clusters always contain one or more HA pairs. For example, a four-node cluster consists of two HA pairs. A single node cluster does not provide HA capability.
+You can create an _ONTAP Select cluster_ composed of one, two, four, six, eight, ten, or twelve nodes. Multi-node clusters always contain one or more HA pairs. For example, a four-node cluster consists of two HA pairs. A single node cluster does not provide HA capability.
 
 Preparation of the hypervisor host environment::
 Before using the Deploy administration utility to deploy an ONTAP Select cluster, you need to prepare the hypervisor hosts where ONTAP Select will run, including the storage and networking environments. This host pre-configuration is done outside of the ONTAP Select product based on the current requirements and limitations.
@@ -111,7 +111,7 @@ When using direct-attached storage (DAS), RAID functionality is traditionally pr
 
 [[ontap-select-image-install]]
 ONTAP Select image install::
-Beginning with ONTAP Select Deploy 2.8, the Deploy administration utility contains only a single version of ONTAP Select. The version included is the most current available at the time of release. The ONTAP Select image install feature allows you to add earlier versions of ONTAP Select to your instance of the Deploy utility, which can then be used when deploying an ONTAP Select cluster. See link:task_cli_deploy_image_add.html[Add ONTAP Select images for more information].
+The Deploy administration utility contains only a single version of ONTAP Select. The version included is the most current available at the time of release. The ONTAP Select image install feature allows you to add earlier versions of ONTAP Select to your instance of the Deploy utility, which can then be used when deploying an ONTAP Select cluster. See link:task_cli_deploy_image_add.html[Add ONTAP Select images for more information].
 
 [NOTE]
 You should only add an ONTAP Select image with a version that is earlier than the original version included with your instance of Deploy. Adding later versions of ONTAP Select without also updating Deploy is not supported.

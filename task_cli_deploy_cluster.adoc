@@ -26,12 +26,12 @@ Before creating an ONTAP Select cluster on a hypervisor, you should understand t
 ====
 .Hardware RAID
 --
-If you use a local hardware RAID controller, you must create at least one datastore (ESX) or one link:reference_chk_host_prep.html#create-storage-pool[storage pool (KVM)] at each node for the system data as well as the root and data aggregates. You must attach the storage pool as part of configuring the ONTAP Select node.
+If you use a local hardware RAID controller, you must create at least one datastore (ESX) or one link:kvm-host-configuration-and-preparation-checklist.html#step-2-create-a-storage-pool[storage pool (KVM)] at each node for the system data as well as the root and data aggregates. You must attach the storage pool as part of configuring the ONTAP Select node.
 --
 
 .Software RAID
 --
-If you use software RAID, you must create at least one datastore (ESX) or one link:reference_chk_host_prep.html#create-storage-pool[storage pool (KVM)] for the system data and make sure the SSD drives are available for the root and data aggregates. You must attach the storage pool and disks as part of configuring the ONTAP Select node.
+If you use software RAID, you must create at least one datastore (ESX) or one link:kvm-host-configuration-and-preparation-checklist.html#step-2-create-a-storage-pool[storage pool (KVM)] for the system data and make sure the SSD drives are available for the root and data aggregates. You must attach the storage pool and disks as part of configuring the ONTAP Select node.
 --
 ====
 
@@ -455,9 +455,9 @@ Provide the password to be used for the ONTAP administrator account when prompte
 cluster show -name <cluster_name>
 ----
 
-.After you finish
+.What's next?
 
-You should back up the ONTAP Select Deploy configuration data.
+link:task_cli_clusters.html[Back up the ONTAP Select Deploy configuration data].
 
 // 2023-05-12, GH issue #59
 // 2023-09-29, ONTAPDOC-1204
