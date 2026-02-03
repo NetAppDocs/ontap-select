@@ -36,8 +36,8 @@ The ONTAP Select product download options on the NetApp Support Site are changin
 |ONTAP Select Image
 |link:concept_adm_upgrading_nodes.html[Upgrade ONTAP Select nodes]
 |===
-+
-NOTE: The product download changes also apply to ONTAP Select 9.17.1, 9.16.1, 9.15.1, and 9.14.1.
+// +
+// NOTE: The product download changes also apply to ONTAP Select 9.17.1, 9.16.1, 9.15.1, and 9.14.1.
 
 Enhanced support for cluster expansion and contraction::
 Beginning with ONTAP Select 9.18.1, cluster expansion and contraction is supported between four-node and twelve-node ONTAP Select clusters on ESXi and KVM hypervisor hosts.
