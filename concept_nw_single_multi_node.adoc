@@ -115,7 +115,7 @@ Cluster and node management LIFs are automatically created during ONTAP Select c
 ONTAP ports e0c and e0d are delegated as home ports for cluster interfaces. Within each ONTAP Select cluster node, two cluster interfaces are automatically generated during ONTAP setup using link local IP addresses (169.254.x.x).
 
 [NOTE]
-You cannot assign a static IP address to these interfaces, and you should not create additional cluster interfaces
+You cannot assign a static IP address to these interfaces, and you should not create additional cluster interfaces.
 
 Cluster network traffic must flow through a low-latency, non-routed layer-2 network. Due to cluster throughput and latency requirements, you should physically locate the ONTAP Select cluster within proximity (for example, multipack, single data center). Building four, six, eight, ten, or twelve-node stretch cluster configurations by separating HA nodes across a WAN or significant geographical distances is not supported. A stretched two-node configuration with a mediator is supported.
 

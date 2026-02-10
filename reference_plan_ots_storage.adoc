@@ -32,7 +32,7 @@ The minimum requirements for the RAID controller include:
 ** Enable “always read ahead” policy (if supported)
 * All local disks behind the RAID controller should be configured as a single RAID group; use multiple RAID controllers if needed:
 ** Disable the local drive cache for RAID group, which is fundamental to preserving data integrity.
-* Performing LUN configuration based on the following guidelines:
+* Perform LUN configuration based on the following guidelines:
 ** If the RAID group size exceeds the maximum LUN size of 64TB, configure multiple equal-sized LUNs consuming all the available storage within the RAID group.
 ** If the RAID group size is smaller than the maximum LUN size of 64TB, configure one LUN consuming all available storage within the RAID group.
 
