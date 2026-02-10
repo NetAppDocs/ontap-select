@@ -307,7 +307,7 @@ Storage vMotion is supported for all configurations, including single-node and m
 cluster refresh
 ----
 
-Please note that a storage vMotion operation between different types of datastores is not supported. In other words, storage vMotion operations between NFS-type datastores and VMFS datastores are not supported. In general, storage vMotion operations between external datastores and DAS datastores are not supported.
+NOTE: A storage vMotion operation between different types of datastores is not supported. In other words, storage vMotion operations between NFS-type datastores and VMFS datastores are not supported. In general, storage vMotion operations between external datastores and DAS datastores are not supported.
 
 .Can the HA traffic between ONTAP Select nodes run over a different vSwitch and/or segregated physical ports and/or using point-to-point IP cables between ESXi hosts?
 

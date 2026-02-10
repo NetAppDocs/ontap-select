@@ -44,7 +44,7 @@ The SIDL feature is not compatible with all ONTAP Select storage efficiency feat
 storage aggregate modify -aggregate aggr-name -single-instance-data-logging off
 ----
 
-Note that write performance is affected if the SIDL feature is turned off. It is possible to re-enable the SIDL feature after all the storage efficiency policies on all the volumes in that aggregate are disabled:
+NOTE: Write performance is affected if the SIDL feature is turned off. It is possible to re-enable the SIDL feature after all the storage efficiency policies on all the volumes in that aggregate are disabled:
 
 ----
 volume efficiency stop -all true -vserver * -volume * (all volumes in the affected aggregate)
@@ -52,7 +52,9 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 
 == Collocate ONTAP Select Nodes When Using vNAS on ESXi
 
-ONTAP Select includes support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy enables the configuration of multiple ONTAP Select nodes on the same ESXi host as long as these nodes are not part of the same cluster. Note that this configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
+ONTAP Select includes support for multinode ONTAP Select clusters on shared storage. ONTAP Deploy enables the configuration of multiple ONTAP Select nodes on the same ESXi host as long as these nodes are not part of the same cluster. 
+
+NOTE: This configuration is only valid for VNAS environments (shared datastores). Multiple ONTAP Select instances per host are not supported when using DAS storage because these instances compete for the same hardware RAID controller.
 
 ONTAP Deploy makes sure that the initial deployment of the multinode VNAS cluster does not place multiple ONTAP Select instances from the same cluster on the same host. The following figure illustrates an example of a correct deployment of two four-node clusters that intersect on two hosts.
 
@@ -76,7 +78,7 @@ Two or more ONTAP Select nodes from the same ONTAP Select cluster could potentia
 * DRS is not present due to VMware vSphere license limitations or if DRS is not enabled.
 * The DRS anti-affinity rule is bypassed because a VMware HA operation or administrator-initiated VM migration takes precedence.
 
-Note that ONTAP Deploy does not proactively monitor the ONTAP Select VM locations. However, a cluster refresh operation reflects this unsupported configuration in the ONTAP Deploy logs:
+NOTE: ONTAP Deploy does not proactively monitor the ONTAP Select VM locations. However, a cluster refresh operation reflects this unsupported configuration in the ONTAP Deploy logs:
 
 image:ST_17.PNG[ONTAP Deploy logs]
 
