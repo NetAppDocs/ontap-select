@@ -188,17 +188,17 @@ ONTAP Select Deploy and ONTAP Select for ESXi support the configuration of an ON
 
 ONTAP Select Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI or FC/FCoE. Other types of storage pools are not supported.
 
-Multinode HA clusters on shared storage are supported.
+Multi-node HA clusters on shared storage are supported.
 
-.Does ONTAP Select support multinode clusters on vSAN or other shared external storage including some HCI stacks?
+.Does ONTAP Select support multi-node clusters on vSAN or other shared external storage including some HCI stacks?
 
-Multinode clusters using external storage (multinode vNAS) are supported for both ESXi and KVM. Mixing of hypervisors in the same cluster is not supported. An HA architecture on shared storage still implies that each node in an HA pair has a mirror copy of its partner data. However, a multinode cluster brings in the benefits of ONTAP nondisruptive operation as opposed to a single-node cluster which relies on VMware HA or KVM Live Motion.
+Multi-node clusters using external storage (multi-node vNAS) are supported for both ESXi and KVM. Mixing of hypervisors in the same cluster is not supported. An HA architecture on shared storage still implies that each node in an HA pair has a mirror copy of its partner data. However, a multi-node cluster brings in the benefits of ONTAP nondisruptive operations as opposed to a single-node cluster which relies on VMware HA or KVM Live Motion.
 
 Although ONTAP Select Deploy adds support for multiple ONTAP Select VMs on the same host, it does not allow those instances to be part of the same ONTAP Select cluster during cluster creation. For ESXi environments, NetApp recommends creating VM anti-affinity rules so that VMware HA does not attempt to migrate multiple ONTAP Select VMs from the same ONTAP Select cluster onto a single ESXi host. Furthermore, if ONTAP Select Deploy detects that an administrative (user-initiated) vMotion or live migration of an ONTAP Select VM has resulted in a violation of our best practice such as two ONTAP Select nodes ending up on the same physical host, ONTAP Select Deploy posts an alert in the Deploy UI and log. The only way that ONTAP Select Deploy becomes aware of the ONTAP Select VM location is as a result of a Cluster Refresh operation, which is a manual operation that the ONTAP Select Deploy administrator must initiate. There is no functionality in ONTAP Select Deploy that enables proactive monitoring, and the alert is only visible through the Deploy UI or log. In other words, this alert cannot be forwarded to a centralized monitoring infrastructure.
 
 .Does ONTAP Select support VMware’s NSX VXLAN?
 
-NSX-V VXLAN port groups are supported. For multinode HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network MTU to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Select Deploy during cluster deployment.
+NSX-V VXLAN port groups are supported. For multi-node HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network MTU to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Select Deploy during cluster deployment.
 
 .Does ONTAP Select support KVM live migration?
 
@@ -240,7 +240,7 @@ ONTAP Select Deploy must also be able to communicate with the ONTAP Select node 
 
 For two-node clusters, ONTAP Select Deploy hosts the cluster mailboxes. Each ONTAP Select node must be able to reach ONTAP Select Deploy through iSCSI (port 3260).
 
-For multinode clusters, the internal network must be fully opened (no NAT or firewalls).
+For multi-node clusters, the internal network must be fully opened (no NAT or firewalls).
 
 .What vCenter rights does ONTAP Select Deploy need to create ONTAP Select clusters?
 
@@ -301,7 +301,7 @@ ONTAP Select VMs that run on vSAN datastores or external array datastores (in ot
 
 .Does ONTAP Select support Storage vMotion?
 
-Storage vMotion is supported for all configurations, including single-node and multinode ONTAP Select clusters and the ONTAP Select Deploy VM. Storage vMotion can be used to migrate the ONTAP Select or the ONTAP Select Deploy VM between different VMFS versions (VMFS 5 to VMFS 6 for example), but it is not restricted to this use case. The best practice is to shut down the VM before initiating a Storage vMotion operation. ONTAP Select Deploy must issue the following operation after the storage vMotion operation is completed:
+Storage vMotion is supported for all configurations, including single-node and multi-node ONTAP Select clusters and the ONTAP Select Deploy VM. Storage vMotion can be used to migrate the ONTAP Select or the ONTAP Select Deploy VM between different VMFS versions (VMFS 5 to VMFS 6 for example), but it is not restricted to this use case. The best practice is to shut down the VM before initiating a Storage vMotion operation. ONTAP Select Deploy must issue the following operation after the storage vMotion operation is completed:
 
 ----
 cluster refresh

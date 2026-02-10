@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_nw_single_multi_node.html
-keywords: ontap select, single node network configuration, multinode network configuration
-summary: ONTAP Select supports both single node and multinode network configurations.
+keywords: ontap select, single node network configuration, multi-node network configuration
+summary: ONTAP Select supports both single node and multi-node network configurations.
 ---
 = ONTAP Select single and multiple node network configurations
 :hardbreaks:
@@ -86,7 +86,7 @@ The relationship between these ports and the underlying physical adapters is ill
 *Network configuration of a single node that is part of a multi-node ONTAP Select cluster*
 image:DDN_02.jpg[Network configuration of a single node that is part of a multi-node ONTAP Select cluster]
 
-Segregating internal and external traffic across different physical NICs prevents insufficient access to network resources introducing latencies into the system. Additionally, aggregation through NIC teaming allows the ONTAP Select cluster node to continue accessing the network if a single network adapter fails.
+Segregating internal and external traffic across different physical NICs prevents insufficient access to network resources, introducing latencies into the system. Additionally, aggregation through NIC teaming allows the ONTAP Select cluster node to continue accessing the network if a single network adapter fails.
 
 NOTE: Both the external network and internal network port groups contain all four NIC adapters in a symmetrical manner. The active ports in the external network port group are the standby ports in the internal network. Conversely, the active ports in the internal network port group are the standby ports in the external network port group.
 
