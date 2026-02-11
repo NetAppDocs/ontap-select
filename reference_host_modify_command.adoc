@@ -53,7 +53,7 @@ a| This parameter controls the behavior of long-running commands. If set, the co
 
 a| `-username _username_`
 
-a| The username that has access to this host. This is required only if the host is not managed by a management server (that is, an ESX host managed by a vCenter).
+a| The username that has access to this host. This is required only if the host is not managed by a management server (that is, an ESXi host managed by a vCenter).
 
 |===
 
