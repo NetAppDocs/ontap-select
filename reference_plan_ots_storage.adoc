@@ -14,7 +14,7 @@ summary: There are several planning issues related to ONTAP Select host storage 
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
-NOTE: External storage support information is outlined in link:reference_plan_ots_vnas.html[ONTAP Select vNAS requirements].
+NOTE: External storage support information is outlined for ESXi and KVM hosts. For more information, refer to link:reference_plan_ots_vnas.html[VMware ESXi requirements] and link:reference_plan_ots_kvm.html[KVM requirements].
 
 == Hardware RAID controller requirements
 
@@ -30,15 +30,15 @@ The minimum requirements for the RAID controller include:
 * Configured in write back mode:
 ** Enable failback mode to “write through” (if supported)
 ** Enable “always read ahead” policy (if supported)
-* All local disks behind the RAID controller should be configured as a single RAID group; multiple RAID controllers can be used if needed:
+* All local disks behind the RAID controller should be configured as a single RAID group; use multiple RAID controllers if needed:
 ** Disable the local drive cache for RAID group, which is fundamental to preserving data integrity.
-* LUN configuration must be performed based on the following guidelines:
-** If the RAID group size exceeds the maximum LUN size of 64TB, you should configure multiple equal-sized LUNs consuming all the available storage within the RAID group.
-** If the RAID group size is smaller than the maximum LUN size of 64TB, you should configure one LUN consuming all available storage within the RAID group.
+* Perform LUN configuration based on the following guidelines:
+** If the RAID group size exceeds the maximum LUN size of 64TB, configure multiple equal-sized LUNs consuming all the available storage within the RAID group.
+** If the RAID group size is smaller than the maximum LUN size of 64TB, configure one LUN consuming all available storage within the RAID group.
 
 == Software RAID requirements
 
-When deploying an ONTAP Select cluster on the hypervisor, you can utilize the software RAID capability provided by ONTAP Select instead of a local hardware RAID controller. There are several requirements and restrictions you must be aware before deploying a cluster using software RAID.
+When deploying an ONTAP Select cluster on the hypervisor, you can use the software RAID capability provided by ONTAP Select instead of a local hardware RAID controller. Review the following requirements and restrictions before deploying a cluster using software RAID.
 
 === General requirements
 
@@ -71,7 +71,7 @@ The SSD flash storage devices used must meet the following additional requiremen
 +
 The value reported for these commands must be '0'.
 
-* It is expected the devices are connected to an HBA or in some cases to a RAID controller configured to operate in JBOD mode. When using a RAID controller, the device function must be passed through the host without overlaying any RAID functionality. When using a RAID controller in JBOD mode, you should review the RAID documentation or contact the vendor as needed to make sure the device reports the rotational speed as '0'.
+* It is expected that the devices are connected to an HBA or, in some cases, to a RAID controller configured to operate in JBOD mode. When using a RAID controller, the device function must be passed through the host without overlaying any RAID functionality. When using a RAID controller in JBOD mode, you should review the RAID documentation or contact the vendor as needed to make sure the device reports the rotational speed as '0'.
 * There are two separate storage components:
 ** Virtual machine storage
 +
@@ -143,7 +143,7 @@ You can configure each ONTAP Select node to use up to 400 TB of storage when usi
 * Increase the node storage by allocating one or more additional storage pools
 
 [NOTE]
-A 2% buffer is left unused in each storage pool and does not require a capacity license. This storage is not used by ONTAP Select, unless a capacity cap is specified. If a capacity cap is specified, then that amount of storage will be used unless the amount specified falls in the 2% buffer zone. The buffer is needed to prevent occasional errors that occur when attempting to allocate all of the space in a storage pool.
+A 2% buffer is left unused in each storage pool and does not require a capacity license. ONTAP Select does not use this storage unless you specify a capacity cap. If  you specify a capacity cap, then ONTAP Select uses that amount of storage unless the amount specified falls in the 2% buffer zone. The buffer is needed to prevent occasional errors that occur when attempting to allocate all of the space in a storage pool.
 
 === Storage capacity and VMware vSAN
 
@@ -191,6 +191,7 @@ You can configure software RAID to use NVMe SSD drives. Your environment must me
 
 You need to manually configure the NVMe drives before using them. See link:task_chk_nvme_configure.html[Configure a host to use NVMe drives] for more information.
 
+// 2026 JAN 15, ontap-select-issue-310 and NADIAA updates
 // 2023-09-12, ONTAPDOC-1174
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions

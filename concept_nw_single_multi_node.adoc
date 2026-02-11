@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept_nw_single_multi_node.html
-keywords: ontap select, single node network configuration, multinode network configuration
-summary: ONTAP Select supports both single node and multinode network configurations.
+keywords: ontap select, single node network configuration, multi-node network configuration
+summary: ONTAP Select supports both single node and multi-node network configurations.
 ---
 = ONTAP Select single and multiple node network configurations
 :hardbreaks:
@@ -12,23 +12,23 @@ summary: ONTAP Select supports both single node and multinode network configurat
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select supports both single node and multinode network configurations.
+ONTAP Select supports both single-node and multi-node network configurations.
 
 == Single node network configuration
 
 Single-node ONTAP Select configurations do not require the ONTAP internal network, because there is no cluster, HA, or mirror traffic.
 
-Unlike the multinode version of the ONTAP Select product, each ONTAP Select VM contains three virtual network adapters, presented to ONTAP network ports e0a, e0b, and e0c.
+Unlike the multi-node version of the ONTAP Select product, each ONTAP Select VM contains three virtual network adapters, presented to ONTAP network ports e0a, e0b, and e0c.
 
 These ports are used to provide the following services: management, data, and intercluster LIFs.
 
 .KVM
 
-ONTAP Select can be deployed as a single-node cluster. The hypervisor host includes a virtual switch that provides access to the external network.
+You can deploy ONTAP Select as a single-node cluster. The hypervisor host includes a virtual switch that provides access to the external network.
 
 .ESXi
 
-The relationship between these ports and the underlying physical adapters can be seen in the following figure, which depicts one ONTAP Select cluster node on the ESX hypervisor.
+The following figure shows the relationship between these ports and the underlying physical adapters. The figure depicts one ONTAP Select cluster node on the ESXi hypervisor.
 
 *Network configuration of single-node ONTAP Select cluster*
 
@@ -39,10 +39,10 @@ Even though two adapters are sufficient for a single-node cluster, NIC teaming i
 
 === LIF assignment
 
-As explained in the multinode LIF assignment section of this document, IPspaces are used by ONTAP Select to keep cluster network traffic separate from data and management traffic. The single-node variant of this platform does not contain a cluster network. Therefore, no ports are present in the cluster IPspace.
+As explained in the multi-node LIF assignment section of this document, ONTAP uses IPspaces to keep cluster network traffic separate from data and management traffic. The single-node variant of this platform does not contain a cluster network. Therefore, there are no ports present in the cluster IPspace.
 
 [NOTE]
-Cluster and node management LIFs are automatically created during ONTAP Select cluster setup. The remaining LIFs can be created post deployment.
+Cluster and node management LIFs are automatically created during ONTAP Select cluster setup. You can create the remaining LIFs post deployment.
 
 === Management and data LIFs (e0a, e0b, and e0c)
 
@@ -52,20 +52,20 @@ ONTAP ports e0a, e0b, and e0c are delegated as candidate ports for LIFs that car
 * Cluster, node, and SVM management traffic
 * Intercluster traffic (SnapMirror and SnapVault)
 
-== Multinode network configuration
+== Multi-node network configuration
 
-The multinode ONTAP Select network configuration consists of two networks.
+The multi-node ONTAP Select network configuration consists of two networks.
 
-These are an internal network, responsible for providing cluster and internal replication services, and an external network, responsible for providing data access and management services. End-to-end isolation of traffic that flows within these two networks is extremely important in allowing you to build an environment that is suitable for cluster resiliency.
+These are an internal network, responsible for providing cluster and internal replication services, and an external network, responsible for providing data access and management services. End-to-end isolation of traffic that flows within these two networks is extremely important for building an environment that is suitable for cluster resiliency.
 
 These networks are represented in the following figure, which shows a four-node ONTAP Select cluster running on a VMware vSphere platform. Six, eight, ten, and twelve-node clusters have a similar network layout.
 
 [NOTE]
 Each ONTAP Select instance resides on a separate physical server. Internal and external traffic is isolated using separate network port groups, which are assigned to each virtual network interface and allow the cluster nodes to share the same physical switch infrastructure.
 
-*Overview of an ONTAP Select multinode cluster network configuration*
+*Overview of an ONTAP Select multi-node cluster network configuration*
 
-image:DDN_01.jpg[Overview of an ONTAP Select multinode cluster network configuration]
+image:DDN_01.jpg[Overview of an ONTAP Select multi-node cluster network configuration]
 
 Each ONTAP Select VM contains seven virtual network adapters presented to ONTAP as a set of seven network ports, e0a through e0g. Although ONTAP treats these adapters as physical NICs, they are in fact virtual and map to a set of physical interfaces through a virtualized network layer. As a result, each hosting server does not require six physical network ports.
 
@@ -79,17 +79,16 @@ These ports are preconfigured to provide the following services:
 * e0e. RSM
 * e0f. HA interconnect
 
-Ports e0a, e0b, and e0g reside on the external network. Although ports e0c through e0f perform several different functions, collectively they compose the internal Select network. When making network design decisions, these ports should be placed on a single layer-2 network. There is no need to separate these virtual adapters across different networks.
+Ports e0a, e0b, and e0g reside on the external network. Although ports e0c through e0f perform several different functions, collectively they compose the internal Select network. When making network design decisions, you should place these ports on a single layer-2 network. There is no need to separate these virtual adapters across different networks.
 
-The relationship between these ports and the underlying physical adapters is illustrated in the following figure, which depicts one ONTAP Select cluster node on the ESX hypervisor.
+The relationship between these ports and the underlying physical adapters is illustrated in the following figure, which depicts one ONTAP Select cluster node on the ESXi hypervisor.
 
-*Network configuration of a single node that is part of a multinode ONTAP Select cluster*
+*Network configuration of a single node that is part of a multi-node ONTAP Select cluster*
+image:DDN_02.jpg[Network configuration of a single node that is part of a multi-node ONTAP Select cluster]
 
-image:DDN_02.jpg[Network configuration of a single node that is part of a multinode ONTAP Select cluster]
+Segregating internal and external traffic across different physical NICs prevents insufficient access to network resources, introducing latencies into the system. Additionally, aggregation through NIC teaming allows the ONTAP Select cluster node to continue accessing the network if a single network adapter fails.
 
-Segregating internal and external traffic across different physical NICs prevents latencies from being introduced into the system due to insufficient access to network resources. Additionally, aggregation through NIC teaming makes sure that failure of a single network adapter does not prevent the ONTAP Select cluster node from accessing the respective network.
-
-Note that both the external network and internal network port groups contain all four NIC adapters in a symmetrical manner. The active ports in the external network port group are the standby ports in the internal network. Conversely, the active ports in the internal network port group are the standby ports in the external network port group.
+NOTE: Both the external network and internal network port groups contain all four NIC adapters in a symmetrical manner. The active ports in the external network port group are the standby ports in the internal network. Conversely, the active ports in the internal network port group are the standby ports in the external network port group.
 
 === LIF assignment
 
@@ -109,28 +108,28 @@ ONTAP ports e0a, e0b, and e0g are delegated as candidate ports for LIFs that car
 * Intercluster traffic (SnapMirror and SnapVault)
 
 [NOTE]
-Cluster and node management LIFs are automatically created during ONTAP Select cluster setup. The remaining LIFs can be created post deployment.
+Cluster and node management LIFs are automatically created during ONTAP Select cluster setup. You can create the remaining LIFs post deployment.
 
 === Cluster network LIFs (e0c, e0d)
 
 ONTAP ports e0c and e0d are delegated as home ports for cluster interfaces. Within each ONTAP Select cluster node, two cluster interfaces are automatically generated during ONTAP setup using link local IP addresses (169.254.x.x).
 
 [NOTE]
-These interfaces cannot be assigned static IP addresses, and additional cluster interfaces should not be created.
+You cannot assign a static IP address to these interfaces, and you should not create additional cluster interfaces.
 
-Cluster network traffic must flow through a low-latency, non-routed layer-2 network. Due to cluster throughput and latency requirements, the ONTAP Select cluster is expected to be physically located within proximity (for example, multipack, single data center). Building four, six, eight, ten, or twelve-node stretch cluster configurations by separating HA nodes across a WAN or across significant geographical distances is not supported. A stretched two-node configuration with a mediator is supported.
+Cluster network traffic must flow through a low-latency, non-routed layer-2 network. Due to cluster throughput and latency requirements, you should physically locate the ONTAP Select cluster within proximity (for example, multipack, single data center). Building four, six, eight, ten, or twelve-node stretch cluster configurations by separating HA nodes across a WAN or significant geographical distances is not supported. A stretched two-node configuration with a mediator is supported.
 
 For details, see the section link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices].
 
 [NOTE]
-To make sure of maximum throughput for cluster network traffic, this network port is configured to use jumbo frames (7500 to 9000 MTU). For proper cluster operation, verify that jumbo frames are enabled on all upstream virtual and physical switches providing internal network services to ONTAP Select cluster nodes.
+To make sure of maximum throughput for cluster network traffic, this network port is configured to use jumbo frames (7500 to 9000 MTU). For correct cluster operation, verify that jumbo frames are enabled on all upstream virtual and physical switches providing internal network services to ONTAP Select cluster nodes.
 
 === RAID SyncMirror traffic (e0e)
 
 Synchronous replication of blocks across HA partner nodes occurs using an internal network interface residing on network port e0e. This functionality occurs automatically, using network interfaces configured by ONTAP during cluster setup, and requires no configuration by the administrator.
 
 [NOTE]
-Port e0e is reserved by ONTAP for internal replication traffic. Therefore, neither the port nor the hosted LIF is visible in the ONTAP CLI or in System Manager. This interface is configured to use an automatically generated link local IP address, and the reassignment of an alternate IP address is not supported. This network port requires the use of jumbo frames (7500 to 9000 MTU).
+Port e0e is reserved by ONTAP for internal replication traffic. Therefore, neither the port nor the hosted LIF is visible in the ONTAP CLI or in System Manager. This interface is configured to use an automatically generated link local IP address, and you cannot assign an alternate IP address. This network port requires the use of jumbo frames (7500 to 9000 MTU).
 
 === HA interconnect (e0f)
 
@@ -144,6 +143,7 @@ Each ONTAP Select node is configured with an HA interconnect port, e0f. This por
 HA interconnect traffic flows through this network port using a single network interface by layering remote direct memory access (RDMA) frames within Ethernet packets.
 
 [NOTE]
-In a manner similar to the RSM port (e0e), neither the physical port nor the hosted network interface is visible to users from either the ONTAP CLI or from System Manager. As a result, the IP address of this interface cannot be modified, and the state of the port cannot be changed. This network port requires the use of jumbo frames (7500 to 9000 MTU).
+Like the RSM port (e0e), neither the physical port nor the hosted network interface is visible to users from either the ONTAP CLI or from System Manager. As a result, you cannot modify the IP address of this interface, and you cannot change the state of the port. This network port requires the use of jumbo frames (7500 to 9000 MTU).
 
+// 2025 JAN 29, NADIAA updates
 // 2023-09-29, ONTAPDOC-1204
