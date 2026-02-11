@@ -66,15 +66,16 @@ The following table compares the two production licensing models supported by ON
 |Yes (no grace period)
 
 |Minimum license
-|1 TiB
-|2 TiB
+|1 TB
+|2 TB
 
 |Maximum managed space
-|400 TiB per node
-|400 TiB per node
+|400 TB per node
+|400 TB per node
 
 |===
 
+// 2026 FEB 6, ONTAPDOC-3699
 // 2026 JAN 27, ONTAPDOC-3021
 // 2025 Dec 10, NADIAA updates
 // 2023-11-29, GitHub issue #232

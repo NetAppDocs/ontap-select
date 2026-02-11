@@ -12,7 +12,7 @@ summary: The Capacity Tiers license is based on the underlying disk capacity man
 :imagesdir: ./media/
 
 [.lead]
-The licensed capacity for a Capacity Pool license is in full TiB amounts, with a minimum of 2 TiB. You calculate the licensed capacity by multiplying the amount of usable space by the overhead factor. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
+The licensed capacity for a Capacity Pool license is in full TB amounts, with a minimum of 2 TB. You calculate the licensed capacity by multiplying the amount of usable space by the overhead factor. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
 
 * Overhead factor for single-node clusters is 1.13
 * Overhead factor for multi-node clusters is 2.67
@@ -24,37 +24,38 @@ You need to calculate the licensed capacity based on the usable space to ensure 
 | Description | Single-node | HA pair or mix of HA and single-node
 
 | Usable space
-| 20 TiB
-| 10 TiB per single-node cluster
+| 20 TB
+| 10 TB per single-node cluster
 
-20 TiB for HA pair
+20 TB for HA pair
 
 | Licensed space
-| 23 TiB 
+| 23 TB 
 
-(20 x 1.13 = 22.6, round up to next full TiB)
-| 54 TiB 
+(20 x 1.13 = 22.6, round up to next full TB)
+| 54 TB 
 
-(20 x 2.67 = 53.4, round up to next full TiB)
+(20 x 2.67 = 53.4, round up to next full TB)
 
 
 | Maximum usable space per node
 
-*Note*: The maximum managed space per node or HA pair is 400 TiB
-|  353 TiB 
+*Note*: The maximum managed space per node or HA pair is 400 TB
+|  353 TB 
 
 (400 / 1.13)
 a| Per single-node cluster: 
 
-74 TiB [(400 / 2) / 2.67]
+74 TB [(400 / 2) / 2.67]
 
 Per HA pair cluster: 
 
-148 TiB (2 x 74)
+148 TB (2 x 74)
 |===
 
 .What's next
 
 link:task_lic_acquire_cp.html[Acquire a Capacity Pools license for ONTAP Select]
 
+// 2026 FEB 6, ONTAPDOC-3699
 // 2026 JAN 27, ONTAPDOC-3021
