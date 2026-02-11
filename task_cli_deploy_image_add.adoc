@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task_cli_deploy_image_add.html
 keywords: administer, administering, cli, deploy, ontap select image, add
-summary: You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
+summary: Add an ONTAP Select image to your instance of the Deploy administration utility. After installation, you can use it when deploying an ONTAP Select cluster.
 ---
 = Add an ONTAP Select image to Deploy
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: You can add an ONTAP Select image to your instance of the Deploy admini
 :imagesdir: ./media/
 
 [.lead]
-You can add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
+Add an ONTAP Select image to your instance of the Deploy administration utility. After the image has been installed, you can use it when deploying an ONTAP Select cluster.
 
 .Before you begin
 
@@ -27,21 +27,15 @@ To begin the process of adding an ONTAP Select image to an instance of the Deplo
 
 .Steps
 
-. Access the NetApp Support Site using a web browser and select *Support Quick Links*.
+. Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
 
-. Select *Download Software* under *Top Tasks* and sign in to the site.
+. Scroll down and select *ONTAP Select Image*.
 
-. Select *Find your product*.
-
-. Scroll down and click *ONTAP Select*.
-
-. Under *Other Available Select Software* select *Deploy Upgrade, Node Upgrade, Image Install*.
-
-. Select the desired release of the upgrade package.
+. Select the desired release of the install image.
 
 . Review the End User License Agreement (EULA) and select *Accept & Continue*.
 
-. Select and download the appropriate package, responding to all prompts as needed for your environment.
+. Select and download the appropriate *ONTAP Select Image Install* package. Respond to all prompts as needed.
 
 == Step 2: Upload the install image to Deploy
 
@@ -49,7 +43,7 @@ After acquiring the ONTAP Select install image, you must upload the file to the 
 
 .Before you begin
 
-You must have the install image file available on your local workstation. You must also have the password for the Deploy administrator user account.
+Verify that you have the install image file available on your local workstation. You must also have the password for the Deploy administrator user account.
 
 .About this task
 This task describes one method for uploading the file to the Deploy virtual machine. There may be other options more suitable for your environment.

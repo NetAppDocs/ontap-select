@@ -21,7 +21,7 @@ The serial number of a node using Capacity Pools licensing has the following for
 [NOTE]
 Spaces have been added for clarity, but are not part of the actual serial number.
 
-Each section of the node serial number is described in the following table, from left to right.
+The following table describes each section of the node serial number from left to right.
 
 [cols="15,85"*,options="header"]
 |===
@@ -39,5 +39,7 @@ Each section of the node serial number is described in the following table, from
 
 |===
 
-[NOTE]
-Attention: When opening a case with NetApp support involving a node that uses a Capacity Pool license, you cannot provide the full twenty-digit node serial number. Instead, you must provide the nine-digit Capacity Pool license serial number. You can derive the license serial number from the node serial number as shown above. Skip the first three digits of the node serial number ('999') and extract the next nine digits (ppppppppp).
+CAUTION: When opening a case with NetApp support involving a node that uses a Capacity Pool license, you must provide the nine-digit Capacity Pool license serial number. You cannot provide the full twenty-digit node serial number. You can derive the license serial number from the node serial number by skipping the first three digits of the node serial number ('999') and extracting the next nine digits (ppppppppp).
+
+
+// 2025 DEC 12, NADIAA updates

@@ -29,13 +29,13 @@ Static port channels are not supported with ONTAP Select. LACP-enabled channels 
 
 For single node clusters, ONTAP Deploy configures the ONTAP Select VM to use a port group for the external network and either the same port group or, optionally, a different port group for the cluster and node management traffic. For single node clusters, you can add the desired number of physical ports to the external port group as active adapters.
 
-For multinode clusters, ONTAP Deploy configures each ONTAP Select VM to use one or two port groups for the internal network and separately, one or two port groups for the external network. The cluster and node management traffic can either use the same port group as the external traffic, or optionally a separate port group. The cluster and node management traffic cannot share the same port group with internal traffic.
+For multi-node clusters, ONTAP Deploy configures each ONTAP Select VM to use one or two port groups for the internal network and separately, one or two port groups for the external network. The cluster and node management traffic can either use the same port group as the external traffic, or optionally a separate port group. The cluster and node management traffic cannot share the same port group with internal traffic.
 
 NOTE: ONTAP Select supports a maximum of four VMNICs. 
 
 == Standard or distributed vSwitch and four physical ports per Node
 
-You can assign four port groups to each node in a multinode cluster. Each port group has a single active physical port and three standby physical ports as in the following figure.
+You can assign four port groups to each node in a multi-node cluster. Each port group has a single active physical port and three standby physical ports as in the following figure.
 
 *vSwitch with four physical ports per node*
 
@@ -111,9 +111,9 @@ When using two high speed (25/40Gb) NICs, the recommended port group configurati
 
 image:DDN_17.jpg[vSwitch with two high speed (25/40Gb) physical ports per node]
 
-When using two physical ports (10Gb or less), each port group should have an active adapter and a standby adapter configured opposite to each other. The internal network is only present for multinode ONTAP Select clusters. For single-node clusters, both adapters can be configured as active in the external port group.
+When using two physical ports (10Gb or less), each port group should have an active adapter and a standby adapter configured opposite to each other. The internal network is only present for multi-node ONTAP Select clusters. For single-node clusters, both adapters can be configured as active in the external port group.
 
-The following example shows the configuration of a vSwitch and the two port groups responsible for handling internal and external communication services for a multinode ONTAP Select cluster. The external network can use the internal network VMNIC in the event of a network outage because the internal network VMNICs are part of this port group and configured in standby mode. The opposite is the case for the external network. Alternating the active and standby VMNICs between the two port groups is critical for the correct failover of the ONTAP Select VMs during network outages.
+The following example shows the configuration of a vSwitch and the two port groups responsible for handling internal and external communication services for a multi-node ONTAP Select cluster. The external network can use the internal network VMNIC in the event of a network outage because the internal network VMNICs are part of this port group and configured in standby mode. The opposite is the case for the external network. Alternating the active and standby VMNICs between the two port groups is critical for the correct failover of the ONTAP Select VMs during network outages.
 
 *vSwitch with two physical ports (10Gb or less) per node*
 
