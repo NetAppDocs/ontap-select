@@ -16,7 +16,7 @@ Characteristics of ONTAP Select internal and external networks.
 
 == ONTAP Select internal network
 
-The internal ONTAP Select network, which is only present in the multinode variant of the product, is responsible for providing the ONTAP Select cluster with cluster communication, HA interconnect, and synchronous replication services. This network includes the following ports and interfaces:
+The internal ONTAP Select network, which is only present in the multi-node variant of the product, is responsible for providing the ONTAP Select cluster with cluster communication, HA interconnect, and synchronous replication services. This network includes the following ports and interfaces:
 
 * *e0c, e0d.* Hosting cluster network LIFs
 * *e0e.* Hosting the RSM LIF
@@ -35,7 +35,7 @@ Network packets traversing the internal network must be on a dedicated VLAN-tagg
 In all cases, VLAN tagging for internal network traffic is done outside of the ONTAP Select VM.
 
 [NOTE]
-Only ESX standard and distributed vSwitches are supported. Other virtual switches or direct connectivity between ESX hosts are not supported. The internal network must be fully opened; NAT or firewalls are not supported.
+Only ESXi standard and distributed vSwitches are supported. Other virtual switches or direct connectivity between ESXi hosts are not supported. The internal network must be fully opened; NAT or firewalls are not supported.
 
 Within an ONTAP Select cluster, internal traffic and external traffic are separated using virtual layer-2 network objects known as port groups. Correct vSwitch assignment of these port groups is extremely important, especially for the internal network, which is responsible for providing cluster, HA interconnect, and mirror replication services. Insufficient network bandwidth to these network ports can cause performance degradation and even affect the stability of the cluster node. Therefore, four, six, eight, ten, and twelve-node clusters require that the internal ONTAP Select network use 10Gb connectivity; 1Gb NICs are not supported. Trade-offs can be made to the external network, however, because limiting the flow of incoming data to an ONTAP Select cluster does not affect its ability to operate reliably.
 
@@ -43,7 +43,7 @@ A two-node cluster can use either four 1Gb ports for internal traffic or a singl
 
 === Internal network validation and troubleshooting
 
-The internal network in a multinode cluster can be validated by using the network connectivity checker functionality. This function can be invoked from the Deploy CLI running the `network connectivity-check start` command.
+The internal network in a multi-node cluster can be validated by using the network connectivity checker functionality. This function can be invoked from the Deploy CLI running the `network connectivity-check start` command.
 
 Run the following command to view the output of the test:
 
@@ -51,15 +51,15 @@ Run the following command to view the output of the test:
 network connectivity-check show --run-id X (X is a number)
 ----
 
-This tool is only useful for troubleshooting the internal network in a multinode Select cluster. The tool should not be used to troubleshoot single-node clusters (including vNAS configurations), ONTAP Deploy to ONTAP Select connectivity, or client-side connectivity issues.
+This tool is only useful for troubleshooting the internal network in a multi-node Select cluster. The tool should not be used to troubleshoot single-node clusters (including vNAS configurations), ONTAP Deploy to ONTAP Select connectivity, or client-side connectivity issues.
 
-The cluster create wizard (part of the ONTAP Deploy UI) includes the internal network checker as an optional step available during the creation of multinode clusters. Given the important role that the internal network plays in multinode clusters, making this step part of the cluster create workflow improves the success rate of cluster create operations.
+The cluster create wizard (part of the ONTAP Deploy UI) includes the internal network checker as an optional step available during the creation of multi-node clusters. Given the important role that the internal network plays in multi-node clusters, making this step part of the cluster create workflow improves the success rate of cluster create operations.
 
 Starting with ONTAP Deploy 2.10, the MTU size used by the internal network can be set between 7,500 and 9,000. The network connectivity checker can also be used to test MTU size between 7,500 and 9,000. The default MTU value is set to the value of the virtual network switch. That default would have to be replaced with a smaller value if a network overlay like VXLAN is present in the environment.
 
 == ONTAP Select external network
 
-The ONTAP Select external network is responsible for all outbound communications by the cluster and, therefore, is present on both the single-node and multinode configurations. Although this network does not have the tightly defined throughput requirements of the internal network, the administrator should be careful not to create network bottlenecks between the client and ONTAP VM, because performance issues could be mischaracterized as ONTAP Select problems.
+The ONTAP Select external network is responsible for all outbound communications by the cluster and, therefore, is present on both the single-node and multi-node configurations. Although this network does not have the tightly defined throughput requirements of the internal network, the administrator should be careful not to create network bottlenecks between the client and ONTAP VM, because performance issues could be mischaracterized as ONTAP Select problems.
 
 [NOTE]
 In a manner similar to internal traffic, external traffic can be tagged at the vSwitch layer (VST) and at the external switch layer (EST). In addition, the external traffic can be tagged by the ONTAP Select VM itself in a process known as VGT. See the section link:concept_nw_data_mgmt_separation.html[Data and management traffic separation] for further details.
