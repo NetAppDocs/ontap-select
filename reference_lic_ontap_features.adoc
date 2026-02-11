@@ -17,6 +17,7 @@ ONTAP Select supports most ONTAP features. Many of the ONTAP features are licens
 [NOTE]
 ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
+[[enabled-ontap-features]]
 == ONTAP features automatically enabled by default
 
 The following ONTAP features are supported with ONTAP Select and licensed by default:
@@ -33,28 +34,30 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * NVMe over TCP
 * ONTAP multitenancy capability
 * ONTAP S3
+* SnapLock Select
++
+SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance. For more information, refer to the link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock documentation^].
+
 * S3 SnapMirror
 * SnapMirror
-* SnapMirror cloud
+* SnapMirror Cloud
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
 +
-NOTE: ONTAP Select supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
+ONTAP Select supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
 
 == ONTAP features that are separately licensed
 
 You need to acquire a separate license for any ONTAP feature that is not enabled by default, including:
 
 * FabricPool
++
+NOTE: You do not need a FabricPool license when utilizing StorageGRID.
+
 * MetroCluster SDS (ONTAP Select premium license offering)
 
-[NOTE]
-====
-* For ONTAP Select 9.16.1 and earlier, SnapLock Select Enterprise (including tamperproof snapshot locking) is available from the link:https://mysupport.netapp.com/site/[NetApp Support Site^].
-* SnapLock Compliance is not supported for ONTAP Select.
-* You do not need a FabricPool license when utilizing StorageGRID.
-====
+
 
 .Related information
 
