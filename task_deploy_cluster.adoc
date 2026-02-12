@@ -73,7 +73,7 @@ You can perform the same steps independently by selecting the tabs at the top of
 If you are deploying a multi-node cluster, you should be familiar with the network checker. You can run the network connectivity checker using the link:task_adm_connectivity.html[web UI] or the link:task_cli_connectivity.html[CLI].
 
 
-[[create-single-or-multinode-cluster]]
+[[create-single-or-multi-node-cluster]]
 == Step 2: Create a single-node or multi-node cluster
 
 You can use the ONTAP Select Deploy web user interface to deploy a single-node or multi-node ONTAP Select cluster.

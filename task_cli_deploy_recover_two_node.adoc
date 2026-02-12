@@ -5,7 +5,7 @@ keywords: administer, administering, cli, two node cluster, recover, recovering
 summary: If the ONTAP Select Deploy utility fails or becomes unavailable for some reason, you lose the ability to administer ONTAP Select nodes and clusters. In addition, all two-node clusters lose HA capability because the mediator service included with Deploy is unavailable. If an unrecoverable failure occurs, you must recover the Deploy utility instance to restore administrative and HA functionality.
 ---
 = Recover the ONTAP Select Deploy utility for a two-node cluster
-:hardbreaks:reints
+:hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
@@ -215,7 +215,7 @@ These commands allow the ONTAP Select nodes to discover the mailbox disks on the
 +
 [source,cli]
 ----
-disk show -container-type mediator`
+disk show -container-type mediator
 ----
 . Assign the mailbox disks to the two nodes:
 +

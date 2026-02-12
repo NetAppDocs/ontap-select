@@ -16,7 +16,9 @@ You must acquire a license file for each Capacity Pool used by the ONTAP Select 
 
 .Before you begin
 
-You must have the nine-digit license serial number assigned to the Capacity Pool by NetApp. Before attempting to acquire a license file, you should wait at least twenty four hours after the shipped date of your purchase order.
+* You must have the nine-digit license serial number assigned to the Capacity Pool by NetApp. 
+* You should wait at least 24 hours after the shipped date of your purchase order before acquiring a license file.
+* You have reviewed the link:sizing-capacity-pool-license.html[considerations for sizing a Capacity Pools license].
 
 .About this task
 
@@ -24,22 +26,24 @@ You must perform this task for each Capacity Pool used by the ONTAP Select nodes
 
 .Steps
 
-. Access the NetApp Support Site using a web browser and sign in.
+. Log in to the link:https://mysupport.netapp.com/site/[NetApp Support site^].
 
-. Click *Systems* at the top and then click *Software Licenses*.
+. Select *Systems* > *Software Licenses*.
 
-. Type the license serial number for the Capacity Pool and click *Go!*.
+. Type the license serial number for the Capacity Pool and select *Go!*.
 
 . On the license details page, navigate to the *Product Details* column.
 
-. Click *Get NetApp License File* on the appropriate row.
+. Select *Get NetApp License File* on the appropriate row.
 
-. Type the License Lock ID for your ONTAP Select Deploy instance and click *Submit*.
+. Type the License Lock ID for your ONTAP Select Deploy instance and select *Submit*.
 
-. Select the appropriate delivery method and click *Submit*.
+. Select the appropriate delivery method and select *Submit*.
 
-. Click *OK* on the delivery confirmation window.
+. Select *OK* on the delivery confirmation window.
 
 .After you finish
 
-You must upload the license file to the Deploy administration utility before the Capacity Pool can be used by an ONTAP Select node.
+You must upload the license file to the Deploy administration utility before an ONTAP Select node can use the Capacity Pool.
+
+// 2026 JAN 27, ONTAPDOC-3021 and NADIAA updates
