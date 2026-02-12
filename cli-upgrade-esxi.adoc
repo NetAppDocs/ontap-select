@@ -38,8 +38,8 @@ Upgrade is possible both with and without the Deploy utility.
 TIP: You should select an upgrade procedure that uses the Deploy administration utility.
 +
 Performing an ESXi upgrade using the Deploy administration utility is the more general and resilient option. However, there might be instances when Deploy is unavailable or cannot be used. For example, upgrading to ESXi 8.0 is not supported with earlier versions of ONTAP Select and the Deploy administration utility.
-+
-If you are using these earlier versions and attempt an upgrade, the ONTAP Select virtual machine can be left in a state where it cannot be booted. In this case, you must select an upgrade procedure that does not use Deploy.
+
+If you are using these earlier versions and attempt an upgrade, you can leave the ONTAP Select virtual machine in a state where it cannot be booted. In this case, you must select an upgrade procedure that does not use Deploy.
 
 . *Upgrade the Deploy administration utility*
 +
