@@ -84,29 +84,6 @@ image:CHK_03.jpg[Single node within a four-node cluster]
 --
 ====
 
-== Step 3: Configure Open vSwitch
-
-The vSwitch is the core hypervisor component used to support the connectivity for the internal and external networks. There are several things you should consider as part of configuring each hypervisor vSwitch.
-
-The following steps are for a vSwitch configuration for an ESXi host with two physical ports (2x10Gb) in a typical network environment.
-
-.Steps
-. link:concept_nw_vsphere_vswitch_config.html[Configure a vSwitch and assign both the ports to the vSwitch]. 
-. link:concept_nw_vsphere_vswitch_config.html[Create a NIC team using the two ports].
-. Set the load balancing policy to “Route based on the originating virtual port ID”.
-. Mark both adapters as “active” or mark one adapter as “active” and the other as “standby”.
-. Set the “Failback” setting to “Yes”.
-+
-image:CHK_04.jpg[vSwitch properties)]
-. Configure the vSwitch to use jumbo frames (9000 MTU).
-. Configure a port group on the vSwitch for the internal traffic (ONTAP-internal):
-** The port group is assigned to ONTAP Select virtual network adapters e0c-e0g used for the cluster, HA interconnect, and mirroring traffic.
-** The port group should be on a non-routable VLAN because this network is expected to be private. You should add the appropriate VLAN tag to the port group to take this into account.
-** The load balancing, failback, and failover order settings of the port group should be the same as the vSwitch.
-. Configure a port group on the vSwitch for the external traffic (ONTAP-external):
-** The port group is assigned to ONTAP Select virtual network adapters e0a-e0c used for data and management traffic.
-** The port group can be on a routable VLAN. Depending on the network environment, you should also add an appropriate VLAN tag or configure the port group for VLAN trunking.
-** The load balancing, failback, and failover order settings of the port group should be same as the vSwitch.
-
+// 2026 FEB 16, ontap-select-issue-321
 // 2024 NOV 4, ONTAPDOC-2528
 // 2023-09-26, ONTAPDOC-1204
