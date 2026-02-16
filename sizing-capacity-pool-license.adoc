@@ -46,16 +46,17 @@ You need to calculate the licensed capacity based on the usable space to ensure 
 (400 / 1.13)
 a| Per single-node cluster: 
 
-74 TB [(400 / 2) / 2.67]
+149 TB (400 / 2.67)
 
 Per HA pair cluster: 
 
-148 TB (2 x 74)
+298 TB (2 x 149)
 |===
 
 .What's next
 
 link:task_lic_acquire_cp.html[Acquire a Capacity Pools license for ONTAP Select]
 
+// 2026 FEB 16, ontap-select-issue-322
 // 2026 FEB 6, ONTAPDOC-3699
 // 2026 JAN 27, ONTAPDOC-3021

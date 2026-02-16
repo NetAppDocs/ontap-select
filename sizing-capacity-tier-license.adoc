@@ -48,18 +48,21 @@ Calculate the licensed capacity based on the usable space to ensure you have eno
 (400 / 1.13)
 a| Per node in a HA pair:
 
-* 74 TB [(400 / 2) / 2.67]
+* 149 TB (400 / 2.67)
 
 Per HA pair in a multi-node cluster:
 
-* Two-node: 148 TB (2 x 74)
-* Four-node: 296 TB (4 x 74)
-* Six-node: 444 TB (6 x 74)
-* Eight-node: 592 TB (8 x 74)
+* Two-node: 298 TB (2 x 149)
+* Four-node: 596 TB (4 x 149)
+* Six-node: 894 TB (6 x 149)
+* Eight-node: 1,192 TB (8 x 149)
+* Ten-node: 1,490 TB (10 x 149)
+* Twelve-node: 1,788 TB (12 x 149)
 |===
 
 .What's next
 link:task_lic_acquire_ct.html[Acquire a Capacity Tier license for ONTAP Select]
 
+// 2026 FEB 16, ontap-select-issue-322
 // 2026 FEB 6, ONTAPDOC-3699
 // 2026 JAN 27, ONTAPDOC-3021
