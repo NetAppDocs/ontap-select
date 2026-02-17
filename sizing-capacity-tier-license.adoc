@@ -63,6 +63,6 @@ Per HA pair in a multi-node cluster:
 .What's next
 link:task_lic_acquire_ct.html[Acquire a Capacity Tier license for ONTAP Select]
 
-// 2026 FEB 16, ontap-select-issue-322
+// 2026 FEB 16, ONTAPDOC-3723
 // 2026 FEB 6, ONTAPDOC-3699
 // 2026 JAN 27, ONTAPDOC-3021

@@ -57,6 +57,6 @@ Per HA pair in a cluster:
 
 link:task_lic_acquire_cp.html[Acquire a Capacity Pools license for ONTAP Select]
 
-// 2026 FEB 16, ontap-select-issue-322
+// 2026 FEB 16, ONTAPDOC-3723
 // 2026 FEB 6, ONTAPDOC-3699
 // 2026 JAN 27, ONTAPDOC-3021
