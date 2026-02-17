@@ -70,6 +70,6 @@ Storage capacity is allocated from a Capacity Pool as needed and each new reques
 [NOTE]
 If an ONTAP Select virtual machine is deleted, any active leases remain in effect until they expire. When this occurs, the capacity is returned to the pool.
 
-// 2026 FEB 12, ontap-select-issue-314
+// 2026 FEB 12, ONTAPDOC-3723
 // 2025 DEC 10, NADIAA updates
 // 2023-10-17, Removed mention of old OTS versions
