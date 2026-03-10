@@ -71,7 +71,7 @@ Yes, the upgrade procedure for a Select cluster is identical to the upgrade of a
 Yes, the revert procedure for an ONTAP Select cluster is almost identical to the revert procedure for a FAS cluster. There are a few differences however:
 
 * Only upgraded instances of ONTAP Select can be reverted, and only up to the original install version. New installs cannot be reverted to an older code release, even if ONTAP Select in general does support that older release.
-* For ONTAP Select (KVM) and ONTAP Select (ESXi) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESXi uses VMXNET3 network drivers and, when possible, the vNMVE driver. These new installations cannot be reverted to prior versions of ONTAP Select.
+* For ONTAP Select (KVM) and ONTAP Select (ESXi) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESXi uses VMXNET3 network drivers and, when possible, the vNVMe driver. These new installations cannot be reverted to prior versions of ONTAP Select.
 * If the ONTAP Select VM was also upgraded to a Large instance (using the Premium XL license), then reverting to a prior version before 9.6 is not supported, because the Large instance feature is not available in earlier versions.
 
 .Does the ONTAP MetroCluster SDS require at a minimum a Premium license?
@@ -276,7 +276,7 @@ ONTAP MetroCluster SDS supports all type of storage configurations (DAS and vNAS
 
 .Does ONTAP MetroCluster SDS support software RAID?
 
-Yes, Software RAID is supported with SSD media on both KVM and ESX.
+Yes, Software RAID is supported with SSD media on both KVM and ESXi.
 
 .Does ONTAP MetroCluster SDS support both SSDs and spinning media?
 
