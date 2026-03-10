@@ -101,10 +101,10 @@ You can decrease the cluster size for an existing ESXi cluster in the following 
 +
 link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
 
-Support for SnapMirror Cloud::
-Beginning with ONTAP Select 9.17.1, SnapMirror Cloud is supported with ONTAP Select. SnapMirror Cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1. 
+Support for SnapMirror cloud::
+Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is a licensed ONTAP feature that is enabled by default when you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1. 
 +
-https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror Cloud backups to object storage^]. 
+https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[Learn about SnapMirror cloud backups to object storage^]. 
 
 Support for SnapLock Select::
 Beginning with ONTAP Select 9.17.1, new deployments have SnapLock Select (including tamperproof snapshot locking) licensed automatically. For upgrades from ONTAP Select 9.16.1 and earlier, you can download the SnapLock Select license free of charge from the link:https://mysupport.netapp.com/site/[NetApp Support Site^] and apply it manually. For more information, see link:reference_lic_ontap_features.html#enabled-ontap-features[ONTAP features automatically enabled by default].
@@ -190,7 +190,7 @@ Deploy VMware vCenter plug-in is no longer supported::
 Beginning with ONTAP Select 9.14.1, the Deploy VMware vCenter plug-in is no longer supported.
 
 Updated ONTAP Select Deploy support::
-If you are running a version of ONTAP Select Deploy 9.14.1 lower than 9.14.1P2, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
+If you are running a version of ONTAP Select Deploy 9.14.1 lower than 9.14.1P2, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, refer to the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
 
 Enhanced VMware ESXi support::
 ONTAP Select 9.14.1 includes support for VMware ESXi 8.0 U2.
@@ -206,13 +206,13 @@ Updated VMware ESXi support::
 Beginning with ONTAP 9.13.1, VMware ESXi 8.0.1 GA (build 20513097) is supported with hardware version 4 and later.
 
 Updated ONTAP Select Deploy support::
-As of April 2024, ONTAP Select Deploy 9.13.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.13.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
+As of April 2024, ONTAP Select Deploy 9.13.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.13.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, refer to the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
 
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 benefits from most of the new developments in the current release of the core ONTAP product. It does not include any new features or improvements specific to ONTAP Select. 
 
-As of April 2024, ONTAP Select Deploy 9.12.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.12.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, see the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
+As of April 2024, ONTAP Select Deploy 9.12.1 is no longer available on the NetApp Support Site. If you are running ONTAP Select Deploy 9.12.1, you should upgrade to ONTAP Select Deploy 9.14.1P2 as soon as possible. For more information, refer to the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733[ONTAP Select 9.14.1 Release Notes^].
 
 == ONTAP Select 9.11.1
 
@@ -234,7 +234,7 @@ KVM hypervisor is no longer supported::
 +
 * Beginning with ONTAP Select 9.11.1, all manageability functionality is no longer available for existing KVM clusters and hosts, except for the take offline and delete functions.
 +
-NetApp strongly recommends that customers plan and execute a full data migration from ONTAP Select for KVM to any other ONTAP platform, including ONTAP Select for ESXi. For more information, see the https://mysupport.netapp.com/info/communications/ECMLP2877451.html[EOA Notice^]
+NetApp strongly recommends that customers plan and execute a full data migration from ONTAP Select for KVM to any other ONTAP platform, including ONTAP Select for ESXi. For more information, refer to the https://mysupport.netapp.com/info/communications/ECMLP2877451.html[EOA Notice^]
 
 == ONTAP Select 9.10.1
 

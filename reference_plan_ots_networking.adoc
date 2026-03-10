@@ -19,7 +19,7 @@ You must configure the hypervisor network correctly before deploying ONTAP Selec
 You must configure a virtual switch on each of the ONTAP Select hosts to support the external network and internal network (multi-node clusters only). As part of deploying a multi-node cluster, you should test the network connectivity on the internal cluster network.
 
 [NOTE]
-To learn more about how to configure a vSwitch on a hypervisor host and the high speed interface feature, see the link:concept_nw_concepts_chars.html[Deep dive networking] section.
+To learn more about how to configure a vSwitch on a hypervisor host and the high speed interface feature, refer to the link:concept_nw_concepts_chars.html[Deep dive networking] section.
 
 == Upgrade to VMXNET3 (ESXi only)
 
@@ -60,7 +60,7 @@ In this environment, you should configure the traffic using two port groups as f
 * NIC1 is standby
 * NIC2 in active
 
-See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about two-NIC deployments.
+Refer to the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about two-NIC deployments.
 
 == Four-NIC host with standard vSwitch (ESXi only)
 
@@ -96,7 +96,7 @@ In this environment, you should configure the traffic using four port groups as 
 * NIC4 is active
 * NIC1, NIC2, NIC3 in standby
 
-See the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about four-NIC deployments.
+Refer to the link:concept_nw_concepts_chars.html[Deep dive networking] section for more information about four-NIC deployments.
 
 == Network traffic requirements
 

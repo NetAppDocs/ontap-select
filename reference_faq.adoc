@@ -71,7 +71,7 @@ Yes, the upgrade procedure for a Select cluster is identical to the upgrade of a
 Yes, the revert procedure for an ONTAP Select cluster is almost identical to the revert procedure for a FAS cluster. There are a few differences however:
 
 * Only upgraded instances of ONTAP Select can be reverted, and only up to the original install version. New installs cannot be reverted to an older code release, even if ONTAP Select in general does support that older release.
-* For ONTAP Select (KVM) and ONTAP Select (ESX) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESXi uses VMXNET3 network drivers and, when possible, the vNMVE driver. These new installations cannot be reverted to prior versions of ONTAP Select.
+* For ONTAP Select (KVM) and ONTAP Select (ESXi) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESXi uses VMXNET3 network drivers and, when possible, the vNVMe driver. These new installations cannot be reverted to prior versions of ONTAP Select.
 * If the ONTAP Select VM was also upgraded to a Large instance (using the Premium XL license), then reverting to a prior version before 9.6 is not supported, because the Large instance feature is not available in earlier versions.
 
 .Does the ONTAP MetroCluster SDS require at a minimum a Premium license?
@@ -94,7 +94,7 @@ Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any O
 
 .Can the ONTAP Select Deploy network configuration be changed after installation?
 
-Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, see the Knowledge Base article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Modifying DNS configuration of ONTAP Deploy instance^].
+Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Modifying DNS configuration of ONTAP Deploy instance^].
 
 .How does Deploy detect that ONTAP Select licenses are renewed?
 The method is the same for all licenses, although the specifics vary depending on whether it is a Capacity Tier or Capacity Pool license.
@@ -127,9 +127,9 @@ There are several questions and answers dealing with storage.
 
 .Can a single ONTAP Select Deploy instance create clusters on both ESXi and KVM?
 
-Yes. ONTAP Select Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.
+Yes. ONTAP Select Deploy can be installed on either KVM or ESXi, and both installations can create ONTAP Select clusters on either hypervisor.
 
-.Is vCenter required for ONTAP Select on ESX?
+.Is vCenter required for ONTAP Select on ESXi?
 
 If the ESXi hosts are properly licensed, then there is no need for the ESXi hosts to be managed by a vCenter Server. However, if the hosts are managed by a vCenter server, then you must configure ONTAP Select Deploy to use that vCenter Server. In other words, you cannot configure ESXi hosts as standalone in ONTAP Select Deploy if they are being actively managed by a vCenter Server. Note that the ONTAP Select Deploy VM relies on vCenter to track all ONTAP Select VM migrations between ESXi hosts due to a vMotion or VMware HA event.
 
@@ -168,7 +168,7 @@ All other errors are handled by ONTAP HA in the case of a two-node or four-node 
 
 .Can I recover an ONTAP Select node? 
 
-Contact NetApp Technical Support if you need to recover an ONTAP Select node, for example, if an ONTAP Select VM or host is completely lost or a single-node cluster is accidentally deleted. For more information, see the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster[ONTAP Select node VM recovery in case of disaster^].
+Contact NetApp Technical Support if you need to recover an ONTAP Select node, for example, if an ONTAP Select VM or host is completely lost or a single-node cluster is accidentally deleted. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster[ONTAP Select node VM recovery in case of disaster^].
 
 .What is the maximum datastore size that ONTAP Select supports?
 
@@ -276,7 +276,7 @@ ONTAP MetroCluster SDS supports all type of storage configurations (DAS and vNAS
 
 .Does ONTAP MetroCluster SDS support software RAID?
 
-Yes, Software RAID is supported with SSD media on both KVM and ESX.
+Yes, Software RAID is supported with SSD media on both KVM and ESXi.
 
 .Does ONTAP MetroCluster SDS support both SSDs and spinning media?
 

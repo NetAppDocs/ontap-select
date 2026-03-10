@@ -35,7 +35,7 @@ At a high level, you should use the following steps to upgrade an existing ONTAP
 +
 Review the link:reference_release_notes.html[release notes] for additional information and any required procedures before upgrading an ONTAP Select node.
 
-. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. For information on supported upgrade paths, see the link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html[Supported ONTAP upgrade paths^].
+. Upgrade the ONTAP Select node using the standard ONTAP upgrade procedures with the ONTAP Select upgrade file. For information on supported upgrade paths, refer to the link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html[Supported ONTAP upgrade paths^].
 
 == Revert an ONTAP Select node
 
