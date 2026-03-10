@@ -54,7 +54,7 @@ ls -lh /opt/netapp/images
 .ESXi example
 --
 
-[source,asciidoc]
+[source,cli]
 ----
 rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
 ----
@@ -63,7 +63,7 @@ rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
 .KVM example
 --
 
-[source,asciidoc]
+[source,cli]
 ----
 rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
 ----
