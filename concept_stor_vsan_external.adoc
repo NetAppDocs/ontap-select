@@ -67,7 +67,7 @@ After deployment, the ONTAP Select nodes can be migrated between hosts. This cou
 [NOTE]
 Anti-affinity rules require that DRS is enabled on the ESXi cluster.
 
-See the following example on how to create an anti-affinity rule for the ONTAP Select VMs. If the ONTAP Select cluster contains more than one HA pair, all nodes in the cluster must be included in this rule.
+Refer to the following example on how to create an anti-affinity rule for the ONTAP Select VMs. If the ONTAP Select cluster contains more than one HA pair, all nodes in the cluster must be included in this rule.
 
 image:ST_15.jpg[VM/Host rules]
 

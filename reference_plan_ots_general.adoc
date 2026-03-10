@@ -25,7 +25,7 @@ You should have experience with the specific Linux distribution to be used for y
 * Configure the system using the CLI
 * Add software packages as well as any dependencies
 
-For more information on preparing your Linux server, including the required configuration and software packages, see the host configuration checklist. Refer to the hypervisor requirements for the currently supported Linux distributions.
+For more information on preparing your Linux server, including the required configuration and software packages, refer to the link:kvm-host-configuration-and-preparation-checklist.html[host configuration checklist]. Refer to the hypervisor requirements for the currently supported Linux distributions.
 
 KVM deployment and administration::
 You should be familiar with general virtualization concepts. In addition, there are several Linux CLI commands that you must use as part of installing and administering ONTAP Select in a KVM environment:

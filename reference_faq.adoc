@@ -94,7 +94,7 @@ Upgrading to ONTAP Select Deploy 2.6 enables support for these changes for any O
 
 .Can the ONTAP Select Deploy network configuration be changed after installation?
 
-Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, see the Knowledge Base article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Modifying DNS configuration of ONTAP Deploy instance^].
+Modifying the networking details of the Deploy instance after it's running in an environment is not supported. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance[Modifying DNS configuration of ONTAP Deploy instance^].
 
 .How does Deploy detect that ONTAP Select licenses are renewed?
 The method is the same for all licenses, although the specifics vary depending on whether it is a Capacity Tier or Capacity Pool license.
@@ -168,7 +168,7 @@ All other errors are handled by ONTAP HA in the case of a two-node or four-node 
 
 .Can I recover an ONTAP Select node? 
 
-Contact NetApp Technical Support if you need to recover an ONTAP Select node, for example, if an ONTAP Select VM or host is completely lost or a single-node cluster is accidentally deleted. For more information, see the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster[ONTAP Select node VM recovery in case of disaster^].
+Contact NetApp Technical Support if you need to recover an ONTAP Select node, for example, if an ONTAP Select VM or host is completely lost or a single-node cluster is accidentally deleted. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster[ONTAP Select node VM recovery in case of disaster^].
 
 .What is the maximum datastore size that ONTAP Select supports?
 

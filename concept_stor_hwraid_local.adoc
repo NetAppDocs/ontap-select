@@ -129,7 +129,7 @@ ONTAP Select breaks up the underlying attached storage into equal-sized virtual 
 For example, an ONTAP Select can assigned a datastore or LUN that is 31TB (the space remaining after the VM is deployed and the system and root disks are provisioned). Then four ~7.75TB virtual disks are created and assigned to the appropriate ONTAP local and mirror plex.
 
 [NOTE]
-Adding capacity to an ONTAP Select VM likely results in VMDKs of different sizes. For details, see the section link:concept_stor_capacity_inc.html[Increase storage capacity]. Unlike FAS systems, different sized VMDKs can exist in the same aggregate. ONTAP Select uses a RAID 0 stripe across these VMDKs, which results in the ability to fully use all the space in each VMDK regardless of its size.
+Adding capacity to an ONTAP Select VM likely results in VMDKs of different sizes. For details, refer to the section link:concept_stor_capacity_inc.html[Increase storage capacity]. Unlike FAS systems, different sized VMDKs can exist in the same aggregate. ONTAP Select uses a RAID 0 stripe across these VMDKs, which results in the ability to fully use all the space in each VMDK regardless of its size.
 
 == Virtualized NVRAM
 
