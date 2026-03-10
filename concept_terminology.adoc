@@ -52,7 +52,7 @@ There are three license offerings available which determine the size capabilitie
 * Premium
 * Premium XL
 
-For more information, see the two sections _Plan_ and _License_.
+For more information, refer to the two sections link:concept_workflow_deploy.html[Plan] and link:concept_lic_evaluation.html[License].
 
 Storage pools versus datastores::
 An ONTAP Select _storage pool_ is a logical data container designed to abstract and hide the underlying physical storage. A storage pool is hypervisor-independent. When deployed on an ESXi hypervisor host, the ONTAP Select storage pool is synonymous with the VMware _datastore_.
@@ -96,12 +96,12 @@ MetroCluster SDS::
 MetroCluster SDS is a feature that provides an additional configuration option when deploying a two-node ONTAP Select cluster. Unlike a typical two-node ROBO deployment, the MetroCluster SDS nodes can be separated by a much greater distance. This physical separation enables additional use cases, such as disaster recovery. You must have a premium license or higher to use MetroCluster SDS. In addition, the network between the nodes must support a minimum latency requirement.
 
 Credential store::
-The Deploy credential store is a secure database holding account credentials. It is used primarily to register hypervisor hosts as part of creating a new cluster. See the _Plan_ section for more information.
+The Deploy credential store is a secure database holding account credentials. It is used primarily to register hypervisor hosts as part of creating a new cluster. Refer to the link:concept_workflow_deploy.html[Plan] section for more information.
 
 Storage efficiency::
 ONTAP Select provides storage efficiency options that are similar to the storage efficiency options present on FAS and AFF arrays. Conceptually, ONTAP Select with direct-attached storage (DAS) SSDs (using a premium license) is similar to an AFF array. Configurations using DAS with HDDs and all vNAS configurations should be considered similar to a FAS array. The main difference between the two configurations is that ONTAP Select with DAS SSDs supports inline aggregate level deduplication and aggregate level background deduplication. The remaining storage efficiency options are available for both configurations.
 +
-The vNAS default configurations enable a write optimization feature known as single instance data logging (SIDL). With ONTAP Select 9.6 and later releases, the background ONTAP storage efficiency features are qualified with SIDL enabled. See the _Deep dive_ section for more information.
+The vNAS default configurations enable a write optimization feature known as single instance data logging (SIDL). With ONTAP Select 9.6 and later releases, the background ONTAP storage efficiency features are qualified with SIDL enabled. Refer to the link:concept_stor_concepts_chars.html[Deep dive] section for more information.
 
 Cluster refresh::
 After creating a cluster, you can make changes to the cluster or virtual machine configuration outside of the Deploy utility using ONTAP or hypervisor administration tools. You can also migrate a virtual machine which causes configuration changes. When these changes occur, the Deploy utility is not automatically updated and can become out of sync with the state of the cluster. You can use the cluster refresh feature to update the Deploy configuration database. Cluster refresh is available through the Deploy web user interface, CLI management shell, and REST API.

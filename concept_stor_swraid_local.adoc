@@ -128,7 +128,7 @@ In the ESXi or KVM shell, you can enter the following command to blink the LED f
 
 [role="tabbed-block"]
 ====
-.ESX
+.ESXi
 --
 [source,cli]
 ----
