@@ -51,7 +51,7 @@ The environment for a software RAID deployment must meet the following core requ
 * No hardware RAID controller on the host
 
 [NOTE]
-If a hardware RAID controller is present, see the link:concept_stor_concepts_chars.html[Deep dive storage] section for additional configuration requirements.
+If a hardware RAID controller is present, refer to the link:concept_stor_concepts_chars.html[Deep dive storage] section for additional configuration requirements.
 
 === ESXi specific requirements
 
@@ -61,7 +61,7 @@ If a hardware RAID controller is present, see the link:concept_stor_concepts_cha
 
 === KVM specific requirements
 
-There are also specific software package configuration requirements. See the link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server[preparation of the Linux server] step for more information.
+There are also specific software package configuration requirements. Refer to the link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server[preparation of the Linux server] step for more information.
 
 Media expectations for KVM::
 The SSD flash storage devices used must meet the following additional requirements:
@@ -102,7 +102,7 @@ As part of planning an ONTAP Select deployment, you should be aware of the restr
 The most important storage restrictions are presented below. You should also review the link:https://mysupport.netapp.com/matrix/[Interoperability Matrix Tool^] for more detailed information.
 
 [TIP]
-ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. See the link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html[License] section for more information.
+ONTAP Select enforces several restrictions related to storage allocation and use. Before you deploy an ONTAP Select cluster or purchase a license, you should be familiar with these restrictions. Refer to the link:concept_lic_evaluation.html[License] section for more information.
 
 === Calculate raw storage capacity
 

@@ -102,7 +102,7 @@ VMware recommends that STP be set to Portfast on the switch ports connected to t
 
 You must configure a virtual switch on each of the ONTAP Select hosts to support the external network and internal network (multi-node clusters only). As part of deploying a multi-node cluster, you should test the network connectivity on the internal cluster network.
 
-To learn more about how to configure an Open vSwitch on a hypervisor host, see the link:https://www.netapp.com/media/13134-tr4613.pdf[ONTAP Select on KVM Product Architecture and Best Practices^] technical report.
+To learn more about how to configure an Open vSwitch on a hypervisor host, refer to the link:https://www.netapp.com/media/13134-tr4613.pdf[ONTAP Select on KVM Product Architecture and Best Practices^] technical report.
 
 == HA
 
