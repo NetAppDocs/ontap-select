@@ -14,16 +14,16 @@ summary: You can upgrade an existing Deploy utility virtual machine in-place usi
 [.lead]
 Upgrade an existing ONTAP Select Deploy utility virtual machine in-place using the ONTAP Select Deploy utility CLI.
 
-.Before you begin
-
-Verify that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. Refer to the link:reference_release_notes.html[release notes] for information and restrictions about upgrading the ONTAP Select Deploy utility.
+You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from an earlier release, for example, ONTAP Select Deploy 9.15.1, you must first upgrade to ONTAP Select Deploy 9.16.1 or 9.17.1, then upgrade to ONTAP Select 9.18.1.
 
 [NOTE]
 ====
 If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. Refer to link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
-
-You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from ONTAP Select Deploy 9.15.1 or earlier, review the release notes for your ONTAP Select version.
 ====
+
+.Before you begin
+
+Verify that ONTAP Select Deploy is not used to perform any other tasks during the upgrade. 
 
 == Step 1: Download the upgrade package
 
