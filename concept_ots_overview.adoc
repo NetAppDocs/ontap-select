@@ -18,7 +18,7 @@ ONTAP Select converts internal disk drives, NVMe, SSD or HDD, and external array
 
 ONTAP Select adapts to your capacity consumption needs with two complementary licensing models — Capacity Tiers and the completely flexible Capacity Pools. Both licensing models allow you to increase capacity in increments of as little as 1TB. For example, you can start with a few terabytes and dynamically add capacity as your project grows. If you are using Capacity Pools, you can redistribute the capacity as you see fit when your project is finished. 
 
-ONTAP Select is integrated into cloud management frameworks such as VMware vSphere. This helps accelerate deployment of new projects such as file services, home directories, software development environments, and application testing. 
+ONTAP Select is integrated into cloud management frameworks such as VMware vSphere and Kernel-based Virtual Machine (KVM). This helps accelerate deployment of new projects such as file services, home directories, software development environments, and application testing. 
 
 SnapMirror software lets you move data between ONTAP storage across the hybrid cloud so that you can easily access your data where you want it. For example, you can bring up an environment quickly to prove an idea. Later, you can move the project to a dedicated storage platform for production deployment or make it more accessible in the cloud as part of a development workflow.
 
@@ -115,7 +115,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 .Related information
 
-* link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default[Learn about ONTAP features enabled by default]
+* link:reference_lic_ontap_features.html#enabled-ontap-features[Learn about ONTAP features enabled by default]
 * link:concept_lic_evaluation.html[Learn about ONTAP Select license options]
 
 
