@@ -57,13 +57,13 @@ FlexCache cache volume for write-back is supported with ONTAP Select. The overal
 
 NOTE: FlexCache origin with write-back is not supported with ONTAP Select.
 
-The FlexCache cache volume for write-back with ONTAP Select configuration has the following requirements:
+A FlexCache cache volume for write-back with ONTAP Select configuration has the following requirements:
 
-* Use ONTAP Select medium (8-core) or large (16-core) instance. Small ONTAP Select instances (4-core) are not supported.
+* Use an ONTAP Select medium (8-core) or large (16-core) instance. Small ONTAP Select instances (4-core) are not supported.
 * Use NVMe backed solid state drives. SAS backed storage is lower compared to NVMe for ONTAP Select.
 * Test ONTAP Select for FlexCache write-back before starting the deployment. FlexCache write-back is not recommended for a large number of small files.
 
-Learn more about the link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html[ONTAP FlexCache write-back guidelines^]
+For more information, refer to the link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html[ONTAP FlexCache write-back guidelines^].
 
 == Compare ONTAP Select and ONTAP 9
 
