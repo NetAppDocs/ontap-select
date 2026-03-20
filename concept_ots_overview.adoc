@@ -51,6 +51,20 @@ The following figure illustrates the NetApp ONTAP Select Deploy administration u
 
 image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created with the Deploy administration utility.]
 
+== FlexCache write-back with ONTAP Select
+
+FlexCache cache volume for write-back is supported with ONTAP Select. The overall ONTAP Select instance performance is comparable to a low-end ONTAP system.
+
+NOTE: FlexCache origin with write-back is not supported with ONTAP Select.
+
+The FlexCache cache volume for write-back with ONTAP Select configuration has the following requirements:
+
+* Use ONTAP Select medium (8-core) or large (16-core) instance. Small ONTAP Select instances (4-core) are not supported.
+* Use NVMe backed solid state drives. SAS backed storage is lower compared to NVMe for ONTAP Select.
+* Test ONTAP Select for FlexCache write-back before starting the deployment. FlexCache write-back is not recommended for a large number of small files.
+
+Learn more about the link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html[ONTAP FlexCache write-back guidelines^]
+
 == Compare ONTAP Select and ONTAP 9
 
 Both hardware-based ONTAP and ONTAP Select provide enterprise class storage solutions. However, because they are designed and implemented differently, each can address different business requirements and usage scenarios. You should become familiar with the major differences between the platforms before planning an ONTAP Select deployment.
@@ -118,7 +132,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 * link:reference_lic_ontap_features.html#enabled-ontap-features[Learn about ONTAP features enabled by default]
 * link:concept_lic_evaluation.html[Learn about ONTAP Select license options]
 
-
+// 2026 MAR 20, ONTAPDOC-3153
 // 2025 AUG 12, ONTAPDOC-3133
 // 2025 FEB 18, ONTAPDOC-2678
 // 2024 AUG 12, ONTAPDOC-2283
