@@ -14,7 +14,7 @@ summary: Because of the inherent flexibility of REST web services, the ONTAP Sel
 [.lead]
 Because of the inherent flexibility of REST web services, the ONTAP Select Deploy API can be accessed in several different ways.
 
-NOTE: The REST API included with ONTAP Select Deploy is assigned a version number. The API version number is independent of the Deploy release number. The ONTAP Select 9.17.1 Deploy administration utility includes version 3 of the REST API.
+NOTE: The REST API included with ONTAP Select Deploy is assigned a version number. The API version number is independent of the Deploy release number. The ONTAP Select 9.19.1 Deploy administration utility includes version 3 of the REST API.
 
 == Deploy utility native user interface
 
