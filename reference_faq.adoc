@@ -266,7 +266,7 @@ MetroCluster SDS provides a synchronous replication solution and falls under Net
 
 The two-node cluster is defined as a cluster for which both nodes are in the same data center within 300m of each other. In general, both nodes have uplinks to the same network switch or set of network switches connected by an Inter-Switch Link.
 
-The two-node MetroCluster SDS is defined as a cluster whose nodes are physically separated (different rooms, different buildings, or different data centers) and each node’s uplink connections are connected to separate network switches. Although MetroCluster SDS does not require dedicated hardware, the environment should support the minimum requirements for latency (5ms RTT and 5ms jitter for a max total of 10ms).
+The two-node MetroCluster SDS is defined as a cluster with nodes that are physically separated (different rooms, different buildings, or different data centers) and each node’s uplink connections are connected to separate network switches. Although MetroCluster SDS does not require dedicated hardware, the environment should support the minimum requirements for latency (5ms RTT and 5ms jitter for a max total of 10ms).
 
 MetroCluster SDS is a premium feature and requires the Premium or Premium XL license. A Premium license supports the creation of both Small and Medium VMs as well as HDD and SSD media. All these configurations are supported.
 
