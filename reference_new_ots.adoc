@@ -18,7 +18,7 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 == ONTAP Select 9.19.1
 
 Support for external key management (KMIP)::
-Beginning with ONTAP Select 9.19.1, external key management is licensed by default. After you install a new ONTAP Select 9.19.1 Deploy or upgrade to ONTAP Select Deploy 9.19.1 from a previous release, you need to enable external key management and specify the external key management servers. The external key management server serves authentication keys to nodes using the Key Management Interoperability Protocol (KMIP). For more information, see link:reference_lic_ontap_features.html#licensed-ontap-features[ONTAP features licensed by default].
+Beginning with ONTAP Select 9.19.1, external key management is licensed by default. After you install a new ONTAP Select 9.19.1 Deploy or upgrade to ONTAP Select Deploy 9.19.1 from a previous release, you need to enable external key management and specify the external key management server. The external key management server serves authentication keys to nodes using the Key Management Interoperability Protocol (KMIP). For more information, see link:reference_lic_ontap_features.html#licensed-ontap-features[ONTAP features licensed by default].
 +
 Cloud key managers (AWS KMS, Azure Key Vault, and Google Cloud KMS) and Onboard Key Manager are not supported for ONTAP Select.
 

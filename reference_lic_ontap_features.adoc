@@ -27,7 +27,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * Deduplication and compression
 * External key management (KMIP)
 +
-You need to specify the external key management server, which serves authentication keys to nodes using the Key Management Interoperability Protocol (KMIP). For more information, refer to the link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[ONTAP NetApp volume and aggregate encryption documentation^].
+You need to enable external key management and specify the external key management server. The external key management server serves authentication keys to nodes using the Key Management Interoperability Protocol (KMIP). For more information, refer to the link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[ONTAP NetApp volume and aggregate encryption documentation^].
 
 * FlexCache
 * FlexClone
