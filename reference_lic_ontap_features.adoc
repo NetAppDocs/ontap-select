@@ -25,6 +25,11 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * Autonomous Ransomware Protection (ARP) (manual updates)
 * CIFS
 * Deduplication and compression
+* External key management (KMIP)
++
+You need to specify the external key management server, which serves authentication keys to nodes using the Key Management Interoperability Protocol (KMIP). For more information, refer to the link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[ONTAP NetApp volume and aggregate encryption documentation^].
+
+
 * FlexCache
 * FlexClone
 * iSCSI
@@ -63,7 +68,7 @@ NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 * link:concept_ots_overview.html#compare-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys[NetApp ONTAP Master License Keys^]
 
-
+// 2026 MAR 30, ONTAPDOC-3764
 // 2025 Sep 03, ONTAPDOC-9.17.1GA
 // 2025 Aug 22, ONTAPDOC-3141
 // 2025 JUN 25, ONTAPDOC-2741
