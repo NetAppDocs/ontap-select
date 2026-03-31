@@ -260,7 +260,7 @@ MetroCluster SDS is a lower-cost synchronous replication option that falls under
 
 .How is the MetroCluster SDS different from NetApp MetroCluster?
 
-MetroCluster SDS provides a synchronous replication solution and falls under NetApp MetroCluster solutions. However, the key difference is the connectivity type (only IP networks are supported rather than FC and IP).
+MetroCluster SDS provides a synchronous replication solution and falls under NetApp MetroCluster solutions. However, a key difference is the connectivity type (only IP networks are supported rather than FC and IP).
 
 .What is the difference between a two-node ONTAP Select cluster and a two-node ONTAP MetroCluster SDS?
 
