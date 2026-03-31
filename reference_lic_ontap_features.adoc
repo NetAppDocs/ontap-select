@@ -17,8 +17,8 @@ ONTAP Select supports most ONTAP features. Many of the ONTAP features are licens
 [NOTE]
 ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
-[[enabled-ontap-features]]
-== ONTAP features automatically enabled by default
+[[licensed-ontap-features]]
+== ONTAP features licensed by default
 
 The following ONTAP features are supported with ONTAP Select and licensed by default:
 
@@ -28,7 +28,6 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * External key management (KMIP)
 +
 You need to specify the external key management server, which serves authentication keys to nodes using the Key Management Interoperability Protocol (KMIP). For more information, refer to the link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[ONTAP NetApp volume and aggregate encryption documentation^].
-
 
 * FlexCache
 * FlexClone
