@@ -75,7 +75,7 @@ Several ONTAP features are not supported with ONTAP Select. In most cases, these
 +
 NOTE: Beginning with ONTAP Select 9.16.1, manual updates to ARP are supported and the ARP feature license is included in the NetApp License File (NLF).
 
-* Cloud key managers (AWS KMS, Azure Key Vault, and Google Cloud KMS)
+* Cloud key managers
 * Cluster IPspace
 +
 Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
