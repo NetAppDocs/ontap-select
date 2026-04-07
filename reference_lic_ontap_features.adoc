@@ -45,6 +45,7 @@ SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Selec
 +
 ONTAP Select supports SVM DR as both a source and destination with a maximum of 16 relationships. SVM DR support is limited to the use of the source ONTAP version to versions +2. For example, the ONTAP Select 9.12.1 source can connect to destination ONTAP versions 9.12.1, 9.13.1, or 9.14.1.
 
+[[other-ontap-features]]
 == ONTAP features that are separately licensed
 
 You need to acquire a separate license for any ONTAP feature that is not enabled by default, including:
@@ -56,7 +57,7 @@ NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 * MetroCluster SDS (ONTAP Select premium license offering)
 * SnapMirror cloud
 +
-link:install-snapmirror-cloud-evaluation-license.html[Learn about installing a SnapMirror cloud evaluation license^].
+link:install-snapmirror-cloud-evaluation-license.html[Learn about installing a SnapMirror cloud evaluation license].
 
 
 
@@ -65,7 +66,7 @@ link:install-snapmirror-cloud-evaluation-license.html[Learn about installing a S
 * link:concept_ots_overview.html#compare-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys[NetApp ONTAP Master License Keys^]
 
-
+// 2026 APR 7, ONTAPDOC-3639
 // 2025 Sep 03, ONTAPDOC-9.17.1GA
 // 2025 Aug 22, ONTAPDOC-3141
 // 2025 JUN 25, ONTAPDOC-2741
