@@ -1,0 +1,31 @@
+---
+sidebar: sidebar
+permalink: install-sm-cloud-license.html
+keywords: administer, administering, web, licenses
+summary: After installing a new ONTAP Select deploy or upgrading an existing ONTAP Select deploy to version 9.17.1 or later, you can install a SnapMirror cloud evaluation license.
+---
+= Install SnapMirror cloud evaluation license for ONTAP Select
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+After deploying a new ONTAP Select cluster or upgrading an existing ONTAP Select cluster to version 9.17.1 or later, you can install a SnapMirror cloud evaluation license. The SnapMirror cloud license is not licensed by default for ONTAP Select.
+
+A SnapMirror cloud evaluation license up to 90 days is automatically approved and you can redeem the license immediately. Licenses for one year or greater require approval.
+
+.Before you begin
+You have the ONTAP Select cluster UUID.
+
+.Steps
+
+. Log into link:https://lms.netapp.com/ui/nec/[NetApp Evaluation Central^].
+. Select *Request a license* > *ONTAP for FAS & AFF*.
+. Fill in the required information. 
+. Optionally, select *Yes* for *Is this and NVE request?* if you need NetApp encryption features (NetApp Volume Encryption or Trusted Platform Module).
+. <Insert details for how to redeem a 90 day license or receive approval for a one year license>.
+
+.Related information
+Learn about link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-licensing-concept.html[ONTAP SnapMirror licensing^].

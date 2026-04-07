@@ -39,7 +39,6 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 +
 SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance. For more information, refer to the link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock documentation^].
 * SnapMirror
-* SnapMirror cloud
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
@@ -55,6 +54,9 @@ You need to acquire a separate license for any ONTAP feature that is not enabled
 NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 
 * MetroCluster SDS (ONTAP Select premium license offering)
+* SnapMirror cloud
++
+link:install-sm-cloud-license.html[Learn about installing a SnapMirror cloud evaluation license^].
 
 
 
