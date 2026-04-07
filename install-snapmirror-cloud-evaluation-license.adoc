@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
-permalink: install-sm-cloud-license.html
-keywords: administer, administering, web, licenses
+permalink: install-snapmirror-cloud-evaluation-license.html
+keywords: snapmirror, cloud, evaluation, license, install, cluster, ontap, select
 summary: After installing a new ONTAP Select deploy or upgrading an existing ONTAP Select deploy to version 9.17.1 or later, you can install a SnapMirror cloud evaluation license.
 ---
 = Install SnapMirror cloud evaluation license for ONTAP Select

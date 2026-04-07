@@ -182,7 +182,7 @@ sidebar:
             - title: Manage licenses
               url: /task_adm_licenses.html
             - title: Install SnapMirror cloud evaluation license
-              url: /install-sm-cloud-license.html
+              url: /install-snapmirror-cloud-evaluation-license.html
     - title: Deep dive
       entries:
         - title: Storage
