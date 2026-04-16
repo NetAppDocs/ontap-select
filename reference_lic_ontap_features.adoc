@@ -29,7 +29,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 +
 ONTAP Select supports FlexCache cache volume for write-back. FlexCache origin with write-back is not supported. 
 +
-link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[Learn more about FlexCache write-back with ONTAP Select^]
+link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[Learn more about FlexCache write-back with ONTAP Select]
 
 * FlexClone
 * iSCSI
@@ -44,7 +44,7 @@ link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[Learn more
 +
 SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance. 
 +
-link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[Learn about ONTAP SnapLock^].
+link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[Learn about ONTAP SnapLock^]
 * SnapMirror
 * SnapMirror cloud
 * SnapRestore
