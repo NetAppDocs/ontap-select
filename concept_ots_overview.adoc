@@ -53,9 +53,9 @@ image:ots_architecture.png[Illustrates a ONTAP Select four-node cluster created 
 
 == FlexCache write-back with ONTAP Select
 
-FlexCache cache volume for write-back is supported with ONTAP Select. The overall ONTAP Select instance performance is comparable to a low-end ONTAP system.
+ONTAP Select supports FlexCache cache volume for write-back. The overall ONTAP Select instance performance is comparable to a low-end ONTAP system.
 
-NOTE: FlexCache origin with write-back is not supported with ONTAP Select.
+NOTE: ONTAP Select does not support FlexCache origin with write-back.
 
 A FlexCache cache volume for write-back with ONTAP Select configuration has the following requirements:
 
@@ -63,7 +63,7 @@ A FlexCache cache volume for write-back with ONTAP Select configuration has the 
 * Use NVMe backed solid state drives. SAS backed storage is lower compared to NVMe for ONTAP Select.
 * Test ONTAP Select for FlexCache write-back before starting the deployment. FlexCache write-back is not recommended for a large number of small files.
 
-For more information, refer to the link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html[ONTAP FlexCache write-back guidelines^].
+link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html[Learn about ONTAP FlexCache write-back^]
 
 == Compare ONTAP Select and ONTAP 9
 
