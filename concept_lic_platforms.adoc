@@ -45,7 +45,7 @@ The following table compares the capabilities for the standard, premium, and pre
 | Yes
 | Yes
 
-.3+| Solid state drives (SSD) in a ...
+.3+| Solid state drives (SSDs) in a ...
 | Hardware RAID configuration
 | No
 | Yes
