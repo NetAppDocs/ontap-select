@@ -260,13 +260,13 @@ MetroCluster SDS is a lower-cost synchronous replication option that falls under
 
 .How is the MetroCluster SDS different from NetApp MetroCluster?
 
-MetroCluster SDS provides a synchronous replication solution and falls under NetApp MetroCluster solutions. However, the key differences are in the distances supported (~10km versus 300km), and the connectivity type (only IP networks are supported rather than FC and IP).
+MetroCluster SDS provides a synchronous replication solution and falls under NetApp MetroCluster solutions. However, a key difference is the connectivity type (only IP networks are supported rather than FC and IP).
 
 .What is the difference between a two-node ONTAP Select cluster and a two-node ONTAP MetroCluster SDS?
 
 The two-node cluster is defined as a cluster for which both nodes are in the same data center within 300m of each other. In general, both nodes have uplinks to the same network switch or set of network switches connected by an Inter-Switch Link.
 
-The two-node MetroCluster SDS is defined as a cluster whose nodes are physically separated (different rooms, different buildings, or different data centers) and each node’s uplink connections are connected to separate network switches. Although MetroCluster SDS does not require dedicated hardware, the environment should support a set of minimum requirements in terms of latency (5ms RTT and 5ms jitter for a max total of 10ms) and physical distance (10km).
+The two-node MetroCluster SDS is defined as a cluster with nodes that are physically separated (different rooms, different buildings, or different data centers) and each node’s uplink connections are connected to separate network switches. Although MetroCluster SDS does not require dedicated hardware, the environment should support the minimum requirements for latency (5ms RTT and 5ms jitter for a max total of 10ms).
 
 MetroCluster SDS is a premium feature and requires the Premium or Premium XL license. A Premium license supports the creation of both Small and Medium VMs as well as HDD and SSD media. All these configurations are supported.
 
@@ -290,10 +290,10 @@ No, only two-node clusters with a Mediator can be configured as MetroCluster SDS
 
 The requirements are as follows:
 
-* Three data centers (one for the ONTAP Select Deploy Mediator and one for each node).
-* 5ms RTT and 5ms jitter for a max total of 10ms and maximum physical distance of 10km between the ONTAP Select nodes.
-* 125ms RTT and a minimum bandwidth of 5Mbps between the ONTAP Select Deploy Mediator and each ONTAP Select node.
-* A Premium or Premium XL license.
+* Three data centers (one for the ONTAP Select Deploy Mediator and one for each node)
+* 5ms RTT and 5ms jitter for a max total of 10ms 
+* 125ms RTT and a minimum bandwidth of 5Mbps between the ONTAP Select Deploy Mediator and each ONTAP Select node
+* A Premium or Premium XL license
 
 .Does ONTAP Select support vMotion or VMware HA?
 
@@ -343,6 +343,7 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
 
+// 2026 MAR 23, ONTAPDOC-3806
 // 2025 SEP 8, ONTAPDOC-3320
 // 2025 JULY 15, ontap-select-internal-issue-206
 // 2024-03-05, ONTAPDOC-1554

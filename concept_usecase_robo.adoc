@@ -25,8 +25,11 @@ The ONTAP Select VM can be collocated with application VMs, making it an optimal
 Using ONTAP Select to provide enterprise-class file services while allowing bidirectional replication to other ONTAP Select or FAS clusters enables resilient solutions to be built in low-touch or low-cost environments. ONTAP Select comes prepopulated with feature licenses for CIFS, NFS, and iSCSI protocol services as well as both SnapMirror and SnapVault replication technologies. Therefore, all of these features are available immediately upon deployment.
 
 [NOTE]
+====
 Because all VMware vSphere licenses are supported, you can choose the vSphere Remote Office Branch Office Standard or Advanced license instead of the Enterprise or Enterprise Plus license.
-All vSphere and VSAN licenses are now supported.
+
+All vSphere and VSAN licenses are supported.
+====
 
 An ONTAP Select two-node cluster with a remote mediator is an attractive solution for small data centers. In this configuration, HA functionality is provided by ONTAP Select. The minimum networking requirement for a two-node ONTAP Select ROBO solution is four 1Gb links. A single 10Gb network connection is also supported. The vNAS ONTAP Select solution running on VSAN (including the two-node VSAN ROBO configuration) is another option. In this configuration, the HA functionality is provided by VSAN. Finally, a single-node ONTAP Select cluster replicating its data to a core location can provide a set of robust enterprise data management tools on top of a commodity server.
 
