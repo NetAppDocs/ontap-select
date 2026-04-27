@@ -127,7 +127,7 @@ NOTE: There are additional disk requirements based on the platform license. See 
 
 .Related information
 
-Learn about link:concept_lic_platforms.html[the platform license offerings for ONTAP Select].
+Learn about link:concept_lic_platforms.html[the platform license offerings for ONTAP Select]
 
 // 2025 APR 27, ONTAPDOC-3784
 // 2025 DEC 9. ONTAPDOC-3461
