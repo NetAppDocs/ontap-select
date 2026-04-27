@@ -66,7 +66,7 @@ If an ESXi hypervisor host is managed by a vCenter server, you must register the
 The physical hypervisor host where you deploy ONTAP Select must meet several hardware requirements. You can choose any platform for the hypervisor host, as long as it meets the minimum hardware requirements. The following vendors provide supported hardware platforms: Cisco, Dell, HP, Fujitsu, Lenovo, and Supermicro.
 
 [NOTE]
-Beginning with ONTAP Select 9.9.1, only CPU models based on Intel Xeon Sandy Bridge or later are supported.
+ONTAP Select supports CPU models based on Intel Xeon Sandy Bridge and Advanced Micro Devices (AMD) processors.
 
 Refer to the https://mysupport.netapp.com/matrix[Interoperability Matrix Tool,window=_blank] for more information.
 
@@ -76,9 +76,9 @@ There are several common hardware requirements that apply to all platforms regar
 
 .Processor
 
-The supported microprocessors include Intel Xeon processors for Server, see link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank] for more information.
+The supported microprocessors include Intel Xeon processors for Server and AMD processors.
 
-NOTE: Advanced Micro Devices (AMD) processors aren't supported with ONTAP Select. 
+For more information, refer to link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003[Intel Xeon Processors,window=_blank^].
 
 .Ethernet configuration
 
@@ -129,6 +129,7 @@ Refer to link:concept_lic_platforms.html[Understand the platform license offerin
 [NOTE]
 There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
+// 2025 APR 27, ONTAPDOC-3784
 // 2025 DEC 9. ONTAPDOC-3461
 // 2024-NOV-18, ONTAPDOC-2550
 // 2023-APR-12, ONTAPDOC-979

@@ -17,6 +17,10 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 == ONTAP Select 9.19.1
 
+
+Support for Advanced Micro Devices (AMD)::
+Beginning with ONTAP Select 9.19.1, ONTAP Select supports AMD processors for both KVM and ESXi hypervisor hosts.
+
 == ONTAP Select 9.18.1
 
 Updates to the ONTAP Select product download options::
