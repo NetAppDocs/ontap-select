@@ -207,10 +207,6 @@ SnapCenter (optional)
 --
 ====
 
-.What's next?
-
-link:concept_lic_workflow.html[Learn about purchasing an ONTAP Select license]
-
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 Sep 16, ONTAPDOC-3305
 // 2025 AUG 13, ONTAPDOC-3206
