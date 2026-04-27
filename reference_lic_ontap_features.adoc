@@ -17,14 +17,18 @@ ONTAP Select supports most ONTAP features. Many of the ONTAP features are licens
 [NOTE]
 ONTAP features that have hardware-specific dependencies are generally not supported with ONTAP Select.
 
-[[enabled-ontap-features]]
-== ONTAP features automatically enabled by default
+[[licensed-ontap-features]]
+== ONTAP features licensed by default
 
 The following ONTAP features are supported with ONTAP Select and licensed by default:
 
 * Autonomous Ransomware Protection (ARP) (manual updates)
 * CIFS
 * Deduplication and compression
+* External key management using the Key Management Interoperability Protocol (KMIP)
++
+External key management is the only key management supported by ONTAP Select. Learn about link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[enabling and configuring external key management^].
+
 * FlexCache
 * FlexClone
 * iSCSI
@@ -48,7 +52,7 @@ ONTAP Select supports SVM DR as both a source and destination with a maximum of 
 
 == ONTAP features that are separately licensed
 
-You need to acquire a separate license for any ONTAP feature that is not enabled by default, including:
+You need to acquire a separate license for any ONTAP feature that is not licensed by default, including:
 
 * FabricPool
 +
@@ -56,14 +60,12 @@ NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 
 * MetroCluster SDS (ONTAP Select premium license offering)
 
-
-
 .Related information
 
-* link:concept_ots_overview.html#compare-ontap-select-and-ontap-9[Comparing ONTAP Select and ONTAP 9]
-* link:https://mysupport.netapp.com/site/systems/master-license-keys[NetApp ONTAP Master License Keys^]
+* link:concept_ots_overview.html#compare-ontap-select-and-ontap-9[Compare ONTAP Select and ONTAP 9]
+* link:https://mysupport.netapp.com/site/systems/master-license-keys[Learn about the NetApp ONTAP master license keys^]
 
-
+// 2026 MAR 30, ONTAPDOC-3764
 // 2025 Sep 03, ONTAPDOC-9.17.1GA
 // 2025 Aug 22, ONTAPDOC-3141
 // 2025 JUN 25, ONTAPDOC-2741
