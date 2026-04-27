@@ -22,6 +22,9 @@ Beginning with ONTAP Select 9.19.1, ONTAP Select supports external key managemen
 +
 ONTAP Select does not support cloud key managers or the Onboard Key Manager.
 
+Support for Advanced Micro Devices (AMD)::
+Beginning with ONTAP Select 9.19.1, ONTAP Select supports AMD processors on Kernel-Based Virtual Machine (KVM) and ESXi hypervisor hosts. For more information, refer to link:reference_plan_ots_hardware.html[VMware hypervisor and hardware considerations].
+
 == ONTAP Select 9.18.1
 
 Updates to the ONTAP Select product download options::
@@ -72,7 +75,7 @@ Beginning with ONTAP Select 9.18.1, KVM hypervisor is supported on Rocky Linux 1
 == ONTAP Select 9.17.1
 
 Software RAID support for locally attached NVMe disks on KVM hosts::
-ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a Kernel-Based Virtual Machine (KVM) hypervisor host. 
+ONTAP Select 9.17.1 introduces software RAID support for ONTAP Select locally attached NVMe disks on a KVM hypervisor host. 
 +
 To use software RAID for locally attached NVMe disks, you need to link:kvm-host-configuration-and-preparation-checklist.html[configure PCI passthrough (DirectPath IO)] when you are preparing the KVM host. This provides direct access for the KVM host to the locally attached NVMe disks, which is required for the following tasks: 
 +
