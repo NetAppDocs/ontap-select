@@ -115,9 +115,15 @@ Four, six, eight, ten, or twelve-node cluster
 2+h| Hardware type 3+h| Description
 2+h|Instance size h| Small h| Medium h| Large
 2+| CPU family 
-| Intel Xeon E5-26xx v3 (Haswell) or later	
-| Intel Xeon E5-26xx v3 (Haswell) or later	
-| Intel Xeon E5-26xx v3 (Haswell) or later	
+a| Intel Xeon E5-26xx v3 (Haswell) or later
+
+AMD EPYC Embedded 8004 and 9004 or later
+a| Intel Xeon E5-26xx v3 (Haswell) or later
+
+AMD EPYC Embedded 8004 and 9004 or later	
+a| Intel Xeon E5-26xx v3 (Haswell) or later
+
+AMD EPYC Embedded 8004 and 9004 or later	
 2+| ONTAP Select CPU / memory	
 | 4 virtual CPUs (vCPUs) / 16GB of RAM
 
@@ -209,8 +215,9 @@ SnapCenter (optional)
 
 .What's next?
 
-link:concept_lic_workflow.html[Learn about purchasing an ONTAP Select license]
+Learn about link:concept_lic_workflow.html[purchasing an ONTAP Select license]
 
+// 2025 APR 27, ONTAPDOC-3784
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 Sep 16, ONTAPDOC-3305
 // 2025 AUG 13, ONTAPDOC-3206
