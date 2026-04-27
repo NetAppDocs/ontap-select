@@ -115,13 +115,13 @@ Four, six, eight, ten, or twelve-node cluster
 2+h| Hardware type 3+h| Description
 2+h|Instance size h| Small h| Medium h| Large
 2+| CPU family 
-| Intel Xeon E5-26xx v3 (Haswell) or later
+a| Intel Xeon E5-26xx v3 (Haswell) or later
 
 AMD EPYC Embedded 8004 and 9004 or later
-| Intel Xeon E5-26xx v3 (Haswell) or later
+a| Intel Xeon E5-26xx v3 (Haswell) or later
 
 AMD EPYC Embedded 8004 and 9004 or later	
-| Intel Xeon E5-26xx v3 (Haswell) or later
+a| Intel Xeon E5-26xx v3 (Haswell) or later
 
 AMD EPYC Embedded 8004 and 9004 or later	
 2+| ONTAP Select CPU / memory	
