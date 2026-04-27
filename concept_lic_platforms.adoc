@@ -117,13 +117,13 @@ Four, six, eight, ten, or twelve-node cluster
 2+| CPU family 
 a| Intel Xeon E5-26xx v3 (Haswell) or later
 
-AMD EPYC Embedded 8004 and 9004 or later
+AMD EPYC Embedded 9004 or later and 8004
 a| Intel Xeon E5-26xx v3 (Haswell) or later
 
-AMD EPYC Embedded 8004 and 9004 or later	
+AMD EPYC Embedded 9004 or later and 8004	
 a| Intel Xeon E5-26xx v3 (Haswell) or later
 
-AMD EPYC Embedded 8004 and 9004 or later	
+AMD EPYC Embedded 9004 or later and 8004	
 2+| ONTAP Select CPU / memory	
 | 4 virtual CPUs (vCPUs) / 16GB of RAM
 
