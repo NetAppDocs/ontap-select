@@ -125,8 +125,7 @@ There are several additional hardware requirements based on the node instance ty
 |Premium XL
 |===
 
-[NOTE]
-There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
+NOTE: There are additional disk requirements based on the platform license. See link:reference_plan_ots_storage.html[Storage and RAID] for more information.
 
 .Related information
 
