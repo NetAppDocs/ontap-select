@@ -26,7 +26,7 @@ You can add, edit, and delete ONTAP Select Capacity Tier licenses as needed.
 
 . Select *Licenses* and select *Capacity Tier*.
 
-. Optionally select *Filter* and to limit the licenses displayed.
+. Optionally, select *Filter* to limit the licenses displayed.
 
 . To replace an existing license; select a license, select image:icon_kebab.gif[Options], and select *Update*.
 

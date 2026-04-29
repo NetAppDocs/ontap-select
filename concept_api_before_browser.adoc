@@ -23,10 +23,10 @@ If you intend to issue API calls as part of performing specific deployment or ad
 Each API call is described on the documentation page using a consistent format. The content includes implementation notes, query parameters, and HTTP status codes. In addition, you can display details about the JSON used with the API requests and responses as follows:
 
 * Example Value
-If you click _Example Value_ on an API call, a typical JSON structure for the call is displayed. You can modify the example as needed and use it as input for your request.
+If you select _Example Value_ on an API call, a typical JSON structure for the call is displayed. You can modify the example as needed and use it as input for your request.
 
 * Model
-If you click _Model_, a complete list of the JSON parameters is displayed, with a description for each parameter.
+If you select _Model_, a complete list of the JSON parameters is displayed, with a description for each parameter.
 
 == Caution when issuing API calls
 

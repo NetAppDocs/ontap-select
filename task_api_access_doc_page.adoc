@@ -23,7 +23,7 @@ You must have the following:
 
 .Steps
 
-. Type the URL in your browser and press *Enter*:
+. Type the URL in your browser and select *Enter*:
 +
 `\https://<ip_address>/api/ui`
 

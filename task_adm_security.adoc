@@ -22,9 +22,9 @@ You can change the password for the Deploy virtual machine administrator account
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the figure icon at the top right of the page and select *Change Password*.
+. Select the figure icon at the top right of the page, then select *Change Password*.
 
-. Provide the current and new password as prompted and click *Submit*.
+. Provide the current and new password as prompted and select *Submit*.
 
 == Add a management server account
 
@@ -38,11 +38,11 @@ You should be familiar with the types of credentials and how they are used by ON
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Management Servers* and then click *Add vCenter*.
+. Select *Management Servers* > *Add vCenter*.
 
-. Enter the following information and click *Add*.
+. Enter the following information and select *Add*.
 +
 [cols="30,70"*,options="header"]
 |===
@@ -60,8 +60,8 @@ You should be familiar with the types of credentials and how they are used by ON
 
 |===
 
-. After the new management server is added, you can optionally click image:icon_kebab.gif[Options] and select one of the following:
-+
+. Optionally, select image:icon_kebab.gif[Options] after the new management server is added, then select one of the following:
++ 
 * Update credentials
 * Verify credentials
 * Remove management server
@@ -144,7 +144,7 @@ You can log in to ONTAP Select Deploy using YubiKey PIV Authentication over SSH.
 
 . Log in from your device with the YubiKey connected.
 
-.Example output
+.Example output:
 ----
 login as: admin
 Authenticating with public key "<public_key>"
@@ -169,7 +169,7 @@ The `ssh-keygen` command supports several public key algorithms for authenticati
 * The algorithm is selected with the `-t` option  
 * The key size is selected with the `-b` option 
 
-.Example output
+.Example output:
 ---- 
 ssh-keygen -t ecdsa -b 521 
 ssh-keygen -t ed25519 

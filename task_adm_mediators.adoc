@@ -26,6 +26,6 @@ You can view the configuration of each mediator, including the current status, t
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page and click *Mediators*.
+. Select the *Administration* tab at the top of the page, then select *Mediators*.
 
-. Optionally click *Filter* to customize your view of the two-node clusters monitored by the mediator service.
+. Optionally, select *Filter* to customize your view of the two-node clusters monitored by the mediator service.
