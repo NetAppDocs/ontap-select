@@ -28,7 +28,7 @@ There are several supported Ethernet configurations based on the cluster size.
 | Minimum Requirements
 | Recommendation
 
-|Single node cluster
+|Single-node cluster
 |2 x 1GbE
 |2 x 10GbE
 
