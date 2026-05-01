@@ -57,9 +57,7 @@ NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 * MetroCluster SDS (ONTAP Select premium license offering)
 * SnapMirror cloud
 +
-link:install-snapmirror-cloud-evaluation-license.html[Learn about installing a SnapMirror cloud evaluation license].
-
-
+You need to link:https://mysupport.netapp.com/site/help[open a non-technical support case^] to obtain a SnapMirror cloud license.
 
 .Related information
 
