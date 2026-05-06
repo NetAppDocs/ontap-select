@@ -12,7 +12,7 @@ summary: There are several requirements for MetroCluster SDS that you should con
 :imagesdir: ./media/
 
 [.lead]
-MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment, however the distance between the two nodes can be up to 10 km. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.
+MetroCluster SDS is a configuration option when creating a two-node ONTAP Select cluster. It is similar to a Remote Office/Branch Office (ROBO) deployment. This enhanced two-node deployment provides additional use case scenarios. You should be aware of the requirements and restrictions as part of preparing to deploy MetroCluster SDS.
 
 Before deploying MetroCluster SDS, verify that the following requirements are met.
 
@@ -58,4 +58,5 @@ When deploying MetroCluster SDS, you cannot use vSAN in a distributed or "stretc
 
 You must assign a static IP address to the Deploy administration utility. This requirement applies to all Deploy instances that manage one or more ONTAP Select two-node clusters.
 
+// 2026 MAR 23, ONTAPDOC-3806
 // 2023-09-26, ONTAPDOC-1204

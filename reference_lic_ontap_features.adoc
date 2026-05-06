@@ -30,6 +30,11 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 External key management is the only key management supported by ONTAP Select. Learn about link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[enabling and configuring external key management^].
 
 * FlexCache
++
+ONTAP Select supports FlexCache cache volumes with write-back. FlexCache origin volumes with write-back are not supported.
++
+link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[Learn more about FlexCache write-back with ONTAP Select]
+
 * FlexClone
 * iSCSI
 * NDMP
@@ -41,7 +46,9 @@ External key management is the only key management supported by ONTAP Select. Le
 * S3 SnapMirror
 * SnapLock Select
 +
-SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance. For more information, refer to the link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock documentation^].
+SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance.
++
+link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[Learn about ONTAP SnapLock^]
 * SnapMirror
 * SnapMirror cloud
 * SnapRestore
