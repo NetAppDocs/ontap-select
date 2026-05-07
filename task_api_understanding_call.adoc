@@ -24,6 +24,6 @@ You can retrieve the configuration information describing an ONTAP Select cluste
 
 .Steps
 
-. On the main page, scroll to the bottom and click *Cluster*.
+. On the main page, scroll to the bottom and select *Cluster*.
 
-. Click *GET /clusters/{cluster_id}* to display the details of the API call used to return information about an ONTAP Select cluster.
+. Select *GET /clusters/{cluster_id}* to display the details of the API call used to return information about an ONTAP Select cluster.

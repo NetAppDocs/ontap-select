@@ -121,11 +121,11 @@ You must define the password for the administrator account. You need to provide 
 .. Wait for the following prompt:
 +
 Host name :
-.. Type the host name and press *Enter*.
+.. Type the host name and select *Enter*.
 .. Wait for the following prompt:
 +
 Provide a password for the admin user:
-.. Type the password and press *Enter*.
+.. Type the password and select *Enter*.
 .. Wait for the following prompt:
 +
 Use DHCP to set networking information? [n]:

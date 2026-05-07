@@ -26,11 +26,11 @@ The Deploy configuration data is used by AutoSupport.
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Settings & AutoSupport* and then click image:icon_pencil.gif[Edit].
+. Select *Settings & AutoSupport*, then select image:icon_pencil.gif[Edit].
 
-. Provide the configuration data as appropriate for your environment and click *Modify*.
+. Provide the configuration data as appropriate for your environment and select *Modify*.
 +
 If you use a proxy server, you can configure the proxy URL as follows:
 `\http://USERNAME:PASSWORD@<FQDN|IP>:PORT`
@@ -57,11 +57,11 @@ You can filter the list of event messages based on several characteristics, incl
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Events & Jobs* and then click *Events*.
+. Select *Events & Jobs*, then select *Events*.
 
-. Optionally click *Filter* and create a filter to limit the event messages displayed.
+. Optionally, select *Filter* and create a filter to limit the event messages displayed.
 
 == Enable AutoSupport
 
@@ -75,9 +75,9 @@ AutoSupport is the primary troubleshooting tool used by NetApp in supporting ONT
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Settings & AutoSupport* and then click image:icon_kebab.gif[Options].
+. Select *Settings & AutoSupport* and then select image:icon_kebab.gif[Options].
 
 . Enable or disable the AutoSupport feature as needed.
 
@@ -100,16 +100,16 @@ Performance information about the hypervisor hosts and ONTAP Select nodes
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Administration* tab at the top of the page.
+. Select the *Administration* tab at the top of the page.
 
-. Click *Settings & AutoSupport* and then click image:icon_kebab.gif[Options].
+. Select *Settings & AutoSupport* and then select image:icon_kebab.gif[Options].
 
-. Click *Generate*.
+. Select *Generate*.
 
 . Select the type and provide a description for the package; you can optionally provide a case number.
 
-. Click *Generate*.
+. Select *Generate*.
 +
 Each AutoSupport package is assigned a unique sequence identification number.
 
-. Optionally under *AutoSupport History*, select the correct package and click the download icon to save the AutoSupport file to your local workstation.
+. Optionally, select the correct package under *AutoSupport History*, then select the download icon to save the AutoSupport file to your local workstation.

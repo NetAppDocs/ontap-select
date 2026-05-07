@@ -37,7 +37,7 @@ Complete the following steps on a supported 64-bit ESXi host server.
 . Sign in to the VMware vSphere web client using an account with administrative privileges.
 . Select the host using one of the following options:
 ** Select *File* > *Deploy OVF Template*.
-** Select *Datacenter*. Then right-click and select *Deploy OVF Template*.
+** Select *Datacenter*. Then right-select and select *Deploy OVF Template*.
 . Select the ONTAP Select source OVA file on your local workstation, then select *Next*.
 . Review the OVF template details and select *Next*.
 . Review the EULA details and select *Accept*. Then select *Next*.
