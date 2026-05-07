@@ -55,9 +55,4 @@ There are several characteristics unique to the Capacity Pools licensing model, 
 * Each node automatically leases storage capacity for its local data aggregates from a shared Capacity Pool.
 
 
-.What's next?
-
-* link:concept_lic_platforms.html[Learn about the platform license offerings for ONTAP Select]
-* link:concept_lic_cp_operation.html[Learn more about the ONTAP Select Capacity Pools licensing model]
-
 // 2025 DEC 19, ONTAPDOC-3021

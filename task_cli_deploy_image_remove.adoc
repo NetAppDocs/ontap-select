@@ -47,7 +47,7 @@ shell bash
 ls -lh /opt/netapp/images
 ----
 
-. Optionally remove the ONTAP Select image with your hypervisor host.
+. Optionally, remove the ONTAP Select image with your hypervisor host.
 +
 [role="tabbed-block"]
 ====
