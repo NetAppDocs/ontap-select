@@ -14,11 +14,11 @@ summary: You can upgrade an existing Deploy utility virtual machine in-place usi
 [.lead]
 Upgrade an existing ONTAP Select Deploy utility virtual machine in-place using the ONTAP Select Deploy utility CLI.
 
-You can upgrade directly to ONTAP Select Deploy 9.18.1 from ONTAP Select Deploy 9.17.1 or 9.16.1. To upgrade from an earlier release, for example, ONTAP Select Deploy 9.15.1, you must first upgrade to ONTAP Select Deploy 9.16.1 or 9.17.1, then upgrade to ONTAP Select Deploy 9.18.1.
+You can upgrade directly to ONTAP Select Deploy 9.19.1 from ONTAP Select Deploy 9.18.1 or 9.17.1. To upgrade from an earlier release, for example, ONTAP Select Deploy 9.16.1, you must first upgrade to ONTAP Select Deploy 9.17.1 or 9.18.1, then upgrade to ONTAP Select Deploy 9.19.1.
 
 [NOTE]
 ====
-If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. The ONTAP Select node and ONTAP Select Deploy component are upgraded independently. Refer to link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
+If you have an older instance of the ONTAP Select Deploy administration utility installed, you should upgrade to the current release. You upgrade the ONTAP Select node and ONTAP Select Deploy components independently. Refer to link:concept_adm_upgrading_nodes.html[Upgrade the ONTAP Select nodes^] for further details.
 ====
 
 .Before you begin
@@ -54,10 +54,10 @@ This task describes one method for uploading the file to the ONTAP Select Deploy
 * Verify that the upgrade file is available on your local workstation.
 * Verify that you have the password for the administrator user account.
 
-.Steps
+.Step
 
-. In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine, as shown in the following example:
-+
+In a command shell on your local workstation, use the `scp` (Secure Copy Protocol) utility to upload the image file to the ONTAP Select Deploy virtual machine, as shown in the following example:
+
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
 ....

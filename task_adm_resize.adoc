@@ -33,11 +33,11 @@ This task describes how to use the Deploy web user interface. You can also use t
 
 . Sign in to the Deploy utility web user interface using the administrator account.
 
-. Click the *Cluster* tab at the top of the page and select the desired cluster from the list.
+. Select the *Cluster* tab at the top of the page, then select the desired cluster from the list.
 
-. On the cluster details page, click the gear icon at the right of the page and select *Instance Resize*.
+. On the cluster details page, select the gear icon at the right of the page and select *Instance Resize*.
 
-. Select the *Instance Type* and provide the ONTAP credentials then click *Modify*.
+. Select the *Instance Type* and provide the ONTAP credentials, then select *Modify*.
 
 .After you finish
 

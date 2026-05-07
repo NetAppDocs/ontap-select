@@ -21,7 +21,7 @@ The ONTAP Select online documentation page includes the details of every REST AP
 The following information is included for each API call within a workflow to help locate the call on the documentation page:
 
 * Category
-The API calls are organized on the documentation page into functionally related areas or categories. To locate a specific API call, scroll to the bottom of the page and click the applicable API category.
+The API calls are organized on the documentation page into functionally related areas or categories. To locate a specific API call, scroll to the bottom of the page and select the applicable API category.
 * HTTP verb
 The HTTP verb identifies the action performed on a resource. Each API call is executed through a single HTTP verb.
 * Path

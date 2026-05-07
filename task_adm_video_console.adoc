@@ -25,6 +25,6 @@ You might need to access the virtual machine console to troubleshoot an issue or
 
 . Navigate to the appropriate location in the hierarchy to locate the ONTAP Select virtual machine.
 
-. Right click the virtual machine and select *Open Console*.
+. Right-select the virtual machine and select *Open Console*.
 
 // 2023-09-28, ONTAPDOC-1204
