@@ -30,4 +30,4 @@ You must have the current password for the Deploy administrator (admin) account.
 * Company name (required)
 * Proxy URL (optional)
 
-. Type *?* and press *Enter* to display a list of the available management shell commands.
+. Type *?* and select *Enter* to display a list of the available management shell commands.

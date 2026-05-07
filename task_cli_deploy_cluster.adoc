@@ -58,7 +58,7 @@ You must have the password for the admin user account.
 
 . In a command shell on your local workstation, use the sftp utility to upload the license file to the Deploy virtual machine.
 +
-Example output
+Example output:
 +
 .....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -107,7 +107,7 @@ If more than one hypervisor host is needed, use this procedure to add each host.
 host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
 ----
 +
-Example output
+Example output:
 +
 ----
 host register -name 10.234.81.14 -hypervisor-type KVM -username root
@@ -122,7 +122,7 @@ Provide the password for the host account when prompted.
 host show -name <FQDN|IP> -detailed
 ----
 +
-Example output
+Example output:
 +
 ----
 host show -name 10.234.81.14 -detailed
@@ -148,7 +148,7 @@ Before you register a host that is managed by vCenter, you must add a management
 credential add -hostname <FQDN|IP> -type vcenter -username <vcenter_username>
 ----
 +
-Example output
+Example output:
 +
 ....
 credential add -hostname vc.select.company-demo.com -type vcenter -username administrator@vsphere.local
@@ -169,7 +169,7 @@ host register -name <FQDN|IP> -hypervisor-type ESX -username <esx_username>
 host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>
 ----
 +
-Example output
+Example output:
 +
 ....
 host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com
@@ -182,7 +182,7 @@ host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.com
 host show -name <FQDN|IP> -detailed
 ----
 +
-Example output
+Example output:
 +
 ....
 host show -name 10.234.81.14 -detailed
@@ -213,7 +213,7 @@ When you create an ONTAP Select cluster, the Deploy utility automatically genera
 cluster create -name <cluster_name> -node-count <count>
 ----
 +
-Example output
+Example output:
 +
 ....
 cluster create -name test-cluster -node-count 1
@@ -226,7 +226,7 @@ cluster create -name test-cluster -node-count 1
 cluster modify -name <cluster_name> -mgmt-ip <IP_address> -netmask <netmask> -gateway <IP_address> -dns-servers <FQDN|IP>_LIST -dns-domains <domain_list>
 ----
 +
-Example output
+Example output:
 +
 ....
 cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
@@ -269,7 +269,7 @@ node show -cluster-name <cluster_name>
 node modify -name <node_name> -cluster-name <cluster_name> -host-name <FQDN|IP> -license-serial-number <number> -instance-type TYPE -passthrough-disks false
 ----
 +
-Example output
+Example output:
 +
 ....
 node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.81.14
@@ -287,7 +287,7 @@ A Capacity Tier license is used for the ONTAP Select node.
 host network show -host-name <FQDN|IP> -detailed
 ----
 +
-Example output
+Example output:
 +
 ....
 host network show -host-name 10.234.81.14 -detailed
@@ -315,7 +315,7 @@ node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -manageme
 +
 When deploying a single-node cluster, you do not need an internal network and should remove "-internal-network".
 +
-Example output
+Example output:
 +
 ....
 node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.21
@@ -329,7 +329,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.
 node show -name <node_name> -cluster-name <cluster_name> -detailed
 ----
 +
-Example output
+Example output:
 +
 ....
 node show -name test-cluster-01 -cluster-name test-cluster -detailed
@@ -358,7 +358,7 @@ When using a local hardware RAID controller, you need to perform steps 1 through
 host storage pool show -host-name <FQDN|IP>
 ----
 +
-Example output
+Example output:
 +
 ----
 host storage pool show -host-name 10.234.81.14
@@ -375,7 +375,7 @@ node storage pool attach -name <pool_name> -cluster-name <cluster_name> -node-na
 +
 If you include the "-capacity-limit" parameter, specify the value as GB or TB.
 +
-Example output
+Example output:
 +
 ----
 node storage pool attach -name sDOT-02 -cluster-name test-cluster -
@@ -389,7 +389,7 @@ node-name test-cluster-01 -capacity-limit 500GB
 node storage pool show -cluster-name <cluster_name> -node-name <node_name>
 ----
 +
-Example output
+Example output:
 +
 ----
 node storage pool show -cluster-name test-cluster -node-name testcluster-01
@@ -402,7 +402,7 @@ node storage pool show -cluster-name test-cluster -node-name testcluster-01
 node storage disk attach -node-name <node_name> -cluster-name <cluster_name> -disks <list_of_drives>
 ----
 +
-Example output
+Example output:
 +
 ----
 node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000:66:00.0 0000:67:00.0 0000:68:00.0
@@ -415,7 +415,7 @@ node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000
 node storage disk show -node-name <node_name> -cluster-name <cluster_name>`
 ----
 +
-Example output
+Example output:
 +
 ----
 node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
@@ -440,7 +440,7 @@ Run the network connectivity checker using the link:task_adm_connectivity.html[w
 cluster deploy -name <cluster_name>
 ----
 +
-Example output
+Example output:
 +
 ----
 cluster deploy -name test-cluster
