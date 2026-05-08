@@ -48,7 +48,7 @@ link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[Learn more
 +
 SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Select and includes SnapLock Enterprise. It does not include SnapLock Compliance.
 +
-link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[Learn about ONTAP SnapLock^]
+Learn about link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock^]
 * SnapMirror
 * SnapRestore
 * SnapVault
@@ -69,6 +69,8 @@ NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 * SnapMirror cloud
 +
 You need to link:https://mysupport.netapp.com/site/help[open a non-technical support case^] to obtain a SnapMirror cloud license.
++
+Learn about https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[SnapMirror cloud backups to object storage^]
 
 .Related information
 
