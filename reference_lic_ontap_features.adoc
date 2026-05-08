@@ -70,7 +70,7 @@ NOTE: You do not need a FabricPool license when utilizing StorageGRID.
 +
 You need to link:https://mysupport.netapp.com/site/help[open a non-technical support case^] to obtain a SnapMirror cloud license.
 +
-Learn about https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[SnapMirror cloud backups to object storage^]
+Learn about link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html[SnapMirror cloud backups to object storage^]
 
 .Related information
 
