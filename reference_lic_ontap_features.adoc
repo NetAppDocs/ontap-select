@@ -27,7 +27,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 * Deduplication and compression
 * External key management using the Key Management Interoperability Protocol (KMIP)
 +
-External key management is the only key management supported by ONTAP Select. Learn about link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[enabling and configuring external key management^].
+Learn about link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[enabling and configuring external key management^].
 
 * FlexCache
 +
@@ -41,7 +41,6 @@ link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[Learn more
 * NetApp Volume Encryption (non-restricted countries only)
 * NFS
 * NVMe over TCP
-* Onboard Key Manager
 * ONTAP multitenancy capability
 * ONTAP S3
 * S3 SnapMirror
