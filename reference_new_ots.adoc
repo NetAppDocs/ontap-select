@@ -126,9 +126,9 @@ ONTAP Select Deploy and ONTAP Select for ESXi support the configuration of an ON
 +
 [NOTE] 
 ====
-To perform content library operations, you'll need access to additional permission levels. This is required for vSAN ESA deployments if you are working with restricted roles.
+To perform Content Library operations, you need access to additional permission levels. This access is required for vSAN ESA deployments if you are working with restricted roles.
 
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels for content library operations^]. 
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html[Learn about accessing permission levels for Content Library operations^].
 ====
 
 Updated NDA driver support::

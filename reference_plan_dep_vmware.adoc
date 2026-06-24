@@ -30,8 +30,8 @@ NOTE: Refer to the hypervisor-specific planning information and link:reference_r
 .Hypervisor for ONTAP Select nodes and administration utility
 Both the Deploy administration utility and the ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
 
-* Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi or KVM
-* Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi or KVM
+* A Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi or KVM.
+* A Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi or KVM.
 
 .One or more instances of ONTAP Select node per host
 Each ONTAP Select node runs as a dedicated virtual machine. You can create multiple nodes on the same hypervisor host, with the following restrictions:
@@ -58,7 +58,7 @@ There are several requirements and restrictions specific to the VMware environme
 
 .ESXi host server hardware requirements
 
-There are several minimum resource requirements that your ESXi hypervisor host must meet. You should make sure that the hosts where ONTAP Select is deployed meet the following basic requirements:
+Your ESXi hypervisor host must meet several minimum resource requirements. Check that the hosts where ONTAP Select is deployed meet the following basic requirements:
 
 * ESXi server:
 ** Hardware and software must be 64-bit
@@ -70,13 +70,13 @@ There are several minimum resource requirements that your ESXi hypervisor host m
 
 .Network connectivity
 
-You must make sure that the ONTAP Select Deploy virtual machine network interface is configured and has a single management IP address. You can use DHCP to dynamically assign an IP address or manually configure a static IP address.
+Check that the ONTAP Select Deploy virtual machine network interface is configured and has a single management IP address. You can use DHCP to dynamically assign an IP address or manually configure a static IP address.
 
 Depending on your deployment decisions, the Deploy VM must be able to connect to the vCenter server, ESXi hypervisor hosts, and ONTAP Select nodes it manages. You must configure your firewalls to allow the required traffic.
 
-Deploy uses the VMware VIX API to communicate with the vCenter server and ESXi hosts. Initially, it establishes a connection using SOAP over SSL on TCP port 443. After this, a connection is opened using SSL on port 902. In addition, Deploy issues PING commands to verify there is an ESXi host at the IP address you specify.
+Deploy uses the VMware VIX API to communicate with the vCenter server and ESXi hosts. Initially, it establishes a connection using SOAP over SSL on TCP port 443. After this, a connection is opened using SSL on port 902. In addition, Deploy issues PING commands to verify that there is an ESXi host at the IP address you specify.
 
-Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses using the following protocols:
+Additionally, Deploy must be able to communicate with the ONTAP Select node and cluster management IP addresses using the following protocols:
 
 * PING command (ICMP)
 * SSH (port 22)
@@ -89,10 +89,13 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 * You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
-== ONTAP Select Deploy VMware vCenter server considerations
+== VMware vCenter server considerations
 
-=== VMware vSphere privileges for ESA
-The following lists the specific privileges for the vSphere content library that you need to create and manage vSAN Express Storage Architecture (ESA) in vCenter:
+.VMware vSphere privileges for ESA
+
+To create and manage vSAN Express Storage Architecture (ESA) in vCenter, you need the following vSphere Content Library Privileges.
+
+NOTE: To access the Content Library Privileges, an administrator needs to grant you access to Global Permissions in vCenter Server.
 
 * Add library item
 * Create local library
@@ -106,6 +109,7 @@ The following lists the specific privileges for the vSphere content library that
 * Update local library
 * View configuration settings
 
+// 2026 JUN 24, ON
 // 2025 OCT 30, ONTAPDOC-3457 9.18.1RC
 // 2025 Sep 02, ONTAPDOC-9.17.1GA
 // 2025 Aug 26, ONTAPDOC-3140
