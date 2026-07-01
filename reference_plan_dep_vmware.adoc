@@ -89,13 +89,14 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 * You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
+[[vmware-vcenter-server-considerations]]
 == VMware vCenter server considerations
 
 .VMware vSphere privileges for ESA
 
-To create and manage vSAN Express Storage Architecture (ESA) in vCenter, you need the following vSphere Content Library Privileges.
+To create and manage vSAN Express Storage Architecture (ESA) in vCenter, you need the following vSphere Content Library privileges:
 
-NOTE: To access the Content Library Privileges, an administrator needs to grant you access to Global Permissions in vCenter Server.
+NOTE: To access the Content Library privileges, an administrator needs to grant you access to Global Permissions in vCenter Server.
 
 * Add library item
 * Create local library
