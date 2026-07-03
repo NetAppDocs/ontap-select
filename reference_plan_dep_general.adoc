@@ -112,10 +112,8 @@ The account information is stored securely in the database using the AES encrypt
 
 The following types of credentials are supported:
 
-* Host
-Used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to VMware ESXi
-* vCenter
-Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
+* *Host*: Used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to VMware ESXi
+* *vCenter*: Used to authenticate a vCenter server as part of deploying an ONTAP Select node to ESXi when the host is managed by VMware vCenter
 
 .Access
 
