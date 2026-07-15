@@ -26,7 +26,7 @@ SnapMirror software lets you move data between ONTAP storage across the hybrid c
 
 The implementation and delivery of IT services through software allows administrators to rapidly provision resources with a speed and agility that was previously not possible. As modern data centers move to a software-defined infrastructure (SDI) architecture, you can separate the most valuable IT assets from the underlying physical infrastructure, providing flexibility, scalability, and programmability.
 
-In a commodity world where data is fragmented across silos of direct-attached storage (DAS), data mobility and management have become more complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
+In a commodity world where data is fragmented across silos of direct-attached storage (DAS), SVM-Migrate and management have become more complex problems. Software-defined storage (SDS) has emerged as an important part of the SDI landscape to address these and other issues.
 
 ONTAP Select is the NetApp solution for the SDS market. ONTAP Select brings enterprise-class storage management features to the software-defined data center and extends the NetApp Data Fabric architecture to the extreme edge use cases, including the Internet of Things (IoT) and tactical servers.
 
@@ -94,6 +94,7 @@ NOTE: Beginning with ONTAP Select 9.16.1, manual updates to ARP are supported an
 +
 Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
 
+* Consistency group configurations in SnapMirror
 * Fibre Channel
 +
 Fibre Channel and Fibre Channel over Ethernet are not supported.
@@ -117,7 +118,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 * Service processors
 
-* SVM migration
+* SVM-Migrate
 
 * SnapLock Compliance
 
@@ -129,6 +130,8 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 
 * link:reference_lic_ontap_features.html#licensed-ontap-features[Learn about ONTAP features licensed by default]
 * link:concept_lic_evaluation.html[Learn about ONTAP Select license options]
+
+// 2026 JUL 15, ONTAPDOC-4067
 // 2026 JUN 15, ONTAPDOC-3941
 // 2026 MAR 30, ONTAPDOC-3764
 // 2026 MAR 20, ONTAPDOC-3153
