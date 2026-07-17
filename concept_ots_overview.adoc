@@ -12,7 +12,7 @@ summary: ONTAP Select is a software-only version of ONTAP that you deploy as a v
 :imagesdir: ./media/
 
 [.lead]
-ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream FAS, AFF, and ASA ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.
+ONTAP Select is a software-only version of ONTAP that you can deploy as a virtual machine on a hypervisor host. It complements the suite of mainstream AFF and FAS ONTAP offerings as well as other software-only options such as Cloud Volumes ONTAP.
 
 ONTAP Select converts internal disk drives, NVMe, SSD or HDD, and external array storage, into a flexible storage system with many of the same benefits offered by dedicated ONTAP storage systems. You can also deploy ONTAP Select on new servers or on your existing server infrastructure. ONTAP Select is easy to manage and leverages the same management software as ONTAP based solutions, which means reduced operational overhead and training requirements.
 
