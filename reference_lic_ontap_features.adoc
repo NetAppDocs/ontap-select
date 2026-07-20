@@ -51,7 +51,7 @@ SnapLock Select is the implementation of ONTAP SnapLock designed for ONTAP Selec
 Learn about link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock^]
 * SnapMirror
 +
-ONTAP Select does not support consistency group configurations in SnapMirror.
+ONTAP Select does not support consistency group configurations in Asynchronous SnapMirror.
 * SnapRestore
 * SnapVault
 * Storage VM disaster recovery (SVM DR)
