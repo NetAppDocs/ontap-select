@@ -94,7 +94,7 @@ NOTE: Beginning with ONTAP Select 9.16.1, manual updates to ARP are supported an
 +
 Any modification to Cluster IPspace, including adding or removing ports, virtual LANs (VLANs), or link aggregation groups is not supported.
 
-* Consistency group configurations in Asynchronous SnapMirror
+* Consistency groups in Asynchronous SnapMirror
 * Fibre Channel
 +
 Fibre Channel and Fibre Channel over Ethernet are not supported.
