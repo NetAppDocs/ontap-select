@@ -18,7 +18,6 @@ You can deploy a 90-day evaluation instance of an ONTAP select cluster ranging i
 
 * You don't need to obtain a serial number or storage capacity license from NetApp.
 * You can allocate the same amount of storage for user data as a purchased license.
-* You can't upgrade the node from an evaluation license to a purchased license.
 * You can only use a vCenter account to deploy the OVF template. Installing directly to an ESXi host is currently not supported.
 * You must install the OVF template (contained in an ova file) using the vSphere standalone client or vSphere web client (the only option for ESXi 8.0 and later). You don't use the ONTAP Select Deploy administration utility.
 
@@ -55,4 +54,5 @@ Complete the following steps on a supported 64-bit ESXi host server.
 * link:concept_lic_evaluation.html[Learn about evaluation licenses for ONTAP Select deployments]
 * link:http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^]
 
+// 2026 JUL 16, ONTAPDOC-4073
 // 2024 NOV 18, ONTAPDOC-2547
