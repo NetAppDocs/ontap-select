@@ -9,44 +9,6 @@ ONTAP Select is a software-only version of ONTAP that runs as a virtual machine 
 
 This repository is a flat structure — all AsciiDoc content files reside in the root directory. Files follow naming conventions that identify their type and topic area:
 
-- `concept_ots_*` – Overview and core product concepts (product overview, Deploy utility)
-- `concept_adm_*` – Administration concepts (upgrading nodes, pre-administration guidance)
-- `concept_api_*` – REST API concepts (operation, transactions, async processing, access methods)
-- `concept_ha_*` – High availability architecture concepts (HA configuration, mirroring, other HA functions)
-- `concept_lic_*` – Licensing concepts (evaluation, production, Capacity Tiers, Capacity Pools, platform offerings)
-- `concept_nw_*` – Networking concepts (internal/external networks, switch config, vSwitch, single/multi-node)
-- `concept_perf_*` – Performance concepts and benchmarks
-- `concept_stor_*` – Storage concepts (RAID, vNAS, software RAID, hardware RAID, storage efficiency, capacity)
-- `concept_usecase_*` – Business use case overviews (ROBO, private cloud, data protection)
-- `concept_workflow_deploy.adoc` – Cluster deployment workflow overview
-- `concept_terminology.adoc` – Key terms and definitions for the product
-- `reference_plan_dep_*` – Planning reference for the Deploy administration utility
-- `reference_plan_ots_*` – Planning reference for ONTAP Select (hardware, storage, networking, two-node, ROBO, MetroCluster SDS, vNAS, vCenter)
-- `reference_api_*` – REST API reference (workflow scripts, JSON examples, Python code samples)
-- `reference_chk_*` – Pre-deployment checklists (Deploy requirements, ONTAP Select requirements)
-- `reference_lic_*` – Licensing reference (licensed ONTAP features)
-- `reference_plan_best_practices.adoc` – Summary of deployment best practices
-- `reference_faq.adoc` – Frequently asked questions
-- `reference_new_ots.adoc` – What's new content
-- `reference_release_notes.adoc` – Release notes
-- `reference_initial_state.adoc` – Initial cluster state after deployment
-- `reference_host_modify_command.adoc` – CLI reference for modifying host management server
-- `task_adm_*` – Administration task procedures (clusters, connectivity, licenses, mediators, security, support, upgrades)
-- `task_api_*` – REST API task procedures (accessing the doc page, understanding API calls)
-- `task_cli_*` – CLI task procedures (signing in, deploying clusters, security, connectivity, Deploy utility management)
-- `task_chk_nvme_configure.adoc` – NVMe host configuration task
-- `task_install_deploy.adoc` – Install the Deploy utility
-- `task_deploy_cluster.adoc` – Deploy a cluster using the web UI
-- `task_lic_*` – Licensing task procedures (acquire Capacity Tier and Capacity Pool licenses)
-- `task_cluster_expansion_contraction.adoc` – Expand or contract a cluster
-- `kvm-host-configuration-and-preparation-checklist.adoc` – KVM host preparation checklist
-- `esxi-host-configuration-and-preparation-checklist.adoc` – ESXi host preparation checklist
-- `sizing-capacity-tier-license.adoc` – Guidance for sizing a Capacity Tier license
-- `sizing-capacity-pool-license.adoc` – Guidance for sizing a Capacity Pool license
-- `access-evaluation-software.adoc` – How to access evaluation software
-- `deploy-evaluation-ontap-select-ovf-template.adoc` – Deploy a 90-day evaluation cluster using OVF template
-- `cli-upgrade-esxi.adoc` – Upgrade ESXi using the CLI
-- `concept-data-protection-and-efficiency.adoc` – Data protection and storage efficiency use case
 - `media/` – Images and diagrams referenced by AsciiDoc files
 - `redirect/` – Redirect configuration for URL mapping
 - `project.yml` – Site settings, version list, and sidebar navigation
@@ -107,7 +69,6 @@ This repository is a flat structure — all AsciiDoc content files reside in the
 - *HA-IC* = High Availability Interconnect (internal HA heartbeat network)
 - *OVS* = Open vSwitch (virtual switch used on KVM hosts)
 - *MetroCluster SDS* is a software-only feature distinct from hardware-based MetroCluster; it is a stretched two-node cluster configuration
-- File naming prefixes used in this repository: `concept_`, `task_`, `reference_` (older style uses underscores); newer files use hyphen-delimited names
 
 ### Typical user workflows
 
