@@ -4,7 +4,7 @@ permalink: reference_release_notes.html
 keywords:
 summary:
 ---
-= ONTAP Select release notes
+= ONTAP Select Release Notes
 :hardbreaks:
 :nofooter:
 :icons: font
