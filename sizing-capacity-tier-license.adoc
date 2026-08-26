@@ -23,7 +23,7 @@ You need to calculate the licensed capacity based on the usable space to ensure 
 
 *  With a HA pair, the data is duplicated between both nodes for redundancy, so for 10 TB of usable data in a HA pair, you need to have 10 TB per node, in case one of the nodes goes offline. 
 * The factor of 2.67 doubles the capacity of each node and adds the overhead capacity (0.67) needed for ONTAP Select to function. 
-*  The license capacity per node is 14 TB (5 x 2.67 = 13.35). For the pair, you require two 14 TB licenses to have 10 TB of usable capacity on a HA pair.
+*  The license capacity per node is 14 TB (5 x 2.67 = 13.35). For the HA pair, you require two 14 TB licenses to have 10 TB of usable capacity on a HA pair.
 
 [cols="25,30,45",options="header"]
 |===
