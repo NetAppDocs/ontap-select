@@ -119,7 +119,7 @@ sidebar:
                   url: /task_lic_acquire_ct.html
             - title: Capacity Pools
               entries:
-                - title: Determine Capacity Pools license
+                - title: Determine Capacity Pools license size
                   url: /sizing-capacity-pool-license.html
                 - title: Acquire a license
                   url: /task_lic_acquire_cp.html
