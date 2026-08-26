@@ -14,7 +14,7 @@ summary: The Capacity Tiers license is based on the underlying disk capacity man
 [.lead]
 The Capacity Tiers license is based on the underlying disk capacity managed by each ONTAP Select node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tiers license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
 
-The licensed capacity for a Capacity Tiers license is in full TB amounts, with a minimum of 1 TB. You calculate the licensed capacity by multiplying the amount of usable space by the overhead factor. The overhead factor estimates the ONTAP Select software overhead capacity to be taken from the usable space and it applies to determining the ONTAP select capacity for NVMe, SSD, HDD, or virtual drives. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
+The licensed capacity for a Capacity Tiers license is in full TB amounts, with a minimum of 1 TB. You calculate the licensed capacity by multiplying the amount of usable space by the overhead factor. The overhead factor estimates the ONTAP Select software overhead capacity to be taken from the usable space and it applies to determining the ONTAP Select capacity for NVMe, SSD, HDD, or virtual drives. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
 
 * Overhead factor for single-node clusters is 1.13
 * Overhead factor for multi-node clusters is 2.67
