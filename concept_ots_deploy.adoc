@@ -5,7 +5,7 @@ keywords: ontap select deploy, deploy administration utility, deploy utility, fu
 summary: ONTAP Select Deploy is the administration utility used to deploy and manage ONTAP Select clusters.
 ---
 
-= ONTAP Select Deploy
+= Learn about ONTAP Select Deploy
 :hardbreaks:
 :nofooter:
 :icons: font
