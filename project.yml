@@ -31,7 +31,7 @@ sidebar:
           url: /reference_new_ots.html
     - title: Concepts
       entries:
-        - title: Learn about ONTAP Select
+        - title: ONTAP Select
           url: /concept_ots_overview.html
         - title: ONTAP Select Deploy
           url: /concept_ots_deploy.html
@@ -79,7 +79,7 @@ sidebar:
           entries:
             - title: General requirements
               url: /reference_plan_dep_general.html
-            - title: VMware environment
+            - title: Hypervisor host environments
               url: /reference_plan_dep_vmware.html
         - title: Best practices
           url: /reference_plan_best_practices.html
@@ -87,7 +87,7 @@ sidebar:
       entries:
         - title: Options
           entries:
-            - title: Learn about evaluation licenses
+            - title: Evaluation licenses
               url: /concept_lic_evaluation.html
             - title: Production licenses
               entries:
@@ -149,7 +149,7 @@ sidebar:
           url: /reference_initial_state.html
     - title: Administer
       entries:
-        - title: Learn about administering ONTAP Select
+        - title: Administer ONTAP Select
           url: /concept_adm_before.html
         - title: Upgrade nodes
           url: /concept_adm_upgrading_nodes.html
@@ -163,21 +163,21 @@ sidebar:
           url: /task_adm_mediators.html
         - title: Clusters
           entries:
-            - title: ONTAP Select clusters
+            - title: Manage clusters
               url: /task_adm_clusters.html
             - title: Expand or contract a cluster
               url: /task_cluster_expansion_contraction.html
         - title: Nodes and hosts
           entries:
-            - title: Access the VM video console
+            - title: Access VM video console
               url: /task_adm_video_console.html
-            - title: Resize the cluster nodes
+            - title: Resize cluster nodes
               url: /task_adm_resize.html
             - title: Replace failed software RAID drives
               url: /task_adm_replace_drives_swraid.html
             - title: Upgrade to VMFS6
               url: /task_adm_upgrade_vmfs6.html
-        - title: Licenses
+        - title: Manage licenses
           url: /task_adm_licenses.html
     - title: Deep dive
       entries:
@@ -249,7 +249,7 @@ sidebar:
           entries:
             - title: Before you begin
               url: /concept_api_before_workflows.html
-            - title: Workflow 1 Create a cluster
+            - title: Create a cluster on ESXi
               url: /reference_api_workflow01.html
         - title: Access with Python
           entries:
@@ -259,7 +259,7 @@ sidebar:
               url: /concept_api_understanding_scripts.html
         - title: Python code samples
           entries:
-            - title: Create a cluster
+            - title: Create a cluster using script
               url: /reference_api_script_cc.html
             - title: JSON to create a cluster
               url: /reference_api_json_cc.html
@@ -283,7 +283,7 @@ sidebar:
           url: /task_cli_security.html
         - title: Network connectivity
           url: /task_cli_connectivity.html
-        - title: Clusters
+        - title: Manage clusters
           url: /task_cli_clusters.html
         - title: Nodes and hosts
           entries:
