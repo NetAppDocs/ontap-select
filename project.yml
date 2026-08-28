@@ -149,7 +149,7 @@ sidebar:
           url: /reference_initial_state.html
     - title: Administer
       entries:
-        - title: Administer ONTAP Select
+        - title: Before you begin
           url: /concept_adm_before.html
         - title: Upgrade nodes
           url: /concept_adm_upgrading_nodes.html
