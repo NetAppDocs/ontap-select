@@ -4,7 +4,7 @@ permalink: sizing-capacity-tier-license.html
 keywords: license, licensing, Capacity Tiers, usable, space
 summary: The Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tiers license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
 ---
-= Considerations for sizing an ONTAP Select Capacity Tiers license
+= Determine Capacity Tiers license size for ONTAP Select
 :hardbreaks:
 :nofooter:
 :icons: font
