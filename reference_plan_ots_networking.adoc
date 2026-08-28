@@ -4,7 +4,7 @@ permalink: reference_plan_ots_networking.html
 keywords: plan, planning, networking, network, drivers, vmxnet3, cluster mtu, firewall
 summary: You must configure the hypervisor network correctly before deploying ONTAP Select.
 ---
-= ONTAP Select networking considerations
+= ONTAP Select networking requirements
 :hardbreaks:
 :nofooter:
 :icons: font
