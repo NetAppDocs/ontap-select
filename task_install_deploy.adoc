@@ -14,6 +14,10 @@ summary: You need to install the ONTAP Select Deploy administration utility and 
 [.lead]
 You need to install the ONTAP Select Deploy administration utility and use the utility to create an ONTAP Select cluster.
 
+.Before you begin
+
+Review the link:kvm-host-configuration-and-preparation-checklist.html[pre-installation checklist].
+
 == Step 1: Download the virtual machine image
 
 Download the ONTAP Select package from the NetApp support site.
