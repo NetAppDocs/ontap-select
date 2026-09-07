@@ -4,7 +4,6 @@ permalink: concept_workflow_deploy.html
 keywords: plan, planning, cluster deployment workflow, deployment workflow, workflow, deployment steps
 summary: There is a workflow process that you can use to deploy an ONTAP Select cluster.
 ---
-
 = ONTAP Select installation and deployment workflow
 :hardbreaks:
 :nofooter:
@@ -30,10 +29,14 @@ Install the utility that you use to deploy and manage ONTAP Select clusters.
 
 Purchase and apply the licenses needed for your production deployment. You can choose between the Capacity Tiers and Capacity Pools licensing models.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Deploy an ONTAP Select cluster using the ONTAP Select Deploy administration utility (link:task_deploy_cluster.html[web UI], link:task_cli_deploy_cluster.html[CLI], or link:reference_api_workflow01.html[REST API])
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Deploy an ONTAP Select cluster using the ONTAP Select Deploy administration utility 
 [role="quick-margin-para"]
 
-Use the Deploy utility to create your ONTAP Select cluster.
+Use the Deploy utility to create your ONTAP Select cluster:
+
+[role="quick-margin-list"]
+* link:task_deploy_cluster.html[Deploy using the UI]
+* link:task_cli_deploy_cluster.html[Deploy using the CLI]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] link:concept_adm_before.html[Administer the ONTAP Select cluster using the standard NetApp management tools and interfaces]
 [role="quick-margin-para"]
