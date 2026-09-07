@@ -15,4 +15,27 @@ summary: There is a workflow process that you can use to deploy an ONTAP Select 
 [.lead]
 You can use the following workflow to deploy and administer an ONTAP Select cluster.
 
-image:deploy_workflow2.png[Describes the complete workflow needed to deploy an ONTAP Select cluster.]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan the deployment and prepare the environment
+[role="quick-margin-para"]
+
+Before you deploy, link:reference_plan_ots_general.html[review the planning requirements] for your ONTAP Select nodes, storage, networking, and hypervisor environment. Preparing your environment in advance helps you avoid deployment issues.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Install the ONTAP Select Deploy administration utility
+[role="quick-margin-para"]
+
+link:task_install_deploy.html[Install the ONTAP Select Deploy administration utility], which you use to deploy and manage ONTAP Select clusters.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Acquire the licenses required for a production deployment
+[role="quick-margin-para"]
+
+link:concept_lic_workflow.html[Purchase and apply the licenses] needed for your production deployment. You can choose between the Capacity Tiers and Capacity Pools licensing models.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Deploy an ONTAP Select cluster using the ONTAP Select Deploy administration utility (web UI, CLI, or REST API)
+[role="quick-margin-para"]
+
+Use the link:task_deploy_cluster.html[web UI], link:task_cli_deploy_cluster.html[CLI], or link:reference_api_workflow01.html[REST API] provided by the Deploy utility to create your ONTAP Select cluster.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Administer the ONTAP Select cluster using the standard NetApp management tools and interfaces
+[role="quick-margin-para"]
+
+link:concept_adm_before.html[Administer your ONTAP Select cluster] using the same management tools and interfaces you use for other ONTAP clusters.
