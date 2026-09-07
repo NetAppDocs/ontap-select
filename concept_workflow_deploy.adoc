@@ -37,6 +37,7 @@ Use the Deploy utility to create your ONTAP Select cluster:
 [role="quick-margin-list"]
 * link:task_deploy_cluster.html[Deploy using the web UI]
 * link:task_cli_deploy_cluster.html[Deploy using the CLI]
+* link:reference_api_workflow01.html[Deploy using the REST API]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] link:concept_adm_before.html[Administer the ONTAP Select cluster using the standard NetApp management tools and interfaces]
 [role="quick-margin-para"]
