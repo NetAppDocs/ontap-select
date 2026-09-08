@@ -16,7 +16,7 @@ You need to install the ONTAP Select Deploy administration utility and use the u
 
 .Before you begin
 
-Review the link:kvm-host-configuration-and-preparation-checklist.html[pre-installation checklist].
+You have reviewed the link:kvm-host-configuration-and-preparation-checklist.html[pre-installation checklist].
 
 == Step 1: Download the virtual machine image
 
