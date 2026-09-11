@@ -165,10 +165,14 @@ The following table provides the minimum license type required for the specified
 | Not applicable	
 | 4 – 60 drives	
 | 4 – 60 drives
-2+| SSD (SAS, SATA)
+2+| SSD (SATA)
 | Not applicable
-| 4 – 60 drives (SSD only)
-| 4 – 60 drives (SSD only)
+| 4 – 60 drives 
+| 4 – 60 drives 
+2+| NVMe
+| Not applicable
+| Not applicable
+| 4 - 14 drives
 2+| Local DAS with software RAID
 | Not applicable
 | Applicable
