@@ -18,7 +18,10 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 == ONTAP Select 9.20.1
 
 Support for Hyper-V hypervisor::
-Beginning with ONTAP Select 9.20.1, the Microsoft Hyper-V hypervisor is supported.
+Beginning with ONTAP Select 9.20.1, the Microsoft Hyper-V hypervisor is supported on Windows Server 2025 and 2022 hosts.
++
+* Learn about the link:hyper-v-host-configuration-and-preparation-checklist.html[Hyper-V host configuration and preparation checklist]
+* Learn about link:task_install_deploy.html[installing ONTAP Select Deploy on a Hyper-V host]
 
 
 == ONTAP Select 9.19.1
