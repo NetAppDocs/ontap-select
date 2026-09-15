@@ -17,6 +17,9 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 == ONTAP Select 9.20.1
 
+Support for Hyper-V hypervisor::
+Beginning with ONTAP Select 9.20.1, the Microsoft Hyper-V hypervisor is supported.
+
 
 == ONTAP Select 9.19.1
 

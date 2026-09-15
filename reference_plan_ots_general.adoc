@@ -68,17 +68,20 @@ Both ONTAP Select and the ONTAP Select Deploy administration utility are hypervi
 
 * VMware ESXi
 * Kernel-based Virtual Machine (KVM)
-
-[NOTE]
-Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
++
+NOTE: Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for deploying a new cluster on a KVM hypervisor was removed in ONTAP Select 9.10.1 and support for managing existing KVM clusters and hosts, except to take offline or delete, was removed in ONTAP Select 9.11.1.
+* Microsoft Hyper-V
++
+NOTE: Beginning with ONTAP Select 9.20.1, the Microsoft Hyper-V hypervisor is supported.
 
 Refer to the hypervisor-specific planning information and link:reference_release_notes.html[release notes] for additional details regarding the supported platforms.
 
 Hypervisor for ONTAP Select nodes and administration utility::
 Both the Deploy administration utility and ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
 
-* Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi or KVM
-* Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi or KVM
+* Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi, KVM, or Hyper-V
+* Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi, KVM, or Hyper-V
+* Deploy utility running on Hyper-V can create and manage ONTAP Select clusters on either VMware ESXi, KVM, or Hyper-V
 
 One or more instances of ONTAP Select node per host::
 Each ONTAP Select node runs as a dedicated virtual machine. You can create multiple nodes on the same hypervisor host, with the following restrictions:
@@ -138,7 +141,7 @@ The following types of credentials are supported:
 
 * host
 +
-The *host* credential is used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi or KVM.
+The *host* credential is used to authenticate a hypervisor host as part of deploying an ONTAP Select node directly to ESXi, KVM, or Hyper-V.
 
 * vcenter
 +
@@ -151,4 +154,5 @@ The credential store is accessed internally as part of performing normal adminis
 
 * link:reference_plan_ots_storage.html[Storage and RAID considerations]
 
+// 2026 SEP 15, ONTAPDOC-3948
 // 2023-09-25, ONTAPDOC-1204

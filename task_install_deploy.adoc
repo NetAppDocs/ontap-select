@@ -16,7 +16,11 @@ You need to install the ONTAP Select Deploy administration utility and use the u
 
 .Before you begin
 
-You have reviewed the link:kvm-host-configuration-and-preparation-checklist.html[pre-installation checklist].
+You have reviewed the pre-installation checklist for your hypervisor host:
+
+* link:hyper-v-host-configuration-and-preparation-checklist.html[Hyper-V host checklist]
+* link:kvm-host-configuration-and-preparation-checklist.html[KVM host checklist]
+* link:esxi-host-configuration-and-preparation-checklist.html[ESXi host checklist]
 
 == Step 1: Download the virtual machine image
 
@@ -27,7 +31,7 @@ https://mysupport.netapp.com/site/user/registration[You have a registered NetApp
 
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESXi hosts and `TGZ` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESXi hosts and `TGZ` for KVM hosts and Hyper-V hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
 . Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
@@ -85,12 +89,18 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 Install and start the ONTAP Select Deploy VM using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
+
+[role="tabbed-block"]
+====
+
+.ESXi
+--
 For an ESXi hypervisor, you must prepare to deploy the ONTAP Select Deploy VM:
 
 * Enable the OVF functionality in your browser by installing the VMware Client Integration Plugin or performing similar configuration as needed
 * Enable the DHCP in the VMware environment if you will dynamically assign an IP address to the Deploy VM
 
-For ESXi and KVM hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
+You must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
 
 * IP address of the Deploy VM
 * Netmask
@@ -98,12 +108,36 @@ For ESXi and KVM hypervisors, you must have the configuration information to be 
 * IP address of the primary DNS server
 * IP address of the second DNS server
 * DNS search domains
+--
+.KVM
+--
+KVM hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
+
+* IP address of the Deploy VM
+* Netmask
+* IP address of the gateway (router)
+* IP address of the primary DNS server
+* IP address of the second DNS server
+* DNS search domains
+--
+.Hyper-V
+--
+For Hyper-V hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
+
+* IP address of the Deploy VM
+* Netmask
+* IP address of the gateway (router)
+* IP address of the primary DNS server
+* IP address of the second DNS server
+* DNS search domains
+--
+====
 
 .About this task
 If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy VM to configure the network instead.
 
 .Steps
-The steps you follow depend on whether you use an ESXi or KVM hypervisor. 
+The steps you follow depend on whether you use an ESXi, KVM, or Hyper-V hypervisor. 
 
 [role="tabbed-block"]
 ====
@@ -183,6 +217,10 @@ Use DHCP to set networking information? [n]:
 .. If you choose a static configuration, provide all network configuration information as required.
 --
 
+.Hyper-V
+--
+
+--
 ====
 
 == Step 4: Sign in to the Deploy web interface

@@ -100,23 +100,29 @@ Refer to the link:concept_nw_concepts_chars.html[Deep dive networking] section f
 
 == Network traffic requirements
 
-You must make sure that your firewalls are configured properly to allow the network traffic to flow among the various participants in an ONTAP Select deployment environment.
+You must make sure that your firewalls are configured correctly to allow the network traffic to flow among the various participants in an ONTAP Select deployment environment.
 
 .Participants
 
 There are several participants or entities that exchange network traffic as part of an ONTAP Select deployment. These are introduced, and then used in the summary description of the network traffic requirements.
 
 * Deploy
++
 ONTAP Select Deploy administration utility
 * vSphere (ESXi only)
++
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
 * Hypervisor server
-ESXi hypervisor host or Linux KVM host
++
+ESXi hypervisor host, Linux KVM host, or Microsoft Hyper-V host
 * OTS node
++
 An ONTAP Select node
 * OTS cluster
++
 An ONTAP Select cluster
 * Admin WS
++
 Local administrative workstation
 
 .Summary of network traffic requirements
@@ -126,7 +132,7 @@ The following table describes the network traffic requirements for an ONTAP Sele
 [cols="20,20,35,25"*,options="header"]
 |===
 |Protocol / Port
-|ESXi / KVM
+|ESXi / KVM / Hyper-V
 |Direction
 |Description
 
@@ -177,5 +183,6 @@ The following table describes the network traffic requirements for an ONTAP Sele
 
 |===
 
+// 2026 SEP 15, ONTAPDOC-3948
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions

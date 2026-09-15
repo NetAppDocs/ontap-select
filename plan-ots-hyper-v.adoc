@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: plan-ots-hyper-v.html
+keywords: plan, planning, vnas, hyper-v
+summary: There are several planning issues related to the use of the Hyper-V hypervisor that you should consider.
+---
+= Hyper-V external storage requirements for ONTAP Select 
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can configure ONTAP Select on the Hyper-V hypervisor with an external storage array.
+
+== Basic requirements and restrictions
+
+
+== Best practices
+
+
+
+// 2026 SEP 15, ONTAPDOC-3948

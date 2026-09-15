@@ -27,10 +27,17 @@ To deploy an ONTAP Select cluster, your organization must have a valid VMware vS
 
 === Software compatibility
 
-You can deploy ONTAP Select on KVM and ESXi hypervisors.
+You can deploy ONTAP Select on Hyper-V, KVM, and ESXi hypervisors.
 
 [role="tabbed-block"]
 =====
+.Hyper-V
+--
+ONTAP Select supports the following Hyper-V hypervisor versions:  
+
+Microsoft Windows Server 2025 and 2022
+
+--
 .KVM
 --
 ONTAP Select supports the following KVM hypervisor versions:  

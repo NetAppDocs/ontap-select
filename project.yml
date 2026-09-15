@@ -65,6 +65,8 @@ sidebar:
                   url: /reference_plan_ots_vnas.html
                 - title: KVM
                   url: /reference_plan_ots_kvm.html
+                - title: Hyper-V
+                  url: /plan-ots-hyper-v.html
             - title: Networking
               url: /reference_plan_ots_networking.html
             - title: Two-node clusters
@@ -131,6 +133,8 @@ sidebar:
           entries:
             - title: Host preparation checklist
               entries:
+                - title: Hyper-V host checklist
+                  url: /hyper-v-host-configuration-and-preparation-checklist.html
                 - title: KVM host checklist 
                   url: /kvm-host-configuration-and-preparation-checklist.html
                 - title: ESXi host checklist
