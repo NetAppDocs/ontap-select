@@ -21,10 +21,10 @@ Kernel-based Virtual Machine::
 Kernel-based Virtual Machine (KVM) is a virtualization feature of the Linux kernel, which allows it to act as a hypervisor platform. A wide range of guest operating systems are supported.
 
 Microsoft Hyper-V::
-Microsoft Hyper-V is the hardware virtualization platform included with Windows Server. When you enable the Hyper-V role, a Windows Server host can create, run, and manage an entire lifecycle for a virtual machine. In an ONTAP Select environment, a Windows Server host running Hyper-V is the hypervisor host platform for the ONTAP Select Deploy virtual machine and the ONTAP Select virtual nodes.
+Microsoft Hyper-V is the hardware virtualization platform included with Windows Server. When you enable the Hyper-V role, a Windows Server host can create, run, and manage an entire lifecycle for a virtual machine (VM). In an ONTAP Select environment, a Windows Server host running Hyper-V is the hypervisor host platform for the ONTAP Select Deploy VM and the ONTAP Select virtual nodes.
 
 Hypervisor host versus ONTAP Select node::
-A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select virtual machine. When an ONTAP Select virtual machine is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
+A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select VM. When an ONTAP Select VM is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
 
 ONTAP Select cluster::
 You can create an _ONTAP Select cluster_ composed of one, two, four, six, eight, ten, or twelve nodes. Multi-node clusters always contain one or more HA pairs. For example, a four-node cluster consists of two HA pairs. A single node cluster does not provide HA capability.
@@ -49,7 +49,7 @@ License Manager::
 The License Manager is a software component which supports Capacity Pools licensing. It is currently part of the Deploy administration utility. LM leases storage to the ONTAP Select nodes from the shared pools it manages. The _License Lock ID_ is a numeric string uniquely identifying each LM instance, and therefore each Deploy instance. You must use both the Capacity Pool license serial number and LLID to generate a license file.
 
 Platform license offerings::
-There are three license offerings available which determine the size capabilities of the ONTAP Select virtual machine when you purchase a license:
+There are three license offerings available which determine the size capabilities of the ONTAP Select VM when you purchase a license:
 
 * Standard
 * Premium
@@ -72,19 +72,19 @@ The ONTAP Select vNAS solution allows an ONTAP Select node to access VMware data
 In both cases, the external storage must be configured prior to creating an ONTAP Select cluster or expanding the storage capacity of an existing node.
 
 Node re-hosting on the ESXi VM::
-When you deploy a cluster that uses external storage available through the ONTAP Select vNAS solution (either VMware vSAN or a generic external storage array), the ESXi virtual machine hosting the ONTAP Select node can be moved through actions utilizing the following VMware features:
+When you deploy a cluster that uses external storage available through the ONTAP Select vNAS solution (either VMware vSAN or a generic external storage array), the ESXi VM hosting the ONTAP Select node can be moved through actions utilizing the following VMware features:
 
 * vMotion
 * High Availability (HA)
 * Distributed Resource Scheduler (DRS)
 +
-The ONTAP Select Deploy utility detects the movement of the virtual machine as part of executing an operation on the cluster, such as:
+The ONTAP Select Deploy utility detects the movement of the VM as part of executing an operation on the cluster, such as:
 +
 * cluster online
 * cluster offline
 * storage add
 +
-When a virtual machine is moved, the Deploy utility updates its internal database and configures the new ESXi host. All actions performed on the ONTAP Select node are blocked until the movement of the virtual machine and Deploy updates are completed.
+When a VM is moved, the Deploy utility updates its internal database and configures the new ESXi host. All actions performed on the ONTAP Select node are blocked until the movement of the VM and Deploy updates are completed.
 
 Open vSwitch for KVM::
 Open vSwitch (OVS) is a software implementation of a virtual switch supporting multiple networking protocols. OVS is open source and available according to the Apache License 2.0.
@@ -93,7 +93,7 @@ Mediator service::
 The ONTAP Select Deploy utility includes a mediator service which connects to the nodes in the active two-node clusters. This service monitors each HA pair and assists in managing failures.
 
 [CAUTION]
-If you have one or more active two-node clusters, the ONTAP Select Deploy virtual machine administering the clusters must be running at all times. If the Deploy virtual machine is halted, the mediator service is unavailable and HA capability is lost for the two-node clusters.
+If you have one or more active two-node clusters, the ONTAP Select Deploy VM administering the clusters must be running at all times. If the Deploy VM is halted, the mediator service is unavailable and HA capability is lost for the two-node clusters.
 
 MetroCluster SDS::
 MetroCluster SDS is a feature that provides an additional configuration option when deploying a two-node ONTAP Select cluster. Unlike a typical two-node ROBO deployment, the MetroCluster SDS nodes can be separated by a much greater distance. This physical separation enables additional use cases, such as disaster recovery. You must have a premium license or higher to use MetroCluster SDS. In addition, the network between the nodes must support a minimum latency requirement.
@@ -107,7 +107,7 @@ ONTAP Select provides storage efficiency options that are similar to the storage
 The vNAS default configurations enable a write optimization feature known as single instance data logging (SIDL). With ONTAP Select 9.6 and later releases, the background ONTAP storage efficiency features are qualified with SIDL enabled. Refer to the link:concept_stor_concepts_chars.html[Deep dive] section for more information.
 
 Cluster refresh::
-After creating a cluster, you can make changes to the cluster or virtual machine configuration outside of the Deploy utility using ONTAP or hypervisor administration tools. You can also migrate a virtual machine which causes configuration changes. When these changes occur, the Deploy utility is not automatically updated and can become out of sync with the state of the cluster. You can use the cluster refresh feature to update the Deploy configuration database. Cluster refresh is available through the Deploy web user interface, CLI management shell, and REST API.
+After creating a cluster, you can make changes to the cluster or VM configuration outside of the Deploy utility using ONTAP or hypervisor administration tools. You can also migrate a VM which causes configuration changes. When these changes occur, the Deploy utility is not automatically updated and can become out of sync with the state of the cluster. You can use the cluster refresh feature to update the Deploy configuration database. Cluster refresh is available through the Deploy web user interface, CLI management shell, and REST API.
 
 Software RAID::
 When using direct-attached storage (DAS), RAID functionality is traditionally provided through a local hardware RAID controller. You can instead configure a node to use _software RAID_ where the ONTAP Select node provides the RAID functionality. If you use software RAID, a hardware RAID controller is no longer needed.

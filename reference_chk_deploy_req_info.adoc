@@ -22,15 +22,15 @@ As part of your deployment planning, you should determine the required configura
 |===
 | Required information
 | Description
-| Name of the Deploy virtual machine | Identifier to use for the virtual machine.
+| Name of the Deploy virtual machine (VM) | Identifier to use for the VM.
 | Name of the hypervisor host | Identifier for the VMware ESXi, KVM, or Hyper-V hypervisor host where the Deploy utility is installed.
-| Name of the data store | Identifier for the hypervisor data store holding the virtual machine files (approximately 40GB is required).
-| Network for the virtual machine | Identifier for the Network where the Deploy virtual machine is connected.
+| Name of the data store | Identifier for the hypervisor data store holding the VM files (approximately 40GB is required).
+| Network for the VM | Identifier for the Network where the Deploy VM is connected.
 |===
 
 == Optional network configuration information
 
-The Deploy virtual machine is configured using DHCP by default. However, if needed, you can manually configure the network interface for the virtual machine.
+The Deploy VM is configured using DHCP by default. However, if needed, you can manually configure the network interface for the VM.
 
 [cols=2*,options="header",cols="35,65"]
 |===
@@ -38,7 +38,7 @@ The Deploy virtual machine is configured using DHCP by default. However, if need
 | Description
 | Host name | Identifier of the host machine.
 | Host IP address |Static IPv4 address of the host machine.
-| Subnet mask | Subnetwork mask, based on the network the virtual machine is a part of.
+| Subnet mask | Subnetwork mask, based on the network the VM is a part of.
 | Gateway | Default gateway or router.
 | Primary DNS server | Primary Domain Name Server.
 | Secondary DNS server | Secondary Domain Name Server.

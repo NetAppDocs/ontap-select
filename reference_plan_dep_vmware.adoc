@@ -14,7 +14,7 @@ summary: There are several requirements and restrictions specific to the VMware 
 [.lead]
 There are several planning issues related to the hypervisor host that you should consider.
 
-CAUTION: You should not directly modify the configuration of an ONTAP Select virtual machine unless directed to do so by NetApp support. A virtual machine should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select virtual machine outside of the Deploy utility without assistance from NetApp support can cause the virtual machine to fail and render it unusable.
+CAUTION: You should not directly modify the configuration of an ONTAP Select virtual machine (VM) unless directed to do so by NetApp support. A VM should only be configured and modified through the Deploy administration utility. Making changes to an ONTAP Select VM outside of the Deploy utility without assistance from NetApp support can cause the VM to fail and render it unusable.
 
 == Hypervisor independent
 
@@ -29,14 +29,14 @@ The following hypervisors are supported for both ONTAP Select and the ONTAP Sele
 NOTE: Refer to the hypervisor-specific planning information and link:reference_release_notes.html[release notes] for additional details regarding the supported platforms.
 
 .Hypervisor for ONTAP Select nodes and administration utility
-Both the Deploy administration utility and the ONTAP Select nodes run as virtual machines. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
+Both the Deploy administration utility and the ONTAP Select nodes run as VMs. The hypervisor you choose for the Deploy utility is independent of the hypervisor you choose for the ONTAP Select nodes. You have complete flexibility when pairing the two:
 
 * Deploy utility running on VMware ESXi can create and manage ONTAP Select clusters on either VMware ESXi, KVM, or Hyper-V
 * Deploy utility running on KVM can create and manage ONTAP Select clusters on either VMware ESXi, KVM, or Hyper-V
 * Deploy utility running on Hyper-V can create and manage ONTAP Select clusters on either VMware ESXi, KVM, or Hyper-V
 
 .One or more instances of ONTAP Select node per host
-Each ONTAP Select node runs as a dedicated virtual machine. You can create multiple nodes on the same hypervisor host, with the following restrictions:
+Each ONTAP Select node runs as a dedicated VM. You can create multiple nodes on the same hypervisor host, with the following restrictions:
 
 * Multiple nodes from a single ONTAP Select cluster cannot run on the same host. All the nodes on a specific host must be from different ONTAP Select clusters.
 * You must use external storage.
@@ -72,7 +72,7 @@ Your ESXi hypervisor host must meet several minimum resource requirements. Check
 
 .Network connectivity
 
-Check that the ONTAP Select Deploy virtual machine network interface is configured and has a single management IP address. You can use DHCP to dynamically assign an IP address or manually configure a static IP address.
+Check that the ONTAP Select Deploy VM network interface is configured and has a single management IP address. You can use DHCP to dynamically assign an IP address or manually configure a static IP address.
 
 Depending on your deployment decisions, the Deploy VM must be able to connect to the vCenter server, ESXi hypervisor hosts, and ONTAP Select nodes it manages. You must configure your firewalls to allow the required traffic.
 
@@ -88,7 +88,7 @@ Additionally, Deploy must be able to communicate with the ONTAP Select node and 
 
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
 
-* You must assign an IPv4 address to the management LIF of the Deploy virtual machine.
+* You must assign an IPv4 address to the management LIF of the Deploy VM.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
 [[vmware-vcenter-server-considerations]]

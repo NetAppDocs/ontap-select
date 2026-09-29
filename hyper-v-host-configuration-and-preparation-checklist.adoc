@@ -38,7 +38,7 @@ The Deploy utility administers the host over WinRM (PowerShell remoting) using H
 . Configure the WinRM HTTPS listener, the certificate it presents, and the firewall rule using Microsoft documentation. 
 .  Verify that the host configuration meets the following requirements:
 +
-* The Deploy virtual machine can reach the listener on TCP port 5986. The Deploy utility does not use HTTP or port 5985.
+* The Deploy virtual machine (VM) can reach the listener on TCP port 5986. The Deploy utility does not use HTTP or port 5985.
 * There is a self-signed certificate. The Deploy utility does not validate the certificate against a certificate authority.
 * The account used to register the host has administrator rights on the host. The Deploy utility authenticates with Kerberos and falls back to NTLM.
 * You have registered the Hyper-V host using a unique name that answers on port 5986. The Deploy utility retrieves the certificate using the registered name.
@@ -47,7 +47,7 @@ NOTE: The Deploy utility records the certificate and validates it on every later
 
 == Step 3: Prepare storage 
 
-A storage pool on a Hyper-V host is a local volume that holds the ONTAP Select virtual machine and its virtual disks. 
+A storage pool on a Hyper-V host is a local volume that holds the ONTAP Select VM and its virtual disks. 
 
 .Steps
 
@@ -61,12 +61,12 @@ A storage pool on a Hyper-V host is a local volume that holds the ONTAP Select v
 +
 NOTE: Cluster Shared Volumes and SMB 3.0 file shares cannot be used as ONTAP Select storage pools, and a volume that is mounted only to a folder path is not discovered because it has no drive letter. 
 
-. If you use the software RAID feature, reserve physical disks for ONTAP Select. PCI passthrough is not supported on Hyper-V, so the disks are presented to the virtual machine as passthrough physical disks. The disks must meet the following requirements: 
+. If you use the software RAID feature, reserve physical disks for ONTAP Select. PCI passthrough is not supported on Hyper-V, so the disks are presented to the VM as passthrough physical disks. The disks must meet the following requirements: 
 +
-* SSD or NVMe disks of at least 200 GB each
-* Raw disks with no partitions, no volumes, and no drive letters
-* Disks that are not members of a Storage Spaces pool
-* Disks left online; Deploy takes each disk offline when it attaches it to the virtual machine 
+* They are SSD or NVMe disks with at least 200 GB of storage each.
+* They are raw disks without partitions, volumes, and drive letters.
+* The disks that are not members of a Storage Spaces pool.
+* The disks are left online; the Deploy utility takes each disk offline when it attaches it to the VM.
 
 . A single-node cluster requires a minimum of three disks for software RAID and four or five disks for software RAID-DP. A two-node cluster requires six or ten disks respectively. A maximum of 60 passthrough disks is supported per node. Confirm that the reserved disks are eligible before you register the host: 
 +
@@ -101,7 +101,7 @@ image:CHK_02.jpg[Four-node cluster showing two networks]
 
 .Single node within a four-node cluster
 --
-The following figure illustrates the typical network configuration for a single ONTAP Select virtual machine within a four-node cluster. There are two separate networks: ONTAP-internal and ONTAP-external.
+The following figure illustrates the typical network configuration for a single ONTAP Select VM within a four-node cluster. There are two separate networks: ONTAP-internal and ONTAP-external.
 
 image:CHK_03.jpg[Single node within a four-node cluster]
 --

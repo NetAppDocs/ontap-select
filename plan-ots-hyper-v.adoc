@@ -12,7 +12,7 @@ summary: There are several planning issues related to the use of the Hyper-V hyp
 :imagesdir: ./media/
 
 [.lead]
-When you configure ONTAP Select on a Hyper-V hypervisor, ONTAP Select stores the virtual machine and the virtual disks on a local volume on the Hyper-V host.
+When you configure ONTAP Select on a Hyper-V hypervisor, ONTAP Select stores the virtual machine (VM) and the virtual disks on a local volume on the Hyper-V host.
 
 == Basic requirements and restrictions 
 
@@ -31,7 +31,7 @@ The following configuration requirements and restrictions apply to ONTAP Select 
 You should follow these best practices:
 
 * Define dedicated network adapters, bandwidth, and virtual switch configurations for the ONTAP Select networks, and keep external storage traffic such as iSCSI on separate adapters.
-* Dedicate the storage pool volume to ONTAP Select. Do not place other Hyper-V virtual machines or Windows workloads on the same volume, and do not use the Windows boot volume as a storage pool.
+* Dedicate the storage pool volume to ONTAP Select. Do not place another Hyper-V VM or Windows workload on the same volume, and do not use the Windows boot volume as a storage pool.
 * Size the volume so that ONTAP Select does not consume its entire capacity.
 * Configure Windows MPIO for external storage arrays so that LUNs are presented over redundant paths. 
 
