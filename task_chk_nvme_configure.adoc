@@ -19,19 +19,26 @@ Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficienc
 NOTE: ONTAP Select supports NVMe drives as SCSI disks on Hyper-V hosts. ONTAP Select does not support NVMe drives as Discrete Device Assignments (passthrough devices) on Hyper-V hosts.
 
 == Step 1: Configure the host
-Configure the ESXi or KVM host to recognize the drives.
+Configure the KVM or ESXi host to recognize the drives.
 
 .Before you begin
 
 Make sure your deployment environment meets the following minimum requirements:
 
-* For an ESXi host, ONTAP Select 9.7 or later with a supported Deploy administration utility
 * For a KVM host, ONTAP Select 9.17.1 or later with a supported Deploy administration utility
+* For an ESXi host, ONTAP Select 9.7 or later with a supported Deploy administration utility
 * Premium XL platform license offering or a 90-day evaluation license
-* The ESXi or KVM host is running a supported hypervisor version:
+* The KVM or ESXi host is running a supported hypervisor version:
 +
 [role="tabbed-block"]
 =====
+.KVM
+--
+KVM is supported on the following hypervisor versions:
+
+* Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
+--
 
 .ESXi
 --
@@ -42,14 +49,6 @@ ESXi is supported on the following hypervisor versions:
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1 (build 21495797)
 * VMware ESXi 8.0 GA (build 20513097)
---
-
-.KVM
---
-KVM is supported on the following hypervisor versions:
-
-* Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 --
 =====
 

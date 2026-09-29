@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps
 summary: Beginning with ONTAP Select 9.15.1, you can increase or decrease the size of an existing cluster.
 ---
-= Expand or contract an ONTAP Select cluster on ESXi or KVM hosts
+= Expand or contract an ONTAP Select cluster on KVM or ESXi hosts
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,9 +12,9 @@ summary: Beginning with ONTAP Select 9.15.1, you can increase or decrease the si
 :imagesdir: ./media/
 
 [.lead]
-Increase or decrease the cluster size of an existing ONTAP Select cluster for ESXi and KVM hypervisor hosts. For both host types, you can increase and decrease the cluster size in increments between four and twelve nodes.
+Increase or decrease the cluster size of an existing ONTAP Select cluster for KVM and ESXi hypervisor hosts. For both host types, you can increase and decrease the cluster size in increments between four and twelve nodes.
 
-The following cluster expansions and contractions aren't supported for ESXi and KVM hosts:
+The following cluster expansions and contractions aren't supported for KVM and ESXi hosts:
 
 * Expansions from one or two-node clusters to six, eight, ten, or twelve-node clusters.
 * Contractions from six, eight, ten, or twelve-node clusters to one or two-node clusters.
@@ -34,6 +34,15 @@ The cluster expansion and contraction feature is supported on the following KVM 
 
 [role="tabbed-block"]
 =====
+.KVM
+--
+Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported on KVM hypervisor hosts.
+
+Cluster expansion and contraction is supported for the following KVM hypervisor versions:
+
+* Red Hat Enterprise Linux (RHEL) 64-bit 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+* Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
+--
 .ESXi
 --
 Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is supported on ESXi hypervisor hosts. 
@@ -46,21 +55,12 @@ Cluster expansion and contraction is supported for the following ESXi hypervisor
 * ESXi 8.0 U1
 * ESXi 8.0 GA 
 --
-.KVM
---
-Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported on KVM hypervisor hosts.
-
-Cluster expansion and contraction is supported for the following KVM hypervisor versions:
-
-* Red Hat Enterprise Linux (RHEL) 64-bit 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
-* Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
---
 =====
 
 == Expand the cluster
 Use the cluster expansion feature to increase the size of an existing ONTAP Select cluster.
 
-You can increase the size of an existing cluster on an ESXi or KVM host in the following increments:
+You can increase the size of an existing cluster on a KVM or ESXi host in the following increments:
 
 * From four nodes to six, eight, ten, or twelve nodes
 * From six nodes to eight, ten, or twelve nodes
@@ -68,7 +68,7 @@ You can increase the size of an existing cluster on an ESXi or KVM host in the f
 * From ten to twelve nodes
 
 .About this task
-In preparation for cluster expansion, new ESXi and KVM hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
+In preparation for cluster expansion, new KVM and ESXi hosts are added to the inventory and the details of the new nodes are assigned. Before starting the cluster expansion process, a network precheck verifies the selected internal network.
 
 .Before you begin
 * When deploying a multi-node cluster, you should be familiar with the network connectivity checker. You can run the network connectivity checker using the link:task_adm_connectivity.html[web UI] or the link:task_cli_connectivity.html[CLI].
@@ -115,7 +115,7 @@ After expanding the cluster, you should link:task_cli_clusters.html[back up the 
 == Contract the cluster
 Use the cluster contraction feature to decrease the size of an existing ONTAP Select cluster.
 
-You can decrease the size of an existing cluster on an ESXi or KVM host in the following increments:
+You can decrease the size of an existing cluster on a KVM or ESXi host in the following increments:
 
 * From twelve nodes to ten, eight, six, or four nodes
 * From ten nodes to eight, six, or four nodes

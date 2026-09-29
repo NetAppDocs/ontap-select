@@ -51,14 +51,6 @@ ls -lh /opt/netapp/images
 +
 [role="tabbed-block"]
 ====
-.ESXi example
---
-
-[source,cli]
-----
-rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
-----
---
 
 .KVM example
 --
@@ -68,6 +60,16 @@ rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
 rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
 ----
 --
+
+.ESXi example
+--
+
+[source,cli]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
+----
+--
+
 ====
 
 // 2023-10-02, ONTAPDOC-1204
