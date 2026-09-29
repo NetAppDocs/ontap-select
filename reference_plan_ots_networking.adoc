@@ -147,40 +147,44 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |VMware VIX API
 
 |ICMP
-|ESXi or KVM
+|ESXi, KVM, or Hyper-V
 |Deploy to hypervisor server
 |Ping
 
 |ICMP
-|ESXi or KVM
+|ESXi, KVM, or Hyper-V
 |Deploy to each OTS node
 |Ping
 
 |SSH (22)
-|ESXi or KVM
+|ESXi, KVM, or Hyper-V
 |Admin WS to each OTS node
 |Administration
 
 |SSH (22)
-|KVM
+|KVM or Hyper-V
 |Deploy to hypervisor server nodes
 |Access hypervisor server
 
 |TLS (443)
-|ESXi or KVM
-|Deploy to OTS nodes and clusters
+|ESXi, KVM, or Hyper-V
+|Deploy to ONTAP Select nodes and clusters
 |Access ONTAP
 
 |TLS (443)
-|ESXi or KVM
-|Each OTS node to Deploy
+|ESXi, KVM, or Hyper-V
+|Each ONTAP Select node to Deploy
 |Access Deploy (Capacity Pools licensing)
 
 |iSCSI (3260)
-|ESXi or KVM
-|Each OTS node to Deploy
+|ESXi, KVM, or Hyper-V
+|Each ONTAP Select node to Deploy
 |Mediator/Mailbox disk
 
+|WinRM HTTPS (5986) 
+|Hyper-V 
+|Deploy to hypervisor server nodes
+|Access hypervisor server
 |===
 
 // 2026 SEP 15, ONTAPDOC-3948

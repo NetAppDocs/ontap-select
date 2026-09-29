@@ -14,9 +14,9 @@ summary: If you plan to use NVMe drives with software RAID, you need to configur
 [.lead]
 If you plan to use NVMe drives with software RAID, you need to configure the ESXi or KVM host to recognize the drives.
 
-NOTE: ONTAP Select does not support NVMe drives on Hyper-V hosts.
-
 Use VMDirectPath I/O Pass-through on the NVMe devices to maximize data efficiency. This setting exposes the drives to the ONTAP Select virtual machine, allowing ONTAP to have direct PCI access to the device.
+
+NOTE: ONTAP Select supports NVMe drives as SCSI disks on Hyper-V hosts. ONTAP Select does not support NVMe drives as Discrete Device Assignments (passthrough devices) on Hyper-V hosts.
 
 == Step 1: Configure the host
 Configure the ESXi or KVM host to recognize the drives.

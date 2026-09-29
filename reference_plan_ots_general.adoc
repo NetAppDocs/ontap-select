@@ -45,6 +45,57 @@ You should be familiar with networking concepts and the configuration of network
 * `ip link`
 * `systemctl`
 
+== Required Windows knowledge and skills for Hyper-V 
+
+Windows Server with the Hyper-V role is a complex environment. Before deploying ONTAP Select on Hyper-V, you must have the necessary knowledge and skills. 
+
+The ONTAP Select Deploy administration utility creates and manages the ONTAP Select virtual machine. You need the following skills to prepare the Windows host that Deploy administers and to confirm that the host meets the ONTAP Select requirements. 
+
+Windows Server administration::
+
+You should have experience with the Windows Server release for your ONTAP Select deployment. Specifically, you should be able to perform the following tasks: 
+
+* Install and update Windows Server
+* Identify the installed Windows Server release and confirm that it is supported
+* Install and enable server roles and optional features, including the Hyper-V role
+* Configure the system using the CLI
+* Size host CPU and memory so that capacity remains available to the host after deploying an ONTAP Select node
+
++
+For more information on preparing your Windows server, including the required configuration and software packages, refer to the link:hyper-v-host-configuration-and-preparation-checklist.html[host configuration checklist]. Refer to the hypervisor requirements for the currently supported Windows Server releases.
+
+Hyper-V concepts and administration:: 
+
+You should be familiar with general virtualization concepts as well as with the Hyper-V platform. Specifically, you should understand the following:
+
+* How enabling the Hyper-V role changes networking and storage on the host
+* How Hyper-V presents storage to a virtual machine, including the difference between a virtual hard disk and a physical disk that is passed through to a virtual machine
+* How to view the configuration and state of a virtual machine and its resources
+
++
+NOTE: The Deploy administration utility creates and manages the ONTAP Select virtual machine. Do not reconfigure, checkpoint, migrate, or delete the virtual machine using Hyper-V Manager, Failover Cluster Manager, or PowerShell. 
+
+Networking and virtual switch configuration:: 
+
+You should be familiar with networking concepts and the configuration of network switches. In addition, you should be able to perform the following tasks on the Hyper-V host:
+
+* Plan and create external virtual switches, and understand how each virtual switch is bound to a physical network adapter
+* Verify the link state, speed, and IP configuration of the host network adapters
+* Configure VLAN tagging consistently on the host and on the physical network
+* Configure jumbo frames on a physical network adapter and determine the resulting MTU
+
++
+The Deploy administration utility uses the virtual switches that already exist on the host, so you need to plan the virtual switch layout before deployment. For example, a two-node cluster requires an internal network with an MTU of 7500 to 9000 bytes. 
+
+Storage administration::
+
+You should be able to manage disks and volumes on Windows. Specifically, you should be able to perform the following tasks: 
+
+* Create and size New Technology File System (NTFS) or Resilient File System
+ (ReFS) volumes and assign drive letters 
+* Identify the media type, storage transport protocol (bus type), and capacity of a physical disk 
+* Distinguish a raw disk from a disk that is partitioned or already contains a volume 
+* Initialize a raw disk for use in the system
 
 == Cluster size and related considerations
 

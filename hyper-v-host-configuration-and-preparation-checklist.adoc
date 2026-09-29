@@ -12,7 +12,7 @@ summary: Prepare each KVM hypervisor hosts where an ONTAP Select node is deploye
 :imagesdir: ./media/
 
 [.lead]
-Prepare each Hyper-V hypervisor host where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
+Prepare each Hyper-V hypervisor host where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to ensure the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
 
 [NOTE]
 The ONTAP Select Deploy administration utility doesn't perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host before deploying an ONTAP Select cluster.
@@ -20,22 +20,62 @@ The ONTAP Select Deploy administration utility doesn't perform the required netw
 [[prepare-hyper-v-server]]
 == Step 1: Prepare the Hyper-V hypervisor host
 
+.Steps
+. Install a supported Windows Server release and enable the Hyper-V role using Server Manager, Windows Admin Center, or PowerShell.
+. Install Windows to the local boot disk. Do not install Windows to a disk you intend to give to ONTAP Select. 
+. Confirm that the host management interface is up after the host restarts.
+.  Verify that the host configuration meets the following requirements:
++Verify
+* The Windows Server release is listed as supported. The Deploy utility reads the product name during host registration and reports an unsupported release.
+* The Hyper-V role is enabled. The Deploy utility verifies this during host registration, and registration fails if the role is not enabled.
+* Host CPU and memory have capacity for Windows Server. The Deploy utility reserves 2 CPU cores and 8 GB of memory for the host when it sizes a node. 
 
+== Step 2: Provide remote management access for Deploy 
+The Deploy utility administers the host over WinRM (PowerShell remoting) using HTTPS. 
 
 .Steps
 
+. Configure the WinRM HTTPS listener, the certificate it presents, and the firewall rule using Microsoft documentation. 
+.  Verify that the host configuration meets the following requirements:
++
+* The Deploy virtual machine can reach the listener on TCP port 5986. The Deploy utility does not use HTTP or port 5985.
+* There is a self-signed certificate. The Deploy utility does not validate the certificate against a certificate authority.
+* The account used to register the host has administrator rights on the host. The Deploy utility authenticates with Kerberos and falls back to NTLM.
+* You have registered the Hyper-V host using a unique name that answers on port 5986. The Deploy utility retrieves the certificate using the registered name.
++
+NOTE: The Deploy utility records the certificate and validates it on every later connection. If the certificate is replaced, connections to the host fail and the host must be deleted from the Deploy utility and registered again. 
 
-== Step 2: Create a storage pool
+== Step 3: Prepare storage 
+
+A storage pool on a Hyper-V host is a local volume that holds the ONTAP Select virtual machine and its virtual disks. 
 
 .Steps
 
-== Step 3: Optionally, delete a storage pool
+. Create the volume using Disk Management, Server Manager, or Windows Admin Center. 
+. Create at least one storage pool for each ONTAP Select node. This includes the scenario when you use software RAID because the system data still requires a storage pool. 
+.  Verify that the host configuration meets the following requirements:
++
+* The volume must be formatted as NTFS or ReFS and must have a drive letter assigned. Deploy identifies the storage pool by its drive letter, for example C.
+* Deploy reserves two percent of the volume as overhead and can allocate a maximum of 64 TB from a single storage pool.
+* To remove a storage pool, first delete the ONTAP Select cluster or node that uses it, then delete the volume using the standard Windows tools. 
++
+NOTE: Cluster Shared Volumes and SMB 3.0 file shares cannot be used as ONTAP Select storage pools, and a volume that is mounted only to a folder path is not discovered because it has no drive letter. 
 
+. If you use the software RAID feature, reserve physical disks for ONTAP Select. PCI passthrough is not supported on Hyper-V, so the disks are presented to the virtual machine as passthrough physical disks. The disks must meet the following requirements: 
++
+* SSD or NVMe disks of at least 200 GB each
+* Raw disks with no partitions, no volumes, and no drive letters
+* Disks that are not members of a Storage Spaces pool
+* Disks left online; Deploy takes each disk offline when it attaches it to the virtual machine 
 
-
-.Steps
-
-
+. A single-node cluster requires a minimum of three disks for software RAID and four or five disks for software RAID-DP. A two-node cluster requires six or ten disks respectively. A maximum of 60 passthrough disks is supported per node. Confirm that the reserved disks are eligible before you register the host: 
++
+[source,cli]
+----
+Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType, Size 
+----
++
+NOTE: The disks that appear as members of a Storage Spaces pool in the output of `Get-StoragePool` are excluded by the Deploy utility and are not available for software RAID.
 
 == Step 4: Review the ONTAP Select cluster configuration
 
@@ -67,79 +107,30 @@ image:CHK_03.jpg[Single node within a four-node cluster]
 --
 ====
 
-== Step 5: Configure Open vSwitch 
-Use Open vSwitch to configure a software-defined switch on each KVM host node.
+== Step 5: Prepare the networks 
 
-.Before you begin
-Verify that the network manager is disabled and the native Linux network service is enabled.
-
-.About this task
-ONTAP Select requires two separate networks, both of which utilize port bonding to provide HA capability for the networks.
+ONTAP Select reaches the physical network through Hyper-V virtual switches.
 
 .Steps
+. Create the virtual switches before you register the host. Deploy uses the virtual switches that already exist and does not create them.
+.. Create the switches with Virtual Switch Manager in Hyper-V Manager, Windows Admin Center, or PowerShell. 
+.. Set jumbo frames in the advanced properties of the physical adapter.
 
-. Verify that Open vSwitch is active on the host:
-.. Determine if Open vSwitch is running:
 +
-[source,cli]
-----
-systemctl status openvswitch
-----
+Refer to the Windows documentation for more information.
 
-.. If Open vSwitch is not running, start it:
+. Create an external virtual switch for each physical adapter used by ONTAP Select. A single-node cluster requires at least one adapter and a two-node cluster requires at least two adapters.
+. Bind one physical adapter to each virtual switch. 
 +
-[source,cli]
-----
-systemctl start openvswitch
-----
+NOTE: NIC teaming and Switch Embedded Teaming are not supported. 
+. Verify that each uplink is `up`. 
++
+NOTE: An external virtual switch whose uplink is `down` is reported as unavailable. 
 
-. Display the Open vSwitch configuration:
+. Configure VLAN tagging on the physical switch port or on the management operating system adapter. The Deploy utility reads the VLAN that is in use rather than assigning one.
+. The internal network of a two-node cluster requires an MTU of 7500 to 9000 bytes. Enable jumbo frames on the adapter that carries the internal network. 
 +
-[source,cli]
-----
-ovs-vsctl show
-----
-+
-The configuration appears empty if Open vSwitch has not already been configured on the host.
-
-. Add a new vSwitch instance:
-+
-[source,cli]
-----
-ovs-vsctl add-br <bridge_name>
-----
-+
-For example:
-+
-[source,cli]
-----
-ovs-vsctl add-br ontap-br
-----
-
-. Bring the network interfaces down:
-+
-[source,cli]
-----
-ifdown <interface_1>
-ifdown <interface_2>
-----
-
-. Combine the links using the Link Aggregation Control Protocol (LACP):
-+
-[source,cli]
-----
-ovs-vsctl add-bond <internal_network> bond-br <interface_1> <interface_2> bond_mode=balance-slb lacp=active other_config:lacp-time=fast
-----
-+
-NOTE: You only need to configure a bond if there is more than one interface.
-
-. Bring the network interfaces up:
-+
-[source,cli]
-----
-ifup <interface_1>
-ifup <interface_2>
-----
+NOTE: Windows Server reports the jumbo frame size including the Ethernet header, so an adapter set to 9014 bytes provides an MTU of 9000 bytes. The Deploy utility reads the adapter setting and interprets it this way. When a virtual switch is shared with the management operating system, the IP MTU of the corresponding host adapter also limits the MTU that the Deploy utility reports.
 
 // 2026 15 SEP 15, ONTAPDOC-3948
 // 2025 July 16, ONTAPDOC-2885

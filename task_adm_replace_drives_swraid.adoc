@@ -23,7 +23,55 @@ When a drive fails you need to use the ONTAP CLI to identify the failed disk.
 
 [role="tabbed-block"]
 ====
+.Hyper-V
+--
+.Before you begin
 
+You must have the name of the ONTAP Select virtual machine on the Hyper-V host, as well as the ONTAP Select and ONTAP Select Deploy administrator account credentials. 
+
+.About this task 
+
+You should only use this procedure when the ONTAP Select node is running on Hyper-V and configured to use software RAID. On Hyper-V, ONTAP Select reports a virtualized serial number for a passthrough disk, so you identify the physical drive by its target address rather than by its serial number. 
+
+.Steps
+
+. Sign in to the ONTAP Select CLI using the administrator account and identify the failed disk drive: 
++
+[source,cli]
+----
+<cluster name>::> storage disk show -container-type broken 
+----
+. [[record-lun-value]]Display the target address of the failed disk: 
++
+[source,cli]
+----
+<cluster name>::> disk show -fields serial,vmdisk-target-address 
+----
++
+Record the `lun` value of the failed disk. The `bus` value identifies the virtual SCSI controller that carries the passthrough disks. 
+
+. Optionally, display the spare disk capacity together with the partitioned disks: 
++
+[source,cli]
+----
+<cluster name>::> storage aggregate show-spare-disks 
+----
+. On the Hyper-V host, display the disks attached to the ONTAP Select virtual machine: 
++
+[source,cli]
+----
+PS C:\> Get-VMHardDiskDrive -VMName <vm_name> 
+----
++
+The passthrough disks are the entries that report a disk number; entries with a file path are the system disks. The failed disk is the entry whose `ControllerLocation` matches the <<record-lun-value, recorded `lun` value>>. The `DiskNumber` of the failed disk is the Windows disk number. 
+
+. Display the physical identity of the failed disk: 
++
+[source,cli]
+----
+PS C:\> Get-PhysicalDisk | Where-Object { [int]$_.DeviceId -eq <disk_number> } | Select-Object FriendlyName, SerialNumber, UniqueId, PhysicalLocation, MediaType, Size, HealthStatus, OperationalStatus 
+----
+--
 .KVM
 --
 .Before you begin
@@ -80,9 +128,9 @@ After you identify the drive that failed, remove the disk.
 [role="tabbed-block"]
 ====
 
-.KVM using Deploy
+.Hyper-V or KVM using Deploy
 --
-You can detach a disk from a KVM host as part of replacing the disk or when it is no longer needed.
+You can detach a disk from a Hyper-V host or a KVM host as part of replacing the disk or when it is no longer needed.
 
 .Before you begin
 You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.
@@ -192,10 +240,10 @@ After you remove the failed drive, add the spare disk.
 [role="tabbed-block"]
 ====
 
-.KVM using Deploy
+.Hyper-V or KVM using Deploy
 --
 .Attaching a disk using Deploy
-You can attach a disk to a KVM host as part of replacing a disk or to add more storage capacity.
+You can attach a disk to a Hyper-V host or a KVM host as part of replacing a disk or to add more storage capacity.
 
 .Before you begin
 You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.

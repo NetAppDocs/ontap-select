@@ -20,6 +20,9 @@ ONTAP Select Deploy is the administration utility that you use to deploy ONTAP S
 Kernel-based Virtual Machine::
 Kernel-based Virtual Machine (KVM) is a virtualization feature of the Linux kernel, which allows it to act as a hypervisor platform. A wide range of guest operating systems are supported.
 
+Microsoft Hyper-V::
+Microsoft Hyper-V is the hardware virtualization platform included with Windows Server. When you enable the Hyper-V role, a Windows Server host can create, run, and manage an entire lifecycle for a virtual machine. In an ONTAP Select environment, a Windows Server host running Hyper-V is the hypervisor host platform for the ONTAP Select Deploy virtual machine and the ONTAP Select virtual nodes.
+
 Hypervisor host versus ONTAP Select node::
 A _hypervisor host_ is the core hardware platform that hosts an ONTAP Select virtual machine. When an ONTAP Select virtual machine is deployed and active on a hypervisor host, it is considered to be an _ONTAP Select node_.
 
@@ -122,5 +125,6 @@ After you deploy an ONTAP Select cluster, you can configure the cluster as you w
 .Related information
 link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
 
+// 2026 SEP 28, ONTAPDOC-3948
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
