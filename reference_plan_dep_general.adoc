@@ -33,12 +33,12 @@ You can deploy and manage multiple ONTAP Select clusters in your organization us
 [NOTE]
 One instance of the Deploy utility can administer up to 400 ONTAP Select nodes or 100 clusters.
 
-== Requirements related to the KVM environment
+== Requirements related to a Hyper-V or KVM environment
 
-Before installing the Deploy administration utility in a KVM hypervisor environment, you should review the basic requirements and prepare for the deployment.
+Before installing the Deploy administration utility in a Hyper-V hypervisor or KVM hypervisor environment, you should review the basic requirements and prepare for the deployment.
 
 .Requirements and restrictions for a deployment
-There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a KVM environment.
+There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a Hyper-V or KVM environment.
 
 .Linux KVM host server hardware requirements
 There are several minimum resource requirements that your Linux KVM hypervisor host must meet. Verify that the hosts where ONTAP Select is deployed meet the following basic requirements:
@@ -67,8 +67,8 @@ As part of your deployment planning, you should determine the required configura
 .Name of the Deploy VM
 The name to use for the VM.
 
-.Name of the Linux KVM host
-The Linux KVM host where the Deploy utility is installed.
+.Name of the Windows Hyper-V or Linux KVM host
+The Windows Hyper-V host or Linux KVM host where the Deploy utility is installed.
 
 .Name of the storage pool
 The storage pool holding the VM files (approximately 40GB is required).

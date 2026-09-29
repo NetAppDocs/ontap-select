@@ -35,7 +35,7 @@ You can deploy ONTAP Select on Hyper-V, KVM, and ESXi hypervisors.
 --
 ONTAP Select supports the following Hyper-V hypervisor versions:  
 
-Microsoft Windows Server 2025 and 2022
+* Microsoft Windows Server 2025 and 2022
 
 --
 .KVM
