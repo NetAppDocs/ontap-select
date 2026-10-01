@@ -27,7 +27,7 @@ Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default networ
 
 == Cluster MTU
 
-A separate internal network is used to connect the ONTAP Select nodes in a multi-node cluster. Typically the MTU size for this network is 9000. However, there are situations where this MTU size is too large for the network connecting the ONTAP Select nodes. To accommodate the smaller frames, the MTU size used by ONTAP Select on the internal network can be in the range of 7500-9000 bytes.
+A separate internal network is used to connect the ONTAP Select nodes in a multi-node cluster. Typically the Maximum Transmission Unit (MTU) size for this network is 9000. However, there are situations where this MTU size is too large for the network connecting the ONTAP Select nodes. To accommodate the smaller frames, the MTU size used by ONTAP Select on the internal network can be in the range of 7500-9000 bytes.
 
 The MTU size is displayed in the Cluster Details section of the cluster creation page. The value is determined by the Deploy administration utility as follows:
 

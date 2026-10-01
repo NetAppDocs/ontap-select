@@ -31,7 +31,7 @@ You must have the name of the ONTAP Select virtual machine (VM) on the Hyper-V h
 
 .About this task 
 
-You should only use this procedure when the ONTAP Select node is running on Hyper-V and configured to use software RAID. On Hyper-V, ONTAP Select reports a virtualized serial number for a passthrough disk, so you identify the physical drive by its target address rather than by its serial number. 
+You should only use this procedure when the ONTAP Select node is running on Hyper-V and configured to use software RAID. On Hyper-V, ONTAP Select reports a virtualized serial number for a passthrough disk, so you identify the physical drive by the target address and not the serial number. 
 
 .Steps
 

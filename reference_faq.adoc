@@ -198,7 +198,7 @@ Although ONTAP Select Deploy adds support for multiple ONTAP Select VMs on the s
 
 .Does ONTAP Select support VMware’s NSX VXLAN?
 
-NSX-V VXLAN port groups are supported. For multi-node HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network MTU to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Select Deploy during cluster deployment.
+NSX-V VXLAN port groups are supported. For multi-node HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network Maximum Transmission Unit (MTU) to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Select Deploy during cluster deployment.
 
 .Does ONTAP Select support KVM live migration?
 

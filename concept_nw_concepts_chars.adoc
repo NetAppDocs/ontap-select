@@ -57,7 +57,7 @@ The internal network has the following characteristics:
 ** IPv4 only
 ** DHCP not used
 ** Link-local address
-* The MTU size is 9000 bytes by default and can be adjusted within 7500-9000 range (inclusive)
+* The Maximum Transmission Unit (MTU) size is 9000 bytes by default and can be adjusted within 7500-9000 range (inclusive)
 
 === External network
 

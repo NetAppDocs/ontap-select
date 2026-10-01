@@ -122,7 +122,7 @@ Cluster network traffic must flow through a low-latency, non-routed layer-2 netw
 For details, refer to the section link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices[Two-node stretched HA (MetroCluster SDS) best practices].
 
 [NOTE]
-To make sure of maximum throughput for cluster network traffic, this network port is configured to use jumbo frames (7500 to 9000 MTU). For correct cluster operation, verify that jumbo frames are enabled on all upstream virtual and physical switches providing internal network services to ONTAP Select cluster nodes.
+To make sure of maximum throughput for cluster network traffic, this network port is configured to use jumbo frames with a Maximum Transmission Unit (MTU) of 7500 to 9000 bytes. For correct cluster operation, verify that jumbo frames are enabled on all upstream virtual and physical switches providing internal network services to ONTAP Select cluster nodes.
 
 === RAID SyncMirror traffic (e0e)
 

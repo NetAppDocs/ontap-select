@@ -61,7 +61,7 @@ Storage pools versus datastores::
 An ONTAP Select _storage pool_ is a logical data container designed to abstract and hide the underlying physical storage. A storage pool is hypervisor-independent. When deployed on an ESXi hypervisor host, the ONTAP Select storage pool is synonymous with the VMware _datastore_.
 
 Cluster MTU::
-Cluster MTU is a feature allowing you to configure the MTU size used on the internal network used with an ONTAP Select multi-node cluster. The Deploy administration utility adjusts the MTU size as you configure the HA pairs to accommodate your networking environment. You can also manually set the value.
+Cluster Maximum Transmission Unit (MTU) is a feature allowing you to configure the MTU size used on the internal network used with an ONTAP Select multi-node cluster. The Deploy administration utility adjusts the MTU size as you configure the HA pairs to accommodate your networking environment. You can also manually set the value.
 
 ONTAP Select vNAS::
 The ONTAP Select vNAS solution allows an ONTAP Select node to access VMware datastores on external storage. With ONTAP Select vNAS, a local RAID controller is no longer needed; the RAID functionality is assumed to be provided by the remote storage. ONTAP Select vNAS can be configured in the following ways:
