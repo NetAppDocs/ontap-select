@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: hyper-v-host-configuration-and-preparation-checklist.html
 keywords: ontap select, pre-installation checklist, hyper-v, host preparation
-summary: Prepare each Hyper-V hypervisor hosts where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
+summary: Prepare each Hyper-V hypervisor host where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are properly configured and ready to support the deployment of an ONTAP Select cluster.
 ---
 = Prepare a Hyper-V host for ONTAP Select
 :hardbreaks:
