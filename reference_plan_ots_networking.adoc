@@ -115,10 +115,10 @@ Either a vSphere server or ESXi host, depending on how the host is managed in yo
 * Hypervisor server
 +
 ESXi hypervisor host, Linux KVM host, or Microsoft Hyper-V host
-* OTS node
+* ONTAP Select node
 +
 An ONTAP Select node
-* OTS cluster
+* ONTAP Select cluster
 +
 An ONTAP Select cluster
 * Admin WS
@@ -153,12 +153,12 @@ The following table describes the network traffic requirements for an ONTAP Sele
 
 |ICMP
 |ESXi, KVM, or Hyper-V
-|Deploy to each OTS node
+|Deploy to each ONTAP Select node
 |Ping
 
 |SSH (22)
 |ESXi, KVM, or Hyper-V
-|Admin WS to each OTS node
+|Admin WS to each ONTAP Select node
 |Administration
 
 |SSH (22)

@@ -173,7 +173,7 @@ Creating an external virtual switch briefly interrupts network traffic on the ph
 Get-WindowsFeature -Name Hyper-V, Hyper-V-PowerShell 
 ----
 +
-If the value for `State` is not `Installed`, install the role and restart the host: 
+If the value for `Install State` is not `Installed`, install the role and restart the host: 
 +
 [source,cli]
 ----
@@ -219,7 +219,7 @@ Get-NetIPAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -AddressFam
 +
 [source,cli]
 ----
-New-NetIPAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -IPAddress "<host_IP_adress>" -PrefixLength <prefix_length> -DefaultGateway "<gateway_IP_address>" 
+New-NetIPAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -IPAddress "<host_IP_address>" -PrefixLength <prefix_length> -DefaultGateway "<gateway_IP_address>" 
 Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -ServerAddresses "<primary_dns>","<secondary_dns>" 
 ----
   
@@ -469,7 +469,7 @@ Use DHCP to set networking information? [n]:
 --
 .ESXi
 --
-Install and start the ONTAP Select Deploy VM on an ESXi hostusing the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
+Install and start the ONTAP Select Deploy VM on an ESXi host using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
 

@@ -125,9 +125,9 @@ If a Capacity Pool subscription lapses, the system warns you first but after 30 
 
 There are several questions and answers dealing with storage.
 
-.Can a single ONTAP Select Deploy instance create clusters on both ESXi and KVM?
+.Can a single ONTAP Select Deploy instance create clusters on Hyper-V, ESXi, and KVM?
 
-Yes. ONTAP Select Deploy can be installed on either KVM or ESXi, and both installations can create ONTAP Select clusters on either hypervisor.
+Yes. ONTAP Select Deploy can be installed on Hyper-V, KVM, or ESXi, and these installations can create ONTAP Select clusters on any of these hypervisors.
 
 .Is vCenter required for ONTAP Select on ESXi?
 
@@ -145,7 +145,8 @@ Software RAID is a layer in the ONTAP software stack. Software RAID provides mor
 
 Some of the requirements for software RAID are as follows:
 
-* Supported for ESXi and KVM
+* Supported for Hyper-V, KVM, and ESXi
+** Beginning with ONTAP Select 9.20.1, ONTAP Select supports the Hyper-V hypervisor.
 ** Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for KVM hypervisor was removed in ONTAP Select 9.10.1. 
 * Size of supported physical disks: 200GB – 32TB
 * Only supported on DAS configurations
@@ -186,7 +187,7 @@ Storage add also supports software RAID. However, in the case of software RAID, 
 
 ONTAP Select Deploy and ONTAP Select for ESXi support the configuration of an ONTAP Select single-node cluster using either a vSAN or an external array type of datastore for its storage pool.
 
-ONTAP Select Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI or FC/FCoE. Other types of storage pools are not supported.
+ONTAP Select Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI, FC/FCoE, and NFS. Other types of storage pools are not supported.
 
 Multi-node HA clusters on shared storage are supported.
 

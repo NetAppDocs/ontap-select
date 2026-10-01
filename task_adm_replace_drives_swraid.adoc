@@ -161,6 +161,7 @@ After you identify the disk, follow the steps below.
 .Steps
 . Detach the disk from the VM:
 .. Dump the configuration:
++
 [source,cli]
 +
 ----
