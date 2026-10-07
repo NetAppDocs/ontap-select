@@ -52,21 +52,21 @@ ls -lh /opt/netapp/images
 [role="tabbed-block"]
 ====
 
-.KVM example
---
-
-[source,cli]
-----
-rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
-----
---
-
 .ESXi example
 --
 
 [source,cli]
 ----
 rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
+----
+--
+
+.KVM example
+--
+
+[source,cli]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
 ----
 --
 

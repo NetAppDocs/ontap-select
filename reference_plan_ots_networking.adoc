@@ -114,7 +114,7 @@ ONTAP Select Deploy administration utility
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
 * Hypervisor server
 +
-ESXi hypervisor host, Linux KVM host, or Microsoft Hyper-V host
+ESXi hypervisor host, Microsoft Hyper-V host, or Linux KVM host
 * ONTAP Select node
 +
 An ONTAP Select node
@@ -132,7 +132,7 @@ The following table describes the network traffic requirements for an ONTAP Sele
 [cols="20,20,35,25"*,options="header"]
 |===
 |Protocol / Port
-|ESXi / KVM / Hyper-V
+|ESXi / Hyper-V / KVM
 |Direction
 |Description
 
@@ -147,17 +147,17 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |VMware VIX API
 
 |ICMP
-|ESXi, KVM, or Hyper-V
+|ESXi, Hyper-V, or KVM
 |Deploy to hypervisor server
 |Ping
 
 |ICMP
-|ESXi, KVM, or Hyper-V
+|ESXi, Hyper-V, or KVM
 |Deploy to each ONTAP Select node
 |Ping
 
 |SSH (22)
-|ESXi, KVM, or Hyper-V
+|ESXi, Hyper-V, or KVM
 |Admin WS to each ONTAP Select node
 |Administration
 
@@ -167,17 +167,17 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |Access hypervisor server
 
 |TLS (443)
-|ESXi, KVM, or Hyper-V
+|ESXi, Hyper-V, or KVM
 |Deploy to ONTAP Select nodes and clusters
 |Access ONTAP
 
 |TLS (443)
-|ESXi, KVM, or Hyper-V
+|ESXi, Hyper-V, or KVM
 |Each ONTAP Select node to Deploy
 |Access Deploy (Capacity Pools licensing)
 
 |iSCSI (3260)
-|ESXi, KVM, or Hyper-V
+|ESXi, Hyper-V, or KVM
 |Each ONTAP Select node to Deploy
 |Mediator/Mailbox disk
 

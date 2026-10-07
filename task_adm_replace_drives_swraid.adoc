@@ -23,6 +23,22 @@ When a drive fails you need to use the ONTAP CLI to identify the failed disk.
 
 [role="tabbed-block"]
 ====
+.ESXi
+--
+.Steps
+. Sign in to the ONTAP CLI using the administrator account.
+
+. Identify the disk drive that failed:
++
+[source,cli]
+----
+<cluster name>::> storage disk show -container-type broken
+Usable Disk Container Container
+Disk Size Shelf Bay Type Type Name Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
+----
+--
 .Hyper-V
 --
 .Before you begin
@@ -107,22 +123,6 @@ virsh dumpxml VMID
 ----
 --
 
-.ESXi
---
-.Steps
-. Sign in to the ONTAP CLI using the administrator account.
-
-. Identify the disk drive that failed:
-+
-[source,cli]
-----
-<cluster name>::> storage disk show -container-type broken
-Usable Disk Container Container
-Disk Size Shelf Bay Type Type Name Owner
----------------- ---------- ----- --- ------- ----------- --------- --------
-NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
-----
---
 ====
 
 == Remove the failed drive
@@ -131,7 +131,32 @@ After you identify the drive that failed, remove the disk.
 
 [role="tabbed-block"]
 ====
+.ESXi
+--
+.Steps
 
+. Sign in to the Deploy web user interface using the administrator account.
+
+. Select the *Clusters* tab and select the relevant cluster.
++
+image:ST_22.jpg[Node details]
+
+.  Select *+* to expand the storage view.
++
+image:ST_23.jpg[Edit node storage]
+
+. Select *Edit* to make changes to the attached disks and uncheck the failed drive.
++
+image:ST_24.jpg[Storage disk details]
+
+. Provide the cluster credentials and select *Edit Storage*.
++
+image:ST_25.jpg[ONTAP credentials]
+
+. Confirm the operation.
++
+image:ST_26.jpg[Warning]
+--
 .Hyper-V or KVM using Deploy
 --
 You can detach a disk from a Hyper-V host or a KVM host as part of replacing the disk or when it is no longer needed.
@@ -214,32 +239,6 @@ You should update the disk path and any other configuration information as neede
 ----
 --
 
-.ESXi
---
-.Steps
-
-. Sign in to the Deploy web user interface using the administrator account.
-
-. Select the *Clusters* tab and select the relevant cluster.
-+
-image:ST_22.jpg[Node details]
-
-.  Select *+* to expand the storage view.
-+
-image:ST_23.jpg[Edit node storage]
-
-. Select *Edit* to make changes to the attached disks and uncheck the failed drive.
-+
-image:ST_24.jpg[Storage disk details]
-
-. Provide the cluster credentials and select *Edit Storage*.
-+
-image:ST_25.jpg[ONTAP credentials]
-
-. Confirm the operation.
-+
-image:ST_26.jpg[Warning]
---
 ====
 
 == Add the new spare drive
@@ -248,7 +247,32 @@ After you remove the failed drive, add the spare disk.
 
 [role="tabbed-block"]
 ====
+.ESXi
+--
+.Steps
 
+. Sign in to the Deploy web user interface using the administrator account.
+
+. Select the *Clusters* tab and select the relevant cluster.
++
+image:ST_27.jpg[HA pair]
+
+. Select *+* to expand the storage view.
++
+image:ST_28.jpg[Edit node storage]
+
+. Select *Edit* and confirm that the new drive is available and select it.
++
+image:ST_29.jpg[Storage disk details]
+
+. Provide the cluster credentials and select *Edit Storage*.
++
+image:ST_30.jpg[Storage disk details]
+
+. Confirm the operation.
++
+image:ST_31.jpg[Storage disk details]
+--
 .Hyper-V or KVM using Deploy
 --
 .Attaching a disk using Deploy
@@ -291,32 +315,6 @@ The disk is assigned as a spare and is available to ONTAP Select. It may take a 
 Because the node configuration has changed, you should perform a cluster refresh operation using the Deploy administration utility.
 --
 
-.ESXi
---
-.Steps
-
-. Sign in to the Deploy web user interface using the administrator account.
-
-. Select the *Clusters* tab and select the relevant cluster.
-+
-image:ST_27.jpg[HA pair]
-
-. Select *+* to expand the storage view.
-+
-image:ST_28.jpg[Edit node storage]
-
-. Select *Edit* and confirm that the new drive is available and select it.
-+
-image:ST_29.jpg[Storage disk details]
-
-. Provide the cluster credentials and select *Edit Storage*.
-+
-image:ST_30.jpg[Storage disk details]
-
-. Confirm the operation.
-+
-image:ST_31.jpg[Storage disk details]
---
 ====
 
 // 2023-09-28, ONTAPDOC-1204

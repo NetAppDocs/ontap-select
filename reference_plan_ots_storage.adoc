@@ -14,7 +14,7 @@ summary: There are several planning issues related to ONTAP Select host storage 
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
-NOTE: External storage support information is outlined for ESXi, KVM, and Hyper-V hosts. For more information, refer to link:reference_plan_ots_vnas.html[VMware ESXi requirements], link:reference_plan_ots_kvm.html[KVM requirements], and link:plan-ots-hyper-v.html[Hyper-V requirements].
+NOTE: External storage support information is outlined for ESXi, Hyper-V, and KVM hosts. For more information, refer to link:reference_plan_ots_vnas.html[VMware ESXi requirements], link:plan-ots-hyper-v.html[Hyper-V requirements], and link:reference_plan_ots_kvm.html[KVM requirements].
 
 == Hardware RAID controller requirements
 

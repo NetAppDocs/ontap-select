@@ -81,9 +81,9 @@ The following table compares the capabilities for the standard, premium, and pre
 
 [NOTE]
 ====
-Kernel-Based Virtual Machines (KVM) do not support the large instance type.
-
 Microsoft Hyper-V supports small, medium, and large instance types.
+
+Kernel-Based Virtual Machines (KVM) do not support the large instance type.
 ====
 
 == Compare hardware support for platform license offerings
@@ -108,7 +108,7 @@ Two-node cluster (HA pair)
 
 Four, six, eight, ten, or twelve-node cluster
 2+| Supported capacity (per node)
-3+| Up to 400TB raw data (ESXi, KVM, and Hyper-V)
+3+| Up to 400TB raw data (ESXi, Hyper-V, and KVM)
 |===
 --
 
@@ -200,13 +200,13 @@ VMware vSphere 8.0GA and updates 1 through 3
 VMware vSphere 7.0GA and updates 1 through 3C 
 
 
-2+| Hypervisor support (KVM)
-3+a| Red Hat Enterprise Linux 64-bit (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6 
-
-Rocky Linux (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
-
 2+| Hypervisor support (Hyper-V)
 3+| Windows Server 2025 and 2022
+
+2+| Hypervisor support (KVM)
+3+a| Red Hat Enterprise Linux 64-bit (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7, and 8.6
+
+Rocky Linux (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7, and 8.6
 
 2+| Management software
 3+| NetApp Active IQ Unified Manager management suite

@@ -91,44 +91,6 @@ You must register each hypervisor host where an ONTAP Select node will run.
 [role="tabbed-block"]
 ====
 
-.Hyper-V or KVM
---
-You must register a hypervisor host where the ONTAP Select node will run. As part of this, the Deploy administration utility authenticates to the KVM host.
-
-.About this task
-If more than one hypervisor host is needed, use this procedure to add each host.
-
-.Steps
-. Sign in to the Deploy utility CLI using SSH with the administrator account.
-. Register the host:
-+
-[source,cli]
-----
-host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
-----
-+
-Example output:
-+
-----
-host register -name 10.234.81.14 -hypervisor-type KVM -username root
-----
-+
-Provide the password for the host account when prompted.
-
-. Display the state of the host and confirm it is authenticated:
-+
-[source,cli]
-----
-host show -name <FQDN|IP> -detailed
-----
-+
-Example output:
-+
-----
-host show -name 10.234.81.14 -detailed
-----
---
-
 .ESXi
 --
 As part of this, the Deploy administration utility authenticates either to the vCenter server managing the host or directly to the ESXi standalone host.
@@ -187,6 +149,43 @@ Example output:
 ....
 host show -name 10.234.81.14 -detailed
 ....
+--
+.Hyper-V or KVM
+--
+You must register a hypervisor host where the ONTAP Select node will run. As part of this, the Deploy administration utility authenticates to the KVM host.
+
+.About this task
+If more than one hypervisor host is needed, use this procedure to add each host.
+
+.Steps
+. Sign in to the Deploy utility CLI using SSH with the administrator account.
+. Register the host:
++
+[source,cli]
+----
+host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
+----
++
+Example output:
++
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+Provide the password for the host account when prompted.
+
+. Display the state of the host and confirm it is authenticated:
++
+[source,cli]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+Example output:
++
+----
+host show -name 10.234.81.14 -detailed
+----
 --
 ====
 
@@ -297,18 +296,18 @@ host network show -host-name 10.234.81.14 -detailed
 +
 [role="tabbed-block"]
 ====
-.Hyper-V or KVM
---
-[source,cli]
-----
-node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-vlans <vlan_id> -data-vlans <vlan_id> -internal-vlans <vlad_id>
-----
---
 .ESXi
 --
 [source,cli]
 ----
 node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>
+----
+--
+.Hyper-V or KVM
+--
+[source,cli]
+----
+node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-vlans <vlan_id> -data-vlans <vlan_id> -internal-vlans <vlad_id>
 ----
 --
 ====

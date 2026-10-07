@@ -71,7 +71,7 @@ Yes, the upgrade procedure for a Select cluster is identical to the upgrade of a
 Yes, the revert procedure for an ONTAP Select cluster is almost identical to the revert procedure for a FAS cluster. There are a few differences however:
 
 * Only upgraded instances of ONTAP Select can be reverted, and only up to the original install version. New installs cannot be reverted to an older code release, even if ONTAP Select in general does support that older release.
-* For ONTAP Select (KVM) and ONTAP Select (ESXi) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESXi uses VMXNET3 network drivers and, when possible, the vNVMe driver. These new installations cannot be reverted to prior versions of ONTAP Select.
+* For ONTAP Select (ESXi) and ONTAP Select (KVM) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESXi uses VMXNET3 network drivers and, when possible, the vNVMe driver. These new installations cannot be reverted to prior versions of ONTAP Select.
 * If the ONTAP Select VM was also upgraded to a Large instance (using the Premium XL license), then reverting to a prior version before 9.6 is not supported, because the Large instance feature is not available in earlier versions.
 
 .Does the ONTAP MetroCluster SDS require at a minimum a Premium license?
@@ -125,9 +125,9 @@ If a Capacity Pool subscription lapses, the system warns you first but after 30 
 
 There are several questions and answers dealing with storage.
 
-.Can a single ONTAP Select Deploy instance create clusters on Hyper-V, ESXi, and KVM?
+.Can a single ONTAP Select Deploy instance create clusters on ESXi, Hyper-V, and KVM?
 
-Yes. ONTAP Select Deploy can be installed on Hyper-V, KVM, or ESXi, and these installations can create ONTAP Select clusters on any of these hypervisors.
+Yes. ONTAP Select Deploy can be installed on ESXi, Hyper-V, or KVM, and these installations can create ONTAP Select clusters on any of these hypervisors.
 
 .Is vCenter required for ONTAP Select on ESXi?
 
@@ -145,7 +145,7 @@ Software RAID is a layer in the ONTAP software stack. Software RAID provides mor
 
 Some of the requirements for software RAID are as follows:
 
-* Supported for Hyper-V, KVM, and ESXi
+* Supported for ESXi, Hyper-V, and KVM
 ** Beginning with ONTAP Select 9.20.1, ONTAP Select supports the Hyper-V hypervisor.
 ** Beginning with ONTAP Select 9.14.1, support for KVM hypervisor has been reinstated. Previously, support for KVM hypervisor was removed in ONTAP Select 9.10.1. 
 * Size of supported physical disks: 200GB – 32TB
@@ -277,7 +277,7 @@ ONTAP MetroCluster SDS supports all type of storage configurations (DAS and vNAS
 
 .Does ONTAP MetroCluster SDS support software RAID?
 
-Yes, Software RAID is supported with SSD media on both KVM and ESXi.
+Yes, Software RAID is supported with SSD media on both ESXi and KVM.
 
 .Does ONTAP MetroCluster SDS support both SSDs and spinning media?
 
