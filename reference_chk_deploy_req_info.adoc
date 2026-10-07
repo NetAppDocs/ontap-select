@@ -23,8 +23,8 @@ As part of your deployment planning, you should determine the required configura
 | Required information
 | Description
 | Name of the Deploy virtual machine (VM) | Identifier to use for the VM.
-| Name of the hypervisor host | Identifier for the VMware ESXi, Hyper-V, or KVM hypervisor host where the Deploy utility is installed.
-| Name of the data store | Identifier for the hypervisor data store holding the VM files (approximately 40GB is required).
+| Name of the hypervisor host | Identifier for the data store (ESXi) or storage pool (Hyper-V or KVM) holding the VM files (approximately 40GB is required).
+| Name of the  storage location | Identifier for the hypervisor data store holding the VM files (approximately 40GB is required).
 | Network for the VM | Identifier for the Network where the Deploy VM is connected.
 |===
 

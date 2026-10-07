@@ -31,7 +31,7 @@ https://mysupport.netapp.com/site/user/registration[You have a registered NetApp
 
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESXi hosts and `TGZ` for Hyper-V and KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `ova` for ESXi hosts, `raw.tgz` for Hyper-V and `raw.tgz` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
 . Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
@@ -469,9 +469,6 @@ You must have the configuration information to be used when creating the VM, inc
 * IP address of the primary DNS server
 * IP address of the second DNS server
 * DNS search domains
-
-.About this task
-If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy VM to configure the network instead.
 
 .Steps
 

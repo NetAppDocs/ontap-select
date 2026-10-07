@@ -51,10 +51,10 @@ There are several minimum resource requirements that your Linux KVM hypervisor h
 * Storage (40GB)
 * "Dynamic Host Configuration Protocol (DHCP) is enabled (you can also assign a static IP address)
 
-.Network connectivity
+.Network connectivity for Hyper-V and KVM
 Verify that the Deploy virtual machine network interface is configured and can to connect to the ONTAP Select hosts that it manages.
 
-.Support for IP version 4
+.Support for IP version 4 for Hyper-V and KVM
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
 
 * You must assign an IPv4 address to the management LIF of the Deploy VM.
@@ -67,7 +67,7 @@ As part of your deployment planning, you should determine the required configura
 .Name of the Deploy VM
 The name to use for the VM.
 
-.Name of the Windows Hyper-V or Linux KVM host
+.Name of the host
 The Windows Hyper-V host or Linux KVM host where the Deploy utility is installed.
 
 .Name of the storage pool

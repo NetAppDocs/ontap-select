@@ -159,7 +159,7 @@ image:ST_26.jpg[Warning]
 --
 .Hyper-V or KVM using Deploy
 --
-You can detach a disk from a Hyper-V host or a KVM host as part of replacing the disk or when it is no longer needed.
+You can detach a disk from a Hyper-V or KVM host as part of replacing the disk or when it is no longer needed.
 
 .Before you begin
 You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.
@@ -276,7 +276,7 @@ image:ST_31.jpg[Storage disk details]
 .Hyper-V or KVM using Deploy
 --
 .Attaching a disk using Deploy
-You can attach a disk to a Hyper-V host or a KVM host as part of replacing a disk or to add more storage capacity.
+You can attach a disk to a Hyper-V or KVM host as part of replacing a disk or to add more storage capacity.
 
 .Before you begin
 You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.

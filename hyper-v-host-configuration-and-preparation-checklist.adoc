@@ -40,6 +40,58 @@ The Deploy utility administers the host over Windows Remote Management (WinRM) (
 .Steps
 
 . Configure the WinRM HTTPS listener, the associated certificate, and the firewall rule. Refer to the Microsoft documentation for more information.
++
+.. Enable WinRM HTTPS:
++
+[source,cli]
+----
+Enable-PSRemoting -Force
+----
+.. Verify WinRM configuration:
++
+[source,cli]
+----
+winrm enumerate winrm/config/listener
+----
++
+.. Configure the certificate:
++
+[role="tabbed block"]
+====
+.Certificate available
+--
+If you already have a valid certificate in the local machine certificate store:
+
+[source,cli]
+----
+Enable-PSRemoting -Force
+----
+... Run `winrm quickconfig -q`.
+... Check the listeners
++
+[source,cli]
+----
+winrm e winrm/config/listener
+----
+--
+.No certificate available
+--
+... Generate the self-signed certificate:
++
+[source,cli]
+----
+$cert = New-SelfSignedCertificate -DnsName $env:COMPUTERNAME -CertStoreLocation Cert:\LocalMachine\My
+----
+... Bind the certificate to the WinRM listener:
++
+[source,cli]
+----
+New-WSManInstance -ResourceURI winrm/config/Listener -SelectorSet @{Transport='HTTPS';Address='*'} -ValueSet @{CertificateThumbprint=$cert.Thumbprint}
+----
+--
+====
+.. To configure the Group Policy, select *Computer Configuration > Administrative Templates > Windows Components > Windows Remote Management (WinRM) > WinRM Service*.
+
 .  Verify that the configuration meets the following requirements:
 +
 * The Deploy virtual machine (VM) can reach the WinRM HTTPS listener on TCP port 5986. The Deploy utility does not use HTTP or TCP port 5985.
