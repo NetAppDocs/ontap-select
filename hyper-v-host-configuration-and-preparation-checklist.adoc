@@ -35,54 +35,59 @@ Refer to the Windows documentation for more information on how to perform these 
 * Host CPU and memory have capacity for Windows Server. The Deploy utility reserves 2 CPU cores and 8 GB of memory for the host when it sizes a node. 
 
 == Step 2: Provide remote management access for Deploy 
-The Deploy utility administers the host over Windows Remote Management (WinRM) (PowerShell remoting) using HTTPS. 
+The Deploy utility administers the host over Windows Remote Management (WinRM) using HTTPS and the PowerShell remoting configuration. You need to configure the WinRM HTTPS listener, the associated certificate, and the firewall rule.
 
-.Steps
+.Steps 
 
-. Configure the WinRM HTTPS listener, the associated certificate, and the firewall rule. Refer to the Microsoft documentation for more information.
-+
-.. Enable WinRM HTTPS:
+. Enable WinRM HTTPS:
 +
 [source,cli]
 ----
 Enable-PSRemoting -Force
 ----
-.. Verify WinRM configuration:
+. Verify WinRM configuration:
 +
 [source,cli]
 ----
 winrm enumerate winrm/config/listener
 ----
 +
-.. Configure the certificate:
+. Configure the associated certificate:
 +
-[role="tabbed block"]
+[role="tabbed-block"]
 ====
-.Certificate available
+.Certificate is available
 --
 If you already have a valid certificate in the local machine certificate store:
 
+.. Configure Powershell remoting for the certificate:
++
 [source,cli]
 ----
 Enable-PSRemoting -Force
 ----
-... Run `winrm quickconfig -q`.
-... Check the listeners
+.. Configure WinRM for remote administration:
++
+[source,cli]
+----
+winrm quickconfig -q
+----
+.. Verify the WinRM HTTPS listener configuration:
 +
 [source,cli]
 ----
 winrm e winrm/config/listener
 ----
 --
-.No certificate available
+.Certificate is not available
 --
-... Generate the self-signed certificate:
+.. Generate the self-signed certificate:
 +
 [source,cli]
 ----
 $cert = New-SelfSignedCertificate -DnsName $env:COMPUTERNAME -CertStoreLocation Cert:\LocalMachine\My
 ----
-... Bind the certificate to the WinRM listener:
+.. Bind the certificate to the WinRM listener:
 +
 [source,cli]
 ----
@@ -90,7 +95,7 @@ New-WSManInstance -ResourceURI winrm/config/Listener -SelectorSet @{Transport='H
 ----
 --
 ====
-.. To configure the Group Policy, select *Computer Configuration > Administrative Templates > Windows Components > Windows Remote Management (WinRM) > WinRM Service*.
+. Configure the Group Policy by selecting *Computer Configuration* > *Administrative Templates* > *Windows Components* > *Windows Remote Management (WinRM)* > *WinRM Service*.
 
 .  Verify that the configuration meets the following requirements:
 +
