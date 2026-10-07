@@ -91,7 +91,7 @@ You must register each hypervisor host where an ONTAP Select node will run.
 [role="tabbed-block"]
 ====
 
-.KVM
+.Hyper-V or KVM
 --
 You must register a hypervisor host where the ONTAP Select node will run. As part of this, the Deploy administration utility authenticates to the KVM host.
 
@@ -297,14 +297,14 @@ host network show -host-name 10.234.81.14 -detailed
 +
 [role="tabbed-block"]
 ====
-.KVM host
+.Hyper-V or KVM
 --
 [source,cli]
 ----
 node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-vlans <vlan_id> -data-vlans <vlan_id> -internal-vlans <vlad_id>
 ----
 --
-.ESXi host
+.ESXi
 --
 [source,cli]
 ----
@@ -459,5 +459,6 @@ cluster show -name <cluster_name>
 
 link:task_cli_clusters.html[Back up the ONTAP Select Deploy configuration data].
 
+// 2026 OCT 10, ONTAPDOC-3948
 // 2023-05-12, GH issue #59
 // 2023-09-29, ONTAPDOC-1204
