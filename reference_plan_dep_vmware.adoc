@@ -124,19 +124,26 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 * You must assign an IPv4 address to the management LIF of the Deploy VM.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
+.Required configuration information
 As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
 
-.Name of the Deploy VM
-The name to use for the VM.
+[cols="1,2", options="header"]
+|===
+|Configuration
+|Description
 
-.Name of the host
-The Windows Hyper-V host where the Deploy utility is installed.
+|Name of the Deploy VM
+|The name to use for the VM.
 
-.Name of the storage pool
-The storage pool holding the VM files (approximately 40GB is required).
+|Name of the host
+|The Windows Hyper-V host where the Deploy utility is installed.
 
-.Network for the VM
-The network where the Deploy VM is connected.
+|Name of the storage pool
+|The storage pool holding the VM files (approximately 40GB is required).
+
+|Network for the VM
+|The network where the Deploy VM is connected.
+|===
 --
 .KVM
 --
@@ -165,19 +172,26 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 * You must assign an IPv4 address to the management LIF of the Deploy VM.
 * Deploy cannot create ONTAP Select nodes configured to use IPv6 on the ONTAP LIFs.
 
+.Required configuration information
 As part of your deployment planning, you should determine the required configuration information before installing the ONTAP Select Deploy administration utility.
 
-.Name of the Deploy VM
-The name to use for the VM.
+[cols="1,2", options="header"]
+|===
+|Configuration
+|Description
 
-.Name of the host
-The Linux KVM host where the Deploy utility is installed.
+|Name of the Deploy VM
+|The name to use for the VM.
 
-.Name of the storage pool
-The storage pool holding the VM files (approximately 40GB is required).
+|Name of the host
+|The Windows Hyper-V host where the Deploy utility is installed.
 
-.Network for the VM
-The network where the Deploy VM is connected.
+|Name of the storage pool
+|The storage pool holding the VM files (approximately 40GB is required).
+
+|Network for the VM
+|The network where the Deploy VM is connected.
+|===
 --
 ====
 
