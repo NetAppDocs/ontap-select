@@ -130,7 +130,7 @@ As part of your deployment planning, you should determine the required configura
 The name to use for the VM.
 
 .Name of the host
-The Windows Hyper-V host or Linux KVM host where the Deploy utility is installed.
+The Windows Hyper-V host where the Deploy utility is installed.
 
 .Name of the storage pool
 The storage pool holding the VM files (approximately 40GB is required).
@@ -171,7 +171,7 @@ As part of your deployment planning, you should determine the required configura
 The name to use for the VM.
 
 .Name of the host
-The Windows Hyper-V host or Linux KVM host where the Deploy utility is installed.
+The Linux KVM host where the Deploy utility is installed.
 
 .Name of the storage pool
 The storage pool holding the VM files (approximately 40GB is required).
