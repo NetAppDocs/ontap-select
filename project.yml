@@ -82,7 +82,7 @@ sidebar:
             - title: General requirements
               url: /reference_plan_dep_general.html
             - title: Hypervisor host environments
-              url: /reference_plan_dep_vmware.html
+              url: /plan-deploy-hypervisor.html
         - title: Best practices
           url: /reference_plan_best_practices.html
     - title: License
