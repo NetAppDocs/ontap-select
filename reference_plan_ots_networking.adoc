@@ -136,16 +136,6 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |Direction
 |Description
 
-|TLS (443)
-|ESXi
-|Deploy to vCenter server (managed) or ESXi (managed or unmanaged)
-|VMware VIX API
-
-|902
-|ESXi
-|Deploy to vCenter server (managed) or ESXi (unmanaged)
-|VMware VIX API
-
 |ICMP
 |ESXi, Hyper-V, or KVM
 |Deploy to hypervisor server
@@ -175,6 +165,16 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |ESXi, Hyper-V, or KVM
 |Each ONTAP Select node to Deploy
 |Access Deploy (Capacity Pools licensing)
+
+|TLS (443)
+|ESXi
+|Deploy to vCenter server (managed) or ESXi (managed or unmanaged)
+|VMware VIX API
+
+|902
+|ESXi
+|Deploy to vCenter server (managed) or ESXi (unmanaged)
+|VMware VIX API
 
 |iSCSI (3260)
 |ESXi, Hyper-V, or KVM

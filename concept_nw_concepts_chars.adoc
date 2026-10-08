@@ -83,11 +83,7 @@ The hypervisor host provides several networking features.
 ONTAP Select relies on the following capabilities exposed through the virtual machine:
 
 Virtual machine ports::
-There are several ports available for use by ONTAP Select. They are assigned and used based on
-several factors, including the size of the cluster.
+There are several ports available for use by ONTAP Select. They are assigned and used based on several factors, including the size of the cluster.
 
 Virtual switch::
-The virtual switch software within the hypervisor environment, whether vSwitch (VMware) or
-Open vSwitch (KVM), joins the ports exposed by the virtual machine with the physical Ethernet
-NIC ports. You must configure a vSwitch for every ONTAP Select host, as appropriate for your
-environment.
+The virtual switch software within the hypervisor environment, whether vSwitch (VMware and Hyper-V) or Open vSwitch (KVM), joins the ports exposed by the virtual machine with the physical Ethernet NIC ports. You must configure a vSwitch for every ONTAP Select host, as appropriate for your environment.
