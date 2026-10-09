@@ -54,16 +54,21 @@ ls -lh /opt/netapp/images
 
 .ESXi example
 --
-
 [source,cli]
 ----
 rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
 ----
 --
 
+.Hyper-V example
+--
+[source,cli]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.20RC1-serialconsole-hyperv.vhd.tar
+----
+-- 
 .KVM example
 --
-
 [source,cli]
 ----
 rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
