@@ -414,7 +414,7 @@ Start-VM -Name "<VM_name>"
 vmconnect.exe localhost "<VM_name>" 
 ----
 +
-Alternatively, open the console from Hyper-V Manager by right-selecting the VM and selecting *Connect*.
+Alternatively, open the console from Hyper-V Manager by right-clicking on the VM and selecting *Connect*.
 
 .. Respond to the boot prompts: 
 +

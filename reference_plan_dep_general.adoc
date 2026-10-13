@@ -4,7 +4,6 @@ permalink: reference_plan_dep_general.html
 keywords: plan, planning, ontap select deploy, general requirements
 summary: There are several general requirements that you should consider as part of planning to install the ONTAP Select Deploy administration utility.
 ---
-
 = ONTAP Select Deploy general requirements and planning
 :hardbreaks:
 :nofooter:
@@ -60,7 +59,7 @@ The search domains to use.
 
 == Authentication using the credential store
 
-The ONTAP Select Deploy credential store is a data base holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
+The ONTAP Select Deploy credential store is a database holding account information. Deploy uses the account credentials to perform host authentication as part of cluster creation and management. You should be aware of how the credential store is used as part of planning an ONTAP Select deployment.
 
 [NOTE]
 The account information is stored securely in the database using the AES encryption algorithm and SHA-256 hashing algorithm.

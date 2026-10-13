@@ -151,13 +151,15 @@ Some of the requirements for software RAID are as follows:
 * Size of supported physical disks: 200GB – 32TB
 * Only supported on DAS configurations
 * Supported with either SSDs or NVMe
++
+ONTAP Select supports NVMe drives as SCSI disks on Hyper-V hypervisors. ONTAP Select does not support NVMe drives as Discrete Device Assignments (passthrough devices) on Hyper-V hypervisors.
 * Requires a Premium or Premium XL ONTAP Select license
 * The hardware RAID controller should be absent or disabled or it should operate in SAS HBA mode
 * An LVM storage pool or datastore based on a dedicated LUN must be used for system disks: core dump, boot/NVRAM, and the Mediator.
 
-.Does ONTAP Select for KVM support multiple NIC bonds?
+.Does ONTAP Select for Hyper-V and KVM support multiple NIC bonds?
 
-When installing on KVM, you must use a single bond and a single bridge. A host with two or four physical ports should have all the ports in the same bond.
+When installing on Hyper-V or KVM, you must use a single bond and a single bridge. A host with two or four physical ports should have all the ports in the same bond.
 
 .How does ONTAP Select report or alert for a failed physical disk or a NIC in the hypervisor host? Does ONTAP Select retrieve this information from the hypervisor or should monitoring be set at the hypervisor level?
 
@@ -193,7 +195,7 @@ Multi-node HA clusters on shared storage are supported.
 
 .Does ONTAP Select support multi-node clusters on vSAN or other shared external storage including some HCI stacks?
 
-Multi-node clusters using external storage (multi-node vNAS) are supported for both ESXi and KVM. Mixing of hypervisors in the same cluster is not supported. An HA architecture on shared storage still implies that each node in an HA pair has a mirror copy of its partner data. However, a multi-node cluster brings in the benefits of ONTAP nondisruptive operations as opposed to a single-node cluster which relies on VMware HA or KVM Live Motion.
+Multi-node clusters using external storage (multi-node vNAS) are supported for both ESXi and KVM. The multi-node vNAS model is not supported for Hyper-V. Mixing of hypervisors in the same cluster is not supported. An HA architecture on shared storage still implies that each node in an HA pair has a mirror copy of its partner data. However, a multi-node cluster brings in the benefits of ONTAP nondisruptive operations as opposed to a single-node cluster which relies on VMware HA or KVM Live Motion.
 
 Although ONTAP Select Deploy adds support for multiple ONTAP Select VMs on the same host, it does not allow those instances to be part of the same ONTAP Select cluster during cluster creation. For ESXi environments, NetApp recommends creating VM anti-affinity rules so that VMware HA does not attempt to migrate multiple ONTAP Select VMs from the same ONTAP Select cluster onto a single ESXi host. Furthermore, if ONTAP Select Deploy detects that an administrative (user-initiated) vMotion or live migration of an ONTAP Select VM has resulted in a violation of our best practice such as two ONTAP Select nodes ending up on the same physical host, ONTAP Select Deploy posts an alert in the Deploy UI and log. The only way that ONTAP Select Deploy becomes aware of the ONTAP Select VM location is as a result of a Cluster Refresh operation, which is a manual operation that the ONTAP Select Deploy administrator must initiate. There is no functionality in ONTAP Select Deploy that enables proactive monitoring, and the alert is only visible through the Deploy UI or log. In other words, this alert cannot be forwarded to a centralized monitoring infrastructure.
 
@@ -204,6 +206,10 @@ NSX-V VXLAN port groups are supported. For multi-node HA, including ONTAP MetroC
 .Does ONTAP Select support KVM live migration?
 
 ONTAP Select VMs that run on external array storage pools support virsh live migrations.
+
+.Does ONTAP Select support Hyper-V live migration? 
+
+ONTAP Select node VMs that are configured within a Windows Server Failover Cluster using shared storage, such as Cluster Shared Volumes over iSCSI or FC, support live migrations. ONTAP Select using local Direct-Attached Storage (DAS) does not support live migrations.
 
 .Do I need ONTAP Select Premium for vSAN AF?
 
@@ -217,13 +223,13 @@ The Select VM inherits the vSAN datastore storage policy, and there are no restr
 
 It is possible to configure multiple ONTAP Select nodes on the same host for vNAS configurations only, as long as these nodes are not part of the same ONTAP Select cluster. This is not supported for DAS configurations because multiple ONTAP Select nodes on the same physical host would compete for access to the RAID controller.
 
-.Can you have a host with a single 10GE port run ONTAP Select, and is it available for both ESXi and KVM?
+.Can you have a host with a single 10GE port run ONTAP Select, and is it available for ESXi, Hyper-V, and KVM?
 
-You can use a single 10GE port to connect to the external network. However, NetApp recommends that you use this only in constrained small form-factor environments. This is supported with both ESXi and KVM.
+You can use a single 10GE port to connect to the external network. However, NetApp recommends that you use this only in constrained small form-factor environments. This is supported with ESXi, Hyper-V, and KVM.
 
-.What additional processes do you need to run to do a live migration on KVM?
+.What additional processes do you need to run to do a live migration on Hyper-V KVM?
 
-You must install and run open-source CLVM and pacemaker (pcs) components on each host participating in the live migration. This is required to access the same volume groups on each host.
+You must install and run open-source CLVM and pacemaker (pcs) components on each host participating in the live migration. This is required to access the same volume groups on each host. Additionally, you need to enable the live migration feature on the Hyper-V server for incoming and outgoing live migration.
 
 == vCenter
 

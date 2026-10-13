@@ -12,14 +12,14 @@ summary: Prepare each Hyper-V hypervisor host where an ONTAP Select node is depl
 :imagesdir: ./media/
 
 [.lead]
-Prepare each Hyper-V hypervisor host where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to ensure the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
+Prepare each Hyper-V hypervisor host where an ONTAP Select node is deployed. Ensure the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
 
 [NOTE]
 The ONTAP Select Deploy administration utility doesn't perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host before deploying an ONTAP Select cluster.
 
 [[prepare-hyper-v-server]]
 == Step 1: Prepare the Hyper-V hypervisor host
-Prepare each of the Windows Hyper-V servers where an ONTAP Select node is deployed
+Prepare each of the Windows Hyper-V servers where an ONTAP Select node is deployed.
 
 .About this task
 

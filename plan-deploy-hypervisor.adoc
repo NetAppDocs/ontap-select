@@ -66,7 +66,7 @@ There are several requirements and restrictions specific to the VMware environme
 
 .Hardware requirements
 
-Your ESXi hypervisor host must meet several minimum resource requirements. Check that the hosts where ONTAP Select is deployed meet the following basic requirements:
+Verify that the ESXi hypervisor hosts where ONTAP Select is deployed meet the following basic requirements:
 
 * ESXi server:
 ** Hardware and software must be 64-bit
@@ -101,11 +101,8 @@ ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is no
 --
 There are several requirements and restrictions specific to the Hyper-V environment that you should consider before installing the ONTAP Select Deploy utility in a Hyper-V environment.
 
-.Requirements and restrictions for a deployment
-There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a Hyper-V environment.
-
 .Hardware requirements
-There are several minimum resource requirements that your Windows Hyper-V hypervisor host must meet. Verify that the hosts where ONTAP Select is deployed meet the following basic requirements:
+Verify that the Windows Hyper-V hypervisor hosts where ONTAP Select is deployed meet the following basic requirements:
 
 * Windows Server:
 ** The hardware and software must be 64-bit
@@ -113,10 +110,10 @@ There are several minimum resource requirements that your Windows Hyper-V hyperv
 * Virtual CPUs (2)
 * Virtual memory (4GB)
 * Storage (40GB)
-* "Dynamic Host Configuration Protocol (DHCP) is enabled (you can also assign a static IP address)
+* Dynamic Host Configuration Protocol (DHCP) is enabled (you can also assign a static IP address)
 
 .Network connectivity
-Verify that the Deploy virtual machine network interface is configured and can to connect to the ONTAP Select hosts that it manages.
+Verify that the Deploy virtual machine network interface is configured and can connect to the ONTAP Select hosts that it manages.
 
 .Support for IP version 4
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
@@ -136,7 +133,7 @@ As part of your deployment planning, you should determine the required configura
 |The name to use for the VM.
 
 |Name of the host
-|The Windows Hyper-V host where the Deploy utility is installed.
+|The Windows Hyper-V hypervisor host where the Deploy utility is installed.
 
 |Name of the storage pool
 |The storage pool holding the VM files (approximately 40GB is required).
@@ -149,11 +146,8 @@ As part of your deployment planning, you should determine the required configura
 --
 There are several requirements and restrictions specific to the hypervisor environment that you should consider before installing the ONTAP Select Deploy utility in a KVM environment.
 
-.Requirements and restrictions for a deployment
-There are several requirements and restrictions that you should consider when installing the ONTAP Select Deploy utility in a KVM environment.
-
 .Hardware requirements
-There are several minimum resource requirements that your Linux KVM hypervisor host must meet. Verify that the hosts where ONTAP Select is deployed meet the following basic requirements:
+Verify that the Linux KVM hypervisor hosts where ONTAP Select is deployed meet the following basic requirements:
 
 * Linux server:
 ** The hardware and software must be 64-bit
@@ -164,7 +158,7 @@ There are several minimum resource requirements that your Linux KVM hypervisor h
 * Dynamic Host Configuration Protocol (DHCP) is enabled (you can also assign a static IP address)
 
 .Network connectivity
-Verify that the Deploy virtual machine network interface is configured and can to connect to the ONTAP Select hosts that it manages.
+Verify that the Deploy virtual machine network interface is configured and can connect to the ONTAP Select hosts that it manages.
 
 .Support for IP version 4
 ONTAP Select Deploy only supports IP version 4 (IPv4). IP version 6 (IPv6) is not supported. This restriction affects ONTAP Select in the following ways:
@@ -184,7 +178,7 @@ As part of your deployment planning, you should determine the required configura
 |The name to use for the VM.
 
 |Name of the host
-|The Windows Hyper-V host where the Deploy utility is installed.
+|The Linux KVM hypervisor host where the Deploy utility is installed.
 
 |Name of the storage pool
 |The storage pool holding the VM files (approximately 40GB is required).
