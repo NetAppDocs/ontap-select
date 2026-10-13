@@ -196,3 +196,5 @@ You need to manually configure the NVMe drives before using them. See link:task_
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
 // 2023-11-28, ONTAPDOC-1254
+
+// 2026 OCT 13, ONTAPDOC-3948
