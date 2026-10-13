@@ -31,7 +31,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 | ONTAP Select only supports ARP manual updates.
 
 | CIFS
-| link:https://docs.netapp.com/us-en/ontap-restapi/protocols_cifs_shares_endpoint_overview.html[Managing CIFS shares^]
+| link:https://docs.netapp.com/us-en/ontap/smb-admin/index.html[Learn about ONTAP SMB^]
 |
 | Deduplication and compression
 | link:https://docs.netapp.com/us-en/ontap-restapi/storage_volumes_endpoint_overview.html[Managing storage volumes^]
@@ -64,7 +64,7 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 | link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nvme_services_endpoint_overview.html[Managing NVMe services^]
 |
 | ONTAP multitenancy capability
-| 
+| link:https://docs.netapp.com/us-en/ontap/concepts/svm-use-cases-concept.html[Learn about ONTAP SVM use cases^]
 |
 | ONTAP S3
 | link:https://docs.netapp.com/us-en/ontap/s3-config/index.html[ONTAP S3 configuration^]
@@ -81,8 +81,8 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 | SnapRestore
 | 
 |
-| SnapVault
-| 
+| SnapMirror DR, archive (previously known as SnapVault)
+| link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-workflow-concept.html[ONTAP SnapMirror replication workflow^]
 |
 | Storage VM disaster recovery (SVM DR)
 | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-svm-replication-concept.html[ONTAP SnapMirror SVM replication^]
