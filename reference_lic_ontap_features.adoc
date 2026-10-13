@@ -24,7 +24,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 
 [cols="1,1,1", options="header"]
 |===
-| Feature | Learn about | Note
+| Feature | Learn about | Notes
 
 | Autonomous Ransomware Protection (ARP)
 | link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html[ONTAP Autonomous Ransomware Protection^]
@@ -44,7 +44,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[FlexCache write-back with ONTAP Select]
 |  ONTAP Select supports FlexCache cache volumes with write-back. FlexCache origin volumes with write-back are not supported.
 | FlexClone
-| 
+| link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[Learn about ONTAP FlexClone volumes^]
 |
 | iSCSI
 a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_credentials_endpoint_overview.html[Managing iSCSI credentials^]
@@ -70,7 +70,7 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 | link:https://docs.netapp.com/us-en/ontap/s3-config/index.html[ONTAP S3 configuration^]
 |
 | S3 SnapMirror
-| 
+| link:https://docs.netapp.com/us-en/ontap/s3-snapmirror/index.html[Learn about ONTAP SnapMirror S3^]
 |
 | SnapLock Select
 | link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock^]
