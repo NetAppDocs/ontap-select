@@ -52,13 +52,13 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_sessions_endpoint_overview.html[Viewing iSCSI sessions^]
 |
 | NDMP
-| link:https://docs.netapp.com/us-en/ontap-restapi/ndmp_overview.html[NDMP endpoints^]
+| link:https://docs.netapp.com/us-en/ontap/tape-backup/ndmp-management-concept.html[NDMP for ONTAP FlexVol volumes^]
 |
 | NetApp Volume Encryption 
 | link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[ONTAP NetApp volume and aggregate encryption^]
 | ONTAP Select supports NetApp Volume Encryption in non-restricted countries only.
 | NFS
-| link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nfs_services_endpoint_overview.html[Managing NFS services^]
+| link:https://docs.netapp.com/us-en/ontap/nfs-admin/index.html[ONTAP file access for the NFS protocol^]
 |
 | NVMe over TCP
 | link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nvme_services_endpoint_overview.html[Managing NVMe services^]
