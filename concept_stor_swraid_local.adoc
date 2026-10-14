@@ -31,8 +31,6 @@ Independent of the hardware RAID configurations, ONTAP Select also provides a so
 
 == Software RAID configuration in systems with hardware RAID controllers
 
-For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more VMDKs from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
-
 When using software RAID, the absence of a hardware RAID controller is ideal, but, if a system does have an existing RAID controller, it must adhere to the following requirements:
 
 * You must disable the hardware RAID controller so that disks can be presented directly to the system (a JBOD). You can usually make this change in the RAID controller BIOS.
@@ -47,23 +45,27 @@ Administrators need to keep track of which drives are in use by the ONTAP Select
 
 == ONTAP Select virtual and physical disks
 
+For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more VMDKs from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
+
 When using software RAID, ONTAP Deploy presents ONTAP Select with a set of system disks (VMDKs) and physical disks Raw Device Mappings (RDMs) for SSDs and passthrough or DirectPath IO devices for NVMe.
 
-The VMDKs reside in the same datastore and on the same physical disk. The virtual NVRAM disk requires a fast and durable media. Therefore, only NVMe and SSD-type datastores are supported. The following figures show the relationship for NVMe and SSD drives in more detail, highlighting the difference between the virtualized disks used for the ONTAP Select VM internals and the physical disks used to store user data.
-
-NOTE: It is not possible to further separate the ONTAP Select system disks across multiple datastores or multiple physical drives.
-
-Use of passthrough or DirectPath IO devices with NVMe::
-+
-image:ST_19.PNG[ONTAP Select software RAID with NVMe drives: use of virtualized disks and passthrough devices]
-+
-When using NVMe drives for data, the system disk should also be an NVMe device for performance reasons.
+The following figures show the relationship for NVMe and SSD drives in more detail, highlighting the difference between the virtualized disks used for the ONTAP Select VM internals and the physical disks used to store user data. The VMDKs reside in the same datastore and on the same physical disk. The virtual NVRAM disk requires a fast and durable media. Therefore, only NVMe and SSD-type datastores are supported.
 
 Use of virtualized disks and RDMs with SSDs::
 +
+Uses hypervisor RDMs to present physical SSD data drives to the VM, which allows dynamic drive addition and replacement without rebooting ONTAP Select.
++
 image:ST_18.PNG[ONTAP Select software RAID: use of virtualized disks and RDMs]
 
-In NVMe and SSD configurations, each data disk is divided into three parts: a small root partition (stripe) and two equal-sized partitions to create two data disks seen within the ONTAP Select VM. Partitions use the Root Data Data (RD2) schema as shown in the following figures for a single node cluster and for a node in an high-availability (HA) pair.
+Use of passthrough or DirectPath IO devices with NVMe::
++
+Uses PCI Passthrough/DirectPath I/O to bypass the hypervisor storage stack and assign physical NVMe data drives directly to the data disks. This configuration requires a VM reboot when adding or replacing drives. When using NVMe drives for data, the system disk should also be an NVMe device for performance reasons.
++
+image:ST_19.PNG[ONTAP Select software RAID with NVMe drives: use of virtualized disks and passthrough devices]
+
+NOTE: It is not possible to further separate the ONTAP Select system disks across multiple datastores or multiple physical drives.
+
+Each data disk is divided into three parts: a small root partition (stripe) and two equal-sized partitions to create two data disks seen within the ONTAP Select VM. Partitions use the Root Data Data (RD2) schema as shown in the following figures for a single node cluster and for a node in an high-availability (HA) pair.
 
 `P` denotes a parity drive, `DP` denotes a dual parity drive, and `S` denotes a spare drive.
 
