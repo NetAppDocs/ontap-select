@@ -33,9 +33,13 @@ image:DDN_03.jpg[Network configuration of single-node ONTAP Select cluster]
 [NOTE]
 Even though two adapters are sufficient for a single-node cluster, NIC teaming is still required.
 
+.Hyper-V
+
+You can deploy ONTAP Select as a single-node or multi-node (two or four) cluster. The hypervisor host includes a virtual switch that provides access to the external network.
+
 .KVM
 
-You can deploy ONTAP Select as a single-node cluster. The hypervisor host includes a virtual switch that provides access to the external network.
+You can deploy ONTAP Select as a single-node or multi-node (two, four, six, eight, ten, or twelve) cluster. The hypervisor host includes a virtual switch that provides access to the external network.
 
 === LIF assignment
 
@@ -145,5 +149,6 @@ HA interconnect traffic flows through this network port using a single network i
 [NOTE]
 Like the RSM port (e0e), neither the physical port nor the hosted network interface is visible to users from either the ONTAP CLI or from System Manager. As a result, you cannot modify the IP address of this interface, and you cannot change the state of the port. This network port requires the use of jumbo frames (7500 to 9000 MTU).
 
+// 2026 OCT 16, ONTAPDOC-3948
 // 2025 JAN 29, NADIAA updates
 // 2023-09-29, ONTAPDOC-1204
