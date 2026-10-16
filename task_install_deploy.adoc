@@ -143,7 +143,7 @@ Use DHCP to set networking information? [n]:
 --
 .Hyper-V
 --
-Install and start the ONTAP Select Deploy VM on a Hyper-V host using a VHDX VM image. During the installation, you configure the network interface to use DHCP or a static IP configuration.
+Install and start the ONTAP Select Deploy VM on a Hyper-V host using the New Virtual Machine Wizard.
 
 .Before you begin
 Verify that the Hyper-V host meets the following requirements: 
@@ -163,13 +163,13 @@ Verify that the Hyper-V host meets the following requirements:
 |2
 
 |Memory
-|4 GB, static (dynamic memory disabled)
+|4GB, static (dynamic memory disabled)
 
 |Boot disk
 |Attached to IDE Controller 0, Location 0
 
 |Free disk space
-|At least 20 GB on the volume that stores the VM disk
+|At least 20GB on the volume that stores the VM disk
 
 |Archive tool
 |tar, included with Windows Server 2019 and later
@@ -211,249 +211,39 @@ When defining a static network configuration, you need the following additional 
 * DNS search domains
 
 .About this task
-Run the commands from a PowerShell session on the Hyper-V host.
-
 Creating an external virtual switch briefly interrupts network traffic on the physical NIC. If you're connected to the host remotely over the physical NIC, use an out-of-band console (such as the server BMC) or a different network adapter so you don't lose access. 
 
 .Steps
-. On the Hyper-V host, open a PowerShell session with Run administrator privileges.
-. Confirm that the `Hyper-V` role is installed: 
+. In Hyper-V Manager, select *New* > *Virtual Machine* to open the New Virtual Machine Wizard.
+. Select *Next*.
+. Enter the VM name, then select *Next*.
+. Select *Generation 1*, then select *Next*.
 +
-[source,cli]
-----
-Get-WindowsFeature -Name Hyper-V, Hyper-V-PowerShell 
-----
+NOTE: ONTAP Select with Hyper-V does not support Generation VMs.
+. Enter the amount of memory, then select *Next*.
 +
-If the value for `Install State` is not `Installed`, install the role and restart the host: 
-+
-[source,cli]
-----
-Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart 
-----
-  
-. Create the external virtual switch: 
+NOTE: The minimum memory requirement is4GB.
+. Select your virtual switch from the drop-down list, then select *Next*.
+. Select *Use an existing virtual hard disk* > *Browse*, then locate and select the `vhdx.tgz` image file.
+. Select *Next*.
+. Verify the configuration, then select *Finish*.
+. If needed, you can configure the Deploy network using the VM console:
 
-.. Identify the physical adapter connected to the Deploy VM network and record the adapter name for use later in the procedure: 
+.. Wait for the following prompt:
 +
-[source,cli]
 ----
-Get-NetAdapter | Select-Object Name, InterfaceDescription, Status 
+Host name :
 ----
 
-.. A physical adapter can be bound to only one external switch. Check for existing external virtual switches: 
+.. Type the host name and select *Enter*.
+.. Wait for the following prompt:
 +
-[source,cli]
 ----
-Get-VMSwitch -SwitchType External 
-----
-+
-* If there is no switch bound to the adapter you identified, <<create-external-vswitch,create the external virtual switch>>.
-* If a switch is already bound to the adapter you identified, proceed to <<extract-image,extract the VHDX image>> and use the bound switch name in the remaining steps.
-
-.. [[create-external-vswitch]]Create the external virtual switch, replacing `<physical_nic_name>` with the adapter name: 
-+
-[source,cli]
-----
-New-VMSwitch -Name "<virtual_switch_name>" -NetAdapterName "<physical_nic_name>" -AllowManagementOS $true
-----
-+  
-The `-AllowManagementOS $true` parameter allows the host to keep using the physical adapter through a virtual adapter named vEthernet (<virtual_switch_name>). 
-
-.. Confirm that the host management IP address moved to the virtual adapter: 
-+
-[source,cli]
-----
-Get-NetIPAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -AddressFamily IPv4
----- 
-
-.. If the host IP address is missing or incorrect, reassign it: 
-+
-[source,cli]
-----
-New-NetIPAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -IPAddress "<host_IP_address>" -PrefixLength <prefix_length> -DefaultGateway "<gateway_IP_address>" 
-Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<virtual_switch_name>)" -ServerAddresses "<primary_dns>","<secondary_dns>" 
-----
-  
-.. Verify that the host can reach the gateway: 
-+
-[source,cli]
-----
-ping <gateway_IP_address> 
-----
-  
-. [[extract-image]]Extract the VHDX image: 
-
-.. Confirm that the target volume has at least 20 GB free: 
-+
-[source,cli]
-----
-Get-Volume -DriveLetter D | Select-Object DriveLetter, SizeRemaining 
-----
-  
-.. Create the storage folders for the virtual disk and the VM configuration files: 
-+
-[source,cli]
-----
-New-Item -ItemType Directory -Path "<storage_location>\Disks" -Force 
-New-Item -ItemType Directory -Path "<storage_location>\VMs" -Force 
-----
-  
-.. Copy the downloaded package to the disks folder, replacing `<download_path>` with the folder that contains the package: 
-+
-[source,cli]
-----
-Copy-Item -Path "<download_path>\ONTAPdeploy.vhdx.tgz" -Destination "<storage_location>\Disks" 
-----
-  
-.. Extract the archive: 
-+
-[source,cli]
-----
-Set-Location <storage_location>\Disks 
-tar -xzf ONTAPdeploy.vhdx.tgz 
-----
-  
-.. Confirm that the virtual disk was extracted: 
-+
-[source,cli]
-----
-Get-ChildItem -Path "<storage_location>\Disks\ONTAPdeploy.vhdx" 
-----
-  
-. Create and configure the VM: 
-
-.. Create a `Generation 1` VM without a virtual disk: 
-+
-[source,cli]
-----
-New-VM -Name "<VM_name>" -Generation 1 -MemoryStartupBytes 4GB -Path "<storage_location>\VMs" -NoVHD 
-----
-  
-.. Set the processor count and disable dynamic memory: 
-+
-[source,cli]
-----
-Set-VMProcessor -VMName "<VM_name>" -Count 2 
-Set-VMMemory -VMName "<VM_name>" -DynamicMemoryEnabled $false -StartupBytes 4GB 
-----
-  
-.. Attach the VHDX as the boot disk on the IDE controller: 
-+
-[source,cli]
-----
-Add-VMHardDiskDrive -VMName "<VM_name>" -ControllerType IDE -ControllerNumber 0 -ControllerLocation 0 -Path "<storage_location>\Disks\ONTAPdeploy.vhdx"
----- 
-+
-CAUTION: A Generation 1 VM only boots from an IDE controller. The VM won't start if you attach the boot disk to a SCSI controller. 
-
-.. Connect the VM network adapter to the virtual switch: 
-+
-[source,cli]
-----
-Connect-VMNetworkAdapter -VMName "<VM_name>" -Name "Network Adapter" -SwitchName "<virtual_switch_name>"
-----  
-
-.. Configure the VLAN setting to match the upstream switch port: 
-
-* If the port is untagged: 
-+
-[source,cli]
-----
-Set-VMNetworkAdapterVlan -VMName "<VM_name>" -VMNetworkAdapterName "Network Adapter" -Untagged 
-----
-* If the port expects tagged traffic: 
-+
-[source,cli]
-----
-Set-VMNetworkAdapterVlan -VMName "<VM_name>" -VMNetworkAdapterName "Network Adapter" -Access -VlanId <vlan_ID> 
-----
-  
-.. Enable `MAC address spoofing` on the VM network adapter: 
-+
-[source,cli]
-----
-Set-VMNetworkAdapter -VMName "<VM_name>" -MacAddressSpoofing On 
-----
-  
-.. Review the VM configuration: 
-+
-[source,cli]
-----
-Get-VM -Name "<VM_name>" | Select-Object Name, Generation, ProcessorCount, MemoryStartup, DynamicMemoryEnabled 
-Get-VMHardDiskDrive -VMName "<VM_name>" 
-Get-VMNetworkAdapter -VMName "<VM_name>" | Select-Object Name, SwitchName, MacAddressSpoofing 
-Get-VMNetworkAdapterVlan -VMName "<VM_name>" 
-----
-+
-Confirm that the output shows the following configuration: 
-
-* Generation: *Generation 1*
-* ProcessorCount: *2*
-* MemoryStartup: *4 GB*
-* DynamicMemoryEnabled: *Disabled*
-* VMHardDiskDrive:
-** ControllerNumber: *0*
-** ControllerLocation: *0*
-* VMNetworkAdapter: 
-** SwitchName: *<virtual_switch_name>* 
-** MAC address spoofing: *On*
-* VMNetworkAdapterVlan: *untagged* or *<vlan_ID>*
-
-. Start the VM and complete the first boot: 
-
-.. Start the VM: 
-+
-[source,cli]
-----
-Start-VM -Name "<VM_name>"
-----
-.. Open the VM console: 
-+
-[source,cli]
-----
-vmconnect.exe localhost "<VM_name>" 
-----
-+
-Alternatively, open the console from Hyper-V Manager by right-clicking on the VM and selecting *Connect*.
-
-.. Respond to the boot prompts: 
-+
-[cols="1,2",options="header"]
-|===
-|Prompt
-|Action
-
-|Host name:
-|Enter the Deploy VM host name, then select Enter.
-
-|Provide a password for the admin user:
-|Enter the administrator password, then select Enter.
-
-|Use DHCP to set networking information? [n]:
-|Enter `y` to use DHCP or `n` to define a static IP configuration, then select Enter.
-|===
-
-.. If you chose a static configuration, provide the IP address, netmask, gateway, DNS servers, and DNS search domain when prompted. 
-
-.. Wait for the VM to finish booting. 
-+
-NOTE: A gateway warning might display during the first boot. If this occurs, the VM can still configure correctly and you can verify connectivity in the next step. 
-
-. Verify that the Deploy VM is running and reachable: 
-
-.. On the Hyper-V host, confirm that the VM state is `Running`:
-+
-[source,cli]
-----
-Get-VM -Name "<VM_name>" | Select-Object Name, State, Uptime 
+Use DHCP to set networking information? [n]:
 ----
 
-.. From a system on the same network, ping the Deploy VM. If you used DHCP, get the assigned IP address from your DHCP server:
-+ 
-[source,cli]
-----
-ping <deploy_vm_IP_address> 
-----
+.. Type *n* to define a static IP configuration or *y* to use the DHCP, and select *Enter*.
+.. If you choose a static configuration, provide all network configuration information as required.
 --
 .KVM
 --

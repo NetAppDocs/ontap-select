@@ -22,7 +22,7 @@ The following configuration requirements and restrictions apply to ONTAP Select 
 * Cluster Shared Volumes are not supported as storage pools.
 * Network file shares and remote UNC paths, such as SMB 3.0, are not supported as storage pools.
 * ONTAP Select does not discover a volume that is mounted only to a folder path because the volume has no drive letter.
-* ONTAP Select can use a LUN on an external storage array using FC, FCoE, iSCSI, or NFS if the Hyper-V host formats the LUN as NTFS or ReFS and assigns a drive letter. ONTAP Select treats such a volume as local host storage. The ONTAP Select vNAS model used with ESXi does not apply to Hyper-V.
+* ONTAP Select can use a LUN on an external storage array using FC, FCoE, or iSCSI if the Hyper-V host formats the LUN as NTFS or ReFS and assigns a drive letter. ONTAP Select treats such a volume as local host storage. The ONTAP Select vNAS model used with ESXi does not apply to Hyper-V.
 * A Storage Spaces virtual disk can hold a storage pool if it is formatted as NTFS or ReFS with a drive letter assigned. However, software RAID cannot use physical disks that are members of a Storage Spaces pool.
 * A Hyper-V configuration does not recognize thinly provisioned storage. ONTAP Select uses the capacity that Windows reports for the volume.
 

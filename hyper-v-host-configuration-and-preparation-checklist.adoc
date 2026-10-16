@@ -39,7 +39,7 @@ The Deploy utility administers the host over Windows Remote Management (WinRM) u
 
 .Steps 
 
-. Enable WinRM HTTPS:
+. Enable WinRM HTTP:
 +
 [source,cli]
 ----
@@ -52,6 +52,12 @@ Enable-PSRemoting -Force
 winrm enumerate winrm/config/listener
 ----
 +
+. Create a firewall inbound rule to accept network connections on HTTPS port 5986:
++
+[source,cli]
+----
+New-NetFirewallRule -DisplayName "WinRM HTTPS" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 5986
+----
 . Configure the associated certificate:
 +
 [role="tabbed-block"]
@@ -149,7 +155,7 @@ NOTE: The disks that appear as members of a Storage Spaces pool in the `Get-Stor
 
 == Step 4: Review the ONTAP Select cluster configuration
 
-You can deploy ONTAP Select as either a multi-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and high-availability (HA) capability.
+You can deploy ONTAP Select as either a two-node or four-node cluster or a single-node cluster. In many cases, a multi-node cluster is preferable because of the additional storage capacity and high-availability (HA) capability.
 
 The following figures illustrate the ONTAP Select networks used with a single-node cluster and four-node cluster for an ESXi host.
 
