@@ -219,10 +219,10 @@ Creating an external virtual switch briefly interrupts network traffic on the ph
 . Enter the VM name, then select *Next*.
 . Select *Generation 1*, then select *Next*.
 +
-NOTE: ONTAP Select with Hyper-V does not support Generation VMs.
+NOTE: ONTAP Select with Hyper-V does not support Generation 2 VMs.
 . Enter the amount of memory, then select *Next*.
 +
-NOTE: The minimum memory requirement is4GB.
+NOTE: The minimum memory requirement is 4GB.
 . Select your virtual switch from the drop-down list, then select *Next*.
 . Select *Use an existing virtual hard disk* > *Browse*, then locate and select the `vhdx.tgz` image file.
 . Select *Next*.
