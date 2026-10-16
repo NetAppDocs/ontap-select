@@ -128,3 +128,5 @@ link:task_cli_deploy_image_add.html[Add an ONTAP Select image to Deploy]
 // 2026 SEP 28, ONTAPDOC-3948
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
+
+// 2026 OCT 13, ONTAPDOC-3948

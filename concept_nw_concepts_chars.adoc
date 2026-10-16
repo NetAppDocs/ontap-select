@@ -87,3 +87,5 @@ There are several ports available for use by ONTAP Select. They are assigned and
 
 Virtual switch::
 The virtual switch software within the hypervisor environment, whether vSwitch (VMware and Hyper-V) or Open vSwitch (KVM), joins the ports exposed by the virtual machine with the physical Ethernet NIC ports. You must configure a vSwitch for every ONTAP Select host, as appropriate for your environment.
+
+// 2026 OCT 13, ONTAPDOC-3948
