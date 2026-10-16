@@ -227,7 +227,7 @@ It is possible to configure multiple ONTAP Select nodes on the same host for vNA
 
 You can use a single 10GE port to connect to the external network. However, NetApp recommends that you use this only in constrained small form-factor environments. This is supported with ESXi, Hyper-V, and KVM.
 
-.What additional processes do you need to run to do a live migration on Hyper-V KVM?
+.What additional processes do you need to run to do a live migration on Hyper-V and KVM?
 
 You must install and run open-source CLVM and pacemaker (pcs) components on each host participating in the live migration. This is required to access the same volume groups on each host. Additionally, you need to enable the live migration feature on the Hyper-V server for incoming and outgoing live migration.
 

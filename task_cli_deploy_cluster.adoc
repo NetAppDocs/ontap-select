@@ -161,6 +161,15 @@ If more than one hypervisor host is needed, use this procedure to add each host.
 . Sign in to the Deploy utility CLI using SSH with the administrator account.
 . Register the host:
 +
+*Hyper-V*
++
+[source,cli]
+----
+host register -name <FQDN|IP> -hypervisor-type Hyper-V -username <Hyper-V_username>
+----
++
+*KVM*
++
 [source,cli]
 ----
 host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
