@@ -45,7 +45,7 @@ Administrators need to keep track of which drives are in use by the ONTAP Select
 
 == ONTAP Select virtual and physical disks
 
-For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more VMDKs from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
+For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more system disks (VMDKs) from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
 
 When using software RAID, ONTAP Deploy presents ONTAP Select with a set of system disks (VMDKs) and physical disks Raw Device Mappings (RDMs) for SSDs and passthrough or DirectPath IO devices for NVMe.
 
