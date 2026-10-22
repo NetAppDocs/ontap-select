@@ -21,9 +21,21 @@ Independent of the hardware RAID configurations, ONTAP Select also provides a so
 * It requires a separate system disk for the ONTAP Select VM boot partition.
 ** Choose a separate disk, either an SSD or an NVMe drive, to create a datastore for the system disks (NVRAM, Boot/CF card, Coredump, and Mediator in a multi-node setup).
 
+== Software RAID configuration in systems with hardware RAID controllers
 
+When using software RAID, the absence of a hardware RAID controller is ideal, but, if a system does have an existing RAID controller, it must adhere to the following requirements:
 
-== System disks
+* You must disable the hardware RAID controller so that disks can be presented directly to the system (a JBOD). You can usually make this change in the RAID controller BIOS.
+* Or the hardware RAID controller should be in the SAS HBA mode. For example, some BIOS configurations allow an "AHCI" mode in addition to RAID, which you could choose to enable the JBOD mode. This enables a passthrough, so that the physical drives can be seen as is on the host.
+
+Depending on the maximum number of drives supported by the controller, an additional controller might be required. With the SAS HBA mode, ensure that the I/O controller (SAS HBA) is supported with a minimum of 6Gbps speed. However, NetApp recommends a 12Gbps speed.
+
+No other hardware RAID controller modes or configurations is supported. For example, some controllers allow a RAID 0 support that can artificially enable disks to pass-through but the implications can be undesirable. The supported size of physical disks (SSD only) is between 200GB and 16TB.
+
+[NOTE]
+Administrators need to keep track of which drives are in use by the ONTAP Select VM and prevent inadvertent use of those drives on the host.
+
+== ONTAP Select system disks
 System disks are the virtual disks (VMDKs) that are used within the ONTAP Select VM to service various items such as clustering, booting, and so on. The system disks are physically located on a single physical disk (collectively called the system physical disk) as seen from the host. The physical disk (SSD or NVMe) must contain a DAS datastore. 
 
 During cluster deployment, ONTAP Deploy creates the following system disks on a dedicated DAS datastore for the ONTAP Select VM.
@@ -48,35 +60,21 @@ During cluster deployment, ONTAP Deploy creates the following system disks on a 
 |4 GB
 |===
 
-As a best practice, the system disks should be smaller than the data drives (RDM for SSD and PCI passthrough for NVMe). For example, 1 TB system disks and 15 TB data drives. The system disks only need to hold the total VMDK footprint of approximately 134 GB plus datastore headroom. The supported physical disk size is approximately 200 GB to 16 TB.
+As a best practice, the system disks should be smaller than the data drives (Raw Device Mappings (RDMs) for SSD and PCI passthrough for NVMe). The system disks only need to hold the total VMDK footprint of approximately 134 GB plus datastore headroom. The supported physical disk size is approximately 200 GB to 16 TB.
 
 It is not possible to further separate the system disks across multiple datastores or across multiple physical drives. They must reside on a single physical system disk. You can view the information about the system disks by running the following commands from the ONTAP Select node: `system node virtual-machine instance show-system-disks`
-
 
 [NOTE]
 ====
 * Do not change the VMDK properties. For example, do not change `thick` to `thin`.
 * Hardware RAID is not deprecated.
 ====
-== Software RAID configuration in systems with hardware RAID controllers
-
-When using software RAID, the absence of a hardware RAID controller is ideal, but, if a system does have an existing RAID controller, it must adhere to the following requirements:
-
-* You must disable the hardware RAID controller so that disks can be presented directly to the system (a JBOD). You can usually make this change in the RAID controller BIOS.
-* Or the hardware RAID controller should be in the SAS HBA mode. For example, some BIOS configurations allow an "AHCI" mode in addition to RAID, which you could choose to enable the JBOD mode. This enables a passthrough, so that the physical drives can be seen as is on the host.
-
-Depending on the maximum number of drives supported by the controller, an additional controller might be required. With the SAS HBA mode, ensure that the I/O controller (SAS HBA) is supported with a minimum of 6Gbps speed. However, NetApp recommends a 12Gbps speed.
-
-No other hardware RAID controller modes or configurations is supported. For example, some controllers allow a RAID 0 support that can artificially enable disks to pass-through but the implications can be undesirable. The supported size of physical disks (SSD only) is between 200GB and 16TB.
-
-[NOTE]
-Administrators need to keep track of which drives are in use by the ONTAP Select VM and prevent inadvertent use of those drives on the host.
 
 == ONTAP Select virtual and physical disks
 
 For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more system disks (VMDKs) from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
 
-When using software RAID, ONTAP Deploy presents ONTAP Select with a set of system disks (VMDKs) and physical disks Raw Device Mappings (RDMs) for SSDs and PCI passthrough or DirectPath IO devices for NVMe. The following figures show the relationship for NVMe and SSD drives in more detail, highlighting the difference between the virtualized disks used for the ONTAP Select VM internals and the physical disks used to store user data. 
+When using software RAID, ONTAP Deploy presents ONTAP Select with a set of system disks (VMDKs) and physical disk RDMs for SSDs and PCI passthrough or DirectPath IO devices for NVMe. The following figures show the relationship for NVMe and SSD drives in more detail, highlighting the difference between the virtualized disks used for the ONTAP Select VM internals and the physical disks used to store user data. 
 
 Use of virtualized disks and RDMs with SSDs::
 +
