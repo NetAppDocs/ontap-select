@@ -70,7 +70,7 @@ It is not possible to further separate the system disks across multiple datastor
 * Hardware RAID is not deprecated.
 ====
 
-== ONTAP Select virtual and physical disks
+== ONTAP Select virtual and physical disks configurations
 
 For configurations with hardware RAID controllers, physical disk redundancy is provided by the RAID controller. ONTAP Select is presented with one or more system disks (VMDKs) from which the ONTAP admin can configure data aggregates. These VMDKs are striped in a RAID 0 format because using ONTAP software RAID is redundant, inefficient, and ineffective due to resiliency provided at the hardware level. Furthermore, the VMDKs used for system disks are in the same datastore as the VMDKs used to store user data.
 
