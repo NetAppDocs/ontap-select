@@ -14,8 +14,8 @@ summary: All of the Python scripts use a common Python class in a single module.
 [.lead]
 All of the Python scripts use a common Python class in a single module.
 
-[source,python,%autofill]
----------------------------------------------------------------------
+[source,python]
+----
 #!/usr/bin/env python
 ##--------------------------------------------------------------------
 #
@@ -185,5 +185,4 @@ class DeployRequests(object):
     def filter_headers(response):
         ''' Returns a filtered set of the response headers '''
         return {key: response.headers[key] for key in ['Location', 'request-id'] if key in response.headers}
-
----------------------------------------------------------------------
+----
