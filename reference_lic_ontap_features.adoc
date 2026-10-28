@@ -44,7 +44,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html[ONTAP FlexCache write-back^]
 |  ONTAP Select supports FlexCache cache volumes with write-back. 
 
-*Caution*: There are limitations to FlexCache Writeback with ONTAP Select. For more information, refer to link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[FlexCache write-back with ONTAP Select].
+*Caution*: There are limitations to FlexCache write-back with ONTAP Select. For more information, refer to link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[FlexCache write-back with ONTAP Select].
 | FlexClone
 | link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[ONTAP FlexClone volumes^]
 |
