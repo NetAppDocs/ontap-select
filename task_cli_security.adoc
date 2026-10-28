@@ -12,11 +12,7 @@ summary: There are several related tasks you can perform as part of securing an 
 :imagesdir: ./media/
 
 [.lead]
-There are several related tasks you can perform as part of securing an ONTAP Select deployment.
-
-= Change the Deploy administrator password
-
-You can change the password for the Deploy virtual machine administrator account as needed using the command line interface.
+You can secure an ONTAP Select deployment by changing the password for the Deploy virtual machine administrator account as needed using the command line interface.
 
 .Steps
 
