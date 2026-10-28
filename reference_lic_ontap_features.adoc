@@ -31,7 +31,7 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 | ONTAP Select only supports ARP manual updates.
 
 | CIFS
-| link:https://docs.netapp.com/us-en/ontap/smb-admin/index.html[Learn about ONTAP SMB^]
+| link:https://docs.netapp.com/us-en/ontap/smb-admin/index.html[ONTAP SMB^]
 |
 | Deduplication and compression
 | link:https://docs.netapp.com/us-en/ontap-restapi/storage_volumes_endpoint_overview.html[Managing storage volumes^]
@@ -42,9 +42,11 @@ The following ONTAP features are supported with ONTAP Select and licensed by def
 | FlexCache
 |
 link:concept_ots_overview.html#flexcache-write-back-with-ontap-select[FlexCache write-back with ONTAP Select]
-|  ONTAP Select supports FlexCache cache volumes with write-back. FlexCache origin volumes with write-back are not supported.
+|  ONTAP Select supports FlexCache cache volumes with write-back. 
+
+*Caution*: FlexCache origin volumes with write-back are not supported.
 | FlexClone
-| link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[Learn about ONTAP FlexClone volumes^]
+| link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[ONTAP FlexClone volumes^]
 |
 | iSCSI
 a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_credentials_endpoint_overview.html[Managing iSCSI credentials^]
@@ -67,13 +69,13 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 | link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nvme_services_endpoint_overview.html[Managing NVMe services^]
 |
 | ONTAP multitenancy capability
-| link:https://docs.netapp.com/us-en/ontap/concepts/svm-use-cases-concept.html[Learn about ONTAP SVM use cases^]
+| link:https://docs.netapp.com/us-en/ontap/concepts/svm-use-cases-concept.html[ONTAP SVM use cases^]
 |
 | ONTAP S3
 | link:https://docs.netapp.com/us-en/ontap/s3-config/index.html[ONTAP S3 configuration^]
 |
 | S3 SnapMirror
-| link:https://docs.netapp.com/us-en/ontap/s3-snapmirror/index.html[Learn about ONTAP SnapMirror S3^]
+| link:https://docs.netapp.com/us-en/ontap/s3-snapmirror/index.html[ONTAP SnapMirror S3^]
 |
 | SnapLock Select
 | link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock^]
