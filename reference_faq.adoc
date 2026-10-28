@@ -350,6 +350,7 @@ Yes. It is possible to use another ONTAP Select Deploy VM to host the Mediator s
 
 Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.
 
+// 2026 OCT 8, ONTAPDOC-3948
 // 2026 MAR 23, ONTAPDOC-3806
 // 2025 SEP 8, ONTAPDOC-3320
 // 2025 JULY 15, ontap-select-internal-issue-206
@@ -357,7 +358,5 @@ Only a two-node cluster with a Mediator is supported in a stretched HA deploymen
 // 2024-02-16, ONTAPDOC-1672
 // 2023-10-20, ONTAPDOC-1293
 // 2023-10-20, ONTAPDOC-1293
-// 2023-10-09, GitHub issue #220
+// 2023-10-09, GitHub issue-220
 // 2023-09-29, ONTAPDOC-1204
-
-// 2026 OCT 13, ONTAPDOC-3948

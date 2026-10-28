@@ -212,5 +212,3 @@ NOTE: Windows Server reports the jumbo frame size including the Ethernet header,
 // 2025 July 16, ONTAPDOC-2885
 // 2024 NOV 4, ONTAPDOC-2528
 // 2023-09-26, ONTAPDOC-1204
-
-// 2026 OCT 13, ONTAPDOC-3948

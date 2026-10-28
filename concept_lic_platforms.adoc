@@ -224,6 +224,7 @@ SnapCenter (optional)
 
 Learn about link:concept_lic_workflow.html[purchasing an ONTAP Select license]
 
+// 2026 OCT 8, ONTAPDOC-3948
 // 2025 APR 27, ONTAPDOC-3784
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 Sep 16, ONTAPDOC-3305
@@ -232,5 +233,3 @@ Learn about link:concept_lic_workflow.html[purchasing an ONTAP Select license]
 // 2025 FEB 18, ONTAPDOC-2678
 // 2023-09-26, ONTAPDOC-1204
 // 2023-12-12, ONTAPDOC-1525
-
-// 2026 OCT 13, ONTAPDOC-3948

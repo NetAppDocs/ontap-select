@@ -45,6 +45,5 @@ The Deploy VM is configured using DHCP by default. However, if needed, you can m
 | Search domains | List of the search domains to use.
 |===
 
+// 2026 OCT 8, ONTAPDOC-3948
 // 2023-09-27, ONTAPDOC-1204
-
-// 2026 OCT 13, ONTAPDOC-3948

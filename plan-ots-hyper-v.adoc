@@ -36,5 +36,3 @@ You should follow these best practices:
 * Configure Windows MPIO for external storage arrays so that LUNs are presented over redundant paths. 
 
 // 2026 SEP 15, ONTAPDOC-3948
-
-// 2026 OCT 13, ONTAPDOC-3948

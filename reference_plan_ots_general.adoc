@@ -206,5 +206,3 @@ The credential store is accessed internally as part of performing normal adminis
 
 // 2026 SEP 15, ONTAPDOC-3948
 // 2023-09-25, ONTAPDOC-1204
-
-// 2026 OCT 13, ONTAPDOC-3948

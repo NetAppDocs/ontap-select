@@ -235,7 +235,5 @@ NetApp FAS systems are traditionally fitted with a physical NVRAM PCI card. This
 
 Commodity systems are not typically fitted with this type of equipment. Therefore, the functionality of the NVRAM card has been virtualized and placed into a partition on the ONTAP Select system boot disk. It is for this reason that placement of the system virtual disk of the instance is extremely important.
 
-
+// 2026 OCT 8, ONTAPDOC-3948
 // 2025 July 17, ONTAPDOC-2885
-
-// 2026 OCT 13, ONTAPDOC-3948
