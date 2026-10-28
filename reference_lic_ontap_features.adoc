@@ -60,6 +60,9 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 | NFS
 | link:https://docs.netapp.com/us-en/ontap/nfs-admin/index.html[ONTAP file access for the NFS protocol^]
 |
+| NFS over TLS
+| link:https://docs.netapp.com/us-en/ontap/nfs-admin/enable-nfs-over-tls-task.html[Enabling NFS over TLS^]
+| ONTAP Select supports NFS over TLS using the CLI. System Manager is not supported.
 | NVMe over TCP
 | link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nvme_services_endpoint_overview.html[Managing NVMe services^]
 |
