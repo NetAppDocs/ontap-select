@@ -84,7 +84,7 @@ a| * link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_creden
 | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html[ONTAP SnapMirror asynchronous disaster recovery^]
 | ONTAP Select does not support consistency groups in Asynchronous SnapMirror.
 | SnapRestore
-| 
+| link:https://docs.netapp.com/us-en/ontap/data-protection/restore-contents-volume-snapshot-task.html[Restoring the contents of a volume from an ONTAP snapshot^]
 |
 | SnapMirror DR, archive (previously known as SnapVault)
 | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-workflow-concept.html[ONTAP SnapMirror replication workflow^]
