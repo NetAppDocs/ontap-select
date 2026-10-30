@@ -59,10 +59,12 @@ sidebar:
               url: /reference_plan_ots_hardware.html
             - title: Storage and RAID
               url: /reference_plan_ots_storage.html
-            - title: External storage requirements
+            - title: Storage requirements
               entries:
                 - title: VMware ESXi 
                   url: /reference_plan_ots_vnas.html
+                - title: Hyper-V
+                  url: /plan-ots-hyper-v.html
                 - title: KVM
                   url: /reference_plan_ots_kvm.html
             - title: Networking
@@ -80,7 +82,7 @@ sidebar:
             - title: General requirements
               url: /reference_plan_dep_general.html
             - title: Hypervisor host environments
-              url: /reference_plan_dep_vmware.html
+              url: /plan-deploy-hypervisor.html
         - title: Best practices
           url: /reference_plan_best_practices.html
     - title: License
@@ -131,10 +133,12 @@ sidebar:
           entries:
             - title: Host preparation checklist
               entries:
-                - title: KVM host checklist 
-                  url: /kvm-host-configuration-and-preparation-checklist.html
                 - title: ESXi host checklist
                   url: /esxi-host-configuration-and-preparation-checklist.html
+                - title: Hyper-V host checklist
+                  url: /hyper-v-host-configuration-and-preparation-checklist.html
+                - title: KVM host checklist 
+                  url: /kvm-host-configuration-and-preparation-checklist.html
             - title: Deploy utility required information
               url: /reference_chk_deploy_req_info.html
             - title: ONTAP Select required information
