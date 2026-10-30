@@ -81,7 +81,7 @@ ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID
 
 For single node clusters, all data partitions are used to store local (active) data. For nodes that are part of an HA pair, one data partition is used to store local (active) data for that node and the second data partition is used to mirror active data from the HA peer.
 
-== Passthrough (DirectPath IO) devices vs. Raw Device Maps (RDMs)
+== Passthrough (DirectPath IO) devices versus Raw Device Maps (RDMs)
 
 ESXi and KVM hypervisors don't support NVMe disks as Raw Device Maps (RDMs). To allow ONTAP Select to take direct control of NVMe disks, you must configure these drives as passthrough devices within ESXi or KVM. When configuring an NVMe device as a passthrough device, it requires support from the server BIOS and you might need to reboot the host. Additionally, there are limits to the number of passthrough devices that can be assigned per host, which might vary depending on the platform. However, ONTAP Deploy limits this to 14 NVMe devices per ONTAP Select node. This means that the NVMe configuration provides a very high IOPS density (IOPS/TB) at the expense of total capacity. Alternatively, if you desire a high performance configuration with larger storage capacity, the recommended configuration is a large ONTAP Select VM size, an INTEL Optane card for the system disk, and a nominal number of SSD drives for data storage.
 
@@ -89,6 +89,8 @@ ESXi and KVM hypervisors don't support NVMe disks as Raw Device Maps (RDMs). To 
 To take full advantage of NVMe performance, consider the large ONTAP Select VM size.
 
 There is an additional difference between passthrough devices and RDMs. RDMs can be mapped to a running VM. Passthrough devices require a VM reboot. This means that any NVMe drive replacement or capacity expansion (drive addition) procedure will require an ONTAP Select VM reboot. The drive replacement and capacity expansion (drive addition) operation is driven by a workflow in ONTAP Deploy. ONTAP Deploy manages the ONTAP Select reboot for single node clusters and failover / failback for HA pairs. However, it is important to note the difference between working with SSD data drives (no ONTAP Select reboot / failovers are required) and working with NVMe data drives (ONTAP Select reboot / failover is required).
+
+NOTE: ONTAP Select supports NVMe drives as SCSI disks on Hyper-V hypervisors. ONTAP Select does not support NVMe drives as Discrete Device Assignments (passthrough devices) on Hyper-V hypervisors.
 
 == Physical and virtual disk provisioning
 
@@ -103,7 +105,7 @@ When adding capacity to an ONTAP Select VM using software RAID, the administrato
 
 Similar to FAS and AFF systems, you can only add drives with equal or larger capacities to an existing RAID group. Larger capacity drives are right sized. If you are creating new RAID groups, the new RAID group size should match the existing RAID group size to make sure that the overall aggregate performance does not deteriorate.
 
-== Match an ONTAP Select disk to the corresponding ESXi or KVM disk
+== Match an ONTAP Select disk to the corresponding ESXi, Hyper-V, or KVM disk
 
 ONTAP Select disks are usually labeled NET x.y. You can use the following ONTAP command to obtain the disk UUID:
 
@@ -124,7 +126,7 @@ Plex: -This UID can be matched with the device UID displayed in the ‘storage d
 
 image:ST_21.jpg[Matching an ONTAP Select Disk to the Corresponding ESXi Disk]
 
-In the ESXi or KVM shell, you can enter the following command to blink the LED for a given physical disk (identified by its naa.unique-id).
+In the ESXi, Hyper-V, or KVM shell, you can enter the following command to blink the LED for a given physical disk (identified by its naa.unique-id).
 
 [role="tabbed-block"]
 ====
@@ -133,6 +135,13 @@ In the ESXi or KVM shell, you can enter the following command to blink the LED f
 [source,cli]
 ----
 esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>
+----
+--
+.Hyper-V
+--
+[source,cli]
+----
+Enable-PhysicalDiskIdentification -UniqueId <unique_id>
 ----
 --
 .KVM
@@ -226,5 +235,5 @@ NetApp FAS systems are traditionally fitted with a physical NVRAM PCI card. This
 
 Commodity systems are not typically fitted with this type of equipment. Therefore, the functionality of the NVRAM card has been virtualized and placed into a partition on the ONTAP Select system boot disk. It is for this reason that placement of the system virtual disk of the instance is extremely important.
 
-
+// 2026 OCT 8, ONTAPDOC-3948
 // 2025 July 17, ONTAPDOC-2885

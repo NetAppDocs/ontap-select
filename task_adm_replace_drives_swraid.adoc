@@ -23,19 +23,84 @@ When a drive fails you need to use the ONTAP CLI to identify the failed disk.
 
 [role="tabbed-block"]
 ====
+.ESXi
+--
+.Steps
+. Sign in to the ONTAP CLI using the administrator account.
 
+. Identify the disk drive that failed:
++
+[source,cli]
+----
+<cluster name>::> storage disk show -container-type broken
+Usable Disk Container Container
+Disk Size Shelf Bay Type Type Name Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
+----
+--
+.Hyper-V
+--
+.Before you begin
+
+You must have the name of the ONTAP Select virtual machine (VM) on the Hyper-V host, as well as the ONTAP Select and ONTAP Select Deploy administrator account credentials. 
+
+.About this task 
+
+You should only use this procedure when the ONTAP Select node is running on Hyper-V and configured to use software RAID. On Hyper-V, ONTAP Select reports a virtualized serial number for a passthrough disk, so you identify the physical drive by the target address and not the serial number. 
+
+.Steps
+
+. Sign in to the ONTAP Select CLI using the administrator account and identify the failed disk drive: 
++
+[source,cli]
+----
+<cluster name>::> storage disk show -container-type broken 
+----
+. [[record-lun-value]]Display the target address of the failed disk: 
++
+[source,cli]
+----
+<cluster name>::> disk show -fields serial,vmdisk-target-address 
+----
++
+Record the `lun` value of the failed disk. The `bus` value identifies the virtual SCSI controller that carries the passthrough disks. 
+
+. Optionally, display the spare disk capacity together with the partitioned disks: 
++
+[source,cli]
+----
+<cluster name>::> storage aggregate show-spare-disks 
+----
+. On the Hyper-V host, display the disks attached to the ONTAP Select VM: 
++
+[source,cli]
+----
+PS C:\> Get-VMHardDiskDrive -VMName <vm_name> 
+----
++
+The passthrough disks are the entries that report a disk number; entries with a file path are the system disks. The failed disk is the entry whose `ControllerLocation` matches the <<record-lun-value, recorded `lun` value>>. The `DiskNumber` of the failed disk is the Windows disk number. 
+
+. Display the physical identity of the failed disk: 
++
+[source,cli]
+----
+PS C:\> Get-PhysicalDisk | Where-Object { [int]$_.DeviceId -eq <disk_number> } | Select-Object FriendlyName, SerialNumber, UniqueId, PhysicalLocation, MediaType, Size, HealthStatus, OperationalStatus 
+----
+--
 .KVM
 --
 .Before you begin
-You must have the VM ID of the ONTAP Select virtual machine, as well as the ONTAP Select and ONTAP Select Deploy administrator account credentials.
+You must have the VM ID of the ONTAP Select VM, as well as the ONTAP Select and ONTAP Select Deploy administrator account credentials.
 
 .About this task
 You should only use this procedure when the ONTAP Select node is running on KVM and configured to use software RAID.
 
 .Steps
 . At the ONTAP Select CLI, identify the disk to be replaced:
-.. Identify the disk by serial number, UUID, or target address in the virtual machine. 
+.. Identify the disk by serial number, UUID, or target address in the VM:
 +
+[source,cli]
 ----
 disk show -fields serial,vmdisk-target-address,uuid
 ----
@@ -45,32 +110,19 @@ storage aggregate show-spare-disks
 . At the Linux command line interface, locate the disk.
 .. Examine the system devices, searching for the disk serial number or UUID (disk name):
 +
+[source,cli]
 ----
 find /dev/disk/by-id/<SN|ID>
 ----
 
-.. Examine the virtual machine configuration, searching for the target address:
+.. Examine the VM configuration, searching for the target address:
 +
+[source,cli]
 ----
 virsh dumpxml VMID
 ----
 --
 
-.ESXi
---
-.Steps
-. Sign in to the ONTAP CLI using the administrator account.
-
-. Identify the disk drive that failed.
-+
-----
-<cluster name>::> storage disk show -container-type broken
-Usable Disk Container Container
-Disk Size Shelf Bay Type Type Name Owner
----------------- ---------- ----- --- ------- ----------- --------- --------
-NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
-----
---
 ====
 
 == Remove the failed drive
@@ -79,84 +131,6 @@ After you identify the drive that failed, remove the disk.
 
 [role="tabbed-block"]
 ====
-
-.KVM using Deploy
---
-You can detach a disk from a KVM host as part of replacing the disk or when it is no longer needed.
-
-.Before you begin
-You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.
-
-.Steps
-. Sign in to the Deploy utility web user interface using the administrator account.
-. Select the *Clusters* tab at the top of the page and select the desired cluster from the list.
-. Select *+* next to the desired HA pair or node.
-+
-If the option is disabled, Deploy is currently refreshing the storage information.
-
-. Select *Edit Storage* on the *Edit Node Storage* page.
-. Deselect the disks to be detached from the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
-. Select *Yes* to confirm the warning in the popup window.
-. Select the *Events* tab for the cluster to monitor and confirm the detach operation.
-+
-You can remove the physical disk from the host if it is no longer needed.
---
-
-.KVM using CLI
---
-After you identify the disk, follow the steps below.
-
-.Steps
-. Detach the disk from the virtual machine:
-.. Dump the configuration.
-+
-----
-virsh dumpxml VMNAME > /PATH/disk.xml
-----
-
-.. Edit the file and remove everything except the disk to be detached from the virtual machine.
-+
-The target address for the disk should correspond to the vmdisk-target-address field in ONTAP.
-+
-----
-<disk type='block' device='lun'>
-  <driver name='qemu' type='raw' cache='directsync'/>
-  <source dev='/dev/disk/by-id/ata- Micron_5100_MTFDDAK960TCC_171616D35277'/>
-  <backingStore/>
-  <target dev='sde' bus='scsi'/>
-  <alias name='scsi0-0-0-4'/>
-  <address type='drive' controller='0' bus='0' target='0' unit='4'/>
-</disk>
-----
-
-.. Detach the disk.
-+
-----
-virsh detach-disk --persistent /PATH/disk.xml
-----
-
-. Replace the physical disk:
-+
-You can use a utility such as `ledctl locate=` to locate the physical disk if needed.
-
-.. Remove the disk from the host.
-.. Select a new disk and install it in the host if necessary.
-. Edit the original disk configuration file and add the new disk.
-+
-You should update the disk path and any other configuration information as needed.
-+
-----
-<disk type='block' device='lun'>
-  <driver name='qemu' type='raw' cache='directsync'/>
-  <source dev='/dev/disk/by-id/ata-Micron_5100_MTFDDAK960TCC_171616D35277'/>
-  <backingStore/>
-  <target dev='sde' bus='scsi'/>
-  <alias name='scsi0-0-0-4'/>
-  <address type='drive' controller='0' bus='0' target='0' unit='4'/>
-</disk>
-----
---
-
 .ESXi
 --
 .Steps
@@ -183,24 +157,12 @@ image:ST_25.jpg[ONTAP credentials]
 +
 image:ST_26.jpg[Warning]
 --
-====
-
-== Add the new spare drive
-
-After you remove the failed drive, add the spare disk.
-
-[role="tabbed-block"]
-====
-
-.KVM using Deploy
+.Hyper-V or KVM using Deploy
 --
-.Attaching a disk using Deploy
-You can attach a disk to a KVM host as part of replacing a disk or to add more storage capacity.
+You can detach a disk from a Hyper-V or KVM host as part of replacing the disk or when it is no longer needed.
 
 .Before you begin
 You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.
-
-The new disk must be physically installed on the KVM Linux host.
 
 .Steps
 . Sign in to the Deploy utility web user interface using the administrator account.
@@ -210,29 +172,81 @@ The new disk must be physically installed on the KVM Linux host.
 If the option is disabled, Deploy is currently refreshing the storage information.
 
 . Select *Edit Storage* on the *Edit Node Storage* page.
-. Select the disks to be attached to the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
-. Select the *Events* tab to monitor and confirm the attach operation.
-. Examine the node storage configuration to confirm that the disk is attached.
+. Deselect the disks to be detached from the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
+. Select *Yes* to confirm the warning in the popup window.
+. Select the *Events* tab for the cluster to monitor and confirm the detach operation.
++
+You can remove the physical disk from the host if it is no longer needed.
 --
 
 .KVM using CLI
 --
-After you identify and remove the failed drive, you can attach a new drive.
+After you identify the disk, follow the steps below.
 
 .Steps
-. Attach the new disk to the virtual machine.
+. Detach the disk from the VM:
+.. Dump the configuration:
++
+[source,cli]
 +
 ----
-virsh attach-disk --persistent /PATH/disk.xml
+virsh dumpxml VMNAME > /PATH/disk.xml
 ----
 
-.Results
-The disk is assigned as a spare and is available to ONTAP Select. It may take a minute or longer for the disk to become available.
+.. Edit the file and remove everything except the disk to be detached from the VM.
++
+The target address for the disk should correspond to the vmdisk-target-address field in ONTAP.
++
+[source,cli]
+----
+<disk type='block' device='lun'>
+  <driver name='qemu' type='raw' cache='directsync'/>
+  <source dev='/dev/disk/by-id/ata- Micron_5100_MTFDDAK960TCC_171616D35277'/>
+  <backingStore/>
+  <target dev='sde' bus='scsi'/>
+  <alias name='scsi0-0-0-4'/>
+  <address type='drive' controller='0' bus='0' target='0' unit='4'/>
+</disk>
+----
 
-.After you finish
-Because the node configuration has changed, you should perform a cluster refresh operation using the Deploy administration utility.
+.. Detach the disk.
++
+[source,cli]
+----
+virsh detach-disk --persistent /PATH/disk.xml
+----
+
+. Replace the physical disk:
++
+You can use a utility such as `ledctl locate=` to locate the physical disk if needed.
+
+.. Remove the disk from the host.
+.. Select a new disk and install it in the host if necessary.
+. Edit the original disk configuration file and add the new disk.
++
+You should update the disk path and any other configuration information as needed.
++
+[source,cli]
+----
+<disk type='block' device='lun'>
+  <driver name='qemu' type='raw' cache='directsync'/>
+  <source dev='/dev/disk/by-id/ata-Micron_5100_MTFDDAK960TCC_171616D35277'/>
+  <backingStore/>
+  <target dev='sde' bus='scsi'/>
+  <alias name='scsi0-0-0-4'/>
+  <address type='drive' controller='0' bus='0' target='0' unit='4'/>
+</disk>
+----
 --
 
+====
+
+== Add the new spare drive
+
+After you remove the failed drive, add the spare disk.
+
+[role="tabbed-block"]
+====
 .ESXi
 --
 .Steps
@@ -259,6 +273,49 @@ image:ST_30.jpg[Storage disk details]
 +
 image:ST_31.jpg[Storage disk details]
 --
+.Hyper-V or KVM using Deploy
+--
+.Attaching a disk using Deploy
+You can attach a disk to a Hyper-V or KVM host as part of replacing a disk or to add more storage capacity.
+
+.Before you begin
+You must have the ONTAP Select and ONTAP Select Deploy administrator account credentials.
+
+The new disk must be physically installed on the KVM Linux host.
+
+.Steps
+. Sign in to the Deploy utility web user interface using the administrator account.
+. Select the *Clusters* tab at the top of the page and select the desired cluster from the list.
+. Select *+* next to the desired HA pair or node.
++
+If the option is disabled, Deploy is currently refreshing the storage information.
+
+. Select *Edit Storage* on the *Edit Node Storage* page.
+. Select the disks to be attached to the node, enter the ONTAP administrator credentials, and select *Edit Storage* to apply the changes.
+. Select the *Events* tab to monitor and confirm the attach operation.
+. Examine the node storage configuration to confirm that the disk is attached.
+--
+
+.KVM using CLI
+--
+After you identify and remove the failed drive, you can attach a new drive.
+
+.Steps
+. Attach the new disk to the VM:
++
+[source,cli]
+----
+virsh attach-disk --persistent /PATH/disk.xml
+----
+
+.Results
+The disk is assigned as a spare and is available to ONTAP Select. It may take a minute or longer for the disk to become available.
+
+.After you finish
+Because the node configuration has changed, you should perform a cluster refresh operation using the Deploy administration utility.
+--
+
 ====
 
+// 2026 OCT 8, ONTAPDOC-3948
 // 2023-09-28, ONTAPDOC-1204

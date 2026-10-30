@@ -17,6 +17,12 @@ Learn about the new features and enhancements in supported versions of ONTAP Sel
 
 == ONTAP Select 9.20.1
 
+Support for Hyper-V hypervisor::
+Beginning with ONTAP Select 9.20.1, you can deploy ONTAP Select clusters on Microsoft Hyper-V hypervisors running Windows Server 2025 and Windows Server 2022. You can configure and manage single-node, two-node, and four-node clusters on supported Hyper-V hosts using the ONTAP Select Deploy administration utility.
+
+* Learn about the link:plan-ots-hyper-v.html[Hyper-V storage requirements]
+* Learn about the link:hyper-v-host-configuration-and-preparation-checklist.html[Hyper-V host configuration and preparation checklist]
+* Learn about link:task_install_deploy.html[installing ONTAP Select Deploy on a Hyper-V host]
 
 == ONTAP Select 9.19.1
 
@@ -26,7 +32,7 @@ Beginning with ONTAP Select 9.19.1, ONTAP Select supports external key managemen
 ONTAP Select does not support cloud key managers.
 
 Support for Advanced Micro Devices (AMD) processors::
-Beginning with ONTAP Select 9.19.1, ONTAP Select supports AMD processors on Kernel-Based Virtual Machine (KVM) and ESXi hypervisor hosts. For more information, refer to link:reference_plan_ots_hardware.html[VMware hypervisor and hardware considerations].
+Beginning with ONTAP Select 9.19.1, ONTAP Select supports AMD processors on ESXi and Kernel-Based Virtual Machine (KVM) hypervisor hosts. For more information, refer to link:reference_plan_ots_hardware.html[VMware hypervisor and hardware considerations].
 
 == ONTAP Select 9.18.1
 
@@ -69,7 +75,7 @@ You can decrease the cluster size for an existing cluster on an ESXi or KVM host
 * From six to four nodes
 --
 +
-link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported ESXi and KVM hypervisor versions].
 
 Updated KVM hypervisor support::
 
@@ -89,11 +95,11 @@ To use software RAID for locally attached NVMe disks, you need to link:kvm-host-
 link:concept_stor_swraid_local.html[Learn about the software RAID configuration services for local attached storage].
 
 Support for cluster expansion and contraction on KVM hosts::
-Beginning with ONTAP Select 9.17.1, the cluster expansion and contraction feature is supported for both Kernel-Based Virtual Machine (KVM) and ESXi hypervisor hosts. For ONTAP Select 9.16.1 and 9.15.1, cluster expansion and contraction is only supported for ESXi hypervisor hosts.
+Beginning with ONTAP Select 9.17.1, the cluster expansion and contraction feature is supported for both ESXi and Kernel-Based Virtual Machine (KVM) hypervisor hosts. For ONTAP Select 9.16.1 and 9.15.1, cluster expansion and contraction is only supported for ESXi hypervisor hosts.
 +
 You can use the cluster expansion and contraction feature on an existing ONTAP Select cluster to increase the size from a six-node to an eight-node cluster or decrease the size from an eight-node to a six-node cluster. 
 +
-link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported ESXi and KVM hypervisor versions].
 
 Enhanced support for cluster expansion and contraction on ESXi hosts::
 Beginning with ONTAP Select 9.17.1, cluster expansion and contraction is supported between six-node and twelve-node clusters on ESXi hosts:
@@ -112,7 +118,7 @@ You can decrease the cluster size for an existing ESXi cluster in the following 
 * From eight to six nodes 
 --
 +
-link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported KVM and ESXi hypervisor versions].
+link:task_cluster_expansion_contraction.html[Learn about cluster expansion and contraction and the supported ESXi and KVM hypervisor versions].
 
 Support for SnapMirror cloud::
 Beginning with ONTAP Select 9.17.1, SnapMirror cloud is supported with ONTAP Select. SnapMirror cloud is not licensed by default for ONTAP Select. When you deploy an ONTAP Select 9.17.1 cluster or upgrade an existing ONTAP Select cluster to version 9.17.1, you need to request a SnapMirror cloud license. For more information, refer to link:reference_lic_ontap_features.html#other-ontap-features[ONTAP features that are separately licensed].
@@ -131,7 +137,7 @@ ONTAP Select Deploy and ONTAP Select for ESXi support the configuration of an ON
 ====
 To perform Content Library operations, you need access to additional permission levels. This access is required for vSAN ESA deployments if you are working with restricted roles.
 
-link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations[Learn about accessing permission levels for Content Library operations].
+link:plan-deploy-hypervisor.html#vmware-vcenter-server-considerations[Learn about accessing permission levels for Content Library operations].
 ====
 
 Updated NDA driver support::
@@ -255,7 +261,7 @@ ONTAP Select 9.10.1 has been qualified for VMware NSX-T version 3.1.2. There are
 
 * Cluster MTU
 +
-You must manually adjust the cluster MTU size to 8800 before deploying the cluster to account for the additional overhead. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
+You must manually adjust the cluster Maximum Transmission Unit (MTU) size to 8800 before deploying the cluster to account for the additional overhead. The VMware guidance is to allow for a 200-byte buffer when using NSX-T.
 
 * Network 4x10Gb configuration
 +

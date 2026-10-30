@@ -1,0 +1,6 @@
+---
+permalink: reference_plan_dep_vmware.html
+redirect: ontap-select/plan-deploy-hypervisor.html
+---
+
+// 2026 OCT 8, ONTAPDOC-3948
