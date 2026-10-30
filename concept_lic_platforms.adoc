@@ -158,9 +158,9 @@ The following table provides the minimum license type required for the specified
 2+h|License type h| Standard h| Premium h| Premium XL
 2+h|Instance size h| Small h| Small and medium h| Small, medium, and large
 2+| Local DAS with hardware RAID controller
-| 8 - 60 drives
-| 8 - 60 drives
-| 8 - 60 drives
+| 8 – 60 drives
+| 8 – 60 drives
+| 8 – 60 drives
 2+| HDD (SAS, NL-SAS, SATA)
 | Not applicable	
 | 4 – 60 drives	
@@ -172,11 +172,11 @@ The following table provides the minimum license type required for the specified
 2+| NVMe
 | Not applicable
 | Not applicable
-| 4 - 14 drives
+| 4 – 14 drives
 2+| Local DAS with software RAID
 | Not applicable
 | Applicable
-| 4 - 14 drives (NVMe only)
+| 4 – 14 drives (NVMe only)
 2+| External arrays ^1^
 3+| Datastores hosted on external arrays are connected through FC, FCoE, iSCSI, and NFS (NFS isn't supported for KVM). These datastores provide high availability and resilience.
 
