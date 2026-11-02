@@ -24,6 +24,9 @@ Beginning with ONTAP Select 9.20.1, you can deploy ONTAP Select clusters on Micr
 * Learn about the link:hyper-v-host-configuration-and-preparation-checklist.html[Hyper-V host configuration and preparation checklist]
 * Learn about link:task_install_deploy.html[installing ONTAP Select Deploy on a Hyper-V host]
 
+Support for NFS over TLS::
+Beginning with ONTAP Select 9.20.1, ONTAP Select supports NFS over TLS using the CLI. System Manager is not supported. For more information, refer to link:reference_lic_ontap_features.html#licensed-ontap-features[ONTAP features licensed by default].
+
 == ONTAP Select 9.19.1
 
 Support for external key management (KMIP)::
