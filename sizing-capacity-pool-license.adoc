@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: sizing-capacity-pool-license.html
-keywords: license, licensing, Capacity Tiers, usable, space
-summary: The Capacity Tiers license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Tiers license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
+keywords: license, licensing, Capacity Pools, usable, space
+summary: The Capacity Pools license is based on the underlying disk capacity managed by each node and not the usable capacity of the node, HA-pair, or cluster. Each Capacity Pools license is assigned to an individual node serial number for a specified capacity and requires an accompanying support contract.
 ---
 = Determine Capacity Pools license size for ONTAP Select
 :hardbreaks:
@@ -12,6 +12,13 @@ summary: The Capacity Tiers license is based on the underlying disk capacity man
 :imagesdir: ./media/
 
 [.lead]
+Before determining the Capacity Pools license size, you should review the following considerations:
+
+* In both hardware RAID (VMDKs) and software RAID (NVMe or SSDs) configurations, license consumption is calculated from the data disks or data partitions allocated to data aggregates.
+* ONTAP Select excludes RAID-DP parity disks and partitions from license consumption. You are only licensed for the data partitions and disks added to an aggregate, so RAID-DP parity overhead does not consume additional license capacity.
+* Standby drive capacity is not included in aggregate usable capacity and does not consume license capacity.
+* Parity disks are dedicated to data protection. They don't provide usable storage for volumes and data and are not counted as usable capacity.
+
 The licensed capacity for a Capacity Pool license is in full TB amounts, with a minimum of 2 TB. You calculate the licensed capacity by multiplying the amount of usable space by the overhead factor. The overhead factor estimates the ONTAP Select software overhead capacity to be taken from the usable space and it applies to determining the ONTAP Select capacity for NVMe, SSD, HDD, or virtual drives. The overhead factor differs between a single-node and multi-node (HA-pair based) clusters:
 
 * Overhead factor for single-node clusters is 1.13
@@ -61,6 +68,7 @@ Per HA pair in a cluster:
 
 link:task_lic_acquire_cp.html[Acquire a Capacity Pools license for ONTAP Select]
 
+// 2026 NOV 2, ONTAPDOC-4381
 // 2026 AUG 25, ONTAPDOC-4132
 // 2026 FEB 16, ONTAPDOC-3723
 // 2026 FEB 6, ONTAPDOC-3699
