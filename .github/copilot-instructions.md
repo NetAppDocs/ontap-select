@@ -30,7 +30,7 @@ This repository is a flat structure — all AsciiDoc content files reside in the
 - *Storage pool*: A logical data container abstracting underlying physical storage; hypervisor-independent. On ESXi, equivalent to a VMware *datastore*.
 
 **Networking architecture:**
-- *Internal network*: Present only in multi-node clusters. Carries intra-cluster traffic: cluster heartbeat, HA Interconnect (HA-IC), and RAID SyncMirror (RSM). Uses a single layer-2 VLAN, IPv4 only (no DHCP), with MTU configurable in the 7500–9000 byte range (default 9000).
+- *Internal network*: Present only in multi-node clusters. Carries intra-cluster traffic: cluster heartbeat, HA Interconnect (HA-IC), and RAID SyncMirror (RSM). Uses a single layer-2 VLAN, IPv4 only (no DHCP), with Maximum Transmission Unit (MTU) configurable in the 7500–9000 byte range (default 9000).
 - *External network*: Present in all cluster configurations. Carries data traffic (NFS, SMB/CIFS, iSCSI, NVMe over TCP), management, and optionally intercluster traffic. Supports IPv4 and IPv6.
 - *Virtual switch*: On ESXi, the vSwitch (standard or distributed). On KVM, *Open vSwitch (OVS)*. Each ONTAP Select host must have a vSwitch configured before deployment.
 - *VMXNET3*: The default network driver for ONTAP Select nodes on VMware ESXi.
