@@ -36,6 +36,7 @@ Make sure your deployment environment meets the following minimum requirements:
 --
 ESXi is supported on the following hypervisor versions:
 
+* VMware ESXi 9.1
 * VMware ESXi 9.0
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
@@ -115,6 +116,7 @@ image:nvme_05.png[preparing local storage]
 
 image:nvme_06.png[ONTAP System Manager]
 
+// 2026 OCT 27, ONTAPDOC-4421
 // 2026 SEP 15, ONTAPDOC-3948
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 July 17, ONTAPDOC-2885

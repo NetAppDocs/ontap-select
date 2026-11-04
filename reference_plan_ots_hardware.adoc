@@ -35,6 +35,7 @@ You can deploy ONTAP Select on ESXi, Hyper-V, and KVM hypervisors.
 --
 ONTAP Select supports the following ESXi hypervisor versions:
 
+* VMware ESXi 9.1
 * VMware ESXi 9.0
 * VMware ESXi 8.0 U3
 * VMware ESXi 8.0 U2
@@ -137,6 +138,7 @@ NOTE: There are additional disk requirements based on the platform license. See 
 
 Learn about link:concept_lic_platforms.html[the platform license offerings for ONTAP Select]
 
+// 2026 OCT 27, ONTAPDOC-4421
 // 2026 OCT 8, ONTAPDOC-3948
 // 2025 APR 27, ONTAPDOC-3784
 // 2025 DEC 9. ONTAPDOC-3461
