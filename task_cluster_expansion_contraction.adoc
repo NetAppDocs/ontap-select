@@ -30,7 +30,7 @@ To change the number of nodes in a cluster to a size that isn't supported by clu
 You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
 == Hardware and storage considerations
-The cluster expansion and contraction feature is supported on the following KVM and ESXi hypervisor hosts.
+The cluster expansion and contraction feature is supported on the following ESXi and KVM hypervisor hosts.
 
 [role="tabbed-block"]
 =====
@@ -40,6 +40,7 @@ Beginning with ONTAP Select 9.15.1, cluster expansion and contraction is support
 
 Cluster expansion and contraction is supported for the following ESXi hypervisor versions:
 
+* ESXi 9.1
 * ESXi 9.0
 * ESXi 8.0 U3
 * ESXi 8.0 U2 
@@ -140,6 +141,7 @@ It can take up to 30 minutes for the cluster to be contracted.
 
 . Refer to the *Events* tab for periodic updates on the operation's progress. The page is automatically refreshed at regular intervals.
 
+// 2026 OCT 27, ONTAPDOC-4421
 // 2025 DEC 9. ONTAPDOC-3461
 // 2025 OCT 10, ONAPDOC-3333
 // 2025 Sep 02, ONTAPDOC-9.17.1GA

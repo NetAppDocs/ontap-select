@@ -16,7 +16,11 @@ You need to install the ONTAP Select Deploy administration utility and use the u
 
 .Before you begin
 
-You have reviewed the link:kvm-host-configuration-and-preparation-checklist.html[pre-installation checklist].
+You have reviewed the pre-installation checklist for your hypervisor host:
+
+* link:esxi-host-configuration-and-preparation-checklist.html[ESXi host checklist]
+* link:hyper-v-host-configuration-and-preparation-checklist.html[Hyper-V host checklist]
+* link:kvm-host-configuration-and-preparation-checklist.html[KVM host checklist]
 
 == Step 1: Download the virtual machine image
 
@@ -27,7 +31,7 @@ https://mysupport.netapp.com/site/user/registration[You have a registered NetApp
 
 
 .About this task
-The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format (OVF) standard. The single compressed file has the suffix `OVA` for ESXi hosts and `TGZ` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
+The ONTAP Select Deploy administration utility is packaged as a virtual machine (VM) based on the Open Virtualization Format. The single compressed file has the suffix `ova` for ESXi hosts, `vhdx.tgz` for Hyper-V and `raw.tgz` for KVM hosts. The VM provides the Deploy server and installation images for ONTAP Select nodes.
 
 .Steps
 . Access the link:https://mysupport.netapp.com/site/downloads/[NetApp Support Site downloads^] page.
@@ -82,15 +86,25 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 == Step 3: Deploy the virtual machine
 
-Install and start the ONTAP Select Deploy VM using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
+Create the ONTAP Select Deploy virtual machine on your hypervisor host.
+
+[role="tabbed-block"]
+====
+.ESXi
+--
+Install and start the ONTAP Select Deploy VM on an ESXi host using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
+[role="tabbed-block"]
+====
+.ESXi
+--
 For an ESXi hypervisor, you must prepare to deploy the ONTAP Select Deploy VM:
 
 * Enable the OVF functionality in your browser by installing the VMware Client Integration Plugin or performing similar configuration as needed
 * Enable the DHCP in the VMware environment if you will dynamically assign an IP address to the Deploy VM
 
-For ESXi and KVM hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
+You must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
 
 * IP address of the Deploy VM
 * Netmask
@@ -98,18 +112,26 @@ For ESXi and KVM hypervisors, you must have the configuration information to be 
 * IP address of the primary DNS server
 * IP address of the second DNS server
 * DNS search domains
+--
+
+.KVM
+--
+For KVM hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
+
+* IP address of the Deploy VM
+* Netmask
+* IP address of the gateway (router)
+* IP address of the primary DNS server
+* IP address of the second DNS server
+* DNS search domains
+--
+====
 
 .About this task
 If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy VM to configure the network instead.
 
 .Steps
-The steps you follow depend on whether you use an ESXi or KVM hypervisor. 
 
-[role="tabbed-block"]
-====
-
-.ESXi
---
 . Access the vSphere client and sign in.
 
 . Navigate to the appropriate location in the hierarchy and select *Deploy OVF Template*.
@@ -136,9 +158,127 @@ Use DHCP to set networking information? [n]:
 .. Type *n* to define a static IP configuration or *y* to use the DHCP, and select *Enter*.
 .. If you choose a static configuration, provide all the required network configuration information.
 --
+.Hyper-V
+--
+Install and start the ONTAP Select Deploy VM on a Hyper-V host using the New Virtual Machine Wizard.
 
+.Before you begin
+Verify that the Hyper-V host meets the following requirements: 
+
+[cols="1,2",options="header"]
+|===
+|Requirement
+|Value
+
+|Hyper-V role
+|Installed, including the Hyper-V PowerShell module
+
+|VM generation
+|Generation 1
+
+|vCPUs
+|2
+
+|Memory
+|4GB, static (dynamic memory disabled)
+
+|Boot disk
+|Attached to IDE Controller 0, Location 0
+
+|Free disk space
+|At least 40GB on the volume that stores the VM disk
+
+|Archive tool
+|tar, included with Windows Server 2019 and later
+|===
+
+Verify that you have the following information:
+
+[cols="1,2",options="header"]
+|===
+|Information
+|Description
+
+|VM name
+|Name of the Deploy VM, for example ONTAP-deploy-HV
+
+|Virtual switch name
+|Name of the external virtual switch, for example ONTAP_Vswitch
+
+|Physical NIC name
+|Host network adapter connected to the Deploy VM network
+
+|VLAN ID
+|Required only if the upstream switch port expects tagged traffic
+
+|Host name
+|FQDN or short host name of the Deploy VM
+
+|Administrator password
+|Password for the admin account, set during first boot
+|===
+
+When defining a static network configuration, you need the following additional information:
+
+* IP address of the Deploy VM
+* Netmask
+* IP address of the gateway (router)
+* IP address of the primary DNS server
+* IP address of the second DNS server
+* DNS search domains
+
+.About this task
+Creating an external virtual switch briefly interrupts network traffic on the physical NIC. If you're connected to the host remotely over the physical NIC, use an out-of-band console (such as the server BMC) or a different network adapter so you don't lose access. 
+
+.Steps
+. In Hyper-V Manager, select *New* > *Virtual Machine* to open the New Virtual Machine Wizard.
+. Select *Next*.
+. Enter the VM name, then select *Next*.
+. Select *Generation 1*, then select *Next*.
++
+NOTE: ONTAP Select with Hyper-V does not support Generation 2 VMs.
+. Enter the amount of memory, then select *Next*.
++
+NOTE: The minimum memory requirement is 4GB.
+. Select your virtual switch from the drop-down list, then select *Next*.
+. Select *Use an existing virtual hard disk* > *Browse*, then locate and select the `vhdx.tgz` image file.
+. Select *Next*.
+. Verify the configuration, then select *Finish*.
+. If needed, you can configure the Deploy network using the VM console:
+
+.. Wait for the following prompt:
++
+----
+Host name :
+----
+
+.. Type the host name and select *Enter*.
+.. Wait for the following prompt:
++
+----
+Use DHCP to set networking information? [n]:
+----
+
+.. Type *n* to define a static IP configuration or *y* to use the DHCP, and select *Enter*.
+.. If you choose a static configuration, provide all network configuration information as required.
+--
 .KVM
 --
+Install and start the ONTAP Select Deploy VM on a KVM host using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
+
+.Before you begin
+
+You must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
+
+* IP address of the Deploy VM
+* Netmask
+* IP address of the gateway (router)
+* IP address of the primary DNS server
+* IP address of the second DNS server
+* DNS search domains
+
+.Steps
+
 . Sign in to the CLI at the Linux server:
 +
 ----
@@ -182,7 +322,6 @@ Use DHCP to set networking information? [n]:
 .. Type *n* to define a static IP configuration or *y* to use the DHCP, and select *Enter*.
 .. If you choose a static configuration, provide all network configuration information as required.
 --
-
 ====
 
 == Step 4: Sign in to the Deploy web interface
@@ -192,7 +331,7 @@ Sign in to the web user interface to confirm the Deploy utility is available and
 .Steps
 . Point your browser to the Deploy utility using the IP address or domain name:
 +
-`\https://<ip_address>/`
+`\https://<IP_address>/`
 
 . Provide the administrator (admin) account name and password and sign in.
 
@@ -211,9 +350,10 @@ link:task_deploy_cluster.html[Deploy an ONTAP Select cluster]
 * link:task_cli_signing_in.html[Learn about signing in to Deploy using SSH]
 * link:deploy-evaluation-ontap-select-ovf-template.html[Learn about deploying a 90-day evaluation instance of an ONTAP Select cluster]
 
+// 2026 OCT 13, ONTAPDOC-3948
 // 2025 JAN 17, ONTAPDOC-2556
 // 2024 NOV 18, ONTAPDOC-2547
 // 2023-09-07, ONTAPDOC-1330
 // 2023-09-27, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions
-// 2024-03-22, GH issue #242 & #246
+// 2024-03-22, GH issue-242 and issue-246
