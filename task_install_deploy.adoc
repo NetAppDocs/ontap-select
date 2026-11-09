@@ -95,10 +95,6 @@ Create the ONTAP Select Deploy virtual machine on your hypervisor host.
 Install and start the ONTAP Select Deploy VM on an ESXi host using the OVF VM image. As part of the installation process, you configure the network interface to use DHCP or a static IP configuration.
 
 .Before you begin
-[role="tabbed-block"]
-====
-.ESXi
---
 For an ESXi hypervisor, you must prepare to deploy the ONTAP Select Deploy VM:
 
 * Enable the OVF functionality in your browser by installing the VMware Client Integration Plugin or performing similar configuration as needed
@@ -112,20 +108,6 @@ You must have the configuration information to be used when creating the VM, inc
 * IP address of the primary DNS server
 * IP address of the second DNS server
 * DNS search domains
---
-
-.KVM
---
-For KVM hypervisors, you must have the configuration information to be used when creating the VM, including the name of the VM, external network, and host name. When defining a static network configuration, you need the following additional information:
-
-* IP address of the Deploy VM
-* Netmask
-* IP address of the gateway (router)
-* IP address of the primary DNS server
-* IP address of the second DNS server
-* DNS search domains
---
-====
 
 .About this task
 If you use vSphere, the Deploy OVF template wizard includes a form to provide all of the Deploy configuration information, including the network configuration. However, if you choose not to use this form, you can use the console of the Deploy VM to configure the network instead.
