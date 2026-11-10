@@ -12,7 +12,7 @@ summary: The Capacity Pools license is based on the underlying disk capacity man
 :imagesdir: ./media/
 
 [.lead]
-Calculate your ONTAP Select Capacity Pool license size based on the usable space and cluster configuration overhead to ensure sufficient licensed capacity for your deployment. 
+Calculate the ONTAP Select Capacity Pool license size based on the usable space and cluster configuration overhead to ensure sufficient licensed capacity for the deployment. 
 
 Before determining the Capacity Pools license size, you should review the following considerations:
 
