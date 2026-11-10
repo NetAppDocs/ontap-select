@@ -50,7 +50,6 @@ You need to calculate the licensed capacity based on the usable space to ensure 
 
 (5 x 2.67 = 13.35, round up to next full TB)
 
-
 | Maximum usable space per node
 
 *Note*: The maximum managed space per node or HA pair is 400 TB
@@ -70,8 +69,6 @@ Per HA pair in a multi-node cluster:
 * Ten-node: 1,490 TB (10 x 149)
 * Twelve-node: 1,788 TB (12 x 149)
 |===
-
-
 
 .What's next
 link:task_lic_acquire_ct.html[Acquire a Capacity Tier license for ONTAP Select]
