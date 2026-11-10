@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: plan-ots-hyper-v.html
+keywords: plan, planning, vnas, hyper-v
+summary: There are several planning issues related to the use of the Hyper-V hypervisor that you should consider.
+---
+= Hyper-V storage requirements for ONTAP Select 
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When you configure ONTAP Select on a Hyper-V hypervisor, ONTAP Select stores the virtual machine (VM) and the virtual disks on a local volume on the Hyper-V host.
+
+== Basic requirements and restrictions 
+
+The following configuration requirements and restrictions apply to ONTAP Select storage pools on a Hyper-V host: 
+
+* The storage pool must be an NTFS or ReFS volume with a drive letter assigned. The Deploy utility identifies the storage pool by its drive letter.
+* Cluster Shared Volumes are not supported as storage pools.
+* Network file shares and remote UNC paths, such as SMB 3.0, are not supported as storage pools.
+* ONTAP Select does not discover a volume that is mounted only to a folder path because the volume has no drive letter.
+* ONTAP Select can use a LUN on an external storage array using FC, FCoE, or iSCSI if the Hyper-V host formats the LUN as NTFS or ReFS and assigns a drive letter. ONTAP Select treats such a volume as local host storage. The ONTAP Select vNAS model used with ESXi does not apply to Hyper-V.
+* A Storage Spaces virtual disk can hold a storage pool if it is formatted as NTFS or ReFS with a drive letter assigned. However, software RAID cannot use physical disks that are members of a Storage Spaces pool.
+* A Hyper-V configuration does not recognize thinly provisioned storage. ONTAP Select uses the capacity that Windows reports for the volume.
+
+== Best practices 
+
+You should follow these best practices:
+
+* Define dedicated network adapters, bandwidth, and virtual switch configurations for the ONTAP Select networks. Keep external storage traffic, such as iSCSI, on separate adapters.
+* Dedicate the storage pool volume to ONTAP Select. Do not place another Hyper-V VM or Windows workload on the same volume, and do not use the Windows boot volume as a storage pool.
+* Size the volume so that ONTAP Select does not consume its entire capacity.
+* Configure Windows MPIO for external storage arrays so that LUNs are presented over redundant paths. 
+
+// 2026 SEP 15, ONTAPDOC-3948

@@ -30,7 +30,7 @@ To change the number of nodes in a cluster to a size that isn't supported by clu
 You initiate the cluster expansion and contraction procedures from ONTAP Select Deploy using the CLI, API, or web interface.
 
 == Hardware and storage considerations
-The cluster expansion and contraction feature is supported on the following KVM and ESXi hypervisor hosts.
+The cluster expansion and contraction feature is supported on the following ESXi and KVM hypervisor hosts.
 
 [role="tabbed-block"]
 =====
