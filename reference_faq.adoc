@@ -189,7 +189,7 @@ Storage add also supports software RAID. However, in the case of software RAID, 
 
 ONTAP Select Deploy and ONTAP Select for ESXi support the configuration of an ONTAP Select single-node cluster using either a vSAN or an external array type of datastore for its storage pool.
 
-ONTAP Select Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI, FC/FCoE, and NFS. Other types of storage pools are not supported.
+ONTAP Select Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI or FC/FCoE. Other types of storage pools are not supported.
 
 Multi-node HA clusters on shared storage are supported.
 

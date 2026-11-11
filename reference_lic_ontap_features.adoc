@@ -108,7 +108,7 @@ You need to acquire a separate license for the following ONTAP features that are
 | You do not need a FabricPool license when utilizing StorageGRID.
 
 | MetroCluster SDS 
-| link:https://docs.netapp.com/us-en/ontap/concepts/mcc-sds-ontap-select.html[MetroCluster SDS for ONTAP Select^]
+| link:reference_plan_ots_mcc_sds.html[MetroCluster SDS for ONTAP Select]
 | This is an ONTAP Select premium license offering.
 
 | SnapMirror cloud

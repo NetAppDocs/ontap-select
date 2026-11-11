@@ -144,7 +144,7 @@ As part of your deployment planning, you should determine the required configura
 --
 .KVM
 --
-There are several requirements and restrictions specific to the hypervisor environment that you should consider before installing the ONTAP Select Deploy utility in a KVM environment.
+There are several requirements and restrictions specific to the KVM hypervisor environment that you should consider before installing the ONTAP Select Deploy utility in a KVM environment.
 
 .Hardware requirements
 Verify that the Linux KVM hypervisor hosts where ONTAP Select is deployed meet the following basic requirements:
@@ -190,9 +190,7 @@ As part of your deployment planning, you should determine the required configura
 ====
 
 [[vmware-vcenter-server-considerations]]
-== VMware vCenter server considerations
-
-.VMware vSphere privileges for ESA
+== VMware vSphere privileges for ESA
 
 To create and manage vSAN Express Storage Architecture (ESA) in vCenter, you need the following vSphere Content Library privileges:
 
