@@ -27,7 +27,7 @@ Beginning with ONTAP Select 9.5 using Deploy 2.10, VMXNET3 is the default networ
 
 == Cluster MTU
 
-A separate internal network is used to connect the ONTAP Select nodes in a multi-node cluster. Typically the MTU size for this network is 9000. However, there are situations where this MTU size is too large for the network connecting the ONTAP Select nodes. To accommodate the smaller frames, the MTU size used by ONTAP Select on the internal network can be in the range of 7500-9000 bytes.
+A separate internal network is used to connect the ONTAP Select nodes in a multi-node cluster. Typically the Maximum Transmission Unit (MTU) size for this network is 9000. However, there are situations where this MTU size is too large for the network connecting the ONTAP Select nodes. To accommodate the smaller frames, the MTU size used by ONTAP Select on the internal network can be in the range of 7500-9000 bytes.
 
 The MTU size is displayed in the Cluster Details section of the cluster creation page. The value is determined by the Deploy administration utility as follows:
 
@@ -100,23 +100,29 @@ Refer to the link:concept_nw_concepts_chars.html[Deep dive networking] section f
 
 == Network traffic requirements
 
-You must make sure that your firewalls are configured properly to allow the network traffic to flow among the various participants in an ONTAP Select deployment environment.
+You must make sure that your firewalls are configured correctly to allow the network traffic to flow among the various participants in an ONTAP Select deployment environment.
 
 .Participants
 
 There are several participants or entities that exchange network traffic as part of an ONTAP Select deployment. These are introduced, and then used in the summary description of the network traffic requirements.
 
 * Deploy
++
 ONTAP Select Deploy administration utility
 * vSphere (ESXi only)
++
 Either a vSphere server or ESXi host, depending on how the host is managed in your cluster deployment
 * Hypervisor server
-ESXi hypervisor host or Linux KVM host
-* OTS node
++
+ESXi hypervisor host, Microsoft Hyper-V host, or Linux KVM host
+* ONTAP Select node
++
 An ONTAP Select node
-* OTS cluster
+* ONTAP Select cluster
++
 An ONTAP Select cluster
 * Admin WS
++
 Local administrative workstation
 
 .Summary of network traffic requirements
@@ -126,9 +132,39 @@ The following table describes the network traffic requirements for an ONTAP Sele
 [cols="20,20,35,25"*,options="header"]
 |===
 |Protocol / Port
-|ESXi / KVM
+|ESXi / Hyper-V / KVM
 |Direction
 |Description
+
+|ICMP
+|ESXi, Hyper-V, or KVM
+|Deploy to hypervisor server
+|Ping
+
+|ICMP
+|ESXi, Hyper-V, or KVM
+|Deploy to each ONTAP Select node
+|Ping
+
+|SSH (22)
+|ESXi, Hyper-V, or KVM
+|Admin WS to each ONTAP Select node
+|Administration
+
+|SSH (22)
+|KVM
+|Deploy to hypervisor server nodes
+|Access hypervisor server
+
+|TLS (443)
+|ESXi, Hyper-V, or KVM
+|Deploy to ONTAP Select nodes and clusters
+|Access ONTAP
+
+|TLS (443)
+|ESXi, Hyper-V, or KVM
+|Each ONTAP Select node to Deploy
+|Access Deploy (Capacity Pools licensing)
 
 |TLS (443)
 |ESXi
@@ -140,42 +176,17 @@ The following table describes the network traffic requirements for an ONTAP Sele
 |Deploy to vCenter server (managed) or ESXi (unmanaged)
 |VMware VIX API
 
-|ICMP
-|ESXi or KVM
-|Deploy to hypervisor server
-|Ping
-
-|ICMP
-|ESXi or KVM
-|Deploy to each OTS node
-|Ping
-
-|SSH (22)
-|ESXi or KVM
-|Admin WS to each OTS node
-|Administration
-
-|SSH (22)
-|KVM
-|Deploy to hypervisor server nodes
-|Access hypervisor server
-
-|TLS (443)
-|ESXi or KVM
-|Deploy to OTS nodes and clusters
-|Access ONTAP
-
-|TLS (443)
-|ESXi or KVM
-|Each OTS node to Deploy
-|Access Deploy (Capacity Pools licensing)
-
 |iSCSI (3260)
-|ESXi or KVM
-|Each OTS node to Deploy
+|ESXi, Hyper-V, or KVM
+|Each ONTAP Select node to Deploy
 |Mediator/Mailbox disk
 
+|WinRM HTTPS (5986) 
+|Hyper-V 
+|Deploy to hypervisor server nodes
+|Access hypervisor server
 |===
 
+// 2026 SEP 15, ONTAPDOC-3948
 // 2023-09-25, ONTAPDOC-1204
 // 2023-10-17, Removed mention of old OTS versions

@@ -19,7 +19,7 @@ You can deploy a 90-day evaluation instance of an ONTAP select cluster ranging i
 * You don't need to obtain a serial number or storage capacity license from NetApp.
 * You can allocate the same amount of storage for user data as a purchased license.
 * You can only use a vCenter account to deploy the OVF template. Installing directly to an ESXi host is currently not supported.
-* You must install the OVF template (contained in an ova file) using the vSphere standalone client or vSphere web client (the only option for ESXi 8.0 and later). You don't use the ONTAP Select Deploy administration utility.
+* You must install the OVF template (contained in an OVA file) using the vSphere standalone client or vSphere web client (the only option for ESXi 8.0 and later). You don't use the ONTAP Select Deploy administration utility.
 
 == Step 1: Prepare the ONTAP Select cluster host
 Use the following requirements to prepare the ESXi host where the ONTAP Select cluster is deployed. The platform description is based on the standard or small instance type configuration with local direct-attached storage (DAS) formatted using the VMFS-5 or VMFS-6 file system.
@@ -36,7 +36,7 @@ Complete the following steps on a supported 64-bit ESXi host server.
 . Sign in to the VMware vSphere web client using an account with administrative privileges.
 . Select the host using one of the following options:
 ** Select *File* > *Deploy OVF Template*.
-** Select *Datacenter*. Then right-select and select *Deploy OVF Template*.
+** Select *Datacenter*. Then right-click and select *Deploy OVF Template*.
 . Select the ONTAP Select source OVA file on your local workstation, then select *Next*.
 . Review the OVF template details and select *Next*.
 . Review the EULA details and select *Accept*. Then select *Next*.

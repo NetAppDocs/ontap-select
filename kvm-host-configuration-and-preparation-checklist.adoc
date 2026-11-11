@@ -12,7 +12,7 @@ summary: Prepare each KVM hypervisor hosts where an ONTAP Select node is deploye
 :imagesdir: ./media/
 
 [.lead]
-Prepare each KVM hypervisor host where an ONTAP Select node is deployed. As you prepare the hosts, you carefully assess the deployment environment to make sure that the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
+Prepare each KVM hypervisor host where an ONTAP Select node is deployed. Ensure the hosts are correctly configured and ready to support the deployment of an ONTAP Select cluster.
 
 [NOTE]
 The ONTAP Select Deploy administration utility doesn't perform the required network and storage configuration of the hypervisor hosts. You must manually prepare each host before deploying an ONTAP Select cluster.

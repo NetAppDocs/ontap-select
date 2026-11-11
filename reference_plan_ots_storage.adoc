@@ -14,7 +14,7 @@ summary: There are several planning issues related to ONTAP Select host storage 
 [.lead]
 There are several planning issues related to ONTAP Select host storage that you should consider.
 
-NOTE: External storage support information is outlined for ESXi and KVM hosts. For more information, refer to link:reference_plan_ots_vnas.html[VMware ESXi requirements] and link:reference_plan_ots_kvm.html[KVM requirements].
+NOTE: Storage support information is outlined for ESXi, Hyper-V, and KVM hosts. For more information, refer to link:reference_plan_ots_vnas.html[VMware ESXi external storage requirements], link:plan-ots-hyper-v.html[Hyper-V storage requirements], and link:reference_plan_ots_kvm.html[KVM external storage requirements].
 
 == Hardware RAID controller requirements
 
@@ -191,6 +191,7 @@ You can configure software RAID to use NVMe SSD drives. Your environment must me
 
 You need to manually configure the NVMe drives before using them. See link:task_chk_nvme_configure.html[Configure a host to use NVMe drives] for more information.
 
+// 2026 OCT 8, ONTAPDOC-3948
 // 2026 JAN 15, ontap-select-issue-310 and NADIAA updates
 // 2023-09-12, ONTAPDOC-1174
 // 2023-09-25, ONTAPDOC-1204

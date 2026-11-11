@@ -18,7 +18,7 @@ ONTAP Select converts internal disk drives, NVMe, SSD or HDD, and external array
 
 ONTAP Select adapts to your capacity consumption needs with two complementary licensing models — Capacity Tiers and the completely flexible Capacity Pools. Both licensing models allow you to increase capacity in increments of as little as 1TB. For example, you can start with a few terabytes and dynamically add capacity as your project grows. If you are using Capacity Pools, you can redistribute the capacity as you see fit when your project is finished. 
 
-ONTAP Select is integrated into cloud management frameworks such as VMware vSphere and Kernel-based Virtual Machine (KVM). This helps accelerate deployment of new projects such as file services, home directories, software development environments, and application testing. 
+ONTAP Select is integrated into cloud management frameworks such as VMware vSphere, Microsoft Hyper-V, and Kernel-based Virtual Machine (KVM). This helps accelerate deployment of new projects such as file services, home directories, software development environments, and application testing.
 
 SnapMirror software lets you move data between ONTAP storage across the hybrid cloud so that you can easily access your data where you want it. For example, you can bring up an environment quickly to prove an idea. Later, you can move the project to a dedicated storage platform for production deployment or make it more accessible in the cloud as part of a development workflow.
 
@@ -131,6 +131,7 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 * link:reference_lic_ontap_features.html#licensed-ontap-features[Learn about ONTAP features licensed by default]
 * link:concept_lic_evaluation.html[Learn about ONTAP Select license options]
 
+// 2026 SEP 15, OTNAPDOC-3948
 // 2026 JUL 15, ONTAPDOC-4067
 // 2026 JUN 15, ONTAPDOC-3941
 // 2026 MAR 30, ONTAPDOC-3764
@@ -146,9 +147,3 @@ Modifying the properties of the ONTAP ports, including speed, duplex, and flow-c
 // 2023 Sep 28, Adding SVM DR
 // 2023 Jun 19, ONTAPDOC-1096
 // 2023 Jan 24, Jira ONTAPDOC-807 + ontap-select-issues-190
-
-
-
-
-
-
