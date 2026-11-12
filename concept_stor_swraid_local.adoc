@@ -38,7 +38,7 @@ Administrators need to keep track of which drives are in use by the ONTAP Select
 == ONTAP Select system disks
 System disks are the virtual disks (VMDKs) that are used within the ONTAP Select VM to service various items such as clustering, booting, and so on. The system disks are physically located on a single physical disk (collectively called the system physical disk) as seen from the host. The physical disk (SSD or NVMe) must contain a DAS datastore.
 
-During cluster deployment, ONTAP Deploy creates the following virtual disks on the dedicated DAS datastore for the ONTAP Select VM.
+During cluster deployment, ONTAP Deploy creates the following system disks on the dedicated DAS datastore for the ONTAP Select VM.
 
 [cols="30,45,25",options="header"]
 |===
@@ -60,7 +60,7 @@ During cluster deployment, ONTAP Deploy creates the following virtual disks on t
 |4 GB
 |===
 
-As a best practice, the virtual disks should be smaller than the data drives (Raw Device Mappings (RDMs) for SSD and PCI passthrough for NVMe). The virtual disks only need to hold the total VMDK footprint of approximately 134 GB plus datastore headroom.
+As a best practice, the system disks should be smaller than the data drives (Raw Device Mappings (RDMs) for SSD and PCI passthrough for NVMe). The system disks only need to hold the total VMDK footprint of approximately 134 GB plus datastore headroom.
 
 It is not possible to further separate the system disks across multiple datastores or across multiple physical drives. They must reside on a single physical system disk. You can view the information about the system disks by running the following commands from the ONTAP Select node: `system node virtual-machine instance show-system-disks`
 
