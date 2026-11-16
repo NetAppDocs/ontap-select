@@ -89,7 +89,7 @@ The following example output shows the available drives for an ESXi host:
 image:nvme_02.png[Edit PCI Device Availability]
 +
 [NOTE]
-You need a VMFS datastore that is also backed by an NVMe device to host the ONTAP Select VM system disks and virtual NVRAM. Leave at least one NVMe drive available for this purpose when configuring the others for PCI pass-through.
+You need a VMFS datastore that is also backed by an NVMe device to host the ONTAP Select VM system disks and virtual NVRAM. Leave at least one NVMe drive available for this purpose when configuring the others for PCI passthrough.
 
 .. Select *OK*. The selected devices indicate *Available (pending)*.
 
